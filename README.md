@@ -14,3 +14,10 @@ DMXUtil has a number of parameters that are required for the successful processi
  path to baseline EJBServer directory (this can be an initial data extract from a baseline build)
  path to modified EJBServer directory (this can be a data extract from a modified build containing updated/changed data)
  Component Name (the name of the component that is to be processed)
+
+ 
+Common Libraries (JAR)
+
+  commons-io-2.4.jar
+  jdom-2.0.6.jar
+  xml.jar
