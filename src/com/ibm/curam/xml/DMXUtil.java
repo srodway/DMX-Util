@@ -66,8 +66,7 @@ public class DMXUtil {
 	}
 	
 	public static void main(String[] args) {
-		// TODO : Validate that the parameters passed are correct and that the
-		// files exist
+
 		if (args.length < 3) {
 						
 			System.out.println("\n\nInvalid parameters passed.");
