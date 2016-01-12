@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="SERVICEOFFERING">
+  <column name="serviceOfferingID" type="id" />
+  <column name="name" type="text" />
+  <column name="description" type="text" />
+  <column name="startDate" type="date" />
+  <column name="endDate" type="date" />
+  <column name="unitOfMeasure" type="text" />
+  <column name="maximumUnits" type="id" />
+  <column name="unitFrequency" type="text" />
+  <column name="comments" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="nameUpper" type="text" />
+  <column name="placementPmtInd" type="bool" />
+  <column name="saPlmtInhibitInd" type="bool" />
+  <column name="payBasedOnAttendanceInd" type="bool" />
+  <column name="trainingInd" type="bool" />
+  <column name="specialConditionType" type="text" />
+  <column name="provisionMethod" type="text" />
+  <column name="deliveryFrequency" type="text" />
+  <column name="singleOrMultipleClients" type="text" />
+  <column name="reference" type="text" />
+  <column name="nameTextID" type="id" />
+  <column name="descriptionTextID" type="id" />
+  <column name="referenceUpper" type="text" />
+  <column name="deliveryType" type="text" />
+  <column name="availabilityCheckExcludeInd" type="bool" />
+  <column name="referredBy" type="text" />
+  <column name="versionNo" type="number" />
+  <column name="lastWritten" type="timestamp" />
+  <row>
+    <attribute name="serviceOfferingID">
+      <value>200</value>
+    </attribute>
+    <attribute name="name">
+      <value>House Care</value>
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="unitOfMeasure">
+      <value>UOM1</value>
+    </attribute>
+    <attribute name="maximumUnits">
+      <value />
+    </attribute>
+    <attribute name="unitFrequency">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="nameUpper">
+      <value>HOUSE CARE</value>
+    </attribute>
+    <attribute name="placementPmtInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="saPlmtInhibitInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="payBasedOnAttendanceInd">
+      <value />
+    </attribute>
+    <attribute name="trainingInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="specialConditionType">
+      <value />
+    </attribute>
+    <attribute name="provisionMethod">
+      <value />
+    </attribute>
+    <attribute name="deliveryFrequency">
+      <value />
+    </attribute>
+    <attribute name="singleOrMultipleClients">
+      <value />
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="nameTextID">
+      <value>3001</value>
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value />
+    </attribute>
+    <attribute name="referenceUpper">
+      <value />
+    </attribute>
+    <attribute name="deliveryType">
+      <value />
+    </attribute>
+    <attribute name="availabilityCheckExcludeInd">
+      <value />
+    </attribute>
+    <attribute name="referredBy">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="serviceOfferingID">
+      <value>201</value>
+    </attribute>
+    <attribute name="name">
+      <value>Child Care</value>
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="unitOfMeasure">
+      <value>UOM1</value>
+    </attribute>
+    <attribute name="maximumUnits">
+      <value />
+    </attribute>
+    <attribute name="unitFrequency">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="nameUpper">
+      <value>CHILD CARE</value>
+    </attribute>
+    <attribute name="placementPmtInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="saPlmtInhibitInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="payBasedOnAttendanceInd">
+      <value />
+    </attribute>
+    <attribute name="trainingInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="specialConditionType">
+      <value />
+    </attribute>
+    <attribute name="provisionMethod">
+      <value />
+    </attribute>
+    <attribute name="deliveryFrequency">
+      <value />
+    </attribute>
+    <attribute name="singleOrMultipleClients">
+      <value />
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="nameTextID">
+      <value>3002</value>
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value />
+    </attribute>
+    <attribute name="referenceUpper">
+      <value />
+    </attribute>
+    <attribute name="deliveryType">
+      <value />
+    </attribute>
+    <attribute name="availabilityCheckExcludeInd">
+      <value />
+    </attribute>
+    <attribute name="referredBy">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="serviceOfferingID">
+      <value>-4431542033324171264</value>
+    </attribute>
+    <attribute name="name">
+      <value />
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="startDate">
+      <value>2015-12-04</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="unitOfMeasure">
+      <value>UOM6</value>
+    </attribute>
+    <attribute name="maximumUnits">
+      <value />
+    </attribute>
+    <attribute name="unitFrequency">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="nameUpper">
+      <value />
+    </attribute>
+    <attribute name="placementPmtInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="saPlmtInhibitInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="payBasedOnAttendanceInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="trainingInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="specialConditionType">
+      <value />
+    </attribute>
+    <attribute name="provisionMethod">
+      <value />
+    </attribute>
+    <attribute name="deliveryFrequency">
+      <value />
+    </attribute>
+    <attribute name="singleOrMultipleClients">
+      <value>SMC3001</value>
+    </attribute>
+    <attribute name="reference">
+      <value>HomeHelp</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value>1981583836051415040</value>
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value>-3278620528717324288</value>
+    </attribute>
+    <attribute name="referenceUpper">
+      <value>HOMEHELP</value>
+    </attribute>
+    <attribute name="deliveryType">
+      <value>SODT3001</value>
+    </attribute>
+    <attribute name="availabilityCheckExcludeInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="referredBy">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-12.28.10</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="serviceOfferingID">
+      <value>9043228051768352768</value>
+    </attribute>
+    <attribute name="name">
+      <value />
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="startDate">
+      <value>2015-12-04</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="unitOfMeasure">
+      <value>UOM1</value>
+    </attribute>
+    <attribute name="maximumUnits">
+      <value />
+    </attribute>
+    <attribute name="unitFrequency">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="nameUpper">
+      <value />
+    </attribute>
+    <attribute name="placementPmtInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="saPlmtInhibitInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="payBasedOnAttendanceInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="trainingInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="specialConditionType">
+      <value />
+    </attribute>
+    <attribute name="provisionMethod">
+      <value />
+    </attribute>
+    <attribute name="deliveryFrequency">
+      <value />
+    </attribute>
+    <attribute name="singleOrMultipleClients">
+      <value>SMC3001</value>
+    </attribute>
+    <attribute name="reference">
+      <value>SupportedAccomodation</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value>9043228051768352768</value>
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value>-8322652111372279808</value>
+    </attribute>
+    <attribute name="referenceUpper">
+      <value>SUPPORTEDACCOMODATION</value>
+    </attribute>
+    <attribute name="deliveryType">
+      <value>SODT3001</value>
+    </attribute>
+    <attribute name="availabilityCheckExcludeInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="referredBy">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-12.38.26</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="serviceOfferingID">
+      <value>-1206964700126896128</value>
+    </attribute>
+    <attribute name="name">
+      <value />
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="startDate">
+      <value>2015-12-04</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="unitOfMeasure">
+      <value>UOM6</value>
+    </attribute>
+    <attribute name="maximumUnits">
+      <value />
+    </attribute>
+    <attribute name="unitFrequency">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="nameUpper">
+      <value />
+    </attribute>
+    <attribute name="placementPmtInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="saPlmtInhibitInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="payBasedOnAttendanceInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="trainingInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="specialConditionType">
+      <value />
+    </attribute>
+    <attribute name="provisionMethod">
+      <value />
+    </attribute>
+    <attribute name="deliveryFrequency">
+      <value />
+    </attribute>
+    <attribute name="singleOrMultipleClients">
+      <value>SMC3001</value>
+    </attribute>
+    <attribute name="reference">
+      <value>Counselling</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value>2395915001769500672</value>
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value>-6755399441047347200</value>
+    </attribute>
+    <attribute name="referenceUpper">
+      <value>COUNSELLING</value>
+    </attribute>
+    <attribute name="deliveryType">
+      <value>SODT3001</value>
+    </attribute>
+    <attribute name="availabilityCheckExcludeInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="referredBy">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-15.05.47</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="serviceOfferingID">
+      <value>990791918029905920</value>
+    </attribute>
+    <attribute name="name">
+      <value />
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="startDate">
+      <value>2015-12-04</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="unitOfMeasure">
+      <value>UOM4</value>
+    </attribute>
+    <attribute name="maximumUnits">
+      <value />
+    </attribute>
+    <attribute name="unitFrequency">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="nameUpper">
+      <value />
+    </attribute>
+    <attribute name="placementPmtInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="saPlmtInhibitInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="payBasedOnAttendanceInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="trainingInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="specialConditionType">
+      <value />
+    </attribute>
+    <attribute name="provisionMethod">
+      <value />
+    </attribute>
+    <attribute name="deliveryFrequency">
+      <value />
+    </attribute>
+    <attribute name="singleOrMultipleClients">
+      <value>SMC3001</value>
+    </attribute>
+    <attribute name="reference">
+      <value>ChildCare</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value>486388759764410368</value>
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value>-1098878309070004224</value>
+    </attribute>
+    <attribute name="referenceUpper">
+      <value>CHILDCARE</value>
+    </attribute>
+    <attribute name="deliveryType">
+      <value>SODT3001</value>
+    </attribute>
+    <attribute name="availabilityCheckExcludeInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="referredBy">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-18.21.11</value>
+    </attribute>
+  </row>
+</table>
+

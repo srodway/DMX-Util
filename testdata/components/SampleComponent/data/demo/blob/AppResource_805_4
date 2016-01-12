@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="PlanReviewMenu">
+  
+  <mc:loader-registry>
+    <mc:loader class="curam.outcomeplanning.tab.impl.PlanReviewMenuLoader"/>
+  </mc:loader-registry>
+  
+  <mc:menu-item dynamic="true" id="Edit" open-as="modal" page-id="OutcomePlan_editReview" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit" visible="true"/>
+  <mc:menu-item dynamic="true" id="EditNarrative" open-as="modal" page-id="OutcomePlan_addNarrativeNoteToReview" title="MenuItem.Title.EditNarrative" tooltip="MenuItem.Tooltip.EditNarrative" visible="true"/>
+  <mc:menu-item dynamic="true" id="EditExpectedCompletionDate" open-as="modal" page-id="OutcomePlan_editReviewExpectedCompletionDate" title="MenuItem.Title.EditExpectedCompletionDate" tooltip="MenuItem.Tooltip.EditExpectedCompletionDate" visible="true"/>
+  <mc:menu-item dynamic="true" id="AddNote" open-as="modal" page-id="OutcomePlan_addNoteToReview" title="MenuItem.Title.AddNote" tooltip="MenuItem.Tooltip.AddNote" visible="true"/>
+    <mc:menu-item dynamic="true" id="NewAssessment" open-as="modal" page-id="OutcomePlan_selectPlanReviewAssessmentDefinition" title="MenuItem.Title.Assessment" tooltip="MenuItem.Tooltip.Assessment" visible="true"/>
+  
+  
+  <mc:menu-separator id="OutcomePlanReviewMenuSeparator1"/>
+  <mc:menu-item dynamic="true" id="Complete" open-as="modal" page-id="OutcomePlan_completeReview" title="MenuItem.Title.Complete" tooltip="MenuItem.Tooltip.Complete" visible="true"/>
+  <mc:menu-item dynamic="true" id="UpdateCompletionDetails" open-as="modal" page-id="OutcomePlan_editCompletedReview" title="MenuItem.Title.UpdateCompletion" tooltip="MenuItem.Tooltip.UpdateCompletion"/>
+  
+  <mc:menu-separator id="OutcomePlanReviewMenuSeparator2"/>
+  <mc:menu-item append-ellipsis="false" dynamic="true" id="ViewPrintableDocument" page-id="ViewReviewPrintableDocument" title="MenuItem.Title.ViewPrintableDocument" tooltip="MenuItem.Tooltip.ViewPrintableDocument" type="FILE_DOWNLOAD"/>
+  <mc:menu-separator id="OutcomePlanReviewMenuSeparator3"/>
+  <mc:menu-item dynamic="true" id="Delete" open-as="modal" page-id="OutcomePlan_cancelReview" title="MenuItem.Title.Delete" tooltip="MenuItem.Tooltip.Delete" visible="true"/>
+</mc:menu-bar>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="ADMINICEVIDENCELINK" override="true">
+<column name="adminICEvidenceLinkID" type="id"/>
+<column name="evidenceMetadataID" type="id"/>
+<column name="adminIntegratedCaseID" type="id"/>
+<column name="shareableInd" type="bool"/>
+<column name="category" type="text"/>
+<column name="quicklinkInd" type="bool"/>
+<column name="sortOrder" type="id"/>
+</table>

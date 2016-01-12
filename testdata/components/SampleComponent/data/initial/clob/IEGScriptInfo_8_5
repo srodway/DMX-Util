@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ieg-script finish-page="AssessmentDelivery_executeAssessment" quit-page="AssessmentScript_exit" show-sections="false" show-progress-bar="true" config-properties="assessment-ieg-config" validate-save-and-exit="true" highlight-validation="false">
+	<identifier id="CommunityCareV3" scriptversionnumber="1" type="DecisionAssist"/>
+	<section internal-id="1427894448081">
+		<title id="assessment.id" internal-id="1427895029586">Community Care Assessment</title>
+		<question-page id="page1" entity="Application" internal-id="1427894448082" progress="0" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="true">
+			<title id="page1.Title" internal-id="1427895029587">Community Care Assessment - Self Assessment</title>
+			<description id="commcare.desc" internal-id="1427900911146">Looking after yourself, finding the help you need</description>
+			<cluster internal-id="1427900933938">
+				<title id="cluster1.Title" internal-id="1427900986894">Information</title>
+				<layout>
+					<type>flow</type>
+					<num-cols>1</num-cols>
+					<label-alignment>right</label-alignment>
+				</layout>
+				<display-text id="NewDisplayTextID" internal-id="1427900926907">This form is to help you tell us about the help you need to support you in your daily life. It’s aimed at people who need a bit of help to manage at home, perhaps because they are getting older or because they have some sort of disability that makes it harder for them to do everything for themselves. Filling in this form will help you to say what sort of help you think you might need and help us to decide how best you can get the help you need.</display-text>
+			</cluster>
+		</question-page>
+		<question-page id="page2" entity="Person" internal-id="1427963816319" progress="10" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="false">
+			<title id="page2.Title" internal-id="1427964198724">Personal Details</title>
+			<cluster internal-id="1427963906500">
+				<title id="personalcluster.Title" internal-id="1427964198725">Please enter the following details.</title>
+				<layout>
+					<type>flow</type>
+					<num-cols>1</num-cols>
+					<label-alignment>right</label-alignment>
+				</layout>
+				<question id="firstName" mandatory="true" control-question="false" multi-select="false" internal-id="1427964119532" show-field-help="false">
+					<label id="firstname.label" internal-id="1427964198730">First Name</label>
+				</question>
+				<question id="lastName" mandatory="true" control-question="false" multi-select="false" internal-id="1427964122312" show-field-help="false">
+					<label id="lastname.label" internal-id="1427964198731">Last Name</label>
+				</question>
+				<question id="address" mandatory="true" control-question="false" multi-select="false" internal-id="1427964168131" show-field-help="false">
+					<label id="address.label" internal-id="1427964246587">Address</label>
+					<layout>
+						<type>flow</type>
+						<num-rows>4</num-rows>
+					</layout>
+				</question>
+				<question id="postCode" mandatory="true" control-question="false" multi-select="false" internal-id="1427964212148" show-field-help="false">
+					<label id="postcode.label" internal-id="1427964375910">Post Code</label>
+				</question>
+				<question id="phone" mandatory="true" control-question="false" multi-select="false" internal-id="1427964250850" show-field-help="false">
+					<label id="phone.label" internal-id="1427964375912">Telephone Number</label>
+				</question>
+				<question id="dateOfBirth" mandatory="true" control-question="false" multi-select="false" internal-id="1427964280098" show-field-help="false">
+					<label id="dateofbirth.label" internal-id="1427964375913">Date of Birth</label>
+				</question>
+				<question id="gender" mandatory="true" control-question="false" multi-select="false" internal-id="1427964331835" show-field-help="false">
+					<label id="gender.label" internal-id="1427964446917">Gender</label>
+				</question>
+				<question id="ethnicity" mandatory="false" control-question="false" multi-select="false" internal-id="1427964381134" show-field-help="false">
+					<label id="ethnicity.label" internal-id="1427964446918">Ethnicity</label>
+				</question>
+			</cluster>
+		</question-page>
+		<question-page id="page3" entity="Person" internal-id="1427901139882" progress="20" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="false">
+			<title id="page3.Title" internal-id="1427901283173">Personal Care</title>
+			<cluster internal-id="1427901170755">
+				<title id="cluster3" internal-id="1427901283174">Personal Care Questionnaire</title>
+				<description id="cluster3.desc" internal-id="1427901283175">Do you have any difficulties with any of the following things?</description>
+				<layout>
+					<type>flow</type>
+					<num-cols>1</num-cols>
+					<label-alignment>right</label-alignment>
+				</layout>
+				<question id="perDifficultywithwashing" mandatory="true" control-question="false" multi-select="false" internal-id="1427900796901" show-field-help="false">
+					<label id="washing.label" internal-id="1427901283180">Washing</label>
+				</question>
+				<question id="perDifficultywithdressing" mandatory="true" control-question="false" multi-select="false" internal-id="1427901224895" show-field-help="false">
+					<label id="dressing.label" internal-id="1427901283181">Dressing</label>
+				</question>
+				<question id="perDifficultywithgettingtotoilet" mandatory="true" control-question="false" multi-select="false" internal-id="1427901286718" show-field-help="false">
+					<label id="toilet.label" internal-id="1427901347094">Getting to the toilet</label>
+				</question>
+				<question id="perDifficultywithbathing" mandatory="true" control-question="false" multi-select="false" internal-id="1427901289512" show-field-help="false">
+					<label id="bathing.label" internal-id="1427901347095">Bathing</label>
+				</question>
+				<question id="perExamples" mandatory="true" control-question="false" multi-select="false" internal-id="1427901323985" show-field-help="false">
+					<label id="perexamples.label" internal-id="1427901396026">If you answer yes to any of the above or have any other issues with your personal careplease give examples below.</label>
+					<layout>
+						<type>flow</type>
+						<num-rows>3</num-rows>
+					</layout>
+				</question>
+				<question id="perDoesanyonehelp" mandatory="true" control-question="false" multi-select="false" internal-id="1427901353093" show-field-help="false">
+					<label id="peranyonehelp.label" internal-id="1427901605303">If you do, does anyone help you?</label>
+				</question>
+				<question id="perAnymorehelp" mandatory="true" control-question="false" multi-select="false" internal-id="1427902134166" show-field-help="false">
+					<label id="anymorehelp.label" internal-id="1427902254242">Do you think you need any more help with any of these things?</label>
+				</question>
+			</cluster>
+		</question-page>
+		<question-page id="page4" entity="Person" internal-id="1427964892605" progress="25" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="true">
+			<title id="gettingaround.Title" internal-id="1427965141409">Getting around</title>
+			<cluster internal-id="1427964928611">
+				<title id="gettingaroundcluster.Title" internal-id="1427965141410">Getting around at home and outside</title>
+				<layout>
+					<type>flow</type>
+					<num-cols>1</num-cols>
+					<label-alignment>right</label-alignment>
+				</layout>
+				<question id="mobDifficultygettingaround" mandatory="true" control-question="false" multi-select="false" internal-id="1427964399571" show-field-help="false">
+					<label id="gettingaround.label" internal-id="1427965141415">Do you have any difficulties moving around inside or outside your e.g. getting in and out of bed, using stairs, getting to the shops?</label>
+				</question>
+				<question id="mobExamples" mandatory="false" control-question="false" multi-select="false" internal-id="1427964978471" show-field-help="false">
+					<label id="mobilityexamples.label" internal-id="1427965141416">If you answer yes or have any other issues with getting around at home and outsideplease give examples below.</label>
+					<layout>
+						<type>flow</type>
+						<num-rows>3</num-rows>
+					</layout>
+				</question>
+				<question id="mobDoesanyonehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427965099315" show-field-help="false">
+					<label id="mobdoesanyonehelp.label" internal-id="1427965141419">If you do, does anyone help you?</label>
+				</question>
+				<question id="mobAnymorehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427965135685" show-field-help="false">
+					<label id="mobanymorehelp.label" internal-id="1427965213938">Do you think you need any more help with any of these things?</label>
+				</question>
+			</cluster>
+		</question-page>
+		<question-page id="page5" entity="Person" internal-id="1427965227307" progress="30" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="true">
+			<title id="eatinganddrinking.Title" internal-id="1427966107987">Eating and drinking</title>
+			<cluster internal-id="1427966141288">
+				<title id="eatinganddrinkingdiff.Title" internal-id="1427966961599">Do you have any difficulties with eating and drinking?</title>
+				<layout>
+					<type>flow</type>
+					<num-cols>1</num-cols>
+					<label-alignment>right</label-alignment>
+				</layout>
+				<question id="eatDifficultyplanningameal" mandatory="true" control-question="false" multi-select="false" internal-id="1427966995819" show-field-help="false">
+					<label id="planningmeal.label" internal-id="1427967279827">Planning a meal</label>
+				</question>
+				<question id="eatDifficultypreparingfood" mandatory="true" control-question="false" multi-select="false" internal-id="1427967091263" show-field-help="false">
+					<label id="preparingfood.label" internal-id="1427967279828">Preparing your food</label>
+				</question>
+				<question id="eatDifficultyeatindepend" mandatory="true" control-question="false" multi-select="false" internal-id="1427967093596" show-field-help="false">
+					<label id="eatindep.label" internal-id="1427967279829">Eating independently</label>
+				</question>
+				<question id="eatDifficultydrinkingindepend" mandatory="true" control-question="false" multi-select="false" internal-id="1427967126915" show-field-help="false">
+					<label id="drinkinginde.label" internal-id="1427967279830">Drinking independently</label>
+				</question>
+				<question id="eatExamples" mandatory="false" control-question="false" multi-select="false" internal-id="1427967156772" show-field-help="false">
+					<label id="eatexamples.label" internal-id="1427967279831">If you answer yes to any of the above or have any other issues with your eating anddrinking please give examples below.</label>
+					<layout>
+						<type>flow</type>
+						<num-rows>3</num-rows>
+					</layout>
+				</question>
+				<question id="eatDoesanyonehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427967183158" show-field-help="false">
+					<label id="eatanyonehelp.label" internal-id="1427967279834">If you do, does anyone help you?</label>
+				</question>
+				<question id="eatAnymorehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427967215720" show-field-help="false">
+					<label id="eatanymorehelp.label" internal-id="1427967279836">Do you think you need any more help with any of these things?</label>
+				</question>
+			</cluster>
+		</question-page>
+		<question-page id="page6" entity="Person" internal-id="1427967315590" progress="40" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="false">
+			<title id="managingaroundhome.Title" internal-id="1427967652958">Managing around your home</title>
+			<cluster internal-id="1427967347556">
+				<title id="managingathomecluster.Title" internal-id="1427967652959">Do you have any difficulties managing around your home?</title>
+				<layout>
+					<type>flow</type>
+					<num-cols>1</num-cols>
+					<label-alignment>right</label-alignment>
+				</layout>
+				<question id="homDifficultywithhousework" mandatory="true" control-question="false" multi-select="false" internal-id="1427967315027" show-field-help="false">
+					<label id="lookingafterhome.label" internal-id="1427967652964">Looking after your home / housework</label>
+				</question>
+				<question id="homDifficultywithshopping" mandatory="true" control-question="false" multi-select="false" internal-id="1427967374082" show-field-help="false">
+					<label id="shopping.label" internal-id="1427967652965">Shopping</label>
+				</question>
+				<question id="homDifficultywithlaundry" mandatory="true" control-question="false" multi-select="false" internal-id="1427967458612" show-field-help="false">
+					<label id="laundry.label" internal-id="1427967652966">Laundry</label>
+				</question>
+				<question id="homDifficultymanagingmoney" mandatory="true" control-question="false" multi-select="false" internal-id="1427967482172" show-field-help="false">
+					<label id="managingmoney.label" internal-id="1427967652967">Managing your money</label>
+				</question>
+				<question id="homDifficultybeingsafeathome" mandatory="true" control-question="false" multi-select="false" internal-id="1427967485021" show-field-help="false">
+					<label id="safeathome.label" internal-id="1427967652968">Being safe in your home</label>
+				</question>
+				<question id="homExamples" mandatory="false" control-question="false" multi-select="false" internal-id="1427967513560" show-field-help="false">
+					<label id="NewQuestionLabelID_1427967513560" internal-id="1427967652969">If you answer yes to any of the above or have any other issues with managing around yourhome please give examples below.</label>
+					<layout>
+						<type>flow</type>
+						<num-rows>3</num-rows>
+					</layout>
+				</question>
+				<question id="homDoesanyonehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427967539472" show-field-help="false">
+					<label id="homeanyonehelp.label" internal-id="1427967652972">If you do, does anyone help you?</label>
+				</question>
+				<question id="homNeedanymorehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427967573425" show-field-help="false">
+					<label id="homeneedanymorehelp.label" internal-id="1427967652974">Do you think you need any more help with any of these things?</label>
+				</question>
+			</cluster>
+		</question-page>
+		<question-page id="page7" entity="Person" internal-id="1427967666668" progress="50" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="true">
+			<title id="keepingsafe.Title" internal-id="1427967927558">Keeping Safe</title>
+			<cluster internal-id="1427967759430">
+				<title id="clusterkeepingsafe.Title" internal-id="1427967927559">Keeping safe when out and about</title>
+				<layout>
+					<type>flow</type>
+					<num-cols>1</num-cols>
+					<label-alignment>right</label-alignment>
+				</layout>
+				<question id="safDifficultykeepingsafe" mandatory="true" control-question="false" multi-select="false" internal-id="1427967618338" show-field-help="false">
+					<label id="keepingsafe.label" internal-id="1427967927564">Do you have any difficulties in keeping safe when you are out and about?</label>
+				</question>
+				<question id="safExamples" mandatory="false" control-question="false" multi-select="false" internal-id="1427967824812" show-field-help="false">
+					<label id="safexamples" internal-id="1427967927565">If you answer yes or have any other issues with keeping safe when you are out and aboutplease give examples below.</label>
+					<layout>
+						<type>flow</type>
+						<num-rows>3</num-rows>
+					</layout>
+				</question>
+				<question id="safDoesanyonehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427967790259" show-field-help="false">
+					<label id="safeanyonehelp.label" internal-id="1427967927568">If you do, does anyone help you?</label>
+				</question>
+				<question id="safNeedanymorehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427967854938" show-field-help="false">
+					<label id="safeanymorehelp.label" internal-id="1427967927569">Do you think you need any more help with any of these things?</label>
+				</question>
+			</cluster>
+		</question-page>
+		<question-page id="page8" entity="Person" internal-id="1427968045743" progress="60" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="true">
+			<title id="dealingwithotherpeople.Title" internal-id="1427968346137">Dealing with other people</title>
+			<cluster internal-id="1427968075462">
+				<title id="clusterdealingwithothers.Title" internal-id="1427968346138">Difficulty understanding other people or making yourself understood</title>
+				<layout>
+					<type>flow</type>
+					<num-cols>1</num-cols>
+					<label-alignment>right</label-alignment>
+				</layout>
+				<question id="peoDifficultywithpeople" mandatory="true" control-question="false" multi-select="false" internal-id="1427967895343" show-field-help="false">
+					<label id="diffwithothers.label" internal-id="1427968346143">Do you have any difficulties in understanding other people or making yourself understoodwhen you deal with others?</label>
+				</question>
+				<question id="peoExamples" mandatory="false" control-question="false" multi-select="false" internal-id="1427968180394" show-field-help="false">
+					<label id="NewQuestionLabelID_1427968180394" internal-id="1427968346144">If you answer yes or have any other issues with dealing with people or making yourselfunderstood please give examples below.</label>
+					<layout>
+						<type>flow</type>
+						<num-rows>3</num-rows>
+					</layout>
+				</question>
+				<question id="peoDoesanyonehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427968259033" show-field-help="false">
+					<label id="peopleanyonehelp.label" internal-id="1427968346147">If you do, does anyone help you?</label>
+				</question>
+				<question id="peoNeedanymorehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427968287936" show-field-help="false">
+					<label id="peoanymorehelp.label" internal-id="1427968346149">Do you think you need any more help with any of these things?</label>
+				</question>
+			</cluster>
+		</question-page>
+		<question-page id="page9" entity="Person" internal-id="1427968350006" progress="65" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="true">
+			<title id="workandleisure.Title" internal-id="1427968613239">Work and Leisure time</title>
+			<cluster internal-id="1427968391245">
+				<title id="clusterworkandleisure.Title" internal-id="1427968613240">Difficulty with work, leisure and social interests</title>
+				<layout>
+					<type>flow</type>
+					<num-cols>1</num-cols>
+					<label-alignment>right</label-alignment>
+				</layout>
+				<question id="socDifficultywithsocial" mandatory="true" control-question="false" multi-select="false" internal-id="1427968319644" show-field-help="false">
+					<label id="social.label" internal-id="1427968613245">Do you have any problems getting a job, taking part in leisure activities or following yoursocial interests?</label>
+				</question>
+				<question id="socExamples" mandatory="false" control-question="false" multi-select="false" internal-id="1427968447699" show-field-help="false">
+					<label id="socialexamples.label" internal-id="1427968613246">If you answer yes or have any other issues with work and leisure time please giveexamples below.</label>
+					<layout>
+						<type>flow</type>
+						<num-rows>3</num-rows>
+					</layout>
+				</question>
+				<question id="socDoesanyonehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427968533408" show-field-help="false">
+					<label id="socialanyonehelp.label" internal-id="1427968613249">If you do, does anyone help you?</label>
+				</question>
+				<question id="socNeedanymorehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427968535959" show-field-help="false">
+					<label id="socialneedanymorehelp.label" internal-id="1427968613251">Do you think you need any more help with any of these things?</label>
+				</question>
+			</cluster>
+		</question-page>
+		<question-page id="page10" entity="Person" internal-id="1427968625109" progress="70" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="true">
+			<title id="relationships.Title" internal-id="1427968819357">Relationships</title>
+			<cluster internal-id="1427968687573">
+				<title id="relationshipscluster.Title" internal-id="1427968819358">Relationships with family and friends</title>
+				<layout>
+					<type>flow</type>
+					<num-cols>1</num-cols>
+					<label-alignment>right</label-alignment>
+				</layout>
+				<question id="relDifficultywithrelationships" mandatory="true" control-question="false" multi-select="false" internal-id="1427968568120" show-field-help="false">
+					<label id="diffrelationships.label" internal-id="1427968819363">Do you have any difficulties keeping up relationships with family &amp; friends?</label>
+				</question>
+				<question id="relExamples" mandatory="false" control-question="false" multi-select="false" internal-id="1427968720906" show-field-help="false">
+					<label id="examplesrelation.label" internal-id="1427968819364">If you answer yes or have any other issues with keeping up relationships please giveexamples below.</label>
+					<layout>
+						<type>flow</type>
+						<num-rows>3</num-rows>
+					</layout>
+				</question>
+				<question id="relDoesanyonehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427968761212" show-field-help="false">
+					<label id="reldoesanyonehelp.label" internal-id="1427968819365">If you do, does anyone help you?</label>
+				</question>
+				<question id="relNeedanymorehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427969266769" show-field-help="false">
+					<label id="relneedanymorehelp.label" internal-id="1427969306100">Do you think you need any more help with any of these things?</label>
+				</question>
+			</cluster>
+		</question-page>
+		<question-page id="page11" entity="Person" internal-id="1427969303125" progress="75" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="false">
+			<title id="personalissues.Title" internal-id="1427969306101">Personal Issues</title>
+			<cluster internal-id="1427969364839">
+				<title id="personalissuescluster.Title" internal-id="1427969677990">Personal mental health and other issues</title>
+				<layout>
+					<type>flow</type>
+					<num-cols>1</num-cols>
+					<label-alignment>right</label-alignment>
+				</layout>
+				<question id="heaDifficultywithmentalhealth" mandatory="true" control-question="false" multi-select="false" internal-id="1427969271349" show-field-help="false">
+					<label id="mentalhealth.label" internal-id="1427969677995">Does your mental health, drug/alcohol, or other similar difficulties impact upon yourself or anyone else around you?</label>
+				</question>
+				<question id="heaExamples" mandatory="false" control-question="false" multi-select="false" internal-id="1427969432445" show-field-help="false">
+					<label id="healthexamples.label" internal-id="1427970006352">If you answer yes or have any other personal issues please give examples below.</label>
+					<layout>
+						<type>flow</type>
+						<num-rows>3</num-rows>
+					</layout>
+				</question>
+				<question id="heaDoesanyonehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427969886325" show-field-help="false">
+					<label id="healthanyonehelp.label" internal-id="1427970006355">If you do, does anyone help you?</label>
+				</question>
+				<question id="heaNeedanymorehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427969962509" show-field-help="false">
+					<label id="healthanymorehelp.label" internal-id="1427970006357">Do you think you need any more help with any of these things?</label>
+				</question>
+			</cluster>
+		</question-page>
+		<question-page id="page12" entity="Person" internal-id="1427970073230" progress="80" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="true">
+			<title id="lookingafter.Title" internal-id="1427970296357">Looking after someone else</title>
+			<cluster internal-id="1427970131813">
+				<title id="clusterparent.Title" internal-id="1427970296358">Parent or Guardian role</title>
+				<layout>
+					<type>flow</type>
+					<num-cols>1</num-cols>
+					<label-alignment>right</label-alignment>
+				</layout>
+				<question id="carDifficultylookingaftersomeone" mandatory="true" control-question="false" multi-select="false" internal-id="1427969965097" show-field-help="false">
+					<label id="parent.label" internal-id="1427970296363">Do you have any difficulties in carrying out your role as a parent/guardian or carer*?</label>
+				</question>
+				<question id="carExamples" mandatory="false" control-question="false" multi-select="false" internal-id="1427970195401" show-field-help="false">
+					<label id="parentexamples.label" internal-id="1427970296364">If you answer yes please give examples below.</label>
+					<layout>
+						<type>flow</type>
+						<num-rows>3</num-rows>
+					</layout>
+				</question>
+				<question id="carDoesanyonehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427970198064" show-field-help="false">
+					<label id="careranyonehelp.label" internal-id="1427970296367">If you do, does anyone help you?</label>
+				</question>
+				<question id="carNeedanymorehelp" mandatory="false" control-question="false" multi-select="false" internal-id="1427970235037" show-field-help="false">
+					<label id="carerneedanymorehelp.label" internal-id="1427970296369">Do you think you need any more help with any of these things?</label>
+				</question>
+				<display-text id="carertext.id" internal-id="1427970340008">*If you have a carer, we would recommend that they have a separate assessment.</display-text>
+			</cluster>
+		</question-page>
+		<question-page id="page13" entity="Person" internal-id="1427970302179" progress="85" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="true">
+			<title id="page13.Title" internal-id="1427970499112">Contributions towards services</title>
+			<cluster internal-id="1427970447599">
+				<title id="clusterinfo.Title" internal-id="1427970499113">Information</title>
+				<layout>
+					<type>flow</type>
+					<num-cols>1</num-cols>
+					<label-alignment>right</label-alignment>
+				</layout>
+				<display-text id="contrib.id" internal-id="1427970343011">You might be expected to pay a contribution towards any services you might get. You will be assessed to make sure that any contribution you might be asked to make is no more than you can afford. When we contact you to discuss this self assessment, we will explain how charging might apply to you. We can also arrange for you to have a welfare benefits check to make sure you are getting all the benefits you are entitled to.</display-text>
+			</cluster>
+		</question-page>
+		<question-page id="page14" entity="Person" internal-id="1427970536611" progress="90" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="true">
+			<title id="page14.Title" internal-id="1427970770774">End of Assessment</title>
+			<cluster internal-id="1427970580930">
+				<title id="clusteranythingelse.Title" internal-id="1427970770775">Any other details</title>
+				<layout>
+					<type>flow</type>
+					<num-cols>1</num-cols>
+					<label-alignment>right</label-alignment>
+				</layout>
+				<question id="Anythingelsetosay" mandatory="false" control-question="false" multi-select="false" internal-id="1427970263269" show-field-help="false">
+					<label id="anythingelse.label" internal-id="1427970770780">If there is anything else about your circumstances that affects how well you can look afteryourself or someone else that you would like to tell us about, please write in the details below.</label>
+					<layout>
+						<type>flow</type>
+						<num-rows>7</num-rows>
+					</layout>
+				</question>
+				<question id="dateCompleted" mandatory="true" control-question="false" multi-select="false" internal-id="1427970608157" show-field-help="false">
+					<label id="datecompleted.label" internal-id="1427970770783">Date Completed</label>
+				</question>
+			</cluster>
+		</question-page>
+		<question-page id="page15" entity="Person" internal-id="1427970688237" progress="100" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="true" show-save-exit-button="true" show-next-button="true" set-focus="true">
+			<title id="page15.Title" internal-id="1427970770784">Finish</title>
+			<cluster internal-id="1427970707434">
+				<title id="clusterfinish.Title" internal-id="1427970770785">Please send your completed Self Assessment to:</title>
+				<layout>
+					<type>flow</type>
+					<num-cols>1</num-cols>
+					<label-alignment>right</label-alignment>
+				</layout>
+				<display-text id="finishtext.id" internal-id="1427970477812">Sunderland City Council Health Housing and Adult Services Dock Street Sunderland SR6 0EA e-mail adult.eastdivision@sunderland.gov.uk If you have any queries, please ring 0191 5662000</display-text>
+			</cluster>
+		</question-page>
+	</section>
+</ieg-script>

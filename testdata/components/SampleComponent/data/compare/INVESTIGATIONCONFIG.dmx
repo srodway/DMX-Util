@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="INVESTIGATIONCONFIG">
+  <column name="investigationConfigID" type="id" />
+  <column name="type" type="text" />
+  <column name="homePageIdentifier" type="text" />
+  <column name="startDate" type="date" />
+  <column name="endDate" type="date" />
+  <column name="readSecurity" type="text" />
+  <column name="approveSecurity" type="text" />
+  <column name="createSecurity" type="text" />
+  <column name="maintainSecurity" type="text" />
+  <column name="createEvent" type="text" />
+  <column name="closeEvent" type="text" />
+  <column name="creationDate" type="date" />
+  <column name="recordStatus" type="text" />
+  <column name="comments" type="text" />
+  <column name="ownershipStrategyName" type="text" />
+  <column name="adminTranslationRequiredInd" type="bool" />
+  <column name="contactLogInd" type="bool" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="investigationConfigID">
+      <value>2109</value>
+    </attribute>
+    <attribute name="type">
+      <value>INCT2000</value>
+    </attribute>
+    <attribute name="homePageIdentifier">
+      <value>InvestigationSample_home</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="readSecurity">
+      <value />
+    </attribute>
+    <attribute name="approveSecurity">
+      <value />
+    </attribute>
+    <attribute name="createSecurity">
+      <value />
+    </attribute>
+    <attribute name="maintainSecurity">
+      <value />
+    </attribute>
+    <attribute name="createEvent">
+      <value />
+    </attribute>
+    <attribute name="closeEvent">
+      <value />
+    </attribute>
+    <attribute name="creationDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="ownershipStrategyName">
+      <value />
+    </attribute>
+    <attribute name="adminTranslationRequiredInd">
+      <value />
+    </attribute>
+    <attribute name="contactLogInd">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

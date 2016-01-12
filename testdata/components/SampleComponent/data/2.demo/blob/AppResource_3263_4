@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2010, 2012. All Rights Reserved.
+  
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010-2011 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ViewIncidentMenu">
+  
+  <!-- BEGIN, CR00343255, SS -->
+  <mc:loader-registry>
+    <mc:loader class="curam.provider.impl.ProviderIncidentMenuLoader"/>
+  </mc:loader-registry>
+
+  <mc:menu-item dynamic="true" id="Edit" open-as="modal" page-id="ProviderManagement_modifyIncident" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
+  <!-- END, CR00343255 -->  
+  
+  <mc:menu-item id="AddParticipant" open-as="modal" page-id="ProviderManagement_addIncidentParticipant" title="MenuItem.Title.AddParticipant" tooltip="MenuItem.Tooltip.AddParticipant"/>
+  
+  <mc:menu-separator id="sep2"/>
+  
+  <!-- BEGIN, CR00246460, CS -->
+  <mc:menu-item id="NewInjury" open-as="modal" page-id="ProviderManagement_createIncidentInjury" title="MenuItem.Title.NewInjury" tooltip="MenuItem.Tooltip.NewInjury"/>
+  
+  <mc:menu-item id="NewRestraint" open-as="modal" page-id="ProviderManagement_createIncidentRestraint" title="MenuItem.Title.NewRestraint" tooltip="MenuItem.Tooltip.NewRestraint"/>
+  
+  <mc:menu-item id="NewStaffAction" open-as="modal" page-id="ProviderManagement_createIncidentStaffActions" title="MenuItem.Title.NewStaffAction" tooltip="MenuItem.Tooltip.NewStaffAction"/>
+  <!-- END, CR00246460 -->
+
+  <mc:menu-item id="NewAttachment" open-as="modal" page-id="ProviderManagement_createIncidentAttachment" title="MenuItem.Title.NewAttachment" tooltip="MenuItem.Tooltip.NewAttachment"/>
+  
+  <mc:menu-item id="NewContact" open-as="modal" page-id="ProviderManagementContactLogWizard_createContact" title="MenuItem.Title.NewContact" tooltip="MenuItem.Tooltip.NewContact"/>
+  
+</mc:menu-bar>

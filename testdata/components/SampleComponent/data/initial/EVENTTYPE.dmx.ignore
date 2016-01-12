@@ -1,0 +1,5155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="EVENTTYPE">
+  <column name="eventType" type="text" />
+  <column name="eventClass" type="text" />
+  <column name="lastWritten" type="timestamp" />
+  <row>
+    <attribute name="eventType">
+      <value>MADE</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISION</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Deleted</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProcessDefinitionLifeCycle</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Closed</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>TaskLifeCycle</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CommentAdded</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>TaskLifeCycle</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Created</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>TaskLifeCycle</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Canceled</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Activity</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>AttendeeInvited</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Activity</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>AttendeeRemoved</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Activity</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InviteeAccepted</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Activity</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InviteeRejected</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Activity</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertAddress</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Address</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyAddress</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Address</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RemoveAddress</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Address</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>StreetTypeNotAvailable</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Address</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertAllegation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Allegation</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyAllegation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Allegation</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CancelAllegation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Allegation</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertAllegationRole</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>AllegationRole</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyAllegationRole</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>AllegationRole</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RemoveAllegationRole</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>AllegationRole</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>AlternateName.Insert</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ALTERNATENAME</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>AlternateName.Modify</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ALTERNATENAME</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>AlternateName.Remove</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ALTERNATENAME</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>AssignedOwner</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ApplicationCase</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>APPLICATION_DISPOSED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ApplicationDisposed</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>APPROVEDREJECTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>APPROVALREQUEST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ExtendCert</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ASCCertExtension</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Closed</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ASCTaskClosure</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Insert</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>AssessmentDelivery</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyBankAccount</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>BankAccount</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RemoveBankAccount</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>BankAccount</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertBankAccount</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>BankAccount</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyBankBranch</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>BankBranch</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>NEW_MEETING</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CASE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>REVIEWCHANGED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CASE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>NO_SUPERVISOR_EXISTS</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CASE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>INSERT_APPROVAL</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CASE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Insert</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CASE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Modify</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CASE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>REOPEN_CASE</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CASE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CASE_CREATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CASE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CASE_OWNER_CHANGED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CASE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CANCEL_CASE_ATTACHMENT</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CaseAttachment</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>FeedbackReceived</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CaseAudit</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ActivateDeduction</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CaseDeductionItem</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertCaseNomineeDestination</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CaseNomineeDestination</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyCaseNomineeDestination</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CaseNomineeDestination</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CANCEL_CASE_NOTE</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CaseNote</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertCaseParticipantRole</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CaseParticipantRole</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyCaseParticipantRole</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CaseParticipantRole</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CancelCaseParticipantRole</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CaseParticipantRole</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RetermineTranslator</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CaseParticipantRole</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreatePayment</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CasePayment</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RESUBMIT</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CaseResolution</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>MarkDuplicate</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ClientMerge</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>UnmarkDuplicate</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ClientMerge</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CompleteMerge</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ClientMerge</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PersontoPersonCompleteMerge</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ClientMerge</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>COMPARTMENT_INSERTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>COMPARTMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>COMPARTMENT_MODIFIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>COMPARTMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>COMPARTMENT_CANCELED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>COMPARTMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ConcernRole.Insert</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CONCERNROLE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ConcernRole.Modify</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CONCERNROLE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertConcernRoleAddress</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ConcernRoleAddress</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyConcernRoleAddress</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ConcernRoleAddress</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RemoveConcernRoleAddress</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ConcernRoleAddress</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertConcernRoleAlternateID</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ConcernRoleAlternateID</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyConcernRoleAlternateID</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ConcernRoleAlternateID</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyConcernRoleBankAccount</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ConcernRoleBankAccount</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertConcernRoleBankAccount</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ConcernRoleBankAccount</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ConcernRoleDuplicate.Insert</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CONCERNROLEDUPLICATE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ConcernRoleDuplicate.Modify</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CONCERNROLEDUPLICATE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertConcernRoleRelationship</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ConcernRoleRelationship</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyConcernRoleRelationship</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ConcernRoleRelationship</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RemoveConcernRoleRelationship</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ConcernRoleRelationship</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateContactLog</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ContactLog</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>EDITCONTACTLOG</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ContactLog</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>FLATRATECONTRACT_INSERTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CONTRACTS</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>FLATRATECONTRACT_ACTIVATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CONTRACTS</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>FLATRATECONTRACT_RENEWED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CONTRACTS</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>FLATRATECONTRACT_TERMINATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CONTRACTS</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>UTILIZATIONCONTRACT_AMENDED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CONTRACTS</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>UTILIZATIONCONTRACT_INSERTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CONTRACTS</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>UTILIZATIONCONTRACT_ACTIVATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CONTRACTS</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>UTILIZATIONCONTRACT_RENEWED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CONTRACTS</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>UTILIZATIONCONTRACT_TERMINATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>CONTRACTS</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Participant</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DBSecurity</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Location</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DBSecurity</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Case</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DBSecurity</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Note</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DBSecurity</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CaseCreation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DBSecurity</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateCondition</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyCondition</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeleteCondition</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyConditionDeterminationAssociation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RemoveConditionDeterminationAssociation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>AddICDCode</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyICDCodeAssociation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RemoveICDCodeAssociation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateConditionNameTranslation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyConditionNameTranslation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeleteConditionNameTranslation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateDetermination</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyDetermination</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeleteDetermination</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RemoveDeterminationPkg</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>AddCondition</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateDeterminationNameTranslation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyDeterminationNameTranslation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeleteDeterminationNameTranslation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateDeterminationPkgDtls</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyDeterminationPkgDtls</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateDeterminationPkgVersion</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ReleaseDeterminationPkgVersion</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeleteDeterminationPkgVersion</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RemoveDecisionMatrix</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>AddExistingQuestionnaire</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateQuestionnaireForPkg</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RemoveQuestionnaireForPkgAssocation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreatePresentationData</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyPresentationData</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeletePresentationData</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateDecisionMatrix</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyDecisionMatrix</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateDecisionMatrixVersion</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CloneDecisionMatrix</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ReleaseDecisionMatrixVersion</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeleteDecisionMatrixVersion</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateQuestionnaire</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyQuestionnaire</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateNewQuestionnaireVersion</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ReleaseQuestionnaireVersion</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeleteQuestionnaireVersion</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateTypicaPictureForQuestionaire</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SynchronizeTypicaPicture</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RemoveTypicaPicture</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateOutcome</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyOutcomeDetails</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeleteOutcome</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateOutcomeNameTranslation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyOutcomeNameTranslation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeleteOutcomeNameTranslation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyTypicalPicture</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateNewTypicalPictureVersion</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ReleaseTypicalPictureVersion</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeleteTypicalPictureVersion</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateICDCode</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyICDCode</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RemoveICDCode</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>UploadICDCodes</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RemoveICDCodeVersion</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateICDCodeVersion</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ReleaseICDCodeVersion</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateICDCodeTranslation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyICDCodeTranslation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeleteICDCodeTranslation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateAssessment</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CompleteAssessment</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CloneAssessment</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CompleteDetermination</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RecordChangeofCircumstances</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SendThirdPartyRequest</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>DECISIONASSISTCONST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateDeduction</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Deductions</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyDeduction</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Deductions</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SkipDeduction</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Deductions</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ActivateDeduction</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Deductions</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeactivateDeduction</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Deductions</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CancelDeduction</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Deductions</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ExpireDeduction</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Deductions</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeductionPaidLiability</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Deductions</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>EndDeductionsForParticipant</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Deductions</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertEducationalInstitute</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EducationalInstitute</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyEducationalInstitute</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EducationalInstitute</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertEmployer</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Employer</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyEmployer</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Employer</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertEmployment</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Employment</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyEmployment</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Employment</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RemoveEmployment</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Employment</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>EVIDENCE_APPLIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EvidenceAppliedEvent</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>EVIDENCEAPPROVED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EVIDENCEAPPROVAL</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>EVIDENCEREJECTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EVIDENCEAPPROVAL</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>EvidenceActivated</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EvidenceBroker</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>EvidenceRemoved</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EvidenceBroker</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>BulkEvidenceActivated</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EvidenceBroker</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>IdenticalEvidenceSynchronized</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EvidenceBroker</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>NonIdenticalEvidenceSynchronized</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EvidenceBroker</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>IdenticalEvidenceNotSynchronized</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EvidenceBroker</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>NonIdenticalEvidenceNotSynchronized</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EvidenceBroker</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SupervisorSynchronizeTaskComplete</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EvidenceBroker</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CaseCreationEvidenceSynchronized</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EvidenceBroker</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CaseCreationEvidenceNotSynchronized</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EvidenceBroker</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SupervisorCaseCreationSynchronizeTaskComplete</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EvidenceBroker</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>EXTERNALUSER_CREATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>EXTERNALUSER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>HOMESTUDY_SUBMITTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>HOMESTUDY</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>HOMESTUDY_APPROVE</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>HOMESTUDY</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>HOMESTUDYASSESSMENT_RESULT_AS_CONDITIONAL_PASS</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>HOMESTUDYASSESSMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>NEW_INCIDENT</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>INCIDENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>MODIFIED_INCIDENT</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>INCIDENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CLOSED_INCIDENT</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>INCIDENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ADD_WITNESS</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>INCIDENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>EDIT_WITNESS</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>INCIDENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>NEW_REPORTER</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>INCIDENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CHANGE_REPORTER</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>INCIDENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>MODIFY_REPORTER</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>INCIDENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertIndigenous</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Indigenous</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyIndigenous</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Indigenous</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ILIsProcessedIntoPayment</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>InstructionLineItem</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ILITransferred</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>InstructionLineItem</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ILIsCanceledOnCase</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>InstructionLineItem</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>APPLICATION_DISPOSED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>IntakeApplication</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>STARTING_TO_MAP_TO_CURAM</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>IntakeApplication</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>APPLICATION_MAPPED_TO_CURAM</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>IntakeApplication</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>APPLICATION_PASSED_TO_EXTERNAL_SYSTEM</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>IntakeApplication</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>APPLICATION_PASSED_TO_TARGET_SYSTEM</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>IntakeApplication</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>INTAKE_MILESTONE_CREATION</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>IntakeMilestoneCreationEvent</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROGRAM_CREATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>IntakeProgramApplication</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROGRAM_APPROVED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>IntakeProgramApplication</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROGRAM_DENIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>IntakeProgramApplication</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROGRAM_WITHDRAWN</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>IntakeProgramApplication</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DISPOSITION_DEADLINE_APPROACHING</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>IntakeProgramApplication</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROGRAM_ASSOCIATED_WITH_CASE</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>IntakeProgramApplication</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DEADLINE_DATE_CHANGED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>IntakeProgramApplication</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertInvestigation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>InvestigationDelivery</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyInvestigation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>InvestigationDelivery</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>INVOICECANCELLED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>NEWINVOICECREATED</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>INVOICESUBMITTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>NEWINVOICECREATED</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Insert</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>IssueDelivery</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Modify</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>IssueDelivery</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertLiabilityIssued</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>LiabilityInstrument</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyLiabilityIssued</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>LiabilityInstrument</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>LICENSE_REJECTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>LICENSE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>LICENSE_SUSPENDED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>LICENSE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>NEW_MEETING</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MEETING</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>MODIFIED_MEETING</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MEETING</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CANCELLED_MEETING</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MEETING</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>INVITE_ADDITIONAL_ATTENDEES</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MEETING</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ISSUE_MINUTES</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MEETINGMINUTES</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RECORD_MINUTES</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MEETINGMINUTES</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>MODIFY_MINUTES</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MEETINGMINUTES</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DELETE_MINUTES</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MEETINGMINUTES</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CREATE_DECISIONS</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MEETINGMINUTES</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>UPDATE_DECISIONS</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MEETINGMINUTES</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CREATE_NOTES</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MEETINGMINUTES</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>UPDATE_NOTES</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MEETINGMINUTES</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CREATE_ATTENDANCE</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MEETINGMINUTES</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>UPDATE_ATTENDANCE</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MEETINGMINUTES</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Completion</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MilestoneCompletion</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Creation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MilestoneCreation</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>EXPECTEDSTARTDATEREACHED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MILESTONEDELIVERY</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>EXPECTEDENDDATEREACHED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MILESTONEDELIVERY</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>MILESTONEADDED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MILESTONE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>NEW_MEMBER_ADDED_TO_TEAM</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MultidisciplinaryTeam</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>EXISTING_MEMBER_ADDED_TO_TEAM</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MultidisciplinaryTeam</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>EXISTING_USER_ADDED_TO_TEAM</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MultidisciplinaryTeam</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>MDT_MEMBER_REMOVED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MultidisciplinaryTeam</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>MDT_MEMBER_MODIFIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MultidisciplinaryTeam</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>MDT_REMOVED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MultidisciplinaryTeam</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>MDT_ADDED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MultidisciplinaryTeam</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>MDT_SHARING_CONFIGURED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MultidisciplinaryTeam</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CHANGE_MDT_LEAD</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>MultidisciplinaryTeam</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateCommunication</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ParticipantCommunication</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CONTRACTPAYMENT_WITHHELD</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PAYMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>INVOICEPAYMENT_WITHHELD</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PAYMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertPaymentIssued</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PaymentInstrument</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyPaymentIssued</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PaymentInstrument</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertPaymentReceivedInstrument</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PaymentReceivedInstrument</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertPerson</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Person</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyPerson</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Person</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PLACE_INSERTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PLACE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PLACE_MODIFIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PLACE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PLACE_CANCELED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PLACE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PLACE_CLOSED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PLACE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PLACE_MARKED_FOR_USE</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PLACE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PLACE_MARKED_OUT_OF_USE</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PLACE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PLACEMENT_INSERTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PLACEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PLACEMENT_MODIFIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PLACEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PLACEMENTCHARACTERISTIC_INSERTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PLACEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PLACEMENTCHARACTERISTIC_MODIFIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PLACEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PLACEMENTCHARACTERISTIC_CANCELED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PLACEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>LANGUAGECHARACTERISTIC_INSERTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PLACEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>LANGUAGECHARACTERISTIC_REMOVED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PLACEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Insert</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProductDelivery</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Modify</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProductDelivery</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Suspend</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProductDelivery</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Unsuspend</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProductDelivery</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertProductProvider</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProductProvider</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyProductProvider</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProductProvider</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>STATUS_CHANGE</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProgramApplicationStatusChanged</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>WITHDRAWAL_REQEUST_CONFIRMED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProgramWithdrawalRequestConfirmed</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertProspectEmployer</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProspectEmployer</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyProspectEmployer</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProspectEmployer</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RemoveProspectEmployer</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProspectEmployer</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RegisterProspectEmployerAsEmployer</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProspectEmployer</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertProspectPerson</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProspectPerson</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyProspectPerson</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProspectPerson</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RemoveProspectPerson</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProspectPerson</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RegisterProspectPersonAsPerson</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProspectPerson</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDER_INSERTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDER_MODIFIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDER_APPROVED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDER_REJECTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDER_SUSPENDED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDER_CLOSED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDER_REOPENED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ACCREDITATION_CANCELED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ACCREDITATION</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>BACKGROUNDCHECK_CANCELED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>BACKGROUNDCHECK</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>BACKGROUNDCHECK_RESULT_AS_UNDER_INVESTIGATION</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>BACKGROUNDCHECK</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDERCATEGORYPERIOD_INSERTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERCATEGORY</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDERCATEGORYPERIOD_MODIFIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERCATEGORY</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDERCATEGORYPERIOD_CANCELED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERCATEGORY</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>TRANSFERENQUIRYTOPROVIDER</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERENQUIRY</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CLOSEENQUIRY</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERENQUIRY</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CREATEENQUIRY</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERENQUIRY</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDERGROUP_INSERTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERGROUP</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDERGROUP_MODIFIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERGROUP</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDERGROUP_CLOSED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERGROUP</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDERGROUP_REOPENED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERGROUP</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>HOMESTUDYAPPROVED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERMANAGEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>HOMESTUDYRETURNED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERMANAGEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SILIPROCESSED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERMANAGEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SILIDENIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERMANAGEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SILICORRECTIONDENIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERMANAGEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SILICANCELED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERMANAGEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SILIAPPROVED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERMANAGEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SILICORRECTIONAPPROVED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERMANAGEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>BACKGROUNDCHECKCREATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERMANAGEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>BACKGROUNDCHECKUPDATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERMANAGEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CERTIFICATIONUPDATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERMANAGEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SILIUNITSREMAININGVALIDATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERMANAGEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>TAXONOMY_TERM_UPDATE</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERMANAGEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>TAXONOMY_INDEXING_REVIEW</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERMANAGEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SILIREASSESSED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERMANAGEMENT</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDEROFFERING_INSERTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDEROFFERING</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDEROFFERING_MODIFIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDEROFFERING</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDEROFFERING_CANCELED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDEROFFERING</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDERPARTY_MEMBER_INSERTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERPARTY</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>REQUIRED_TRAININGS_ARE_NOT_MET</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERPARTY</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ValidatePlannedItem</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ProviderServicePlan</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDERTYPE_INSERTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERTYPE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDERTYPE_MODIFIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERTYPE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PROVIDERTYPE_CANCELED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>PROVIDERTYPE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>APPLICATION_READY_FOR_DETERMINATION</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ReadyForDetermination</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>REFERRAL_CLIENTCONTACTEDPROVIDER</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>REFERRAL</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>REFERRAL_INITIATEFOLLOWUPALERTPROCESS</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>REFERRAL</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>INTERNAL_REFERRAL_CREATION</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ReferralCreationEvent</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>REQUESTACCEPTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>REQUESTDECISION</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>REQUESTREJECTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>REQUESTDECISION</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>REQUESTSUBMITTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>REQUESTDECISION</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>InsertResolution</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Resolution</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyResolution</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Resolution</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CancelResolution</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Resolution</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RESOLUTIONSUBMITTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>RESOLUTIONAPPROVAL</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RESOLUTIONAPPROVED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>RESOLUTIONAPPROVAL</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RESOLUTIONREJECTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>RESOLUTIONAPPROVAL</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PAPER_ROSTER_GENERATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ROSTER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PRLI_CANCELED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ROSTER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PRLI_PROCESSED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ROSTER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PRLI_DENIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ROSTER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PRLI_APPROVED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ROSTER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PRLIC_APPROVED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ROSTER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PRLIC_DENIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ROSTER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ROSTER_SUBMITTED_AFTER_DUE_DATE</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ROSTER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PRLI_CORRECTION_SUBMITTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ROSTER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PRLI_SUBMITTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ROSTER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CREATE_EXCEPTION_TASK</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ROSTER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ROSTER_NOT_SUBMITTED_AFTER_DUE_DATE</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ROSTER</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ROUTE_PROGRAM_APPLICATION_TO_LEGACY</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>RouteProgramApplicationToLegacy</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Insert</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Screening</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>APPROVEDREJECTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SERVICEDELIVERY</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SERVICEGROUP_CANCELED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SERVICEGROUP</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SILI_SUBMITTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SERVICEINVOICE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SILI_CORRECTION_SUBMITTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SERVICEINVOICE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>NEW_SERVICEINVOICE_CREATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SERVICEINVOICE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CREATE_EXCEPTION_TASK</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SERVICEINVOICE</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SERVICEOFFERING_INSERTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SERVICEOFFERING</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SERVICEOFFERING_MODIFIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SERVICEOFFERING</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SERVICEOFFERING_CANCELED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SERVICEOFFERING</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SOAPPROVALCRITERIA_INSERTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SERVICEOFFERING</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SOAPPROVALCRITERIA_MODIFIED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SERVICEOFFERING</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SOAPPROVALCRITERIA_CANCELED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SERVICEOFFERING</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RecordServiceUnitDelivery</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyServiceUnitDelivery</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeleteServiceUnitDelivery</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyAuthorizedUnits</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreatePlan</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyPlan</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyPlanType</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SubmitPlan</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ApprovePlan</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RejectPlan</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ClosePlan</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ClonePlan</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SubmitPlanItem</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ApprovePlanItem</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RejectPlanItem</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ActivatePlanItem</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ClosePlanItem</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>IssueContract</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>AcceptContract</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>RejectContract</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CancelContract</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateGoal</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyGoal</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateSubGoal</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifySubGoal</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeleteSubGoal</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreatePlanGroup</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyPlanGroup</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeletePlanGroup</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreatePlanItem</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyPlanItem</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeletePlanItem</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateBaseline</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeleteBaseline</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>AddRepresentative</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CreateParticipation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyParicipation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DeleteParticipation</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ManualApproveServicePlan</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ManualApprovePlannedItem</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>FailedApprovalCriteria</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PassedApprovalCriteria</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PlannedItemUserApprovalPass</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>PlannedItemUserApprovalFail</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SamplePlannedItemPostApprovalCriteria</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SamplePlannedItemPreApprovalCriteria</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ApprovePlanItem</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlanApproval</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>AutoApprovedPlanItem</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlanApproval</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Insert</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlanDelivery</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>Modify</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>ServicePlanDelivery</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SERVICESUGGESTION_CANCELED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SERVICESUGGESTION</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CASE_CREATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SocialEnterpriseFolder</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CASE_CLOSED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SocialEnterpriseFolder</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CASE_REOPENED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SocialEnterpriseFolder</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CASE_ADDED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SocialEnterpriseFolder</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CASE_REMOVED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SocialEnterpriseFolder</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CLIENT_ADDED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SocialEnterpriseFolder</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CLIENT_REMOVED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SocialEnterpriseFolder</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SpecialCautionCreated</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SpecialCaution</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>SpecialCautionEndDated</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>SpecialCaution</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>OPEN</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>TASK</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CLOSED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>TASK</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ModifyUtility</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Utility</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>VerificationSatisified</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Verification</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DueDateChanged</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Verification</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>VerificationAdded</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Verification</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>VerificationUpdated</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Verification</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DueDate</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Verification</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>DueDateElapsed</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Verification</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>CaseClosed</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Verification</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>EvidenceDeleted</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Verification</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>WarningDateElapsed</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Verification</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>ExpiryDateElapsed</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Verification</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>VerificationInserted</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Verification</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>VerificationItemAttachmentDeleted</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Verification</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>VerificationItemAttachmentUpdated</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>Verification</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>WAITLISTENTRYALLOCATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>WAITLIST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>WAITLISTENTRYREMOVED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>WAITLIST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>WAITLISTENTRYCREATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>WAITLIST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>WAITLISTENTRYUPDATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>WAITLIST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>WAITLISTENTRYEXPIRED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>WAITLIST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>WAITLISTENTRYSELECTEDFORREVIEW</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>WAITLIST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>WAITLISTENTRYREVIEWDEFERRED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>WAITLIST</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>WITHDRAWAL_REQUEST_CREATED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>WithdrawalRequest</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>WITHDRAWAL_REQUEST_REJECTED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>WithdrawalRequest</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>WITHDRAWAL_REQUEST_APPROVED</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>WithdrawalRequest</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>WITHDRAWAL_REQUEST_PASSED_TO_EXTERNAL_SYSTEM</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>WithdrawalRequest</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventType">
+      <value>WITHDRAWAL_REQUEST_PASSED_TO_TARGET_SYSTEM</value>
+    </attribute>
+    <attribute name="eventClass">
+      <value>WithdrawalRequest</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+</table>
+

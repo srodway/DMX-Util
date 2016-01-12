@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="ORGUNITPARENTLINK" override="true">
+<column name="orgUnitParentLinkID" type="id"/>
+<column name="organisationStructureID" type="id"/>
+<column name="organisationUnitID" type="id"/>
+<column name="parentOrganisationUnitID" type="id"/>
+<column name="recordStatus" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

@@ -1,0 +1,1929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="BANKACCOUNT">
+  <column name="bankAccountID" type="id" />
+  <column name="bankBranchID" type="id" />
+  <column name="name" type="text" />
+  <column name="typeCode" type="text" />
+  <column name="bankSortCode" type="text" />
+  <column name="accountNumber" type="text" />
+  <column name="statusCode" type="text" />
+  <column name="startDate" type="date" />
+  <column name="endDate" type="date" />
+  <column name="comments" type="text" />
+  <column name="bankAccountStatus" type="text" />
+  <column name="jointAccountInd" type="bool" />
+  <column name="paymentIssuedInd" type="bool" />
+  <column name="bic" type="text" />
+  <column name="iban" type="text" />
+  <column name="versionNo" type="number" />
+  <column name="lastWritten" type="timestamp" />
+  <row>
+    <attribute name="bankAccountID">
+      <value>1001</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>James Smith</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296463</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1002</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Linda Smith</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296464</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1003</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Robert Smith</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296465</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1004</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Lisa Smith</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296466</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1005</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Susan Smith</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296467</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1006</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Granpa Smith</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296468</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1007</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Dorothy Williams</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296469</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1008</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Margaret Williams</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296470</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Nuclear Power Plant</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296471</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Drug Store</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296472</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1011</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway DMV</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296473</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1012</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Emporium</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296474</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1013</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Rev. Timothy Miller</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296475</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1014</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Tony Taylor</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296476</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1015</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Lionel Jones</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296477</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1016</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Dr. Julius Davis</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296478</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1017</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Dr. James Wilson</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296479</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1018</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Dr. Nick Wilson</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296480</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1019</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Dr. Marvin Moore</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296481</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1020</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>State Appeals Board</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296482</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1021</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Ombudsman</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296483</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1022</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Healthcare Inc.</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296484</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value />
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1023</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Health Insurance</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296485</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1024</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Social Services</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296486</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1025</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Training Services</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296487</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1026</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Medicines</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296488</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1027</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Bankers</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296489</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1028</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Riverside Banks</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296490</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1029</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Bus</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296491</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1030</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Spingfield Rail</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296492</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1031</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Tony Taylors Construction</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296493</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1032</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Jones Electricity Supply</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296494</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1033</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Gas</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296495</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1034</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Social Security Organisation</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA11</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296496</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1035</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Clinic</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296497</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="bankAccountID">
+      <value>1036</value>
+    </attribute>
+    <attribute name="bankBranchID">
+      <value>1101</value>
+    </attribute>
+    <attribute name="name">
+      <value>Department of Revenue</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>BA9</value>
+    </attribute>
+    <attribute name="bankSortCode">
+      <value>90-14-87</value>
+    </attribute>
+    <attribute name="accountNumber">
+      <value>49296498</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="bankAccountStatus">
+      <value>BAS1</value>
+    </attribute>
+    <attribute name="jointAccountInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="paymentIssuedInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bic">
+      <value />
+    </attribute>
+    <attribute name="iban">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+</table>
+

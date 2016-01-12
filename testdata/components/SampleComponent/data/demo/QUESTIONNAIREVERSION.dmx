@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="QUESTIONNAIREVERSION" override="true">
+<column name="questionnaireVersionID" type="id"/>
+<column name="questionnaireID" type="id"/>
+<column name="name" type="text"/>
+<column name="type" type="text"/>
+<column name="questionnaireVersionNumber" type="number"/>
+<column name="versionStatus" type="text"/>
+<column name="fromDate" type="timestamp"/>
+<column name="toDate" type="timestamp"/>
+<column name="dateCreated" type="timestamp"/>
+<column name="createdBy" type="text"/>
+<column name="comments" type="text"/>
+<column name="iegScriptID" type="text"/>
+<column name="datastoreSchema" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

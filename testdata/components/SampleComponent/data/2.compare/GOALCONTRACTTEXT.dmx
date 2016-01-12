@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="GOALCONTRACTTEXT">
+  <column name="goalContractTextID" type="id" />
+  <column name="goalID" type="id" />
+  <column name="contractTextID" type="id" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="goalContractTextID">
+      <value>1</value>
+    </attribute>
+    <attribute name="goalID">
+      <value>1</value>
+    </attribute>
+    <attribute name="contractTextID">
+      <value>1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

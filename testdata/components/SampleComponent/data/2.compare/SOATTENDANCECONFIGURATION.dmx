@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="SOATTENDANCECONFIGURATION">
+  <column name="soAttendanceConfigurationID" type="id" />
+  <column name="serviceOfferingID" type="id" />
+  <column name="attendanceTrackingEnabledInd" type="bool" />
+  <column name="dailyAttendanceTrackingReqInd" type="bool" />
+  <column name="effectiveDate" type="date" />
+  <column name="rosterGenerationFrequency" type="text" />
+  <column name="reportingMethod" type="text" />
+  <column name="hoursEnabled" type="bool" />
+  <column name="recordStatus" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="soAttendanceConfigurationID">
+      <value>-252201579124350976</value>
+    </attribute>
+    <attribute name="serviceOfferingID">
+      <value>-4431542033324171264</value>
+    </attribute>
+    <attribute name="attendanceTrackingEnabledInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="dailyAttendanceTrackingReqInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="effectiveDate">
+      <value>2015-12-07</value>
+    </attribute>
+    <attribute name="rosterGenerationFrequency">
+      <value>000100000</value>
+    </attribute>
+    <attribute name="reportingMethod">
+      <value>ATRT3001</value>
+    </attribute>
+    <attribute name="hoursEnabled">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="soAttendanceConfigurationID">
+      <value>-4773815605004328960</value>
+    </attribute>
+    <attribute name="serviceOfferingID">
+      <value>-1206964700126896128</value>
+    </attribute>
+    <attribute name="attendanceTrackingEnabledInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="dailyAttendanceTrackingReqInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="effectiveDate">
+      <value>2015-12-04</value>
+    </attribute>
+    <attribute name="rosterGenerationFrequency">
+      <value>100100100</value>
+    </attribute>
+    <attribute name="reportingMethod">
+      <value>ATRT3002</value>
+    </attribute>
+    <attribute name="hoursEnabled">
+      <value>1</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

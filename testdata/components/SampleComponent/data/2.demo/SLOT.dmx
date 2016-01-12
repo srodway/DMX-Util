@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="SLOT" override="true">
+<column name="slotID" type="id"/>
+<column name="scheduleID" type="id"/>
+<column name="locationID" type="id"/>
+<column name="name" type="text"/>
+<column name="startTime" type="timestamp"/>
+<column name="endTime" type="timestamp"/>
+<column name="recordStatus" type="text"/>
+<column name="comments" type="text"/>
+<column name="maxWorkUnits" type="number"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="frequencyPattern" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

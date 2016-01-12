@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><sc:section xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-config" id="MDTEAPPWorkspaceSection" title="MDTEAPPWorkspaceSection.title" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  
+  <sc:tab id="MDTSocialEnterpriseFolder"/>
+  <sc:tab id="MDTInvestigation"/>
+  <sc:tab id="MDTMyCases"/>
+  <sc:tab id="MDTMyClients"/>
+  <sc:tab id="MDTMyTeams"/>
+  <sc:tab id="MDTMyTasks"/>
+  <sc:tab id="MDTViewTaskFromPod"/>
+  <sc:tab id="MDTMyPersonalDetails"/>
+  <sc:tab id="MDTExternalIncidentTab"/>
+  <sc:tab id="MDTNonCaseMeetingTab"/>
+  <sc:tab id="MDTNonCaseCollaborationCaseMeetingTab"/>
+  <sc:tab id="DiscussionTab"/>
+
+  <!-- Assessment Planning -->
+  <sc:tab id="MDTOutcomePlan"/>
+  
+  <sc:shortcut-panel-ref id="MDTWorkspaceSectionShortcuts"/>
+</sc:section>

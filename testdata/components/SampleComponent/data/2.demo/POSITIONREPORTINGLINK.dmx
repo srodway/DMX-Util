@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="POSITIONREPORTINGLINK" override="true">
+<column name="positionRepLinkID" type="id"/>
+<column name="organisationStructureID" type="id"/>
+<column name="positionID" type="id"/>
+<column name="recordStatus" type="text"/>
+<column name="reportsToID" type="id"/>
+<column name="versionNo" type="number"/>
+</table>

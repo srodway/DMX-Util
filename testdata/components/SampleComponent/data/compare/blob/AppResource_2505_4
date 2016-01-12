@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012-2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009-2013 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ProspectPersonHomeMenu">
+  
+  <mc:loader-registry>
+    <mc:loader class="curam.core.sl.tab.impl.ProspectPersonHomeMenuLoader"/>
+  <mc:loader class="curam.commonintake.tab.impl.ProspectPersonHomeMenuLoader"/></mc:loader-registry>
+
+  <mc:menu-item dynamic="true" id="EditDetails" open-as="modal" page-id="ProspectPerson_modifyProspectPerson" title="MenuItem.Title.EditDetails" tooltip="MenuItem.Tooltip.EditDetails" visible="false"/>
+  
+  <mc:menu-item dynamic="true" id="EditDetailsPDC" open-as="modal" page-id="ProspectPerson_modifyProspectPersonPDC" title="MenuItem.Title.EditDetails" tooltip="MenuItem.Tooltip.EditDetails" visible="false"/>
+   
+  <mc:menu-item dynamic="true" id="Register" open-as="modal" page-id="ProspectPerson_duplicateCheckWizard" title="MenuItem.Title.Register" tooltip="MenuItem.Tooltip.Register" visible="false"/>
+  	
+  <mc:menu-item dynamic="true" id="RegisterPDC" open-as="modal" page-id="ProspectPerson_duplicateCheckForPDCWizard" title="MenuItem.Title.Register" tooltip="MenuItem.Tooltip.Register" visible="true"/>
+
+  <mc:menu-separator id="sep1"/>  
+
+  <mc:menu-item dynamic="true" id="Triage" open-as="modal" page-id="Intake_startTriageScriptForConcernRole" title="MenuItem.Title.Triage" tooltip="MenuItem.Tooltip.Triage" visible="false"/>
+  
+  <mc:menu-item dynamic="true" id="Screening" open-as="modal" page-id="Intake_resolveStartScreening" title="MenuItem.Title.Screening" tooltip="MenuItem.Tooltip.Screening" visible="false"/>  
+  
+   <!-- BEGIN, CR00406699, AK -->	
+    <mc:menu-item dynamic="true" id="ApplicationCase" open-as="modal" page-id="CommonIntake_createApplicationCaseForConcernRole" title="MenuItem.Title.ApplicationCase" tooltip="MenuItem.Tooltip.ApplicationCase" visible="false"/>  
+  
+  <mc:menu-item dynamic="true" id="ReferralApplicationCase" open-as="modal" page-id="CommonIntake_createReferralApplicationCaseForConcernRole" title="MenuItem.Title.ReferralApplicationCase" tooltip="MenuItem.Tooltip.ReferralApplicationCase" visible="false"/>
+  
+  <mc:menu-item dynamic="true" id="ApplicationForm" open-as="modal" page-id="CommonIntake_createApplicationFormForConcernRole" title="MenuItem.Title.ApplicationForm" tooltip="MenuItem.Tooltip.ApplicationForm" visible="false"/>  
+   <!-- END, CR00406699 -->	
+  <mc:menu-item dynamic="true" id="Case" open-as="modal" page-id="ICSample_selectIntegratedCaseType" title="MenuItem.Title.Case" tooltip="MenuItem.Tooltip.Case"/>
+
+  <mc:menu-separator id="sep2"/>
+
+  <mc:menu-item dynamic="true" id="Evidence" open-as="modal" page-id="PDCEvidence_addNewEvidence" title="MenuItem.Title.Evidence" tooltip="MenuItem.Tooltip.Evidence"/>
+
+  <mc:menu-separator id="sep3"/>
+  
+  <mc:menu-item dynamic="true" id="Note" open-as="modal" page-id="Participant_createNote1" title="MenuItem.Title.Note" tooltip="MenuItem.Tooltip.Note"/>
+
+  <mc:menu-separator id="sep4"/>
+
+  <mc:menu-item dynamic="true" id="CommunityServiceReferral" open-as="modal" page-id="SelectReferralServiceOffering" title="MenuItem.Title.CommunityServiceReferral" tooltip="MenuItem.Tooltip.CommunityServiceReferral" visible="false"/>
+  
+  <mc:menu-item dynamic="true" id="ExternalAgencyReferral" open-as="modal" page-id="SearchForExternalAgencyBranchOffering" title="MenuItem.Title.ExternalAgencyReferral" tooltip="MenuItem.Tooltip.ExternalAgencyReferral" visible="false"/>
+
+</mc:menu-bar>

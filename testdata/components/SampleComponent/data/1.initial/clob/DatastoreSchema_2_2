@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains">
+ <xs:import namespace="http://www.curamsoftware.com/BaseDomains"/>
+
+ <xs:simpleType name="APPLICATION_EMAIL">
+  <xs:restriction base="IEG_STRING">
+  <xs:minLength value="6" />
+  </xs:restriction>
+ </xs:simpleType>
+ <xs:simpleType name="CI_INTAKE_YESNO">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">IntakeYesNo</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="CI_OA_TIME_SLOT">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">OATimeSlot</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="CI_APPLICATION_RECEIVED_METHOD_TYPE">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">IntakeApplicationMethod</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="CI_LIVING_ARRANGEMENT_TYPE">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">OaLivingArrangementType</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="CI_RESIDENCE_TYPE">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">ResidenceType</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="CI_RESIDENCY_STATUS">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">ResidencyStatus</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="CI_LANGUAGE">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">Language</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="CI_STATE">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">AddressState</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="CI_LIVING_ARRANGEMENT_STATUS">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">LivingArrangementStatus</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="CI_COUNTRY_CODE">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">Country</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="CI_SSN_STATUS">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">SSNApplicationStatus</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="CI_TEMP">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">IntakeMaritalStatus</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="CI_US_CITIZENSHIP">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">USCitizen</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="CI_ALIEN_STATUS">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">AlienType</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="CI_ALIEN_CATEGORY">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">InAlienStatus</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="ASC_PRACT_CERT_TYPE_CODE">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">PractitionerCertType</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="ASC_INCAPACITY_DIAGNOSIS">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">IncapacityDiagnosis</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="ASC_FREQUENCY">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">IntakeFrequencyCode</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="ASC_CLAIM_TYPE">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">IBClaimType</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+ <xs:simpleType name="CI_VETERAN_STATUS">
+  <xs:annotation>
+   <xs:appinfo>
+    <d:options>
+     <d:option name="code-table-name">VeteranStatus</d:option>
+    </d:options>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:restriction base="IEG_CODETABLE_CODE"/>
+ </xs:simpleType>
+</xs:schema>

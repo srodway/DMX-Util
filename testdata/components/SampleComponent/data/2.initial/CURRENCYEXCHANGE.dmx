@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="CURRENCYEXCHANGE">
+  <column name="currencyExchangeID" type="id" />
+  <column name="organisationID" type="id" />
+  <column name="currencyTypeCode" type="text" />
+  <column name="rate" type="number" />
+  <column name="rateFromDate" type="date" />
+  <column name="rateToDate" type="date" />
+  <column name="statusCode" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="currencyExchangeID">
+      <value>1601</value>
+    </attribute>
+    <attribute name="organisationID">
+      <value>1</value>
+    </attribute>
+    <attribute name="currencyTypeCode">
+      <value>GBP</value>
+    </attribute>
+    <attribute name="rate">
+      <value>0.531</value>
+    </attribute>
+    <attribute name="rateFromDate">
+      <value>1999-01-01</value>
+    </attribute>
+    <attribute name="rateToDate">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="currencyExchangeID">
+      <value>1602</value>
+    </attribute>
+    <attribute name="organisationID">
+      <value>1</value>
+    </attribute>
+    <attribute name="currencyTypeCode">
+      <value>USD</value>
+    </attribute>
+    <attribute name="rate">
+      <value>1.0</value>
+    </attribute>
+    <attribute name="rateFromDate">
+      <value>1999-01-01</value>
+    </attribute>
+    <attribute name="rateToDate">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="currencyExchangeID">
+      <value>1603</value>
+    </attribute>
+    <attribute name="organisationID">
+      <value>1</value>
+    </attribute>
+    <attribute name="currencyTypeCode">
+      <value>EUR</value>
+    </attribute>
+    <attribute name="rate">
+      <value>0.755</value>
+    </attribute>
+    <attribute name="rateFromDate">
+      <value>2000-01-01</value>
+    </attribute>
+    <attribute name="rateToDate">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

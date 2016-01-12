@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="ANNOUNCEMENT">
+  <column name="announcementID" type="id" />
+  <column name="title" type="text" />
+  <column name="announcementText" type="text" />
+  <column name="startDateTime" type="timestamp" />
+  <column name="endDateTime" type="timestamp" />
+  <column name="recordStatus" type="text" />
+  <column name="comments" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="announcementID">
+      <value>1</value>
+    </attribute>
+    <attribute name="title">
+      <value>Executive Visit</value>
+    </attribute>
+    <attribute name="announcementText">
+      <value>The Chief Executive will be visiting the office today between 1:00 pm 4:00 pm.</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value>2010-11-11-00.00.00</value>
+    </attribute>
+    <attribute name="endDateTime">
+      <value>2099-01-01-00.00.00</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Test</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="announcementID">
+      <value>2</value>
+    </attribute>
+    <attribute name="title">
+      <value>Office Closed</value>
+    </attribute>
+    <attribute name="announcementText">
+      <value>Midway Office is closed today due to flooding, refer to Downtown Office</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value>2010-11-11-00.00.00</value>
+    </attribute>
+    <attribute name="endDateTime">
+      <value>2099-01-01-00.00.00</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Test</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="REQUEST" override="true">
+<column name="requestID" type="id"/>
+<column name="requestCategory" type="text"/>
+<column name="requestType" type="text"/>
+<column name="requestStatus" type="text"/>
+<column name="concernRoleID" type="id"/>
+<column name="dateCreated" type="date"/>
+<column name="dateSubmitted" type="date"/>
+<column name="rejectionReason" type="text"/>
+<column name="comments" type="text"/>
+<column name="createdBy" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

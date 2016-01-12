@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="SERVICERATE" override="true">
+<column name="serviceRateID" type="id"/>
+<column name="serviceOfferingID" type="id"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="minAmount" type="number"/>
+<column name="maxAmount" type="number"/>
+<column name="fixedAmount" type="number"/>
+<column name="comments" type="text"/>
+<column name="versionNo" type="number"/>
+<row>
+<attribute name="serviceRateID">
+<value>4863887597568532480</value>
+</attribute>
+<attribute name="serviceOfferingID">
+<value>-4431542033324171264</value>
+</attribute>
+<attribute name="startDate">
+<value>2015-12-04</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="minAmount">
+<value>-1.00</value>
+</attribute>
+<attribute name="maxAmount">
+<value>-1.00</value>
+</attribute>
+<attribute name="fixedAmount">
+<value>20.00</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="serviceRateID">
+<value>-4863887597551738880</value>
+</attribute>
+<attribute name="serviceOfferingID">
+<value>9043228051768352768</value>
+</attribute>
+<attribute name="startDate">
+<value>2015-12-04</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="minAmount">
+<value>-1.00</value>
+</attribute>
+<attribute name="maxAmount">
+<value>-1.00</value>
+</attribute>
+<attribute name="fixedAmount">
+<value>100.00</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="serviceRateID">
+<value>3116490942148780032</value>
+</attribute>
+<attribute name="serviceOfferingID">
+<value>-1206964700126896128</value>
+</attribute>
+<attribute name="startDate">
+<value>2015-12-04</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="minAmount">
+<value>-1.00</value>
+</attribute>
+<attribute name="maxAmount">
+<value>-1.00</value>
+</attribute>
+<attribute name="fixedAmount">
+<value>30.00</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="serviceRateID">
+<value>-4197354852700905472</value>
+</attribute>
+<attribute name="serviceOfferingID">
+<value>990791918029905920</value>
+</attribute>
+<attribute name="startDate">
+<value>2015-12-04</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="minAmount">
+<value>-1.00</value>
+</attribute>
+<attribute name="maxAmount">
+<value>-1.00</value>
+</attribute>
+<attribute name="fixedAmount">
+<value>25.00</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+</table>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="INFORMATIONPROVIDER">
+  <column name="concernRoleID" type="id" />
+  <column name="name" type="text" />
+  <column name="typeCode" type="text" />
+  <column name="confidentialityInd" type="bool" />
+  <column name="statusCode" type="text" />
+  <column name="comments" type="text" />
+  <column name="primaryAlternateID" type="text" />
+  <column name="paymentFrequency" type="text" />
+  <column name="nextPaymentDate" type="date" />
+  <column name="currencyType" type="text" />
+  <column name="methodOfPmtCode" type="text" />
+  <column name="upperName" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="concernRoleID">
+      <value>126</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Medicines</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>IT1</value>
+    </attribute>
+    <attribute name="confidentialityInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="primaryAlternateID">
+      <value>24709</value>
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value>100100100</value>
+    </attribute>
+    <attribute name="nextPaymentDate">
+      <value>2016-01-04</value>
+    </attribute>
+    <attribute name="currencyType">
+      <value>USD</value>
+    </attribute>
+    <attribute name="methodOfPmtCode">
+      <value>CHQ</value>
+    </attribute>
+    <attribute name="upperName">
+      <value>MIDWAY MEDICINES</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="concernRoleID">
+      <value>127</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Bankers</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>IT1</value>
+    </attribute>
+    <attribute name="confidentialityInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="primaryAlternateID">
+      <value>24710</value>
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value>100100100</value>
+    </attribute>
+    <attribute name="nextPaymentDate">
+      <value>2016-01-04</value>
+    </attribute>
+    <attribute name="currencyType">
+      <value>USD</value>
+    </attribute>
+    <attribute name="methodOfPmtCode">
+      <value>CHQ</value>
+    </attribute>
+    <attribute name="upperName">
+      <value>MIDWAY BANKERS</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="concernRoleID">
+      <value>128</value>
+    </attribute>
+    <attribute name="name">
+      <value>Riverside Banks</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>IT2</value>
+    </attribute>
+    <attribute name="confidentialityInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="primaryAlternateID">
+      <value>24711</value>
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value>100100100</value>
+    </attribute>
+    <attribute name="nextPaymentDate">
+      <value>2016-01-04</value>
+    </attribute>
+    <attribute name="currencyType">
+      <value>USD</value>
+    </attribute>
+    <attribute name="methodOfPmtCode">
+      <value>CHQ</value>
+    </attribute>
+    <attribute name="upperName">
+      <value>RIVERSIDE BANKS</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

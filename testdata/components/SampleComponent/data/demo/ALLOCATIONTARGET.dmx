@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="ALLOCATIONTARGET" override="true">
+<column name="allocationTargetID" type="text"/>
+<column name="name" type="text"/>
+<column name="comments" type="text"/>
+<row>
+<attribute name="allocationTargetID">
+<value>HEARINGSCHEDULER</value>
+</attribute>
+<attribute name="name">
+<value>Hearing Scheduler</value>
+</attribute>
+<attribute name="comments">
+<value>Demo Hearing Scheduler Target</value>
+</attribute>
+</row>
+</table>

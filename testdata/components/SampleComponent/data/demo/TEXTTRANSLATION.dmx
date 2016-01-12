@@ -1,0 +1,1509 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="TEXTTRANSLATION" override="true">
+<column name="textTranslationID" type="id"/>
+<column name="localizableTextID" type="id"/>
+<column name="localeCode" type="text"/>
+<column name="text" type="clob"/>
+<column name="upperShortText" type="text"/>
+<column name="shortText" type="text"/>
+<row>
+<attribute name="textTranslationID">
+<value>10000</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10000</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>I Need Help!</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10001</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10001</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Check For Eligibility</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10002</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10002</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Apply for Benefits</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10003</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10003</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Citizen Campaign Entity Propagator Configuration</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10004</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10004</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Contains Rules for Outreach Campaigns</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>11000</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>11000</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Case Entities Propagator Configuration</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>11001</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>11001</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Participant Entities Propagation Configuration</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>11002</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>11002</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Dynamic Evidence Calculated Attributes</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>11003</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>11003</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Contains Rules for calculating Dynamic Evidence Calculated Attributes</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>11004</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>11004</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Dynamic Evidence Summary Information</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>11005</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>11005</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Contains Rules for calculating Dynamic Evidence Summary Information</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>11006</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>11006</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Dynamic Evidence Validation</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>11007</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>11007</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Contains Rules for Dynamic Evidence Custom Validations</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>11008</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>11008</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Dynamic Evidence Rule Set</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>11009</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>11009</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Evidence Summary Rule Set</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>11010</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>11010</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Evidence Validation Rule Set</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>11011</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>11011</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Evidence Calculated Attributes Rule Set</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>12118</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>12118</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Assessment Rules Interface</value>
+</attribute>
+<attribute name="upperShortText">
+<value>ASSESSMENT RULES INTERFACE</value>
+</attribute>
+<attribute name="shortText">
+<value>Assessment Rules Interface</value>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>12119</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>12119</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Recommendation Condition Rules Interface</value>
+</attribute>
+<attribute name="upperShortText">
+<value>RECOMMENDATION CONDITION RULES INTERFACE</value>
+</attribute>
+<attribute name="shortText">
+<value>Recommendation Condition Rules Interface</value>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>19000</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>19000</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Intake Process - Standard Entity</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>19001</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>19001</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Triage</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>19002</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>19002</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Initial Contact</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>19003</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>19003</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Application Todo</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>19004</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>19004</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Common data rule classes for Intake Applications</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>19351</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>19351</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Application Reference</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>19352</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>19352</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>The application reference number</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2701</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2701</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Eligibility and Entitlement: Determination</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2702</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2702</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Contains rules to determine the eligibility and entitlement for a product delivery.</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2703</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2703</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Eligibility and Entitlement: Display</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2704</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2704</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Contains rules to populate a display rule category.</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2705</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2705</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Eligibility and Entitlement: Key Decision Factors</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2706</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2706</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Contains rules to populate the graphical view of a determination.</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2707</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2707</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Dynamic Evidence: Processing</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2708</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2708</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Contains generated rule classes for dynamic evidence types. These rule classes are used to write CREOLE rules for performing evidence validation and calculating summary information and calculated attributes.</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2709</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2709</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Dynamic Evidence: Data</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2710</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2710</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Contains generated data rule sets for dynamic evidence types. These data rule sets are used in eligibility and entitlement rules to represent dynamic evidence records and succession sets.</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2711</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2711</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Dynamic Evidence: Infrastructure</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2712</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2712</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Contains interface rule sets for dynamic evidence processing such as validation, summary information and calculated attributes.</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2713</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2713</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Advisor</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2714</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2714</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Contains rules for use by the advisor.</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2731</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2731</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Verification</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2732</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2732</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Contains core and abstract rule artifacts that represent conditional verifications</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>3012</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>3012</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Workflow Allocation</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>3013</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>3013</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Contain Workflow Rule Set for CER allocation strategy</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>4097</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>4097</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Entity Propagator Configuration for Select Product Funds rule set</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10005</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10005</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Agency Employee description</value>
+</attribute>
+<attribute name="upperShortText">
+<value>AGENCY EMPLOYEE DESCRIPTION</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10006</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10006</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Agency Employee</value>
+</attribute>
+<attribute name="upperShortText">
+<value>AGENCY EMPLOYEE</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10007</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10007</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Dentist Description</value>
+</attribute>
+<attribute name="upperShortText">
+<value>DENTIST DESCRIPTION</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10008</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10008</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Dentist</value>
+</attribute>
+<attribute name="upperShortText">
+<value>DENTIST</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10011</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10011</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Doctor Description</value>
+</attribute>
+<attribute name="upperShortText">
+<value>DOCTOR DESCRIPTION</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10012</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10012</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Doctor</value>
+</attribute>
+<attribute name="upperShortText">
+<value>DOCTOR</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10013</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10013</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Social Worker Description</value>
+</attribute>
+<attribute name="upperShortText">
+<value>SOCIAL WORKER DESCRIPTION</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10014</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10014</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Social Worker</value>
+</attribute>
+<attribute name="upperShortText">
+<value>SOCIAL WORKER</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10015</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10015</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Nurse Description</value>
+</attribute>
+<attribute name="upperShortText">
+<value>NURSE DESCRIPTION</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10016</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10016</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Nurse</value>
+</attribute>
+<attribute name="upperShortText">
+<value>NURSE</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10017</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10017</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Teacher Description</value>
+</attribute>
+<attribute name="upperShortText">
+<value>TEACHER DESCRIPTION</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10018</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10018</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Teacher</value>
+</attribute>
+<attribute name="upperShortText">
+<value>TEACHER</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10019</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10019</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Psychiatrist Description</value>
+</attribute>
+<attribute name="upperShortText">
+<value>PSYCHIATRIST DESCRIPTION</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10020</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10020</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Psychiatrist</value>
+</attribute>
+<attribute name="upperShortText">
+<value>PSYCHIATRIST</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10021</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10021</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Psychologist Description</value>
+</attribute>
+<attribute name="upperShortText">
+<value>PYSCHOLOGIST DESCRIPTION</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10022</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10022</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Psychologist</value>
+</attribute>
+<attribute name="upperShortText">
+<value>PYSCHOLOGIST</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10023</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10023</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Police Officer Description</value>
+</attribute>
+<attribute name="upperShortText">
+<value>POLICE OFFICER DESCRIPTION</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>10024</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>10024</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Police Officer</value>
+</attribute>
+<attribute name="upperShortText">
+<value>POLICE OFFICER</value>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>27020</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>27020</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>First Name</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>27021</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>27021</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Last Name</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>27022</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>27022</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Date Of Birth</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>27023</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>27023</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Reference</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>27024</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>27024</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Alternate ID List</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>2735</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2735</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Sample Income And Rental Accomodation Rule Object propagator config</value>
+</attribute>
+<attribute name="upperShortText">
+<value/>
+</attribute>
+<attribute name="shortText">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>3500</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>3001</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>House Care</value>
+</attribute>
+<attribute name="upperShortText">
+<value>HOUSE CARE</value>
+</attribute>
+<attribute name="shortText">
+<value>House Care</value>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>3501</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>3002</value>
+</attribute>
+<attribute name="localeCode">
+<value>en</value>
+</attribute>
+<attribute name="text">
+<value>Child Care</value>
+</attribute>
+<attribute name="upperShortText">
+<value>CHILD CARE</value>
+</attribute>
+<attribute name="shortText">
+<value>Child Care</value>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>-4431542033324171264</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>1981583836051415040</value>
+</attribute>
+<attribute name="localeCode">
+<value>en_US</value>
+</attribute>
+<attribute name="text">
+<value/>
+</attribute>
+<attribute name="upperShortText">
+<value>HOME HELP</value>
+</attribute>
+<attribute name="shortText">
+<value>Home Help</value>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>4863887597568532480</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>9043228051768352768</value>
+</attribute>
+<attribute name="localeCode">
+<value>en_US</value>
+</attribute>
+<attribute name="text">
+<value/>
+</attribute>
+<attribute name="upperShortText">
+<value>SUPPORTED ACCOMODATION</value>
+</attribute>
+<attribute name="shortText">
+<value>Supported Accomodation</value>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>-1206964700126896128</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>2395915001769500672</value>
+</attribute>
+<attribute name="localeCode">
+<value>en_US</value>
+</attribute>
+<attribute name="text">
+<value/>
+</attribute>
+<attribute name="upperShortText">
+<value>COUNSELLING</value>
+</attribute>
+<attribute name="shortText">
+<value>Counselling</value>
+</attribute>
+</row>
+<row>
+<attribute name="textTranslationID">
+<value>486388759764410368</value>
+</attribute>
+<attribute name="localizableTextID">
+<value>486388759764410368</value>
+</attribute>
+<attribute name="localeCode">
+<value>en_US</value>
+</attribute>
+<attribute name="text">
+<value/>
+</attribute>
+<attribute name="upperShortText">
+<value>CHILD CARE</value>
+</attribute>
+<attribute name="shortText">
+<value>Child Care</value>
+</attribute>
+</row>
+</table>

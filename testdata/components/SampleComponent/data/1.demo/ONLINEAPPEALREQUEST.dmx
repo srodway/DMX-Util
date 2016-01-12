@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="ONLINEAPPEALREQUEST" override="true">
+<column name="onlineAppealRequestID" type="id"/>
+<column name="datastoreRootEntityID" type="id"/>
+<column name="schemaName" type="text"/>
+<column name="submittedDateTime" type="timestamp"/>
+<column name="createdBy" type="id"/>
+<column name="primaryAppellantID" type="id"/>
+<column name="status" type="text"/>
+<column name="attachmentID" type="id"/>
+<column name="iegExecutionID" type="id"/>
+<column name="createdDateTime" type="timestamp"/>
+<column name="versionNo" type="number"/>
+</table>

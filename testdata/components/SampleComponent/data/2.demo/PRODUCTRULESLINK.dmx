@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PRODUCTRULESLINK" override="true">
+<column name="productRulesLinkID" type="id"/>
+<column name="ruleSetID" type="text"/>
+<column name="productID" type="id"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="comments" type="text"/>
+<column name="statusCode" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

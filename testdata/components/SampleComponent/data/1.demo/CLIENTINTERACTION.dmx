@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="CLIENTINTERACTION" override="true">
+<column name="clientInteractionID" type="id"/>
+<column name="comments" type="text"/>
+<column name="concernRoleID" type="id"/>
+<column name="description" type="text"/>
+<column name="interactionDateTime" type="timestamp"/>
+<column name="interactionTypeCode" type="text"/>
+<column name="relatedID" type="id"/>
+<column name="relatedType" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

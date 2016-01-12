@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="DEDUCTION" override="true">
+<column name="deductionID" type="id"/>
+<column name="deductionName" type="text"/>
+<column name="priority" type="number"/>
+<column name="maxAmount" type="number"/>
+<column name="maxPercentage" type="number"/>
+<column name="defaultAmount" type="number"/>
+<column name="defaultPercentage" type="number"/>
+<column name="minAmount" type="number"/>
+<column name="actionType" type="text"/>
+<column name="category" type="text"/>
+<column name="dateCreated" type="date"/>
+<column name="comments" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="preventOverlappingInd" type="bool"/>
+<column name="versionNo" type="number"/>
+</table>

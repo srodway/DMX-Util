@@ -1,0 +1,1847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<ieg-script
+  config-properties="internal-app-config"
+  finish-page="Intake_submitApplicationExecution"
+  quit-page="Intake_quitApplicationExecution"
+  show-progress-bar="true"
+  show-sections="true"
+>
+  <identifier
+    id="ASCApplication"
+    scriptversionnumber="V1"
+    type="Intake"
+  />
+
+
+  <!-- ABOUT THE CLAIMANT -->
+  <section>
+    <title id="AboutTheClaimant.Title"/>
+    <icon
+      current-image="InternalApplication_about_you.png"
+      enabled-image="InternalApplication_about_you.png"
+    />
+
+
+    <question-page
+      criteria="isPrimaryParticipant==true"
+      entity="Person"
+      id="AboutTheClaimant"
+      progress="1"
+      show-back-button="false"
+      show-save-exit-button="true"
+    >
+      <title id="AboutTheClaimant.Title"/>
+      <description id="AboutTheClaimant.Description"/>
+      <icon image="InternalApplication_title_aboutyou.png"/>
+      <set-attribute
+        expression="true"
+        id="isPrimaryParticipant"
+      />
+      <validation expression="((isNotNull(Person.email)) or (isNotNull(Person.cellPhoneNumber)) or (isNotNull(Person.homePhoneNumber)) or (isNotNull(Person.workPhoneNumber)) or (isNotNull(Person.otherPhoneNumber)))">
+        <message id="ContactValidationMessage"/>
+      </validation>
+      <cluster>
+        <layout>
+          <label-width>0</label-width>
+        </layout>
+        <display-text id="RequiredField.Indicator"/>
+      </cluster>
+      <cluster entity="IntakeApplication">
+        <title id="ApplicationDetails.Title"/>
+        <help-text id="ADHelp"/>
+        <layout>
+          <num-cols>2</num-cols>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question
+          id="dateOfApplication"
+          mandatory="true"
+        >
+          <label id="ApplicationDate.Label"/>
+        </question>
+        <question
+          id="receivedMethod"
+          mandatory="true"
+        >
+          <label id="ReceivedMethod.Label"/>
+        </question>
+      </cluster>
+      <cluster>
+        <title id="PersonalDetails.Title"/>
+        <help-text id="PDHelp"/>
+        <layout>
+          <type>compact-flow</type>
+          <num-cols>3</num-cols>
+        </layout>
+        <question
+          id="firstName"
+          mandatory="true"
+        >
+          <label id="FirstName.Label"/>
+        </question>
+        <question id="middleInitial">
+          <label id="MiddleInitial.Label"/>
+        </question>
+        <question
+          id="lastName"
+          mandatory="true"
+        >
+          <label id="LastName.Label"/>
+        </question>
+      </cluster>
+      <cluster entity="ResidentialAddress">
+        <title id="Addresses.Title"/>
+        <help-text id="RAHelp"/>
+        <layout>
+          <type>compact-flow</type>
+          <num-cols>3</num-cols>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question
+          id="street1"
+          mandatory="true"
+        >
+          <label id="Street1.Label"/>
+        </question>
+        <question id="street2">
+          <label id="Street2.Label"/>
+        </question>
+        <question id="city">
+          <label id="City.Label"/>
+        </question>
+        <question
+          id="state"
+          mandatory="true"
+        >
+          <label id="State.Label"/>
+        </question>
+        <question
+          id="zipCode"
+          mandatory="true"
+        >
+          <label id="ZipCode.Label"/>
+        </question>
+      </cluster>
+      <cluster>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question
+          control-question="true"
+          control-question-type="CI_INTAKE_YESNO"
+          id="sameMailingAddress"
+        >
+          <label id="SameMailingAddress.Label"/>
+        </question>
+      </cluster>
+      <condition expression="sameMailingAddress==&quot;ITYN4002&quot;">
+        <cluster entity="MailingAddress">
+          <description id="MailingAddress.Description"/>
+          <help-text id="SMAHelp"/>
+          <layout>
+            <type>compact-flow</type>
+            <num-cols>3</num-cols>
+          </layout>
+          <question
+            id="street1"
+            mandatory="true"
+          >
+            <label id="MAStreet1.Label"/>
+          </question>
+          <question id="street2">
+            <label id="MAStreet2.Label"/>
+          </question>
+          <question id="city">
+            <label id="MACity.Label"/>
+          </question>
+          <question
+            id="state"
+            mandatory="true"
+          >
+            <label id="MAState.Label"/>
+          </question>
+          <question
+            id="zipCode"
+            mandatory="true"
+          >
+            <label id="MAZipCode.Label"/>
+          </question>
+        </cluster>
+      </condition>
+      <cluster>
+        <title id="ContactDetails.Title"/>
+        <help-text id="CDHelp"/>
+        <layout>
+          <type>flow</type>
+          <num-cols>2</num-cols>
+        </layout>
+        <container>
+          <title id="HomePhoneCode.Label"/>
+          <question id="homePhoneCode">
+            <layout>
+              <width>20</width>
+            </layout>
+          </question>
+          <question id="homePhoneNumber">
+            <layout>
+              <width>50</width>
+            </layout>
+          </question>
+        </container>
+        <container>
+          <title id="WorkPhoneCode.Label"> </title>
+          <question id="workPhoneCode">
+            <layout>
+              <width>20</width>
+            </layout>
+          </question>
+          <question id="workPhoneNumber">
+            <layout>
+              <width>50</width>
+            </layout>
+          </question>
+        </container>
+        <container>
+          <title id="CellPhoneCode.Label"/>
+          <question id="cellPhoneCode">
+            <layout>
+              <width>20</width>
+            </layout>
+          </question>
+          <question id="cellPhoneNumber">
+            <layout>
+              <width>50</width>
+            </layout>
+          </question>
+        </container>
+        <container>
+          <title id="OtherNumberCode.Label"/>
+          <question id="otherPhoneCode">
+            <layout>
+              <width>20</width>
+            </layout>
+          </question>
+          <question id="otherPhoneNumber">
+            <layout>
+              <width>50</width>
+            </layout>
+          </question>
+        </container>
+        <question id="email">
+          <label id="Email.Label"/>
+        </question>
+      </cluster>
+      <cluster>
+        <title id="SpecialNeeds.Title"/>
+        <help-text id="SNHelp"/>
+        <layout>
+          <label-width>82</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <!-- BEGIN CR00442688, COC -->
+        <question
+          id="contactLanguage"
+          mandatory="true"
+        >
+          <label id="PreferredLanguage.Label"/>
+        </question>
+        <!-- END CR00442688 -->
+      </cluster>
+      <cluster>
+        <layout>
+          <type>compact-flow</type>
+          <num-rows>2</num-rows>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question id="assistanceExplanation">
+          <label id="AssistanceExplanation.Label"/>
+        </question>
+      </cluster>
+      <cluster>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question id="interpreterRequired">
+          <label id="IsInterpreterRequired.Label"/>
+        </question>
+      </cluster>
+      <condition expression="Person.interpreterRequired==&quot;ITYN4001&quot;">
+        <cluster>
+          <layout>
+            <label-width>82</label-width>
+          </layout>
+          <question id="interpreterLanguage">
+            <label id="InterpreterLanguage.Label"/>
+          </question>
+        </cluster>
+      </condition>
+    </question-page>
+
+
+    <question-page
+      criteria="isPrimaryParticipant==true"
+      entity="Person"
+      id="ClaimantDetails"
+      progress="3"
+    >
+      <title id="ApplicantInfo.Title"/>
+      <description id="ApplicantInfo.Description"/>
+      <icon image="InternalApplication_title_aboutyou.png"/>
+
+
+      <validation expression="((Person.blackOrAfricanAmerican != false) or (Person.nativeAlaskanOrAmericanIndian != false)) or (Person.asian != false) or (Person.nativeHawaiianOrPacificIslander != false) or ((Person.whiteOrCaucasian != false) or (Person.hispanicOrLatino != false))">
+        <message id="EthnicityRaceValidation"/>
+      </validation>
+      <validation expression="((hasSSN==&quot;ITYN4002&quot;) or (isNotNull(Person.ssn)))">
+        <message id="SSNValidation.Message"/>
+      </validation>
+      <validation expression="((hasSSN==&quot;ITYN4001&quot;) or (Person.ssnStatus!=&quot;&quot;))">
+        <message id="SSNStatusValidation.Message"/>
+      </validation>
+      <validation expression="((Person.isUSCitizen!=&quot;USC4803&quot;) or (Person.alienStatus!=&quot;&quot;))">
+        <message id="NoAlienStatus"/>
+      </validation>
+      <validation expression="((Person.isUSCitizen!=&quot;USC4803&quot;) or (Person.alienRegistrationNumber!=&quot;&quot;))">
+        <message id="NoAlienRegistrationNumber"/>
+      </validation>
+      <validation expression="((Person.isUSCitizen!=&quot;USC4803&quot;) or (Person.originCountry!=&quot;&quot;))">
+        <message id="NoCountryOfOrigin"/>
+      </validation>
+      <validation expression="((Person.isUSCitizen!=&quot;USC4803&quot;) or (Person.hasAlienSponsor!=&quot;&quot;))">
+        <message id="NoAlienSponsor"/>
+      </validation>
+      <validation expression="(   ((Person.isImmigrantSponsor!=&quot;ITYN4001&quot;) and (Person.isImmigrantSponsor!=&quot;ITYN4002&quot;)) or ((Person.isImmigrantSponsor!=&quot;ITYN4001&quot;) or (isNotNull(Person.sponsorStartDate))))">
+        <message id="SponserStartDateValidaton.Message"/>
+      </validation>
+      <validation expression="(Person.personResidentInState!=&quot;ITYN4002&quot;)">
+        <message id="ResidencyStatusValidaton.Message"/>
+      </validation>
+
+
+      <cluster>
+        <layout>
+          <label-width>0</label-width>
+        </layout>
+        <display-text id="RequiredField.Indicator"/>
+      </cluster>
+      <cluster>
+        <title id="GeneralDetails.Title"/>
+        <help-text id="ADHelp"/>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question
+          control-question="true"
+          control-question-type="CI_INTAKE_YESNO"
+          id="hasSSN"
+          mandatory="true"
+        >
+          <label id="HasSSN.Label"/>
+        </question>
+      </cluster>
+      <condition expression="hasSSN==&quot;ITYN4001&quot;">
+        <cluster>
+          <layout>
+            <label-width>82</label-width>
+          </layout>
+          <question id="ssn">
+            <label id="SSN.Label"/>
+            <help-text id="SSNHelp"/>
+          </question>
+        </cluster>
+      </condition>
+      <condition expression="hasSSN==&quot;ITYN4002&quot;">
+        <cluster>
+          <layout>
+            <label-width>82</label-width>
+          </layout>
+          <question id="ssnStatus">
+            <label id="SSNStatus.Label"/>
+            <help-text id="SSNSHelp"/>
+          </question>
+        </cluster>
+      </condition>
+      <cluster>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question
+          id="dateOfBirth"
+          mandatory="true"
+        >
+          <label id="DateOfBirth.Label"/>
+          <help-text id="DOBHelp"/>
+        </question>
+        <question
+          id="gender"
+          mandatory="true"
+        >
+          <label id="Gender.Label"/>
+          <help-text id="GenderHelp"/>
+        </question>
+        <question
+          id="maritalStatus"
+          mandatory="true"
+        >
+          <label id="MaritalStatus.Label"/>
+          <help-text id="MSHelp"/>
+        </question>
+        <question
+          control-question="true"
+          control-question-type="CI_INTAKE_YESNO"
+          id="primaryClientHasMaidenName"
+        >
+          <label id="PrimaryClientHasMaidenName.Label"/>
+        </question>
+      </cluster>
+      <condition expression="primaryClientHasMaidenName==&quot;ITYN4001&quot;">
+        <cluster>
+          <description id="OtherName.Description"/>
+          <help-text id="OtherNameHelp"/>
+          <layout>
+            <num-cols>2</num-cols>
+          </layout>
+          <question
+            id="otherFirstName"
+            mandatory="true"
+          >
+            <label id="OtherFirstName.Label"/>
+          </question>
+          <question id="otherMiddleInitial">
+            <label id="OtherMiddleInitial.Label"/>
+          </question>
+          <question
+            id="otherLastName"
+            mandatory="true"
+          >
+            <label id="OtherLastName.Label"/>
+          </question>
+        </cluster>
+      </condition>
+      <cluster>
+        <help-text id="USCitizenHelp"/>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question
+          id="isUSCitizen"
+          mandatory="true"
+        >
+          <label id="IsUSCitizen.Label"/>
+        </question>
+      </cluster>
+      <condition expression="Person.isUSCitizen==&quot;USC4803&quot;">
+        <cluster>
+          <description id="UsCitizenInd.Description"/>
+          <layout>
+            <num-cols>2</num-cols>
+            <label-width>43</label-width>
+          </layout>
+          <question
+            id="alienCategory"
+            mandatory="true"
+          >
+            <label id="AlienCategory.Label"/>
+          </question>
+          <question
+            id="alienStatus"
+            mandatory="true"
+          >
+            <label id="AlienStatus.Label"/>
+          </question>
+          <question
+            id="alienRegistrationNumber"
+            mandatory="true"
+          >
+            <label id="AlienRegistrationNumber.Label"/>
+          </question>
+          <question
+            id="alienEntryDate"
+            mandatory="true"
+          >
+            <label id="DateOfEntry.Label"/>
+          </question>
+          <question
+            id="originCountry"
+            mandatory="true"
+          >
+            <label id="CountryOfOrigin.Label"/>
+          </question>
+          <question
+            id="hasAlienSponsor"
+            mandatory="true"
+          >
+            <label id="hasAlienSponsor.Label"/>
+          </question>
+        </cluster>
+      </condition>
+      <cluster>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question id="isImmigrantSponsor">
+          <label id="isImmigrantSponsor.Label"/>
+        </question>
+      </cluster>
+      <condition expression="Person.isImmigrantSponsor==&quot;ITYN4001&quot;">
+        <cluster>
+          <layout>
+            <label-width>82</label-width>
+          </layout>
+          <question id="sponsorStartDate">
+            <label id="SponsorStartDate.Label"/>
+          </question>
+        </cluster>
+      </condition>
+      <cluster>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question
+          id="householdMemberStartDate"
+          mandatory="true"
+        >
+          <label id="ClaimantStartDate.Label"/>
+        </question>
+      </cluster>
+      <cluster>
+        <title id="AccommodationDetails.Title"/>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question
+          id="personResidentInState"
+          mandatory="true"
+        >
+          <label id="PersonResidentInState.Label"/>
+          <help-text id="PRHelp"/>
+        </question>
+      </cluster>
+      <condition expression="Person.personResidentInState==&quot;ITYN4001&quot;">
+        <cluster>
+          <layout>
+            <label-width>82</label-width>
+          </layout>
+          <question
+            id="residencyStatus"
+            mandatory="true"
+          >
+            <label id="ResidencyStatus.Label"/>
+          </question>
+        </cluster>
+      </condition>
+      <cluster>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question
+          id="accommodationType"
+          mandatory="true"
+        >
+          <label id="AccommodationType.Label"/>
+          <help-text id="ATHelp"/>
+        </question>
+        <question
+          id="accommodationStatus"
+          mandatory="true"
+        >
+          <label id="AccommodationStatus.Label"/>
+        </question>
+        <question
+          id="accommodationStartDate"
+          mandatory="true"
+        >
+          <label id="AccommodationStartDate.Label"/>
+        </question>
+      </cluster>
+
+
+      <cluster>
+        <title id="EthnicityRace.Title"/>
+        <description id="EthnicityRaceDescription"/>
+        <help-text id="ERHelp"/>
+        <layout>
+          <num-cols>2</num-cols>
+          <label-width>82</label-width>
+        </layout>
+        <question id="blackOrAfricanAmerican">
+          <label id="BlackOrAfricanAmerican.Label"/>
+        </question>
+        <question id="nativeAlaskanOrAmericanIndian">
+          <label id="NativeAlaskanOrAmericanIndian.Label"/>
+        </question>
+        <question id="asian">
+          <label id="Asian.Label"/>
+        </question>
+        <question id="nativeHawaiianOrPacificIslander">
+          <label id="NativeHawaiianOrPacificIslander.Label"/>
+        </question>
+        <question id="whiteOrCaucasian">
+          <label id="WhiteOrCaucasian.Label"/>
+        </question>
+        <question id="hispanicOrLatino">
+          <label id="HispanicOrLatino.Label"/>
+        </question>
+      </cluster>
+
+
+    </question-page>
+
+
+    <summary-page
+      criteria="isPrimaryParticipant==true"
+      entity="Person"
+      id="AboutTheClaimantSummary"
+      progress="5"
+    >
+      <title id="AboutTheClaimantSummary.Title"/>
+      <description id="AboutTheClaimantSummary.Description"/>
+      <icon image="InternalApplication_title_aboutyou.png"/>
+
+
+      <cluster entity="IntakeApplication">
+        <title id="ApplicationDetailsContinue.Title"/>
+        <edit-link start-page="AboutTheClaimant"/>
+        <layout>
+          <num-cols>2</num-cols>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question id="dateOfApplication">
+          <label id="ApplicationDateContinue.Label"/>
+        </question>
+        <question id="receivedMethod">
+          <label id="ReceivedMethodContinue.Label"/>
+        </question>
+      </cluster>
+
+
+      <cluster>
+        <title id="NFAName.Title"/>
+        <edit-link start-page="AboutTheClaimant"/>
+        <layout>
+          <num-cols>3</num-cols>
+        </layout>
+        <question id="firstName">
+          <label id="NFAFirstName.Label"/>
+        </question>
+        <question id="middleInitial">
+          <label id="NFAMiddleInitial.Label"/>
+        </question>
+        <question id="lastName">
+          <label id="NFALastName.Label"/>
+        </question>
+      </cluster>
+
+
+      <cluster entity="ResidentialAddress">
+        <title id="NFAAddresses.Title"/>
+        <edit-link start-page="AboutTheClaimant"/>
+        <layout>
+          <num-cols>3</num-cols>
+        </layout>
+        <question id="street1">
+          <label id="NFAStreet1.Label"/>
+        </question>
+        <question id="street2">
+          <label id="NFAStreet2.Label"/>
+        </question>
+        <question id="city">
+          <label id="NFACity.Label"/>
+        </question>
+        <question id="state">
+          <label id="NFAState.Label"/>
+        </question>
+        <question id="zipCode">
+          <label id="NFAZipCode.Label"/>
+        </question>
+      </cluster>
+
+
+      <cluster>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question
+          control-question="true"
+          control-question-type="CI_INTAKE_YESNO"
+          id="sameMailingAddress"
+        >
+          <label id="NFASameMailingAddress.Label"/>
+        </question>
+      </cluster>
+
+
+      <condition expression="sameMailingAddress==&quot;ITYN4002&quot;">
+        <cluster entity="MailingAddress">
+          <layout>
+            <num-cols>3</num-cols>
+          </layout>
+          <question id="street1">
+            <label id="NFAStreet1.Label"/>
+          </question>
+          <question id="street2">
+            <label id="NFAStreet2.Label"/>
+          </question>
+          <question id="city">
+            <label id="NFACity.Label"/>
+          </question>
+          <question id="state">
+            <label id="NFAState.Label"/>
+          </question>
+          <question id="zipCode">
+            <label id="NFAZipCode.Label"/>
+          </question>
+        </cluster>
+      </condition>
+
+
+      <cluster>
+        <title id="NFAContactDetails.Title"/>
+        <edit-link start-page="AboutTheClaimant"/>
+        <layout>
+          <num-cols>2</num-cols>
+        </layout>
+        <container>
+          <title id="NFAHomePhoneCode.Label"/>
+          <question id="homePhoneCode">
+            <layout>
+              <type>compact-flow</type>
+              <width>82</width>
+            </layout>
+          </question>
+          <question id="homePhoneNumber">
+            <layout>
+              <type>compact-flow</type>
+              <width>70</width>
+            </layout>
+          </question>
+        </container>
+        <container>
+          <title id="NFAWorkPhoneCode.Label"/>
+          <question id="workPhoneCode">
+            <layout>
+              <type>compact-flow</type>
+              <width>40</width>
+            </layout>
+          </question>
+          <question id="workPhoneNumber">
+            <layout>
+              <type>compact-flow</type>
+              <width>70</width>
+            </layout>
+          </question>
+        </container>
+        <container>
+          <title id="NFACellPhoneCode.Label"/>
+          <question id="cellPhoneCode">
+            <layout>
+              <type>compact-flow</type>
+              <width>40</width>
+            </layout>
+          </question>
+          <question id="cellPhoneNumber">
+            <layout>
+              <type>compact-flow</type>
+              <width>70</width>
+            </layout>
+          </question>
+        </container>
+        <container>
+          <title id="NFAOtherNumberCode.Label"/>
+          <question id="otherPhoneCode">
+            <layout>
+              <type>compact-flow</type>
+              <width>40</width>
+            </layout>
+          </question>
+          <question id="otherPhoneNumber">
+            <layout>
+              <type>compact-flow</type>
+              <width>70</width>
+            </layout>
+          </question>
+        </container>
+        <question id="email">
+          <label id="NFAEmail.Label"/>
+        </question>
+      </cluster>
+
+
+      <cluster>
+        <title id="PersonalDetails.Title"/>
+        <edit-link start-page="ClaimantDetails"/>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question
+          control-question="true"
+          control-question-type="CI_INTAKE_YESNO"
+          id="hasSSN"
+        >
+          <label id="HasSSN.Label"/>
+        </question>
+      </cluster>
+
+
+      <condition expression="hasSSN==&quot;ITYN4001&quot;">
+        <cluster>
+          <layout>
+            <label-width>82</label-width>
+          </layout>
+          <question id="ssn">
+            <label id="SSN.Label"/>
+          </question>
+        </cluster>
+      </condition>
+
+
+      <condition expression="hasSSN==&quot;ITYN4002&quot;">
+        <cluster>
+          <layout>
+            <label-width>82</label-width>
+          </layout>
+          <question id="ssnStatus">
+            <label id="SSNStatus.Label"/>
+          </question>
+        </cluster>
+      </condition>
+
+
+      <cluster>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question id="dateOfBirth">
+          <label id="DateOfBirth.Label"/>
+        </question>
+        <question id="maritalStatus">
+          <label id="MaritalStatus.Label"/>
+        </question>
+        <question id="gender">
+          <label id="Gender.Label"/>
+        </question>
+      </cluster>
+
+
+      <cluster>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question
+          control-question="true"
+          control-question-type="CI_INTAKE_YESNO"
+          id="primaryClientHasMaidenName"
+        >
+          <label id="PrimaryClientHasMaidenName.Label"/>
+        </question>
+      </cluster>
+
+
+      <condition expression="primaryClientHasMaidenName==&quot;ITYN4001&quot;">
+        <cluster>
+          <layout>
+            <num-cols>3</num-cols>
+          </layout>
+          <question id="otherFirstName">
+            <label id="OtherFirstName.Label"/>
+          </question>
+          <question id="otherMiddleInitial">
+            <label id="OtherMiddleInitial.Label"/>
+          </question>
+          <question id="otherLastName">
+            <label id="OtherLastName.Label"/>
+          </question>
+        </cluster>
+      </condition>
+
+
+      <cluster>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question id="isImmigrantSponsor">
+          <label id="isImmigrantSponsor.Label"/>
+        </question>
+      </cluster>
+
+
+      <condition expression="Person.isImmigrantSponsor==&quot;ITYN4001&quot;">
+        <cluster>
+          <layout>
+            <label-width>100</label-width>
+          </layout>
+          <question id="sponsorStartDate">
+            <label id="SponsorStartDate.Label"/>
+          </question>
+        </cluster>
+      </condition>
+
+
+      <cluster>
+        <layout>
+          <label-width>80</label-width>
+        </layout>
+        <question id="householdMemberStartDate">
+          <label id="ClaimantStartDate.Label"/>
+        </question>
+      </cluster>
+
+
+      <cluster>
+        <layout>
+          <label-width>80</label-width>
+        </layout>
+        <question id="isUSCitizen">
+          <label id="IsUSCitizen.Label"/>
+        </question>
+      </cluster>
+
+
+      <condition expression="Person.isUSCitizen==&quot;USC4803&quot;">
+        <cluster>
+          <layout>
+            <num-cols>2</num-cols>
+            <label-width>53</label-width>
+          </layout>
+          <question id="alienCategory">
+            <label id="AlienCategory.Label"/>
+          </question>
+          <question id="alienStatus">
+            <label id="AlienStatus.Label"/>
+          </question>
+          <question id="alienRegistrationNumber">
+            <label id="AlienRegistrationNumber.Label"/>
+          </question>
+          <question id="alienEntryDate">
+            <label id="DateOfEntry.Label"/>
+          </question>
+          <question id="originCountry">
+            <label id="CountryOfOrigin.Label"/>
+          </question>
+          <question id="hasAlienSponsor">
+            <label id="hasAlienSponsor.Label"/>
+          </question>
+        </cluster>
+      </condition>
+
+
+      <cluster>
+        <layout>
+          <label-width>80</label-width>
+        </layout>
+        <question id="assistanceExplanation">
+          <label id="AssistanceExplanation.Label"/>
+        </question>
+      </cluster>
+
+
+      <cluster>
+        <layout>
+          <label-width>80</label-width>
+        </layout>
+        <question id="personResidentInState">
+          <label id="PersonResidentInState.Label"/>
+        </question>
+        <question id="residencyStatus">
+          <label id="ResidencyStatus.Label"/>
+        </question>
+        <question id="accommodationType">
+          <label id="AccommodationType.Label"/>
+        </question>
+        <question id="accommodationStartDate">
+          <label id="AccommodationStartDate.Label"/>
+        </question>
+      </cluster>
+
+
+      <cluster>
+        <title id="EthnicityRace.Title"/>
+        <edit-link start-page="ClaimantDetails"/>
+        <layout>
+          <label-width>80</label-width>
+        </layout>
+        <question id="blackOrAfricanAmerican">
+          <label id="BlackOrAfricanAmerican.Label"/>
+        </question>
+        <question id="nativeAlaskanOrAmericanIndian">
+          <label id="NativeAlaskanOrAmericanIndian.Label"/>
+        </question>
+        <question id="asian">
+          <label id="Asian.Label"/>
+        </question>
+        <question id="nativeHawaiianOrPacificIslander">
+          <label id="NativeHawaiianOrPacificIslander.Label"/>
+        </question>
+        <question id="whiteOrCaucasian">
+          <label id="WhiteOrCaucasian.Label"/>
+        </question>
+        <question id="hispanicOrLatino">
+          <label id="HispanicOrLatino.Label"/>
+        </question>
+      </cluster>
+
+
+    </summary-page>
+  </section>
+
+
+  <!-- Medical (Practitioner Certificate) Details -->
+  <section>
+    <title id="Medical.Title"/>
+    <icon
+      current-image="InternalApplication_benefits.png"
+      disabled-image="InternalApplication_benefits_disabled.png"
+      enabled-image="InternalApplication_benefits.png"
+    />
+
+
+    <question-page
+      entity="HouseholdInformation"
+      id="AnyPractitionerCertificate"
+      progress="9"
+    >
+      <title id="AnyPractitionerCertificate.Title"/>
+      <description id="PractitionerCertificate.Description"/>
+      <icon image="InternalApplication_title_benefits.png"/>
+      <cluster>
+        <layout>
+          <label-width>0</label-width>
+        </layout>
+        <display-text id="RequiredField.Indicator"/>
+      </cluster>
+      <cluster>
+        <title id="AnyPractitionerCertificate.Title"/>
+        <help-text id="PCDHelp"/>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question
+          id="practitionerCertificate"
+          mandatory="true"
+        >
+          <label id="PractitionerCertificate.Label"/>
+        </question>
+      </cluster>
+    </question-page>
+
+
+    <condition expression="HouseholdInformation.practitionerCertificate==&quot;ITYN4001&quot;">
+      <question-page
+        entity="PractitionerCertificate"
+        id="PractitionerCertificateDetails"
+        progress="10"
+      >
+        <title id="PractitionerCertificateDetails.Title"/>
+        <description id="PractitionerCertificate.Description"/>
+        <icon image="InternalApplication_title_benefits.png"/>
+
+
+        <cluster>
+          <layout>
+            <label-width>0</label-width>
+          </layout>
+          <display-text id="RequiredField.Indicator"/>
+        </cluster>
+
+
+        <!--Cluster 1 - Examination Details -->
+        <cluster entity="PractitionerCertificate">
+          <title id="ExaminationDetails.Title"/>
+          <help-text id="PCEDHelp"/>
+
+
+          <layout>
+            <num-cols>1</num-cols>
+            <label-width>82</label-width>
+          </layout>
+
+
+          <question
+            id="medicalCertificateType"
+            mandatory="true"
+          >
+            <label id="MedicalCertificateType.Label"/>
+          </question>
+
+
+          <question
+            id="examinationDate"
+            mandatory="true"
+          >
+            <label id="ExaminationDate.Label"/>
+          </question>
+        </cluster>
+
+
+        <cluster>
+          <title id="HasPractitionerCertifiedDate.Title"/>
+          <help-text id="PCHPCDHelp"/>
+          <layout>
+            <label-width>82</label-width>
+          </layout>
+          <question
+            control-question="true"
+            control-question-type="CI_INTAKE_YESNO"
+            id="hasACertifiedToDate"
+            mandatory="true"
+          >
+            <label id="HasPractitionerCertifiedDate.Label"/>
+          </question>
+        </cluster>
+
+
+        <condition expression="hasACertifiedToDate==&quot;ITYN4001&quot;">
+          <cluster>
+            <layout>
+              <label-width>82</label-width>
+            </layout>
+            <question
+              id="certifiedToDate"
+              mandatory="true"
+            >
+              <label id="PractitionerCertifiedDate.Label"/>
+              <help-text id="PCPCDHelp"/>
+            </question>
+          </cluster>
+        </condition>
+
+
+        <condition expression="hasACertifiedToDate==&quot;ITYN4002&quot;">
+          <cluster>
+            <layout>
+              <label-width>82</label-width>
+            </layout>
+            <question
+              id="periodLength"
+              mandatory="true"
+            >
+              <label id="CertifiedPeriodLength.Label"/>
+              <help-text id="PCCPLHelp"/>
+            </question>
+            <question
+              id="certificationPeriodLength"
+              mandatory="true"
+            >
+              <label id="CertifiedFrequency.Label"/>
+              <help-text id="PCCFHelp"/>
+            </question>
+          </cluster>
+        </condition>
+
+
+        <!--Cluster 2 - Practitioner Details -->
+        <cluster>
+          <title id="PractitionerDetails.Title"/>
+          <help-text id="PCPDHelp"/>
+          <layout>
+            <num-cols>1</num-cols>
+            <label-width>82</label-width>
+          </layout>
+
+
+          <question
+            id="practitionerName"
+            mandatory="true"
+          >
+            <label id="PractitionerName.Label"/>
+          </question>
+
+
+          <question
+            id="practitionerSignedDate"
+            mandatory="true"
+          >
+            <label id="PractitionerCertificateSignedDate.Label"/>
+          </question>
+
+
+        </cluster>
+
+
+        <!--Cluster 4 - Comments Details -->
+        <cluster>
+          <title id="Comments.Title"/>
+          <help-text id="PCCommentsHelp"/>
+
+
+          <layout>
+            <label-width>0</label-width>
+          </layout>
+          <question id="comments"/>
+        </cluster>
+
+
+        <!--Cluster 6 - Certification Details -->
+        <cluster>
+          <title id="CerfiticationDetails.Title"/>
+          <help-text id="PCCertificationDetailsHelp"/>
+          <layout>
+            <num-cols>1</num-cols>
+            <label-width>82</label-width>
+          </layout>
+
+
+          <question
+            id="certificationStartDate"
+            mandatory="true"
+          >
+            <label id="CertificationStartDate.Label"/>
+          </question>
+
+
+          <question
+            id="isSignedByClient"
+            mandatory="true"
+          >
+            <label id="IsSignedByClaimant.Label"/>
+          </question>
+
+
+        </cluster>
+
+
+        <!--Cluster 7 - Diagnosis Details -->
+        <cluster>
+          <title id="PractitionerCertificateDiagnosisDetails.Title"/>
+          <help-text id="PCDDHelp"/>
+          <layout>
+            <label-width>82</label-width>
+          </layout>
+          <question
+            id="diagnosisDetails"
+            mandatory="true"
+          >
+            <label id="PractitionerCertificateDiagnosisDetails.Label"/>
+          </question>
+        </cluster>
+
+
+      </question-page>
+
+
+      <condition expression="PractitionerCertificate.diagnosisDetails==&quot;ITYN4001&quot;">
+
+
+        <loop
+          entity="PractitionerCertificate"
+          loop-type="for-each"
+        >
+
+
+          <loop
+            entity="Diagnosis"
+            loop-expression="anyMoreDiagnosisDetails==&quot;ITYN4001&quot;"
+            loop-type="while"
+          >
+            <question-page
+              id="DiagnosisDetails"
+              progress="11"
+            >
+              <title id="DiagnosisDetails.Title"/>
+              <description id="DiagnosisDetails.Description"/>
+              <icon image="InternalApplication_title_benefits.png"/>
+
+
+              <cluster>
+                <layout>
+                  <label-width>0</label-width>
+                </layout>
+                <display-text id="RequiredField.Indicator"/>
+              </cluster>
+
+
+              <cluster entity="Diagnosis">
+                <title id="DiagnosisDetails.Title"/>
+                <help-text id="DDHelp"/>
+                <layout>
+                  <label-width>75</label-width>
+                </layout>
+
+
+                <question
+                  id="diagnosisType"
+                  mandatory="true"
+                >
+                  <label id="DiagnosisElement.Label"/>
+                </question>
+
+
+                <question
+                  id="diagnosisExamDate"
+                  mandatory="true"
+                >
+                  <label id="DiagnosisExaminationDate.Label"/>
+                </question>
+
+
+                <question
+                  control-question="true"
+                  control-question-type="CI_INTAKE_YESNO"
+                  id="anyMoreDiagnosisDetails"
+                  mandatory="true"
+                >
+                  <label id="AnyMoreDiagnosisDetails.Label">
+                  </label>
+                </question>
+
+
+              </cluster>
+            </question-page>
+          </loop>
+        </loop>
+      </condition>
+    </condition>
+
+
+    <summary-page
+      id="PractitionerCertificateSummary"
+      progress="12"
+    >
+      <title id="PractitionerCertificateSummary.Title"/>
+      <description id="PractitionerCertificateSummary.Description"/>
+      <icon image="InternalApplication_title_benefits.png"/>
+
+
+      <cluster entity="PractitionerCertificate">
+        <title id="PractitionerCertificateDetails.Title"/>
+        <edit-link start-page="PractitionerCertificateDetails"/>
+
+
+        <layout>
+          <label-width>82</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question id="medicalCertificateType">
+          <label id="MedicalCertificateType.Label"/>
+        </question>
+
+
+        <question id="examinationDate">
+          <label id="ExaminationDate.Label"/>
+        </question>
+
+
+        <question id="practitionerName">
+          <label id="PractitionerName.Label"/>
+        </question>
+
+
+        <question id="certificationStartDate">
+          <label id="PractitionerCertificationDate.Label"/>
+        </question>
+      </cluster>
+
+
+      <list entity="PractitionerCertificate">
+        <title id="DiagnosisInformation.Title"/>
+        <column id="practitionerName">
+          <title id="PractitionerName.Label"/>
+        </column>
+
+
+        <list entity="Diagnosis">
+          <title id="DiagnosisDetails.Title"/>
+          <edit-link
+            skip-to-summary="true"
+            start-page="DiagnosisDetails"
+          />
+          <delete-link start-page="DiagnosisDetails"/>
+          <add-link
+            skip-to-summary="true"
+            start-page="DiagnosisDetails"
+          />
+
+
+          <column id="diagnosisType">
+            <title id="DiagnosisType.Label"/>
+          </column>
+          <column id="diagnosisExamDate">
+            <title id="DiagnosisExaminationDate.Label"/>
+          </column>
+
+
+        </list>
+      </list>
+
+
+    </summary-page>
+  </section>
+
+
+  <!-- FINISH PAGE -->
+  <section>
+    <title id="Finish.Title"/>
+    <icon
+      current-image="InternalApplication_finish.png"
+      disabled-image="InternalApplication_finish_disabled.png"
+      enabled-image="InternalApplication_finish.png"
+    />
+    <summary-page
+      entity="Person"
+      id="OverallSummary"
+      progress="95"
+    >
+      <title id="OverallSummary.Title"/>
+      <description id="HouseholdSummary.Description"/>
+
+
+      <cluster entity="IntakeApplication">
+        <title id="ApplicationDetailsContinue.Title"/>
+        <edit-link start-page="AboutTheClaimant"/>
+        <layout>
+          <num-cols>2</num-cols>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question id="dateOfApplication">
+          <label id="ApplicationDateContinue.Label"/>
+        </question>
+        <question id="receivedMethod">
+          <label id="ReceivedMethodContinue.Label"/>
+        </question>
+      </cluster>
+      <cluster>
+        <title id="NFAName.Title"/>
+        <edit-link start-page="AboutTheClaimant"/>
+        <layout>
+          <num-cols>3</num-cols>
+        </layout>
+        <question id="firstName">
+          <label id="NFAFirstName.Label"/>
+        </question>
+        <question id="middleInitial">
+          <label id="NFAMiddleInitial.Label"/>
+        </question>
+        <question id="lastName">
+          <label id="NFALastName.Label"/>
+        </question>
+      </cluster>
+
+
+      <condition expression="sameMailingAddress==&quot;ITYN4002&quot;">
+        <cluster entity="MailingAddress">
+          <layout>
+            <num-cols>3</num-cols>
+          </layout>
+          <question id="street1">
+            <label id="MAStreet1.Label"/>
+          </question>
+          <question id="street2">
+            <label id="MAStreet2.Label"/>
+          </question>
+          <question id="city">
+            <label id="MACity.Label"/>
+          </question>
+          <question id="state">
+            <label id="MAState.Label"/>
+          </question>
+          <question id="zipCode">
+            <label id="MAZipCode.Label"/>
+          </question>
+        </cluster>
+      </condition>
+
+
+      <cluster entity="ResidentialAddress">
+        <title id="NFAAddresses.Title"/>
+        <edit-link start-page="AboutTheClaimant"/>
+        <layout>
+          <num-cols>3</num-cols>
+        </layout>
+        <question id="street1">
+          <label id="NFAStreet1.Label"/>
+        </question>
+        <question id="street2">
+          <label id="NFAStreet2.Label"/>
+        </question>
+        <question id="city">
+          <label id="NFACity.Label"/>
+        </question>
+        <question id="state">
+          <label id="NFAState.Label"/>
+        </question>
+        <question id="zipCode">
+          <label id="NFAZipCode.Label"/>
+        </question>
+      </cluster>
+
+
+      <cluster>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question
+          control-question="true"
+          control-question-type="CI_INTAKE_YESNO"
+          id="sameMailingAddress"
+        >
+          <label id="NFASameMailingAddress.Label"/>
+        </question>
+      </cluster>
+
+
+      <condition expression="sameMailingAddress==&quot;ITYN4002&quot;">
+        <cluster entity="MailingAddress">
+          <layout>
+            <num-cols>3</num-cols>
+          </layout>
+          <question id="street1">
+            <label id="NFAStreet1.Label"/>
+          </question>
+          <question id="street2">
+            <label id="NFAStreet2.Label"/>
+          </question>
+          <question id="city">
+            <label id="NFACity.Label"/>
+          </question>
+          <question id="state">
+            <label id="NFAState.Label"/>
+          </question>
+          <question id="zipCode">
+            <label id="NFAZipCode.Label"/>
+          </question>
+        </cluster>
+      </condition>
+
+
+      <cluster>
+        <title id="NFAContactDetails.Title"/>
+        <edit-link start-page="AboutTheClaimant"/>
+        <layout>
+          <num-cols>2</num-cols>
+        </layout>
+        <container>
+          <title id="NFAHomePhoneCode.Label"/>
+          <question id="homePhoneCode">
+            <layout>
+              <type>compact-flow</type>
+              <width>40</width>
+            </layout>
+          </question>
+          <question id="homePhoneNumber">
+            <layout>
+              <type>compact-flow</type>
+              <width>70</width>
+            </layout>
+          </question>
+        </container>
+        <container>
+          <title id="NFAWorkPhoneCode.Label"/>
+          <question id="workPhoneCode">
+            <layout>
+              <type>compact-flow</type>
+              <width>40</width>
+            </layout>
+          </question>
+          <question id="workPhoneNumber">
+            <layout>
+              <type>compact-flow</type>
+              <width>70</width>
+            </layout>
+          </question>
+        </container>
+        <container>
+          <title id="NFACellPhoneCode.Label"/>
+          <question id="cellPhoneCode">
+            <layout>
+              <type>compact-flow</type>
+              <width>40</width>
+            </layout>
+          </question>
+          <question id="cellPhoneNumber">
+            <layout>
+              <type>compact-flow</type>
+              <width>70</width>
+            </layout>
+          </question>
+        </container>
+        <container>
+          <title id="NFAOtherNumberCode.Label"/>
+          <question id="otherPhoneCode">
+            <layout>
+              <type>compact-flow</type>
+              <width>40</width>
+            </layout>
+          </question>
+          <question id="otherPhoneNumber">
+            <layout>
+              <type>compact-flow</type>
+              <width>70</width>
+            </layout>
+          </question>
+        </container>
+        <question id="email">
+          <label id="NFAEmail.Label"/>
+        </question>
+      </cluster>
+
+
+      <cluster>
+        <title id="PersonalDetails.Title"/>
+        <edit-link
+          end-page="ClaimantDetails"
+          start-page="ClaimantDetails"
+        />
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question
+          control-question="true"
+          control-question-type="CI_INTAKE_YESNO"
+          id="hasSSN"
+        >
+          <label id="HasSSN.Label"/>
+        </question>
+      </cluster>
+      <condition expression="hasSSN==&quot;ITYN4001&quot;">
+        <cluster>
+          <layout>
+            <label-width>82</label-width>
+          </layout>
+          <question id="ssn">
+            <label id="SSN.Label"/>
+          </question>
+        </cluster>
+      </condition>
+      <condition expression="hasSSN==&quot;ITYN4002&quot;">
+        <cluster>
+          <layout>
+            <label-width>82</label-width>
+          </layout>
+          <question id="ssnStatus">
+            <label id="SSNStatus.Label"/>
+          </question>
+        </cluster>
+      </condition>
+      <cluster>
+        <layout>
+          <num-cols>2</num-cols>
+          <label-width>53</label-width>
+        </layout>
+        <question id="dateOfBirth">
+          <label id="DateOfBirth.Label"/>
+        </question>
+        <question id="maritalStatus">
+          <label id="MaritalStatus.Label"/>
+        </question>
+        <question id="gender">
+          <label id="Gender.Label"/>
+        </question>
+      </cluster>
+      <cluster>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question
+          control-question="true"
+          control-question-type="CI_INTAKE_YESNO"
+          id="primaryClientHasMaidenName"
+        >
+          <label id="PrimaryClientHasMaidenName.Label"/>
+        </question>
+      </cluster>
+
+
+      <cluster>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question id="isImmigrantSponsor">
+          <label id="isImmigrantSponsor.Label"/>
+        </question>
+      </cluster>
+
+
+      <condition expression="Person.isImmigrantSponsor==&quot;ITYN4001&quot;">
+        <cluster>
+          <layout>
+            <label-width>82</label-width>
+          </layout>
+          <question id="sponsorStartDate">
+            <label id="SponsorStartDate.Label"/>
+          </question>
+        </cluster>
+      </condition>
+
+
+      <cluster>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question id="householdMemberStartDate">
+          <label id="ClaimantStartDate.Label"/>
+        </question>
+      </cluster>
+      <cluster>
+        <layout>
+          <label-width>82</label-width>
+        </layout>
+        <question id="isUSCitizen">
+          <label id="IsUSCitizen.Label"/>
+        </question>
+      </cluster>
+
+
+      <condition expression="Person.isUSCitizen==&quot;USC4803&quot;">
+        <cluster>
+          <layout>
+            <num-cols>2</num-cols>
+            <label-width>53</label-width>
+          </layout>
+          <question id="alienCategory">
+            <label id="AlienCategory.Label"/>
+          </question>
+          <question id="alienStatus">
+            <label id="AlienStatus.Label"/>
+          </question>
+          <question id="alienRegistrationNumber">
+            <label id="AlienRegistrationNumber.Label"/>
+          </question>
+          <question id="alienEntryDate">
+            <label id="DateOfEntry.Label"/>
+          </question>
+          <question id="originCountry">
+            <label id="CountryOfOrigin.Label"/>
+          </question>
+          <question id="hasAlienSponsor">
+            <label id="hasAlienSponsor.Label"/>
+          </question>
+        </cluster>
+      </condition>
+
+
+      <cluster>
+        <title id="AccommodationDetails.Title"/>
+        <edit-link
+          end-page="ClaimantDetails"
+          start-page="ClaimantDetails"
+        />
+        <question id="personResidentInState">
+          <label id="PersonResidentInState.Label"/>
+        </question>
+        <question id="residencyStatus">
+          <label id="ResidencyStatus.Label"/>
+        </question>
+        <question id="accommodationType">
+          <label id="AccommodationType.Label"/>
+        </question>
+        <question id="accommodationStartDate">
+          <label id="AccommodationStartDate.Label"/>
+        </question>
+      </cluster>
+
+
+      <cluster>
+        <title id="EthnicityRace.Title"/>
+        <edit-link
+          end-page="ClaimantDetails"
+          start-page="ClaimantDetails"
+        />
+        <layout>
+          <num-cols>1</num-cols>
+        </layout>
+        <question id="blackOrAfricanAmerican">
+          <label id="BlackOrAfricanAmerican.Label"/>
+        </question>
+        <question id="nativeAlaskanOrAmericanIndian">
+          <label id="NativeAlaskanOrAmericanIndian.Label"/>
+        </question>
+        <question id="asian">
+          <label id="Asian.Label"/>
+        </question>
+        <question id="nativeHawaiianOrPacificIslander">
+          <label id="NativeHawaiianOrPacificIslander.Label"/>
+        </question>
+        <question id="whiteOrCaucasian">
+          <label id="WhiteOrCaucasian.Label"/>
+        </question>
+        <question id="hispanicOrLatino">
+          <label id="HispanicOrLatino.Label"/>
+        </question>
+      </cluster>
+
+
+      <cluster entity="HouseholdInformation">
+        <title id="AnyPractitionerCertificate.Title"/>
+        <edit-link
+          end-page="PractitionerCertificateSummary"
+          start-page="AnyPractitionerCertificate"
+        />
+        <layout>
+          <label-width>82</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question id="practitionerCertificate">
+          <label id="PractitionerCertificate.Label"/>
+        </question>
+      </cluster>
+
+
+      <cluster entity="PractitionerCertificate">
+        <title id="PractitionerCertificateDetails.Title"/>
+        <edit-link start-page="PractitionerCertificateDetails"/>
+
+
+        <layout>
+          <label-width>82</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question id="medicalCertificateType">
+          <label id="MedicalCertificateType.Label"/>
+        </question>
+
+
+        <question id="examinationDate">
+          <label id="ExaminationDate.Label"/>
+        </question>
+
+
+        <question id="practitionerName">
+          <label id="PractitionerName.Label"/>
+        </question>
+
+
+        <question id="certificationStartDate">
+          <label id="PractitionerCertificationDate.Label"/>
+        </question>
+      </cluster>
+
+
+      <list entity="PractitionerCertificate">
+        <title id="PractitionerCertificateDetails.Title"/>
+        <column id="practitionerName">
+          <title id="PractitionerName.Label"/>
+        </column>
+        <list entity="Diagnosis">
+          <title id="DiagnosisDetails.Title"/>
+          <edit-link
+            skip-to-summary="true"
+            start-page="DiagnosisDetails"
+          />
+          <delete-link start-page="DiagnosisDetails"/>
+          <add-link
+            skip-to-summary="true"
+            start-page="DiagnosisDetails"
+          />
+          <column id="diagnosisType">
+            <title id="DiagnosisType.Label"/>
+          </column>
+          <column id="diagnosisExamDate">
+            <title id="DiagnosisExaminationDate.Label"/>
+          </column>
+        </list>
+      </list>
+    </summary-page>
+  </section>
+
+
+</ieg-script>

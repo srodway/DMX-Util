@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="SOCIALENTERPRISEFOLDERADMIN">
+  <column name="sefAdminID" type="id" />
+  <column name="type" type="text" />
+  <column name="multidisciplinaryTeamType" type="text" />
+  <column name="multidisciplinaryTeamPurpose" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="mdtSharingInd" type="text" />
+  <column name="mdtPortalHomePage" type="text" />
+  <column name="nameTextID" type="id" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="sefAdminID">
+      <value>101</value>
+    </attribute>
+    <attribute name="type">
+      <value>SEFT01</value>
+    </attribute>
+    <attribute name="multidisciplinaryTeamType">
+      <value>SMDT02</value>
+    </attribute>
+    <attribute name="multidisciplinaryTeamPurpose">
+      <value>MP01</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="mdtSharingInd">
+      <value />
+    </attribute>
+    <attribute name="mdtPortalHomePage">
+      <value />
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="sefAdminID">
+      <value>102</value>
+    </attribute>
+    <attribute name="type">
+      <value>SEFT02</value>
+    </attribute>
+    <attribute name="multidisciplinaryTeamType">
+      <value>SMDT01</value>
+    </attribute>
+    <attribute name="multidisciplinaryTeamPurpose">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="mdtSharingInd">
+      <value />
+    </attribute>
+    <attribute name="mdtPortalHomePage">
+      <value />
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="sefAdminID">
+      <value>10500</value>
+    </attribute>
+    <attribute name="type">
+      <value>SEFT03</value>
+    </attribute>
+    <attribute name="multidisciplinaryTeamType">
+      <value>SMDT01</value>
+    </attribute>
+    <attribute name="multidisciplinaryTeamPurpose">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="mdtSharingInd">
+      <value />
+    </attribute>
+    <attribute name="mdtPortalHomePage">
+      <value />
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

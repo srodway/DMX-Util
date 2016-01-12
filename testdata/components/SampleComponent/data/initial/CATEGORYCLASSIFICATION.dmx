@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="CATEGORYCLASSIFICATION">
+  <column name="categoryClassificationID" type="id" />
+  <column name="categoryID" type="id" />
+  <column name="maximumPriorityNumber" type="text" />
+  <column name="minimumPriorityNumber" type="text" />
+  <column name="initialWarningNumberDays" type="text" />
+  <column name="escalationWarningNumberDays" type="text" />
+  <column name="classificationType" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="classificationOrder" type="number" />
+  <column name="hideFromResults" type="bool" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="categoryClassificationID">
+      <value>-8394709705410207744</value>
+    </attribute>
+    <attribute name="categoryID">
+      <value>-1765411053920837632</value>
+    </attribute>
+    <attribute name="maximumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="minimumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="initialWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="escalationWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="classificationType">
+      <value>CDT10102</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="classificationOrder">
+      <value>2</value>
+    </attribute>
+    <attribute name="hideFromResults">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="categoryClassificationID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="categoryID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="maximumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="minimumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="initialWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="escalationWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="classificationType">
+      <value>CDT24000</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="classificationOrder">
+      <value>1</value>
+    </attribute>
+    <attribute name="hideFromResults">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="categoryClassificationID">
+      <value>24001</value>
+    </attribute>
+    <attribute name="categoryID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="maximumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="minimumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="initialWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="escalationWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="classificationType">
+      <value>CDT24001</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="classificationOrder">
+      <value>2</value>
+    </attribute>
+    <attribute name="hideFromResults">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="categoryClassificationID">
+      <value>24002</value>
+    </attribute>
+    <attribute name="categoryID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="maximumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="minimumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="initialWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="escalationWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="classificationType">
+      <value>CDT24002</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="classificationOrder">
+      <value>3</value>
+    </attribute>
+    <attribute name="hideFromResults">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="categoryClassificationID">
+      <value>34404</value>
+    </attribute>
+    <attribute name="categoryID">
+      <value>34426</value>
+    </attribute>
+    <attribute name="maximumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="minimumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="initialWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="escalationWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="classificationType">
+      <value>CDT9008</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="classificationOrder">
+      <value>4</value>
+    </attribute>
+    <attribute name="hideFromResults">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="categoryClassificationID">
+      <value>34405</value>
+    </attribute>
+    <attribute name="categoryID">
+      <value>34426</value>
+    </attribute>
+    <attribute name="maximumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="minimumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="initialWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="escalationWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="classificationType">
+      <value>CDT9006</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="classificationOrder">
+      <value>2</value>
+    </attribute>
+    <attribute name="hideFromResults">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="categoryClassificationID">
+      <value>34406</value>
+    </attribute>
+    <attribute name="categoryID">
+      <value>34426</value>
+    </attribute>
+    <attribute name="maximumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="minimumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="initialWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="escalationWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="classificationType">
+      <value>CDT9007</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="classificationOrder">
+      <value>3</value>
+    </attribute>
+    <attribute name="hideFromResults">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="categoryClassificationID">
+      <value>34407</value>
+    </attribute>
+    <attribute name="categoryID">
+      <value>34426</value>
+    </attribute>
+    <attribute name="maximumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="minimumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="initialWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="escalationWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="classificationType">
+      <value>CDT9005</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="classificationOrder">
+      <value>1</value>
+    </attribute>
+    <attribute name="hideFromResults">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="categoryClassificationID">
+      <value>4287426845265108992</value>
+    </attribute>
+    <attribute name="categoryID">
+      <value>-1765411053920837632</value>
+    </attribute>
+    <attribute name="maximumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="minimumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="initialWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="escalationWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="classificationType">
+      <value>CDT10103</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="classificationOrder">
+      <value>1</value>
+    </attribute>
+    <attribute name="hideFromResults">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="categoryClassificationID">
+      <value>7169730606782226432</value>
+    </attribute>
+    <attribute name="categoryID">
+      <value>-1765411053920837632</value>
+    </attribute>
+    <attribute name="maximumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="minimumPriorityNumber">
+      <value />
+    </attribute>
+    <attribute name="initialWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="escalationWarningNumberDays">
+      <value />
+    </attribute>
+    <attribute name="classificationType">
+      <value>CDT10101</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="classificationOrder">
+      <value>3</value>
+    </attribute>
+    <attribute name="hideFromResults">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

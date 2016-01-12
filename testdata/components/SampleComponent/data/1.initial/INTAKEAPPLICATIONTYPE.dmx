@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="INTAKEAPPLICATIONTYPE">
+  <column name="intakeApplicationTypeID" type="id" />
+  <column name="nameTextID" type="id" />
+  <column name="descriptionTextID" type="id" />
+  <column name="intakeScriptID" type="text" />
+  <column name="summaryTextID" type="id" />
+  <column name="channel" type="text" />
+  <column name="url" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="programSelectionInd" type="bool" />
+  <column name="displayOrder" type="number" />
+  <column name="submitOnCompletionInd" type="bool" />
+  <column name="submissionConfirmPageTitleID" type="id" />
+  <column name="submissionConfirmPageTextID" type="id" />
+  <column name="submissionScriptID" type="text" />
+  <column name="intakeSchemaName" type="text" />
+  <column name="pdfFormID" type="id" />
+  <column name="clientRegistration" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="intakeApplicationTypeID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value>24503</value>
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value>24506</value>
+    </attribute>
+    <attribute name="intakeScriptID">
+      <value>ASCApplication</value>
+    </attribute>
+    <attribute name="summaryTextID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="channel">
+      <value>AC03</value>
+    </attribute>
+    <attribute name="url">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="programSelectionInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="displayOrder">
+      <value>0</value>
+    </attribute>
+    <attribute name="submitOnCompletionInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="submissionConfirmPageTitleID">
+      <value>24507</value>
+    </attribute>
+    <attribute name="submissionConfirmPageTextID">
+      <value>24508</value>
+    </attribute>
+    <attribute name="submissionScriptID">
+      <value />
+    </attribute>
+    <attribute name="intakeSchemaName">
+      <value>ASCApplication</value>
+    </attribute>
+    <attribute name="pdfFormID">
+      <value />
+    </attribute>
+    <attribute name="clientRegistration">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>2</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="intakeApplicationTypeID">
+      <value>27000</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value>27100</value>
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value>27101</value>
+    </attribute>
+    <attribute name="intakeScriptID">
+      <value>DirectApplicationCaseCreationScript</value>
+    </attribute>
+    <attribute name="summaryTextID">
+      <value>27102</value>
+    </attribute>
+    <attribute name="channel">
+      <value>AC03</value>
+    </attribute>
+    <attribute name="url">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST2</value>
+    </attribute>
+    <attribute name="programSelectionInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="displayOrder">
+      <value>0</value>
+    </attribute>
+    <attribute name="submitOnCompletionInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="submissionConfirmPageTitleID">
+      <value>27103</value>
+    </attribute>
+    <attribute name="submissionConfirmPageTextID">
+      <value>27104</value>
+    </attribute>
+    <attribute name="submissionScriptID">
+      <value />
+    </attribute>
+    <attribute name="intakeSchemaName">
+      <value>DirectApplicationCaseCreationSchema</value>
+    </attribute>
+    <attribute name="pdfFormID">
+      <value />
+    </attribute>
+    <attribute name="clientRegistration">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

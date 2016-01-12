@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PROVIDERSTATUSHISTORY" override="true">
+<column name="providerStatusHistoryID" type="id"/>
+<column name="providerConcernRoleID" type="id"/>
+<column name="userName" type="text"/>
+<column name="reason" type="text"/>
+<column name="effectiveDateTime" type="timestamp"/>
+<column name="recordStatus" type="text"/>
+</table>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="ORGANISATIONUNIT" override="true">
+<column name="businessTypeCode" type="text"/>
+<column name="comments" type="text"/>
+<column name="creationDate" type="date"/>
+<column name="defaultPrinterID" type="id"/>
+<column name="name" type="text"/>
+<column name="organisationUnitID" type="id"/>
+<column name="recordStatus" type="text"/>
+<column name="statusCode" type="text"/>
+<column name="webAddress" type="text"/>
+<column name="readSID" type="text"/>
+<column name="maintainSID" type="text"/>
+<column name="createUnitSID" type="text"/>
+<column name="locationID" type="id"/>
+<column name="upperName" type="text"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+</table>

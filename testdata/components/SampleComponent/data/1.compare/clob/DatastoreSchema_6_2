@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains" elementFormDefault="qualified">
+    <xsd:import namespace="http://www.curamsoftware.com/BaseDomains" />
+    <xsd:simpleType name="CI_GENDER">
+        <xsd:annotation>
+          <xsd:appinfo>
+            <d:options>
+              <d:option name="code-table-name">Gender</d:option>
+            </d:options>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:restriction base="d:CODETABLE_CODE"/>
+    </xsd:simpleType>
+    
+    <xsd:element name="Application">
+        <xsd:annotation>
+            <xsd:documentation>Top level application table</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+	            <xsd:sequence minOccurs="0">
+	                <xsd:element ref="Person" minOccurs="0" maxOccurs="unbounded" />
+	                <xsd:element ref="Case" minOccurs="0" maxOccurs="unbounded" />
+	            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    
+    <xsd:element name="Person">
+            <xsd:annotation>
+                <xsd:documentation>Holds the data for each person</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+	    	 <xsd:sequence minOccurs="0">
+	    	   <xsd:element ref="Relationship" minOccurs="0" maxOccurs="unbounded" />
+	    	   <xsd:element ref="AdditionalData" minOccurs="0" maxOccurs="unbounded" />
+	    	 </xsd:sequence>
+            
+                <xsd:attribute name="globalPersonID" type="d:SVR_KEY">
+                    <xsd:annotation>
+                        <xsd:documentation>The identifier for the person</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="firstName" type="d:SVR_STRING">
+                    <xsd:annotation>
+                        <xsd:documentation>The persons first name</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="middleName" type="d:SVR_STRING">
+    		<xsd:annotation>
+    		     <xsd:documentation>The persons middle name</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="lastName" type="d:SVR_STRING">
+    	    	<xsd:annotation>
+    	              <xsd:documentation>The persons last name</xsd:documentation>
+    	        </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="address" type="d:SVR_STRING">
+    	    	<xsd:annotation>
+    	    	      <xsd:documentation>The persons formatted address</xsd:documentation>
+    	    	</xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="phoneNumber" type="d:SVR_STRING">
+    	    	<xsd:annotation>
+    	    	      <xsd:documentation>The persons phone number</xsd:documentation>
+    	    	 </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="ssn" type="d:SVR_STRING">
+    	    	 <xsd:annotation>
+    	    	      <xsd:documentation>The persons social security number</xsd:documentation>
+    	    	 </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="emailAddress" type="d:SVR_STRING">
+    	    	 <xsd:annotation>
+    	    	       <xsd:documentation>The persons social security number</xsd:documentation>
+    	    	 </xsd:annotation>
+                </xsd:attribute>
+                 <xsd:attribute name="sensitivity" type="d:SVR_STRING">
+    	    	 <xsd:annotation>
+    	    	       <xsd:documentation>The persons sensitivity level</xsd:documentation>
+    	    	  </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="gender" type="CI_GENDER">
+                    <xsd:annotation>
+                        <xsd:documentation>The persons gender</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="dateOfBirth" type="d:SVR_DATE">
+                    <xsd:annotation>
+                        <xsd:documentation>The persons date of birth</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute> 
+                <xsd:attribute name="sourceSystem" type="d:SVR_DATE">
+                    <xsd:annotation>
+                        <xsd:documentation>The system from which this persons data originates</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>                   
+            </xsd:complexType>
+            <xsd:key name="Person_Key">
+                <xsd:selector xpath="./Person" />
+                <xsd:field xpath="@globalPersonID" />
+            </xsd:key>
+            <xsd:keyref name="RelationshipRef" refer="Person_Key">
+	         <xsd:selector xpath="./Person/Relationship"/>
+	          <xsd:field xpath="@globalFamilyMemberID"/>
+            </xsd:keyref>
+            <xsd:keyref name="AdditionalDataRef" refer="Person_Key">
+	    	  <xsd:selector xpath="./Person/AdditionalData"/>
+	    	  <xsd:field xpath="@globalAdditionalDataID"/>
+            </xsd:keyref>
+    </xsd:element>
+    <xsd:element name="Relationship">
+                <xsd:annotation>
+                    <xsd:documentation>Holds the data for each persons relationships</xsd:documentation>
+                </xsd:annotation>
+                
+                
+                <xsd:complexType>
+                    <xsd:attribute name="globalFamilyMemberID" type="d:SVR_KEY">
+                        <xsd:annotation>
+                            <xsd:documentation>The identifier for the person</xsd:documentation>
+                        </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="relationshipType" type="d:SVR_STRING">
+		  <xsd:annotation>
+		    	<xsd:documentation>The relationship type</xsd:documentation>
+		  </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="firstName" type="d:SVR_STRING">
+		        <xsd:annotation>
+			  <xsd:documentation>The first name of the related to person</xsd:documentation>
+			</xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="middleName" type="d:SVR_STRING">
+			<xsd:annotation>
+			  <xsd:documentation>The middle name of the related to person</xsd:documentation>
+			</xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="lastName" type="d:SVR_STRING">
+			<xsd:annotation>
+			  <xsd:documentation>The last name of the related to person</xsd:documentation>
+			</xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="startDate" type="d:SVR_DATE">
+		        <xsd:annotation>
+		            <xsd:documentation>The date that the relationship started</xsd:documentation>
+		         </xsd:annotation>
+                </xsd:attribute> 
+                 <xsd:attribute name="endDate" type="d:SVR_DATE">
+		         <xsd:annotation>
+			    <xsd:documentation>The date that the relationship ended</xsd:documentation>
+			 </xsd:annotation>
+                </xsd:attribute> 
+                <xsd:attribute name="relationshipStatus" type="d:CODETABLE_CODE">
+		         <xsd:annotation>
+		            <xsd:documentation>The status of the relationship</xsd:documentation>
+		         </xsd:annotation>
+                </xsd:attribute>
+    </xsd:complexType>
+     </xsd:element>
+     <xsd:element name="AdditionalData">
+	     <xsd:annotation>
+		 <xsd:documentation>Holds the data for each persons additional data</xsd:documentation>
+	     </xsd:annotation>
+
+	     <xsd:complexType>
+		 <xsd:attribute name="globalAdditionalDataID" type="d:SVR_KEY">
+		     <xsd:annotation>
+			 <xsd:documentation>The identifier for the persons additional data</xsd:documentation>
+		     </xsd:annotation>
+	     </xsd:attribute>
+	     <xsd:attribute name="additionalDataType" type="d:SVR_STRING">
+	  <xsd:annotation>
+		<xsd:documentation>The additional data type</xsd:documentation>
+	  </xsd:annotation>
+	     </xsd:attribute>
+	     <xsd:attribute name="label" type="d:SVR_STRING">
+		<xsd:annotation>
+		  <xsd:documentation>The field label to be displayed on the additional data screen</xsd:documentation>
+		</xsd:annotation>
+	     </xsd:attribute>
+	     
+         </xsd:complexType>
+     </xsd:element>
+     <xsd:element name="Case">
+                 <xsd:annotation>
+                     <xsd:documentation>Holds the data for each case</xsd:documentation>
+                 </xsd:annotation>
+                 <xsd:complexType>
+     	    	 <xsd:sequence minOccurs="0">
+     	    	   <xsd:element ref="CaseMember" minOccurs="0" maxOccurs="unbounded" />
+     	    	                
+     	    	 </xsd:sequence>
+                 
+                 <xsd:attribute name="globalCaseID" type="d:SVR_KEY">
+                      <xsd:annotation>
+                           <xsd:documentation>The identifier for the case</xsd:documentation>
+                     </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="caseType" type="d:CODETABLE_CODE">
+		     <xsd:annotation>
+		           <xsd:documentation>The type of case</xsd:documentation>
+		     </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="name" type="d:SVR_STRING">
+                    <xsd:annotation>
+		           <xsd:documentation>The name of the case</xsd:documentation>
+		    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="startDate" type="d:SVR_DATE">
+		     <xsd:annotation>
+			 <xsd:documentation>The date the case started in Curam date form</xsd:documentation>
+		     </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="endDate" type="d:SVR_DATE">
+		     <xsd:annotation>
+		       <xsd:documentation>The date the case ended in Curam date form</xsd:documentation>
+		     </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="primaryMemberGlobalID" type="d:SVR_KEY">
+		     <xsd:annotation>
+		       <xsd:documentation>The global identifier for the primary member of the case</xsd:documentation>
+		     </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="caseStatus" type="d:CODETABLE_CODE">
+		     <xsd:annotation>
+		       <xsd:documentation>The status of the case</xsd:documentation>
+		     </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="caseReference" type="d:SVR_STRING">
+		     <xsd:annotation>
+		      <xsd:documentation>The status of the case</xsd:documentation>
+		     </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="sensitivity" type="d:SVR_STRING">
+		     <xsd:annotation>
+		       <xsd:documentation>The sensitivity of the case</xsd:documentation>
+		     </xsd:annotation>
+                </xsd:attribute>
+                
+            </xsd:complexType>
+            <xsd:key name="Case_Key">
+	        <xsd:selector xpath="./Case" />
+	          <xsd:field xpath="@globalCaseID" />
+	        </xsd:key>
+	        <xsd:keyref name="CaseMemberRef" refer="Case_Key">
+	    	  <xsd:selector xpath="./Case/CaseMember"/>
+	    	<xsd:field xpath="@globalCaseID"/>
+            </xsd:keyref>
+     </xsd:element>  
+     <xsd:element name="CaseMember">
+            <xsd:annotation>
+                <xsd:documentation>Holds the data for each persons relationships</xsd:documentation>
+            </xsd:annotation>
+                     
+                     
+            <xsd:complexType>
+                <xsd:attribute name="globalCaseMemberID" type="d:SVR_KEY">
+                  <xsd:annotation>
+                    <xsd:documentation>The identifier for the member of the case</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="globalCaseID" type="d:SVR_KEY">
+		    <xsd:annotation>
+		      <xsd:documentation>The identifier for the member of the case</xsd:documentation>
+		    </xsd:annotation>
+                </xsd:attribute>
+            </xsd:complexType>
+     </xsd:element>
+     
+</xsd:schema>

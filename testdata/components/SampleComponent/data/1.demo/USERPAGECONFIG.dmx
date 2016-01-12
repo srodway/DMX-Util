@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="USERPAGECONFIG" override="true">
+<column name="userPageConfigID" type="id"/>
+<column name="pageID" type="text"/>
+<column name="userRoleName" type="text"/>
+<column name="userName" type="text"/>
+<column name="config" type="clob"/>
+<column name="defaultInd" type="bool"/>
+<column name="versionNo" type="number"/>
+<row>
+<attribute name="userPageConfigID">
+<value>2101</value>
+</attribute>
+<attribute name="pageID">
+<value>AdminCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>SUPERROLE</value>
+</attribute>
+<attribute name="userName">
+<value/>
+</attribute>
+<attribute name="config">
+<value>&lt;user-page-config&gt;&lt;pod-config col="0" id="PT2002" row="0"/&gt;&lt;pod-config col="1" id="PT2029" row="0"/&gt;&lt;pod-config col="2" id="PT2017" row="0"/&gt;&lt;pod-config col="0" id="PT2025" row="1"/&gt;&lt;/user-page-config&gt;</value>
+</attribute>
+<attribute name="defaultInd">
+<value>1</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="userPageConfigID">
+<value>3001</value>
+</attribute>
+<attribute name="pageID">
+<value>ResourceManagerCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>SUPERROLE</value>
+</attribute>
+<attribute name="userName">
+<value/>
+</attribute>
+<attribute name="config">
+<value>&lt;user-page-config&gt;&lt;pod-config col="0" id="PT3001" row="0" /&gt;&lt;pod-config col="1" id="PT2029" row="0" /&gt;&lt;pod-config col="2" id="PT2017" row="0" /&gt;&lt;pod-config col="0" id="PT3004" row="1" /&gt;&lt;pod-config col="1" id="PT3002" row="1" /&gt;&lt;pod-config col="2" id="PT2023" row="1" /&gt;&lt;pod-config col="0" id="PT3009" row="2" /&gt;&lt;pod-config col="1" id="PT3003" row="2" /&gt;&lt;pod-config col="2" id="PT2024" row="2" /&gt;&lt;/user-page-config&gt;</value>
+</attribute>
+<attribute name="defaultInd">
+<value>1</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="userPageConfigID">
+<value>3004</value>
+</attribute>
+<attribute name="pageID">
+<value>ExternalProviderCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>EXTERNALUSERSECUREROLE</value>
+</attribute>
+<attribute name="userName">
+<value/>
+</attribute>
+<attribute name="config">
+<value>&lt;user-page-config&gt;&lt;pod-config col="0" id="PT3007" row="0" /&gt;&lt;pod-config col="1" id="PT3008" row="0" /&gt;&lt;pod-config col="0" id="PT3006" row="1" /&gt;&lt;/user-page-config&gt;</value>
+</attribute>
+<attribute name="defaultInd">
+<value>1</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="userPageConfigID">
+<value>19003</value>
+</attribute>
+<attribute name="pageID">
+<value>IntakeWorkerSupervisorHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>INTAKESUPERVISORROLE</value>
+</attribute>
+<attribute name="userName">
+<value/>
+</attribute>
+<attribute name="config">
+<value>&lt;user-page-config&gt;
+        &lt;pod-config col="0" id="PT19004" row="0"/&gt;
+        &lt;pod-config col="0" id="PT2102" row="1"/&gt;
+        &lt;pod-config col="1" id="PT2029" row="0"/&gt;
+        &lt;pod-config col="2" id="PT2002" row="0"/&gt;
+        &lt;pod-config col="2" id="PT2017" row="1"/&gt;
+        &lt;/user-page-config&gt;</value>
+</attribute>
+<attribute name="defaultInd">
+<value>1</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="userPageConfigID">
+<value>19009</value>
+</attribute>
+<attribute name="pageID">
+<value>IntakeWorkerSupervisorHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value/>
+</attribute>
+<attribute name="userName">
+<value/>
+</attribute>
+<attribute name="config">
+<value>&lt;user-page-config&gt;
+        &lt;pod-config col="0" id="PT19004" row="0"/&gt;
+        &lt;pod-config col="0" id="PT2102" row="1"/&gt;
+        &lt;pod-config col="1" id="PT2029" row="0"/&gt;
+        &lt;pod-config col="2" id="PT2002" row="0"/&gt;
+        &lt;pod-config col="2" id="PT2017" row="1"/&gt;
+        &lt;/user-page-config&gt;</value>
+</attribute>
+<attribute name="defaultInd">
+<value>1</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="userPageConfigID">
+<value>27001</value>
+</attribute>
+<attribute name="pageID">
+<value>CommonIntakeApplication_home</value>
+</attribute>
+<attribute name="userRoleName">
+<value>CIROLE</value>
+</attribute>
+<attribute name="userName">
+<value/>
+</attribute>
+<attribute name="config">
+<value>&lt;user-page-config&gt;
+          &lt;pod-config row="0" id="PT2029" col="0"/&gt;
+		  &lt;pod-config row="0" id="PT2018" col="1"/&gt;
+		  &lt;pod-config row="0" id="PT2002" col="2"/&gt;
+          &lt;pod-config row="1" id="PT2017" col="0"/&gt;
+		  &lt;pod-config row="1" id="PT27000" col="1"/&gt;
+		  &lt;pod-config row="1" id="PT27001" col="2"/&gt;
+		  &lt;pod-config row="2" id="PT27002" col="1"/&gt;
+		   &lt;/user-page-config&gt;</value>
+</attribute>
+<attribute name="defaultInd">
+<value>1</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+</table>

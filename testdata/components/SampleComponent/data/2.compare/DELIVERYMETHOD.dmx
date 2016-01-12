@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="DELIVERYMETHOD">
+  <column name="deliveryMethodID" type="id" />
+  <column name="name" type="text" />
+  <column name="offset" type="number" />
+  <column name="appliesToBenefitInd" type="bool" />
+  <column name="appliesToLiabilityInd" type="bool" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="deliveryMethodID">
+      <value>1</value>
+    </attribute>
+    <attribute name="name">
+      <value>EFT</value>
+    </attribute>
+    <attribute name="offset">
+      <value>0</value>
+    </attribute>
+    <attribute name="appliesToBenefitInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="appliesToLiabilityInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="deliveryMethodID">
+      <value>2</value>
+    </attribute>
+    <attribute name="name">
+      <value>CHQ</value>
+    </attribute>
+    <attribute name="offset">
+      <value>0</value>
+    </attribute>
+    <attribute name="appliesToBenefitInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="appliesToLiabilityInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="deliveryMethodID">
+      <value>3</value>
+    </attribute>
+    <attribute name="name">
+      <value>CSH</value>
+    </attribute>
+    <attribute name="offset">
+      <value>0</value>
+    </attribute>
+    <attribute name="appliesToBenefitInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="appliesToLiabilityInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="deliveryMethodID">
+      <value>4</value>
+    </attribute>
+    <attribute name="name">
+      <value>INV</value>
+    </attribute>
+    <attribute name="offset">
+      <value>0</value>
+    </attribute>
+    <attribute name="appliesToBenefitInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="appliesToLiabilityInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="deliveryMethodID">
+      <value>5</value>
+    </attribute>
+    <attribute name="name">
+      <value>VCH</value>
+    </attribute>
+    <attribute name="offset">
+      <value>0</value>
+    </attribute>
+    <attribute name="appliesToBenefitInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="appliesToLiabilityInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

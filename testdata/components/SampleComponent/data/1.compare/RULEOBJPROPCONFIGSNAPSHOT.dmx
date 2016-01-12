@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="RULEOBJPROPCONFIGSNAPSHOT">
+  <column name="snapshotID" type="id" />
+  <column name="configData" type="blob" />
+  <column name="userName" type="text" />
+  <column name="actionType" type="text" />
+  <column name="actionDateTime" type="timestamp" />
+  <column name="ruleObjectPropagatorConfigID" type="id" />
+  <column name="propagatorType" type="text" />
+  <column name="successionID" type="number" />
+  <column name="nameID" type="id" />
+  <row>
+    <attribute name="snapshotID">
+      <value>-8479152198431801344</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_1_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.33</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>2001</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2003</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>2001</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>6004424203191713792</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_2_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.33</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>2002</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2003</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>2002</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>-1201335200601079808</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_3_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.33</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>2003</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2003</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>2003</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>-6461539565369819136</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_4_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.35</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>2004</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2006</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>2004</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>2617717283409100800</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_5_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.33</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>4097</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2003</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>4097</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>-5092445278649188352</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_6_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.33</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>10003</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2003</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>10003</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>-4443926932307836928</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_7_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.33</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>19000</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2003</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>19000</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>-192528884070088704</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_8_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.35</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>24002</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2004</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>24052</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>8454382400481263616</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_9_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.34</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>24003</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>24053</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>-7470345881900810240</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_10_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.34</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>24004</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>24055</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>4419157134357299200</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_11_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.34</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>24005</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>24056</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>5283848262812434432</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_12_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.35</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>24006</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2006</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>24057</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>-1993968735018287104</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_13_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.34</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>24007</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>24059</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>1176565402650542080</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_14_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.34</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>24009</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>24060</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>-7542403475938738176</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_15_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.33</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>24010</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>24061</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>9102900746822615040</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_16_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.33</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>27001</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2003</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>27001</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>-9127670544773152768</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_17_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.34</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>29005</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>29000</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>-5524790842876755968</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_18_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.34</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>29003</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>29001</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>3050062847636668416</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_19_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.34</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>29000</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>29002</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>5067675480698650624</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_20_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.34</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>29002</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>29003</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>-6029194001142251520</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_21_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.34</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>29008</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>29004</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>-2642487081359638528</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_22_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.34</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>29007</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>29005</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>6869115331646849024</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_23_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.34</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>29004</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>29006</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>-3579235803852701696</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_24_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.34</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>29006</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>29007</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>7085288113760632832</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_25_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.34</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>29001</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>29008</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>7517633677988200448</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_26_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.33</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>29009</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2003</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>29009</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>-1057220012525223936</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_27_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.34</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>29010</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>29010</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>1032450214574686208</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_28_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.33</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>29012</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2003</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>29012</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>3986811570129731584</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_29_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.35</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>29013</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2004</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>29013</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="snapshotID">
+      <value>383931868233334784</value>
+    </attribute>
+    <attribute name="configData">
+      <value>./blob/RuleObjPropConfigSnapshot_30_2</value>
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="actionType">
+      <value>RPCA0001</value>
+    </attribute>
+    <attribute name="actionDateTime">
+      <value>2016-01-08-12.27.34</value>
+    </attribute>
+    <attribute name="ruleObjectPropagatorConfigID">
+      <value>29054</value>
+    </attribute>
+    <attribute name="propagatorType">
+      <value>ROPT2005</value>
+    </attribute>
+    <attribute name="successionID">
+      <value>1</value>
+    </attribute>
+    <attribute name="nameID">
+      <value>29054</value>
+    </attribute>
+  </row>
+</table>
+

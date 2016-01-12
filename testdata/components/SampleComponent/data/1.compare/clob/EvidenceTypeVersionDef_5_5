@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<EvidenceTypeVersion
+  businessEndDate="endDate"
+  businessStartDate="dateOfEntry"
+  correctionOnly="true"
+  description="An alien household member is an individual who is not a citizen or national. Alien types include refugee and asylee. The alien must be determined an eligible alien to receive assistance from certain programs."
+  modifiable="true"
+  relatedParticipant="caseParticipantRoleID"
+>
+  <Model>
+    <Attributes>
+      <Attribute>
+        <DataAttribute
+          description="The date the alien entered the country."
+          mandatory="true"
+          name="dateOfEntry"
+        >
+          <DomainType dataType="Date">
+            <DateOptions currentDate="LessThanOrEqualTo"/>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The alien's country of origin."
+          mandatory="true"
+          name="countryOfOrigin"
+        >
+          <DomainType dataType="Codetable">
+            <CodetableOptions codetableName="Country"/>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The alien's registration number."
+          mandatory="true"
+          name="alienRegNumber"
+        >
+          <DomainType dataType="String">
+            <StringOptions
+              toUpperCase="true"
+              trimLeadingSpaces="true"
+              trimTrailingSpaces="true"
+            />
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The type of alien the household member is categorized under e.g. refugee."
+          mandatory="true"
+          name="alienType"
+        >
+          <DomainType dataType="Codetable">
+            <CodetableOptions codetableName="InAlienStatus"/>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The alien's status on entering the country, e.g. Deportation Withheld"
+          mandatory="true"
+          name="alientStatusOnEntry"
+        >
+          <DomainType dataType="Codetable">
+            <CodetableOptions codetableName="AlienStatusOnEntry"/>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <RelatedCPAttribute
+          cpRoleType="MEM"
+          description="The case participant role identifier of the alien."
+          name="caseParticipantRoleID"
+          participantType="Person"
+        >
+          <CPSearchType code="ALN"/>
+        </RelatedCPAttribute>
+      </Attribute>
+      <Attribute>
+        <CommentsAttribute
+          description="Comments relating to the alien."
+          name="comments"
+        />
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The end date for the alien."
+          name="endDate"
+        >
+          <DomainType dataType="Date"/>
+        </DataAttribute>
+      </Attribute>
+    </Attributes>
+    <Relationships/>
+  </Model>
+  <Validations>
+    <PatternValidations>
+      <Validator>
+        <ComparisonValidator
+          operator="GreaterThanOrEqualTo"
+          shallow="false"
+          source="endDate"
+          target="dateOfEntry"
+          useClause="false"
+          useLiteral="false"
+        />
+      </Validator>
+      <Validator>
+        <ParticipantDatesValidator
+          inputDate="dateOfEntry"
+          relatedCP="caseParticipantRoleID"
+        >
+          <ValidationMessageInformation>
+            <ValidationMessageMapping>
+              <ValidationMessage>
+                <parameter name="dateOfEntry"/>
+                <ValidationMessageResource id="DateOfEntryDOB.message"/>
+              </ValidationMessage>
+            </ValidationMessageMapping>
+          </ValidationMessageInformation>
+        </ParticipantDatesValidator>
+      </Validator>
+    </PatternValidations>
+  </Validations>
+  <SummaryInformation>
+    <SummaryMapping
+      endDate="endDate"
+      startDate="dateOfEntry"
+    >
+      <Summary>
+        <parameter name="alienType"/>
+        <SummaryResource id="Alien.message"/>
+      </Summary>
+    </SummaryMapping>
+  </SummaryInformation>
+  <UserInterface>
+    <OnlineTextCreatePage id="Create.Page.Description"/>
+    <OnlineTextModifyPage id="Modify.Page.Description"/>
+    <OnlineTextViewPage id="View.Page.Description"/>
+    <Cluster>
+      <RelCPCluster
+        fullCreateParticipant="false"
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+        modifyOption="multiple"
+        showParticipantTypeFilter="true"
+        useSingleName="false"
+      >
+        <OnlineText id="Cluster.AlienCPR.Title.Help"/>
+        <StandardField source="caseParticipantRoleID"/>
+        <ClusterName id="Cluster.AlienCPR.Title"/>
+        <DescriptionName id="Alien.Description"/>
+        <RelCpPfx id="Participant.Description"/>
+        <FirstName id="First.Name.Label.ID3"/>
+        <SecondName id="Second.Name.Label.ID3"/>
+      </RelCPCluster>
+    </Cluster>
+    <Cluster>
+      <StandardCluster
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+        labelWidth="40"
+        numberOfColumns="2"
+      >
+        <Title id="ClusternAlien.Details"/>
+        <OnlineText id="Cluster.Alien.Details.Help"/>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="alienType"
+            useDefault="true"
+          >
+            <Label id="AlienType.Field.Label"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="alientStatusOnEntry"
+            useDefault="true"
+          >
+            <Label id="AlienStatus.Field.Label"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="alienRegNumber"
+            useDefault="true"
+          >
+            <Label id="AlienRegistrationNumber.Field.Label"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="dateOfEntry"
+            useDefault="true"
+          >
+            <Label id="DateOfEntry.Field.Label"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="countryOfOrigin"
+            useDefault="true"
+          >
+            <Label id="CountryOfOrigin.Field.Label"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="endDate"
+            useDefault="true"
+          >
+            <Label id="EndDate.Field.Label"/>
+          </StandardField>
+        </StandardClusterField>
+      </StandardCluster>
+    </Cluster>
+    <Cluster>
+      <CommentsCluster
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+      >
+        <Title id="Cluster.Comments"/>
+        <OnlineText id="Cluster.Comments.Help"/>
+        <StandardField source="comments"/>
+      </CommentsCluster>
+    </Cluster>
+  </UserInterface>
+</EvidenceTypeVersion>

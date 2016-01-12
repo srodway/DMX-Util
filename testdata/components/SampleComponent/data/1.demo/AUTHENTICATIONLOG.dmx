@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="AUTHENTICATIONLOG" override="true">
+<column name="timeEntered" type="timestamp"/>
+<column name="userName" type="text"/>
+<column name="loginFailures" type="number"/>
+<column name="lastLogin" type="timestamp"/>
+<column name="loginStatus" type="text"/>
+<column name="logID" type="id"/>
+<column name="altLogin" type="bool"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+</table>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PROCENACTEVTDATA" override="true">
+<column name="procEvtMappingID" type="id"/>
+<column name="procStartEventID" type="id"/>
+<column name="eventField" type="text"/>
+<column name="wdoAttribute" type="text"/>
+<column name="lastWritten" type="timestamp"/>
+<row>
+<attribute name="procEvtMappingID">
+<value>2</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>2</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF2</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>ConcernRoleID.concernRoleID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="procEvtMappingID">
+<value>3</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>2</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF3</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>CaseID.caseID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="procEvtMappingID">
+<value>4</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>3</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF2</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>CaseIDApprovalRequestID.caseID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="procEvtMappingID">
+<value>5</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>3</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF3</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>CaseIDApprovalRequestID.approvalRequestID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="procEvtMappingID">
+<value>6</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>4</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF2</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>MilestoneDeliveryWDO.milestoneDeliveryID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="procEvtMappingID">
+<value>7</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>4</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF3</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>MilestoneDeliveryWDO.caseID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="procEvtMappingID">
+<value>8</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>5</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF2</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>MilestoneDeliveryWDO.milestoneDeliveryID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="procEvtMappingID">
+<value>9</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>5</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF3</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>MilestoneDeliveryWDO.caseID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="procEvtMappingID">
+<value>100</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>100</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF2</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>CaseID.caseID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="procEvtMappingID">
+<value>300</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>200</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF3</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>RequiredObjectIDs.plannedItemID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="procEvtMappingID">
+<value>201</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>201</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF2</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>IntakeProgramApplicationDetails.intakeProgramApplicationID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="procEvtMappingID">
+<value>400</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>300</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF2</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>RequiredObjectIDs.caseID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="procEvtMappingID">
+<value>500</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>300</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF3</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>RequiredObjectIDs.plannedItemID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="procEvtMappingID">
+<value>600</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>400</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF2</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>PreApprovalCriteriaSampleWDO.caseID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="procEvtMappingID">
+<value>700</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>400</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF3</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>PreApprovalCriteriaSampleWDO.plannedItemID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="procEvtMappingID">
+<value>844</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>843</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF2</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>WDOBGCheckCreation.providerBackgroundCheckID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="procEvtMappingID">
+<value>846</value>
+</attribute>
+<attribute name="procStartEventID">
+<value>845</value>
+</attribute>
+<attribute name="eventField">
+<value>EVF2</value>
+</attribute>
+<attribute name="wdoAttribute">
+<value>WDOBGCheckUpdation.providerBackgroundCheckID</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+</table>

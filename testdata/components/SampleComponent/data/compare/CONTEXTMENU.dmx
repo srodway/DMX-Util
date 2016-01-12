@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="CONTEXTMENU">
+  <column name="contextMenuID" type="id" />
+  <column name="contextMenuType" type="text" />
+  <column name="contextMenuXML" type="clob" />
+  <row>
+    <attribute name="contextMenuID">
+      <value>101000000</value>
+    </attribute>
+    <attribute name="contextMenuType">
+      <value>CNMU101</value>
+    </attribute>
+    <attribute name="contextMenuXML">
+      <value>./clob/ContextMenu_1_3</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contextMenuID">
+      <value>101100000</value>
+    </attribute>
+    <attribute name="contextMenuType">
+      <value>CNMU110</value>
+    </attribute>
+    <attribute name="contextMenuXML">
+      <value>./clob/ContextMenu_2_3</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contextMenuID">
+      <value>101200000</value>
+    </attribute>
+    <attribute name="contextMenuType">
+      <value>CNMU111</value>
+    </attribute>
+    <attribute name="contextMenuXML">
+      <value>./clob/ContextMenu_3_3</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contextMenuID">
+      <value>102000000</value>
+    </attribute>
+    <attribute name="contextMenuType">
+      <value>CNMU102</value>
+    </attribute>
+    <attribute name="contextMenuXML">
+      <value>./clob/ContextMenu_4_3</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contextMenuID">
+      <value>103000000</value>
+    </attribute>
+    <attribute name="contextMenuType">
+      <value>CNMU103</value>
+    </attribute>
+    <attribute name="contextMenuXML">
+      <value>./clob/ContextMenu_5_3</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contextMenuID">
+      <value>104000000</value>
+    </attribute>
+    <attribute name="contextMenuType">
+      <value>CNMU104</value>
+    </attribute>
+    <attribute name="contextMenuXML">
+      <value>./clob/ContextMenu_6_3</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contextMenuID">
+      <value>105000000</value>
+    </attribute>
+    <attribute name="contextMenuType">
+      <value>CNMU105</value>
+    </attribute>
+    <attribute name="contextMenuXML">
+      <value>./clob/ContextMenu_7_3</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contextMenuID">
+      <value>106000000</value>
+    </attribute>
+    <attribute name="contextMenuType">
+      <value>CNMU106</value>
+    </attribute>
+    <attribute name="contextMenuXML">
+      <value>./clob/ContextMenu_8_3</value>
+    </attribute>
+  </row>
+</table>
+

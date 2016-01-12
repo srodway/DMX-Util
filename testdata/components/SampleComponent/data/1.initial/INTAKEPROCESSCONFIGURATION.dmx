@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="INTAKEPROCESSCONFIGURATION">
+  <column name="intakeProcessConfigurationID" type="id" />
+  <column name="intakeProcessNameID" type="id" />
+  <column name="optionXML" type="clob" />
+  <row>
+    <attribute name="intakeProcessConfigurationID">
+      <value>19200</value>
+    </attribute>
+    <attribute name="intakeProcessNameID">
+      <value>19200</value>
+    </attribute>
+    <attribute name="optionXML">
+      <value>./clob/IntakeProcessConfiguration_1_3</value>
+    </attribute>
+  </row>
+</table>
+

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><RuleSet name="IBProductTypeRuleSet">
+
+
+  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="IBProductType">
+
+
+    <Attribute name="forceIVB">
+      <Annotations>
+        <Label label-id="forceIVB" name="Flag to indicate if invalidity benefit is being forced."/>
+      </Annotations>
+      <type>
+        <javaclass name="java.lang.Boolean"/>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="claimType">
+      <Annotations>
+        <Label label-id="claimType" name="The type of claim being applied for, Sickness Benefit or Invalidity Benefit."/>
+      </Annotations>
+      <type>
+        <codetableentry table="IBClaimType"/>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="householdMember">
+      <Annotations>
+        <Label label-id="claimType" name="The case participant receiving the benefit."/>
+      </Annotations>
+      <type>
+        <javaclass name="java.lang.Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="related_householdMember">
+      <type>
+        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+      </type>
+      <derivation>
+        <reference attribute="caseParticipantRoleRecord">
+          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
+            <reference attribute="householdMember"/>
+          </create>
+        </reference>
+      </derivation>
+    </Attribute>
+
+
+  </Class>
+
+
+</RuleSet>

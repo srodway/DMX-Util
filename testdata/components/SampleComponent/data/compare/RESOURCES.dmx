@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="RESOURCES">
+  <column name="resourceID" type="id" />
+  <column name="name" type="text" />
+  <column name="typeCode" type="text" />
+  <column name="description" type="text" />
+  <column name="statusCode" type="text" />
+  <column name="dataField" type="text" />
+  <column name="resourceStatus" type="text" />
+  <column name="creationDate" type="date" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="resourceID">
+      <value>1</value>
+    </attribute>
+    <attribute name="name">
+      <value>DEFAULT_PRINTER</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>RT1</value>
+    </attribute>
+    <attribute name="description">
+      <value>Default Printer</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="dataField">
+      <value />
+    </attribute>
+    <attribute name="resourceStatus">
+      <value>RS1</value>
+    </attribute>
+    <attribute name="creationDate">
+      <value>2000-09-26</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

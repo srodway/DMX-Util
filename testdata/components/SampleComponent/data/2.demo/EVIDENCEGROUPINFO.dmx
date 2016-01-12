@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="EVIDENCEGROUPINFO" override="true">
+<column name="evidenceGroupInfoID" type="id"/>
+<column name="evidenceGroupID" type="id"/>
+<column name="effectiveDate" type="date"/>
+<column name="evidencePageIdentifier" type="text"/>
+<column name="comments" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

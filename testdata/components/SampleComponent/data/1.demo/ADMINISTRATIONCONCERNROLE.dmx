@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="ADMINISTRATIONCONCERNROLE" override="true">
+<column name="administrationConcernRoleID" type="id"/>
+<column name="concernRoleID" type="id"/>
+<column name="administrationRoleID" type="id"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="typeCode" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

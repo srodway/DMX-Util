@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="RATEHEADER" override="true">
+<column name="rateHeaderID" type="id"/>
+<column name="effectiveDate" type="date"/>
+<column name="rateTableType" type="text"/>
+<column name="comments" type="text"/>
+<column name="rateStatus" type="text"/>
+<column name="versionNo" type="number"/>
+<row>
+<attribute name="rateHeaderID">
+<value>3</value>
+</attribute>
+<attribute name="effectiveDate">
+<value>2003-03-03</value>
+</attribute>
+<attribute name="rateTableType">
+<value>RTT3</value>
+</attribute>
+<attribute name="comments">
+<value>Rate Table Demo data</value>
+</attribute>
+<attribute name="rateStatus">
+<value>RS2</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+</table>

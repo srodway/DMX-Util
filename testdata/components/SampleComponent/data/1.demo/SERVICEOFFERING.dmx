@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="SERVICEOFFERING" override="true">
+<column name="serviceOfferingID" type="id"/>
+<column name="name" type="text"/>
+<column name="description" type="text"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="unitOfMeasure" type="text"/>
+<column name="maximumUnits" type="id"/>
+<column name="unitFrequency" type="text"/>
+<column name="comments" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="nameUpper" type="text"/>
+<column name="placementPmtInd" type="bool"/>
+<column name="saPlmtInhibitInd" type="bool"/>
+<column name="payBasedOnAttendanceInd" type="bool"/>
+<column name="trainingInd" type="bool"/>
+<column name="specialConditionType" type="text"/>
+<column name="provisionMethod" type="text"/>
+<column name="deliveryFrequency" type="text"/>
+<column name="singleOrMultipleClients" type="text"/>
+<column name="reference" type="text"/>
+<column name="nameTextID" type="id"/>
+<column name="descriptionTextID" type="id"/>
+<column name="referenceUpper" type="text"/>
+<column name="deliveryType" type="text"/>
+<column name="availabilityCheckExcludeInd" type="bool"/>
+<column name="referredBy" type="text"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+</table>

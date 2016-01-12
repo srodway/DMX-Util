@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="CONCERNROLECOMMUNICATION" override="true">
+<column name="communicationID" type="id"/>
+<column name="concernRoleID" type="id"/>
+<column name="typeCode" type="text"/>
+<column name="proFormaVersionNo" type="number"/>
+<column name="methodTypeCode" type="text"/>
+<column name="incomingInd" type="bool"/>
+<column name="communicationDate" type="date"/>
+<column name="statusCode" type="text"/>
+<column name="correspondentName" type="text"/>
+<column name="correspondentConcernRoleID" type="id"/>
+<column name="correspondentTypeCode" type="text"/>
+<column name="subjectText" type="text"/>
+<column name="documentLocation" type="text"/>
+<column name="documentRefNumber" type="text"/>
+<column name="fileLocation" type="text"/>
+<column name="fileReferenceNumber" type="text"/>
+<column name="caseID" type="id"/>
+<column name="ticketID" type="id"/>
+<column name="userName" type="text"/>
+<column name="comments" type="text"/>
+<column name="communicationText" type="clob"/>
+<column name="addressID" type="id"/>
+<column name="phoneNumberID" type="id"/>
+<column name="emailAddressID" type="id"/>
+<column name="proFormaID" type="id"/>
+<column name="communicationStatus" type="text"/>
+<column name="proFormaInd" type="bool"/>
+<column name="attachmentInd" type="bool"/>
+<column name="documentTemplateID" type="text"/>
+<column name="communicationFormat" type="text"/>
+<column name="localeIdentifier" type="text"/>
+<column name="versionNo" type="number"/>
+<row>
+<attribute name="communicationID">
+<value>5709438427598946304</value>
+</attribute>
+<attribute name="concernRoleID">
+<value>-775745035814567936</value>
+</attribute>
+<attribute name="typeCode">
+<value>CT1</value>
+</attribute>
+<attribute name="proFormaVersionNo">
+<value>1</value>
+</attribute>
+<attribute name="methodTypeCode">
+<value>CM1</value>
+</attribute>
+<attribute name="incomingInd">
+<value>0</value>
+</attribute>
+<attribute name="communicationDate">
+<value>2015-12-04</value>
+</attribute>
+<attribute name="statusCode">
+<value>RST1</value>
+</attribute>
+<attribute name="correspondentName">
+<value>Stu Really Cares</value>
+</attribute>
+<attribute name="correspondentConcernRoleID">
+<value>-775745035814567936</value>
+</attribute>
+<attribute name="correspondentTypeCode">
+<value>CO2</value>
+</attribute>
+<attribute name="subjectText">
+<value>Provider Enrollment Notification</value>
+</attribute>
+<attribute name="documentLocation">
+<value/>
+</attribute>
+<attribute name="documentRefNumber">
+<value/>
+</attribute>
+<attribute name="fileLocation">
+<value/>
+</attribute>
+<attribute name="fileReferenceNumber">
+<value/>
+</attribute>
+<attribute name="caseID">
+<value/>
+</attribute>
+<attribute name="ticketID">
+<value/>
+</attribute>
+<attribute name="userName">
+<value>cpmmanager</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="communicationText">
+<value/>
+</attribute>
+<attribute name="addressID">
+<value>8466767299464929280</value>
+</attribute>
+<attribute name="phoneNumberID">
+<value/>
+</attribute>
+<attribute name="emailAddressID">
+<value/>
+</attribute>
+<attribute name="proFormaID">
+<value>72</value>
+</attribute>
+<attribute name="communicationStatus">
+<value>CS2</value>
+</attribute>
+<attribute name="proFormaInd">
+<value>1</value>
+</attribute>
+<attribute name="attachmentInd">
+<value>0</value>
+</attribute>
+<attribute name="documentTemplateID">
+<value>PNT3</value>
+</attribute>
+<attribute name="communicationFormat">
+<value>CF3</value>
+</attribute>
+<attribute name="localeIdentifier">
+<value>en</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+</table>

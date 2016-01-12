@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<EvidenceTypeVersion
+  businessEndDate="endDate"
+  businessStartDate="startDate"
+  description="This entity describes the living arrangement of the citizen, e.g. if they are permanently in adult social care."
+  modifiable="true"
+  relatedParticipant="caseParticipantRoleID"
+>
+  <Model>
+    <Attributes>
+      <Attribute>
+        <DataAttribute
+          description="The living arrangement type of the client, e.g. Adult Case Home, Foster Care etc."
+          mandatory="true"
+          name="livingArrangeType"
+          volatile="true"
+        >
+          <DomainType dataType="Codetable">
+            <CodetableOptions codetableName="LivingArrangementType"/>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The status of the living arrangement, e.g. Permanent."
+          mandatory="true"
+          name="livingArrangeStatus"
+          volatile="true"
+        >
+          <DomainType dataType="Codetable">
+            <CodetableOptions codetableName="LivingArrangementStatus"/>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The start date of the living arrangement."
+          mandatory="true"
+          name="startDate"
+        >
+          <DomainType dataType="Date">
+            <DateOptions currentDate="LessThanOrEqualTo"/>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The end date of the living arrangement."
+          name="endDate"
+        >
+          <DomainType dataType="Date"/>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <CommentsAttribute
+          description="Additional comments about the living arrangement."
+          name="comments"
+        />
+      </Attribute>
+      <Attribute>
+        <RelatedCPAttribute
+          cpRoleType="MEM"
+          description="The case participant role identifier of the client."
+          name="caseParticipantRoleID"
+          participantType="Person"
+        />
+      </Attribute>
+    </Attributes>
+    <Relationships/>
+  </Model>
+  <Validations/>
+  <SummaryInformation>
+    <SummaryMapping
+      endDate="endDate"
+      startDate="startDate"
+    >
+      <Summary>
+        <parameter name="livingArrangeType"/>
+        <parameter name="livingArrangeStatus"/>
+        <SummaryResource id="ASCLivingArrangement.SummaryMessage"/>
+      </Summary>
+    </SummaryMapping>
+  </SummaryInformation>
+  <UserInterface
+    createDialogWidth="800"
+    modifyDialogWidth="800"
+  >
+    <OnlineTextCreatePage id="Create.Page.Description"/>
+    <OnlineTextModifyPage id="Modify.Page.Description"/>
+    <OnlineTextViewPage id="View.Page.Description"/>
+    <Cluster>
+      <RelCPCluster
+        fullCreateParticipant="false"
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+        modifyOption="multiple"
+        showParticipantTypeFilter="true"
+        useSingleName="false"
+      >
+        <OnlineText id="Cluster.Participant.Help"/>
+        <StandardField source="caseParticipantRoleID"/>
+        <ClusterName id="Cluster.Participant"/>
+        <RelCpPfx id="Participant.Description"/>
+        <FirstName id="First.Name.Label.ID3"/>
+        <SecondName id="Second.Name.Label.ID3"/>
+      </RelCPCluster>
+    </Cluster>
+    <Cluster>
+      <StandardCluster
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+        labelWidth="40"
+        numberOfColumns="2"
+      >
+        <Title id="Cluster.LivingArrangement.Details"/>
+        <OnlineText id="Cluster.LivingArrangement.Details.Help"/>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="livingArrangeType"
+            useDefault="true"
+          >
+            <Label id="Field.Label.ID1"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="livingArrangeStatus"
+            useDefault="true"
+          >
+            <Label id="Field.Label.ID2"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="startDate"
+            useDefault="true"
+          >
+            <Label id="Field.Label.ID3"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="endDate"
+            useDefault="true"
+          >
+            <Label id="Field.Label.ID4"/>
+          </StandardField>
+        </StandardClusterField>
+      </StandardCluster>
+    </Cluster>
+    <Cluster>
+      <CommentsCluster
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+      >
+        <Title id="Cluster.Comments"/>
+        <OnlineText id="Cluster.Comments.Help"/>
+        <StandardField source="comments"/>
+      </CommentsCluster>
+    </Cluster>
+  </UserInterface>
+</EvidenceTypeVersion>

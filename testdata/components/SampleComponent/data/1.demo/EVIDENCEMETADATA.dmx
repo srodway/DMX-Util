@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="EVIDENCEMETADATA" override="true">
+<column name="evidenceMetadataID" type="id"/>
+<column name="evidenceType" type="text"/>
+<column name="effectiveFrom" type="date"/>
+<column name="viewPageName" type="text"/>
+<column name="modifyPageName" type="text"/>
+<column name="viewSnapshotPageName" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="participantDataInd" type="bool"/>
+<column name="PrtcpDataAppliesToAllInd" type="bool"/>
+<column name="createPageName" type="text"/>
+<column name="workspacePageName" type="text"/>
+<column name="businessObjectPageName" type="text"/>
+<column name="historyRecordPageName" type="text"/>
+<column name="localizedDescriptionID" type="id"/>
+<column name="busObjVerificationsPageName" type="text"/>
+<column name="busObjIssuesPageName" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="SERVICESUPPLIERLINK">
+  <column name="serviceSupplierLinkID" type="id" />
+  <column name="serviceID" type="id" />
+  <column name="supplierConcernRoleID" type="id" />
+  <column name="startDate" type="date" />
+  <column name="endDate" type="date" />
+  <column name="statusCode" type="text" />
+  <column name="comments" type="text" />
+  <column name="nextPaymentDate" type="date" />
+  <column name="paymentFrequency" type="text" />
+  <column name="methodOfPmtCode" type="text" />
+  <column name="currencyType" type="text" />
+  <column name="versionNo" type="number" />
+  <column name="lastWritten" type="timestamp" />
+  <row>
+    <attribute name="serviceSupplierLinkID">
+      <value>2901</value>
+    </attribute>
+    <attribute name="serviceID">
+      <value>3002</value>
+    </attribute>
+    <attribute name="supplierConcernRoleID">
+      <value>113</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="nextPaymentDate">
+      <value />
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value />
+    </attribute>
+    <attribute name="methodOfPmtCode">
+      <value />
+    </attribute>
+    <attribute name="currencyType">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2006-01-01-00.00.00</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="serviceSupplierLinkID">
+      <value>2902</value>
+    </attribute>
+    <attribute name="serviceID">
+      <value>3004</value>
+    </attribute>
+    <attribute name="supplierConcernRoleID">
+      <value>114</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="nextPaymentDate">
+      <value />
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value />
+    </attribute>
+    <attribute name="methodOfPmtCode">
+      <value />
+    </attribute>
+    <attribute name="currencyType">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2006-01-01-00.00.00</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="serviceSupplierLinkID">
+      <value>2903</value>
+    </attribute>
+    <attribute name="serviceID">
+      <value>3003</value>
+    </attribute>
+    <attribute name="supplierConcernRoleID">
+      <value>115</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="nextPaymentDate">
+      <value />
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value />
+    </attribute>
+    <attribute name="methodOfPmtCode">
+      <value />
+    </attribute>
+    <attribute name="currencyType">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2006-01-01-00.00.00</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="serviceSupplierLinkID">
+      <value>2904</value>
+    </attribute>
+    <attribute name="serviceID">
+      <value>3001</value>
+    </attribute>
+    <attribute name="supplierConcernRoleID">
+      <value>116</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="nextPaymentDate">
+      <value />
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value />
+    </attribute>
+    <attribute name="methodOfPmtCode">
+      <value />
+    </attribute>
+    <attribute name="currencyType">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2006-01-01-00.00.00</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="serviceSupplierLinkID">
+      <value>2905</value>
+    </attribute>
+    <attribute name="serviceID">
+      <value>3001</value>
+    </attribute>
+    <attribute name="supplierConcernRoleID">
+      <value>117</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="nextPaymentDate">
+      <value />
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value />
+    </attribute>
+    <attribute name="methodOfPmtCode">
+      <value />
+    </attribute>
+    <attribute name="currencyType">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2006-01-01-00.00.00</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="serviceSupplierLinkID">
+      <value>2906</value>
+    </attribute>
+    <attribute name="serviceID">
+      <value>3001</value>
+    </attribute>
+    <attribute name="supplierConcernRoleID">
+      <value>118</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="nextPaymentDate">
+      <value />
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value />
+    </attribute>
+    <attribute name="methodOfPmtCode">
+      <value />
+    </attribute>
+    <attribute name="currencyType">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2006-01-01-00.00.00</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="serviceSupplierLinkID">
+      <value>2907</value>
+    </attribute>
+    <attribute name="serviceID">
+      <value>3001</value>
+    </attribute>
+    <attribute name="supplierConcernRoleID">
+      <value>119</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="nextPaymentDate">
+      <value />
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value />
+    </attribute>
+    <attribute name="methodOfPmtCode">
+      <value />
+    </attribute>
+    <attribute name="currencyType">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2006-01-01-00.00.00</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="serviceSupplierLinkID">
+      <value>2908</value>
+    </attribute>
+    <attribute name="serviceID">
+      <value>3005</value>
+    </attribute>
+    <attribute name="supplierConcernRoleID">
+      <value>120</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="nextPaymentDate">
+      <value />
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value />
+    </attribute>
+    <attribute name="methodOfPmtCode">
+      <value />
+    </attribute>
+    <attribute name="currencyType">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2006-01-01-00.00.00</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="serviceSupplierLinkID">
+      <value>2909</value>
+    </attribute>
+    <attribute name="serviceID">
+      <value>3002</value>
+    </attribute>
+    <attribute name="supplierConcernRoleID">
+      <value>121</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="nextPaymentDate">
+      <value />
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value />
+    </attribute>
+    <attribute name="methodOfPmtCode">
+      <value />
+    </attribute>
+    <attribute name="currencyType">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2006-01-01-00.00.00</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="serviceSupplierLinkID">
+      <value>2910</value>
+    </attribute>
+    <attribute name="serviceID">
+      <value>3001</value>
+    </attribute>
+    <attribute name="supplierConcernRoleID">
+      <value>135</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="nextPaymentDate">
+      <value />
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value />
+    </attribute>
+    <attribute name="methodOfPmtCode">
+      <value />
+    </attribute>
+    <attribute name="currencyType">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2006-01-01-00.00.00</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="serviceSupplierLinkID">
+      <value>2911</value>
+    </attribute>
+    <attribute name="serviceID">
+      <value>3006</value>
+    </attribute>
+    <attribute name="supplierConcernRoleID">
+      <value>138</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="nextPaymentDate">
+      <value />
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value />
+    </attribute>
+    <attribute name="methodOfPmtCode">
+      <value />
+    </attribute>
+    <attribute name="currencyType">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2006-01-01-00.00.00</value>
+    </attribute>
+  </row>
+</table>
+

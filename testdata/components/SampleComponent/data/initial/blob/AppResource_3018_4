@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  PID 5725-H26
+  
+  Copyright IBM Corporation 2014. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><sc:section-shortcut-panel xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-shortcut-panel" id="ASCEWAPPWorkspaceSectionShortcuts" title="ASCEWAPPWorkspaceSectionShortcuts.title">
+ <sc:nodes>
+                  
+    <sc:node id="Searches" title="Searches.Title" type="group">
+         <sc:node id="PersonSearch" page-id="Person_search1" title="PersonSearch.Title" type="leaf">
+         </sc:node>
+         <sc:node id="EmployerSearch" page-id="Employer_search1" title="EmployerSearch.Title" type="leaf">
+         </sc:node>
+         <sc:node id="AllParticipantSearch" page-id="Participant_search" title="AllParticipantSearch.Title" type="leaf">
+         </sc:node>
+         <sc:node id="sep4" type="separator"/>
+         <sc:node id="Case" page-id="Case_search1" title="Cases.Title" type="leaf">
+         </sc:node>
+         <sc:node id="Appeal" page-id="Appeal_search" title="Appeal.Title" type="leaf">
+         </sc:node>
+         <sc:node id="sep5" type="separator"/>
+         <sc:node id="EducationalInstituteSearch" page-id="EducationalInstitute_search1" title="EducationInstituteSearch.Title" type="leaf">
+         </sc:node>
+         <sc:node id="ExternalPartySearch" page-id="ExternalParty_search1" title="ExternalPartySearch.Title" type="leaf">
+         </sc:node>
+         <sc:node id="ExternalPartyOfficeSearch" page-id="ExternalPartyOffice_search1" title="ExternalPartyOfficeSearch.Title" type="leaf">
+         </sc:node>
+         <sc:node id="InformationProviderSearch" page-id="InformationProvider_search1" title="InformationProviderSearch.Title" type="leaf">
+         </sc:node>
+         <sc:node id="UtilitySearch" page-id="Utility_search1" title="UtilitySearch.Title" type="leaf">
+         </sc:node>       
+    </sc:node> 
+
+    <sc:node id="ParticipantRegistration" title="ParticipantRegistration.Title" type="group">
+         
+         <sc:node id="PersonRegistration" open-as="modal" page-id="RegisterPerson_resolveStartWizard" title="PersonRegistration.Title" type="leaf">
+         </sc:node>
+         <sc:node id="ProspectPersonRegistration" open-as="modal" page-id="AddProspectPerson_resolveStartWizard" title="ProspectPersonRegistration.Title" type="leaf">
+         </sc:node>
+         <sc:node id="sep6" type="separator"/>    
+         <sc:node id="EmployerRegistration" open-as="modal" page-id="RegisterEmployer_resolveStartWizard" title="EmployerRegistration.Title" type="leaf">
+         </sc:node>
+         <sc:node id="ProspectEmployerRegistration" open-as="modal" page-id="AddProspectEmployer_resolveStartWizard" title="ProspectEmployerRegistration.Title" type="leaf">
+         </sc:node>
+         <sc:node id="sep7" type="separator"/>       
+         <sc:node id="EducationInstituteRegistration" open-as="modal" page-id="RegisterEducationalInstitute_resolveStartWizard" title="EducationInstituteRegistration.Title" type="leaf">
+         </sc:node>
+         <sc:node id="ExternalPartyRegistration" open-as="modal" page-id="RegisterExternalParty_resolveStartWizard" title="ExternalPartyRegistration.Title" type="leaf">
+         </sc:node>
+         <sc:node id="InformationProviderRegistration" open-as="modal" page-id="RegisterInformationProvider_resolveStartWizard" title="InformationProviderRegistration.Title" type="leaf">
+         </sc:node>
+         <sc:node id="UtilityRegistration" open-as="modal" page-id="RegisterUtility_resolveStartWizard" title="UtilityRegistration.Title" type="leaf">
+         </sc:node>
+     </sc:node> 
+
+
+  
+    <sc:node id="Cases" title="Case.Title" type="group">
+      <sc:node id="NewCaseQuery" open-as="modal" page-id="Case_createQuery" title="NewCaseQuery.Title" type="leaf">
+      </sc:node>        
+      <sc:node id="RegisterPersonCreateCase" open-as="modal" page-id="Case_resolveRegisterPersonAndCreateCase" title="RegisterPersonCreateCase.Title" type="leaf"> 
+      </sc:node>
+      <sc:node id="AddProspectCreateCase" open-as="modal" page-id="Case_resolveRegisterProspectPersonAndCreateCase" title="AddProspectCreateCase.Title" type="leaf">
+      </sc:node>
+                                       
+      <sc:node id="sep2" type="separator"/>
+      <sc:node id="MyCaseQueries" page-id="Case_queryList1" title="MyCaseQueries.Title" type="leaf">
+      </sc:node>
+      <sc:node id="MyItemsOfInterest" page-id="Organization_listUserBookmark" title="MyItemsOfInterest.Title" type="leaf">
+      </sc:node> 
+      <sc:node id="sep3" type="separator"/>       
+      <sc:node id="MyCases" page-id="Organization_userCases" title="MyCases.Title" type="leaf">
+       </sc:node> 
+      <sc:node id="MyRecentlyApprovedCase" page-id="Organization_listRecentApprovedCaseForUser1" title="MyRecentlyApproved.Title" type="leaf">
+      </sc:node>
+      <sc:node id="MyRecentlyAssignedCase" page-id="Organization_listRecentAssignedCaseForUser1" title="MyRecentlyAssigned.Title" type="leaf">
+      </sc:node>
+      <sc:node id="MyRecentlyViewedCase" page-id="Organization_listRecentViewedCaseForUser" title="MyRecentlyViewed.Title" type="leaf">
+      </sc:node>
+    </sc:node>     
+
+  </sc:nodes>
+
+</sc:section-shortcut-panel>

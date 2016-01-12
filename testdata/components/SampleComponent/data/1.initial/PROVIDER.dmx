@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="PROVIDER">
+  <column name="providerConcernRoleID" type="id" />
+  <column name="providerEnquiryID" type="id" />
+  <column name="physicalCapacity" type="number" />
+  <column name="paymentFrequency" type="text" />
+  <column name="methodOfPayment" type="id" />
+  <column name="currencyType" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="reservationGracePeriod" type="number" />
+  <column name="overrideMDRInd" type="bool" />
+  <column name="preferredSEMethod" type="text" />
+  <column name="areasSvdInfoTxtID" type="id" />
+  <column name="clientInfoTextID" type="id" />
+  <column name="name" type="text" />
+  <column name="nameUpper" type="text" />
+  <column name="enrollmentDateTime" type="timestamp" />
+  <column name="endDateTime" type="timestamp" />
+  <column name="acceptCWReferral" type="bool" />
+  <column name="versionNo" type="number" />
+  <column name="lastWritten" type="timestamp" />
+  <row>
+    <attribute name="providerConcernRoleID">
+      <value>750</value>
+    </attribute>
+    <attribute name="providerEnquiryID">
+      <value />
+    </attribute>
+    <attribute name="physicalCapacity">
+      <value>20</value>
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value>200100001</value>
+    </attribute>
+    <attribute name="methodOfPayment">
+      <value>3</value>
+    </attribute>
+    <attribute name="currencyType">
+      <value>EUR</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>PS3</value>
+    </attribute>
+    <attribute name="reservationGracePeriod">
+      <value>0</value>
+    </attribute>
+    <attribute name="overrideMDRInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="preferredSEMethod">
+      <value />
+    </attribute>
+    <attribute name="areasSvdInfoTxtID">
+      <value />
+    </attribute>
+    <attribute name="clientInfoTextID">
+      <value />
+    </attribute>
+    <attribute name="name">
+      <value>Test Provider 1</value>
+    </attribute>
+    <attribute name="nameUpper">
+      <value>TEST PROVIDER 1</value>
+    </attribute>
+    <attribute name="enrollmentDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="acceptCWReferral">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="providerConcernRoleID">
+      <value>752</value>
+    </attribute>
+    <attribute name="providerEnquiryID">
+      <value />
+    </attribute>
+    <attribute name="physicalCapacity">
+      <value>30</value>
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value>100100100</value>
+    </attribute>
+    <attribute name="methodOfPayment">
+      <value>3</value>
+    </attribute>
+    <attribute name="currencyType">
+      <value>EUR</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>PS3</value>
+    </attribute>
+    <attribute name="reservationGracePeriod">
+      <value>0</value>
+    </attribute>
+    <attribute name="overrideMDRInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="preferredSEMethod">
+      <value />
+    </attribute>
+    <attribute name="areasSvdInfoTxtID">
+      <value />
+    </attribute>
+    <attribute name="clientInfoTextID">
+      <value />
+    </attribute>
+    <attribute name="name">
+      <value>Test Provider 2</value>
+    </attribute>
+    <attribute name="nameUpper">
+      <value>TEST PROVIDER 2</value>
+    </attribute>
+    <attribute name="enrollmentDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="acceptCWReferral">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="providerConcernRoleID">
+      <value>753</value>
+    </attribute>
+    <attribute name="providerEnquiryID">
+      <value />
+    </attribute>
+    <attribute name="physicalCapacity">
+      <value>30</value>
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value>100100100</value>
+    </attribute>
+    <attribute name="methodOfPayment">
+      <value>3</value>
+    </attribute>
+    <attribute name="currencyType">
+      <value>EUR</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>PS3</value>
+    </attribute>
+    <attribute name="reservationGracePeriod">
+      <value>0</value>
+    </attribute>
+    <attribute name="overrideMDRInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="preferredSEMethod">
+      <value />
+    </attribute>
+    <attribute name="areasSvdInfoTxtID">
+      <value />
+    </attribute>
+    <attribute name="clientInfoTextID">
+      <value />
+    </attribute>
+    <attribute name="name">
+      <value>Test Provider 3</value>
+    </attribute>
+    <attribute name="nameUpper">
+      <value>TEST PROVIDER 3</value>
+    </attribute>
+    <attribute name="enrollmentDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="acceptCWReferral">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+</table>
+

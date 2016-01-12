@@ -1,0 +1,1614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="PLACE">
+  <column name="placeID" type="id" />
+  <column name="compartmentID" type="id" />
+  <column name="name" type="text" />
+  <column name="type" type="text" />
+  <column name="startDate" type="date" />
+  <column name="endDate" type="date" />
+  <column name="recordStatus" type="text" />
+  <column name="startDateTime" type="timestamp" />
+  <column name="endDateTime" type="timestamp" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="placeID">
+      <value>501</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place1</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>502</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place2</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>503</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place3</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>504</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place4</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>505</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place5</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>506</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place6</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>507</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place7</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>508</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place8</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>509</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place9</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>510</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place10</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>511</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place11</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>512</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place12</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>513</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place13</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>514</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place14</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>515</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place15</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>516</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place16</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>517</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place17</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>518</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place18</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>519</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place19</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>520</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place20</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>601</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place1</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>602</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place2</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>603</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place3</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>604</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place4</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>605</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place5</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>606</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place6</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>607</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place7</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>608</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place8</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>609</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place9</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>610</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place10</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>611</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place11</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>612</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place12</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>613</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place13</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>614</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place14</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>615</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place15</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>616</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place16</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>617</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place17</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>618</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place18</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>619</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place19</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>620</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place20</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>621</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place21</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>622</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place22</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>623</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place23</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>624</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place24</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>625</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place25</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>626</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place26</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>627</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place27</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>628</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place28</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>629</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place29</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="placeID">
+      <value>630</value>
+    </attribute>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="name">
+      <value>Place30</value>
+    </attribute>
+    <attribute name="type">
+      <value>PLT1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-09-26</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="startDateTime">
+      <value />
+    </attribute>
+    <attribute name="endDateTime">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

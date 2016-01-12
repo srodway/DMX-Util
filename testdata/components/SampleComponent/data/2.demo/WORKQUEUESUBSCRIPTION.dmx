@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="WORKQUEUESUBSCRIPTION" override="true">
+<column name="workQueueSubscriptionID" type="id"/>
+<column name="userName" type="text"/>
+<column name="workQueueID" type="id"/>
+<column name="subscriptionDateTime" type="timestamp"/>
+<column name="subscriberID" type="id"/>
+<column name="subscriberType" type="text"/>
+</table>

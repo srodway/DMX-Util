@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PROVIDERGROUPASSOCIATE" override="true">
+<column name="providerGroupAssociateID" type="id"/>
+<column name="providerConcernRoleID" type="id"/>
+<column name="providerGroupConcernRoleID" type="id"/>
+<column name="contractedAssociateInd" type="bool"/>
+<column name="groupToReceivePayments" type="bool"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="comments" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

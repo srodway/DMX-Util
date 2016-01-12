@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="ADMINLEGALACTION" override="true">
+<column name="legalActionID" type="id"/>
+<column name="legalActionNameCode" type="text"/>
+<column name="creationDate" type="date"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="multipleParticipantsInd" type="bool"/>
+<column name="startedEvent" type="text"/>
+<column name="completedEvent" type="text"/>
+<column name="comments" type="clob"/>
+<column name="homePage" type="text"/>
+<column name="createPage" type="text"/>
+<column name="modifyPage" type="text"/>
+<column name="recordStatusCode" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

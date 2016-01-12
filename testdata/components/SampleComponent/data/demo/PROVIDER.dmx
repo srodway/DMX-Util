@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PROVIDER" override="true">
+<column name="providerConcernRoleID" type="id"/>
+<column name="providerEnquiryID" type="id"/>
+<column name="physicalCapacity" type="number"/>
+<column name="paymentFrequency" type="text"/>
+<column name="methodOfPayment" type="id"/>
+<column name="currencyType" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="reservationGracePeriod" type="number"/>
+<column name="overrideMDRInd" type="bool"/>
+<column name="preferredSEMethod" type="text"/>
+<column name="areasSvdInfoTxtID" type="id"/>
+<column name="clientInfoTextID" type="id"/>
+<column name="name" type="text"/>
+<column name="nameUpper" type="text"/>
+<column name="enrollmentDateTime" type="timestamp"/>
+<column name="endDateTime" type="timestamp"/>
+<column name="acceptCWReferral" type="bool"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+<row>
+<attribute name="providerConcernRoleID">
+<value>-343399471587000320</value>
+</attribute>
+<attribute name="providerEnquiryID">
+<value/>
+</attribute>
+<attribute name="physicalCapacity">
+<value>0</value>
+</attribute>
+<attribute name="paymentFrequency">
+<value>200100000</value>
+</attribute>
+<attribute name="methodOfPayment">
+<value>1</value>
+</attribute>
+<attribute name="currencyType">
+<value>USD</value>
+</attribute>
+<attribute name="recordStatus">
+<value>PS2</value>
+</attribute>
+<attribute name="reservationGracePeriod">
+<value>0</value>
+</attribute>
+<attribute name="overrideMDRInd">
+<value>0</value>
+</attribute>
+<attribute name="preferredSEMethod">
+<value/>
+</attribute>
+<attribute name="areasSvdInfoTxtID">
+<value>7241788200820154368</value>
+</attribute>
+<attribute name="clientInfoTextID">
+<value>-7385903388879216640</value>
+</attribute>
+<attribute name="name">
+<value>4ThoseThatCare</value>
+</attribute>
+<attribute name="nameUpper">
+<value>4THOSETHATCARE</value>
+</attribute>
+<attribute name="enrollmentDateTime">
+<value>2015-12-04-00.00.00</value>
+</attribute>
+<attribute name="endDateTime">
+<value/>
+</attribute>
+<attribute name="acceptCWReferral">
+<value>0</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value>2015-12-04-11.06.24</value>
+</attribute>
+</row>
+<row>
+<attribute name="providerConcernRoleID">
+<value>-775745035814567936</value>
+</attribute>
+<attribute name="providerEnquiryID">
+<value/>
+</attribute>
+<attribute name="physicalCapacity">
+<value>0</value>
+</attribute>
+<attribute name="paymentFrequency">
+<value>000100000</value>
+</attribute>
+<attribute name="methodOfPayment">
+<value>1</value>
+</attribute>
+<attribute name="currencyType">
+<value>ZWD</value>
+</attribute>
+<attribute name="recordStatus">
+<value>PS2</value>
+</attribute>
+<attribute name="reservationGracePeriod">
+<value>0</value>
+</attribute>
+<attribute name="overrideMDRInd">
+<value>0</value>
+</attribute>
+<attribute name="preferredSEMethod">
+<value/>
+</attribute>
+<attribute name="areasSvdInfoTxtID">
+<value>5728578726023667712</value>
+</attribute>
+<attribute name="clientInfoTextID">
+<value>-6449154666386153472</value>
+</attribute>
+<attribute name="name">
+<value>Stu Really Cares</value>
+</attribute>
+<attribute name="nameUpper">
+<value>STU REALLY CARES</value>
+</attribute>
+<attribute name="enrollmentDateTime">
+<value>2015-12-04-00.00.00</value>
+</attribute>
+<attribute name="endDateTime">
+<value/>
+</attribute>
+<attribute name="acceptCWReferral">
+<value>0</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value>2015-12-04-11.50.07</value>
+</attribute>
+</row>
+</table>

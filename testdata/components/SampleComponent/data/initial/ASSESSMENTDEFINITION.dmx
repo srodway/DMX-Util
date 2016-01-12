@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="ASSESSMENTDEFINITION">
+  <column name="assessmentDefinitionID" type="id" />
+  <column name="assessmentType" type="text" />
+  <column name="nameTextID" type="id" />
+  <column name="descriptionTextID" type="id" />
+  <column name="groupNameID" type="id" />
+  <column name="startDate" type="date" />
+  <column name="endDate" type="date" />
+  <column name="assessmentInterval" type="number" />
+  <column name="reassessmentWarningDays" type="number" />
+  <column name="creationDate" type="date" />
+  <column name="createdBy" type="text" />
+  <column name="assessmentRolesUpdateInd" type="bool" />
+  <column name="reference" type="text" />
+  <column name="reassessmentAllowedInd" type="bool" />
+  <column name="prioritiesApplicableInd" type="bool" />
+  <column name="recordStatus" type="text" />
+  <column name="summaryScriptID" type="text" />
+  <column name="summaryScriptType" type="text" />
+  <column name="summaryScriptVersion" type="text" />
+  <column name="displayGraphs" type="bool" />
+  <column name="graphBy" type="text" />
+  <column name="displayResultsByCategoryInd" type="bool" />
+  <column name="assessmentID" type="id" />
+  <column name="assessmentCategoryType" type="text" />
+  <column name="displayScore" type="bool" />
+  <column name="displayGuidance" type="bool" />
+  <column name="guidanceResultCluster" type="text" />
+  <column name="factorDisplayTextID" type="id" />
+  <column name="classificationDisplayTextID" type="id" />
+  <column name="graphType" type="text" />
+  <column name="countSameScoreAsOnePriorityInd" type="bool" />
+  <column name="createRights" type="text" />
+  <column name="closeRights" type="text" />
+  <column name="viewAnswerRights" type="text" />
+  <column name="approveAndRejectRights" type="text" />
+  <column name="assessmentResultsPage" type="text" />
+  <column name="assessmentGrouping" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="assessmentDefinitionID">
+      <value>-3566850904869036032</value>
+    </attribute>
+    <attribute name="assessmentType">
+      <value>ADT10001</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value>-3566850904869036032</value>
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value>3638908498923757568</value>
+    </attribute>
+    <attribute name="groupNameID">
+      <value>-6593269854462009344</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2015-08-12</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="assessmentInterval">
+      <value>0</value>
+    </attribute>
+    <attribute name="reassessmentWarningDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="creationDate">
+      <value>2015-08-12</value>
+    </attribute>
+    <attribute name="createdBy">
+      <value>admin</value>
+    </attribute>
+    <attribute name="assessmentRolesUpdateInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="reassessmentAllowedInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="prioritiesApplicableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="summaryScriptID">
+      <value />
+    </attribute>
+    <attribute name="summaryScriptType">
+      <value />
+    </attribute>
+    <attribute name="summaryScriptVersion">
+      <value />
+    </attribute>
+    <attribute name="displayGraphs">
+      <value>1</value>
+    </attribute>
+    <attribute name="graphBy">
+      <value>ADGB10001</value>
+    </attribute>
+    <attribute name="displayResultsByCategoryInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="assessmentID">
+      <value>-4215369251210387456</value>
+    </attribute>
+    <attribute name="assessmentCategoryType">
+      <value>ACT10002</value>
+    </attribute>
+    <attribute name="displayScore">
+      <value>1</value>
+    </attribute>
+    <attribute name="displayGuidance">
+      <value>0</value>
+    </attribute>
+    <attribute name="guidanceResultCluster">
+      <value>GRC1</value>
+    </attribute>
+    <attribute name="factorDisplayTextID">
+      <value>9187343239844208640</value>
+    </attribute>
+    <attribute name="classificationDisplayTextID">
+      <value>-1477180677769125888</value>
+    </attribute>
+    <attribute name="graphType">
+      <value>ADGT10001</value>
+    </attribute>
+    <attribute name="countSameScoreAsOnePriorityInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="createRights">
+      <value />
+    </attribute>
+    <attribute name="closeRights">
+      <value />
+    </attribute>
+    <attribute name="viewAnswerRights">
+      <value />
+    </attribute>
+    <attribute name="approveAndRejectRights">
+      <value />
+    </attribute>
+    <attribute name="assessmentResultsPage">
+      <value>AssessmentDelivery_viewResultsForInstance</value>
+    </attribute>
+    <attribute name="assessmentGrouping">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="assessmentDefinitionID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="assessmentType">
+      <value>ADT10001</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value>24100</value>
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value>24101</value>
+    </attribute>
+    <attribute name="groupNameID">
+      <value>24102</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2011-03-03</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="assessmentInterval">
+      <value>90</value>
+    </attribute>
+    <attribute name="reassessmentWarningDays">
+      <value>5</value>
+    </attribute>
+    <attribute name="creationDate">
+      <value>2011-03-03</value>
+    </attribute>
+    <attribute name="createdBy">
+      <value>admin</value>
+    </attribute>
+    <attribute name="assessmentRolesUpdateInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="reference">
+      <value>NeedsAssessment</value>
+    </attribute>
+    <attribute name="reassessmentAllowedInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="prioritiesApplicableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="summaryScriptID">
+      <value />
+    </attribute>
+    <attribute name="summaryScriptType">
+      <value />
+    </attribute>
+    <attribute name="summaryScriptVersion">
+      <value />
+    </attribute>
+    <attribute name="displayGraphs">
+      <value>1</value>
+    </attribute>
+    <attribute name="graphBy">
+      <value>ADGB10002</value>
+    </attribute>
+    <attribute name="displayResultsByCategoryInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="assessmentID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="assessmentCategoryType">
+      <value>ACT10002</value>
+    </attribute>
+    <attribute name="displayScore">
+      <value>1</value>
+    </attribute>
+    <attribute name="displayGuidance">
+      <value>1</value>
+    </attribute>
+    <attribute name="guidanceResultCluster">
+      <value>GRC2</value>
+    </attribute>
+    <attribute name="factorDisplayTextID">
+      <value>24104</value>
+    </attribute>
+    <attribute name="classificationDisplayTextID">
+      <value>12103</value>
+    </attribute>
+    <attribute name="graphType">
+      <value>ADGT10001</value>
+    </attribute>
+    <attribute name="countSameScoreAsOnePriorityInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="createRights">
+      <value />
+    </attribute>
+    <attribute name="closeRights">
+      <value />
+    </attribute>
+    <attribute name="viewAnswerRights">
+      <value />
+    </attribute>
+    <attribute name="approveAndRejectRights">
+      <value />
+    </attribute>
+    <attribute name="assessmentResultsPage">
+      <value>AssessmentDelivery_viewResultsForInstance</value>
+    </attribute>
+    <attribute name="assessmentGrouping">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="assessmentDefinitionID">
+      <value>34402</value>
+    </attribute>
+    <attribute name="assessmentType">
+      <value>ADT10001</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value>34442</value>
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value>34435</value>
+    </attribute>
+    <attribute name="groupNameID">
+      <value>34446</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2013-03-20</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="assessmentInterval">
+      <value>0</value>
+    </attribute>
+    <attribute name="reassessmentWarningDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="creationDate">
+      <value>2013-03-20</value>
+    </attribute>
+    <attribute name="createdBy">
+      <value>admin</value>
+    </attribute>
+    <attribute name="assessmentRolesUpdateInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="reassessmentAllowedInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="prioritiesApplicableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="summaryScriptID">
+      <value />
+    </attribute>
+    <attribute name="summaryScriptType">
+      <value />
+    </attribute>
+    <attribute name="summaryScriptVersion">
+      <value />
+    </attribute>
+    <attribute name="displayGraphs">
+      <value>0</value>
+    </attribute>
+    <attribute name="graphBy">
+      <value>ADGB10001</value>
+    </attribute>
+    <attribute name="displayResultsByCategoryInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="assessmentID">
+      <value>34412</value>
+    </attribute>
+    <attribute name="assessmentCategoryType">
+      <value>ACT10002</value>
+    </attribute>
+    <attribute name="displayScore">
+      <value>1</value>
+    </attribute>
+    <attribute name="displayGuidance">
+      <value>0</value>
+    </attribute>
+    <attribute name="guidanceResultCluster">
+      <value>GRC2</value>
+    </attribute>
+    <attribute name="factorDisplayTextID">
+      <value>34440</value>
+    </attribute>
+    <attribute name="classificationDisplayTextID">
+      <value>34444</value>
+    </attribute>
+    <attribute name="graphType">
+      <value />
+    </attribute>
+    <attribute name="countSameScoreAsOnePriorityInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="createRights">
+      <value />
+    </attribute>
+    <attribute name="closeRights">
+      <value />
+    </attribute>
+    <attribute name="viewAnswerRights">
+      <value />
+    </attribute>
+    <attribute name="approveAndRejectRights">
+      <value />
+    </attribute>
+    <attribute name="assessmentResultsPage">
+      <value>AssessmentDelivery_viewResultsForInstance</value>
+    </attribute>
+    <attribute name="assessmentGrouping">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

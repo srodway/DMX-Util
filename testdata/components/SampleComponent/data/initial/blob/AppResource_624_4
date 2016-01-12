@@ -1,0 +1,19 @@
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Number.Wizard.Pages=2
+
+Wizard.PageID.1=ActivityConditionsWizard_selectService
+ActivityConditionsWizard_selectService.Wizard.Item.Text=Select Service
+ActivityConditionsWizard_selectService.Wizard.Page.Title=Step 1:
+ActivityConditionsWizard_selectService.Wizard.Page.Desc=Search and select a Service
+
+Wizard.PageID.2=ActivityConditionsWizard_selectServiceConditions
+ActivityConditionsWizard_selectServiceConditions.Wizard.Item.Text=Select Conditions
+ActivityConditionsWizard_selectServiceConditions.Wizard.Page.Title=Step 2:
+ActivityConditionsWizard_selectServiceConditions.Wizard.Page.Desc=Check all conditions that apply

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012,2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="CommonIntakeApplicationCaseMenu">
+    
+      <mc:loader-registry>
+        <mc:loader class="curam.commonintake.tab.impl.ApplicationCaseMenuLoader"/>
+  </mc:loader-registry>
+    
+ 
+    <mc:menu-item dynamic="true" id="Edit" open-as="modal" page-id="CommonIntake_editApplicationCase" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit" visible="true"/>
+   
+   <mc:menu-separator id="ApplicationCaseMenuLoader1"/>
+     <mc:menu-item dynamic="true" id="Authorise" open-as="modal" page-id="ApplicationAuthorisation_resolveStart" title="MenuItem.Title.Authorise" tooltip="MenuItem.Tooltip.Authorise" visible="true"/>
+	  <mc:menu-item dynamic="true" id="Resubmit" open-as="modal" page-id="CommonIntake_resolveResubmitApplication" title="MenuItem.Title.Resubmit" tooltip="MenuItem.Tooltip.Resubmit" visible="true"/>	
+        
+   <mc:menu-separator id="ApplicationCaseMenuLoader2"/>
+     <mc:menu-item dynamic="true" id="CheckEligibility" open-as="modal" page-id="CommonIntake_resolveCheckEligibility" title="MenuItem.Title.CheckEligibility" tooltip="MenuItem.Tooltip.CheckEligibility" visible="true"/>
+      
+        
+  <mc:menu-separator id="ApplicationCaseMenuLoader3"/>
+  <mc:menu-item dynamic="true" id="ReadyForDetermination" open-as="modal" page-id="CommonIntake_readyForDetermination" title="MenuItem.Title.ReadyForDetermination" tooltip="MenuItem.Tooltip.ReadyForDetermination" visible="true"/>
+        
+  <mc:menu-separator id="ApplicationCaseMenuLoader4"/>
+  <mc:menu-item dynamic="true" id="AddClient" open-as="modal" page-id="CommonIntake_addClient" title="MenuItem.Title.AddClient" tooltip="MenuItem.Tooltip.AddClient" visible="true"/>
+  <mc:menu-item dynamic="true" id="FindClient" open-as="modal" page-id="CommonIntake_findClient" title="MenuItem.Title.FindClient" tooltip="MenuItem.Tooltip.FindClient" visible="true"/> 
+  
+  <mc:menu-separator id="ApplicationCaseMenuLoader5"/>
+  
+  <mc:menu-item dynamic="true" id="AddProgram" open-as="modal" page-id="CommonIntake_addProgram" title="MenuItem.Title.AddProgram" tooltip="MenuItem.Tooltip.AddProgram" visible="true"/>
+
+  <!-- BEGIN, CR00355630, DG-->
+  <mc:menu-item dynamic="true" id="CaseAppeal" open-as="modal" page-id="CommonIntake_createAppealForProgram" title="MenuItem.Title.CaseAppeal" tooltip="MenuItem.Tooltip.CaseAppeal"/>
+  <!-- END, CR00355630 -->
+
+        
+</mc:menu-bar>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="POSITIONHOLDERLINK" override="true">
+<column name="fromDate" type="date"/>
+<column name="organisationStructureID" type="id"/>
+<column name="positionHolderLinkID" type="id"/>
+<column name="positionID" type="id"/>
+<column name="recordStatus" type="text"/>
+<column name="toDate" type="date"/>
+<column name="userName" type="text"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+<row>
+<attribute name="fromDate">
+<value>2015-12-04</value>
+</attribute>
+<attribute name="organisationStructureID">
+<value>1</value>
+</attribute>
+<attribute name="positionHolderLinkID">
+<value>10000</value>
+</attribute>
+<attribute name="positionID">
+<value>10000</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="toDate">
+<value>2015-12-31</value>
+</attribute>
+<attribute name="userName">
+<value>planner</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value>2015-12-04-10.31.13</value>
+</attribute>
+</row>
+<row>
+<attribute name="fromDate">
+<value>2003-01-01</value>
+</attribute>
+<attribute name="organisationStructureID">
+<value>1</value>
+</attribute>
+<attribute name="positionHolderLinkID">
+<value>20</value>
+</attribute>
+<attribute name="positionID">
+<value>20</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="toDate">
+<value>2015-12-31</value>
+</attribute>
+<attribute name="userName">
+<value>official1</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="fromDate">
+<value>2003-01-01</value>
+</attribute>
+<attribute name="organisationStructureID">
+<value>1</value>
+</attribute>
+<attribute name="positionHolderLinkID">
+<value>3022</value>
+</attribute>
+<attribute name="positionID">
+<value>21</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="toDate">
+<value>2015-12-31</value>
+</attribute>
+<attribute name="userName">
+<value>reviewer1</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="fromDate">
+<value>2003-01-01</value>
+</attribute>
+<attribute name="organisationStructureID">
+<value>1</value>
+</attribute>
+<attribute name="positionHolderLinkID">
+<value>3023</value>
+</attribute>
+<attribute name="positionID">
+<value>23</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="toDate">
+<value>2015-12-31</value>
+</attribute>
+<attribute name="userName">
+<value>reviewer2</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="fromDate">
+<value>2003-01-01</value>
+</attribute>
+<attribute name="organisationStructureID">
+<value>1</value>
+</attribute>
+<attribute name="positionHolderLinkID">
+<value>3024</value>
+</attribute>
+<attribute name="positionID">
+<value>24</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="toDate">
+<value>2015-12-31</value>
+</attribute>
+<attribute name="userName">
+<value>scheduler1</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="fromDate">
+<value>2003-01-01</value>
+</attribute>
+<attribute name="organisationStructureID">
+<value>1</value>
+</attribute>
+<attribute name="positionHolderLinkID">
+<value>3025</value>
+</attribute>
+<attribute name="positionID">
+<value>25</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="toDate">
+<value>2015-12-31</value>
+</attribute>
+<attribute name="userName">
+<value>scheduler2</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="fromDate">
+<value>2003-01-01</value>
+</attribute>
+<attribute name="organisationStructureID">
+<value>1</value>
+</attribute>
+<attribute name="positionHolderLinkID">
+<value>3026</value>
+</attribute>
+<attribute name="positionID">
+<value>26</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="toDate">
+<value>2015-12-31</value>
+</attribute>
+<attribute name="userName">
+<value>boardmember</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="fromDate">
+<value>2003-01-01</value>
+</attribute>
+<attribute name="organisationStructureID">
+<value>1</value>
+</attribute>
+<attribute name="positionHolderLinkID">
+<value>3027</value>
+</attribute>
+<attribute name="positionID">
+<value>27</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="toDate">
+<value>2015-12-31</value>
+</attribute>
+<attribute name="userName">
+<value>secretary</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="fromDate">
+<value>2003-01-01</value>
+</attribute>
+<attribute name="organisationStructureID">
+<value>1</value>
+</attribute>
+<attribute name="positionHolderLinkID">
+<value>3028</value>
+</attribute>
+<attribute name="positionID">
+<value>28</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="toDate">
+<value>2015-12-31</value>
+</attribute>
+<attribute name="userName">
+<value>claimsanalyst</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+</table>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="CASECONFIGEVIDENCELINK" override="true">
+<column name="caseConfigEvidenceLinkID" type="id"/>
+<column name="caseConfigurationID" type="id"/>
+<column name="evidenceTypeID" type="id"/>
+<column name="category" type="text"/>
+<column name="caseType" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="sortOrder" type="id"/>
+<column name="shareableInd" type="bool"/>
+<column name="quickLinkInd" type="bool"/>
+<column name="evidenceNature" type="text"/>
+<column name="visibleToCitizenInd" type="bool"/>
+<column name="versionNo" type="number"/>
+</table>

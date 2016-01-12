@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="DEDUCTION">
+  <column name="deductionID" type="id" />
+  <column name="deductionName" type="text" />
+  <column name="priority" type="number" />
+  <column name="maxAmount" type="number" />
+  <column name="maxPercentage" type="number" />
+  <column name="defaultAmount" type="number" />
+  <column name="defaultPercentage" type="number" />
+  <column name="minAmount" type="number" />
+  <column name="actionType" type="text" />
+  <column name="category" type="text" />
+  <column name="dateCreated" type="date" />
+  <column name="comments" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="preventOverlappingInd" type="bool" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="deductionID">
+      <value>2</value>
+    </attribute>
+    <attribute name="deductionName">
+      <value>DN5</value>
+    </attribute>
+    <attribute name="priority">
+      <value>1</value>
+    </attribute>
+    <attribute name="maxAmount">
+      <value>0.00</value>
+    </attribute>
+    <attribute name="maxPercentage">
+      <value>10.0</value>
+    </attribute>
+    <attribute name="defaultAmount">
+      <value>0.00</value>
+    </attribute>
+    <attribute name="defaultPercentage">
+      <value>0.0</value>
+    </attribute>
+    <attribute name="minAmount">
+      <value>0.00</value>
+    </attribute>
+    <attribute name="actionType">
+      <value>DAT2</value>
+    </attribute>
+    <attribute name="category">
+      <value>DC3</value>
+    </attribute>
+    <attribute name="dateCreated">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="preventOverlappingInd">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="deductionID">
+      <value>3</value>
+    </attribute>
+    <attribute name="deductionName">
+      <value>DN2</value>
+    </attribute>
+    <attribute name="priority">
+      <value>2</value>
+    </attribute>
+    <attribute name="maxAmount">
+      <value>0.00</value>
+    </attribute>
+    <attribute name="maxPercentage">
+      <value>20.0</value>
+    </attribute>
+    <attribute name="defaultAmount">
+      <value>0.00</value>
+    </attribute>
+    <attribute name="defaultPercentage">
+      <value>10.0</value>
+    </attribute>
+    <attribute name="minAmount">
+      <value>0.00</value>
+    </attribute>
+    <attribute name="actionType">
+      <value>DAT2</value>
+    </attribute>
+    <attribute name="category">
+      <value>DC1</value>
+    </attribute>
+    <attribute name="dateCreated">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="preventOverlappingInd">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

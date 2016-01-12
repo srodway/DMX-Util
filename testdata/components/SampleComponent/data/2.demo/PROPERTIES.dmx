@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PROPERTIES" override="true">
+<column name="propertyID" type="id"/>
+<column name="category" type="text"/>
+<column name="name" type="text"/>
+<column name="value" type="text"/>
+<column name="type" type="text"/>
+<column name="defaultValue" type="text"/>
+<column name="dynamic" type="bool"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+</table>

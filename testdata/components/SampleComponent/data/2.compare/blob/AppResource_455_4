@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+    Copyright 2010 Curam Software Ltd.
+    All rights reserved.
+    
+    This software is the confidential and proprietary information of Curam
+    Software, Ltd. ("Confidential Information"). You shall not disclose
+    such Confidential Information and shall use it only in accordance with the
+    terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="OutcomePlanFactorMenu">
+
+    <mc:loader-registry>
+        <mc:loader class="curam.outcomeplanning.tab.impl.OutcomePlanFactorMenuLoader"/>
+    </mc:loader-registry>
+
+    <mc:menu-item dynamic="true" id="EditReason" open-as="modal" page-id="OutcomePlanFactor_updateReason" title="MenuItem.Title.EditReason" tooltip="MenuItem.Tooltip.EditReason" window-options="width=510,height=480"/>
+    <mc:menu-item dynamic="true" id="EditFactorName" open-as="modal" page-id="OutcomePlanFactor_updateFactorName" title="MenuItem.Title.EditFactorName" tooltip="MenuItem.Tooltip.EditFactorName"/>
+    <mc:menu-separator id="sep2"/>
+
+    <mc:menu-item dynamic="true" id="UpdateProgress" open-as="modal" page-id="OutcomePlanFactor_updateProgress" title="MenuItem.Title.UpdateProgress" tooltip="MenuItem.Tooltip.UpdateProgress"/>
+    <mc:menu-item dynamic="true" id="UpdateRating" open-as="modal" page-id="OutcomePlanFactor_updateRating" title="MenuItem.Title.UpdateRating" tooltip="MenuItem.Tooltip.UpdateRating"/>
+    <mc:menu-item dynamic="true" id="SetAsPriority" open-as="modal" page-id="OutcomePlanFactor_setAsPriority" title="MenuItem.Title.SetAsPriority" tooltip="MenuItem.Tooltip.SetAsPriority"/>
+    <mc:menu-item dynamic="true" id="UnsetAsPriority" open-as="modal" page-id="OutcomePlanFactor_unsetAsPriority" title="MenuItem.Title.UnsetAsPriority" tooltip="MenuItem.Tooltip.UnsetAsPriority"/>
+
+    <mc:menu-separator id="sep1"/>
+
+    <mc:menu-item dynamic="true" id="AddNote" open-as="modal" page-id="OutcomePlanFactor_addNote" title="MenuItem.Title.AddNote" tooltip="MenuItem.Tooltip.AddNote"/>
+    <mc:menu-item dynamic="true" id="AddAttachment" open-as="modal" page-id="OutcomePlanFactor_addAttachment" title="MenuItem.Title.AddAttachment" tooltip="MenuItem.Tooltip.AddAttachment"/>
+    <mc:menu-separator id="sep3"/>
+
+    <mc:menu-item dynamic="true" id="Delete" open-as="modal" page-id="OutcomePlanFactor_cancel" title="MenuItem.Title.Delete" tooltip="MenuItem.Tooltip.Delete"/>
+
+</mc:menu-bar>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="PROVIDERTYPE">
+  <column name="providerTypeID" type="id" />
+  <column name="providerCategoryID" type="id" />
+  <column name="type" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="providerTypeID">
+      <value>1</value>
+    </attribute>
+    <attribute name="providerCategoryID">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>TYP16</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="providerTypeID">
+      <value>456</value>
+    </attribute>
+    <attribute name="providerCategoryID">
+      <value>456</value>
+    </attribute>
+    <attribute name="type">
+      <value>TYP3</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="providerTypeID">
+      <value>459</value>
+    </attribute>
+    <attribute name="providerCategoryID">
+      <value>457</value>
+    </attribute>
+    <attribute name="type">
+      <value>TYP3</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="providerTypeID">
+      <value>-6828582935000514560</value>
+    </attribute>
+    <attribute name="providerCategoryID">
+      <value>7294705496433360896</value>
+    </attribute>
+    <attribute name="type">
+      <value>TYP3</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

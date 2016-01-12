@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="ADMINISTRATIONCONCERNROLE" override="true">
+<column name="administrationConcernRoleID" type="id"/>
+<column name="concernRoleID" type="id"/>
+<column name="administrationRoleID" type="id"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="typeCode" type="text"/>
+<column name="versionNo" type="number"/>
+<row>
+<attribute name="administrationConcernRoleID">
+<value>6862359932205793280</value>
+</attribute>
+<attribute name="concernRoleID">
+<value>-775745035814567936</value>
+</attribute>
+<attribute name="administrationRoleID">
+<value>-7260928499228082176</value>
+</attribute>
+<attribute name="startDate">
+<value>2015-12-04</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="typeCode">
+<value>AC1</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="administrationConcernRoleID">
+<value>2106558725702549504</value>
+</attribute>
+<attribute name="concernRoleID">
+<value>-775745035814567936</value>
+</attribute>
+<attribute name="administrationRoleID">
+<value>-1640436164269703168</value>
+</attribute>
+<attribute name="startDate">
+<value>2015-12-04</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="typeCode">
+<value>AC2</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+</table>

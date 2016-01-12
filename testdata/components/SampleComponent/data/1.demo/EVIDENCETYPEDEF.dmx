@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="EVIDENCETYPEDEF" override="true">
+<column name="evidenceTypeDefID" type="id"/>
+<column name="evidenceTypeCode" type="text"/>
+<column name="description" type="text"/>
+<column name="logicalName" type="text"/>
+<column name="securityGroupName" type="text"/>
+<column name="evidenceTypeDefinition" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

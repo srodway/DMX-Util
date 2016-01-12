@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PROVIDERSTATUSHISTORY" override="true">
+<column name="providerStatusHistoryID" type="id"/>
+<column name="providerConcernRoleID" type="id"/>
+<column name="userName" type="text"/>
+<column name="reason" type="text"/>
+<column name="effectiveDateTime" type="timestamp"/>
+<column name="recordStatus" type="text"/>
+<row>
+<attribute name="providerStatusHistoryID">
+<value>2755077072043900928</value>
+</attribute>
+<attribute name="providerConcernRoleID">
+<value>-343399471587000320</value>
+</attribute>
+<attribute name="userName">
+<value>cpmmanager</value>
+</attribute>
+<attribute name="reason">
+<value/>
+</attribute>
+<attribute name="effectiveDateTime">
+<value>2015-12-04-11.06.24</value>
+</attribute>
+<attribute name="recordStatus">
+<value>PS2</value>
+</attribute>
+</row>
+<row>
+<attribute name="providerStatusHistoryID">
+<value>3187422636271468544</value>
+</attribute>
+<attribute name="providerConcernRoleID">
+<value>-775745035814567936</value>
+</attribute>
+<attribute name="userName">
+<value>cpmmanager</value>
+</attribute>
+<attribute name="reason">
+<value/>
+</attribute>
+<attribute name="effectiveDateTime">
+<value>2015-12-04-11.50.07</value>
+</attribute>
+<attribute name="recordStatus">
+<value>PS2</value>
+</attribute>
+</row>
+</table>

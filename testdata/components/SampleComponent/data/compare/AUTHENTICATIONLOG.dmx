@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="AUTHENTICATIONLOG">
+  <column name="timeEntered" type="timestamp" />
+  <column name="userName" type="text" />
+  <column name="loginFailures" type="number" />
+  <column name="lastLogin" type="timestamp" />
+  <column name="loginStatus" type="text" />
+  <column name="logID" type="id" />
+  <column name="altLogin" type="bool" />
+  <column name="versionNo" type="number" />
+  <column name="lastWritten" type="timestamp" />
+  <row>
+    <attribute name="timeEntered">
+      <value>2015-12-04-11.04.54</value>
+    </attribute>
+    <attribute name="userName">
+      <value>cpmmanager</value>
+    </attribute>
+    <attribute name="loginFailures">
+      <value>0</value>
+    </attribute>
+    <attribute name="lastLogin">
+      <value>2015-12-04-11.04.54</value>
+    </attribute>
+    <attribute name="loginStatus">
+      <value>LOGIN</value>
+    </attribute>
+    <attribute name="logID">
+      <value>2394789101854261248</value>
+    </attribute>
+    <attribute name="altLogin">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-11.04.54</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="timeEntered">
+      <value>2015-12-04-12.26.38</value>
+    </attribute>
+    <attribute name="userName">
+      <value>admin</value>
+    </attribute>
+    <attribute name="loginFailures">
+      <value>0</value>
+    </attribute>
+    <attribute name="lastLogin">
+      <value>2015-12-04-12.26.38</value>
+    </attribute>
+    <attribute name="loginStatus">
+      <value>LOGIN</value>
+    </attribute>
+    <attribute name="logID">
+      <value>2610961883968045056</value>
+    </attribute>
+    <attribute name="altLogin">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-12.26.38</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="timeEntered">
+      <value>2015-12-04-15.02.49</value>
+    </attribute>
+    <attribute name="userName">
+      <value>admin</value>
+    </attribute>
+    <attribute name="loginFailures">
+      <value>0</value>
+    </attribute>
+    <attribute name="lastLogin">
+      <value>2015-12-04-15.02.49</value>
+    </attribute>
+    <attribute name="loginStatus">
+      <value>LOGIN</value>
+    </attribute>
+    <attribute name="logID">
+      <value>4736660908086919168</value>
+    </attribute>
+    <attribute name="altLogin">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-15.02.49</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="timeEntered">
+      <value>2015-12-04-18.16.08</value>
+    </attribute>
+    <attribute name="userName">
+      <value>admin</value>
+    </attribute>
+    <attribute name="loginFailures">
+      <value>0</value>
+    </attribute>
+    <attribute name="lastLogin">
+      <value>2015-12-04-18.16.07</value>
+    </attribute>
+    <attribute name="loginStatus">
+      <value>LOGIN</value>
+    </attribute>
+    <attribute name="logID">
+      <value>2052515530174103552</value>
+    </attribute>
+    <attribute name="altLogin">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-18.16.08</value>
+    </attribute>
+  </row>
+</table>
+

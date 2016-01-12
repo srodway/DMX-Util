@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="EMPLOYMENT" override="true">
+<column name="employmentID" type="id"/>
+<column name="concernRoleID" type="id"/>
+<column name="employerConcernRoleID" type="id"/>
+<column name="fromDate" type="date"/>
+<column name="toDate" type="date"/>
+<column name="status" type="text"/>
+<column name="occupationType" type="text"/>
+<column name="primaryCurrentInd" type="bool"/>
+<column name="comments" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

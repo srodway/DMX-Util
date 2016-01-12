@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains">
+  <xs:import namespace="http://www.curamsoftware.com/BaseDomains"/>
+  <xs:element name="OutcomePlanExpectedOutcome">
+    <xs:annotation>
+      <xs:documentation>Top level table to hold the details captured during the wizard</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="outcomePlanExpectedOutcomeID" type="d:SVR_INT64">
+        <xs:annotation>
+          <xs:documentation>The outcome plan expected outcome ID.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="expectedOutcomeID" type="d:SVR_INT64">
+        <xs:annotation>
+          <xs:documentation>The expected outcome administration ID.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="expectedOutcomeName" type="d:SVR_STRING">
+        <xs:annotation>
+          <xs:documentation>The name of the expected outcome  if it is user defined.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="expectedEndDate" type="d:SVR_DATE">
+        <xs:annotation>
+          <xs:documentation>The date the expected outcome is expected to be completed.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="reason" type="d:SVR_STRING">
+        <xs:annotation>
+          <xs:documentation>The reason why a user is adding this expected outcome to the outcome plan for a client.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="outcomePlanID" type="d:SVR_INT64">
+        <xs:annotation>
+          <xs:documentation>The outcome plan ID.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="factors" type="d:SVR_STRING">
+        <xs:annotation>
+          <xs:documentation>Tab delimited string of the selected factors that the expected outcome relates to.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="clientStringList" type="d:SVR_STRING">
+        <xs:annotation>
+          <xs:documentation>Tab delimited string of the selected clients that the expected outcome relates to.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

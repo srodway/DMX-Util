@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="INSURANCERETURNHEADERDETAIL" override="true">
+<column name="insuranceRetHdrID" type="id"/>
+<column name="insuranceRetHdrDtlsID" type="id"/>
+<column name="insuranceReturnType" type="text"/>
+<column name="receiptDate" type="date"/>
+<column name="contactName" type="text"/>
+<column name="totalContribAmt" type="number"/>
+<column name="employeeContribAmt" type="number"/>
+<column name="employerContribAmt" type="number"/>
+<column name="totalPayroll" type="number"/>
+<column name="totNumEmployees" type="number"/>
+<column name="numPermanentEmployees" type="number"/>
+<column name="numCasualEmployees" type="number"/>
+<column name="fromDate" type="date"/>
+<column name="toDate" type="date"/>
+<column name="statusCode" type="text"/>
+<column name="creationDate" type="date"/>
+<column name="comments" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

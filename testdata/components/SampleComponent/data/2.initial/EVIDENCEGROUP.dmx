@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="EVIDENCEGROUP">
+  <column name="evidenceGroupID" type="id" />
+  <column name="evidenceGroupNameCode" type="text" />
+  <column name="startDate" type="date" />
+  <column name="endDate" type="date" />
+  <column name="recordStatus" type="text" />
+  <column name="description" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="evidenceGroupID">
+      <value>6</value>
+    </attribute>
+    <attribute name="evidenceGroupNameCode">
+      <value>ISGroup</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value>2015-12-31</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="description">
+      <value>None</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="evidenceGroupID">
+      <value>1</value>
+    </attribute>
+    <attribute name="evidenceGroupNameCode">
+      <value>SIMGroup</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value>2015-12-31</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="description">
+      <value>None</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="evidenceGroupID">
+      <value>7</value>
+    </attribute>
+    <attribute name="evidenceGroupNameCode">
+      <value>OPGroup</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value>2015-12-31</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="description">
+      <value>None</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="evidenceGroupID">
+      <value>8</value>
+    </attribute>
+    <attribute name="evidenceGroupNameCode">
+      <value>SIMLGroup</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value>2015-12-31</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="description">
+      <value>None</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="evidenceGroupID">
+      <value>9</value>
+    </attribute>
+    <attribute name="evidenceGroupNameCode">
+      <value>BUPmtGrp</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value>2015-12-31</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="description">
+      <value>None</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="evidenceGroupID">
+      <value>14</value>
+    </attribute>
+    <attribute name="evidenceGroupNameCode">
+      <value>LOGroup</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value>2015-12-31</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="description">
+      <value>None</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

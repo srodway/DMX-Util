@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="ALTERNATENAME" override="true">
+<column name="alternateNameID" type="id"/>
+<column name="concernRoleID" type="id"/>
+<column name="title" type="text"/>
+<column name="firstForename" type="text"/>
+<column name="otherForename" type="text"/>
+<column name="surname" type="text"/>
+<column name="nameSuffix" type="text"/>
+<column name="nameType" type="text"/>
+<column name="nameStatus" type="text"/>
+<column name="fullName" type="text"/>
+<column name="comments" type="text"/>
+<column name="initials" type="text"/>
+<column name="upperFirstForename" type="text"/>
+<column name="upperSurname" type="text"/>
+<column name="phoneticEncoding" type="text"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+</table>

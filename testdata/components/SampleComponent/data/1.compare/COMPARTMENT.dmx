@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="COMPARTMENT">
+  <column name="compartmentID" type="id" />
+  <column name="providerConcernRoleID" type="id" />
+  <column name="name" type="text" />
+  <column name="description" type="text" />
+  <column name="dateCreated" type="date" />
+  <column name="dateClosed" type="date" />
+  <column name="recordStatus" type="text" />
+  <column name="parentCompartmentID" type="id" />
+  <column name="comments" type="text" />
+  <column name="dateTimeCreated" type="timestamp" />
+  <column name="dateTimeClosed" type="timestamp" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="compartmentID">
+      <value>1009</value>
+    </attribute>
+    <attribute name="providerConcernRoleID">
+      <value>750</value>
+    </attribute>
+    <attribute name="name">
+      <value>Provider 1</value>
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="dateCreated">
+      <value />
+    </attribute>
+    <attribute name="dateClosed">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>CMPS1</value>
+    </attribute>
+    <attribute name="parentCompartmentID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="dateTimeCreated">
+      <value />
+    </attribute>
+    <attribute name="dateTimeClosed">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="compartmentID">
+      <value>1010</value>
+    </attribute>
+    <attribute name="providerConcernRoleID">
+      <value>752</value>
+    </attribute>
+    <attribute name="name">
+      <value>Provider 2</value>
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="dateCreated">
+      <value />
+    </attribute>
+    <attribute name="dateClosed">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>CMPS1</value>
+    </attribute>
+    <attribute name="parentCompartmentID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="dateTimeCreated">
+      <value />
+    </attribute>
+    <attribute name="dateTimeClosed">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="compartmentID">
+      <value>1011</value>
+    </attribute>
+    <attribute name="providerConcernRoleID">
+      <value>753</value>
+    </attribute>
+    <attribute name="name">
+      <value>Provider 3</value>
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="dateCreated">
+      <value />
+    </attribute>
+    <attribute name="dateClosed">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>CMPS1</value>
+    </attribute>
+    <attribute name="parentCompartmentID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="dateTimeCreated">
+      <value />
+    </attribute>
+    <attribute name="dateTimeClosed">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

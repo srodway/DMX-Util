@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="QUESTIONALIAS">
+  <column name="questionID" type="id" />
+  <column name="type" type="text" />
+  <column name="aliasText" type="text" />
+  <column name="questionAliasID" type="id" />
+  <row>
+    <attribute name="questionID">
+      <value>792</value>
+    </attribute>
+    <attribute name="type">
+      <value>at1</value>
+    </attribute>
+    <attribute name="aliasText">
+      <value>What step of the treatment plan is the claimant on?</value>
+    </attribute>
+    <attribute name="questionAliasID">
+      <value>904</value>
+    </attribute>
+  </row>
+</table>
+

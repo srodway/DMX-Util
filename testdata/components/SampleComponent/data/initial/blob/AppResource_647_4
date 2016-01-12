@@ -1,0 +1,41 @@
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+# START NON-TRANSLATABLE 
+Image.Action=icon_action
+# END NON-TRANSLATABLE
+
+# START NON-TRANSLATABLE 
+Message.Title={Action.Name}
+# END NON-TRANSLATABLE
+
+First.Sentence.FirstHalf = This activity will begin on {Start.Date}
+
+First.Sentence.DurationHours = for {Duration.Hours} hours
+
+First.Sentence.ForDurationMinutes = for {Duration.Minutes} minutes
+
+First.Sentence.AndDurationMinutes = and {Duration.Minutes} minutes
+# START NON-TRANSLATABLE 
+First.Sentence.FrequencyPattern = {Frequency.Pattern}
+# END NON-TRANSLATABLE
+
+First.Sentence.EndDate = until {End.Date}
+
+First.Sentence.StartDate = This activity will begin on {Start.Date}.
+
+First.Sentence.NoFrequency = This activity will begin on {Start.Date} until {End.Date}.
+
+Second.Sentence.HasContactDetails = Please contact {Action.Owner} at {Phone.Number} or {link:{Email.Address}:Email.Link} if you need more information.
+
+Second.Sentence.NoContactDetails=Please contact {Action.Owner} if you need more information.
+
+Third.Sentence = Click {link:My Activities:My.Activities} for a full list of your activities.
+# START NON-TRANSLATABLE 
+Link.MyActivities = CitizenAccount_listCitizenActivities
+# END NON-TRANSLATABLE

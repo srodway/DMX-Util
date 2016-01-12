@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2011 Curam Software Ltd.
+  All rights reserved.
+
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="DefaultIntegratedCase">
+
+  <!-- Page Parameters -->
+  <tc:page-param name="caseID"/>
+
+  <!-- Actions Menu -->
+  <tc:menu id="DefaultIntegratedCaseMenu"/> 
+  
+  <!-- Details Panel -->
+  <tc:context height="157" page-id="DefaultIC_tabDetails"/>
+
+  <!-- Navigation Links - see DefaultIntegratedCase.nav for details -->
+  <tc:navigation id="DefaultIntegratedCase"/> 
+  
+  <tc:tab-refresh>
+      
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_createCaseMember"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_createCaseRelatedMember"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseMemberFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_cancelCaseMember"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="case_createCaseRelatedMember"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Evidence_applyChanges1"/>
+    
+    <tc:onload context="true" menu-bar="false" navigation="false" page-id="DefaultIC_workspaceActiveHighLevel"/>
+    <tc:onload context="true" menu-bar="false" navigation="false" page-id="DefaultIC_workspaceInEditHighLevel"/>
+    <tc:onload context="true" menu-bar="false" navigation="false" page-id="DefaultIC_flow"/>
+    <tc:onload context="true" menu-bar="false" navigation="false" page-id="DefaultIC_dashboard"/>
+    
+    <tc:onsubmit context="true" menu-bar="true" navigation="false" page-id="IntegratedCase_close"/>
+    
+    <tc:onsubmit context="false" menu-bar="true" navigation="false" page-id="Organization_createCaseBookmark"/>
+    <tc:onsubmit context="false" menu-bar="true" navigation="false" page-id="Organization_cancelCaseBookmark"/>
+    
+    <tc:onload context="true" menu-bar="true" navigation="true" page-id="DefaultIC_workspaceInEditHighLevel"/>     
+    <tc:onload context="true" menu-bar="true" navigation="true" page-id="DefaultIC_workspaceActiveHighLevel"/>
+    <tc:onload context="true" menu-bar="true" navigation="true" page-id="DefaultIC_listIssuesForCase"/>
+    <tc:onload context="true" menu-bar="true" navigation="true" page-id="DefaultIC_listVerificationsForCase"/>
+    <tc:onload context="true" menu-bar="true" navigation="true" page-id="DefaultIC_home"/>
+    
+</tc:tab-refresh>
+
+
+</tc:tab-config>

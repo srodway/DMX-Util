@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PAGECONFIG" override="true">
+<column name="pageConfigID" type="id"/>
+<column name="pageID" type="text"/>
+<column name="userRoleName" type="text"/>
+<column name="config" type="clob"/>
+<column name="versionNo" type="number"/>
+<row>
+<attribute name="pageConfigID">
+<value>10000</value>
+</attribute>
+<attribute name="pageID">
+<value>OutcomePlanApplication_home</value>
+</attribute>
+<attribute name="userRoleName">
+<value>PLANNERROLE</value>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_1_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>2120</value>
+</attribute>
+<attribute name="pageID">
+<value>AuditorCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value/>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_5_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>2130</value>
+</attribute>
+<attribute name="pageID">
+<value>CaseworkerCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value/>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_6_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>2150</value>
+</attribute>
+<attribute name="pageID">
+<value>InvestigatorCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value/>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_8_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>2305</value>
+</attribute>
+<attribute name="pageID">
+<value>HearingReviewerCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value/>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_13_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>24101</value>
+</attribute>
+<attribute name="pageID">
+<value>ASCEligibilityWorkerHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>ELIGIBILITYROLE</value>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_15_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>27000</value>
+</attribute>
+<attribute name="pageID">
+<value>CommonIntakeApplication_home</value>
+</attribute>
+<attribute name="userRoleName">
+<value>CIROLE</value>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_16_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>19002</value>
+</attribute>
+<attribute name="pageID">
+<value>EligibilityWorkerHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>ELIGIBILITYROLE</value>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_24_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>19006</value>
+</attribute>
+<attribute name="pageID">
+<value>CallCenterWorkerHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>CALLCENTERROLE</value>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_28_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>19008</value>
+</attribute>
+<attribute name="pageID">
+<value>EligibilityWorkerHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value/>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_30_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>19012</value>
+</attribute>
+<attribute name="pageID">
+<value>CallCenterWorkerHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value/>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_34_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>2001</value>
+</attribute>
+<attribute name="pageID">
+<value>CustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value/>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_35_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>2002</value>
+</attribute>
+<attribute name="pageID">
+<value>CustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>SUPERROLE</value>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_36_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>2101</value>
+</attribute>
+<attribute name="pageID">
+<value>AdminCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>SUPERROLE</value>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_37_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>2111</value>
+</attribute>
+<attribute name="pageID">
+<value>AuditCoordinatorCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>AUDITCOORDINATORROLE</value>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_38_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>2131</value>
+</attribute>
+<attribute name="pageID">
+<value>CaseworkerCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>SUPERROLE</value>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_40_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>2141</value>
+</attribute>
+<attribute name="pageID">
+<value>FinancialCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>SUPERROLE</value>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_41_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>2151</value>
+</attribute>
+<attribute name="pageID">
+<value>InvestigatorCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>INVESTIGATORROLE</value>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_42_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>2161</value>
+</attribute>
+<attribute name="pageID">
+<value>SysAdminCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>SUPERROLE</value>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_43_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>2301</value>
+</attribute>
+<attribute name="pageID">
+<value>HearingOfficialCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>SUPERROLE</value>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_44_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>2302</value>
+</attribute>
+<attribute name="pageID">
+<value>HearingReviewerCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>SUPERROLE</value>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_45_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="pageConfigID">
+<value>2303</value>
+</attribute>
+<attribute name="pageID">
+<value>HearingSchedulerCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>SUPERROLE</value>
+</attribute>
+<attribute name="config">
+<value>./clob/PageConfig_46_4</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+</table>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="DAILYSCHEDULE" override="true">
+<column name="scheduleID" type="id"/>
+<column name="locationID" type="id"/>
+<column name="effectiveDate" type="date"/>
+<column name="name" type="text"/>
+<column name="comments" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="type" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

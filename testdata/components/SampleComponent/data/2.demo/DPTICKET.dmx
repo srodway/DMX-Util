@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="DPTICKET" override="true">
+<column name="ticketID" type="id"/>
+<column name="subject" type="text"/>
+<column name="instDataID" type="id"/>
+<column name="processName" type="text"/>
+<column name="processInstID" type="id"/>
+<column name="interfaceName" type="text"/>
+<column name="methodName" type="text"/>
+<column name="creationTS" type="timestamp"/>
+<column name="closureTS" type="timestamp"/>
+<column name="status" type="text"/>
+<column name="resolutionCode" type="text"/>
+<column name="ticketType" type="text"/>
+<column name="lastWritten" type="timestamp"/>
+<row>
+<attribute name="ticketID">
+<value>259</value>
+</attribute>
+<attribute name="subject">
+<value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+</attribute>
+<attribute name="instDataID">
+<value>258</value>
+</attribute>
+<attribute name="processName">
+<value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+</attribute>
+<attribute name="processInstID">
+<value>3763883388574892032</value>
+</attribute>
+<attribute name="interfaceName">
+<value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+</attribute>
+<attribute name="methodName">
+<value>dequeue</value>
+</attribute>
+<attribute name="creationTS">
+<value>2015-12-04-11.50.08</value>
+</attribute>
+<attribute name="closureTS">
+<value>2015-12-04-11.50.08</value>
+</attribute>
+<attribute name="status">
+<value>WS4</value>
+</attribute>
+<attribute name="resolutionCode">
+<value>RC1</value>
+</attribute>
+<attribute name="ticketType">
+<value/>
+</attribute>
+<attribute name="lastWritten">
+<value>2015-12-04-11.50.08</value>
+</attribute>
+</row>
+</table>

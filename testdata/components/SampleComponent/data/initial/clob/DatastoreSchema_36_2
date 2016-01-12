@@ -1,0 +1,131 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains">
+  <xs:import namespace="http://www.curamsoftware.com/BaseDomains"/>
+  <xs:include schemaLocation="IEGDomains"/>
+  <xs:element name="Application">
+    <xs:annotation>
+      <xs:documentation>Top level application table</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="Person" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Person">
+    <xs:annotation>
+      <xs:documentation>Holds the answers for each person</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="personID" type="d:SVR_KEY">
+        <xs:annotation>
+          <xs:documentation>The identifier for the person</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="firstName" type="IEG_STRING">
+        <xs:annotation>
+          <xs:documentation>The persons first name</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="lastName" type="IEG_STRING">
+        <xs:annotation>
+          <xs:documentation>The persons last name</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="gender" type="IEG_GENDER">
+        <xs:annotation>
+          <xs:documentation>The persons gender</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="dateOfBirth" type="IEG_DATE">
+        <xs:annotation>
+          <xs:documentation>The persons date of birth</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="roleID" type="IEG_INT64">
+        <xs:annotation>
+          <xs:documentation>The id of the assessment delivery role record</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="participantID" type="IEG_INT64">
+        <xs:annotation>
+          <xs:documentation>Identifier of the person. Used for locating instances of person entities on the data store the relate to a single individual</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="localID" type="d:SVR_INT64">
+        <xs:annotation>
+          <xs:documentation>LifeEvents Only. This is an internal identifier that is required if this schema is used in conjunction with Life Events. Generally, no further action is needed on your part in regards to this attribute.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="isPrimaryParticipant" type="d:SVR_BOOLEAN" default="true">
+        <xs:annotation>
+          <xs:documentation>LifeEvents Only. Attribute required by LifeEvents. This must be set to true for at least one person. If your LifeEvent script does not set this value or you are unsure of what to do, set the default value to: true</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="questionsApplicableInd" type="IEG_BOOLEAN" default="true">
+        <xs:annotation>
+          <xs:documentation>Needed for assessments.  Ignore or remove if not applicable.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="ethnicity" type="IEG_STRING"/>
+      <xs:attribute name="phone" type="IEG_STRING"/>
+      <xs:attribute name="address" type="IEG_STRING"/>
+      <xs:attribute name="postCode" type="IEG_STRING"/>
+      <xs:attribute name="perDifficultywithwashing" type="IEG_YES_NO"/>
+      <xs:attribute name="perDifficultywithdressing" type="IEG_YES_NO"/>
+      <xs:attribute name="perDifficultywithgettingtotoilet" type="IEG_YES_NO"/>
+      <xs:attribute name="perDifficultywithbathing" type="IEG_YES_NO"/>
+      <xs:attribute name="perExamples" type="IEG_STRING"/>
+      <xs:attribute name="perAnymorehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="perDoesanyonehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="mobDifficultygettingaround" type="IEG_YES_NO"/>
+      <xs:attribute name="mobExamples" type="IEG_STRING"/>
+      <xs:attribute name="mobAnymorehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="mobDoesanyonehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="eatDifficultyplanningameal" type="IEG_YES_NO"/>
+      <xs:attribute name="eatDifficultypreparingfood" type="IEG_YES_NO"/>
+      <xs:attribute name="eatDifficultyeatindepend" type="IEG_YES_NO"/>
+      <xs:attribute name="eatDifficultydrinkingindepend" type="IEG_YES_NO"/>
+      <xs:attribute name="eatExamples" type="IEG_STRING"/>
+      <xs:attribute name="eatDoesanyonehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="eatAnymorehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="homDifficultywithhousework" type="IEG_YES_NO"/>
+      <xs:attribute name="homDifficultywithshopping" type="IEG_YES_NO"/>
+      <xs:attribute name="homDifficultywithlaundry" type="IEG_YES_NO"/>
+      <xs:attribute name="homDifficultymanagingmoney" type="IEG_YES_NO"/>
+      <xs:attribute name="homDifficultybeingsafeathome" type="IEG_YES_NO"/>
+      <xs:attribute name="homExamples" type="IEG_STRING"/>
+      <xs:attribute name="homDoesanyonehelp" type="IEG_YES_NO"/>
+	  <xs:attribute name="homNeedanymorehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="safDifficultykeepingsafe" type="IEG_YES_NO"/>
+      <xs:attribute name="safExamples" type="IEG_STRING"/>
+      <xs:attribute name="safDoesanyonehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="safNeedanymorehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="peoDifficultywithpeople" type="IEG_YES_NO"/>
+      <xs:attribute name="peoExamples" type="IEG_STRING"/>
+      <xs:attribute name="peoDoesanyonehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="peoNeedanymorehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="socDifficultywithsocial" type="IEG_YES_NO"/>
+      <xs:attribute name="socExamples" type="IEG_STRING"/>
+      <xs:attribute name="socDoesanyonehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="socNeedanymorehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="relDifficultywithrelationships" type="IEG_YES_NO"/>
+      <xs:attribute name="relExamples" type="IEG_STRING"/>
+      <xs:attribute name="relDoesanyonehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="relNeedanymorehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="heaDifficultywithmentalhealth" type="IEG_YES_NO"/>
+      <xs:attribute name="heaExamples" type="IEG_STRING"/>
+      <xs:attribute name="heaDoesanyonehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="heaNeedanymorehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="carDifficultylookingaftersomeone" type="IEG_YES_NO"/>
+      <xs:attribute name="carExamples" type="IEG_STRING"/>
+      <xs:attribute name="carDoesanyonehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="carNeedanymorehelp" type="IEG_YES_NO"/>
+      <xs:attribute name="Anythingelsetosay" type="IEG_STRING"/>
+      <xs:attribute name="dateCompleted" type="IEG_DATE"/>
+    </xs:complexType>
+    <xs:key name="Person_Key">
+      <xs:selector xpath="./Person"/>
+      <xs:field xpath="@personID"/>
+    </xs:key>
+  </xs:element>
+</xs:schema>

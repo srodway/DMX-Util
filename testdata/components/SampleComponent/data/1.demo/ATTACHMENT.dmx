@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="ATTACHMENT" override="true">
+<column name="attachmentID" type="id"/>
+<column name="attachmentContents" type="blob"/>
+<column name="attachmentName" type="text"/>
+<column name="attachmentStatus" type="text"/>
+<column name="fileLocation" type="text"/>
+<column name="fileReference" type="text"/>
+<column name="documentType" type="text"/>
+<column name="receiptDate" type="date"/>
+<column name="statusCode" type="text"/>
+<column name="attachedFileInd" type="bool"/>
+<column name="versionNo" type="number"/>
+</table>

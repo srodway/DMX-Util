@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="PLANTEMPLATE">
+  <column name="planTemplateID" type="id" />
+  <column name="goalID" type="id" />
+  <column name="name" type="text" />
+  <column name="dateCreated" type="date" />
+  <column name="description" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="daysToExpiry" type="number" />
+  <column name="nameTextID" type="id" />
+  <column name="descriptionTextID" type="id" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="planTemplateID">
+      <value>1</value>
+    </attribute>
+    <attribute name="goalID">
+      <value>1</value>
+    </attribute>
+    <attribute name="name">
+      <value>Sample Back To Work Template</value>
+    </attribute>
+    <attribute name="dateCreated">
+      <value>2015-11-10</value>
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="daysToExpiry">
+      <value>0</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

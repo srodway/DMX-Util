@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PRODUCTPROVISION" override="true">
+<column name="productProvisionID" type="id"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="creationDate" type="date"/>
+<column name="comments" type="text"/>
+<column name="statusCode" type="text"/>
+<column name="estimatedCost" type="number"/>
+<column name="productID" type="id"/>
+<column name="providerConcernRoleID" type="id"/>
+<column name="nextPaymentDate" type="date"/>
+<column name="paymentFrequency" type="text"/>
+<column name="methodOfPmtCode" type="text"/>
+<column name="currencyType" type="text"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+</table>

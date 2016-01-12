@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="CONTRACTTEXT" override="true">
+<column name="contractTextID" type="id"/>
+<column name="contractText" type="clob"/>
+<column name="languageCode" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="typeCode" type="text"/>
+<column name="versionNo" type="number"/>
+<row>
+<attribute name="contractTextID">
+<value>4</value>
+</attribute>
+<attribute name="contractText">
+<value>./clob/ContractText_4_2</value>
+</attribute>
+<attribute name="languageCode">
+<value>LN1</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="typeCode">
+<value>CT2</value>
+</attribute>
+<attribute name="versionNo">
+<value>0</value>
+</attribute>
+</row>
+<row>
+<attribute name="contractTextID">
+<value>5</value>
+</attribute>
+<attribute name="contractText">
+<value>./clob/ContractText_5_2</value>
+</attribute>
+<attribute name="languageCode">
+<value>LN1</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="typeCode">
+<value>CT2</value>
+</attribute>
+<attribute name="versionNo">
+<value>0</value>
+</attribute>
+</row>
+</table>

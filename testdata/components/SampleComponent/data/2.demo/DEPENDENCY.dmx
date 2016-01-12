@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="DEPENDENCY" override="true">
+<column name="dependencyID" type="id"/>
+<column name="dependentType" type="text"/>
+<column name="dependentID" type="text"/>
+<column name="precedentType" type="text"/>
+<column name="precedentID" type="text"/>
+<column name="dependentIDHash" type="id"/>
+<column name="precedentIDHash" type="id"/>
+</table>

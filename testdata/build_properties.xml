@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<!--
+
+  This is the ant properties file for Curam projects.
+  It contains all projects used by the application build.
+
+-->
+<project name="app_properties">
+
+<!--  *******************************  -->
+<!--  ***  Load from Environment  ***  -->
+<!--  *******************************  -->
+
+<property environment="sysenv."/>
+
+  <!-- ============================================================ -->
+  <!--
+   ! GLOBAL PROPERTIES AND PATHS
+   !
+   ! Property name conventions:
+   !   dir.xxx - directory
+   !   jar.xxx - jar file
+   !   pgm.xxx - executable program or script
+   !   fil.xxx - other files
+   !   prp.xxx - other properties
+   !   prm.xxx - parameters to antcall task
+   !-->
+
+  <!-- Environment Settings -->
+  <property name="JAVA_HOME" value="${sysenv.JAVA_HOME}"/>
+
+  <property name="base.dir" value="."/>
+  <property name="base.classpath" value="lib/xml.jar:."/>
+  
+
+  <property name="dir.dmx.baseline" value="${dir.base}/baseline"/>
+  <property name="dir.dmx.update" value="${dir.base}/update"/>
+  <property name="dir.dmx.output" value="${dir.base}/difference"/>
+
+</project>

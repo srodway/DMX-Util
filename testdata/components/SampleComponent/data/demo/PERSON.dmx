@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PERSON" override="true">
+<column name="concernRoleID" type="id"/>
+<column name="personBirthName" type="text"/>
+<column name="dateOfBirth" type="date"/>
+<column name="dateOfDeath" type="date"/>
+<column name="gender" type="text"/>
+<column name="specialInterestCode" type="text"/>
+<column name="maritalStatusCode" type="text"/>
+<column name="nationalityCode" type="text"/>
+<column name="residencyAbroadInd" type="bool"/>
+<column name="motherBirthSurname" type="text"/>
+<column name="comments" type="text"/>
+<column name="type" type="text"/>
+<column name="dateOfBirthVerInd" type="bool"/>
+<column name="dateOfDeathVerInd" type="bool"/>
+<column name="primaryAlternateID" type="text"/>
+<column name="countryOfBirth" type="text"/>
+<column name="placeOfBirth" type="text"/>
+<column name="pinNumber" type="text"/>
+<column name="primaryAlternateNameID" type="id"/>
+<column name="ethnicOriginCode" type="text"/>
+<column name="paymentFrequency" type="text"/>
+<column name="nextPaymentDate" type="date"/>
+<column name="currencyType" type="text"/>
+<column name="methodOfPmtCode" type="text"/>
+<column name="upperPersonBirthName" type="text"/>
+<column name="upperMotherBirthSurname" type="text"/>
+<column name="race" type="text"/>
+<column name="indigenousGroupCode" type="text"/>
+<column name="indigenousPersonInd" type="bool"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+</table>

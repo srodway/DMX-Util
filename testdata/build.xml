@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+
+Copyright IBM Corporation 2012. All Rights Reserved.
+
+US Government Users Restricted Rights - Use, duplication or disclosure
+restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<project name="dmxDifference" default="dmxFileList">
+
+
+	<property environment="sysenv."/>
+	<!--  ***********************  -->
+	<!--  ***  I M P O R T S  ***  -->
+	<!--  ***********************  -->
+	<!-- build properties -->
+	<import file="./build_properties.xml"/>
+
+	<!--  *********************************  -->
+	<!--  ***  M A I N   T A R G E T S  ***  -->
+	<!--  *********************************  -->
+
+
+
+	<!--  **************************************************************************************  -->
+	<!--  ***  Perform different process between baseline DMX and updated DMX, generating    ***  -->
+	<!--  ***  a new file that just contains the modified, inserted data rows for each table ***  -->
+	<!--  **************************************************************************************  -->
+
+	<target name="dmxFileList">
+		<apply executable="java"> 
+	    <arg value="-cp"/> 
+	    <arg pathref="${base.classpath}"/> 
+	    <arg value="-f"/> 
+	    <srcfile/> 
+	    <arg line="-o ${dir.dmx.output}"/> 
+	    <fileset dir="${dir.dmx.baseline}" casesensitive="yes">
+	    	<include name="*.dmx"/> 
+	    </fileset>
+	    <arg value="${dir.dmx.baseline}"/>
+	    <arg value="${dir.dmx.update}"/>
+	  </apply>
+
+	</target>
+
+</project>

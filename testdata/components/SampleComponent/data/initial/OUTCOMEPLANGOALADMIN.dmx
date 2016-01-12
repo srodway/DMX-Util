@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="OUTCOMEPLANGOALADMIN">
+  <column name="outcomePlanGoalAdminID" type="id" />
+  <column name="nameTextID" type="id" />
+  <column name="descriptionTextID" type="id" />
+  <column name="reference" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="outcomePlanGoalAdminID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value>24429</value>
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value>24430</value>
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="outcomePlanGoalAdminID">
+      <value>50036</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value>50017</value>
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value>50018</value>
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

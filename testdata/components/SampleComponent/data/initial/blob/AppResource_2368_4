@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  PID 5725-H26
+  
+  Copyright IBM Corporation 2015. All Rights Reserved.
+  
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ILPersonHome">
+
+  <tc:page-param name="concernRoleID"/>
+
+  <tc:menu id="PersonHomeMenu"/> 
+  
+  <!-- Details panel -->
+  <tc:context height="128" page-id="Person_homeTabDetails"/>
+
+  <!-- See Home.nav for details of the tree meta-data. -->
+  <tc:navigation id="ILPersonHome"/> 
+  
+  <tc:tab-refresh>
+  
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Person_modifyPerson"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAddressFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAddressFromView"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelEmailAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createEmailAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyEmailAddressFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyEmailAddressFromView"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelPhoneNumber"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createPhoneNumber"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyPhoneNumberFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyPhoneNumberFromView"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelWebAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createWebAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyWebAddressFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyWebAddressFromView"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelAlternateID"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createAlternateID"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAlternateIDFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAlternateIDFromView"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Person_createAlternateName"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Person_modifyAlternateNameFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Person_modifyAlternateNameFromView"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Person_cancelAlternateName"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="SpecialCaution_create"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="SpecialCaution_modify"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="SpecialCaution_delete"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Person_removeImage"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Person_addImage"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ICSample_selectIntegratedCaseType"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="InvestigationSample_selectTypeForPerson"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Incident_createIncidentForParticipant1"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Incident_closeIncident1"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Incident_deleteIncident1"/>
+    
+  </tc:tab-refresh>
+
+
+</tc:tab-config>

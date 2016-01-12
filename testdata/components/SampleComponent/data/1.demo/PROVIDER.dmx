@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PROVIDER" override="true">
+<column name="providerConcernRoleID" type="id"/>
+<column name="providerEnquiryID" type="id"/>
+<column name="physicalCapacity" type="number"/>
+<column name="paymentFrequency" type="text"/>
+<column name="methodOfPayment" type="id"/>
+<column name="currencyType" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="reservationGracePeriod" type="number"/>
+<column name="overrideMDRInd" type="bool"/>
+<column name="preferredSEMethod" type="text"/>
+<column name="areasSvdInfoTxtID" type="id"/>
+<column name="clientInfoTextID" type="id"/>
+<column name="name" type="text"/>
+<column name="nameUpper" type="text"/>
+<column name="enrollmentDateTime" type="timestamp"/>
+<column name="endDateTime" type="timestamp"/>
+<column name="acceptCWReferral" type="bool"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+</table>

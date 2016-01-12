@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PRODUCTDELIVERYPATTERNINFO" override="true">
+<column name="productDeliveryPatternInfoID" type="id"/>
+<column name="productDeliveryPatternID" type="id"/>
+<column name="deliveryMethodID" type="id"/>
+<column name="name" type="text"/>
+<column name="maximumAmount" type="number"/>
+<column name="deliveryFrequency" type="text"/>
+<column name="coverPattern" type="text"/>
+<column name="offset" type="number"/>
+<column name="fromDate" type="date"/>
+<column name="recordStatus" type="text"/>
+<column name="comments" type="text"/>
+<column name="commentsTextID" type="id"/>
+<column name="nameTextID" type="id"/>
+<column name="versionNo" type="number"/>
+</table>

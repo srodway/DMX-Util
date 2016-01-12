@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="EXTERNALUSER" override="true">
+<column name="userName" type="text"/>
+<column name="accountEnabled" type="bool"/>
+<column name="applicationCode" type="text"/>
+<column name="creationDate" type="date"/>
+<column name="title" type="text"/>
+<column name="firstname" type="text"/>
+<column name="surname" type="text"/>
+<column name="fullName" type="text"/>
+<column name="lastSuccessLogin" type="timestamp"/>
+<column name="loginDayMon" type="bool"/>
+<column name="loginDayTues" type="bool"/>
+<column name="loginDayWed" type="bool"/>
+<column name="loginDayThurs" type="bool"/>
+<column name="loginDayFri" type="bool"/>
+<column name="loginDaySat" type="bool"/>
+<column name="loginDaySun" type="bool"/>
+<column name="loginFailures" type="number"/>
+<column name="loginRestrictions" type="bool"/>
+<column name="loginTimeFrom" type="timestamp"/>
+<column name="loginTimeTo" type="timestamp"/>
+<column name="logsSincePWDChange" type="number"/>
+<column name="password" type="text"/>
+<column name="passwordChanged" type="date"/>
+<column name="passwordExpiryDate" type="date"/>
+<column name="pwdChangeAfterXLog" type="number"/>
+<column name="pwdChangeEveryXDay" type="number"/>
+<column name="roleName" type="text"/>
+<column name="sensitivity" type="text"/>
+<column name="statusCode" type="text"/>
+<column name="defaultLocale" type="text"/>
+<column name="type" type="text"/>
+<column name="userPrefSetID" type="text"/>
+<column name="upperUserName" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

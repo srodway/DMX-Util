@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="PROVIDEROFFERING">
+  <column name="providerOfferingID" type="id" />
+  <column name="providerConcernRoleID" type="id" />
+  <column name="serviceOfferingID" type="id" />
+  <column name="startDate" type="date" />
+  <column name="endDate" type="date" />
+  <column name="endReason" type="text" />
+  <column name="denialReason" type="text" />
+  <column name="comments" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="intkProcInfoTextID" type="id" />
+  <column name="clientFeeInfTextID" type="id" />
+  <column name="eligibilityInfoTextID" type="id" />
+  <column name="docsReqdInfTextID" type="id" />
+  <column name="versionNo" type="number" />
+  <column name="lastWritten" type="timestamp" />
+  <row>
+    <attribute name="providerOfferingID">
+      <value>200</value>
+    </attribute>
+    <attribute name="providerConcernRoleID">
+      <value>750</value>
+    </attribute>
+    <attribute name="serviceOfferingID">
+      <value>200</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="endReason">
+      <value />
+    </attribute>
+    <attribute name="denialReason">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>POS2</value>
+    </attribute>
+    <attribute name="intkProcInfoTextID">
+      <value />
+    </attribute>
+    <attribute name="clientFeeInfTextID">
+      <value />
+    </attribute>
+    <attribute name="eligibilityInfoTextID">
+      <value />
+    </attribute>
+    <attribute name="docsReqdInfTextID">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="providerOfferingID">
+      <value>201</value>
+    </attribute>
+    <attribute name="providerConcernRoleID">
+      <value>750</value>
+    </attribute>
+    <attribute name="serviceOfferingID">
+      <value>201</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="endReason">
+      <value />
+    </attribute>
+    <attribute name="denialReason">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>POS2</value>
+    </attribute>
+    <attribute name="intkProcInfoTextID">
+      <value />
+    </attribute>
+    <attribute name="clientFeeInfTextID">
+      <value />
+    </attribute>
+    <attribute name="eligibilityInfoTextID">
+      <value />
+    </attribute>
+    <attribute name="docsReqdInfTextID">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="providerOfferingID">
+      <value>202</value>
+    </attribute>
+    <attribute name="providerConcernRoleID">
+      <value>752</value>
+    </attribute>
+    <attribute name="serviceOfferingID">
+      <value>200</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="endReason">
+      <value />
+    </attribute>
+    <attribute name="denialReason">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>POS2</value>
+    </attribute>
+    <attribute name="intkProcInfoTextID">
+      <value />
+    </attribute>
+    <attribute name="clientFeeInfTextID">
+      <value />
+    </attribute>
+    <attribute name="eligibilityInfoTextID">
+      <value />
+    </attribute>
+    <attribute name="docsReqdInfTextID">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="providerOfferingID">
+      <value>203</value>
+    </attribute>
+    <attribute name="providerConcernRoleID">
+      <value>752</value>
+    </attribute>
+    <attribute name="serviceOfferingID">
+      <value>201</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="endReason">
+      <value />
+    </attribute>
+    <attribute name="denialReason">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>POS2</value>
+    </attribute>
+    <attribute name="intkProcInfoTextID">
+      <value />
+    </attribute>
+    <attribute name="clientFeeInfTextID">
+      <value />
+    </attribute>
+    <attribute name="eligibilityInfoTextID">
+      <value />
+    </attribute>
+    <attribute name="docsReqdInfTextID">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="providerOfferingID">
+      <value>204</value>
+    </attribute>
+    <attribute name="providerConcernRoleID">
+      <value>753</value>
+    </attribute>
+    <attribute name="serviceOfferingID">
+      <value>201</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="endReason">
+      <value />
+    </attribute>
+    <attribute name="denialReason">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>POS2</value>
+    </attribute>
+    <attribute name="intkProcInfoTextID">
+      <value />
+    </attribute>
+    <attribute name="clientFeeInfTextID">
+      <value />
+    </attribute>
+    <attribute name="eligibilityInfoTextID">
+      <value />
+    </attribute>
+    <attribute name="docsReqdInfTextID">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+</table>
+

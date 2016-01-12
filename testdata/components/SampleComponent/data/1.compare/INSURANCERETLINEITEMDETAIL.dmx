@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="INSURANCERETLINEITEMDETAIL">
+  <column name="insRetLineItemDtlID" type="id" />
+  <column name="insuranceRetLineItemID" type="id" />
+  <column name="numInsuranceUnits" type="number" />
+  <column name="fromDate" type="date" />
+  <column name="toDate" type="date" />
+  <column name="totalContributionAmt" type="number" />
+  <column name="employeeConAmt" type="number" />
+  <column name="employerConAmt" type="number" />
+  <column name="incomeAmount" type="number" />
+  <column name="employmentTypeCode" type="text" />
+  <column name="fundID" type="id" />
+  <column name="comments" type="text" />
+  <column name="statusCode" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="insRetLineItemDtlID">
+      <value>4601</value>
+    </attribute>
+    <attribute name="insuranceRetLineItemID">
+      <value>4501</value>
+    </attribute>
+    <attribute name="numInsuranceUnits">
+      <value>52</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>1999-01-01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value>1999-12-31</value>
+    </attribute>
+    <attribute name="totalContributionAmt">
+      <value>30000.00</value>
+    </attribute>
+    <attribute name="employeeConAmt">
+      <value>10000.00</value>
+    </attribute>
+    <attribute name="employerConAmt">
+      <value>20000.00</value>
+    </attribute>
+    <attribute name="incomeAmount">
+      <value>50000.00</value>
+    </attribute>
+    <attribute name="employmentTypeCode">
+      <value>ET1</value>
+    </attribute>
+    <attribute name="fundID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>LS3</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="insRetLineItemDtlID">
+      <value>4602</value>
+    </attribute>
+    <attribute name="insuranceRetLineItemID">
+      <value>4502</value>
+    </attribute>
+    <attribute name="numInsuranceUnits">
+      <value>52</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>1999-01-01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value>1999-12-31</value>
+    </attribute>
+    <attribute name="totalContributionAmt">
+      <value>20000.00</value>
+    </attribute>
+    <attribute name="employeeConAmt">
+      <value>5000.00</value>
+    </attribute>
+    <attribute name="employerConAmt">
+      <value>15000.00</value>
+    </attribute>
+    <attribute name="incomeAmount">
+      <value>40000.00</value>
+    </attribute>
+    <attribute name="employmentTypeCode">
+      <value>ET2</value>
+    </attribute>
+    <attribute name="fundID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>LS3</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="insRetLineItemDtlID">
+      <value>4603</value>
+    </attribute>
+    <attribute name="insuranceRetLineItemID">
+      <value>4503</value>
+    </attribute>
+    <attribute name="numInsuranceUnits">
+      <value>52</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>1999-01-01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value>1999-12-31</value>
+    </attribute>
+    <attribute name="totalContributionAmt">
+      <value>5000.00</value>
+    </attribute>
+    <attribute name="employeeConAmt">
+      <value>1000.00</value>
+    </attribute>
+    <attribute name="employerConAmt">
+      <value>4000.00</value>
+    </attribute>
+    <attribute name="incomeAmount">
+      <value>10000.00</value>
+    </attribute>
+    <attribute name="employmentTypeCode">
+      <value>ET1</value>
+    </attribute>
+    <attribute name="fundID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>LS3</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="insRetLineItemDtlID">
+      <value>4604</value>
+    </attribute>
+    <attribute name="insuranceRetLineItemID">
+      <value>4504</value>
+    </attribute>
+    <attribute name="numInsuranceUnits">
+      <value>52</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>1999-01-01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value>1999-12-31</value>
+    </attribute>
+    <attribute name="totalContributionAmt">
+      <value>5000.00</value>
+    </attribute>
+    <attribute name="employeeConAmt">
+      <value>1000.00</value>
+    </attribute>
+    <attribute name="employerConAmt">
+      <value>4000.00</value>
+    </attribute>
+    <attribute name="incomeAmount">
+      <value>10000.00</value>
+    </attribute>
+    <attribute name="employmentTypeCode">
+      <value>ET1</value>
+    </attribute>
+    <attribute name="fundID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>LS3</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="insRetLineItemDtlID">
+      <value>4605</value>
+    </attribute>
+    <attribute name="insuranceRetLineItemID">
+      <value>4505</value>
+    </attribute>
+    <attribute name="numInsuranceUnits">
+      <value>52</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>1999-01-01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value>1999-12-31</value>
+    </attribute>
+    <attribute name="totalContributionAmt">
+      <value>5000.00</value>
+    </attribute>
+    <attribute name="employeeConAmt">
+      <value>1000.00</value>
+    </attribute>
+    <attribute name="employerConAmt">
+      <value>4000.00</value>
+    </attribute>
+    <attribute name="incomeAmount">
+      <value>10000.00</value>
+    </attribute>
+    <attribute name="employmentTypeCode">
+      <value>ET1</value>
+    </attribute>
+    <attribute name="fundID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>LS3</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="insRetLineItemDtlID">
+      <value>4606</value>
+    </attribute>
+    <attribute name="insuranceRetLineItemID">
+      <value>4506</value>
+    </attribute>
+    <attribute name="numInsuranceUnits">
+      <value>52</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>2000-01-01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value>2000-12-31</value>
+    </attribute>
+    <attribute name="totalContributionAmt">
+      <value>40000.00</value>
+    </attribute>
+    <attribute name="employeeConAmt">
+      <value>10000.00</value>
+    </attribute>
+    <attribute name="employerConAmt">
+      <value>30000.00</value>
+    </attribute>
+    <attribute name="incomeAmount">
+      <value>70000.00</value>
+    </attribute>
+    <attribute name="employmentTypeCode">
+      <value>ET1</value>
+    </attribute>
+    <attribute name="fundID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>LS3</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="insRetLineItemDtlID">
+      <value>4607</value>
+    </attribute>
+    <attribute name="insuranceRetLineItemID">
+      <value>4507</value>
+    </attribute>
+    <attribute name="numInsuranceUnits">
+      <value>52</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>2000-01-01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value>2000-12-31</value>
+    </attribute>
+    <attribute name="totalContributionAmt">
+      <value>30000.00</value>
+    </attribute>
+    <attribute name="employeeConAmt">
+      <value>10000.00</value>
+    </attribute>
+    <attribute name="employerConAmt">
+      <value>20000.00</value>
+    </attribute>
+    <attribute name="incomeAmount">
+      <value>50000.00</value>
+    </attribute>
+    <attribute name="employmentTypeCode">
+      <value>ET2</value>
+    </attribute>
+    <attribute name="fundID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>LS3</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="insRetLineItemDtlID">
+      <value>4608</value>
+    </attribute>
+    <attribute name="insuranceRetLineItemID">
+      <value>4508</value>
+    </attribute>
+    <attribute name="numInsuranceUnits">
+      <value>52</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>2000-01-01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value>2000-12-31</value>
+    </attribute>
+    <attribute name="totalContributionAmt">
+      <value>10000.00</value>
+    </attribute>
+    <attribute name="employeeConAmt">
+      <value>2500.00</value>
+    </attribute>
+    <attribute name="employerConAmt">
+      <value>7500.00</value>
+    </attribute>
+    <attribute name="incomeAmount">
+      <value>15000.00</value>
+    </attribute>
+    <attribute name="employmentTypeCode">
+      <value>ET1</value>
+    </attribute>
+    <attribute name="fundID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>LS3</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="insRetLineItemDtlID">
+      <value>4609</value>
+    </attribute>
+    <attribute name="insuranceRetLineItemID">
+      <value>4509</value>
+    </attribute>
+    <attribute name="numInsuranceUnits">
+      <value>52</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>2000-01-01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value>2000-12-31</value>
+    </attribute>
+    <attribute name="totalContributionAmt">
+      <value>10000.00</value>
+    </attribute>
+    <attribute name="employeeConAmt">
+      <value>2500.00</value>
+    </attribute>
+    <attribute name="employerConAmt">
+      <value>7500.00</value>
+    </attribute>
+    <attribute name="incomeAmount">
+      <value>15000.00</value>
+    </attribute>
+    <attribute name="employmentTypeCode">
+      <value>ET1</value>
+    </attribute>
+    <attribute name="fundID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>LS3</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="insRetLineItemDtlID">
+      <value>4610</value>
+    </attribute>
+    <attribute name="insuranceRetLineItemID">
+      <value>4510</value>
+    </attribute>
+    <attribute name="numInsuranceUnits">
+      <value>52</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>2000-01-01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value>2000-12-31</value>
+    </attribute>
+    <attribute name="totalContributionAmt">
+      <value>10000.00</value>
+    </attribute>
+    <attribute name="employeeConAmt">
+      <value>2000.00</value>
+    </attribute>
+    <attribute name="employerConAmt">
+      <value>8000.00</value>
+    </attribute>
+    <attribute name="incomeAmount">
+      <value>20000.00</value>
+    </attribute>
+    <attribute name="employmentTypeCode">
+      <value>ET1</value>
+    </attribute>
+    <attribute name="fundID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>LS3</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

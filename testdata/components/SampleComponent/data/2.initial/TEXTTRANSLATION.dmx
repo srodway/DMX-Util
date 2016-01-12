@@ -1,0 +1,4090 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="TEXTTRANSLATION">
+  <column name="textTranslationID" type="id" />
+  <column name="localizableTextID" type="id" />
+  <column name="localeCode" type="text" />
+  <column name="text" type="text" />
+  <column name="upperShortText" type="text" />
+  <column name="shortText" type="text" />
+  <row>
+    <attribute name="textTranslationID">
+      <value>10000</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10000</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>I Need Help!</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10001</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10001</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Check For Eligibility</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10002</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10002</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Apply for Benefits</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10003</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10003</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Citizen Campaign Entity Propagator Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10004</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10004</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Contains Rules for Outreach Campaigns</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10191</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10191</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value />
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value>Recommendation Conditions</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10192</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10192</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value />
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value>Contains rules used to filter the recommended activities on an outcome plan.</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>11000</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>11000</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Case Entities Propagator Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>11001</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>11001</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Entities Propagation Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>11002</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>11002</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Dynamic Evidence Calculated Attributes</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>11003</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>11003</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Contains Rules for calculating Dynamic Evidence Calculated Attributes</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>11004</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>11004</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Dynamic Evidence Summary Information</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>11005</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>11005</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Contains Rules for calculating Dynamic Evidence Summary Information</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>11006</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>11006</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Dynamic Evidence Validation</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>11007</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>11007</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Contains Rules for Dynamic Evidence Custom Validations</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>11008</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>11008</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Dynamic Evidence Rule Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>11009</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>11009</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Evidence Summary Rule Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>11010</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>11010</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Evidence Validation Rule Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>11011</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>11011</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Evidence Calculated Attributes Rule Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>1201</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>3301</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>To log in you must enter your date of birth in the form mm/dd/yyyy, your social security number and your PIN. The PIN is supplied to you by your Health and Human Services Agency. If you have not received a PIN please call 800 555 PIN.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>12118</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>12118</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Assessment Rules Interface</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>ASSESSMENT RULES INTERFACE</value>
+    </attribute>
+    <attribute name="shortText">
+      <value>Assessment Rules Interface</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>12119</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>12119</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Recommendation Condition Rules Interface</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>RECOMMENDATION CONDITION RULES INTERFACE</value>
+    </attribute>
+    <attribute name="shortText">
+      <value>Recommendation Condition Rules Interface</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>19000</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>19000</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Intake Process - Standard Entity</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>19001</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>19001</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Triage</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>19002</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>19002</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Initial Contact</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>19003</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>19003</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Application Todo</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>19004</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>19004</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Common data rule classes for Intake Applications</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>19351</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>19351</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Application Reference</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>19352</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>19352</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The application reference number</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2001</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2001</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Propagation of Product setup information for CER Products.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2002</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2002</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Propagation of Case Related Entities.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2003</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2003</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Propagation of Participant Related Entities.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2004</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2004</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Propagation of Rate Rule Objects.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2005</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2005</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Case Entities Rule Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2006</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2006</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Product Eligibility Entitlement Rule Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2007</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2007</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Entities Rule Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2008</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2008</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Default Product Eligibility Entitlement Rule Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2009</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2009</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Abstract Basic Product Decision Details Rule Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2010</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2010</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Default Product Decision Details Rule Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2011</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2011</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Product Decision Details Rule Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2012</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2012</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Default Product Key Decision Factors Rule Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2013</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2013</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Product Key Decision Factors Rule Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2014</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2014</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Abstract Allocation Targets Rule Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2015</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2015</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Default Allocation Targets Rule Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2300</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2300</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Curam Attachment</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2301</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2301</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The Attachment document type</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2302</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2302</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Curam Pro Forma</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2303</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2303</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The Pro Forma document type</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2304</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2304</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Curam Document</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2305</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2305</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The Curam Document document type</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2350</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2350</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Case Reference</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2351</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2351</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The case reference number</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2352</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2352</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Document Type</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2353</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2353</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The type of document</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2354</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2354</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Communication Date</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2355</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2355</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The communication date for attachments associated with communications</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2356</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2356</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Reference</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2357</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2357</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The participant reference number</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2358</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2358</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant First Name</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2359</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2359</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The first name of the participant</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2360</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2360</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Last Name</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2361</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2361</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The last name of the participant</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2362</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2362</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant DOB</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2363</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2363</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The date of birth of the participant</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2364</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2364</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Document Receipt Date</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2365</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2365</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The date on which the document was received</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2366</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2366</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Document Type Code</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2367</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2367</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The type code of document</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2368</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2368</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Concerning Participant Reference</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2369</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2369</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The concerning participant reference number</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2370</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2370</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Correspondent Participant Reference</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2371</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2371</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The correspondent participant reference number</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2372</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2372</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Case Reference</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2373</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2373</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The case reference number</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2374</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2374</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Communication Date</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2375</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2375</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>The communication date for pro forma communications</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Incapacity Benefit Summary Category</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24001</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24001</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>PD Incapacity Benefit Summary Category</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24002</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24002</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Incapacity Benefit Product Period</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24003</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24003</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Incapacity Benefit Decision Comparison</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24004</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24004</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Incapacity Benefit - Standard Entity</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24051</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24051</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Adult Social Care - Standard Entity</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24052</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24052</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Adult Social Care - Active Succession Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24053</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24053</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Practitioner Certificate Entity Progagator Configuration Active Succession Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24055</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24055</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>IBProduct Type Entity Progagator Configuration Active Succession Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24056</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24056</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Diagnosis Entity Progagator Configuration Active Succession Set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24057</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24057</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Creole Dev Rate Rule Object</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24058</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24058</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>ASCLivingArrangementDataRuleSet - Active Succession Set Propagator Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24059</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24059</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>ASCLivingArrangementDataRuleSet - Active Succession Set Propagator Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24060</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24060</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>ASCAlienDataRuleSet - Active Succession Set Propagator Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24061</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24061</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>ASCHouseholdMemberDataRuleSet - Active Succession Set Propagator Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24500</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24500</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Adult Social Care Program</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24501</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24506</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Adult Social Care Internal Application Summary</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24502</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24503</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Adult Social Care Internal Application</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>24503</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>24504</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Adult Social Care Application Case</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>27001</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>27001</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Intake Authorization</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>27002</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>27002</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Contains rules for use in the intake authorization process both at application and program level.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2701</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2701</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Eligibility and Entitlement: Determination</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2702</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2702</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Contains rules to determine the eligibility and entitlement for a product delivery.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2703</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2703</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Eligibility and Entitlement: Display</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2704</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2704</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Contains rules to populate a display rule category.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2705</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2705</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Eligibility and Entitlement: Key Decision Factors</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2706</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2706</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Contains rules to populate the graphical view of a determination.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2707</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2707</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Dynamic Evidence: Processing</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2708</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2708</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Contains generated rule classes for dynamic evidence types. These rule classes are used to write CREOLE rules for performing evidence validation and calculating summary information and calculated attributes.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2709</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2709</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Dynamic Evidence: Data</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2710</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2710</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Contains generated data rule sets for dynamic evidence types. These data rule sets are used in eligibility and entitlement rules to represent dynamic evidence records and succession sets.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>27100</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>27100</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Direct Application Case Creation Intake Application</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>27101</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>27101</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>This internal intake application is used in the direct creation of application cases.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>27105</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>27105</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Application Case Check Eligibility Ruleset</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>27106</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>27106</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Contains rules for use in the check eligibility processing on the Application Case.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2711</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2711</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Dynamic Evidence: Infrastructure</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2712</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2712</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Contains interface rule sets for dynamic evidence processing such as validation, summary information and calculated attributes.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2713</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2713</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Advisor</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2714</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2714</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Contains rules for use by the advisor.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2731</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2731</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Verification</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2732</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2732</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Contains core and abstract rule artifacts that represent conditional verifications</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29000</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29006</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>PDCNameDataRuleSet - Active Succession Set Propagator Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29001</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29000</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>PDCContactPreferencesDataRuleSet - Active Succession Set Propagator Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29002</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29003</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>PDCIdentificationDataRuleSet - Active Succession Set Propagator Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29003</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29008</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>PDCPhoneNumberDataRuleSet - Active Succession Set Propagator Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29004</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29004</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>PDCBirthAndDeathDataRuleSet - Active Succession Set Propagator Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29005</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29007</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>PDCBankAccountDataRuleSet - Active Succession Set Propagator Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29006</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29005</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>PDCEmailAddressDataRuleSet - Active Succession Set Propagator Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29007</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29002</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>PDCAddressDataRuleSet - Active Succession Set Propagator Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29008</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29001</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>PDCGenderDataRuleSet - Active Succession Set Propagator Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29009</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29009</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Propagation of PDC Duplicate Client Entities.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29010</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29010</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Propagation of Participant Evidence.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29011</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29011</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>PDCPhoneNumberValidationProgagatorConfiguration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29012</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29012</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>PDCBankAccountValidationProgagatorConfiguration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29013</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29013</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Propagation of Participant Evidence Row.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29014</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29014</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Phone Number Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29015</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29015</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Phone Number Data Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29016</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29016</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Address Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29017</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29017</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Address Data Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29018</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29018</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Birth And Death Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29019</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29019</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Birth And Death Data Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29020</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29020</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Contact Preferences Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29021</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29021</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Contact Preferences Data Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29022</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29022</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Gender Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29023</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29023</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Gender Data Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29024</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29024</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Relationships Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29025</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29025</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Relationships Data Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29026</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29026</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Identification Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29027</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29027</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Identification Data Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29028</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29028</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Bank Account Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29029</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29029</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Bank Account Data Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29030</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29030</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Email Address Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29031</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29031</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Email Address Data Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29032</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29032</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Name Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29033</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29033</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Name Data Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29034</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29034</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Bank Account Validation Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29035</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29035</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Email Address Validation Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29036</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29036</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Identification Validation Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29037</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29037</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Name Validation Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29038</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29038</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Gender Validation Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29039</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29039</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Contact Preferences Validation Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29040</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29040</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Birth And Death Validation Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29041</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29041</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Phone Number Validation Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29042</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29042</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Address Validation Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29043</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29043</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Duplicate Client Validation Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29044</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29044</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Name Summary Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29045</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29045</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Birth And Death Summary Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29046</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29046</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Phone Number Summary Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29047</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29047</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Contact Preferences Summary Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29048</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29048</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Address Summary Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29049</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29049</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Evidence Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29050</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29050</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Relationships Summary Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29051</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29051</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant Relationships Validation Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29052</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29052</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant IBAN Validation Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29053</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29053</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Participant IBAN Summary Rule Set.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>29054</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>29054</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>PDCRelationshipsDataRuleSet - Active Succession Set Propagator Configuration</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>3012</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>3012</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Workflow Allocation</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>3013</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>3013</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Contain Workflow Rule Set for CER allocation strategy</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>31000</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>31000</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Recommendations</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>RECOMMENDATIONS</value>
+    </attribute>
+    <attribute name="shortText">
+      <value>Recommendations</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>31001</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>31001</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Contains rules used to determine the recommended activities for an outcome plan.</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>CONTAINS RULES USED TO DETERMINE THE RECOMMENDED ACTIVITIES FOR AN OUTCOME PLAN</value>
+    </attribute>
+    <attribute name="shortText">
+      <value>Contains rules used to determine the recommended activities for an outcome plan.</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>31002</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>31002</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Outcome Plan Recommendations Rules Interface</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>OUTCOME PLAN RECOMMENDATIONS RULES INTERFACE</value>
+    </attribute>
+    <attribute name="shortText">
+      <value>Outcome Plan Recommendations Rules Interface</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>4097</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>4097</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Entity Propagator Configuration for Select Product Funds rule set</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10005</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10005</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Agency Employee description</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>AGENCY EMPLOYEE DESCRIPTION</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10006</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10006</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Agency Employee</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>AGENCY EMPLOYEE</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10007</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10007</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Dentist Description</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>DENTIST DESCRIPTION</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10008</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10008</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Dentist</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>DENTIST</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10011</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10011</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Doctor Description</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>DOCTOR DESCRIPTION</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10012</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10012</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Doctor</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>DOCTOR</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10013</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10013</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Social Worker Description</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>SOCIAL WORKER DESCRIPTION</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10014</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10014</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Social Worker</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>SOCIAL WORKER</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10015</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10015</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Nurse Description</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>NURSE DESCRIPTION</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10016</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10016</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Nurse</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>NURSE</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10017</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10017</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Teacher Description</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>TEACHER DESCRIPTION</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10018</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10018</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Teacher</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>TEACHER</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10019</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10019</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Psychiatrist Description</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>PSYCHIATRIST DESCRIPTION</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10020</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10020</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Psychiatrist</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>PSYCHIATRIST</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10021</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10021</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Psychologist Description</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>PYSCHOLOGIST DESCRIPTION</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10022</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10022</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Psychologist</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>PYSCHOLOGIST</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10023</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10023</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Police Officer Description</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>POLICE OFFICER DESCRIPTION</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>10024</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>10024</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Police Officer</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>POLICE OFFICER</value>
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>27020</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>27020</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>First Name</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>27021</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>27021</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Last Name</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>27022</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>27022</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Date Of Birth</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>27023</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>27023</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Reference</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>27024</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>27024</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Alternate ID List</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>2735</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>2735</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Sample Income And Rental Accomodation Rule Object propagator config</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value />
+    </attribute>
+    <attribute name="shortText">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>3500</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>3001</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>House Care</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>HOUSE CARE</value>
+    </attribute>
+    <attribute name="shortText">
+      <value>House Care</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="textTranslationID">
+      <value>3501</value>
+    </attribute>
+    <attribute name="localizableTextID">
+      <value>3002</value>
+    </attribute>
+    <attribute name="localeCode">
+      <value>en</value>
+    </attribute>
+    <attribute name="text">
+      <value>Child Care</value>
+    </attribute>
+    <attribute name="upperShortText">
+      <value>CHILD CARE</value>
+    </attribute>
+    <attribute name="shortText">
+      <value>Child Care</value>
+    </attribute>
+  </row>
+</table>
+

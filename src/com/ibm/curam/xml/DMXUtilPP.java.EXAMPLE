@@ -1,0 +1,637 @@
+package com.ibm.curam.xml;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.FilenameFilter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import org.apache.commons.io.IOUtils;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.filter.ElementFilter;
+import org.jdom2.filter.Filter;
+import org.jdom2.input.SAXBuilder;
+import org.jdom2.output.Format;
+import org.jdom2.output.XMLOutputter;
+
+/**
+ * This class will create an empty shell like DMX file in the demo folder for each DMX file in the initial folder.
+ * It will also set the table override attribute to true in both initial and demo folders. The concept is 
+ * that all data in Source components will be ignored if favour of that placed in the initial folder of a 
+ * component 
+ */
+public class DMXUtilPP {
+	
+	private final static long maxKeyRange = 999999999;
+	private final static long minCustomKeyValue = 45000;
+	private final static long maxCustomKeyValue = 49999;
+	
+	private String serverDir;
+	/** Component name that holds the data that was exported and is to imported */
+	private String component;
+	private String initialDataDir;
+	private String demoDataDir;
+	private String[] ignoreFiles;
+	private String[] clobExceptionFiles;
+	private String[] primaryKeyExceptionFiles;
+	/**
+	 * Determines whether the override attribute is set to true on the initial and demo data. I'm struggling to think when this would
+	 * or could be anything other than true.
+	 */
+	private boolean overrideTable;
+	/** Denotes whether CTX is generated for codetables found in the codetableitem table but not in existing CTX files, this is to capture
+	 * the codetables added via admin manager
+	 */
+	private boolean createCTX;
+	
+	public DMXUtilPP(final String serverDir, final String component, final String[] ignoreFiles, final boolean overrideTable, 
+			final boolean createCTX, final String[] primaryKeyExceptionFiles, final String[] clobExceptionFiles) {
+		
+		super();
+		this.serverDir = serverDir;
+		this.component = component;
+		this.overrideTable = overrideTable;
+		this.initialDataDir = this.serverDir + "/components/" + component + "/data/initial";  
+		this.demoDataDir = this.serverDir + "/components/" + component + "/data/demo";
+		this.ignoreFiles = ignoreFiles;
+		this.clobExceptionFiles = clobExceptionFiles;
+		this.primaryKeyExceptionFiles = primaryKeyExceptionFiles;
+		//TODO Once implemented the following line should be this.createCTX = createCTX;
+		this.createCTX = false;
+	}
+	
+	public DMXUtilPP(final String serverDir, final String component, final String[] ignoreFiles, final String[] primaryKeyExceptionFiles, final String[] clobExceptionFiles) {
+		this(serverDir, component, ignoreFiles, true, false, primaryKeyExceptionFiles, clobExceptionFiles);
+	}
+	
+	public static void main(String[] args) {
+		try {
+			String[] ignore = {
+				"AUDITTRAIL", "AUTHENTICATIONLOG", "AUTHORISATIONLOG", "BATCHPARAMDEF", "BATCHPARAMDESC", "BATCHPARAMDESCTRANSLATION", 
+				"BATCHPROCDEF", "BATCHPROCDESC", "BATCHPROCDESCTRANSLATION", "CODETABLEDATA", "CODETABLEHEADER", 
+				"CODETABLEHIERARCHY", "CODETABLEITEM", "CTDISPLAYNAME", "EVENTCLASS", "EVENTTYPE", "EVENTWAIT", 
+				"FUNCTIONIDENTIFIER", "TASKASSIGNMENT", "BIZOBJASSOCIATION", "TASKHISTORY", "TASK", "ALERT", 
+				"WORKFLOWDEADLINE", "TRANSITIONINSTANCE", "PROCINSTWDODATA", "PROCESSINSTANCE", "ACTIVITYINSTANCE", "REMINDERS", 
+				"PROCESSDEFINITION", "PROCESSDEFINITIONTRANSLATION", "RULESETINFORMATION", "SECURITYFIDSID", 
+				"SECURITYGROUPSID", "SECURITYIDENTIFIER", "WDOVALUESHISTORY", "GROUPRANGE",
+				"CREOLERULESET", "CREOLERULECLASS", "CREOLEATTRIBUTEAVAILABILITY", "CREOLEATTRIBUTEINHERITANCE", 
+				"CREOLERULEATTRIBUTE", "CREOLERULEATTRIBUTEVALUE", "CREOLERULECLASSINHERITANCE", "CREOLERULEOBJECT", "CREOLERULESETDEPENDENCY",
+				"FAILEDMESSAGE", "MATCHEDEVTARCHIVE", "CODETABLECOMBOITEM", "CODETABLECOMBOTYPE",
+				"PROPERTIES", "PROPDESCRIPTION"
+			};
+
+			String[] primaryKeyException = {"ALLOCATIONTARGET", "CREOLEMIGRATIONCONTROL", "DATASTORESCHEMATRANSLATION", "DATASTORESCHEMA", 
+				"DOCUMENTTEMPLATE", "DPPROCESS", "EXTERNALUSER", "IEGSCRIPTINFO", "KEYSERVER", "KEYSETRANGE", "LANGUAGELOCALEMAP", 
+				"MODULECLASSNAME", "PRECEDENTCHANGESETBATCHCTRL", "RULEOBJECTPROPAGATORCONTROL", "SECURITYGROUP", "SECURITYROLEGROUP", 
+				"SECURITYROLE", "TASKDEFINITION", "USERPREFERENCEINFO", "USERS"};
+			
+			String[] clobException = {"USERPAGECONFIG", "TEXTTRANSLATION"};
+			
+			if (args == null || args.length < 2) {
+				System.out.println("Usage: DMXUtil $serverDir $componentName ");
+				System.out.println("Using default values: ");
+				System.out.println("  $serverDir = C:/10-Workarea/Projects/CEF-EM/EJBServer");				
+				System.out.println("  $componentName = DataUpload");
+				new DMXUtilPP("A:/G4S/EJBServer", "20-Dataupload", ignore, primaryKeyException, clobException).createUploadData();
+				return;
+			}
+			
+			if (args.length == 2) {
+				System.out.println("Using values: ");
+				System.out.println("  $serverDir = " + args[0]);				
+				System.out.println("  $componentName = " + args[1]);
+				new DMXUtilPP(args[0], args[1], ignore, primaryKeyException, clobException).createUploadData();
+				return;
+			}
+			
+			boolean overrideTableArg = false;
+			if (args[2].equals("true"))
+				overrideTableArg = true;
+			
+			System.out.println("Using values: ");
+			System.out.println("  $serverDir = " + args[0]);				
+			System.out.println("  $componentName = " + args[1]);
+			System.out.println("  $overrideTable = " + overrideTableArg);
+			new DMXUtilPP(args[0], args[1], ignore, overrideTableArg, false, primaryKeyException, clobException).createUploadData();
+			
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}		
+	}
+
+	public void createUploadData() throws IOException {
+		long startMS = System.currentTimeMillis();
+		
+		File clobFolder = new File(this.initialDataDir + "/clob");
+		File blobFolder = new File(this.initialDataDir + "/blob");
+		
+		File[] clobFiles = clobFolder.listFiles();		
+		File[] blobFiles = blobFolder.listFiles();
+		
+		renameIgnoreFiles(clobFiles, blobFiles);
+		
+		// list the dmxs
+		File[] dmxFiles = new File(initialDataDir).listFiles(new FilenameFilter() {	
+			@Override
+			public boolean accept(File dir, String name) {
+				return name.endsWith(".dmx");
+			}
+		});
+		
+		if (this.overrideTable)
+			createDemoData(dmxFiles);
+		
+		fixClobReferences();
+		fixUserPageConfigs();
+		
+		updateInitialData(dmxFiles);
+		removeSourceData(dmxFiles);
+		createCTX();
+		
+		System.out.println("Fin: " + (System.currentTimeMillis() - startMS) + "ms");
+	}
+
+	protected void renameIgnoreFiles(File[] clobFiles, File[] blobFiles) {
+		if (this.ignoreFiles == null || this.ignoreFiles.length == 0) {
+			return;
+		}
+		
+		for (String ignoreFile : this.ignoreFiles) {
+			File f = new File(this.initialDataDir + "/" + ignoreFile + ".dmx");
+			f.renameTo(new File(this.initialDataDir + "/" + ignoreFile + ".dmx.ignore"));
+			
+			File clobFolder = new File(this.initialDataDir + "/clob");
+		    for (int i = 0; i < clobFiles.length; i++) {
+		      String clobFileName = clobFiles[i].getName().toUpperCase();
+		      if (clobFileName.startsWith(ignoreFile + "_")) 
+		    	  clobFiles[i].renameTo(new File(clobFolder + "/" + clobFileName + ".clob.ignore"));
+		    }
+		    
+			File blobFolder = new File(this.initialDataDir + "/blob");
+		    for (int j = 0; j < blobFiles.length; j++) {
+		      String blobFileName = blobFiles[j].getName().toUpperCase();
+		      if (blobFileName.startsWith(ignoreFile + "_")) 
+		    	  blobFiles[j].renameTo(new File(blobFolder + "/" + blobFileName + ".blob.ignore"));
+		    }
+		}
+	}
+	
+    // @deprecated
+	protected void updateLobPath(final String dmxName) throws IOException {		
+		BufferedReader in = new BufferedReader(new FileReader(this.initialDataDir + "/" + dmxName + ".dmx"));
+		String line = null;
+		StringBuffer buf = new StringBuffer();
+		
+		while ((line = in.readLine()) != null) {
+			if (line.contains("./blob/")) {
+				line = line.replaceAll("./blob/", "./" + this.component + "/data/initial/blob/");
+			} else if (line.contains("./clob/")) {
+				line = line.replaceAll("./clob/", "./" + this.component + "/data/initial/clob/");
+			}
+			
+			buf.append(line);
+			buf.append(System.getProperty("line.separator"));
+		}
+		in.close();
+
+		createFile(buf, this.initialDataDir + "/" + dmxName + ".dmx");
+	}
+	
+	/**
+	 * Edit the dmx in the initial folder and set the table override to true
+	 * @param dmxFiles
+	 * @throws IOException
+	 */
+	protected void updateInitialData(final File[] dmxFiles) throws IOException {
+		
+		for (File f : dmxFiles) {
+			BufferedReader in = new BufferedReader(new FileReader(f));
+			String line = null;
+			StringBuffer buf = new StringBuffer();
+		
+			boolean fileChanged = false;
+			while ((line = in.readLine()) != null) {
+				if (overrideTable && line.contains("<table name=") && !line.contains("override=")) {
+					line = line.replaceAll(">", " override=\"true\">");
+					fileChanged = true;
+				} else if (line.contains("./blob/")) {
+					line = line.replaceAll("./blob/", "./" + this.component + "/data/initial/blob/");
+					fileChanged = true;
+				} else if (line.contains("./clob/")) {
+					line = line.replaceAll("./clob/", "./" + this.component + "/data/initial/clob/");
+					fileChanged = true;
+				}
+				
+				buf.append(line);
+				buf.append(System.getProperty("line.separator"));
+			}
+			in.close();
+
+			if (fileChanged) {
+				createFile(buf, f.getAbsolutePath());
+			}
+		}
+	}
+	
+	/**
+	 * Edit the dmx in the initial folder and remove rows that are Source
+	 * @param dmxFiles
+	 * @throws IOException
+	 */
+	protected void removeSourceData(final File[] dmxFiles) throws IOException {
+		if (this.overrideTable) {
+			return;
+		}
+		
+		Document pkDoc = null;
+		try {
+			SAXBuilder sb = new SAXBuilder();
+			pkDoc = sb.build(new File(this.serverDir + "/build/ddl/Merged_PrimaryKeys.xml"));
+		} catch (Exception e) {
+			System.out.println("Could not read file: ./build/ddl/Merged_PrimaryKeys.xml; it may not exist!");
+		}	
+		
+		for (File dmx : dmxFiles) {
+			
+			String dmxName = dmx.getName();
+			String dmxTableName = dmxName.substring(0, dmxName.length() - 4);
+			String pkColumnName = "";
+			
+			Filter nameFilter = new ElementFilter("name");
+			Iterator pkIterator = pkDoc.getDescendants(nameFilter);
+			
+			while (pkIterator.hasNext()) {
+				Element pkElement = (Element)pkIterator.next(); 
+				String pkUpperTableName = pkElement.getAttributeValue("tablename").toUpperCase();
+				
+				if (dmxTableName.equals(pkUpperTableName)) {
+					pkColumnName = pkElement.getChild("attribute").getAttributeValue("keyname");
+					break;
+				}
+			}
+			
+			boolean primaryKeyExceptionDMX = false;
+			for (String primaryKeyExceptionFile : this.primaryKeyExceptionFiles) {
+				if (dmxTableName.equals(primaryKeyExceptionFile)) {
+					primaryKeyExceptionDMX = true;
+				}			
+			}
+			
+			XMLOutputter outputter = new XMLOutputter();
+			outputter.setFormat(Format.getPrettyFormat());
+			
+			if (!pkColumnName.equals("") && !primaryKeyExceptionDMX) {
+				
+				Document dmxDoc = null;
+				Document dmxSource = null;
+				Document dmxRuntime = null;
+				try {
+					SAXBuilder sb = new SAXBuilder();
+					dmxDoc = sb.build(dmx);
+					dmxSource = sb.build(dmx);
+					dmxRuntime = sb.build(dmx);
+				} catch (Exception e) {
+					System.out.println("Could not read file: " + dmx.getPath() + "; it may not exist!");
+				}
+				
+				Filter rowFilter = new ElementFilter("row");
+				dmxSource.getRootElement().removeContent(rowFilter);
+				dmxRuntime.getRootElement().removeContent(rowFilter);
+				
+				//dmxSource.getRootElement().removeAttribute("override");
+		    	//dmxRuntime.getRootElement().removeAttribute("override");
+				
+				Filter attributeFilter = new ElementFilter("attribute");
+				Iterator attributeIterator = dmxDoc.getDescendants(attributeFilter);
+				
+				while (attributeIterator.hasNext()) {
+					Element attributeElement = (Element)attributeIterator.next(); 
+					if (attributeElement.getAttributeValue("name").equals(pkColumnName)) {
+						try {
+							long attributeValue = new Long(attributeElement.getChildText("value"));
+							// if the primary key is generated it will be less than zero 
+							// or greater than the Source allocated key ranges
+							boolean customKey = false;
+							if ((attributeValue > minCustomKeyValue - 1) && (attributeValue < maxCustomKeyValue + 1)) {
+								customKey = true;
+							}
+							if ((attributeValue < -maxKeyRange) || (attributeValue > maxKeyRange) || (customKey)) {
+								dmxRuntime.getRootElement().addContent(((Element) attributeElement.getParentElement().clone()).detach());
+							} else 
+								dmxSource.getRootElement().addContent(((Element) attributeElement.getParentElement().clone()).detach());
+						} catch (java.lang.NumberFormatException nfe) {
+							// if the primary key is not a number
+							// add the row anyway just in case
+							dmxRuntime.getRootElement().addContent(((Element)attributeElement.getParentElement().clone()).detach());
+						}
+					}
+				} 
+				
+				dmxSource.setContent(dmxSource.getRootElement());
+			    dmxRuntime.setContent(dmxRuntime.getRootElement());
+	    	
+				// check source DMX has rows before creating the file
+				if (dmxSource.getDescendants(rowFilter).hasNext()) {
+				    try {
+					    FileWriter writer = new FileWriter(this.initialDataDir + "/" + dmxName + ".source");
+					    outputter.output(dmxSource, writer);
+					    writer.close();
+				    } catch (java.io.IOException e) {
+				        e.printStackTrace();
+				    }
+				}
+				
+				// rename unmodified extracted DMX file
+				dmx.renameTo(new File(this.initialDataDir + "/" + dmxName + ".extracted"));
+				
+				// check runtime DMX has rows before creating the file
+				if (dmxRuntime.getDescendants(rowFilter).hasNext()) {
+				    try {
+					    FileWriter writer = new FileWriter(this.initialDataDir + "/" 
+					    		+ dmxName.substring(0, (dmxName.length() - 4)) + "_runtime.dmx");
+					    outputter.output(dmxRuntime, writer);
+					    writer.close();
+				    } catch (java.io.IOException e) {
+				        e.printStackTrace();
+				    }
+				}
+			} else {
+				// if there is no primary key or primary key is non-numeric,
+				// use "override" attribute to block all other data 
+				BufferedReader in = new BufferedReader(new FileReader(dmx));
+				StringBuffer buffer = new StringBuffer();
+				
+				dmx.renameTo(new File(this.initialDataDir + "/" 
+						+ dmxName.substring(0, (dmxName.length() - 4)) + ".extracted"));
+				
+				String line = null;
+				while ((line = in.readLine()) != null) {
+					if (line.contains("<table name=") && !line.contains("override=")) {
+						line = line.replaceAll(">", " override=\"true\">");
+					}
+					buffer.append(line);
+					buffer.append(System.getProperty("line.separator"));
+				}
+				in.close();
+				createFile(buffer, (this.initialDataDir + "/" + dmxName));
+			}
+		}
+		
+		// get a new list of DMX files
+		File[] dmxFileList = new File(initialDataDir).listFiles(new FilenameFilter() {	
+			@Override
+			public boolean accept(File dir, String name) {
+				return name.endsWith(".dmx");
+			}
+		});
+		
+		for (File dmxFile : dmxFileList) {
+			BufferedReader in = new BufferedReader(new FileReader(dmxFile));
+			String line = null;
+			StringBuffer buf = new StringBuffer();
+		
+			boolean fileChanged = false;
+			while ((line = in.readLine()) != null) {
+				if (line.contains("/blob/")) {
+					String blobFileName = line.substring((line.indexOf("/blob/") + 6), line.indexOf("</value>"));
+					File blobFile = new File(this.initialDataDir + "/blob/" + blobFileName);
+					blobFile.renameTo(new File(blobFile.getAbsolutePath() + ".blob"));
+					line = line.replace(blobFileName, blobFileName + ".blob");
+					fileChanged = true;
+				} else if (line.contains("/clob/")) {
+					String clobFileName = line.substring((line.indexOf("/clob/") + 6), line.indexOf("</value>"));
+					File clobFile = new File(this.initialDataDir + "/clob/" + clobFileName);
+					clobFile.renameTo(new File(clobFile.getAbsolutePath() + ".clob"));
+					line = line.replace(clobFileName, clobFileName + ".clob");
+					fileChanged = true;
+				}
+				
+				buf.append(line);
+				buf.append(System.getProperty("line.separator"));
+			}
+			in.close();
+
+			if (fileChanged) {
+				createFile(buf, dmxFile.getAbsolutePath());
+			}
+		}
+	}
+	
+	/**
+	 * @throws IOException
+	 */
+	protected void fixClobReferences() throws IOException {
+		
+		for (String tableName : clobExceptionFiles) {
+		
+			final String tableNameString = tableName;
+			File[] dmxFileList = new File(initialDataDir).listFiles(new FilenameFilter() {	
+				@Override
+				public boolean accept(File dir, String name) {
+					CharSequence charSeq = tableNameString;
+					return name.contains(charSeq);
+				}
+			});
+			
+			for (File dmxFile : dmxFileList) {
+				
+				boolean fileContainsClobs = false;
+				
+				Document dmxDoc = null;
+				try {
+					SAXBuilder sb = new SAXBuilder();
+					dmxDoc = sb.build(dmxFile);
+				} catch (Exception e) {
+					System.out.println("Could not read file: " + dmxFile.getPath() + "; it may not exist!");
+				}
+				
+				Filter columnFilter = new ElementFilter("column");
+				Iterator columnIterator = dmxDoc.getDescendants(columnFilter);
+				
+				while (columnIterator.hasNext()) {
+					Element columnElement = (Element)columnIterator.next(); 
+					if (columnElement.getAttributeValue("type").equals("clob")) {
+						fileContainsClobs = true;
+					}
+				} 
+				
+				if (fileContainsClobs) {
+					BufferedReader in = new BufferedReader(new FileReader(dmxFile));
+					String line = null;
+					StringBuffer buffer = new StringBuffer();
+				
+					boolean fileChanged = false;
+					while ((line = in.readLine()) != null) {
+						if (line.contains("/clob/")) {
+							String clobFileRef = line.substring((line.indexOf("<value>") + 7), line.indexOf("</value>"));
+							String clobFileName = line.substring((line.indexOf("/clob/") + 6), line.indexOf("</value>"));
+							File clobFile = new File(this.initialDataDir + "/clob/" + clobFileName);
+	
+							String clobContent;
+							FileInputStream inputStream = new FileInputStream(clobFile);
+							try {
+							    clobContent = IOUtils.toString(inputStream);
+							} finally {
+							    inputStream.close();
+							}
+							
+							line = line.replaceAll(clobFileRef, clobContent);
+							fileChanged = true;
+							clobFile.renameTo(new File(clobFile.getAbsolutePath() + ".fixed"));
+						}
+						
+						buffer.append(line);
+						buffer.append(System.getProperty("line.separator"));
+					}
+					in.close();
+	
+					if (fileChanged) {
+						createFile(buffer, dmxFile.getAbsolutePath());
+					}
+				}
+			}
+		}
+	}
+	
+	/**
+	 * @throws IOException
+	 */
+	protected void fixUserPageConfigs() throws IOException {
+
+		File[] dmxFileList = new File(initialDataDir).listFiles(new FilenameFilter() {	
+			@Override
+			public boolean accept(File dir, String name) {
+				CharSequence charSeq = "USERPAGECONFIG";
+				return name.contains(charSeq);
+			}
+		});
+		
+		for (File dmxFile : dmxFileList) {
+			BufferedReader in = new BufferedReader(new FileReader(dmxFile));
+			String line = null;
+			StringBuffer buf = new StringBuffer();
+		
+			boolean fileChanged = false;
+			while ((line = in.readLine()) != null) {
+				if (line.contains("/clob/")) {
+					
+					String configValue = line.substring((line.indexOf("<value>") + 7), line.indexOf("</value>"));
+				
+					String updatedConfigValue = configValue.replace("<", "&lt;");
+					updatedConfigValue = updatedConfigValue.replace(">", "&gt;");
+					
+					line = line.replace(configValue, updatedConfigValue);
+					fileChanged = true;
+				} 
+				buf.append(line);
+				buf.append(System.getProperty("line.separator"));
+			}
+			in.close();
+
+			if (fileChanged) {
+				createFile(buf, dmxFile.getAbsolutePath());
+			}
+		}
+	}
+	
+	/**
+	 * Create an empty dmx file for each dmx in the initial folder. Set table override to true
+	 * @param dmxFiles
+	 * @throws IOException
+	 */
+	protected void createDemoData(final File[] dmxFiles) throws IOException {
+		for (File f : dmxFiles) {
+			BufferedReader in = new BufferedReader(new FileReader(f));
+			String line = null;
+			StringBuffer buf = new StringBuffer();
+			
+			while ((line = in.readLine()) != null) {
+				if (overrideTable && line.contains("<table name=") && !line.contains("override=")) {
+					line = line.replaceAll(">", " override=\"true\">");
+				}
+				
+				int pos = line.indexOf("<row>");
+				if (pos == -1) {
+					buf.append(line);
+					buf.append(System.getProperty("line.separator"));
+					continue;
+				}
+				if (pos != -1) {
+					// processed the last attribute
+					buf.append("</table>");
+					buf.append(System.getProperty("line.separator"));
+					break;
+				}			
+			}
+			in.close();
+			createFile(buf, demoDataDir + "/" + f.getName());
+		}
+	}
+	
+	private void createFile(final StringBuffer buf, final String fullName) throws IOException {
+		FileOutputStream os = new FileOutputStream(new File(fullName));
+	    os.write(buf.toString().getBytes());
+		os.close();
+	}
+	
+	/**
+	 * @throws IOException 
+	 * 
+	 */
+	protected void createCTX() throws IOException {
+		if (!this.createCTX) {
+			return;
+		}
+		
+		ArrayList<File> ctx = getCTXFiles();
+		
+		BufferedReader in = new BufferedReader(new FileReader(this.initialDataDir + "/" + "CODETABLEITEM" + ".dmx.ignore"));
+		String line = null;
+		StringBuffer buf = new StringBuffer();
+		
+		while ((line = in.readLine()) != null) {
+			if (line.indexOf("\"tableName\"") != -1) {
+				// We have the table name
+			}
+		}
+		
+	}
+	
+	protected ArrayList getCTXFiles() {
+		final String serverCompOrder = System.getenv("SERVER_COMPONENT_ORDER");
+		
+		// a list of of the components that the data upload is over loading. This will be everything left of this.component
+		final String componentsToOverride = serverCompOrder.substring(serverCompOrder.indexOf(this.component) + this.component.length());
+		File[] components = new File(this.serverDir + "/components").listFiles(new FilenameFilter() {	
+			@Override
+			public boolean accept(File file, String name) {
+				return file.isDirectory() && componentsToOverride.contains(name);
+			}
+		});
+				
+		final ArrayList<File> ctx = new ArrayList<File>();
+		for (File f : components) {
+			final ArrayList<File> tmp = new ArrayList<File>();
+			File[] fa = 
+			tmp.toArray(new File(f.getAbsolutePath() +"/codetable").listFiles(new FilenameFilter() {
+				@Override
+				public boolean accept(File dir, String name) {
+					if (name.endsWith(".ctx") || name.endsWith(".CTX")) {
+						tmp.add(new File(dir.getAbsolutePath() + "/" + name));
+					}
+					return true;
+				}
+			}));
+			
+			ctx.addAll(tmp);
+		}
+		
+		return ctx;
+	}
+}

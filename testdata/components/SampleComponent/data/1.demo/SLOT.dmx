@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="SLOT" override="true">
+<column name="slotID" type="id"/>
+<column name="scheduleID" type="id"/>
+<column name="locationID" type="id"/>
+<column name="name" type="text"/>
+<column name="startTime" type="timestamp"/>
+<column name="endTime" type="timestamp"/>
+<column name="recordStatus" type="text"/>
+<column name="comments" type="text"/>
+<column name="maxWorkUnits" type="number"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="frequencyPattern" type="text"/>
+<column name="versionNo" type="number"/>
+<row>
+<attribute name="slotID">
+<value>2</value>
+</attribute>
+<attribute name="scheduleID">
+<value>1</value>
+</attribute>
+<attribute name="locationID">
+<value>1</value>
+</attribute>
+<attribute name="name">
+<value>Afternoon Slot</value>
+</attribute>
+<attribute name="startTime">
+<value>1970-01-01-13.00.00</value>
+</attribute>
+<attribute name="endTime">
+<value>1970-01-01-18.30.00</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="maxWorkUnits">
+<value>20</value>
+</attribute>
+<attribute name="startDate">
+<value/>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="frequencyPattern">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="slotID">
+<value>3</value>
+</attribute>
+<attribute name="scheduleID">
+<value>2</value>
+</attribute>
+<attribute name="locationID">
+<value>1</value>
+</attribute>
+<attribute name="name">
+<value>Morning Slot</value>
+</attribute>
+<attribute name="startTime">
+<value>1970-01-01-09.00.00</value>
+</attribute>
+<attribute name="endTime">
+<value>1970-01-01-12.45.00</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="maxWorkUnits">
+<value>30</value>
+</attribute>
+<attribute name="startDate">
+<value/>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="frequencyPattern">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="slotID">
+<value>4</value>
+</attribute>
+<attribute name="scheduleID">
+<value>2</value>
+</attribute>
+<attribute name="locationID">
+<value>1</value>
+</attribute>
+<attribute name="name">
+<value>Afternoon Slot</value>
+</attribute>
+<attribute name="startTime">
+<value>1970-01-01-13.00.00</value>
+</attribute>
+<attribute name="endTime">
+<value>1970-01-01-18.30.00</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="maxWorkUnits">
+<value>30</value>
+</attribute>
+<attribute name="startDate">
+<value/>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="frequencyPattern">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="slotID">
+<value>23</value>
+</attribute>
+<attribute name="scheduleID">
+<value>3</value>
+</attribute>
+<attribute name="locationID">
+<value>4</value>
+</attribute>
+<attribute name="name">
+<value>Morning Slot</value>
+</attribute>
+<attribute name="startTime">
+<value>1970-01-01-09.00.00</value>
+</attribute>
+<attribute name="endTime">
+<value>1970-01-01-13.00.00</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="maxWorkUnits">
+<value>20</value>
+</attribute>
+<attribute name="startDate">
+<value/>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="frequencyPattern">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="slotID">
+<value>24</value>
+</attribute>
+<attribute name="scheduleID">
+<value>3</value>
+</attribute>
+<attribute name="locationID">
+<value>4</value>
+</attribute>
+<attribute name="name">
+<value>Afternoon Slot</value>
+</attribute>
+<attribute name="startTime">
+<value>1970-01-01-14.00.00</value>
+</attribute>
+<attribute name="endTime">
+<value>1970-01-01-18.00.00</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="maxWorkUnits">
+<value>20</value>
+</attribute>
+<attribute name="startDate">
+<value/>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="frequencyPattern">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="slotID">
+<value>25</value>
+</attribute>
+<attribute name="scheduleID">
+<value>4</value>
+</attribute>
+<attribute name="locationID">
+<value>4</value>
+</attribute>
+<attribute name="name">
+<value>Morning Slot</value>
+</attribute>
+<attribute name="startTime">
+<value>1970-01-01-09.00.00</value>
+</attribute>
+<attribute name="endTime">
+<value>1970-01-01-13.00.00</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="maxWorkUnits">
+<value>20</value>
+</attribute>
+<attribute name="startDate">
+<value/>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="frequencyPattern">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="slotID">
+<value>26</value>
+</attribute>
+<attribute name="scheduleID">
+<value>4</value>
+</attribute>
+<attribute name="locationID">
+<value>4</value>
+</attribute>
+<attribute name="name">
+<value>Afternoon Slot</value>
+</attribute>
+<attribute name="startTime">
+<value>1970-01-01-14.00.00</value>
+</attribute>
+<attribute name="endTime">
+<value>1970-01-01-18.00.00</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="maxWorkUnits">
+<value>20</value>
+</attribute>
+<attribute name="startDate">
+<value/>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="frequencyPattern">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="slotID">
+<value>5</value>
+</attribute>
+<attribute name="scheduleID">
+<value>5</value>
+</attribute>
+<attribute name="locationID">
+<value>2</value>
+</attribute>
+<attribute name="name">
+<value>Morning Slot</value>
+</attribute>
+<attribute name="startTime">
+<value>1970-01-01-09.00.00</value>
+</attribute>
+<attribute name="endTime">
+<value>1970-01-01-13.00.00</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="maxWorkUnits">
+<value>20</value>
+</attribute>
+<attribute name="startDate">
+<value/>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="frequencyPattern">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="slotID">
+<value>6</value>
+</attribute>
+<attribute name="scheduleID">
+<value>5</value>
+</attribute>
+<attribute name="locationID">
+<value>2</value>
+</attribute>
+<attribute name="name">
+<value>Afternoon Slot</value>
+</attribute>
+<attribute name="startTime">
+<value>1970-01-01-14.00.00</value>
+</attribute>
+<attribute name="endTime">
+<value>1970-01-01-18.00.00</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="maxWorkUnits">
+<value>20</value>
+</attribute>
+<attribute name="startDate">
+<value/>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="frequencyPattern">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="slotID">
+<value>7</value>
+</attribute>
+<attribute name="scheduleID">
+<value>6</value>
+</attribute>
+<attribute name="locationID">
+<value>2</value>
+</attribute>
+<attribute name="name">
+<value>Morning Slot</value>
+</attribute>
+<attribute name="startTime">
+<value>1970-01-01-09.00.00</value>
+</attribute>
+<attribute name="endTime">
+<value>1970-01-01-13.00.00</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="maxWorkUnits">
+<value>20</value>
+</attribute>
+<attribute name="startDate">
+<value/>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="frequencyPattern">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="slotID">
+<value>8</value>
+</attribute>
+<attribute name="scheduleID">
+<value>6</value>
+</attribute>
+<attribute name="locationID">
+<value>2</value>
+</attribute>
+<attribute name="name">
+<value>Afternoon Slot</value>
+</attribute>
+<attribute name="startTime">
+<value>1970-01-01-14.00.00</value>
+</attribute>
+<attribute name="endTime">
+<value>1970-01-01-18.00.00</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="maxWorkUnits">
+<value>20</value>
+</attribute>
+<attribute name="startDate">
+<value/>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="frequencyPattern">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="slotID">
+<value>9</value>
+</attribute>
+<attribute name="scheduleID">
+<value>7</value>
+</attribute>
+<attribute name="locationID">
+<value>3</value>
+</attribute>
+<attribute name="name">
+<value>Morning Slot</value>
+</attribute>
+<attribute name="startTime">
+<value>1970-01-01-09.00.00</value>
+</attribute>
+<attribute name="endTime">
+<value>1970-01-01-13.00.00</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="maxWorkUnits">
+<value>20</value>
+</attribute>
+<attribute name="startDate">
+<value/>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="frequencyPattern">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="slotID">
+<value>21</value>
+</attribute>
+<attribute name="scheduleID">
+<value>20</value>
+</attribute>
+<attribute name="locationID">
+<value>2001</value>
+</attribute>
+<attribute name="name">
+<value>Morning Slot</value>
+</attribute>
+<attribute name="startTime">
+<value>1970-01-01-09.00.00</value>
+</attribute>
+<attribute name="endTime">
+<value>1970-01-01-13.00.00</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="maxWorkUnits">
+<value>8</value>
+</attribute>
+<attribute name="startDate">
+<value/>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="frequencyPattern">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="slotID">
+<value>22</value>
+</attribute>
+<attribute name="scheduleID">
+<value>20</value>
+</attribute>
+<attribute name="locationID">
+<value>2001</value>
+</attribute>
+<attribute name="name">
+<value>Afternoon Slot</value>
+</attribute>
+<attribute name="startTime">
+<value>1970-01-01-14.00.00</value>
+</attribute>
+<attribute name="endTime">
+<value>1970-01-01-18.00.00</value>
+</attribute>
+<attribute name="recordStatus">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="maxWorkUnits">
+<value>8</value>
+</attribute>
+<attribute name="startDate">
+<value/>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="frequencyPattern">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+</table>

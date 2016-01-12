@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="ISSUECONFIGURATION">
+  <column name="issueConfigurationID" type="id" />
+  <column name="type" type="text" />
+  <column name="homePageIdentifier" type="text" />
+  <column name="startDate" type="date" />
+  <column name="endDate" type="date" />
+  <column name="priority" type="text" />
+  <column name="eventClassAndType" type="text" />
+  <column name="comments" type="text" />
+  <column name="creationDate" type="date" />
+  <column name="recordStatus" type="text" />
+  <column name="ownershipStrategyName" type="text" />
+  <column name="notAppealableInd" type="bool" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="issueConfigurationID">
+      <value>2110</value>
+    </attribute>
+    <attribute name="type">
+      <value>ICT1</value>
+    </attribute>
+    <attribute name="homePageIdentifier">
+      <value>IssueDelivery_home</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="priority">
+      <value>CP1</value>
+    </attribute>
+    <attribute name="eventClassAndType">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="creationDate">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="ownershipStrategyName">
+      <value />
+    </attribute>
+    <attribute name="notAppealableInd">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

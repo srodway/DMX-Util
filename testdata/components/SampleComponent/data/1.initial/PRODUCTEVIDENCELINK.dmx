@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="PRODUCTEVIDENCELINK">
+  <column name="productEvidenceLinkID" type="id" />
+  <column name="productID" type="id" />
+  <column name="evidenceMetadataID" type="id" />
+  <column name="dataLinkedToProductInd" type="bool" />
+  <column name="shareableInd" type="bool" />
+  <column name="category" type="text" />
+  <column name="quickLinkInd" type="bool" />
+  <column name="sortOrder" type="id" />
+  <row>
+    <attribute name="productEvidenceLinkID">
+      <value>4534</value>
+    </attribute>
+    <attribute name="productID">
+      <value>5105</value>
+    </attribute>
+    <attribute name="evidenceMetadataID">
+      <value>5001</value>
+    </attribute>
+    <attribute name="dataLinkedToProductInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="shareableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="category">
+      <value />
+    </attribute>
+    <attribute name="quickLinkInd">
+      <value />
+    </attribute>
+    <attribute name="sortOrder">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="productEvidenceLinkID">
+      <value>4535</value>
+    </attribute>
+    <attribute name="productID">
+      <value>5106</value>
+    </attribute>
+    <attribute name="evidenceMetadataID">
+      <value>5002</value>
+    </attribute>
+    <attribute name="dataLinkedToProductInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="shareableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="category">
+      <value />
+    </attribute>
+    <attribute name="quickLinkInd">
+      <value />
+    </attribute>
+    <attribute name="sortOrder">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="productEvidenceLinkID">
+      <value>4536</value>
+    </attribute>
+    <attribute name="productID">
+      <value>5107</value>
+    </attribute>
+    <attribute name="evidenceMetadataID">
+      <value>5003</value>
+    </attribute>
+    <attribute name="dataLinkedToProductInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="shareableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="category">
+      <value />
+    </attribute>
+    <attribute name="quickLinkInd">
+      <value />
+    </attribute>
+    <attribute name="sortOrder">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="productEvidenceLinkID">
+      <value>4537</value>
+    </attribute>
+    <attribute name="productID">
+      <value>5108</value>
+    </attribute>
+    <attribute name="evidenceMetadataID">
+      <value>5004</value>
+    </attribute>
+    <attribute name="dataLinkedToProductInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="shareableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="category">
+      <value />
+    </attribute>
+    <attribute name="quickLinkInd">
+      <value />
+    </attribute>
+    <attribute name="sortOrder">
+      <value />
+    </attribute>
+  </row>
+</table>
+

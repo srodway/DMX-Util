@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="CONCERNROLEADDRESS" override="true">
+<column name="concernRoleAddressID" type="id"/>
+<column name="concernRoleID" type="id"/>
+<column name="addressID" type="id"/>
+<column name="typeCode" type="text"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="statusCode" type="text"/>
+<column name="comments" type="text"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+<row>
+<attribute name="concernRoleAddressID">
+<value>2466846695892189184</value>
+</attribute>
+<attribute name="concernRoleID">
+<value>-775745035814567936</value>
+</attribute>
+<attribute name="addressID">
+<value>8466767299464929280</value>
+</attribute>
+<attribute name="typeCode">
+<value>AT5</value>
+</attribute>
+<attribute name="startDate">
+<value>2015-12-04</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="statusCode">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value>2015-12-04-11.50.07</value>
+</attribute>
+</row>
+</table>

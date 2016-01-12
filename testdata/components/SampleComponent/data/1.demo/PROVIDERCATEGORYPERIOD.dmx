@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PROVIDERCATEGORYPERIOD" override="true">
+<column name="providerCategoryID" type="id"/>
+<column name="providerConcernRoleID" type="id"/>
+<column name="category" type="text"/>
+<column name="primaryInd" type="bool"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="comments" type="text"/>
+<column name="endReason" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

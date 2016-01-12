@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="EVIDENCEMAPPINGCONFIGURATION">
+  <column name="configurationID" type="id" />
+  <column name="effectiveDate" type="date" />
+  <column name="createdBy" type="text" />
+  <column name="status" type="text" />
+  <column name="releaseDate" type="date" />
+  <column name="mappingConfigurationXML" type="clob" />
+  <column name="mappingXML" type="clob" />
+  <column name="editorData" type="clob" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="configurationID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="effectiveDate">
+      <value>2014-08-11</value>
+    </attribute>
+    <attribute name="createdBy">
+      <value>admin</value>
+    </attribute>
+    <attribute name="status">
+      <value>EMCS002</value>
+    </attribute>
+    <attribute name="releaseDate">
+      <value>2014-08-11</value>
+    </attribute>
+    <attribute name="mappingConfigurationXML">
+      <value>./clob/EvidenceMappingConfiguration_1_6</value>
+    </attribute>
+    <attribute name="mappingXML">
+      <value>./clob/EvidenceMappingConfiguration_1_7</value>
+    </attribute>
+    <attribute name="editorData">
+      <value>./clob/EvidenceMappingConfiguration_1_8</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>2</value>
+    </attribute>
+  </row>
+</table>
+

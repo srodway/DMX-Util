@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="PROGRAMTYPE">
+  <column name="programTypeID" type="id" />
+  <column name="outcomePlanType" type="id" />
+  <column name="outcomePlanStrategy" type="text" />
+  <column name="clientSelectionOPStrategy" type="text" />
+  <column name="clientSelectionOPRuleset" type="id" />
+  <column name="nameTextID" type="id" />
+  <column name="descriptionTextID" type="id" />
+  <column name="integratedCaseType" type="text" />
+  <column name="numDispositionDays" type="number" />
+  <column name="processingSystemType" type="text" />
+  <column name="numWarningDays" type="number" />
+  <column name="recordStatus" type="text" />
+  <column name="summaryTextID" type="id" />
+  <column name="url" type="text" />
+  <column name="multipleAppIndicator" type="bool" />
+  <column name="localOfficeInd" type="bool" />
+  <column name="localOfficeTextID" type="id" />
+  <column name="defaultLocationID" type="id" />
+  <column name="programTypeReference" type="text" />
+  <column name="externalSystemID" type="id" />
+  <column name="rmtSystemID" type="id" />
+  <column name="internalDescTextID" type="id" />
+  <column name="caseConfigurationID" type="id" />
+  <column name="caseType" type="text" />
+  <column name="intakeSystemType" type="text" />
+  <column name="intakeSystemID" type="id" />
+  <column name="clientSelectionStrategy" type="text" />
+  <column name="integratedCaseStrategy" type="text" />
+  <column name="productID" type="id" />
+  <column name="submitProductDeliveryInd" type="bool" />
+  <column name="clientSelectionRulesetID" type="id" />
+  <column name="timerStartOn" type="text" />
+  <column name="timerResumeFrom" type="text" />
+  <column name="useBusinessDaysInd" type="bool" />
+  <column name="resumeTimerInd" type="bool" />
+  <column name="timerStartWorkflow" type="text" />
+  <column name="warningReachedWorkflow" type="text" />
+  <column name="deadlineNotAchievedWorkflow" type="text" />
+  <column name="reopenAvailableInd" type="bool" />
+  <column name="programReopenedWorkflow" type="text" />
+  <column name="coverageType" type="text" />
+  <column name="versionNo" type="number" />
+  <column name="lastWritten" type="timestamp" />
+  <row>
+    <attribute name="programTypeID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="outcomePlanType">
+      <value />
+    </attribute>
+    <attribute name="outcomePlanStrategy">
+      <value />
+    </attribute>
+    <attribute name="clientSelectionOPStrategy">
+      <value />
+    </attribute>
+    <attribute name="clientSelectionOPRuleset">
+      <value />
+    </attribute>
+    <attribute name="nameTextID">
+      <value>24500</value>
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value>24501</value>
+    </attribute>
+    <attribute name="integratedCaseType">
+      <value>PC24000</value>
+    </attribute>
+    <attribute name="numDispositionDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="processingSystemType">
+      <value>PS01</value>
+    </attribute>
+    <attribute name="numWarningDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="summaryTextID">
+      <value>24502</value>
+    </attribute>
+    <attribute name="url">
+      <value />
+    </attribute>
+    <attribute name="multipleAppIndicator">
+      <value>0</value>
+    </attribute>
+    <attribute name="localOfficeInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="localOfficeTextID">
+      <value>24509</value>
+    </attribute>
+    <attribute name="defaultLocationID">
+      <value />
+    </attribute>
+    <attribute name="programTypeReference">
+      <value />
+    </attribute>
+    <attribute name="externalSystemID">
+      <value />
+    </attribute>
+    <attribute name="rmtSystemID">
+      <value />
+    </attribute>
+    <attribute name="internalDescTextID">
+      <value>24510</value>
+    </attribute>
+    <attribute name="caseConfigurationID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="caseType">
+      <value>CT10201</value>
+    </attribute>
+    <attribute name="intakeSystemType">
+      <value>PS01</value>
+    </attribute>
+    <attribute name="intakeSystemID">
+      <value />
+    </attribute>
+    <attribute name="clientSelectionStrategy">
+      <value>CSS10001</value>
+    </attribute>
+    <attribute name="integratedCaseStrategy">
+      <value>ICS10001</value>
+    </attribute>
+    <attribute name="productID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="submitProductDeliveryInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="clientSelectionRulesetID">
+      <value />
+    </attribute>
+    <attribute name="timerStartOn">
+      <value />
+    </attribute>
+    <attribute name="timerResumeFrom">
+      <value />
+    </attribute>
+    <attribute name="useBusinessDaysInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="resumeTimerInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="timerStartWorkflow">
+      <value />
+    </attribute>
+    <attribute name="warningReachedWorkflow">
+      <value />
+    </attribute>
+    <attribute name="deadlineNotAchievedWorkflow">
+      <value />
+    </attribute>
+    <attribute name="reopenAvailableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="programReopenedWorkflow">
+      <value />
+    </attribute>
+    <attribute name="coverageType">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2014-08-06-10.19.15</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="programTypeID">
+      <value>50050</value>
+    </attribute>
+    <attribute name="outcomePlanType">
+      <value>50035</value>
+    </attribute>
+    <attribute name="outcomePlanStrategy">
+      <value>OPS10001</value>
+    </attribute>
+    <attribute name="clientSelectionOPStrategy">
+      <value>CSS10001</value>
+    </attribute>
+    <attribute name="clientSelectionOPRuleset">
+      <value />
+    </attribute>
+    <attribute name="nameTextID">
+      <value>50050</value>
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value>50051</value>
+    </attribute>
+    <attribute name="integratedCaseType">
+      <value />
+    </attribute>
+    <attribute name="numDispositionDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="processingSystemType">
+      <value>PS01</value>
+    </attribute>
+    <attribute name="numWarningDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="summaryTextID">
+      <value>50052</value>
+    </attribute>
+    <attribute name="url">
+      <value />
+    </attribute>
+    <attribute name="multipleAppIndicator">
+      <value>0</value>
+    </attribute>
+    <attribute name="localOfficeInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="localOfficeTextID">
+      <value>50053</value>
+    </attribute>
+    <attribute name="defaultLocationID">
+      <value />
+    </attribute>
+    <attribute name="programTypeReference">
+      <value />
+    </attribute>
+    <attribute name="externalSystemID">
+      <value />
+    </attribute>
+    <attribute name="rmtSystemID">
+      <value />
+    </attribute>
+    <attribute name="internalDescTextID">
+      <value>50054</value>
+    </attribute>
+    <attribute name="caseConfigurationID">
+      <value>50055</value>
+    </attribute>
+    <attribute name="caseType">
+      <value>CT10201</value>
+    </attribute>
+    <attribute name="intakeSystemType">
+      <value>PS01</value>
+    </attribute>
+    <attribute name="intakeSystemID">
+      <value />
+    </attribute>
+    <attribute name="clientSelectionStrategy">
+      <value>CSS10001</value>
+    </attribute>
+    <attribute name="integratedCaseStrategy">
+      <value />
+    </attribute>
+    <attribute name="productID">
+      <value />
+    </attribute>
+    <attribute name="submitProductDeliveryInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="clientSelectionRulesetID">
+      <value />
+    </attribute>
+    <attribute name="timerStartOn">
+      <value />
+    </attribute>
+    <attribute name="timerResumeFrom">
+      <value />
+    </attribute>
+    <attribute name="useBusinessDaysInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="resumeTimerInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="timerStartWorkflow">
+      <value />
+    </attribute>
+    <attribute name="warningReachedWorkflow">
+      <value />
+    </attribute>
+    <attribute name="deadlineNotAchievedWorkflow">
+      <value />
+    </attribute>
+    <attribute name="reopenAvailableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="programReopenedWorkflow">
+      <value />
+    </attribute>
+    <attribute name="coverageType">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-07-02-10.52.06</value>
+    </attribute>
+  </row>
+</table>
+

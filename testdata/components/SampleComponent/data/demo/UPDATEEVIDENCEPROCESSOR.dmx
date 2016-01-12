@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="UPDATEEVIDENCEPROCESSOR" override="true">
+<column name="updateEvidenceProcessorID" type="id"/>
+<column name="logicalName" type="text"/>
+<column name="context" type="text"/>
+<column name="evidenceXMLElement" type="text"/>
+<column name="updateEvidenceProcessor" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

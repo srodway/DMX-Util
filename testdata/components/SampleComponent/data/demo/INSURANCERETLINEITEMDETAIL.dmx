@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="INSURANCERETLINEITEMDETAIL" override="true">
+<column name="insRetLineItemDtlID" type="id"/>
+<column name="insuranceRetLineItemID" type="id"/>
+<column name="numInsuranceUnits" type="number"/>
+<column name="fromDate" type="date"/>
+<column name="toDate" type="date"/>
+<column name="totalContributionAmt" type="number"/>
+<column name="employeeConAmt" type="number"/>
+<column name="employerConAmt" type="number"/>
+<column name="incomeAmount" type="number"/>
+<column name="employmentTypeCode" type="text"/>
+<column name="fundID" type="id"/>
+<column name="comments" type="text"/>
+<column name="statusCode" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

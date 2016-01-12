@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="RATECOLUMN" override="true">
+<column name="rateColumnID" type="id"/>
+<column name="rateHeaderID" type="id"/>
+<column name="parentColumnID" type="id"/>
+<column name="rateColumnKeyMin" type="number"/>
+<column name="rateColumnKeyMax" type="number"/>
+<column name="rateColumnKeyValue" type="number"/>
+<column name="rateColumnType" type="text"/>
+<column name="rateColumnIndex" type="number"/>
+<column name="anyMinimumInd" type="bool"/>
+<column name="anyMaximumInd" type="bool"/>
+<column name="versionNo" type="number"/>
+</table>

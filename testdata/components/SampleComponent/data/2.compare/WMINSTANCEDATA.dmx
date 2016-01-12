@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="WMINSTANCEDATA">
+  <column name="wm_instDataID" type="id" />
+  <column name="enteredByID" type="text" />
+  <column name="enteredByName" type="text" />
+  <column name="supplierReturnID" type="id" />
+  <column name="caseID" type="id" />
+  <column name="concernRoleID" type="id" />
+  <column name="concernRoleName" type="text" />
+  <column name="eligibilityAssFromDate" type="date" />
+  <column name="eligibilityAssToDate" type="date" />
+  <column name="caseStatus" type="text" />
+  <column name="newUserID" type="text" />
+  <column name="currentUserID" type="text" />
+  <column name="reassignCasesType" type="text" />
+  <column name="reconciliationInd" type="bool" />
+  <column name="deliveryMethod" type="text" />
+  <column name="closureDate" type="date" />
+  <column name="reasonCode" type="text" />
+  <column name="priority" type="text" />
+  <column name="comments" type="text" />
+  <column name="financialInstructionID" type="id" />
+  <column name="amount" type="number" />
+  <column name="paymentDate" type="date" />
+  <column name="currencyExchangeID" type="id" />
+  <column name="caseNomineeID" type="id" />
+  <column name="sensitivityCode" type="text" />
+  <column name="suspendProcessingInd" type="bool" />
+  <column name="bankAccountID" type="id" />
+  <column name="oldBankAccountID" type="id" />
+  <column name="actualOutcome" type="text" />
+  <column name="manualPmtRef" type="text" />
+  <column name="configurationPublicationID" type="id" />
+  <column name="evidenceID" type="id" />
+  <column name="caseParticipantRoleID" type="id" />
+  <column name="ruleObjPropConfigChangeGrpID" type="id" />
+  <column name="precedentChangeSetID" type="id" />
+  <column name="determinationReasonOpt" type="text" />
+  <column name="ebPassthroughID" type="id" />
+  <column name="deferVerificationInd" type="bool" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="wm_instDataID">
+      <value>256</value>
+    </attribute>
+    <attribute name="enteredByID">
+      <value>cpmmanager</value>
+    </attribute>
+    <attribute name="enteredByName">
+      <value />
+    </attribute>
+    <attribute name="supplierReturnID">
+      <value />
+    </attribute>
+    <attribute name="caseID">
+      <value />
+    </attribute>
+    <attribute name="concernRoleID">
+      <value />
+    </attribute>
+    <attribute name="concernRoleName">
+      <value />
+    </attribute>
+    <attribute name="eligibilityAssFromDate">
+      <value />
+    </attribute>
+    <attribute name="eligibilityAssToDate">
+      <value />
+    </attribute>
+    <attribute name="caseStatus">
+      <value />
+    </attribute>
+    <attribute name="newUserID">
+      <value />
+    </attribute>
+    <attribute name="currentUserID">
+      <value>cpmmanager</value>
+    </attribute>
+    <attribute name="reassignCasesType">
+      <value />
+    </attribute>
+    <attribute name="reconciliationInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="deliveryMethod">
+      <value />
+    </attribute>
+    <attribute name="closureDate">
+      <value />
+    </attribute>
+    <attribute name="reasonCode">
+      <value />
+    </attribute>
+    <attribute name="priority">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="financialInstructionID">
+      <value />
+    </attribute>
+    <attribute name="amount">
+      <value>0.00</value>
+    </attribute>
+    <attribute name="paymentDate">
+      <value />
+    </attribute>
+    <attribute name="currencyExchangeID">
+      <value />
+    </attribute>
+    <attribute name="caseNomineeID">
+      <value />
+    </attribute>
+    <attribute name="sensitivityCode">
+      <value />
+    </attribute>
+    <attribute name="suspendProcessingInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bankAccountID">
+      <value />
+    </attribute>
+    <attribute name="oldBankAccountID">
+      <value />
+    </attribute>
+    <attribute name="actualOutcome">
+      <value />
+    </attribute>
+    <attribute name="manualPmtRef">
+      <value />
+    </attribute>
+    <attribute name="configurationPublicationID">
+      <value />
+    </attribute>
+    <attribute name="evidenceID">
+      <value />
+    </attribute>
+    <attribute name="caseParticipantRoleID">
+      <value />
+    </attribute>
+    <attribute name="ruleObjPropConfigChangeGrpID">
+      <value />
+    </attribute>
+    <attribute name="precedentChangeSetID">
+      <value>3424250294068838400</value>
+    </attribute>
+    <attribute name="determinationReasonOpt">
+      <value />
+    </attribute>
+    <attribute name="ebPassthroughID">
+      <value />
+    </attribute>
+    <attribute name="deferVerificationInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="wm_instDataID">
+      <value>258</value>
+    </attribute>
+    <attribute name="enteredByID">
+      <value>cpmmanager</value>
+    </attribute>
+    <attribute name="enteredByName">
+      <value />
+    </attribute>
+    <attribute name="supplierReturnID">
+      <value />
+    </attribute>
+    <attribute name="caseID">
+      <value />
+    </attribute>
+    <attribute name="concernRoleID">
+      <value />
+    </attribute>
+    <attribute name="concernRoleName">
+      <value />
+    </attribute>
+    <attribute name="eligibilityAssFromDate">
+      <value />
+    </attribute>
+    <attribute name="eligibilityAssToDate">
+      <value />
+    </attribute>
+    <attribute name="caseStatus">
+      <value />
+    </attribute>
+    <attribute name="newUserID">
+      <value />
+    </attribute>
+    <attribute name="currentUserID">
+      <value>cpmmanager</value>
+    </attribute>
+    <attribute name="reassignCasesType">
+      <value />
+    </attribute>
+    <attribute name="reconciliationInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="deliveryMethod">
+      <value />
+    </attribute>
+    <attribute name="closureDate">
+      <value />
+    </attribute>
+    <attribute name="reasonCode">
+      <value />
+    </attribute>
+    <attribute name="priority">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="financialInstructionID">
+      <value />
+    </attribute>
+    <attribute name="amount">
+      <value>0.00</value>
+    </attribute>
+    <attribute name="paymentDate">
+      <value />
+    </attribute>
+    <attribute name="currencyExchangeID">
+      <value />
+    </attribute>
+    <attribute name="caseNomineeID">
+      <value />
+    </attribute>
+    <attribute name="sensitivityCode">
+      <value />
+    </attribute>
+    <attribute name="suspendProcessingInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="bankAccountID">
+      <value />
+    </attribute>
+    <attribute name="oldBankAccountID">
+      <value />
+    </attribute>
+    <attribute name="actualOutcome">
+      <value />
+    </attribute>
+    <attribute name="manualPmtRef">
+      <value />
+    </attribute>
+    <attribute name="configurationPublicationID">
+      <value />
+    </attribute>
+    <attribute name="evidenceID">
+      <value />
+    </attribute>
+    <attribute name="caseParticipantRoleID">
+      <value />
+    </attribute>
+    <attribute name="ruleObjPropConfigChangeGrpID">
+      <value />
+    </attribute>
+    <attribute name="precedentChangeSetID">
+      <value>-3997681891837739008</value>
+    </attribute>
+    <attribute name="determinationReasonOpt">
+      <value />
+    </attribute>
+    <attribute name="ebPassthroughID">
+      <value />
+    </attribute>
+    <attribute name="deferVerificationInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

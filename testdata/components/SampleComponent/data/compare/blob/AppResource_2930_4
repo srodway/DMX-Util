@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+  
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ReferralMenu">
+
+  <mc:loader-registry>
+    <mc:loader class="curam.servicedelivery.tab.impl.ReferralMenuLoader"/>
+  </mc:loader-registry>
+
+  <!--  Dynamic menu using loader above-->
+  <mc:menu-item dynamic="true" id="EditNotificationsSent" open-as="modal" page-id="ProviderManagement_editReferralNotificationsSent" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit" visible="true"/>
+  <mc:menu-item dynamic="true" id="EditNotificationsNotSent" open-as="modal" page-id="ProviderManagement_editReferralNotificationsNotSent" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit" visible="true"/>
+  <mc:menu-item dynamic="true" id="AddAttachment" open-as="modal" page-id="ProviderManagement_createReferralAttachment" title="MenuItem.Title.AddAttachment" tooltip="MenuItem.Tooltip.AddAttachment"/>
+  <mc:menu-separator id="ReferralMenu2"/>
+  <mc:menu-item dynamic="true" id="SpecifyProviderForUnregisteredService" open-as="modal" page-id="ProviderManagement_specifyReferralProviderUnregisteredService" title="MenuItem.Title.SpecifyProviderDetails" tooltip="MenuItem.Tooltip.SpecifyProviderDetails" visible="true"/>
+  <mc:menu-item dynamic="true" id="SpecifyProviderForCPMService" open-as="modal" page-id="ProviderManagement_resolveSpecifyReferralProviderCPMService" title="MenuItem.Title.SpecifyProviderDetails" tooltip="MenuItem.Tooltip.SpecifyProviderDetails" visible="true"/>
+  <mc:menu-item dynamic="true" id="UndoProviderSelection" open-as="modal" page-id="ProviderManagement_confirmCancelReferralProvider" title="MenuItem.Title.UndoProviderSelection" tooltip="MenuItem.Tooltip.UndoProviderSelection" visible="true"/>
+  <mc:menu-separator id="ReferralMenu3"/>
+  <mc:menu-item dynamic="true" id="Delete" open-as="modal" page-id="ProviderManagement_cancelReferral" title="MenuItem.Title.Delete" tooltip="MenuItem.Tooltip.Delete"/>
+
+
+</mc:menu-bar>

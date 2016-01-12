@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PROVISIONLOCATION" override="true">
+<column name="provisionLocationID" type="id"/>
+<column name="providerLocationID" type="id"/>
+<column name="productProvisionID" type="id"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="creationDate" type="date"/>
+<column name="statusCode" type="text"/>
+<column name="comments" type="text"/>
+<column name="estimateCost" type="number"/>
+<column name="versionNo" type="number"/>
+</table>

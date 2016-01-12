@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="ASSESSMENTROLE">
+  <column name="assessmentRoleID" type="id" />
+  <column name="assessmentDefinitionID" type="id" />
+  <column name="typeTextID" type="id" />
+  <column name="typeAbbreviationTextID" type="id" />
+  <column name="mandatoryInd" type="bool" />
+  <column name="multipleClientsInd" type="bool" />
+  <column name="description" type="text" />
+  <column name="reference" type="text" />
+  <column name="questionsApplicableInd" type="bool" />
+  <column name="recordStatus" type="text" />
+  <column name="sortOrder" type="number" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="assessmentRoleID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="assessmentDefinitionID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="typeTextID">
+      <value>24167</value>
+    </attribute>
+    <attribute name="typeAbbreviationTextID">
+      <value>24166</value>
+    </attribute>
+    <attribute name="mandatoryInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="multipleClientsInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="questionsApplicableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="assessmentRoleID">
+      <value>34403</value>
+    </attribute>
+    <attribute name="assessmentDefinitionID">
+      <value>34402</value>
+    </attribute>
+    <attribute name="typeTextID">
+      <value>34447</value>
+    </attribute>
+    <attribute name="typeAbbreviationTextID">
+      <value>34432</value>
+    </attribute>
+    <attribute name="mandatoryInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="multipleClientsInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="questionsApplicableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="assessmentRoleID">
+      <value>3638908498923757568</value>
+    </attribute>
+    <attribute name="assessmentDefinitionID">
+      <value>-3566850904869036032</value>
+    </attribute>
+    <attribute name="typeTextID">
+      <value>-7962364141182640128</value>
+    </attribute>
+    <attribute name="typeAbbreviationTextID">
+      <value>972777519520423936</value>
+    </attribute>
+    <attribute name="mandatoryInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="multipleClientsInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="questionsApplicableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

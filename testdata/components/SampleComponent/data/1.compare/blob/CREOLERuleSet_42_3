@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><RuleSet name="PractitionerCertCalculatedRuleSet">
+
+
+  <Class extends="DefaultCalculatedAttributes" extendsRuleSet="EvidenceCalculatedAttributesRuleSet" name="CalculatedAttributes">
+    <Attribute name="evidence">
+      <type>
+        <ruleclass name="PractitionerCertificate" ruleset="PractitionerCertificateRuleSet"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="PractitionerCert.description" resourceBundle="curam.asc.rules.ASCProduct">
+          <reference attribute="certFromDate">
+            <reference attribute="evidence"/>
+          </reference>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+
+
+  </Class>
+
+
+</RuleSet>

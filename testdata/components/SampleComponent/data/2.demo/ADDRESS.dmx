@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="ADDRESS" override="true">
+<column name="addressID" type="id"/>
+<column name="countryCode" type="text"/>
+<column name="modifiableInd" type="bool"/>
+<column name="addressData" type="text"/>
+<column name="addressLayoutType" type="text"/>
+<column name="geoCode" type="text"/>
+<column name="latitude" type="number"/>
+<column name="longitude" type="number"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+<row>
+<attribute name="addressID">
+<value>-8827055269637775360</value>
+</attribute>
+<attribute name="countryCode">
+<value>US</value>
+</attribute>
+<attribute name="modifiableInd">
+<value>1</value>
+</attribute>
+<attribute name="addressData">
+<value>1
+-8827055269637775360
+US
+US
+1
+1
+ADD1=
+ADD2=Somewhere Else
+ADD3=
+CITY=
+STATE=
+ZIP=</value>
+</attribute>
+<attribute name="addressLayoutType">
+<value>US</value>
+</attribute>
+<attribute name="geoCode">
+<value/>
+</attribute>
+<attribute name="latitude">
+<value>0.0</value>
+</attribute>
+<attribute name="longitude">
+<value>0.0</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value>2015-12-04-11.50.06</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressID">
+<value>8466767299464929280</value>
+</attribute>
+<attribute name="countryCode">
+<value>US</value>
+</attribute>
+<attribute name="modifiableInd">
+<value>1</value>
+</attribute>
+<attribute name="addressData">
+<value>1
+8466767299464929280
+US
+US
+1
+1
+ADD1=
+ADD2=Somewhere Else
+ADD3=
+CITY=
+STATE=
+ZIP=</value>
+</attribute>
+<attribute name="addressLayoutType">
+<value>US</value>
+</attribute>
+<attribute name="geoCode">
+<value/>
+</attribute>
+<attribute name="latitude">
+<value>0.0</value>
+</attribute>
+<attribute name="longitude">
+<value>0.0</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value>2015-12-04-11.50.07</value>
+</attribute>
+</row>
+</table>

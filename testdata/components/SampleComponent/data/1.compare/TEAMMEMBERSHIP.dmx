@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="TEAMMEMBERSHIP">
+  <column name="teamMembershipID" type="id" />
+  <column name="multidisciplinaryTeamID" type="id" />
+  <column name="multidisciplinaryTeamMemberID" type="id" />
+  <column name="startDate" type="date" />
+  <column name="endDate" type="date" />
+  <column name="endReason" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="teamMembershipID">
+      <value>301</value>
+    </attribute>
+    <attribute name="multidisciplinaryTeamID">
+      <value>101</value>
+    </attribute>
+    <attribute name="multidisciplinaryTeamMemberID">
+      <value>201</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="endReason">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="teamMembershipID">
+      <value>302</value>
+    </attribute>
+    <attribute name="multidisciplinaryTeamID">
+      <value>101</value>
+    </attribute>
+    <attribute name="multidisciplinaryTeamMemberID">
+      <value>202</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="endReason">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="teamMembershipID">
+      <value>303</value>
+    </attribute>
+    <attribute name="multidisciplinaryTeamID">
+      <value>101</value>
+    </attribute>
+    <attribute name="multidisciplinaryTeamMemberID">
+      <value>203</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2007-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="endReason">
+      <value />
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

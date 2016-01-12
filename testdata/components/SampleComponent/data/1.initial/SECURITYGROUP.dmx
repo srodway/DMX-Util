@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="SECURITYGROUP">
+  <column name="groupName" type="text" />
+  <column name="description" type="text" />
+  <column name="versionNo" type="number" />
+  <column name="lastWritten" type="timestamp" />
+  <row>
+    <attribute name="groupName">
+      <value>ASCALIEN</value>
+    </attribute>
+    <attribute name="description">
+      <value>Security group for Dynamic Evidence type ASC Alien.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>ASCHOUSEHOLDMEMBER</value>
+    </attribute>
+    <attribute name="description">
+      <value>Security group for Dynamic Evidence type ASC Household Member.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>ASSISTANCEAUDITORGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value>A group that is assigned the minimum set of security identifiers
+        required to perform audits for Assistance Case types in the Curam application.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>BASESECURITYGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value>A group that is assigned the minimum set of security identifiers
+        required to operate the Curam application.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>BENEFITFRAUDAUDITORGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value>A group that is assigned the minimum set of security identifiers
+        required to perform audits for Benefit Fraud Case types in the Curam application.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>DIAGNOSIS</value>
+    </attribute>
+    <attribute name="description">
+      <value>Security group for Dynamic Evidence type Diagnosis.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>EXTERNALUSERNONSECUREGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>0</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>EXTERNALUSERSECUREGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>0</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>FACILITYMANAGERGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value>The Group of Identifiers for a facility manager role</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>0</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>GENERATEDCITIZENWORKSPACEGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value>The Group containing all basic (unlinked) Citizen Workspace users.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>IBPRODUCTTYPE</value>
+    </attribute>
+    <attribute name="description">
+      <value>Security group for Dynamic Evidence type IBProductType.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>LINKEDCITIZENWORKSPACEGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value>The Group containing all linked Citizen Workspace users.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>LIVINGARRANGEMENT</value>
+    </attribute>
+    <attribute name="description">
+      <value>Security group for Dynamic Evidence type ASC Living Arrangement.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>MDTEXTERNALGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value>A group that represents external users using the external MDT application.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>0</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>NORMALCITIZENWORKSPACEGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value>The Group containing all linked Citizen Workspace users.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>PDCADDRESS</value>
+    </attribute>
+    <attribute name="description">
+      <value>Security group for Dynamic Evidence type Addresses.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>PDCBANKACCOUNT</value>
+    </attribute>
+    <attribute name="description">
+      <value>Security group for Dynamic Evidence type Bank Accounts.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>PDCBIRTHANDDEATH</value>
+    </attribute>
+    <attribute name="description">
+      <value>Security group for Dynamic Evidence type Birth and Death Details.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>PDCCONTACTPREFERENCES</value>
+    </attribute>
+    <attribute name="description">
+      <value>Security group for Dynamic Evidence type Contact Preferences.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>PDCEMAILADDRESS</value>
+    </attribute>
+    <attribute name="description">
+      <value>Security group for Dynamic Evidence type Email Addresses.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>PDCGENDER</value>
+    </attribute>
+    <attribute name="description">
+      <value>Security group for Dynamic Evidence type Gender Details.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>PDCIDENTIFICATION</value>
+    </attribute>
+    <attribute name="description">
+      <value>Security group for Dynamic Evidence type Identifications.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>PDCNAME</value>
+    </attribute>
+    <attribute name="description">
+      <value>Security group for Dynamic Evidence type Names.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>PDCPHONENUMBER</value>
+    </attribute>
+    <attribute name="description">
+      <value>Security group for Dynamic Evidence type Phone Numbers.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>PDCRELATIONSHIPS</value>
+    </attribute>
+    <attribute name="description">
+      <value>Security group for Dynamic Evidence type Relationships.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>PRACTITIONERCERTIFICATE</value>
+    </attribute>
+    <attribute name="description">
+      <value>Security group for Dynamic Evidence type PractitionerCertificate.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>PUBLICCITIZENWORKSPACEGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value>The Group containing only the dummy citizen that access the Citizen Workspace homepage.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>SUPERGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>0</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>SUPERVISORGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>0</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>SYSTEMGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value>Used for the execution of Workflows and Deferred Processes</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>EVIDENCEGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>0</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>LEGALACTIONADMINGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value>Legal action admin group</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>0</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="groupName">
+      <value>LEGALACTIONGROUP</value>
+    </attribute>
+    <attribute name="description">
+      <value>Legal action group</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>0</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+</table>
+

@@ -1,0 +1,36 @@
+# Licensed Materials - Property of IBM
+# 
+# PID 5725-H26
+# 
+# Copyright IBM Corporation 2015. All Rights Reserved.
+# 
+# US Government Users Restricted Rights - Use, duplication or disclosure
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+
+#
+Application=Needs Assessment
+Person=Person
+Person.personID.hidden=true
+Person.firstName.hidden=true
+Person.firstName=First Name
+Person.gender.hidden=true
+Person.dateOfBirth.hidden=true
+Person.roleID.hidden=true
+Person.participantID.hidden=true
+Person.questionsApplicableInd.hidden=true
+
+
+ <!-- Group  2 Daily Routine--> 
+Person.hasCleanTidyHome=Is the home clean and tidy?
+Person.sufferFromPressureSores=Does the client suffer from pressure sores?
+Person.canManageFinances=Is the client able to manage their own financial affairs?
+Person.placeIndividualOrOthersAtRisk=Does the client's lifestyle place them or others at risk?
+Person.displayDangerousBehaviourToOthers=Does the client display dangerous behaviour towards others?
+    
+<!-- Group  2 Daily Routine--> 
+Person.canWashSelf=Can the client wash themselves?
+Person.canFeedSelf=Can the client feed themselves?
+Person.canGetMedicineFoodHouseholdItems=Can the client obtain food, medicines and household items?
+Person.requiresAssistanceToToilet=Can the client access the toilet without assistance?
+Person.canDressUndressSelf=Can the client dress and undress themselves?
+

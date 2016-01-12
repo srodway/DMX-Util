@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="ALLOCATIONTARGETITEM" override="true">
+<column name="allocationTargetItemID" type="id"/>
+<column name="type" type="text"/>
+<column name="relatedName" type="text"/>
+<column name="relatedID" type="id"/>
+<column name="allocationTargetID" type="text"/>
+<row>
+<attribute name="allocationTargetItemID">
+<value>1000</value>
+</attribute>
+<attribute name="type">
+<value>RL20</value>
+</attribute>
+<attribute name="relatedName">
+<value/>
+</attribute>
+<attribute name="relatedID">
+<value>12</value>
+</attribute>
+<attribute name="allocationTargetID">
+<value>HEARINGSCHEDULER</value>
+</attribute>
+</row>
+</table>

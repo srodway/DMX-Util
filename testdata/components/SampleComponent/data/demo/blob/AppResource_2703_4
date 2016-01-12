@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM 
+
+  PID 5725-H26
+
+  Copyright IBM Corporation 2011,2012,2014. All rights reserved. 
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="OutcomePlanReferralMenu">
+
+  <mc:loader-registry>
+    <mc:loader class="curam.outcomeplanning.tab.impl.OutcomePlanReferralMenuLoader"/>
+  </mc:loader-registry>
+
+  <!--  Dynamic menu using loader above-->
+  <mc:menu-item dynamic="true" id="EditNotificationsSent" open-as="modal" page-id="ProviderManagement_editReferralNotificationsSent" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit" visible="true"/>
+  <mc:menu-item dynamic="true" id="EditNotificationsNotSent" open-as="modal" page-id="ProviderManagement_editReferralNotificationsNotSent" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit" visible="true"/>
+  <mc:menu-item dynamic="true" id="EditSharing" open-as="modal" page-id="OutcomePlanReferral_resolveEditSharingReferral" title="MenuItem.Title.EditSharing" tooltip="MenuItem.Tooltip.EditSharing" visible="true"/>
+  <mc:menu-item dynamic="true" id="AddAttachment" open-as="modal" page-id="ProviderManagement_createReferralAttachment" title="MenuItem.Title.AddAttachment" tooltip="MenuItem.Tooltip.AddAttachment"/>
+  <mc:menu-separator id="OutcomePlanReferralMenu1"/>
+  <mc:menu-item dynamic="true" id="AddFactors" open-as="modal" page-id="OutcomePlanReferral_addFactors" title="MenuItem.Title.AddFactors" tooltip="MenuItem.Tooltip.AddFactors" visible="true"/>
+  <mc:menu-item dynamic="true" id="RemoveFactors" open-as="modal" page-id="OutcomePlanReferral_removeFactors" title="MenuItem.Title.RemoveFactors" tooltip="MenuItem.Tooltip.RemoveFactors" visible="true"/>
+  <mc:menu-separator id="OutcomePlanReferralMenu2"/> 
+  <mc:menu-item dynamic="true" id="AddObjectives" open-as="modal" page-id="OutcomePlan_addObjectivesToReferral" title="MenuItem.Title.AddObjectives" tooltip="MenuItem.Tooltip.AddObjectives" visible="true"/>
+  <mc:menu-separator id="OutcomePlanReferralMenu3"/>
+  <mc:menu-item dynamic="true" id="SpecifyProviderForUnregisteredService" open-as="modal" page-id="ProviderManagement_specifyReferralProviderUnregisteredService" title="MenuItem.Title.SpecifyProviderDetails" tooltip="MenuItem.Tooltip.SpecifyProviderDetails" visible="true"/>
+  <mc:menu-item dynamic="true" id="SpecifyProviderForCPMService" open-as="modal" page-id="ProviderManagement_resolveSpecifyReferralProviderCPMService" title="MenuItem.Title.SpecifyProviderDetails" tooltip="MenuItem.Tooltip.SpecifyProviderDetails" visible="true"/>
+  <mc:menu-item dynamic="true" id="UndoProviderSelection" open-as="modal" page-id="ProviderManagement_confirmCancelReferralProvider" title="MenuItem.Title.UndoProviderSelection" tooltip="MenuItem.Tooltip.UndoProviderSelection" visible="true"/>
+  <mc:menu-separator id="ReferralMenu3"/>
+  <mc:menu-item append-ellipsis="false" dynamic="true" id="ViewPrintableDocument" page-id="ViewReferralPrintableDocument" title="MenuItem.Title.ViewPrintableDocument" tooltip="MenuItem.Tooltip.ViewPrintableDocument" type="FILE_DOWNLOAD"/>
+  <mc:menu-separator id="ReferralMenu4"/>
+  <mc:menu-item dynamic="true" id="Delete" open-as="modal" page-id="ProviderManagement_cancelReferral" title="MenuItem.Title.Delete" tooltip="MenuItem.Tooltip.Delete"/>
+
+</mc:menu-bar>

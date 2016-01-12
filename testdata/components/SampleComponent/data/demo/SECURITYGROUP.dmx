@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="SECURITYGROUP" override="true">
+<column name="groupName" type="text"/>
+<column name="description" type="text"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+<row>
+<attribute name="groupName">
+<value>LEGALACTIONADMINGROUP</value>
+</attribute>
+<attribute name="description">
+<value>Legal action admin group</value>
+</attribute>
+<attribute name="versionNo">
+<value>0</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="groupName">
+<value>LEGALACTIONGROUP</value>
+</attribute>
+<attribute name="description">
+<value>Legal action group</value>
+</attribute>
+<attribute name="versionNo">
+<value>0</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+</table>

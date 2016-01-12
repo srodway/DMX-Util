@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="APPLICATIONTYPEPROGRAMLINK" override="true">
+<column name="applicationTypeProgramLinkID" type="id"/>
+<column name="intakeApplicationTypeID" type="id"/>
+<column name="programTypeID" type="id"/>
+<column name="displayOrder" type="number"/>
+<column name="recordStatus" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

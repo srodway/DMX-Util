@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="OUTCOMEPLANADMIN">
+  <column name="outcomePlanAdminID" type="id" />
+  <column name="nameTextID" type="id" />
+  <column name="reference" type="text" />
+  <column name="homePage" type="text" />
+  <column name="descriptionTextID" type="id" />
+  <column name="recordStatus" type="text" />
+  <column name="goalsApplicableTo" type="text" />
+  <column name="userDefinedExpectedOutcomeInd" type="bool" />
+  <column name="userDefinedFactorInd" type="bool" />
+  <column name="userDefinedActionInd" type="bool" />
+  <column name="firstReviewNoDays" type="number" />
+  <column name="reviewFrequency" type="number" />
+  <column name="reviewFrequencyCalculation" type="text" />
+  <column name="ownershipStrategyName" type="text" />
+  <column name="visitsApplicable" type="text" />
+  <column name="visitingUpperAgeLimit" type="text" />
+  <column name="visitingLowerAgeLimit" type="text" />
+  <column name="visitAcceptableDurationPercent" type="text" />
+  <column name="recommendationRulesetID" type="id" />
+  <column name="workspace" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="outcomePlanAdminID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value>24168</value>
+    </attribute>
+    <attribute name="reference">
+      <value>NeedsAssess</value>
+    </attribute>
+    <attribute name="homePage">
+      <value />
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value>24169</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="goalsApplicableTo">
+      <value>OPGAT10001</value>
+    </attribute>
+    <attribute name="userDefinedExpectedOutcomeInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="userDefinedFactorInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="userDefinedActionInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="firstReviewNoDays">
+      <value>30</value>
+    </attribute>
+    <attribute name="reviewFrequency">
+      <value>30</value>
+    </attribute>
+    <attribute name="reviewFrequencyCalculation">
+      <value>PRFC10001</value>
+    </attribute>
+    <attribute name="ownershipStrategyName">
+      <value />
+    </attribute>
+    <attribute name="visitsApplicable">
+      <value />
+    </attribute>
+    <attribute name="visitingUpperAgeLimit">
+      <value />
+    </attribute>
+    <attribute name="visitingLowerAgeLimit">
+      <value />
+    </attribute>
+    <attribute name="visitAcceptableDurationPercent">
+      <value />
+    </attribute>
+    <attribute name="recommendationRulesetID">
+      <value />
+    </attribute>
+    <attribute name="workspace">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="outcomePlanAdminID">
+      <value>50035</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value>50021</value>
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="homePage">
+      <value />
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value>50022</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="goalsApplicableTo">
+      <value>OPGAT10003</value>
+    </attribute>
+    <attribute name="userDefinedExpectedOutcomeInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="userDefinedFactorInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="userDefinedActionInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="firstReviewNoDays">
+      <value>30</value>
+    </attribute>
+    <attribute name="reviewFrequency">
+      <value>30</value>
+    </attribute>
+    <attribute name="reviewFrequencyCalculation">
+      <value>PRFC10001</value>
+    </attribute>
+    <attribute name="ownershipStrategyName">
+      <value />
+    </attribute>
+    <attribute name="visitsApplicable">
+      <value>OPVA10002</value>
+    </attribute>
+    <attribute name="visitingUpperAgeLimit">
+      <value />
+    </attribute>
+    <attribute name="visitingLowerAgeLimit">
+      <value />
+    </attribute>
+    <attribute name="visitAcceptableDurationPercent">
+      <value />
+    </attribute>
+    <attribute name="recommendationRulesetID">
+      <value />
+    </attribute>
+    <attribute name="workspace">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>8</value>
+    </attribute>
+  </row>
+</table>
+

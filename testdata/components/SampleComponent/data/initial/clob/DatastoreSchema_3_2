@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains">
+  <xs:import namespace="http://www.curamsoftware.com/BaseDomains"/>
+  <xs:element name="Agreement">
+    <xs:annotation>
+      <xs:documentation>Top level Agreement table to hold the agreement details captured during the wizard</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="clientsCovered" type="d:SVR_STRING">
+        <xs:annotation>
+          <xs:documentation>Tab delimited string of the selected case participants to represent the clients that will be covered by the agreement.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="signaturesRequired" type="d:SVR_STRING">
+        <xs:annotation>
+          <xs:documentation>Tab delimited string of the selected case participants to represent the clients from the outcome plan whose signatures are required to sign for of the agreement.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="comments" type="d:SVR_STRING">
+        <xs:annotation>
+          <xs:documentation>Comments captured about the agreement.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="activities" type="d:SVR_STRING">
+        <xs:annotation>
+          <xs:documentation>Tab delimited string of the selected activities that the agreement is related to.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

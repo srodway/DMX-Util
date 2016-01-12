@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="TASKDEFINITION" override="true">
+<column name="taskDefinitionID" type="text"/>
+<column name="name" type="text"/>
+<column name="categoryCode" type="text"/>
+<column name="allocationStrategyCode" type="text"/>
+<column name="allocationItemID" type="id"/>
+<column name="workAllocationRuleSetID" type="text"/>
+<column name="deadlineFunctionID" type="id"/>
+<column name="deadlineTimeoutInterval" type="id"/>
+<column name="allowForwardInd" type="bool"/>
+<column name="actionPageName" type="text"/>
+<column name="caseIDParameterName" type="text"/>
+<column name="participantIDParameterName" type="text"/>
+<column name="administrationSID" type="text"/>
+<column name="comments" type="text"/>
+<column name="actionPageNameCode" type="text"/>
+<column name="deadlineTimeOverrideInd" type="bool"/>
+<column name="versionNo" type="number"/>
+</table>

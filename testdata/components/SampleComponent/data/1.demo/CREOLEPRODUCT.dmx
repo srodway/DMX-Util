@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="CREOLEPRODUCT" override="true">
+<column name="productID" type="id"/>
+<column name="allowOpenEndedCases" type="bool"/>
+<column name="determinationCompStrategyType" type="text"/>
+<column name="detIntSummarizerStrategyType" type="text"/>
+<column name="reassessmentStrategyType" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="ALLOCATIONTARGETITEM">
+  <column name="allocationTargetItemID" type="id" />
+  <column name="type" type="text" />
+  <column name="relatedName" type="text" />
+  <column name="relatedID" type="id" />
+  <column name="allocationTargetID" type="text" />
+  <row>
+    <attribute name="allocationTargetItemID">
+      <value>30000</value>
+    </attribute>
+    <attribute name="type">
+      <value>RL23</value>
+    </attribute>
+    <attribute name="relatedName">
+      <value />
+    </attribute>
+    <attribute name="relatedID">
+      <value>2005</value>
+    </attribute>
+    <attribute name="allocationTargetID">
+      <value>ONLINEREQUESTFORAPPEAL</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="allocationTargetItemID">
+      <value>513</value>
+    </attribute>
+    <attribute name="type">
+      <value>RL9</value>
+    </attribute>
+    <attribute name="relatedName">
+      <value>supervisor</value>
+    </attribute>
+    <attribute name="relatedID">
+      <value>12345</value>
+    </attribute>
+    <attribute name="allocationTargetID">
+      <value>Supervisor</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="allocationTargetItemID">
+      <value>514</value>
+    </attribute>
+    <attribute name="type">
+      <value>RL23</value>
+    </attribute>
+    <attribute name="relatedName">
+      <value>CLIENT_MULTI_MATCH_NOTIFICATION</value>
+    </attribute>
+    <attribute name="relatedID">
+      <value>2004</value>
+    </attribute>
+    <attribute name="allocationTargetID">
+      <value>Client_Multi_Match_Target</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="allocationTargetItemID">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>RL23</value>
+    </attribute>
+    <attribute name="relatedName">
+      <value />
+    </attribute>
+    <attribute name="relatedID">
+      <value>10</value>
+    </attribute>
+    <attribute name="allocationTargetID">
+      <value>Enquiry Work Queue</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="allocationTargetItemID">
+      <value>1000</value>
+    </attribute>
+    <attribute name="type">
+      <value>RL20</value>
+    </attribute>
+    <attribute name="relatedName">
+      <value />
+    </attribute>
+    <attribute name="relatedID">
+      <value>12</value>
+    </attribute>
+    <attribute name="allocationTargetID">
+      <value>HEARINGSCHEDULER</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="allocationTargetItemID">
+      <value>2</value>
+    </attribute>
+    <attribute name="type">
+      <value>RL23</value>
+    </attribute>
+    <attribute name="relatedName">
+      <value />
+    </attribute>
+    <attribute name="relatedID">
+      <value>3</value>
+    </attribute>
+    <attribute name="allocationTargetID">
+      <value>External Request Work Queue</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="allocationTargetItemID">
+      <value>3</value>
+    </attribute>
+    <attribute name="type">
+      <value>RL23</value>
+    </attribute>
+    <attribute name="relatedName">
+      <value />
+    </attribute>
+    <attribute name="relatedID">
+      <value>5</value>
+    </attribute>
+    <attribute name="allocationTargetID">
+      <value>Invoice Approval Work Queue</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="allocationTargetItemID">
+      <value>4</value>
+    </attribute>
+    <attribute name="type">
+      <value>RL23</value>
+    </attribute>
+    <attribute name="relatedName">
+      <value />
+    </attribute>
+    <attribute name="relatedID">
+      <value>7</value>
+    </attribute>
+    <attribute name="allocationTargetID">
+      <value>Roster Line Item Approval Work Queue</value>
+    </attribute>
+  </row>
+</table>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="POSITIONHOLDERLINK" override="true">
+<column name="fromDate" type="date"/>
+<column name="organisationStructureID" type="id"/>
+<column name="positionHolderLinkID" type="id"/>
+<column name="positionID" type="id"/>
+<column name="recordStatus" type="text"/>
+<column name="toDate" type="date"/>
+<column name="userName" type="text"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+</table>

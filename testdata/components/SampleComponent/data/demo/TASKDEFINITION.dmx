@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="TASKDEFINITION" override="true">
+<column name="taskDefinitionID" type="text"/>
+<column name="name" type="text"/>
+<column name="categoryCode" type="text"/>
+<column name="allocationStrategyCode" type="text"/>
+<column name="allocationItemID" type="id"/>
+<column name="workAllocationRuleSetID" type="text"/>
+<column name="deadlineFunctionID" type="id"/>
+<column name="deadlineTimeoutInterval" type="id"/>
+<column name="allowForwardInd" type="bool"/>
+<column name="actionPageName" type="text"/>
+<column name="caseIDParameterName" type="text"/>
+<column name="participantIDParameterName" type="text"/>
+<column name="administrationSID" type="text"/>
+<column name="comments" type="text"/>
+<column name="actionPageNameCode" type="text"/>
+<column name="deadlineTimeOverrideInd" type="bool"/>
+<column name="versionNo" type="number"/>
+<row>
+<attribute name="taskDefinitionID">
+<value>APPEALCOMPLETEHEARING</value>
+</attribute>
+<attribute name="name">
+<value>Appeal Complete Hearing</value>
+</attribute>
+<attribute name="categoryCode">
+<value>TCC2</value>
+</attribute>
+<attribute name="allocationStrategyCode">
+<value>ASC1</value>
+</attribute>
+<attribute name="allocationItemID">
+<value/>
+</attribute>
+<attribute name="workAllocationRuleSetID">
+<value/>
+</attribute>
+<attribute name="deadlineFunctionID">
+<value/>
+</attribute>
+<attribute name="deadlineTimeoutInterval">
+<value/>
+</attribute>
+<attribute name="allowForwardInd">
+<value>1</value>
+</attribute>
+<attribute name="actionPageName">
+<value/>
+</attribute>
+<attribute name="caseIDParameterName">
+<value/>
+</attribute>
+<attribute name="participantIDParameterName">
+<value/>
+</attribute>
+<attribute name="administrationSID">
+<value/>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="actionPageNameCode">
+<value/>
+</attribute>
+<attribute name="deadlineTimeOverrideInd">
+<value>0</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="taskDefinitionID">
+<value>APPEALDEADLINE</value>
+</attribute>
+<attribute name="name">
+<value>Appeal Deadline</value>
+</attribute>
+<attribute name="categoryCode">
+<value>TCC2</value>
+</attribute>
+<attribute name="allocationStrategyCode">
+<value>ASC1</value>
+</attribute>
+<attribute name="allocationItemID">
+<value/>
+</attribute>
+<attribute name="workAllocationRuleSetID">
+<value/>
+</attribute>
+<attribute name="deadlineFunctionID">
+<value/>
+</attribute>
+<attribute name="deadlineTimeoutInterval">
+<value/>
+</attribute>
+<attribute name="allowForwardInd">
+<value>1</value>
+</attribute>
+<attribute name="actionPageName">
+<value/>
+</attribute>
+<attribute name="caseIDParameterName">
+<value/>
+</attribute>
+<attribute name="participantIDParameterName">
+<value/>
+</attribute>
+<attribute name="administrationSID">
+<value/>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="actionPageNameCode">
+<value/>
+</attribute>
+<attribute name="deadlineTimeOverrideInd">
+<value>0</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="taskDefinitionID">
+<value>APPEALIMPLEMENTATION</value>
+</attribute>
+<attribute name="name">
+<value>Appeal Implementation</value>
+</attribute>
+<attribute name="categoryCode">
+<value>TCC2</value>
+</attribute>
+<attribute name="allocationStrategyCode">
+<value>ASC1</value>
+</attribute>
+<attribute name="allocationItemID">
+<value/>
+</attribute>
+<attribute name="workAllocationRuleSetID">
+<value/>
+</attribute>
+<attribute name="deadlineFunctionID">
+<value/>
+</attribute>
+<attribute name="deadlineTimeoutInterval">
+<value/>
+</attribute>
+<attribute name="allowForwardInd">
+<value>1</value>
+</attribute>
+<attribute name="actionPageName">
+<value/>
+</attribute>
+<attribute name="caseIDParameterName">
+<value/>
+</attribute>
+<attribute name="participantIDParameterName">
+<value/>
+</attribute>
+<attribute name="administrationSID">
+<value/>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="actionPageNameCode">
+<value/>
+</attribute>
+<attribute name="deadlineTimeOverrideInd">
+<value>0</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="taskDefinitionID">
+<value>APPEALNOTIFICATION</value>
+</attribute>
+<attribute name="name">
+<value>Appeal Notification</value>
+</attribute>
+<attribute name="categoryCode">
+<value>TCC3</value>
+</attribute>
+<attribute name="allocationStrategyCode">
+<value>ASC1</value>
+</attribute>
+<attribute name="allocationItemID">
+<value/>
+</attribute>
+<attribute name="workAllocationRuleSetID">
+<value/>
+</attribute>
+<attribute name="deadlineFunctionID">
+<value/>
+</attribute>
+<attribute name="deadlineTimeoutInterval">
+<value/>
+</attribute>
+<attribute name="allowForwardInd">
+<value>1</value>
+</attribute>
+<attribute name="actionPageName">
+<value/>
+</attribute>
+<attribute name="caseIDParameterName">
+<value/>
+</attribute>
+<attribute name="participantIDParameterName">
+<value/>
+</attribute>
+<attribute name="administrationSID">
+<value/>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="actionPageNameCode">
+<value/>
+</attribute>
+<attribute name="deadlineTimeOverrideInd">
+<value>0</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="taskDefinitionID">
+<value>APPEALSCHEDULEHEARING</value>
+</attribute>
+<attribute name="name">
+<value>Appeal Schedule Hearing</value>
+</attribute>
+<attribute name="categoryCode">
+<value>TCC2</value>
+</attribute>
+<attribute name="allocationStrategyCode">
+<value>ASC4</value>
+</attribute>
+<attribute name="allocationItemID">
+<value/>
+</attribute>
+<attribute name="workAllocationRuleSetID">
+<value>HEARINGSCHEDULER</value>
+</attribute>
+<attribute name="deadlineFunctionID">
+<value/>
+</attribute>
+<attribute name="deadlineTimeoutInterval">
+<value/>
+</attribute>
+<attribute name="allowForwardInd">
+<value>1</value>
+</attribute>
+<attribute name="actionPageName">
+<value/>
+</attribute>
+<attribute name="caseIDParameterName">
+<value/>
+</attribute>
+<attribute name="participantIDParameterName">
+<value/>
+</attribute>
+<attribute name="administrationSID">
+<value/>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="actionPageNameCode">
+<value/>
+</attribute>
+<attribute name="deadlineTimeOverrideInd">
+<value>0</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="taskDefinitionID">
+<value>APPEALSTANDARDCASETASK</value>
+</attribute>
+<attribute name="name">
+<value>Appeal Case Task</value>
+</attribute>
+<attribute name="categoryCode">
+<value>TCC2</value>
+</attribute>
+<attribute name="allocationStrategyCode">
+<value>ASC2</value>
+</attribute>
+<attribute name="allocationItemID">
+<value>1</value>
+</attribute>
+<attribute name="workAllocationRuleSetID">
+<value/>
+</attribute>
+<attribute name="deadlineFunctionID">
+<value/>
+</attribute>
+<attribute name="deadlineTimeoutInterval">
+<value/>
+</attribute>
+<attribute name="allowForwardInd">
+<value>1</value>
+</attribute>
+<attribute name="actionPageName">
+<value/>
+</attribute>
+<attribute name="caseIDParameterName">
+<value/>
+</attribute>
+<attribute name="participantIDParameterName">
+<value/>
+</attribute>
+<attribute name="administrationSID">
+<value/>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="actionPageNameCode">
+<value/>
+</attribute>
+<attribute name="deadlineTimeOverrideInd">
+<value>0</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="taskDefinitionID">
+<value>APPEALSTATEMENTSUBMISSION</value>
+</attribute>
+<attribute name="name">
+<value>Appeal Witness Statement Submission</value>
+</attribute>
+<attribute name="categoryCode">
+<value>TCC2</value>
+</attribute>
+<attribute name="allocationStrategyCode">
+<value>ASC1</value>
+</attribute>
+<attribute name="allocationItemID">
+<value/>
+</attribute>
+<attribute name="workAllocationRuleSetID">
+<value/>
+</attribute>
+<attribute name="deadlineFunctionID">
+<value/>
+</attribute>
+<attribute name="deadlineTimeoutInterval">
+<value/>
+</attribute>
+<attribute name="allowForwardInd">
+<value>1</value>
+</attribute>
+<attribute name="actionPageName">
+<value/>
+</attribute>
+<attribute name="caseIDParameterName">
+<value/>
+</attribute>
+<attribute name="participantIDParameterName">
+<value/>
+</attribute>
+<attribute name="administrationSID">
+<value/>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="actionPageNameCode">
+<value/>
+</attribute>
+<attribute name="deadlineTimeOverrideInd">
+<value>0</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+</table>

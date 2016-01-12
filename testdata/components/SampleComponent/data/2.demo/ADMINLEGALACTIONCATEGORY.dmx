@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="ADMINLEGALACTIONCATEGORY" override="true">
+<column name="legalActionCategoryID" type="id"/>
+<column name="legalCategoryNameCode" type="text"/>
+<column name="creationDate" type="date"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="comments" type="clob"/>
+<column name="recordStatusCode" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

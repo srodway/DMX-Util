@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="INVESTIGATIONCONFIG" override="true">
+<column name="investigationConfigID" type="id"/>
+<column name="type" type="text"/>
+<column name="homePageIdentifier" type="text"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="readSecurity" type="text"/>
+<column name="approveSecurity" type="text"/>
+<column name="createSecurity" type="text"/>
+<column name="maintainSecurity" type="text"/>
+<column name="createEvent" type="text"/>
+<column name="closeEvent" type="text"/>
+<column name="creationDate" type="date"/>
+<column name="recordStatus" type="text"/>
+<column name="comments" type="text"/>
+<column name="ownershipStrategyName" type="text"/>
+<column name="adminTranslationRequiredInd" type="bool"/>
+<column name="contactLogInd" type="bool"/>
+<column name="versionNo" type="number"/>
+</table>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="EVIDENCECHANGEHISTORY">
+  <column name="evidenceChangeHistoryID" type="id" />
+  <column name="evidenceDescriptorID" type="id" />
+  <column name="changeUser" type="text" />
+  <column name="changeDateTime" type="timestamp" />
+  <column name="changeType" type="text" />
+  <row>
+    <attribute name="evidenceChangeHistoryID">
+      <value>7871166248736784384</value>
+    </attribute>
+    <attribute name="evidenceDescriptorID">
+      <value>-1496320976193847296</value>
+    </attribute>
+    <attribute name="changeUser">
+      <value>cpmmanager</value>
+    </attribute>
+    <attribute name="changeDateTime">
+      <value>2015-12-04-11.06.23</value>
+    </attribute>
+    <attribute name="changeType">
+      <value>ECT1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="evidenceChangeHistoryID">
+      <value>-3297760827142045696</value>
+    </attribute>
+    <attribute name="evidenceDescriptorID">
+      <value>3907998576650747904</value>
+    </attribute>
+    <attribute name="changeUser">
+      <value>cpmmanager</value>
+    </attribute>
+    <attribute name="changeDateTime">
+      <value>2015-12-04-11.06.23</value>
+    </attribute>
+    <attribute name="changeType">
+      <value>ECT1</value>
+    </attribute>
+  </row>
+</table>
+

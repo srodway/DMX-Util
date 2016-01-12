@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="CONCERNROLEALTERNATEID" override="true">
+<column name="concernRoleID" type="id"/>
+<column name="alternateID" type="text"/>
+<column name="typeCode" type="text"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="statusCode" type="text"/>
+<column name="concernRoleAlternateID" type="id"/>
+<column name="comments" type="text"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+<row>
+<attribute name="concernRoleID">
+<value>753</value>
+</attribute>
+<attribute name="alternateID">
+<value>24721</value>
+</attribute>
+<attribute name="typeCode">
+<value>CA7</value>
+</attribute>
+<attribute name="startDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="statusCode">
+<value>RST1</value>
+</attribute>
+<attribute name="concernRoleAlternateID">
+<value>642</value>
+</attribute>
+<attribute name="comments">
+<value>None</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="concernRoleID">
+<value>134</value>
+</attribute>
+<attribute name="alternateID">
+<value>25709</value>
+</attribute>
+<attribute name="typeCode">
+<value>CA1</value>
+</attribute>
+<attribute name="startDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="statusCode">
+<value>RST1</value>
+</attribute>
+<attribute name="concernRoleAlternateID">
+<value>634</value>
+</attribute>
+<attribute name="comments">
+<value>None</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+</table>

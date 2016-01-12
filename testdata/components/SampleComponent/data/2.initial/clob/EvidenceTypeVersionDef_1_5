@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<EvidenceTypeVersion
+  description="This entity contains details of the incapacity benefit. In indicates if the type is Sickness Benefit or Invalidity Benefit. By default, the claimant will receive Sickness Benefit for six months before automatically moving on to Invalidity Benefit. The case worker can use their discretion if they believe the claimant will be receiving benefit long term and override the default by setting the forceIVB flag to true."
+  modifiable="true"
+>
+  <Model>
+    <Attributes>
+      <Attribute>
+        <DataAttribute
+          description="The type of claim being applied for, Sickness Benefit or Invalidity Benefit."
+          name="claimType"
+          volatile="true"
+        >
+          <DomainType dataType="Codetable">
+            <CodetableOptions codetableName="IBClaimType"/>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          defaultValue="false"
+          description="Flag to indicate if invalidity benefit is being forced."
+          name="forceIVB"
+          volatile="true"
+        >
+          <DomainType dataType="Boolean"/>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <RelatedCPAttribute
+          cpRoleType="MEM"
+          description="The case participant receiving the benefit."
+          name="householdMember"
+          participantType="Person"
+        />
+      </Attribute>
+    </Attributes>
+    <Relationships/>
+  </Model>
+  <Validations/>
+  <SummaryInformation>
+    <SummaryMapping>
+      <Summary>
+        <parameter name="claimType"/>
+        <SummaryResource id="IBProductType.message"/>
+      </Summary>
+    </SummaryMapping>
+  </SummaryInformation>
+  <UserInterface
+    createDialogWidth="650"
+    modifyDialogWidth="650"
+  >
+    <OnlineTextCreatePage id="Create.Page.Description"/>
+    <OnlineTextModifyPage id="Modify.Page.Description"/>
+    <OnlineTextViewPage id="View.Page.Description"/>
+    <Cluster>
+      <RelCPCluster
+        fullCreateParticipant="false"
+        isOnCreatePage="true"
+        isOnModifyPage="false"
+        isOnViewPage="true"
+        showParticipantTypeFilter="true"
+        useSingleName="false"
+      >
+        <OnlineText id="Cluster.IBProductType.Claimant.Help"/>
+        <StandardField source="householdMember"/>
+        <ClusterName id="Cluster.IBProductType.Claimant"/>
+        <DescriptionName id="IBProductType.Claimant.Description"/>
+      </RelCPCluster>
+    </Cluster>
+    <Cluster>
+      <StandardCluster
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+        numberOfColumns="1"
+      >
+        <Title id="Cluster.IBProductType.Details"/>
+        <OnlineText id="Cluster.IBProductType.Details.Help"/>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="claimType"
+            useDefault="true"
+          >
+            <Label id="IBProductType.claimType"/>
+          </StandardField>
+        </StandardClusterField>
+      </StandardCluster>
+    </Cluster>
+  </UserInterface>
+</EvidenceTypeVersion>

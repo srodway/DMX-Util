@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="DECISIONMATRIXVERSION" override="true">
+<column name="decisionMatrixVersionID" type="id"/>
+<column name="name" type="text"/>
+<column name="type" type="text"/>
+<column name="decisionMatrixVersionNumber" type="number"/>
+<column name="versionStatus" type="text"/>
+<column name="fromDate" type="timestamp"/>
+<column name="toDate" type="timestamp"/>
+<column name="dateCreated" type="timestamp"/>
+<column name="createdBy" type="text"/>
+<column name="comments" type="text"/>
+<column name="decisionMatrixID" type="id"/>
+<column name="recordStatus" type="text"/>
+<column name="cumulativeScore" type="bool"/>
+<column name="multipleOutcomes" type="bool"/>
+<column name="scoringByOutcomes" type="bool"/>
+<column name="matrixData" type="clob"/>
+<column name="versionNo" type="number"/>
+</table>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="PRODUCTCATEGORY">
+  <column name="productCategoryID" type="id" />
+  <column name="productID" type="id" />
+  <column name="categoryCode" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="productCategoryID">
+      <value>2402</value>
+    </attribute>
+    <attribute name="productID">
+      <value>2102</value>
+    </attribute>
+    <attribute name="categoryCode">
+      <value>PC3</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="productCategoryID">
+      <value>2410</value>
+    </attribute>
+    <attribute name="productID">
+      <value>2109</value>
+    </attribute>
+    <attribute name="categoryCode">
+      <value>PC1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="productCategoryID">
+      <value>2411</value>
+    </attribute>
+    <attribute name="productID">
+      <value>2110</value>
+    </attribute>
+    <attribute name="categoryCode">
+      <value>PC1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="productCategoryID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="productID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="categoryCode">
+      <value>PC24000</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="DATASTORESCHEMATRANSLATION">
+  <column name="schemaName" type="text" />
+  <column name="type" type="text" />
+  <column name="localeIdentifier" type="text" />
+  <column name="localizedText" type="text" />
+  <column name="versionNo" type="number" />
+  <column name="lastWritten" type="timestamp" />
+  <row>
+    <attribute name="schemaName">
+      <value>AddAgreementWizard</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>Add Agreement Wizard</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>AddStandaloneServiceWizard</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>Add Standalone Service Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>CPI</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>Case Participant Index</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>ContactLogWizard</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>The Contact Log Wizard Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>CreateExpectedOutcomeWizard</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>Create Expected Outcome Wizard</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>CreateOutcomePlanReferralWizard</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>Create Outcome Plan Referral Wizard</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>CreateReferralWizard</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>Add Standalone Service Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>DirectApplicationCaseCreationSchema</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>Direct Application Case Creation Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>EvidenceSharingData</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>The Evidence Sharing Data Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>EvidenceTransferData</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>The Evidence Transfer Data Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>IEGDomains</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>IEG Domains Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>ProductWizard</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>The Product Wizard Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>SELECTPRODFUNDS</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>Select Prdouct Funds Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>TargetEvidenceData</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>The Target Evidence Data Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>TriageDomains</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>The Triage Domains Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>Triage</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>The Triage DataStore Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>http://www.curamsoftware.com/BaseDomains</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>Base Domains Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>AsthmaAdultV1</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>The Asthma Adult Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>CDADomains</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>The CDA Domains Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>IEGSampleToTestConditions</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>IEG Sample To Test Conditions Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>IEGSample</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>IEG Sample Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="schemaName">
+      <value>JuvenileDetentionV1</value>
+    </attribute>
+    <attribute name="type">
+      <value>DSST1</value>
+    </attribute>
+    <attribute name="localeIdentifier">
+      <value>en</value>
+    </attribute>
+    <attribute name="localizedText">
+      <value>The Juvenile Detention Schema</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+</table>
+

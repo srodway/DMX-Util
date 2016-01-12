@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="EMPLOYMENT">
+  <column name="employmentID" type="id" />
+  <column name="concernRoleID" type="id" />
+  <column name="employerConcernRoleID" type="id" />
+  <column name="fromDate" type="date" />
+  <column name="toDate" type="date" />
+  <column name="status" type="text" />
+  <column name="occupationType" type="text" />
+  <column name="primaryCurrentInd" type="bool" />
+  <column name="comments" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="employmentID">
+      <value>1701</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>101</value>
+    </attribute>
+    <attribute name="employerConcernRoleID">
+      <value>109</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>1999-01-01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value />
+    </attribute>
+    <attribute name="status">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="occupationType">
+      <value>OT5</value>
+    </attribute>
+    <attribute name="primaryCurrentInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="employmentID">
+      <value>1702</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>102</value>
+    </attribute>
+    <attribute name="employerConcernRoleID">
+      <value>112</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>1999-01-01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value />
+    </attribute>
+    <attribute name="status">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="occupationType">
+      <value>OT4</value>
+    </attribute>
+    <attribute name="primaryCurrentInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="employmentID">
+      <value>1703</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>103</value>
+    </attribute>
+    <attribute name="employerConcernRoleID">
+      <value>110</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>1999-01-01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value />
+    </attribute>
+    <attribute name="status">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="occupationType">
+      <value>OT4</value>
+    </attribute>
+    <attribute name="primaryCurrentInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="employmentID">
+      <value>1704</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>101</value>
+    </attribute>
+    <attribute name="employerConcernRoleID">
+      <value>110</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>1996-01-01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value>1998-12-31</value>
+    </attribute>
+    <attribute name="status">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="occupationType">
+      <value>OT1</value>
+    </attribute>
+    <attribute name="primaryCurrentInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="employmentID">
+      <value>1705</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>107</value>
+    </attribute>
+    <attribute name="employerConcernRoleID">
+      <value>111</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>1999-01-01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value />
+    </attribute>
+    <attribute name="status">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="occupationType">
+      <value>OT1</value>
+    </attribute>
+    <attribute name="primaryCurrentInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="employmentID">
+      <value>1706</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>108</value>
+    </attribute>
+    <attribute name="employerConcernRoleID">
+      <value>111</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>1999-01-01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value />
+    </attribute>
+    <attribute name="status">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="occupationType">
+      <value>OT1</value>
+    </attribute>
+    <attribute name="primaryCurrentInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

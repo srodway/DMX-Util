@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="BANKBRANCH" override="true">
+<column name="bankBranchID" type="id"/>
+<column name="bankID" type="id"/>
+<column name="bankSortCode" type="text"/>
+<column name="name" type="text"/>
+<column name="addressID" type="id"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="statusCode" type="text"/>
+<column name="phoneNumberID" type="id"/>
+<column name="faxNumberID" type="id"/>
+<column name="emailAddressID" type="id"/>
+<column name="comments" type="text"/>
+<column name="bankBranchStatus" type="text"/>
+<column name="bic" type="text"/>
+<column name="upperBankSortCode" type="text"/>
+<column name="upperName" type="text"/>
+<column name="upperBic" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="CONCERNROLEALTERNATEID" override="true">
+<column name="concernRoleID" type="id"/>
+<column name="alternateID" type="text"/>
+<column name="typeCode" type="text"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="statusCode" type="text"/>
+<column name="concernRoleAlternateID" type="id"/>
+<column name="comments" type="text"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+</table>

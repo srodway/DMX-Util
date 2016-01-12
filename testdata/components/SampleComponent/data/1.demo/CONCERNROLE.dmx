@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="CONCERNROLE" override="true">
+<column name="concernID" type="id"/>
+<column name="concernRoleID" type="id"/>
+<column name="concernRoleType" type="text"/>
+<column name="creationDate" type="date"/>
+<column name="registrationDate" type="date"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="statusCode" type="text"/>
+<column name="concernRoleName" type="text"/>
+<column name="primaryAddressID" type="id"/>
+<column name="primaryAlternateID" type="text"/>
+<column name="comments" type="text"/>
+<column name="primaryPhoneNumberID" type="id"/>
+<column name="primaryEmailAddressID" type="id"/>
+<column name="primaryBankAccountID" type="id"/>
+<column name="regUserName" type="text"/>
+<column name="prefPublicOfficeID" type="id"/>
+<column name="preferredLanguage" type="text"/>
+<column name="sensitivity" type="text"/>
+<column name="prefCommMethod" type="text"/>
+<column name="prefCommFromDate" type="date"/>
+<column name="prefCommToDate" type="date"/>
+<column name="primaryWebAddressID" type="id"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+<row>
+<attribute name="concernID">
+<value>570</value>
+</attribute>
+<attribute name="concernRoleID">
+<value>750</value>
+</attribute>
+<attribute name="concernRoleType">
+<value>RL15</value>
+</attribute>
+<attribute name="creationDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="registrationDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="startDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="statusCode">
+<value>ST1</value>
+</attribute>
+<attribute name="concernRoleName">
+<value>Test Provider 1</value>
+</attribute>
+<attribute name="primaryAddressID">
+<value>781</value>
+</attribute>
+<attribute name="primaryAlternateID">
+<value>24718</value>
+</attribute>
+<attribute name="comments">
+<value>None</value>
+</attribute>
+<attribute name="primaryPhoneNumberID">
+<value>1201</value>
+</attribute>
+<attribute name="primaryEmailAddressID">
+<value/>
+</attribute>
+<attribute name="primaryBankAccountID">
+<value/>
+</attribute>
+<attribute name="regUserName">
+<value>cpmfacilitymanager</value>
+</attribute>
+<attribute name="prefPublicOfficeID">
+<value/>
+</attribute>
+<attribute name="preferredLanguage">
+<value>LN1</value>
+</attribute>
+<attribute name="sensitivity">
+<value>1</value>
+</attribute>
+<attribute name="prefCommMethod">
+<value>CM4</value>
+</attribute>
+<attribute name="prefCommFromDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="prefCommToDate">
+<value/>
+</attribute>
+<attribute name="primaryWebAddressID">
+<value>1601</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="concernID">
+<value>572</value>
+</attribute>
+<attribute name="concernRoleID">
+<value>752</value>
+</attribute>
+<attribute name="concernRoleType">
+<value>RL15</value>
+</attribute>
+<attribute name="creationDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="registrationDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="startDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="statusCode">
+<value>ST1</value>
+</attribute>
+<attribute name="concernRoleName">
+<value>Test Provider 2</value>
+</attribute>
+<attribute name="primaryAddressID">
+<value>783</value>
+</attribute>
+<attribute name="primaryAlternateID">
+<value>24720</value>
+</attribute>
+<attribute name="comments">
+<value>None</value>
+</attribute>
+<attribute name="primaryPhoneNumberID">
+<value>1201</value>
+</attribute>
+<attribute name="primaryEmailAddressID">
+<value/>
+</attribute>
+<attribute name="primaryBankAccountID">
+<value/>
+</attribute>
+<attribute name="regUserName">
+<value>cpmmanager</value>
+</attribute>
+<attribute name="prefPublicOfficeID">
+<value/>
+</attribute>
+<attribute name="preferredLanguage">
+<value>LN1</value>
+</attribute>
+<attribute name="sensitivity">
+<value>1</value>
+</attribute>
+<attribute name="prefCommMethod">
+<value>CM4</value>
+</attribute>
+<attribute name="prefCommFromDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="prefCommToDate">
+<value/>
+</attribute>
+<attribute name="primaryWebAddressID">
+<value>1601</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="concernID">
+<value>573</value>
+</attribute>
+<attribute name="concernRoleID">
+<value>753</value>
+</attribute>
+<attribute name="concernRoleType">
+<value>RL15</value>
+</attribute>
+<attribute name="creationDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="registrationDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="startDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="statusCode">
+<value>ST1</value>
+</attribute>
+<attribute name="concernRoleName">
+<value>Test Provider 3</value>
+</attribute>
+<attribute name="primaryAddressID">
+<value>784</value>
+</attribute>
+<attribute name="primaryAlternateID">
+<value>24721</value>
+</attribute>
+<attribute name="comments">
+<value>None</value>
+</attribute>
+<attribute name="primaryPhoneNumberID">
+<value>1201</value>
+</attribute>
+<attribute name="primaryEmailAddressID">
+<value/>
+</attribute>
+<attribute name="primaryBankAccountID">
+<value/>
+</attribute>
+<attribute name="regUserName">
+<value>cpmmanager</value>
+</attribute>
+<attribute name="prefPublicOfficeID">
+<value/>
+</attribute>
+<attribute name="preferredLanguage">
+<value>LN1</value>
+</attribute>
+<attribute name="sensitivity">
+<value>1</value>
+</attribute>
+<attribute name="prefCommMethod">
+<value>CM4</value>
+</attribute>
+<attribute name="prefCommFromDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="prefCommToDate">
+<value/>
+</attribute>
+<attribute name="primaryWebAddressID">
+<value>1601</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="concernID">
+<value>23</value>
+</attribute>
+<attribute name="concernRoleID">
+<value>123</value>
+</attribute>
+<attribute name="concernRoleType">
+<value>RL4</value>
+</attribute>
+<attribute name="creationDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="registrationDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="startDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="statusCode">
+<value>ST1</value>
+</attribute>
+<attribute name="concernRoleName">
+<value>Midway Health Insurance</value>
+</attribute>
+<attribute name="primaryAddressID">
+<value>721</value>
+</attribute>
+<attribute name="primaryAlternateID">
+<value>24706</value>
+</attribute>
+<attribute name="comments">
+<value>None</value>
+</attribute>
+<attribute name="primaryPhoneNumberID">
+<value>1223</value>
+</attribute>
+<attribute name="primaryEmailAddressID">
+<value>1323</value>
+</attribute>
+<attribute name="primaryBankAccountID">
+<value>1021</value>
+</attribute>
+<attribute name="regUserName">
+<value>superuser</value>
+</attribute>
+<attribute name="prefPublicOfficeID">
+<value>3501</value>
+</attribute>
+<attribute name="preferredLanguage">
+<value>LN1</value>
+</attribute>
+<attribute name="sensitivity">
+<value>1</value>
+</attribute>
+<attribute name="prefCommMethod">
+<value/>
+</attribute>
+<attribute name="prefCommFromDate">
+<value/>
+</attribute>
+<attribute name="prefCommToDate">
+<value/>
+</attribute>
+<attribute name="primaryWebAddressID">
+<value>2672</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="concernID">
+<value>5</value>
+</attribute>
+<attribute name="concernRoleID">
+<value>105</value>
+</attribute>
+<attribute name="concernRoleType">
+<value>RL1</value>
+</attribute>
+<attribute name="creationDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="registrationDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="startDate">
+<value>1993-03-31</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="statusCode">
+<value>ST1</value>
+</attribute>
+<attribute name="concernRoleName">
+<value>Susan Smith</value>
+</attribute>
+<attribute name="primaryAddressID">
+<value>705</value>
+</attribute>
+<attribute name="primaryAlternateID">
+<value>24688</value>
+</attribute>
+<attribute name="comments">
+<value>None</value>
+</attribute>
+<attribute name="primaryPhoneNumberID">
+<value>1205</value>
+</attribute>
+<attribute name="primaryEmailAddressID">
+<value>1305</value>
+</attribute>
+<attribute name="primaryBankAccountID">
+<value>1005</value>
+</attribute>
+<attribute name="regUserName">
+<value>superuser</value>
+</attribute>
+<attribute name="prefPublicOfficeID">
+<value>3501</value>
+</attribute>
+<attribute name="preferredLanguage">
+<value>LN1</value>
+</attribute>
+<attribute name="sensitivity">
+<value>1</value>
+</attribute>
+<attribute name="prefCommMethod">
+<value/>
+</attribute>
+<attribute name="prefCommFromDate">
+<value/>
+</attribute>
+<attribute name="prefCommToDate">
+<value/>
+</attribute>
+<attribute name="primaryWebAddressID">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="concernID">
+<value>22</value>
+</attribute>
+<attribute name="concernRoleID">
+<value>122</value>
+</attribute>
+<attribute name="concernRoleType">
+<value>RL4</value>
+</attribute>
+<attribute name="creationDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="registrationDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="startDate">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="statusCode">
+<value>ST1</value>
+</attribute>
+<attribute name="concernRoleName">
+<value>Healthcare Inc.</value>
+</attribute>
+<attribute name="primaryAddressID">
+<value>722</value>
+</attribute>
+<attribute name="primaryAlternateID">
+<value>24705</value>
+</attribute>
+<attribute name="comments">
+<value>None</value>
+</attribute>
+<attribute name="primaryPhoneNumberID">
+<value>1222</value>
+</attribute>
+<attribute name="primaryEmailAddressID">
+<value>1322</value>
+</attribute>
+<attribute name="primaryBankAccountID">
+<value>1022</value>
+</attribute>
+<attribute name="regUserName">
+<value>superuser</value>
+</attribute>
+<attribute name="prefPublicOfficeID">
+<value>3501</value>
+</attribute>
+<attribute name="preferredLanguage">
+<value>LN1</value>
+</attribute>
+<attribute name="sensitivity">
+<value>1</value>
+</attribute>
+<attribute name="prefCommMethod">
+<value/>
+</attribute>
+<attribute name="prefCommFromDate">
+<value/>
+</attribute>
+<attribute name="prefCommToDate">
+<value/>
+</attribute>
+<attribute name="primaryWebAddressID">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+</table>

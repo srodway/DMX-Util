@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="FACTORHANDLERREGISTRY">
+  <column name="factorHandlerRegistryID" type="id" />
+  <column name="factorName" type="text" />
+  <column name="factorHandlerFactoryClass" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="isChallengeResponseFactor" type="bool" />
+  <row>
+    <attribute name="factorHandlerRegistryID">
+      <value>10000</value>
+    </attribute>
+    <attribute name="factorName">
+      <value>DATE_OF_BIRTH</value>
+    </attribute>
+    <attribute name="factorHandlerFactoryClass">
+      <value>curam.workspaceservices.authentication.impl.CuramFactorHandlerFactory</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="isChallengeResponseFactor">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="factorHandlerRegistryID">
+      <value>10001</value>
+    </attribute>
+    <attribute name="factorName">
+      <value>SSN</value>
+    </attribute>
+    <attribute name="factorHandlerFactoryClass">
+      <value>curam.workspaceservices.authentication.impl.CuramFactorHandlerFactory</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="isChallengeResponseFactor">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="factorHandlerRegistryID">
+      <value>10002</value>
+    </attribute>
+    <attribute name="factorName">
+      <value>PIN</value>
+    </attribute>
+    <attribute name="factorHandlerFactoryClass">
+      <value>curam.workspaceservices.authentication.impl.CuramFactorHandlerFactory</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="isChallengeResponseFactor">
+      <value />
+    </attribute>
+  </row>
+</table>
+

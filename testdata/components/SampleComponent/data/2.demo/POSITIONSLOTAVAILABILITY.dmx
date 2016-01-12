@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="POSITIONSLOTAVAILABILITY" override="true">
+<column name="positionSlotAvailabilityID" type="id"/>
+<column name="slotID" type="id"/>
+<column name="positionID" type="id"/>
+<column name="comments" type="text"/>
+<column name="fromDate" type="date"/>
+<column name="frequencyPattern" type="text"/>
+<column name="toDate" type="date"/>
+<column name="recordStatus" type="text"/>
+<column name="organisationStructureID" type="id"/>
+<column name="versionNo" type="number"/>
+</table>

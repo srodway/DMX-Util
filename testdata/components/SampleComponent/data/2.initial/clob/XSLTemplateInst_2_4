@@ -1,0 +1,551 @@
+<?xml version='1.0' encoding="UTF-8" standalone='yes'?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:fo="http://www.w3.org/1999/XSL/Format"
+  version='1.0' xmlns:foa="http://fabio">
+  <xsl:attribute-set name="Normal_1" foa:class="block">
+    <xsl:attribute name="font-size">12.0pt</xsl:attribute>
+    <xsl:attribute name="line-height">6mm</xsl:attribute>
+    <xsl:attribute name="space-before.optimum">6mm</xsl:attribute>
+    <xsl:attribute name="space-before.maximum">6mm</xsl:attribute>
+  </xsl:attribute-set>
+  <xsl:attribute-set name="Normal_2" foa:class="block">
+    <xsl:attribute name="text-align">left</xsl:attribute>
+    <xsl:attribute name="font-size">11.0pt</xsl:attribute>
+  </xsl:attribute-set>
+  <xsl:attribute-set name="Normal_3" foa:class="block">
+    <xsl:attribute name="font-weight">bold</xsl:attribute>
+  </xsl:attribute-set>
+  <xsl:attribute-set name="Normal_4" foa:class="block">
+    <xsl:attribute name="font-size">12pt</xsl:attribute>
+    <xsl:attribute name="line-height">5mm</xsl:attribute>
+    <xsl:attribute name="text-indent">0mm</xsl:attribute>
+    <xsl:attribute name="white-space-collapse">false</xsl:attribute>
+    <xsl:attribute name="linefeed-treatment">preserve</xsl:attribute>
+    <xsl:attribute name="white-space-treatment">preserve</xsl:attribute>
+    <xsl:attribute name="text-align">left</xsl:attribute>
+    <xsl:attribute name="space-before">0mm</xsl:attribute>
+    <xsl:attribute name="space-after">0mm</xsl:attribute>
+    <xsl:attribute name="margin-top">0</xsl:attribute>
+  </xsl:attribute-set>
+  <xsl:attribute-set name="Normal_5" foa:class="block">
+    <xsl:attribute name="font-size">12pt</xsl:attribute>
+    <xsl:attribute name="line-height">5mm</xsl:attribute>
+    <xsl:attribute name="white-space-collapse">false</xsl:attribute>
+    <xsl:attribute name="linefeed-treatment">preserve</xsl:attribute>
+    <xsl:attribute name="white-space-treatment">preserve</xsl:attribute>
+    <xsl:attribute name="text-align">left</xsl:attribute>
+    <xsl:attribute name="space-before">0mm</xsl:attribute>
+    <xsl:attribute name="space-after">0mm</xsl:attribute>
+    <xsl:attribute name="margin-top">0</xsl:attribute>
+  </xsl:attribute-set>
+  <xsl:attribute-set name="Normal_6" foa:class="block">
+    <xsl:attribute name="font-size">12pt</xsl:attribute>
+    <xsl:attribute name="line-height">5mm</xsl:attribute>
+    <xsl:attribute name="text-indent">0mm</xsl:attribute>
+    <xsl:attribute name="white-space-collapse">false</xsl:attribute>
+    <xsl:attribute name="linefeed-treatment">preserve</xsl:attribute>
+    <xsl:attribute name="white-space-treatment">preserve</xsl:attribute>
+    <xsl:attribute name="text-align">left</xsl:attribute>
+    <xsl:attribute name="space-before">0mm</xsl:attribute>
+    <xsl:attribute name="space-after">0mm</xsl:attribute>
+    <xsl:attribute name="margin-top">0</xsl:attribute>
+  </xsl:attribute-set>
+  <xsl:attribute-set name="Normal_7" foa:class="block">
+    <xsl:attribute name="font-size">12pt</xsl:attribute>
+    <xsl:attribute name="line-height">5mm</xsl:attribute>
+    <xsl:attribute name="text-indent">0mm</xsl:attribute>
+    <xsl:attribute name="white-space-collapse">false</xsl:attribute>
+    <xsl:attribute name="linefeed-treatment">preserve</xsl:attribute>
+    <xsl:attribute name="font-weight">bold</xsl:attribute>
+    <xsl:attribute name="white-space-treatment">preserve</xsl:attribute>
+    <xsl:attribute name="text-align">left</xsl:attribute>
+    <xsl:attribute name="space-before">0mm</xsl:attribute>
+    <xsl:attribute name="space-after">0mm</xsl:attribute>
+    <xsl:attribute name="margin-top">0</xsl:attribute>
+  </xsl:attribute-set>
+  <xsl:attribute-set name="Normal_8" foa:class="block">
+    <xsl:attribute name="padding-left">5pt</xsl:attribute>
+    <xsl:attribute name="font-size">12pt</xsl:attribute>
+    <xsl:attribute name="line-height">5mm</xsl:attribute>
+    <xsl:attribute name="white-space-collapse">false</xsl:attribute>
+    <xsl:attribute name="linefeed-treatment">preserve</xsl:attribute>
+    <xsl:attribute name="white-space-treatment">preserve</xsl:attribute>
+    <xsl:attribute name="text-align">left</xsl:attribute>
+    <xsl:attribute name="space-before">0mm</xsl:attribute>
+    <xsl:attribute name="space-after">0mm</xsl:attribute>
+    <xsl:attribute name="margin-top">0</xsl:attribute>
+  </xsl:attribute-set>
+
+ <xsl:attribute-set name="Normal_9" foa:class="block">
+    <xsl:attribute name="font-size">12pt</xsl:attribute>
+    <xsl:attribute name="line-height">6mm</xsl:attribute>
+    <xsl:attribute name="space-before.optimum">6mm</xsl:attribute>
+    <xsl:attribute name="space-before.maximum">6mm</xsl:attribute>
+  </xsl:attribute-set>
+  <xsl:attribute-set name="Normal_10" foa:class="block">
+    <xsl:attribute name="font-size">12pt</xsl:attribute>
+    <xsl:attribute name="line-height">6mm</xsl:attribute>
+    <xsl:attribute name="space-before.optimum">6mm</xsl:attribute>
+    <xsl:attribute name="space-before.maximum">6mm</xsl:attribute>
+    <xsl:attribute name="text-align">left</xsl:attribute>
+  </xsl:attribute-set>
+  <xsl:attribute-set name="Normal_11" foa:class="block">
+    <xsl:attribute name="font-size">12pt</xsl:attribute>
+    <xsl:attribute name="line-height">6mm</xsl:attribute>
+    <xsl:attribute name="space-before.optimum">6mm</xsl:attribute>
+    <xsl:attribute name="space-before.maximum">6mm</xsl:attribute>
+    <xsl:attribute name="text-align">right</xsl:attribute>
+  </xsl:attribute-set>
+  <xsl:attribute-set name="Normal_12" foa:class="block">
+    <xsl:attribute name="font-size">12pt</xsl:attribute>
+  </xsl:attribute-set>
+  <xsl:attribute-set name="Normal_13" foa:class="block">
+    <xsl:attribute name="font-weight">bold</xsl:attribute>
+    <xsl:attribute name="font-size">11pt</xsl:attribute>
+    <xsl:attribute name="line-height">6mm</xsl:attribute>
+    <xsl:attribute name="space-before.optimum">6mm</xsl:attribute>
+    <xsl:attribute name="space-before.maximum">6mm</xsl:attribute>
+    <xsl:attribute name="text-align">center</xsl:attribute>
+  </xsl:attribute-set>
+  <xsl:attribute-set name="Normal_14" foa:class="block">
+    <xsl:attribute name="margin-left">0.0pt</xsl:attribute>
+    <xsl:attribute name="space-after">0.0pt</xsl:attribute>
+    <xsl:attribute name="space-before">0.0pt</xsl:attribute>
+    <xsl:attribute name="text-align">start</xsl:attribute>
+    <xsl:attribute name="text-indent">0.0pt</xsl:attribute>
+    <xsl:attribute name="font-size">9pt</xsl:attribute>
+    <xsl:attribute name="line-height">6mm</xsl:attribute>
+    <xsl:attribute name="space-before.optimum">6mm</xsl:attribute>
+    <xsl:attribute name="space-before.maximum">6mm</xsl:attribute>
+  </xsl:attribute-set>
+  <xsl:attribute-set name="Normal_15" foa:class="block">
+    <xsl:attribute name="margin-left">0.0pt</xsl:attribute>
+    <xsl:attribute name="space-after">0.0pt</xsl:attribute>
+    <xsl:attribute name="space-before">0.0pt</xsl:attribute>
+    <xsl:attribute name="text-align">center</xsl:attribute>
+    <xsl:attribute name="text-indent">0.0pt</xsl:attribute>
+    <xsl:attribute name="font-size">12pt</xsl:attribute>
+    <xsl:attribute name="line-height">6mm</xsl:attribute>
+    <xsl:attribute name="space-before.optimum">6mm</xsl:attribute>
+    <xsl:attribute name="space-before.maximum">6mm</xsl:attribute>
+  </xsl:attribute-set>
+
+
+  <xsl:template match="DOCUMENT">
+    <!--Explicitly select DATA to ensure META element is ignored.-->
+    <xsl:apply-templates select="DATA"/>
+  </xsl:template>
+
+  <xsl:template match="DATA">
+    <!--Explicitly select the STRUCT to avoid processing anything
+      else.-->
+    <xsl:apply-templates select="STRUCT[SNAME='AgreementDocumentData']"/>
+  </xsl:template>
+
+
+
+
+  <xsl:template match="STRUCT[SNAME='AgreementDocumentData']">
+    <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+      <fo:layout-master-set>
+        <!-- height was 297-->
+        <fo:simple-page-master master-name="only" page-height="297mm" page-width="210mm"
+          margin-top="30mm" margin-bottom="5mm" margin-left="30mm" margin-right="30mm">
+          <fo:region-body margin-bottom="18mm"/>
+          <fo:region-after region-name="footer" extent="15mm"/>
+        </fo:simple-page-master>
+      </fo:layout-master-set>
+
+      <xsl:variable name="displayClientCoverLetter">
+        <xsl:value-of select="FIELD[FNAME='displayCoverLetterInd']/VALUE"/>
+      </xsl:variable>
+
+      <xsl:if test="$displayClientCoverLetter='true'">
+        <fo:page-sequence master-reference="only">
+         <!-- START NON-TRANSLATABLE -->
+          <fo:flow flow-name="xsl-region-body" font-family="WT Sans">
+         <!-- END NON-TRANSLATABLE -->
+            <fo:block xsl:use-attribute-sets="Normal_1">
+              <xsl:apply-templates
+                select="//STRUCT[SNAME='AgreementLetterDetails']/FIELD[FNAME='agreementLetterDear']"
+              />
+            </fo:block>
+            <fo:block xsl:use-attribute-sets="Normal_1">
+              <xsl:apply-templates
+                select="//STRUCT[SNAME='AgreementLetterDetails']/FIELD[FNAME='agreementLetterMain']"
+              />
+            </fo:block>
+            <fo:block xsl:use-attribute-sets="Normal_1">
+              <xsl:apply-templates
+                select="//STRUCT[SNAME='AgreementLetterDetails']/FIELD[FNAME='agreementLetterContact']"
+              />
+            </fo:block>
+            <fo:block xsl:use-attribute-sets="Normal_1">
+              <xsl:apply-templates
+                select="//STRUCT[SNAME='AgreementLetterDetails']/FIELD[FNAME='agreementLetterSincerely']"
+              />
+            </fo:block>
+            <fo:block xsl:use-attribute-sets="Normal_1">
+              <xsl:apply-templates select="FIELD[FNAME='caseWorkerFullName']"/>
+            </fo:block>
+          </fo:flow>
+        </fo:page-sequence>
+      </xsl:if>
+
+      <fo:page-sequence master-reference="only">
+
+        <fo:static-content flow-name="footer">
+          <fo:block xsl:use-attribute-sets="Normal_2">Printed: <xsl:apply-templates select="FIELD[FNAME='currentDate']"/>,
+              <xsl:apply-templates select="FIELD[FNAME='caseWorkerFullName']"/>
+          </fo:block>
+        </fo:static-content>
+
+		<!-- START NON-TRANSLATABLE -->
+        <fo:flow flow-name="xsl-region-body" font-family="WT Sans">
+        <!-- END NON-TRANSLATABLE -->
+
+          <!-- Build variables strings -->
+          <xsl:variable name="outcomePlanGoalName">
+            <xsl:value-of select="FIELD[FNAME='outcomePlanGoalName']/VALUE"/>
+          </xsl:variable>
+          <xsl:variable name="clientsExist">
+            <xsl:value-of select="FIELD[FNAME='outcomePlanClientGoalInd']/VALUE"/>
+          </xsl:variable>
+          <xsl:variable name="numberOfClients">
+            <xsl:value-of select="count(//STRUCT[SNAME='AgreementClientDetails'])"/>
+          </xsl:variable>
+          <xsl:variable name="numberOfSignatories">
+            <xsl:value-of select="count(//STRUCT[SNAME='AgreementSignatoryDetails'])"/>
+          </xsl:variable>
+
+
+          <fo:table table-layout="fixed" width="100%" space-after="25pt">
+            <fo:table-column column-width="proportional-column-width(100)"/>
+            <fo:table-body>
+              <fo:table-row>
+                <fo:table-cell padding="2pt" text-align="center">
+                  <fo:block xsl:use-attribute-sets="Normal_3">OUTCOME PLAN AGREEMENT</fo:block>
+                </fo:table-cell>
+              </fo:table-row>
+            </fo:table-body>
+          </fo:table>
+
+          <xsl:if test="$clientsExist='false'">
+            <fo:table table-layout="fixed" width="100%" space-after="32pt">
+              <fo:table-column column-width="proportional-column-width(50)"/>
+              <fo:table-column column-width="proportional-column-width(50)"/>
+              <fo:table-body>
+                <fo:table-row>
+                  <fo:table-cell padding-left="0pt" padding-right="0pt">
+                    <fo:block  xsl:use-attribute-sets="Normal_4">
+                      <fo:inline font-weight="bold">Client(s): </fo:inline>
+                      <xsl:apply-templates select="FIELD[FNAME='agreementClients']"/>
+                    </fo:block>
+                  </fo:table-cell>
+                  <xsl:if test="string-length($outcomePlanGoalName) > 0 ">
+                    <fo:table-cell padding-left="0pt" padding-right="0pt">
+
+                      <fo:block  xsl:use-attribute-sets="Normal_4">
+                        <fo:inline font-weight="bold">Plan Goal: </fo:inline>
+                        <xsl:apply-templates select="FIELD[FNAME='outcomePlanGoalName']"/>
+                      </fo:block>
+
+                    </fo:table-cell>
+                  </xsl:if>
+                </fo:table-row>
+                <fo:table-row>
+                  <fo:table-cell padding-left="0pt" padding-right="0pt">
+                    <fo:block  xsl:use-attribute-sets="Normal_5">
+                      <fo:inline font-weight="bold">Agreement Date: </fo:inline>
+                      <xsl:apply-templates select="FIELD[FNAME='currentDate']"/>
+                    </fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell padding-left="0pt" padding-right="0pt">
+                    <fo:block  xsl:use-attribute-sets="Normal_4">
+                      <fo:inline font-weight="bold">Plan Reference Number: </fo:inline>
+                      <xsl:apply-templates select="FIELD[FNAME='outcomePlanReference']"/>
+                    </fo:block>
+                  </fo:table-cell>
+                </fo:table-row>
+              </fo:table-body>
+            </fo:table>
+          </xsl:if>
+
+          <xsl:if test="$clientsExist='true'">
+            <fo:table table-layout="fixed" width="100%" space-after="32pt">
+              <fo:table-column column-width="proportional-column-width(60)"/>
+              <fo:table-column column-width="proportional-column-width(40)"/>
+              <fo:table-body>
+                <xsl:if test="string-length($outcomePlanGoalName) > 0 ">
+                  <fo:table-row>
+                    <fo:table-cell padding-left="0pt" padding-right="0pt">
+                      <fo:block  xsl:use-attribute-sets="Normal_6">
+                        <fo:inline font-weight="bold">Plan Goal: </fo:inline>
+                        <xsl:apply-templates select="FIELD[FNAME='outcomePlanGoalName']"/>
+                      </fo:block>
+                    </fo:table-cell>
+                  </fo:table-row>
+                </xsl:if>
+                <fo:table-row>
+                  <fo:table-cell padding-left="0pt" padding-right="0pt">
+
+                    <xsl:if test="$numberOfClients > 1">
+                      <fo:block  xsl:use-attribute-sets="Normal_7">Clients </fo:block>
+                    </xsl:if>
+                    <xsl:if test="$numberOfClients = 0">
+                      <fo:block  xsl:use-attribute-sets="Normal_7">Client</fo:block>
+                    </xsl:if>
+                  </fo:table-cell>
+
+                  <fo:table-cell padding-left="0pt" padding-right="0pt">
+                    <fo:block  xsl:use-attribute-sets="Normal_7">Goal </fo:block>
+                  </fo:table-cell>
+                </fo:table-row>
+                <xsl:for-each select="//STRUCT[SNAME='AgreementClientDetails']">
+                  <fo:table-row>
+                    <fo:table-cell>
+                      <fo:block  xsl:use-attribute-sets="Normal_8">
+                        <xsl:apply-templates select="FIELD[FNAME='clientName']"/>
+                      </fo:block>
+                    </fo:table-cell>
+                    <fo:table-cell>
+                      <xsl:variable name="clientGoalName">
+                        <xsl:value-of select="FIELD[FNAME='outcomePlanClientGoalName']/VALUE"/>
+                      </xsl:variable>
+                      <xsl:if test="string-length($clientGoalName) > 0 ">
+                        <fo:block  xsl:use-attribute-sets="Normal_5">
+                          <xsl:apply-templates select="FIELD[FNAME='outcomePlanClientGoalName']"/>
+                        </fo:block>
+                      </xsl:if>
+                      <xsl:if test="string-length($clientGoalName) = 0 ">
+                        <fo:block  xsl:use-attribute-sets="Normal_5">N/A</fo:block>
+                      </xsl:if>
+                    </fo:table-cell>
+                  </fo:table-row>
+                </xsl:for-each>
+
+
+
+                <fo:table-row>
+                  <fo:table-cell padding-left="0pt" padding-right="0pt">
+                    <fo:block  xsl:use-attribute-sets="Normal_5">
+                      <fo:inline font-weight="bold">Agreement Date: </fo:inline>
+                      <xsl:apply-templates select="FIELD[FNAME='currentDate']"/>
+                    </fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell padding-left="0pt" padding-right="0pt">
+                    <fo:block  xsl:use-attribute-sets="Normal_12">
+                      <fo:inline font-weight="bold">Plan Reference Number: </fo:inline>
+                      <xsl:apply-templates select="FIELD[FNAME='outcomePlanReference']"/>
+                    </fo:block>
+                  </fo:table-cell>
+                </fo:table-row>
+              </fo:table-body>
+            </fo:table>
+          </xsl:if>
+
+
+          <!-- Only display activity table if activities exists -->
+          <xsl:apply-templates select="//STRUCT[SNAME='AgreementActivityDetailsList']"/>
+
+
+
+          <fo:block  xsl:use-attribute-sets="Normal_9">I understand that by signing this agreement I am agreeing to
+            participate in the activities outlined. </fo:block>
+
+          <fo:block  xsl:use-attribute-sets="Normal_9">I understand that if I do not participate in the activities
+            outlined in this agreement, and I can show no good cause as to why I did not participate
+            in these activities, my noncompliance may result in sanctions being applied to me. I
+            understand that these sanctions may result in my loss of benefits. </fo:block>
+
+
+          <fo:block  xsl:use-attribute-sets="Normal_9">I agree if I cannot attend a session/activity I will contact
+            my case worker immediately. </fo:block>
+
+
+          <fo:block  xsl:use-attribute-sets="Normal_9">Our signatures indicate that we have jointly developed this
+            agreement and agree to the responsibilities and conditions outlined. </fo:block>
+
+
+          <fo:table table-layout="fixed" width="100%" space-before="32pt">
+
+            <fo:table-column column-width="proportional-column-width(50)"/>
+            <fo:table-column column-width="proportional-column-width(50)"/>
+            <fo:table-body>
+              <fo:table-row>
+                <fo:table-cell padding-left="0pt" padding-right="0pt">
+                  <fo:block  xsl:use-attribute-sets="Normal_10"> Caseworker :
+                    ________________________</fo:block>
+                </fo:table-cell>
+                <fo:table-cell padding-left="0pt" padding-right="0pt">
+                  <fo:block  xsl:use-attribute-sets="Normal_11"> </fo:block>
+                </fo:table-cell>
+              </fo:table-row>
+              <fo:table-row>
+                <fo:table-cell padding-left="0pt" padding-right="0pt" padding-top="12pt">
+                  <fo:block  xsl:use-attribute-sets="Normal_10">Client:</fo:block>
+                </fo:table-cell>
+
+                <fo:table-cell padding-left="0pt" padding-right="0pt" padding-top="12pt">
+                  <fo:block  xsl:use-attribute-sets="Normal_10">Date: </fo:block>
+                </fo:table-cell>
+              </fo:table-row>
+              <xsl:for-each select="//STRUCT[SNAME='AgreementSignatoryDetails']">
+                <fo:table-row>
+                  <fo:table-cell padding-left="0pt" padding-right="0pt">
+                    <fo:block  xsl:use-attribute-sets="Normal_10">________________________</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell padding-left="0pt" padding-right="0pt">
+                    <fo:block  xsl:use-attribute-sets="Normal_10">
+                    ________________________</fo:block>
+                  </fo:table-cell>
+                </fo:table-row>
+              </xsl:for-each>
+
+            </fo:table-body>
+          </fo:table>
+
+        </fo:flow>
+
+
+
+      </fo:page-sequence>
+
+    </fo:root>
+  </xsl:template>
+
+  <xsl:template match="//STRUCT[SNAME='AgreementActivityDetailsList']">
+
+
+
+    <xsl:variable name="numberOfActivities">
+      <xsl:value-of select="count(//STRUCT[SNAME='AgreementActivityDetails'])"/>
+    </xsl:variable>
+
+
+
+    <xsl:if test="$numberOfActivities > 0">
+      <fo:table table-layout="fixed" width="100%">
+
+        <fo:table-column column-width="proportional-column-width(20)"/>
+        <fo:table-column column-width="proportional-column-width(20)"/>
+        <fo:table-column column-width="proportional-column-width(20)"/>
+        <fo:table-column column-width="proportional-column-width(20)"/>
+        <fo:table-column column-width="proportional-column-width(20)"/>
+
+        <fo:table-header>
+
+          <fo:table-cell border-bottom-style="solid" border-bottom-width="0.5pt"
+            border-top-style="solid" border-top-width="0.5pt" border-start-style="solid"
+            border-start-width="0.5pt" border-end-style="solid" border-end-width="0.5pt">
+            <fo:block  xsl:use-attribute-sets="Normal_13">Activity</fo:block>
+          </fo:table-cell>
+          <fo:table-cell border-bottom-style="solid" border-bottom-width="0.5pt"
+            border-top-style="solid" border-top-width="0.5pt" border-end-style="solid"
+            border-end-width="0.5pt">
+            <fo:block  xsl:use-attribute-sets="Normal_13">Responsibility</fo:block>
+          </fo:table-cell>
+          <fo:table-cell border-bottom-style="solid" border-bottom-width="0.5pt"
+            border-top-style="solid" border-top-width="0.5pt" border-end-style="solid"
+            border-end-width="0.5pt">
+            <fo:block  xsl:use-attribute-sets="Normal_13">Cover Period</fo:block>
+          </fo:table-cell>
+          <fo:table-cell border-bottom-style="solid" border-bottom-width="0.5pt"
+            border-top-style="solid" border-top-width="0.5pt" border-end-style="solid"
+            border-end-width="0.5pt">
+            <fo:block  xsl:use-attribute-sets="Normal_13">Participation</fo:block>
+          </fo:table-cell>
+          <fo:table-cell border-bottom-style="solid" border-bottom-width="0.5pt"
+            border-top-style="solid" border-top-width="0.5pt" border-end-style="solid"
+            border-end-width="0.5pt">
+            <fo:block  xsl:use-attribute-sets="Normal_13">Provider</fo:block>
+          </fo:table-cell>
+        </fo:table-header>
+        <fo:table-body>
+          <xsl:for-each select="//STRUCT[SNAME='AgreementActivityDetails']">
+            <fo:table-row>
+              <fo:table-cell padding-left="3pt" padding-right="3pt" border-bottom-style="solid"
+                border-bottom-width="0.5pt" border-start-style="solid" border-start-width="0.5pt"
+                border-end-style="solid" border-end-width="0.5pt">
+                <fo:block  xsl:use-attribute-sets="Normal_14">
+                  <xsl:apply-templates select="FIELD[FNAME='activityName']"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell padding-left="3pt" padding-right="3pt" border-bottom-style="solid"
+                border-bottom-width="0.5pt" border-end-style="solid" border-end-width="0.5pt">
+                <fo:block  xsl:use-attribute-sets="Normal_14">
+                  <xsl:apply-templates select="FIELD[FNAME='activityClients']"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell padding-left="3pt" padding-right="3pt " border-bottom-style="solid"
+                border-bottom-width="0.5pt" border-end-style="solid" border-end-width="0.5pt">
+                <fo:block  xsl:use-attribute-sets="Normal_14">
+                  <xsl:apply-templates select="FIELD[FNAME='activityCoverPeriod']"/>
+                </fo:block>
+              </fo:table-cell>
+              <fo:table-cell padding-left="3pt" padding-right="3pt" border-bottom-style="solid"
+                border-bottom-width="0.5pt" border-end-style="solid" border-end-width="0.5pt">
+                <xsl:variable name="activityParticipation">
+                  <xsl:value-of select="FIELD[FNAME='activityParticipation']/VALUE"/>
+                </xsl:variable>
+                <xsl:if test="string-length($activityParticipation) > 0 ">
+                  <fo:block  xsl:use-attribute-sets="Normal_14">
+                    <xsl:apply-templates select="FIELD[FNAME='activityParticipation']"/>
+                  </fo:block>
+                </xsl:if>
+                <xsl:if test="string-length($activityParticipation) = 0 ">
+                  <fo:block  xsl:use-attribute-sets="Normal_14">N/A</fo:block>
+                </xsl:if>
+              </fo:table-cell>
+              <fo:table-cell padding-left="3pt" padding-right="3pt" border-bottom-style="solid"
+                border-bottom-width="0.5pt" border-end-style="solid" border-end-width="0.5pt">
+                <xsl:variable name="providerAddress">
+                  <xsl:value-of select="FIELD[FNAME='providerAddress']/VALUE"/>
+                </xsl:variable>
+                <xsl:if test="string-length($providerAddress) > 0 ">
+                  <fo:block  xsl:use-attribute-sets="Normal_14">
+                    <xsl:apply-templates select="FIELD[FNAME='providerName']"/>,
+                      <xsl:apply-templates select="FIELD[FNAME='providerAddress']"/>
+                  </fo:block>
+                </xsl:if>
+                <xsl:if test="string-length($providerAddress) = 0 ">
+                  <fo:block  xsl:use-attribute-sets="Normal_14">N/A</fo:block>
+                </xsl:if>
+              </fo:table-cell>
+            </fo:table-row>
+          </xsl:for-each>
+        </fo:table-body>
+      </fo:table>
+    </xsl:if>
+
+
+    <xsl:if test="$numberOfActivities = 0">
+      <fo:table table-layout="fixed" width="100%">
+
+        <fo:table-column column-width="proportional-column-width(100)"/>
+
+        <fo:table-body>
+
+          <fo:table-row>
+            <fo:table-cell padding-left="3pt" padding-right="3pt" border-bottom-style="solid"
+              border-top-style="solid" border-top-width="0.5pt" border-bottom-width="0.5pt"
+              border-start-style="solid" border-start-width="0.5pt" border-end-style="solid"
+              border-end-width="0.5pt" padding-top="5pt" padding-bottom="5pt">
+              <fo:block  xsl:use-attribute-sets="Normal_15"> No Activities Currently Exist For This
+                Agreement </fo:block>
+            </fo:table-cell>
+
+          </fo:table-row>
+
+        </fo:table-body>
+      </fo:table>
+    </xsl:if>
+  </xsl:template>
+
+
+
+  <xsl:template match="FIELD">
+    <xsl:value-of select="VALUE"/>
+  </xsl:template>
+
+</xsl:stylesheet>

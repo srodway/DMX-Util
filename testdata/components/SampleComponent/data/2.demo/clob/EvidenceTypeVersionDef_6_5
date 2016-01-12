@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<EvidenceTypeVersion
+  businessEndDate="endDate"
+  businessStartDate="startDate"
+  description="This entity contains details of an individual who lives in the household. Personal information is captured for household members through the system registration process. Additional information such as citizen status, veteran status and ethnic details, may be captured on the household record. etc."
+  modifiable="true"
+  relatedParticipant="caseParticipantRoleID"
+>
+  <Model>
+    <Attributes>
+      <Attribute>
+        <DataAttribute
+          defaultValue="false"
+          description="Indicates if the client is Asian."
+          name="asian"
+        >
+          <DomainType dataType="Boolean"/>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          defaultValue="false"
+          description="Indicates if the client is black or African American."
+          name="blackOrAfricanAmerican"
+        >
+          <DomainType dataType="Boolean"/>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          defaultValue="false"
+          description="Indicates if the client is Alaskan or an American Indian"
+          name="nativeAlaskanOrAmericanIndian"
+        >
+          <DomainType dataType="Boolean"/>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          defaultValue="false"
+          description="Indicates if the client is Hawaiian or a Pacific Islander."
+          name="nativeHawaiianOrPacificIslander"
+        >
+          <DomainType dataType="Boolean"/>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          defaultValue="false"
+          description="Indicates if the client is white or caucasian."
+          name="whiteOrCaucasian"
+        >
+          <DomainType dataType="Boolean"/>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          defaultValue="false"
+          description="Indicates if the client is a migrant or seasonal farm worker."
+          name="migrantOrSeasonalFarmWorker"
+        >
+          <DomainType dataType="Boolean"/>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          defaultValue="false"
+          description="Indicates if the client is Hispanic or Latino."
+          name="hispanicOrLatino"
+        >
+          <DomainType dataType="Boolean"/>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The date the client became a household member."
+          mandatory="true"
+          name="startDate"
+        >
+          <DomainType dataType="Date">
+            <DateOptions currentDate="LessThanOrEqualTo">
+              <ValidationMessageInformation>
+                <ValidationMessageMapping>
+                  <ValidationMessage>
+                    <parameter name="startDate"/>
+                    <ValidationMessageResource id="StartDate.message"/>
+                  </ValidationMessage>
+                </ValidationMessageMapping>
+              </ValidationMessageInformation>
+            </DateOptions>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The date the client ceased being a household member."
+          name="endDate"
+        >
+          <DomainType dataType="Date"/>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The client's ssn status. This indicates if the client has a social security number."
+          mandatory="true"
+          name="ssnStatus"
+          volatile="true"
+        >
+          <DomainType dataType="Codetable">
+            <CodetableOptions codetableName="SSNApplicationStatus"/>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The citizenship status of a household member. This is populated from the alien status code table."
+          name="citizenStatus"
+          volatile="true"
+        >
+          <DomainType dataType="Codetable">
+            <CodetableOptions codetableName="AlienStatus"/>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="An individual's veteran status e.g. Active Duty, Disabled Veteran, Spouse of Active Duty etc."
+          name="veteranStatus"
+          volatile="true"
+        >
+          <DomainType dataType="Codetable">
+            <CodetableOptions codetableName="VeteranStatus"/>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The residency status for a household member. For example, indicates if a member is permanently or temporarily resident in the household."
+          mandatory="true"
+          name="residencyStatus"
+          volatile="true"
+        >
+          <DomainType dataType="Codetable">
+            <CodetableOptions codetableName="ResidencyStatus"/>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <RelatedCPAttribute
+          cpRoleType="MEM"
+          description="The case participant role identifier of the household member."
+          name="caseParticipantRoleID"
+          participantType="Person"
+        />
+      </Attribute>
+      <Attribute>
+        <CommentsAttribute
+          description="Additional comments relating to the household member."
+          name="comments"
+        />
+      </Attribute>
+    </Attributes>
+    <Relationships/>
+  </Model>
+  <Validations>
+    <PatternValidations>
+      <Validator>
+        <ComparisonValidator
+          operator="GreaterThanOrEqualTo"
+          shallow="false"
+          source="endDate"
+          target="startDate"
+          useClause="false"
+          useLiteral="false"
+        >
+          <ValidationMessageInformation>
+            <ValidationMessageMapping>
+              <ValidationMessage>
+                <parameter name="endDate"/>
+                <parameter name="startDate"/>
+                <ValidationMessageResource id="EndDateStartDateComparison.message"/>
+              </ValidationMessage>
+            </ValidationMessageMapping>
+          </ValidationMessageInformation>
+        </ComparisonValidator>
+      </Validator>
+    </PatternValidations>
+  </Validations>
+  <SummaryInformation>
+    <SummaryMapping
+      endDate="endDate"
+      startDate="startDate"
+    >
+      <Summary>
+        <parameter name="startDate"/>
+        <parameter name="citizenStatus"/>
+        <parameter name="residencyStatus"/>
+        <SummaryResource id="HouseholdMember.Summary.message"/>
+      </Summary>
+    </SummaryMapping>
+  </SummaryInformation>
+  <UserInterface
+    createDialogWidth="950"
+    modifyDialogWidth="950"
+  >
+    <OnlineTextCreatePage id="Create.Page.Description"/>
+    <OnlineTextModifyPage id="Modify.Page.Description"/>
+    <OnlineTextViewPage id="View.Page.Description"/>
+    <Cluster>
+      <RelCPCluster
+        fullCreateParticipant="false"
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+        modifyOption="multiple"
+        searchOption="Person"
+        showParticipantTypeFilter="true"
+        useSingleName="false"
+      >
+        <OnlineText id="Cluster.CaseParticipant.Help"/>
+        <StandardField source="caseParticipantRoleID"/>
+        <ClusterName id="Cluster.CaseParticipant"/>
+        <LabelName id="HouseholdMember.Label"/>
+        <DescriptionName id="HouseholdMember.Description"/>
+        <RelCpPfx id="Participant.Description"/>
+        <FirstName id="First.Name.Label"/>
+        <SecondName id="Second.Name.Label"/>
+      </RelCPCluster>
+    </Cluster>
+    <Cluster>
+      <StandardCluster
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+        labelWidth="40"
+        numberOfColumns="2"
+      >
+        <Title id="Cluster.HouseholdMember.Details"/>
+        <OnlineText id="Cluster.HouseholdMember.Details.Help"/>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="startDate"
+            useDefault="true"
+          >
+            <Label id="Field.Label.StartDate"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="endDate"
+            useDefault="true"
+          >
+            <Label id="Field.Label.EndDate"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="residencyStatus"
+            useDefault="true"
+          >
+            <Label id="Field.Label.ResidencyStatus"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="citizenStatus"
+            useDefault="true"
+          >
+            <Label id="Field.Label.CitizenStatus"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="ssnStatus"
+            useDefault="true"
+          >
+            <Label id="Field.Label.SSNStatus"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="veteranStatus"
+            useDefault="true"
+          >
+            <Label id="Field.Label.VeteranStatus"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="asian"
+            useDefault="true"
+          >
+            <Label id="Field.Label.Asian"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="blackOrAfricanAmerican"
+            useDefault="true"
+          >
+            <Label id="Field.Label.BlackOrAfricanAmerican"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="nativeAlaskanOrAmericanIndian"
+            useDefault="true"
+          >
+            <Label id="Field.Label.NativeAlaskanOrAmericanIndian"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="nativeHawaiianOrPacificIslander"
+            useDefault="true"
+          >
+            <Label id="Field.Label.NativeHawaiianOrPacificIslander"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="whiteOrCaucasian"
+            useDefault="true"
+          >
+            <Label id="Field.Label.WhiteOrCaucasian"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="hispanicOrLatino"
+            useDefault="true"
+          >
+            <Label id="Field.Label.HispanicOrLatino"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="migrantOrSeasonalFarmWorker"
+            useDefault="true"
+          >
+            <Label id="Field.Label.MigrantOrSeasonalFarmWorker"/>
+          </StandardField>
+        </StandardClusterField>
+      </StandardCluster>
+    </Cluster>
+    <Cluster>
+      <CommentsCluster
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+      >
+        <Title id="Cluster.Comments"/>
+        <OnlineText id="Cluster.Comments.Help"/>
+        <StandardField source="comments"/>
+      </CommentsCluster>
+    </Cluster>
+  </UserInterface>
+</EvidenceTypeVersion>

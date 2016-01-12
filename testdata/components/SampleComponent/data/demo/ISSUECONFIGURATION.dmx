@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="ISSUECONFIGURATION" override="true">
+<column name="issueConfigurationID" type="id"/>
+<column name="type" type="text"/>
+<column name="homePageIdentifier" type="text"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="priority" type="text"/>
+<column name="eventClassAndType" type="text"/>
+<column name="comments" type="text"/>
+<column name="creationDate" type="date"/>
+<column name="recordStatus" type="text"/>
+<column name="ownershipStrategyName" type="text"/>
+<column name="notAppealableInd" type="bool"/>
+<column name="versionNo" type="number"/>
+</table>

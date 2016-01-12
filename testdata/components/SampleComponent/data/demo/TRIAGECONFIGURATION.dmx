@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="TRIAGECONFIGURATION" override="true">
+<column name="triageConfigID" type="id"/>
+<column name="geocodeNorthBound" type="text"/>
+<column name="geocodeSouthBound" type="text"/>
+<column name="geocodeEastBound" type="text"/>
+<column name="geocodeWestBound" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

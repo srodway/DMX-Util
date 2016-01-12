@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  PID 5725-H26
+  
+  Copyright IBM Corporation 2015. All Rights Reserved.
+  
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><ac:application xmlns:ac="http://www.curamsoftware.com/curam/util/client/application-config" id="ILAPAPP" logo="PlannerApp.logo" subtitle="PlannerApp.subtitle" title="PlannerApp.title" user-message="PlannerApp.UserMessage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <ac:application-menu>
+        <ac:preferences title="preferences.title"/>
+        <ac:help title="help.title"/>
+        <ac:logout title="logout.title"/>
+    </ac:application-menu>
+    
+    <ac:application-search default-search-page="OutcomePlan_resolveByReference" initial-text="Application.Search.InitialText"/>
+    
+    <ac:section-ref id="ILAPAPPHomeSection"/>
+    <ac:section-ref id="ILAPAPPWorkspaceSection"/>
+    <ac:section-ref id="DefaultAppInboxSection"/>
+    <ac:section-ref id="DefaultAppCalendarSection"/>    
+    
+</ac:application>

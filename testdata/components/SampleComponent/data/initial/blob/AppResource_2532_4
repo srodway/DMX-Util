@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009-2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="AuditPlanHomeMenu">
+  
+  <mc:loader-registry>
+    <mc:loader class="curam.core.sl.tab.impl.AuditPlanMenuLoader"/>
+  </mc:loader-registry>  
+  
+  <mc:menu-item dynamic="true" id="Edit" open-as="modal" page-id="CaseAudit_modifyAuditPlan" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
+
+  <mc:menu-separator id="sep1"/> 
+  
+  <mc:menu-item dynamic="true" id="AddSchedule" open-as="modal" page-id="CaseAudit_maintainAuditPlanSchedule" title="MenuItem.Title.AddSchedule" tooltip="MenuItem.Tooltip.AddSchedule"/>
+  <mc:menu-item dynamic="true" id="EditSchedule" open-as="modal" page-id="CaseAudit_maintainAuditPlanSchedule" title="MenuItem.Title.EditSchedule" tooltip="MenuItem.Tooltip.EditSchedule"/>
+  <mc:menu-item dynamic="true" id="DeleteSchedule" open-as="modal" page-id="CaseAudit_deleteScheduleInfo" title="MenuItem.Title.DeleteSchedule" tooltip="MenuItem.Tooltip.DeleteSchedule"/>
+  
+  <mc:menu-separator id="sep2"/> 
+
+  <mc:menu-item id="Auditor" open-as="modal" page-id="CaseAudit_createAuditors" title="MenuItem.Title.Auditor" tooltip="MenuItem.Tooltip.Auditor"/>
+  <mc:menu-item id="AuditTeam" open-as="modal" page-id="CaseAudit_createAuditTeam" title="MenuItem.Title.AuditTeam" tooltip="MenuItem.Tooltip.AuditTeam"/>
+  
+  <mc:menu-separator id="sep3"/> 
+
+
+  <mc:menu-item dynamic="true" id="ManageFocusAreas" open-as="modal" page-id="CaseAudit_modifyAuditPlanFocusAreas" title="MenuItem.Title.ManageFocusAreas" tooltip="MenuItem.Tooltip.ManageFocusAreas"/>
+  <mc:menu-item dynamic="true" id="AssignAudits" open-as="modal" page-id="CaseAudit_assignCaseAudits" title="MenuItem.Title.AssignAudits" tooltip="MenuItem.Tooltip.AssignAudits"/>
+  <mc:menu-item dynamic="true" id="AddSummaryFindings" open-as="modal" page-id="AuditPlan_createSummaryFindings" title="MenuItem.Title.AddSummaryFindings" tooltip="MenuItem.Tooltip.AddSummaryFindings"/>
+  <mc:menu-item dynamic="true" id="EditSummaryFindings" open-as="modal" page-id="AuditPlan_modifySummaryFindings" title="MenuItem.Title.EditSummaryFindings" tooltip="MenuItem.Tooltip.EditSummaryFindings"/>
+  <mc:menu-item dynamic="true" id="CompleteAuditPlan" open-as="modal" page-id="AuditPlan_confirmCompletePlan" title="MenuItem.Title.CompleteAuditPlan" tooltip="MenuItem.Tooltip.CompleteAuditPlan"/>
+
+
+  <mc:menu-separator id="sep4"/> 
+
+  <mc:menu-item id="CaseAudit" page-id="CaseAudit_searchCaseAudit" title="MenuItem.Title.CaseAudit" tooltip="MenuItem.Tooltip.CaseAudit"/>
+
+  <mc:menu-item id="AuditPlan" page-id="CaseAudit_searchAuditPlan" title="MenuItem.Title.AuditPlan" tooltip="MenuItem.Tooltip.AuditPlan"/>
+
+  <mc:menu-separator id="sep5"/> 
+        
+  <mc:menu-item id="DeleteAuditPlan" open-as="modal" page-id="CaseAudit_cancelAuditPlan" title="MenuItem.Title.DeleteAuditPlan" tooltip="MenuItem.Tooltip.DeleteAuditPlan"/>
+
+</mc:menu-bar>

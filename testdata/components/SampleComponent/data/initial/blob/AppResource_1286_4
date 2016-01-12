@@ -1,0 +1,72 @@
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Submenu.Title.New=New
+Submenu.Icon.New=New
+Submenu.Tooltip.New=New
+MenuItem.Title.Comment=Comment
+MenuItem.Icon.Comment=Comment
+MenuItem.Tooltip.Comment=Add a new comment on the outcome plan service
+
+MenuItem.Title.Submit=Submit
+MenuItem.Icon.Submit=Submit
+MenuItem.Tooltip.Submit=Submit
+MenuItem.Title.Complete=Complete
+MenuItem.Icon.Complete=Complete
+MenuItem.Tooltip.Complete=Complete
+MenuItem.Title.Approve=Approve
+MenuItem.Icon.Approve=Approve
+MenuItem.Tooltip.Approve=Approves the submitted service, which updates its status to 'Not Started', if its cover period start date is not yet effective, or 'In Progress', if it is effective.
+MenuItem.Title.Reject=Reject
+MenuItem.Icon.Reject=Reject
+MenuItem.Tooltip.Reject=Rejects the submitted service, which resets its status to the 'Open' state.
+MenuItem.Title.Review=Review
+MenuItem.Icon.Review=Review
+MenuItem.Tooltip.Review=Review the service
+MenuItem.Title.UndoProviderSelection=Undo Provider Selection
+MenuItem.Icon.UndoProviderSelection=Undo Provider Selection
+MenuItem.Tooltip.UndoProviderSelection=Remove the selected provider as the provider of the service
+MenuItem.Title.SelectProviderType=Select Provider Type
+MenuItem.Icon.SelectProviderType=Select Provider Type
+MenuItem.Tooltip.SelectProviderType=Specify the provider type for the service
+MenuItem.Title.UndoProviderTypeSelection=Undo Provider Type Selection
+MenuItem.Icon.UndoProviderTypeSelection=Undo Provider Type Selection
+MenuItem.Tooltip.UndoProviderTypeSelection=Remove the selected provider type as the provider type for the service
+MenuItem.Title.AddNote=Add Note
+MenuItem.Icon.AddNote=Add Note
+MenuItem.Tooltip.AddNote=Add a note regarding the delivery of the service
+MenuItem.Title.AddFactors=Add Factors
+MenuItem.Icon.AddFactors=Add Factors
+MenuItem.Tooltip.AddFactors=Adds the selected factors to the outcome plan service
+MenuItem.Title.RemoveFactors=Remove Factors
+MenuItem.Icon.RemoveFactors=Remove Factors
+MenuItem.Tooltip.RemoveFactors=Removes the selected factors from the outcome plan service
+MenuItem.Title.UpdateProgress=Update Progress
+MenuItem.Icon.UpdateProgress=Update Progress
+MenuItem.Tooltip.UpdateProgress=Update progress for the delivery of the service
+MenuItem.Title.ViewPrintableDocument=View Printable Document
+MenuItem.Icon.ViewPrintableDocument=View Printable Document
+MenuItem.Tooltip.ViewPrintableDocument=View a printable document for the service.
+MenuItem.Title.Delete=Delete
+MenuItem.Icon.Delete=Delete
+MenuItem.Tooltip.Delete=Logically deletes the service record
+MenuItem.Title.Edit=Edit
+MenuItem.Icon.Edit=Edit
+MenuItem.Tooltip.Edit=Allows modification of the service details
+MenuItem.Title.EditSharing=Edit Sharing
+MenuItem.Icon.EditSharing=Edit Sharing
+MenuItem.Tooltip.EditSharing=Edit sharing for the service
+MenuItem.Title.Evaluate=Evaluate
+MenuItem.Icon.Evaluate=Evaluate
+MenuItem.Tooltip.Evaluate=Allows evaluation of the service
+MenuItem.Title.UpdateEvaluation=Update Evaluation
+MenuItem.Icon.UpdateEvaluation=Update Evaluation
+MenuItem.Tooltip.UpdateEvaluation=Allows the user to modify the evaluation of the service
+MenuItem.Title.DeleteEvaluation=Delete Evaluation
+MenuItem.Icon.DeleteEvaluation=Delete Evaluation
+MenuItem.Tooltip.DeleteEvaluation=Allows the user to delete the evaluation of the service

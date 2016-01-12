@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2009, 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009-2011 Curam Software Ltd.
+  All rights reserved.
+
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="SGIntegratedCase">
+
+  <tc:page-param name="caseID"/>
+
+  <tc:menu id="SGIntegratedCaseMenu"/> 
+  
+  <!-- Details panel -->
+  <tc:context height="157" page-id="IntegratedCase_tabDetails"/>
+  
+  <!-- See SGIntegratedCase.nav for details of the navigation links. -->
+  <tc:navigation id="SGIntegratedCase"/>
+  
+  <tc:tab-refresh>
+  
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="IntegratedCase_modifyHeader"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseOwner"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseOwnerDetails"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_createCaseSupervisor"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_createCaseMember"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseMemberFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseMemberFromView"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_cancelCaseMember"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_createCaseRelatedMember"/>  
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Evidence_applyChanges1"/> 
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Evidence_applyChangesForCase"/>  
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="PDSample_createSportingSponsorshipEvidence"/>  
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ICSample_createSportingActivityExpenseEvidence"/>  
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Evidence_transferEvidence1"/>  
+    
+    <!-- BEGIN, CR00349082, PB -->
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="VerificationApplication_createVerificationItemProvision"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ICSample_createSportingActivityEvidence"/>  
+    <!-- END, CR00349082 -->
+    
+    
+  </tc:tab-refresh>
+
+</tc:tab-config>

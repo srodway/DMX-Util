@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ApplicationCaseAdminMenu">
+    
+    <mc:menu-item dynamic="false" id="Edit" open-as="modal" page-id="CommonIntake_editApplicationCaseAdmin" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
+    
+    <mc:menu-item dynamic="false" id="AddEvidenceType" open-as="modal" page-id="CommonIntake_applicationCaseAdminAddEvidenceType" title="MenuItem.Title.AddEvidenceType" tooltip="MenuItem.Tooltip.AddEvidenceType"/>
+     
+</mc:menu-bar>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="EVIDENCEFORM">
+  <column name="evidenceFormID" type="id" />
+  <column name="evidenceNameCode" type="text" />
+  <column name="caseEvidenceType" type="text" />
+  <column name="startDate" type="date" />
+  <column name="endDate" type="date" />
+  <column name="recordStatus" type="text" />
+  <column name="formID" type="id" />
+  <column name="comments" type="text" />
+  <column name="formVersionNo" type="number" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="evidenceFormID">
+      <value>1</value>
+    </attribute>
+    <attribute name="evidenceNameCode">
+      <value>SIMForm</value>
+    </attribute>
+    <attribute name="caseEvidenceType">
+      <value>CET4</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value>2015-12-31</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="formID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="formVersionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="evidenceFormID">
+      <value>2</value>
+    </attribute>
+    <attribute name="evidenceNameCode">
+      <value>OPForm</value>
+    </attribute>
+    <attribute name="caseEvidenceType">
+      <value>CET1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value>2015-12-31</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="formID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="formVersionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="evidenceFormID">
+      <value>3</value>
+    </attribute>
+    <attribute name="evidenceNameCode">
+      <value>UPForm</value>
+    </attribute>
+    <attribute name="caseEvidenceType">
+      <value>CET2</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value>2015-12-31</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="formID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="formVersionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="evidenceFormID">
+      <value>4</value>
+    </attribute>
+    <attribute name="evidenceNameCode">
+      <value>SIMLForm</value>
+    </attribute>
+    <attribute name="caseEvidenceType">
+      <value>CET5</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value>2015-12-31</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="formID">
+      <value />
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="formVersionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+    Copyright 2010 Curam Software Ltd.
+    All rights reserved.
+    
+    This software is the confidential and proprietary information of Curam
+    Software, Ltd. ("Confidential Information"). You shall not disclose
+    such Confidential Information and shall use it only in accordance with the
+    terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="NeedsOutcomePlan">
+  
+  <nc:loader-registry>
+   <nc:loader class="curam.collaboration.impl.CaseCollaborationNavigationLoader"/>
+    <nc:loader class="curam.outcomeplanning.tab.impl.OutcomePlanNavigationLoader"/>
+  </nc:loader-registry>
+  
+  <nc:nodes>
+    <nc:navigation-page id="OutcomePlanHome" page-id="OutcomePlan_home" title="Leaf.Title.Home"/>
+    <nc:navigation-page id="OutcomePlanWorkspace" page-id="OutcomePlan_workspace" title="Leaf.Title.Workspace"/>
+    <nc:navigation-page dynamic="true" id="Visits" page-id="VisitationPlan_listByParentCase" title="Leaf.Title.Visits"/>
+    <nc:navigation-page id="OutcomePlanProgress" page-id="OutcomePlan_viewProgressOverview" title="Leaf.Title.Progress"/>
+    <nc:navigation-page id="OutcomePlanReviews" page-id="OutcomePlan_listReviews" title="Leaf.Title.Reviews"/>
+    <nc:navigation-group id="OutcomePlanAssAndFactorsFolder" title="Folder.Title.AssessmentsAndFactors">
+      <nc:navigation-page id="OutcomePlanAssessments" page-id="OutcomePlan_listOutcomePlanAssessments" title="Leaf.Title.Assessments"/>
+      <nc:navigation-page id="OutcomePlanFactors" page-id="OutcomePlan_listFactors" title="Leaf.Title.Factors"/>
+    </nc:navigation-group>
+
+    <nc:navigation-group id="OutcomePlanActivitiesFolder" title="Folder.Title.Activities">
+      <nc:navigation-page id="OutcomePlanActivities" page-id="OutcomePlan_listActivities" title="Leaf.Title.Activities"/>
+      <nc:navigation-page id="OutcomePlanRecommendations" page-id="OutcomePlan_listSuggestedFactorActivityRecommendations" title="Leaf.Title.Recommendations"/>
+      <nc:navigation-page id="OutcomePlanAgreements" page-id="OutcomePlan_listAgreements" title="Leaf.Title.Agreements"/>
+      <nc:navigation-page id="OutcomePlanCosts" page-id="OutcomePlan_listCosts" title="Leaf.Title.Costs"/>
+      <nc:navigation-page id="OutcomePlanParticipation" page-id="OutcomePlan_listParticipation" title="Leaf.Title.Participation"/>
+    </nc:navigation-group>
+    <nc:navigation-page id="OutcomePlanGoals" page-id="OutcomePlan_listGoals" title="Leaf.Title.Goals"/>
+    <nc:navigation-page id="OutcomePlanExpectedOutcomes" page-id="OutcomePlan_listExpectedOutcomes" title="Leaf.Title.Objectives"/> 
+
+    <nc:navigation-group id="OutcomePlanAdminFolder" title="Folder.Title.Admin">
+      <nc:navigation-page id="OutcomePlanContactLogs" page-id="OutcomePlan_listContacts" title="Leaf.Title.Contacts"/>
+      <nc:navigation-page id="OutcomePlanNotes" page-id="OutcomePlan_listNotes" title="Leaf.Title.Notes"/>
+      <nc:navigation-page id="OutcomePlanComms" page-id="OutcomePlan_listCommunications" title="Leaf.Title.Communications"/>
+      <nc:navigation-page id="OutcomePlanAttachments" page-id="OutcomePlan_listAttachments" title="Leaf.Title.Attachments"/>
+      <nc:navigation-page id="OutcomePlanClients" page-id="OutcomePlan_listClients" title="Leaf.Title.Clients"/>
+      <nc:navigation-page id="MeetingsLeaf" page-id="OutcomePlan_resolveCalendar" title="Leaf.Title.Meetings"/>
+      <nc:navigation-page id="MeetingMinutesLeaf" page-id="OutcomePlan_listMeetingMinutes" title="Leaf.Title.MeetingMinutes"/>
+      <nc:navigation-page id="OutcomePlanRelatedCases" page-id="OutcomePlan_listRelatedCases" title="Leaf.Title.RelatedCases"/>
+      <nc:navigation-page id="OutcomePlanUserRoles" page-id="OutcomePlan_listUserRole" title="Leaf.Title.UserRoles"/>
+    </nc:navigation-group>
+      
+    <nc:navigation-group dynamic="true" id="CollaborationFolder" title="Folder.Title.Collaboration">
+      <nc:navigation-page id="MultidisciplinaryTeam" page-id="OutcomePlan_resolveMDTList" title="Leaf.Title.MultidisciplinaryTeam" visible="true"/>
+      <nc:navigation-page id="Discussions" page-id="OutcomePlan_listDiscussion" title="Leaf.Title.Discussions" visible="true"/>
+    </nc:navigation-group>
+      
+  </nc:nodes>
+</nc:navigation>

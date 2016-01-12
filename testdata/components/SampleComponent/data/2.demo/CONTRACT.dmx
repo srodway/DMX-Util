@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="CONTRACT" override="true">
+<column name="contractID" type="id"/>
+<column name="concernRoleID" type="id"/>
+<column name="name" type="text"/>
+<column name="summary" type="text"/>
+<column name="typeCode" type="text"/>
+<column name="signedDate" type="date"/>
+<column name="effectiveStartDate" type="date"/>
+<column name="effectiveEndDate" type="date"/>
+<column name="renewalInd" type="bool"/>
+<column name="fileRefNumber" type="text"/>
+<column name="fileLocation" type="text"/>
+<column name="renewalLeadDays" type="number"/>
+<column name="statusCode" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

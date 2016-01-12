@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<EvidenceTypeVersion
+  businessEndDate="specifiedCertToDate"
+  businessStartDate="certFromDate"
+  correctionOnly="true"
+  description="Entity for storing practitioner certificate details. This represents the physical certificate received by the client from the practitioner after an assessment is carried out."
+  enableSaveAndNew="false"
+  modifiable="true"
+  relatedParticipant="practitioner"
+  ruleSetNameForCalculatedAttributes="PractitionerCertCalculatedRuleSet"
+>
+  <Model>
+    <Attributes>
+      <Attribute>
+        <DataAttribute
+          description="The date on which the examination took place."
+          mandatory="true"
+          name="examinationDate"
+        >
+          <DomainType dataType="Date">
+            <DateOptions currentDate="LessThanOrEqualTo"/>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The type of practitioner certificate, e.g. Doctor, Dentist etc."
+          name="certificateType"
+        >
+          <DomainType dataType="Codetable">
+            <CodetableOptions codetableName="PractitionerCertType"/>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The amount of periods, weeks for example, the certificate is covering."
+          name="certPeriodCount"
+        >
+          <DomainType dataType="Integer"/>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The certificate will cover this number of periods, e.g. Weeks."
+          name="certPeriodType"
+        >
+          <DomainType dataType="Codetable">
+            <CodetableOptions codetableName="PeriodDuration"/>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The date the certificate was signed by the practitioner."
+          mandatory="true"
+          name="signatureDate"
+        >
+          <DomainType dataType="Date">
+            <DateOptions currentDate="LessThanOrEqualTo"/>
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The date from which the certificate is valid."
+          mandatory="true"
+          name="certFromDate"
+        >
+          <DomainType dataType="Date"/>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The date the certificate is valid to."
+          mandatory="false"
+          name="specifiedCertToDate"
+        >
+          <DomainType dataType="Date"/>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          defaultValue="false"
+          description="Flag to indicate if the certificate was signed by the practitioner."
+          name="claimFormSignedInd"
+        >
+          <DomainType dataType="Boolean"/>
+        </DataAttribute>
+      </Attribute>
+      <Attribute>
+        <CommentsAttribute
+          description="Practitioner comments."
+          name="comments"
+        />
+      </Attribute>
+      <Attribute>
+        <RelatedCPAttribute
+          cpRoleType="MDP"
+          description="The practitioner who issued the certificate."
+          name="practitioner"
+          participantType="ServiceProvider"
+        >
+          <CPSearchType code="MDP"/>
+        </RelatedCPAttribute>
+      </Attribute>
+      <Attribute>
+        <CalculatedAttribute
+          description="The calculated certificate to date. This is determine by adding the number of periods (certPeriodCount x certPeriodType) to the certFromDate on the certificate."
+          name="calculatedCertToDate"
+        >
+          <DomainType dataType="Date"/>
+        </CalculatedAttribute>
+      </Attribute>
+      <Attribute>
+        <RelatedCPAttribute
+          cpRoleType="MEM"
+          description="The citizen receiving the certificate."
+          name="householdMember"
+          participantType="Person"
+        >
+          <CPSearchType code="MEM"/>
+          <CPSearchType code="PRI"/>
+        </RelatedCPAttribute>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          description="The name of the practitioner who issues the certificate."
+          name="practitionerName"
+        >
+          <DomainType dataType="String">
+            <StringOptions
+              trimLeadingSpaces="true"
+              trimTrailingSpaces="true"
+            />
+          </DomainType>
+        </DataAttribute>
+      </Attribute>
+    </Attributes>
+    <Relationships/>
+  </Model>
+  <SummaryInformation>
+    <SummaryMapping
+      endDate="specifiedCertToDate"
+      startDate="certFromDate"
+    >
+      <Summary>
+        <parameter name="certFromDate"/>
+        <SummaryResource id="PractitionerCert.SummaryMessage"/>
+      </Summary>
+    </SummaryMapping>
+  </SummaryInformation>
+  <UserInterface
+    createDialogWidth="1000"
+    modifyDialogWidth="1000"
+  >
+    <OnlineTextCreatePage id="Create.Page.Description"/>
+    <OnlineTextModifyPage id="Modify.Page.Description"/>
+    <OnlineTextViewPage id="View.Page.Description"/>
+    <Cluster>
+      <RelCPCluster
+        fullCreateParticipant="false"
+        isOnCreatePage="true"
+        isOnModifyPage="false"
+        isOnViewPage="true"
+        modifyOption="multiple"
+        showParticipantTypeFilter="true"
+        useSingleName="false"
+      >
+        <OnlineText id="Cluster.PractitionerCertificate.Claimant.Help"/>
+        <StandardField source="householdMember"/>
+        <ClusterName id="Cluster.PractitionerCertificate.Claimant"/>
+        <DescriptionName id="PractitionerCertificate.Claimant.Description"/>
+      </RelCPCluster>
+    </Cluster>
+    <Cluster>
+      <RelCPCluster
+        fullCreateParticipant="false"
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+        showParticipantTypeFilter="true"
+        useSingleName="false"
+      >
+        <OnlineText id="Cluster.PractitionerCertificate.MedicalPractitioner.Help"/>
+        <StandardField source="practitioner"/>
+        <ClusterName id="Cluster.PractitionerCertificate.MedicalPractitioner"/>
+        <DescriptionName id="PractitionerCertificate.MedicalPractitioner.Description"/>
+      </RelCPCluster>
+    </Cluster>
+    <Cluster>
+      <StandardCluster
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+        numberOfColumns="2"
+      >
+        <Title id="PractitionerCertificate.ExaminationDetails"/>
+        <OnlineText id="PractitionerCertificate.ExaminationDetails.Help"/>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="certificateType"
+            useDefault="true"
+          >
+            <Label id="ExaminationDetails.certificateType"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="examinationDate"
+            useDefault="true"
+          >
+            <Label id="ExaminationDetails.ExaminationDate"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="certPeriodCount"
+            useBlank="true"
+            useDefault="false"
+          >
+            <Label id="ExaminationDetails.certPeriodCount"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="certPeriodType"
+            useBlank="true"
+            useDefault="false"
+          >
+            <Label id="ExaminationDetails.certPeriodType"/>
+          </StandardField>
+        </StandardClusterField>
+      </StandardCluster>
+    </Cluster>
+    <Cluster>
+      <StandardCluster
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+        numberOfColumns="2"
+      >
+        <Title id="Cluster.PractitionerCertificate.Date"/>
+        <OnlineText id="Cluster.PractitionerCertificate.Date.Help"/>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="certFromDate"
+            useDefault="true"
+          >
+            <Label id="CertificationDates.certFromDateLabel10"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="specifiedCertToDate"
+            useBlank="true"
+            useDefault="false"
+          >
+            <Label id="PractitionerCertificate.CertificationDates.specifiedCertToDateLabel11"/>
+          </StandardField>
+        </StandardClusterField>
+      </StandardCluster>
+    </Cluster>
+    <Cluster>
+      <StandardCluster
+        isOnCreatePage="false"
+        isOnModifyPage="false"
+        isOnViewPage="true"
+        numberOfColumns="2"
+      >
+        <Title id="Cluster.PractitionerCertificate.CalcToDate"/>
+        <OnlineText id="Cluster.PractitionerCertificate.CalcToDate.Help"/>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="calculatedCertToDate"
+            useDefault="true"
+          >
+            <Label id="PractitionerCertificate.CalculatedDate.calculatedCertToDate"/>
+          </StandardField>
+        </StandardClusterField>
+      </StandardCluster>
+    </Cluster>
+    <Cluster>
+      <StandardCluster
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+        numberOfColumns="2"
+      >
+        <Title id="Cluster.PractitionerCertificate.SignatureDetails"/>
+        <OnlineText id="Cluster.PractitionerCertificate.SignatureDetails.Help"/>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="signatureDate"
+            useDefault="true"
+          >
+            <Label id="SignatureDetails.signatureDate"/>
+          </StandardField>
+        </StandardClusterField>
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="claimFormSignedInd"
+            useDefault="true"
+          >
+            <Label id="SignatureDetails.claimFormSignedInd"/>
+          </StandardField>
+        </StandardClusterField>
+      </StandardCluster>
+    </Cluster>
+    <Cluster>
+      <CommentsCluster
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+      >
+        <Title id="Cluster.Comments"/>
+        <OnlineText id="Cluster.Comments.Help"/>
+        <StandardField source="comments"/>
+      </CommentsCluster>
+    </Cluster>
+  </UserInterface>
+</EvidenceTypeVersion>

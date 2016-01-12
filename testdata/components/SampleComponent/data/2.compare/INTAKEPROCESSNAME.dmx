@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="INTAKEPROCESSNAME">
+  <column name="intakeProcessID" type="id" />
+  <column name="name" type="text" />
+  <column name="version" type="number" />
+  <column name="state" type="text" />
+  <row>
+    <attribute name="intakeProcessID">
+      <value>19200</value>
+    </attribute>
+    <attribute name="name">
+      <value>DefaultIntakeProcess</value>
+    </attribute>
+    <attribute name="version">
+      <value>1</value>
+    </attribute>
+    <attribute name="state">
+      <value>IPDS19002</value>
+    </attribute>
+  </row>
+</table>
+

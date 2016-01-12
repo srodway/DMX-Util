@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="CREOLERULECLASSLINK">
+  <column name="creoleRuleClassLinkID" type="id" />
+  <column name="creoleRuleSetID" type="id" />
+  <column name="ruleClassName" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="creoleRuleClassLinkID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="creoleRuleSetID">
+      <value>24010</value>
+    </attribute>
+    <attribute name="ruleClassName">
+      <value>IncapacityBenefitProduct</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="creoleRuleClassLinkID">
+      <value>24001</value>
+    </attribute>
+    <attribute name="creoleRuleSetID">
+      <value>24010</value>
+    </attribute>
+    <attribute name="ruleClassName">
+      <value>IncapacityBenefitProductCase</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="creoleRuleClassLinkID">
+      <value>24002</value>
+    </attribute>
+    <attribute name="creoleRuleSetID">
+      <value>24010</value>
+    </attribute>
+    <attribute name="ruleClassName">
+      <value>IncapacityBenefitProgramRecommender</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="creoleRuleClassLinkID">
+      <value>24003</value>
+    </attribute>
+    <attribute name="creoleRuleSetID">
+      <value>24011</value>
+    </attribute>
+    <attribute name="ruleClassName">
+      <value>IncapacityBenefitSummaryCategory</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

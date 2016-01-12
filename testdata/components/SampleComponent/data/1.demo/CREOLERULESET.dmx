@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="CREOLERULESET" override="true">
+<column name="creoleRuleSetID" type="id"/>
+<column name="name" type="text"/>
+<column name="ruleSetDefinition" type="blob"/>
+<column name="ruleSetVersion" type="number"/>
+<column name="migrationAction" type="text"/>
+<column name="descriptionID" type="id"/>
+<column name="versionNo" type="number"/>
+</table>

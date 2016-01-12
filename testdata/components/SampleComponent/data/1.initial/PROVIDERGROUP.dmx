@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="PROVIDERGROUP">
+  <column name="providerGroupConcernRoleID" type="id" />
+  <column name="paymentFrequency" type="text" />
+  <column name="methodOfPayment" type="id" />
+  <column name="currencyType" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="name" type="text" />
+  <column name="nameUpper" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="providerGroupConcernRoleID">
+      <value>751</value>
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value>200100001</value>
+    </attribute>
+    <attribute name="methodOfPayment">
+      <value>3</value>
+    </attribute>
+    <attribute name="currencyType">
+      <value>EUR</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>PGS1</value>
+    </attribute>
+    <attribute name="name">
+      <value>Test Provider Group</value>
+    </attribute>
+    <attribute name="nameUpper">
+      <value>TEST PROVIDER GROUP</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="ORGANISATION">
+  <column name="organisationID" type="id" />
+  <column name="name" type="text" />
+  <column name="taxNumber" type="text" />
+  <column name="registrationNumber" type="text" />
+  <column name="addressID" type="id" />
+  <column name="description" type="text" />
+  <column name="phoneNumberID" type="id" />
+  <column name="faxNumberID" type="id" />
+  <column name="emailAddressID" type="id" />
+  <column name="addressComments" type="text" />
+  <column name="webAddress" type="text" />
+  <column name="locationDataSecurity" type="text" />
+  <column name="descriptionTextID" type="id" />
+  <column name="nameTextID" type="id" />
+  <column name="versionNo" type="number" />
+  <column name="lastWritten" type="timestamp" />
+  <row>
+    <attribute name="organisationID">
+      <value>1</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Social Welfare Organization</value>
+    </attribute>
+    <attribute name="taxNumber">
+      <value>1234567890</value>
+    </attribute>
+    <attribute name="registrationNumber">
+      <value>1234568790</value>
+    </attribute>
+    <attribute name="addressID">
+      <value>1</value>
+    </attribute>
+    <attribute name="description">
+      <value>Social Welfare Organization</value>
+    </attribute>
+    <attribute name="phoneNumberID">
+      <value />
+    </attribute>
+    <attribute name="faxNumberID">
+      <value />
+    </attribute>
+    <attribute name="emailAddressID">
+      <value />
+    </attribute>
+    <attribute name="addressComments">
+      <value />
+    </attribute>
+    <attribute name="webAddress">
+      <value />
+    </attribute>
+    <attribute name="locationDataSecurity">
+      <value />
+    </attribute>
+    <attribute name="descriptionTextID">
+      <value />
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-01-08-12.18.23</value>
+    </attribute>
+  </row>
+</table>
+

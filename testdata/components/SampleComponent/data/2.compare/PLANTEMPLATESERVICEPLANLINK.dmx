@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="PLANTEMPLATESERVICEPLANLINK">
+  <column name="planTemplateServicePlanLinkID" type="id" />
+  <column name="planTemplateID" type="id" />
+  <column name="servicePlanID" type="id" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="planTemplateServicePlanLinkID">
+      <value>1</value>
+    </attribute>
+    <attribute name="planTemplateID">
+      <value>1</value>
+    </attribute>
+    <attribute name="servicePlanID">
+      <value>1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

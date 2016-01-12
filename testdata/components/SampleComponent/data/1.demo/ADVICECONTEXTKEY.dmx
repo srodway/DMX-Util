@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="ADVICECONTEXTKEY" override="true">
+<column name="adviceContextKeyID" type="id"/>
+<column name="name" type="text"/>
+<column name="adviceContextConfigurationID" type="id"/>
+<column name="type" type="text"/>
+<column name="createdBy" type="text"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="versionNo" type="number"/>
+<row>
+<attribute name="adviceContextKeyID">
+<value>19043</value>
+</attribute>
+<attribute name="name">
+<value>Todo</value>
+</attribute>
+<attribute name="adviceContextConfigurationID">
+<value>19002</value>
+</attribute>
+<attribute name="type">
+<value>ACKT2000</value>
+</attribute>
+<attribute name="createdBy">
+<value>superuser</value>
+</attribute>
+<attribute name="startDate">
+<value>2010-08-23</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+</table>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="POSITION" override="true">
+<column name="positionID" type="id"/>
+<column name="name" type="text"/>
+<column name="comments" type="text"/>
+<column name="leadPositionInd" type="bool"/>
+<column name="jobID" type="id"/>
+<column name="fromDate" type="date"/>
+<column name="toDate" type="date"/>
+<column name="recordStatus" type="text"/>
+<column name="upperName" type="text"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+</table>

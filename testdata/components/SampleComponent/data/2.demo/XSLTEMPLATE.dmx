@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="XSLTEMPLATE" override="true">
+<column name="templateID" type="id"/>
+<column name="localeIdentifier" type="text"/>
+<column name="templateName" type="text"/>
+<column name="latestVersion" type="number"/>
+<column name="checkedOut" type="bool"/>
+<column name="checkedOutBy" type="text"/>
+<column name="checkedOutVersion" type="number"/>
+<column name="checkedOutTime" type="timestamp"/>
+<column name="coComment" type="text"/>
+<column name="templateFile" type="text"/>
+<column name="templateType" type="text"/>
+<column name="templateIDCode" type="text"/>
+<column name="editable" type="bool"/>
+<column name="relatesTo" type="text"/>
+<column name="lastWritten" type="timestamp"/>
+</table>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="TEMPORALEVIDENCEAPPROVALCHECK">
+  <column name="temporalEvApprovalCheckID" type="id" />
+  <column name="organisationUnitID" type="id" />
+  <column name="userName" type="text" />
+  <column name="positionID" type="id" />
+  <column name="evidenceType" type="text" />
+  <column name="approvalType" type="text" />
+  <column name="percentage" type="number" />
+  <column name="comments" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="temporalEvApprovalCheckID">
+      <value>1000</value>
+    </attribute>
+    <attribute name="organisationUnitID">
+      <value />
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="positionID">
+      <value />
+    </attribute>
+    <attribute name="evidenceType">
+      <value>ET51</value>
+    </attribute>
+    <attribute name="approvalType">
+      <value>TEA1</value>
+    </attribute>
+    <attribute name="percentage">
+      <value>0</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="temporalEvApprovalCheckID">
+      <value>1001</value>
+    </attribute>
+    <attribute name="organisationUnitID">
+      <value />
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="positionID">
+      <value />
+    </attribute>
+    <attribute name="evidenceType">
+      <value>ET52</value>
+    </attribute>
+    <attribute name="approvalType">
+      <value>TEA1</value>
+    </attribute>
+    <attribute name="percentage">
+      <value>0</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="temporalEvApprovalCheckID">
+      <value>1002</value>
+    </attribute>
+    <attribute name="organisationUnitID">
+      <value />
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="positionID">
+      <value />
+    </attribute>
+    <attribute name="evidenceType">
+      <value>ET53</value>
+    </attribute>
+    <attribute name="approvalType">
+      <value>TEA1</value>
+    </attribute>
+    <attribute name="percentage">
+      <value>0</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="temporalEvApprovalCheckID">
+      <value>1003</value>
+    </attribute>
+    <attribute name="organisationUnitID">
+      <value />
+    </attribute>
+    <attribute name="userName">
+      <value />
+    </attribute>
+    <attribute name="positionID">
+      <value />
+    </attribute>
+    <attribute name="evidenceType">
+      <value>ET3004</value>
+    </attribute>
+    <attribute name="approvalType">
+      <value>TEA1</value>
+    </attribute>
+    <attribute name="percentage">
+      <value>0</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="QUICKLINK" override="true">
+<column name="quickLinkID" type="id"/>
+<column name="name" type="text"/>
+<column name="dateCreated" type="date"/>
+<column name="webAddressID" type="id"/>
+<column name="openInModalInd" type="bool"/>
+<column name="versionNo" type="number"/>
+<row>
+<attribute name="quickLinkID">
+<value>1000</value>
+</attribute>
+<attribute name="name">
+<value>Search for an Appeal...</value>
+</attribute>
+<attribute name="dateCreated">
+<value>2001-01-01</value>
+</attribute>
+<attribute name="webAddressID">
+<value>1000</value>
+</attribute>
+<attribute name="openInModalInd">
+<value>0</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+</table>

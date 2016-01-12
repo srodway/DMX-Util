@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="EVIDENCETYPEVERSIONDEF" override="true">
+<column name="evidenceTypeVersionDefID" type="id"/>
+<column name="effectiveFrom" type="date"/>
+<column name="evidenceTypeDefID" type="id"/>
+<column name="recordStatus" type="text"/>
+<column name="xmlMetadata" type="clob"/>
+<column name="customInd" type="bool"/>
+<column name="properties" type="clob"/>
+<column name="validationEditActionID" type="id"/>
+<column name="calcAttributesEditActionID" type="id"/>
+<column name="summaryEditActionID" type="id"/>
+<column name="versionNo" type="number"/>
+</table>

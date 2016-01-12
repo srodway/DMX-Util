@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="JOB">
+  <column name="jobID" type="id" />
+  <column name="name" type="text" />
+  <column name="comments" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="upperName" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="jobID">
+      <value>3001</value>
+    </attribute>
+    <attribute name="name">
+      <value>CPM SYSADMIN</value>
+    </attribute>
+    <attribute name="comments">
+      <value>CPM System Administrator</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="jobID">
+      <value>1</value>
+    </attribute>
+    <attribute name="name">
+      <value>Executive</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Demo data Executive</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="jobID">
+      <value>10</value>
+    </attribute>
+    <attribute name="name">
+      <value>Hearing Official</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Demo Hearing Official</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="jobID">
+      <value>10000</value>
+    </attribute>
+    <attribute name="name">
+      <value>Planner</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Outcome Planner</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="jobID">
+      <value>11</value>
+    </attribute>
+    <attribute name="name">
+      <value>Hearing Reviewer</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Demo Hearing Reviewer</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="jobID">
+      <value>12</value>
+    </attribute>
+    <attribute name="name">
+      <value>Hearing Scheduler</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Demo Hearing Scheduler</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="jobID">
+      <value>2</value>
+    </attribute>
+    <attribute name="name">
+      <value>Division Manager</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Demo data Division Manager</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="jobID">
+      <value>2001</value>
+    </attribute>
+    <attribute name="name">
+      <value>Audit Coordinator</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Demo data Audit Coordinator</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="jobID">
+      <value>2002</value>
+    </attribute>
+    <attribute name="name">
+      <value>Auditor</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Demo data Auditor</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="jobID">
+      <value>2003</value>
+    </attribute>
+    <attribute name="name">
+      <value>Investigator</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Investigator</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="jobID">
+      <value>3</value>
+    </attribute>
+    <attribute name="name">
+      <value>Board Member</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Demo data Board Member</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="jobID">
+      <value>5</value>
+    </attribute>
+    <attribute name="name">
+      <value>Secretary</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Demo data Secretary</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="jobID">
+      <value>6</value>
+    </attribute>
+    <attribute name="name">
+      <value>Claims Analyst</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Demo data Claims Analyst</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

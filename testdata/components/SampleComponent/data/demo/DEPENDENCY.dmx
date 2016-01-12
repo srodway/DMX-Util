@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="DEPENDENCY" override="true">
+<column name="dependencyID" type="id"/>
+<column name="dependentType" type="text"/>
+<column name="dependentID" type="text"/>
+<column name="precedentType" type="text"/>
+<column name="precedentID" type="text"/>
+<column name="dependentIDHash" type="id"/>
+<column name="precedentIDHash" type="id"/>
+<row>
+<attribute name="dependencyID">
+<value>6666842025775595520</value>
+</attribute>
+<attribute name="dependentType">
+<value>STORED_AV</value>
+</attribute>
+<attribute name="dependentID">
+<value>7891821124420370432</value>
+</attribute>
+<attribute name="precedentType">
+<value>RULESETDEF</value>
+</attribute>
+<attribute name="precedentID">
+<value>RateRuleSet</value>
+</attribute>
+<attribute name="dependentIDHash">
+<value>-126512892598332090</value>
+</attribute>
+<attribute name="precedentIDHash">
+<value>19058999451314152</value>
+</attribute>
+</row>
+<row>
+<attribute name="dependencyID">
+<value>-6087352118937649152</value>
+</attribute>
+<attribute name="dependentType">
+<value>STORED_AV</value>
+</attribute>
+<attribute name="dependentID">
+<value>-7888791969885847552</value>
+</attribute>
+<attribute name="precedentType">
+<value>RULESETDEF</value>
+</attribute>
+<attribute name="precedentID">
+<value>RateRuleSet</value>
+</attribute>
+<attribute name="dependentIDHash">
+<value>6675075117506123311</value>
+</attribute>
+<attribute name="precedentIDHash">
+<value>19058999451314152</value>
+</attribute>
+</row>
+</table>

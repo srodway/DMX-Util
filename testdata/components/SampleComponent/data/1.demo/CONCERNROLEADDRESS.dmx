@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="CONCERNROLEADDRESS" override="true">
+<column name="concernRoleAddressID" type="id"/>
+<column name="concernRoleID" type="id"/>
+<column name="addressID" type="id"/>
+<column name="typeCode" type="text"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="statusCode" type="text"/>
+<column name="comments" type="text"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+<row>
+<attribute name="concernRoleAddressID">
+<value>15411</value>
+</attribute>
+<attribute name="concernRoleID">
+<value>15015</value>
+</attribute>
+<attribute name="addressID">
+<value>15101</value>
+</attribute>
+<attribute name="typeCode">
+<value>AT6</value>
+</attribute>
+<attribute name="startDate">
+<value>2007-11-16</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="statusCode">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="concernRoleAddressID">
+<value>15412</value>
+</attribute>
+<attribute name="concernRoleID">
+<value>35015</value>
+</attribute>
+<attribute name="addressID">
+<value>15101</value>
+</attribute>
+<attribute name="typeCode">
+<value>AT6</value>
+</attribute>
+<attribute name="startDate">
+<value>2007-11-16</value>
+</attribute>
+<attribute name="endDate">
+<value/>
+</attribute>
+<attribute name="statusCode">
+<value>RST1</value>
+</attribute>
+<attribute name="comments">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+<attribute name="lastWritten">
+<value/>
+</attribute>
+</row>
+</table>

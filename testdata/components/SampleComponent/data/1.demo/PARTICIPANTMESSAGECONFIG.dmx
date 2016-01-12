@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PARTICIPANTMESSAGECONFIG" override="true">
+<column name="participantMessageConfigID" type="id"/>
+<column name="participantMessageType" type="text"/>
+<column name="enabledInd" type="bool"/>
+<column name="sortOrder" type="number"/>
+<column name="description" type="text"/>
+<column name="image" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

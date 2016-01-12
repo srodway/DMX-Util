@@ -1,0 +1,32 @@
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2013. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains">
+  <xs:import namespace="http://www.curamsoftware.com/BaseDomains"/>
+  <xs:include schemaLocation="IEGDomains"/>
+  <xs:simpleType name="ADULTNEEDS_RESPONSES">
+    <xs:annotation>
+      <xs:appinfo>
+        <d:options>
+          <d:option name="code-table-name">AdultNeeds</d:option>
+        </d:options>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="IEG_CODETABLE_CODE"/>
+  </xs:simpleType>
+  <xs:simpleType name="ADULTNEEDS_DIFFICULTY">
+    <xs:annotation>
+      <xs:appinfo>
+        <d:options>
+          <d:option name="code-table-name">AdultNeedsDifficulty</d:option>
+        </d:options>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="IEG_CODETABLE_CODE"/>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PROVIDERGROUP" override="true">
+<column name="providerGroupConcernRoleID" type="id"/>
+<column name="paymentFrequency" type="text"/>
+<column name="methodOfPayment" type="id"/>
+<column name="currencyType" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="name" type="text"/>
+<column name="nameUpper" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

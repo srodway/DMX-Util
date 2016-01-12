@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="BIVIEWERCONFIGURATION">
+  <column name="biViewerConfigurationID" type="id" />
+  <column name="reportRoot" type="text" />
+  <column name="reportContext" type="text" />
+  <column name="reportServlet" type="text" />
+  <column name="viewerName" type="text" />
+  <column name="description" type="text" />
+  <column name="recordStatus" type="text" />
+  <column name="reportNameParameter" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="biViewerConfigurationID">
+      <value>2001</value>
+    </attribute>
+    <attribute name="reportRoot">
+      <value />
+    </attribute>
+    <attribute name="reportContext">
+      <value>CuramBIRTViewer</value>
+    </attribute>
+    <attribute name="reportServlet">
+      <value>run</value>
+    </attribute>
+    <attribute name="viewerName">
+      <value>BIRT</value>
+    </attribute>
+    <attribute name="description">
+      <value>Default BIRT viewer configuration</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="reportNameParameter">
+      <value>__report</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

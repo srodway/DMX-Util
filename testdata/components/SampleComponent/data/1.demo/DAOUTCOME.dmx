@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="DAOUTCOME" override="true">
+<column name="outcomeID" type="id"/>
+<column name="outcomeName" type="text"/>
+<column name="type" type="text"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="comments" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="createdBy" type="text"/>
+<column name="dateCreated" type="timestamp"/>
+<column name="versionNo" type="number"/>
+</table>

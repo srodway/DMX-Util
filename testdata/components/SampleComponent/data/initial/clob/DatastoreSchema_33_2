@@ -1,0 +1,87 @@
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2013. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains">
+  <xs:import namespace="http://www.curamsoftware.com/BaseDomains"/>
+  <xs:include schemaLocation="AdultNeedsDomains"/>
+  
+  <xs:element name="Application">
+    <xs:annotation>
+      <xs:documentation>Top level application table</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="Person" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Person">
+    <xs:annotation>
+      <xs:documentation>Holds the answers for each person</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="personID" type="d:SVR_KEY">
+        <xs:annotation>
+          <xs:documentation>The identifier for the person</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="firstName" type="IEG_STRING">
+        <xs:annotation>
+          <xs:documentation>The persons first name</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="gender" type="IEG_GENDER">
+        <xs:annotation>
+          <xs:documentation>The persons gender</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="dateOfBirth" type="IEG_DATE">
+        <xs:annotation>
+          <xs:documentation>The persons date of birth</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="roleID" type="IEG_INT64">
+        <xs:annotation>
+          <xs:documentation>The id of the assessment delivery role record</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="participantID" type="IEG_INT64">
+        <xs:annotation>
+          <xs:documentation>Identifier of the person. Used for locating instances of person entities on the data store the relate to a single individual</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="localID" type="d:SVR_INT64">
+        <xs:annotation>
+          <xs:documentation>LifeEvents Only. This is an internal identifier that is required if this schema is used in conjunction with Life Events. Generally, no further action is needed on your part in regards to this attribute.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="isPrimaryParticipant" type="d:SVR_BOOLEAN" default="true">
+        <xs:annotation>
+          <xs:documentation>LifeEvents Only. Attribute required by LifeEvents. This must be set to true for at least one person. If your LifeEvent script does not set this value or you are unsure of what to do, set the default value to: true</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="questionsApplicableInd" type="IEG_BOOLEAN" default="true">
+        <xs:annotation>
+          <xs:documentation>Needed for assessments.  Ignore or remove if not applicable.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="keepingHomeClean" type="ADULTNEEDS_RESPONSES"/>
+      <xs:attribute name="shopping" type="ADULTNEEDS_RESPONSES"/>
+      <xs:attribute name="doingLaundry" type="ADULTNEEDS_RESPONSES"/>
+      <xs:attribute name="managingMoney" type="ADULTNEEDS_RESPONSES"/>
+      <xs:attribute name="makingFood" type="ADULTNEEDS_RESPONSES"/>
+      <xs:attribute name="eatingRegularly" type="ADULTNEEDS_RESPONSES"/>
+      <xs:attribute name="goingToTheToilet" type="ADULTNEEDS_RESPONSES"/>
+      <xs:attribute name="difficulty" type="ADULTNEEDS_DIFFICULTY"/>
+    </xs:complexType>
+    <xs:key name="Person_Key">
+      <xs:selector xpath="./Person"/>
+      <xs:field xpath="@personID"/>
+    </xs:key>
+  </xs:element>
+</xs:schema>

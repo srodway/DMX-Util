@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="DATASTORESCHEMA" override="true">
+<column name="schemaName" type="text"/>
+<column name="schemaText" type="clob"/>
+<column name="schemaType" type="text"/>
+<column name="versionNo" type="number"/>
+<column name="lastWritten" type="timestamp"/>
+</table>

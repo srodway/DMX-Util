@@ -1,0 +1,1270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="DPPROCESS">
+  <column name="processName" type="text" />
+  <column name="interfaceName" type="text" />
+  <column name="methodName" type="text" />
+  <column name="ticketType" type="text" />
+  <column name="subject" type="text" />
+  <column name="lastWritten" type="timestamp" />
+  <row>
+    <attribute name="processName">
+      <value>ACTIVATEDYNAMICEVIDENCE</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dynamicevidence.sl.intf.ActivateDynamicEvidence</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>activateEvidenceTypeVersion</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to trigger the Dynamic Evidence activation</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>APPLICATIONAUTHORIZATION</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.commonintake.authorisation.intf.DeferredAuthorisation</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>authoriseApplication</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>TT27001</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing when an application authorization has been requested.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>APPLICATIONSUBMISSION</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.application.deferred.intf.DeferredSubmission</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>deferSubmission</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing when an user submits a Common Intake application</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>ASSESSCASE</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.intf.DetermineEligibility</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>assessBenefitCase</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CLAIM</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to assess eligibility for a given Interactive case</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>ATTEMPT_ACCEPT_SHARE_BULK_EVD</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EBAttemptAcceptanceDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>attemptAcceptanceShareBulk</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>ATTEMPT_ACCEPT_SHARE_EVD</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EBAttemptAcceptanceDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>attemptAcceptanceShareEvd</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>ATTEMPT_ACCEPT_SHARE_EVD_REMOVAL</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EBAttemptAcceptanceDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>attemptAcceptanceShareRemoval</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>ATTEMPT_ACCEPT_SHARE_EXT_EVD</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EBAttemptAcceptanceDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>attemptAcceptanceShareExtEvd</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>ATTEMPT_ACCEPT_SHARE_EXT_EVD_REMOVAL</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EBAttemptAcceptanceDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>attemptAcceptanceShareExtEvdRm</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>ATTEMPT_ACTIVATION_SHARE_BULK_EVD</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EBAttemptActivationDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>attemptActivationShareBulk</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>ATTEMPT_ACTIVATION_SHARE_EVD</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EBAttemptActivationDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>attemptActivationShareEvd</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>ATTEMPT_ACTIVATION_SHARE_EVD_REMOVAL</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EBAttemptActivationDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>attemptActivationShareRemoval</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>ATTEMPT_ACTIVATION_SHARE_EXT_EVD</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EBAttemptActivationDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>attemptActivationShareExtEvd</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>ATTEMPT_ACTIVATION_SHARE_EXT_EVD_REMOVAL</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EBAttemptActivationDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>attemptActivationShareExtEvdRm</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>BULK_ASSIGNED_TASK_FORWARD</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.DeferredAssignedTaskForwardProcess</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>forward</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="subject">
+      <value>Deferred process for forwarding larger number of assigned tasks from one user to another user</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>BULK_CASE_REASSIGNMENT</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.DeferredCaseReassignmentProcess</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>reassign</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="subject">
+      <value>Deferred process for re-assigning larger number of cases from one user to another user</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>BULK_TASK_FORWARD</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.DeferredTaskForwardProcess</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>forward</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="subject">
+      <value>Deferred process for forwarding larger number of tasks from one user to another user</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>CANCELDYNAMICEVIDENCE</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dynamicevidence.sl.intf.CancelDynamicEvidence</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>cancelEvidenceTypeVersion</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to trigger the Dynamic Evidence cancellation</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>CLOSECASE</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.intf.DelayedCaseClosure</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>closeCase</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CLAIM</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to close the case</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>CREATEPLACESFORPROVIDER</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.cpm.sl.intf.ProviderBatchProcesses</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>createPlacesForProvider</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CLAIM</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to create places for provider in a compartment</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>CREOLEPROGRAMRECOMMENDATION</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.creoleprogramrecommendation.deferred.intf.DeferredCREOLEProgramRecommendation</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>runProgramRecommendation</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing for CREOLE program recommendation</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>ClientAccessEventProcessing</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.clientaccess.service.intf.DPClientAccessEvent</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>processEventForClientAccess</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CAEVENTPRC</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing where the client access component can act on CEF events</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>DB_TO_JMS</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.util.internal.deferredprocessing.intf.DBtoJMSbpo</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>continueTransfer</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Transfers messages from database to JMS queues.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>ELIGIBILITYASSESSMENT</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.intf.DelayedEligibilityAssessment</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>reassessCase</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CLAIM</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to reassess eligibility for a given case between the given dates</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EVIDENCE_BROKER_ROLLBACK</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerRollBackDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>reverseApplyChanges</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Gets called on failure of evidence brokering to change the status of the source evidences and calls the post failure hook.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EVIDENCE_REMOVAL</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidenceRemoval</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share removal of evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_AUTO_ACCEPT_ONLY</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerWithAutoAcceptOnlyDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_AUTO_ACCEPT_ONLY_SHARE_CSE_PARTCPNT</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerWithAutoAcceptOnlyDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvdForCaseParticipant</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_AUTO_ACCEPT_ONLY_SHARE_EXTERNAL</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerWithAutoAcceptOnlyDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareExternalEvidence</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence received from remote system to source system.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_AUTO_ACCEPT_ONLY_SHARE_EXT_REMOVAL</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerWithAutoAcceptOnlyDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareExternalEvidenceRemoval</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share removal of evidence from remote system to source system.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_AUTO_ACCEPT_ONLY_SHARE_REMOVAL</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerWithAutoAcceptOnlyDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidenceRemoval</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share removal of evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BROKER_ONLY</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerOnlyDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BROKER_ONLY_EVD_CASE_PARTCPNT</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerOnlyDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvdForCaseParticipant</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BROKER_ONLY_EXTERNAL</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerOnlyDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareExternalEvidence</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence received from remote system to source system.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BROKER_ONLY_EXT_REMOVAL</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerOnlyDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareExternalEvidenceRemoval</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share removal of evidence from remote system to source system.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BROKER_ONLY_REMOVAL</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerOnlyDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidenceRemoval</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share removal of evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK_AUTO_ACCEPT_ONLY</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerWithAutoAcceptOnlyDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK_BROKER_ONLY</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerOnlyDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EXT_EVIDENCE_REMOVAL</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareExternalEvidenceRemoval</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share removal of evidence from remote system to source system.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>EXT_EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareExternalEvidence</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence received from remote system to source system.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>GENCASEAUDITS</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.caseaudit.intf.DeferredCaseAuditGeneration</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>generateCaseAudits</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to generate case audits.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>GENPRODUCTRULESET</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.wizard.sl.intf.DeferredRuleSetGeneration</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>addRuleSetForProduct</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to insert a default eligibility and entitlement rule set for a Benefit product</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>HOLDING_CASE_UPDATE</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.citizen.datahub.holdingcase.intf.HoldingCaseDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>updateEvidence</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Update evidence on the Holding Case and apply those updates.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>MANPMTALLOC</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.intf.ProcessManualPayment</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>allocateManualPmtToFC</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CLAIM</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to capture and allocate manual payment details</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>PDAPPROVAL</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.intf.RouteProductDeliveryApproval</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>routedSubmitForApproval</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CLAIM</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to route a product delivery for approval, by the system or a user</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>POSTCOMMITACTION</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.ctm.sl.intf.PostCommitActionManager</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>performPostCommitAction</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to invoke Post Commit Action Business Object Modules.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>PROCESSPAYMENTS</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.cpm.sl.intf.FinancialProcessing</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>processPayments</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CLAIM</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Financial processing for payments in CPM</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>PROCLBY</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.intf.ProcessInteractiveLiabilities</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>processLiabilitiesDue</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to generate a liability online for a given case</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>PROCPMT</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.intf.ProcessInteractivePayments</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>processPaymentsDue</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CLAIM</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to generate a payment online for a given case</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>PROGRAMAUTHORIZATION</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.commonintake.authorisation.intf.DeferredAuthorisation</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>authoriseProgram</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>TT27001</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing when a program authorization has been requested.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>PUBLISHCREOLEPRODUCTCHANGES</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.infrastructure.product.creole.intf.PublishCREOLEProductChanges</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>publishCREOLEProductChanges</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CONFCHANGE</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Publishes a pending set of changes to CREOLE Products.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>PUBLISHCREOLERULESETCHANGES</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.infrastructure.creole.intf.PublishCREOLERuleSetChanges</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>publishCREOLERuleSetChanges</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CONFCHANGE</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Publishes a pending set of changes to CREOLE Rule Sets.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>PUBLISHPROPCONFIGCHANGES</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.infrastructure.propagator.intf.PublishPropConfigChanges</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>publishPropConfigChanges</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CONFCHANGE</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Publishes a pending set of changes to configurations for CREOLE Rule Object Propagators.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>PUBLISHRATECHANGESTOCREOLERULEOBJECTS</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.infrastructure.rate.intf.PublishRateChangesToCREOLERuleObjects</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>publishRateChanges</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CONFCHANGE</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Applies changes in rate tables to the CREOLE Rule Objects for those rate tables.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>REASSIGNCASES</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.intf.ReassignCasesForUser</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>delayedReassignCasesForUser</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CLAIM</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to re-assign cases from one user to another</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>REGENCASEFCS</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.intf.RegenerateCaseFinancials</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>delayedRegeneration</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CLAIM</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to regenerate the financials for a given case</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>SHARE_EVIDENCE_CP</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvdForCaseParticipant</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>SUPPLIERRETURNPROCESSING</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.intf.DelayedSupplierReturnProc</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>processSupplierReturn</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CLAIM</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing of service supplier returns</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>TRANSFERBANKACCPAYMENT</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.intf.DelayedTransferBankAccPmnt</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>processBankAccPaymentTransfer</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CLAIM</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to transfer payment details to another bank account</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="processName">
+      <value>Workflow Error Handling</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value />
+    </attribute>
+    <attribute name="methodName">
+      <value />
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="subject">
+      <value>An error occurred in a process inside the Workflow system</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+</table>
+

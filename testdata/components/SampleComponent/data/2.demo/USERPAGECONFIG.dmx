@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="USERPAGECONFIG" override="true">
+<column name="userPageConfigID" type="id"/>
+<column name="pageID" type="text"/>
+<column name="userRoleName" type="text"/>
+<column name="userName" type="text"/>
+<column name="config" type="clob"/>
+<column name="defaultInd" type="bool"/>
+<column name="versionNo" type="number"/>
+<row>
+<attribute name="userPageConfigID">
+<value>-1765411053920837632</value>
+</attribute>
+<attribute name="pageID">
+<value>AdminCustomHome</value>
+</attribute>
+<attribute name="userRoleName">
+<value>SUPERROLE</value>
+</attribute>
+<attribute name="userName">
+<value>admin</value>
+</attribute>
+<attribute name="config">
+<value>&lt;user-page-config&gt;&lt;pod-config col="0" id="PT2002" row="0"/&gt;&lt;pod-config col="1" id="PT2029" row="0"/&gt;&lt;pod-config col="2" id="PT2017" row="0"/&gt;&lt;pod-config col="0" id="PT2025" row="1"/&gt;&lt;/user-page-config&gt;</value>
+</attribute>
+<attribute name="defaultInd">
+<value>0</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+</table>

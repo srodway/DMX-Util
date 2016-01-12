@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="ADMINICEVIDENCETYPEDEFLINK">
+  <column name="shareableInd" type="bool" />
+  <column name="adminICEvidenceTypeDefLinkID" type="id" />
+  <column name="evidenceTypeDefID" type="id" />
+  <column name="adminIntegratedCaseID" type="id" />
+  <column name="quickLinkInd" type="bool" />
+  <column name="sortOrder" type="id" />
+  <column name="category" type="text" />
+  <column name="createdBy" type="text" />
+  <column name="createdOn" type="timestamp" />
+  <column name="lastUpdatedBy" type="text" />
+  <column name="lastUpdatedOn" type="timestamp" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="shareableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="adminICEvidenceTypeDefLinkID">
+      <value>24001</value>
+    </attribute>
+    <attribute name="evidenceTypeDefID">
+      <value>24001</value>
+    </attribute>
+    <attribute name="adminIntegratedCaseID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="quickLinkInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value />
+    </attribute>
+    <attribute name="category">
+      <value>EC20000</value>
+    </attribute>
+    <attribute name="createdBy">
+      <value>admin</value>
+    </attribute>
+    <attribute name="createdOn">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+    <attribute name="lastUpdatedBy">
+      <value>admin</value>
+    </attribute>
+    <attribute name="lastUpdatedOn">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="shareableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="adminICEvidenceTypeDefLinkID">
+      <value>24002</value>
+    </attribute>
+    <attribute name="evidenceTypeDefID">
+      <value>24002</value>
+    </attribute>
+    <attribute name="adminIntegratedCaseID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="quickLinkInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value />
+    </attribute>
+    <attribute name="category">
+      <value>EC20000</value>
+    </attribute>
+    <attribute name="createdBy">
+      <value>admin</value>
+    </attribute>
+    <attribute name="createdOn">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+    <attribute name="lastUpdatedBy">
+      <value>admin</value>
+    </attribute>
+    <attribute name="lastUpdatedOn">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="shareableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="adminICEvidenceTypeDefLinkID">
+      <value>24003</value>
+    </attribute>
+    <attribute name="evidenceTypeDefID">
+      <value>24003</value>
+    </attribute>
+    <attribute name="adminIntegratedCaseID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="quickLinkInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value />
+    </attribute>
+    <attribute name="category">
+      <value>EC20000</value>
+    </attribute>
+    <attribute name="createdBy">
+      <value>admin</value>
+    </attribute>
+    <attribute name="createdOn">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+    <attribute name="lastUpdatedBy">
+      <value>admin</value>
+    </attribute>
+    <attribute name="lastUpdatedOn">
+      <value>2016-01-04-09.00.52</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

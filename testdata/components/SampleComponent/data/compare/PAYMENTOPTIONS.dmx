@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="PAYMENTOPTIONS">
+  <column name="paymentOptionID" type="id" />
+  <column name="providerSOID" type="id" />
+  <column name="minAmtPayOption" type="text" />
+  <column name="fixedAmtPayOption" type="text" />
+  <column name="maxAmtPayOption" type="text" />
+  <column name="startDate" type="date" />
+  <column name="endDate" type="date" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="paymentOptionID">
+      <value>1872</value>
+    </attribute>
+    <attribute name="providerSOID">
+      <value>201</value>
+    </attribute>
+    <attribute name="minAmtPayOption">
+      <value>MAPO2</value>
+    </attribute>
+    <attribute name="fixedAmtPayOption">
+      <value>FAPO1</value>
+    </attribute>
+    <attribute name="maxAmtPayOption">
+      <value>MAPO1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="paymentOptionID">
+      <value>1696</value>
+    </attribute>
+    <attribute name="providerSOID">
+      <value>200</value>
+    </attribute>
+    <attribute name="minAmtPayOption">
+      <value>MAPO2</value>
+    </attribute>
+    <attribute name="fixedAmtPayOption">
+      <value>FAPO1</value>
+    </attribute>
+    <attribute name="maxAmtPayOption">
+      <value>MAPO1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="paymentOptionID">
+      <value>-9043228051751559168</value>
+    </attribute>
+    <attribute name="providerSOID">
+      <value>-4431542033324171264</value>
+    </attribute>
+    <attribute name="minAmtPayOption">
+      <value>MAPO3</value>
+    </attribute>
+    <attribute name="fixedAmtPayOption">
+      <value>FAPO1</value>
+    </attribute>
+    <attribute name="maxAmtPayOption">
+      <value>MAPO2</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2015-12-04</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="paymentOptionID">
+      <value>4431542033340964864</value>
+    </attribute>
+    <attribute name="providerSOID">
+      <value>9043228051768352768</value>
+    </attribute>
+    <attribute name="minAmtPayOption">
+      <value>MAPO3</value>
+    </attribute>
+    <attribute name="fixedAmtPayOption">
+      <value>FAPO1</value>
+    </attribute>
+    <attribute name="maxAmtPayOption">
+      <value>MAPO2</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2015-12-04</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="paymentOptionID">
+      <value>-8268608915843833856</value>
+    </attribute>
+    <attribute name="providerSOID">
+      <value>-1206964700126896128</value>
+    </attribute>
+    <attribute name="minAmtPayOption">
+      <value>MAPO3</value>
+    </attribute>
+    <attribute name="fixedAmtPayOption">
+      <value>FAPO1</value>
+    </attribute>
+    <attribute name="maxAmtPayOption">
+      <value>MAPO2</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2015-12-04</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="paymentOptionID">
+      <value>7620090569519276032</value>
+    </attribute>
+    <attribute name="providerSOID">
+      <value>990791918029905920</value>
+    </attribute>
+    <attribute name="minAmtPayOption">
+      <value>MAPO3</value>
+    </attribute>
+    <attribute name="fixedAmtPayOption">
+      <value>FAPO1</value>
+    </attribute>
+    <attribute name="maxAmtPayOption">
+      <value>MAPO2</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2015-12-04</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

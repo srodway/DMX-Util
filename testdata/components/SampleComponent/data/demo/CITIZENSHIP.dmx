@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="CITIZENSHIP" override="true">
+<column name="concernRoleID" type="id"/>
+<column name="reasonCode" type="text"/>
+<column name="countryCode" type="text"/>
+<column name="fromDate" type="date"/>
+<column name="toDate" type="date"/>
+<column name="statusCode" type="text"/>
+<column name="citizenshipID" type="id"/>
+<column name="comments" type="text"/>
+<column name="versionNo" type="number"/>
+</table>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="PAYMENTOPTIONS" override="true">
+<column name="paymentOptionID" type="id"/>
+<column name="providerSOID" type="id"/>
+<column name="minAmtPayOption" type="text"/>
+<column name="fixedAmtPayOption" type="text"/>
+<column name="maxAmtPayOption" type="text"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="versionNo" type="number"/>
+</table>

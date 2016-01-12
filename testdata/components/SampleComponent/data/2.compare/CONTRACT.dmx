@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="CONTRACT">
+  <column name="contractID" type="id" />
+  <column name="concernRoleID" type="id" />
+  <column name="name" type="text" />
+  <column name="summary" type="text" />
+  <column name="typeCode" type="text" />
+  <column name="signedDate" type="date" />
+  <column name="effectiveStartDate" type="date" />
+  <column name="effectiveEndDate" type="date" />
+  <column name="renewalInd" type="bool" />
+  <column name="fileRefNumber" type="text" />
+  <column name="fileLocation" type="text" />
+  <column name="renewalLeadDays" type="number" />
+  <column name="statusCode" type="text" />
+  <column name="versionNo" type="number" />
+  <row>
+    <attribute name="contractID">
+      <value>4101</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>113</value>
+    </attribute>
+    <attribute name="name">
+      <value>Rev. Timothy Miller</value>
+    </attribute>
+    <attribute name="summary">
+      <value>Service Contract</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>CR2</value>
+    </attribute>
+    <attribute name="signedDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveStartDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveEndDate">
+      <value />
+    </attribute>
+    <attribute name="renewalInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="fileRefNumber">
+      <value>1234567</value>
+    </attribute>
+    <attribute name="fileLocation">
+      <value>Head Office</value>
+    </attribute>
+    <attribute name="renewalLeadDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contractID">
+      <value>4102</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>114</value>
+    </attribute>
+    <attribute name="name">
+      <value>Tony Taylor</value>
+    </attribute>
+    <attribute name="summary">
+      <value>Service Contract</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>CR2</value>
+    </attribute>
+    <attribute name="signedDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveStartDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveEndDate">
+      <value />
+    </attribute>
+    <attribute name="renewalInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="fileRefNumber">
+      <value>1234568</value>
+    </attribute>
+    <attribute name="fileLocation">
+      <value>Head Office</value>
+    </attribute>
+    <attribute name="renewalLeadDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contractID">
+      <value>4103</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>115</value>
+    </attribute>
+    <attribute name="name">
+      <value>Lionel Jones</value>
+    </attribute>
+    <attribute name="summary">
+      <value>Service Contract</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>CR2</value>
+    </attribute>
+    <attribute name="signedDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveStartDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveEndDate">
+      <value />
+    </attribute>
+    <attribute name="renewalInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="fileRefNumber">
+      <value>1234569</value>
+    </attribute>
+    <attribute name="fileLocation">
+      <value>Head Office</value>
+    </attribute>
+    <attribute name="renewalLeadDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contractID">
+      <value>4104</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>116</value>
+    </attribute>
+    <attribute name="name">
+      <value>Dr. Julius Davis</value>
+    </attribute>
+    <attribute name="summary">
+      <value>Service Contract</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>CR2</value>
+    </attribute>
+    <attribute name="signedDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveStartDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveEndDate">
+      <value />
+    </attribute>
+    <attribute name="renewalInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="fileRefNumber">
+      <value>1234570</value>
+    </attribute>
+    <attribute name="fileLocation">
+      <value>Head Office</value>
+    </attribute>
+    <attribute name="renewalLeadDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contractID">
+      <value>4105</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>117</value>
+    </attribute>
+    <attribute name="name">
+      <value>Dr. James Wilson</value>
+    </attribute>
+    <attribute name="summary">
+      <value>Service Contract</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>CR2</value>
+    </attribute>
+    <attribute name="signedDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveStartDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveEndDate">
+      <value />
+    </attribute>
+    <attribute name="renewalInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="fileRefNumber">
+      <value>1234571</value>
+    </attribute>
+    <attribute name="fileLocation">
+      <value>Head Office</value>
+    </attribute>
+    <attribute name="renewalLeadDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contractID">
+      <value>4106</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>118</value>
+    </attribute>
+    <attribute name="name">
+      <value>Dr. Nick Wilson</value>
+    </attribute>
+    <attribute name="summary">
+      <value>Service Contract</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>CR2</value>
+    </attribute>
+    <attribute name="signedDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveStartDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveEndDate">
+      <value />
+    </attribute>
+    <attribute name="renewalInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="fileRefNumber">
+      <value>1234572</value>
+    </attribute>
+    <attribute name="fileLocation">
+      <value>Head Office</value>
+    </attribute>
+    <attribute name="renewalLeadDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contractID">
+      <value>4107</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>119</value>
+    </attribute>
+    <attribute name="name">
+      <value>Dr. Marvin Moore</value>
+    </attribute>
+    <attribute name="summary">
+      <value>Service Contract</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>CR2</value>
+    </attribute>
+    <attribute name="signedDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveStartDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveEndDate">
+      <value />
+    </attribute>
+    <attribute name="renewalInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="fileRefNumber">
+      <value>1234573</value>
+    </attribute>
+    <attribute name="fileLocation">
+      <value>Head Office</value>
+    </attribute>
+    <attribute name="renewalLeadDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contractID">
+      <value>4108</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>120</value>
+    </attribute>
+    <attribute name="name">
+      <value>State Appeals Board</value>
+    </attribute>
+    <attribute name="summary">
+      <value>Service Contract</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>CR2</value>
+    </attribute>
+    <attribute name="signedDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveStartDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveEndDate">
+      <value />
+    </attribute>
+    <attribute name="renewalInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="fileRefNumber">
+      <value>1234574</value>
+    </attribute>
+    <attribute name="fileLocation">
+      <value>Head Office</value>
+    </attribute>
+    <attribute name="renewalLeadDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contractID">
+      <value>4109</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>121</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Ombudsman</value>
+    </attribute>
+    <attribute name="summary">
+      <value>Service Contract</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>CR2</value>
+    </attribute>
+    <attribute name="signedDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveStartDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveEndDate">
+      <value />
+    </attribute>
+    <attribute name="renewalInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="fileRefNumber">
+      <value>1234575</value>
+    </attribute>
+    <attribute name="fileLocation">
+      <value>Head Office</value>
+    </attribute>
+    <attribute name="renewalLeadDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contractID">
+      <value>4110</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>122</value>
+    </attribute>
+    <attribute name="name">
+      <value>Healthcare Inc.</value>
+    </attribute>
+    <attribute name="summary">
+      <value>Product Contract</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>CR1</value>
+    </attribute>
+    <attribute name="signedDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveStartDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveEndDate">
+      <value />
+    </attribute>
+    <attribute name="renewalInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="fileRefNumber">
+      <value>1234576</value>
+    </attribute>
+    <attribute name="fileLocation">
+      <value>Head Office</value>
+    </attribute>
+    <attribute name="renewalLeadDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contractID">
+      <value>4111</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>123</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Health Insurance</value>
+    </attribute>
+    <attribute name="summary">
+      <value>Product Contract</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>CR1</value>
+    </attribute>
+    <attribute name="signedDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveStartDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveEndDate">
+      <value />
+    </attribute>
+    <attribute name="renewalInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="fileRefNumber">
+      <value>1234577</value>
+    </attribute>
+    <attribute name="fileLocation">
+      <value>Head Office</value>
+    </attribute>
+    <attribute name="renewalLeadDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contractID">
+      <value>4112</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>124</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Social Services</value>
+    </attribute>
+    <attribute name="summary">
+      <value>Product Contract</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>CR1</value>
+    </attribute>
+    <attribute name="signedDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveStartDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveEndDate">
+      <value />
+    </attribute>
+    <attribute name="renewalInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="fileRefNumber">
+      <value>1234578</value>
+    </attribute>
+    <attribute name="fileLocation">
+      <value>Head Office</value>
+    </attribute>
+    <attribute name="renewalLeadDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contractID">
+      <value>4113</value>
+    </attribute>
+    <attribute name="concernRoleID">
+      <value>125</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Training Services</value>
+    </attribute>
+    <attribute name="summary">
+      <value>Product Contract</value>
+    </attribute>
+    <attribute name="typeCode">
+      <value>CR1</value>
+    </attribute>
+    <attribute name="signedDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveStartDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="effectiveEndDate">
+      <value />
+    </attribute>
+    <attribute name="renewalInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="fileRefNumber">
+      <value>1234579</value>
+    </attribute>
+    <attribute name="fileLocation">
+      <value>Head Office</value>
+    </attribute>
+    <attribute name="renewalLeadDays">
+      <value>0</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+</table>
+

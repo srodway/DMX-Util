@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="DETERMINATIONPACKAGEVERSION" override="true">
+<column name="determinationPackageVersionID" type="id"/>
+<column name="determinationPackageID" type="id"/>
+<column name="name" type="text"/>
+<column name="determinationPkgVersionNumber" type="number"/>
+<column name="versionStatus" type="text"/>
+<column name="fromDate" type="timestamp"/>
+<column name="toDate" type="timestamp"/>
+<column name="comments" type="text"/>
+<column name="dateCreated" type="timestamp"/>
+<column name="createdBy" type="text"/>
+<column name="recordStatus" type="text"/>
+<column name="gender" type="text"/>
+<column name="minAge" type="number"/>
+<column name="maxAge" type="number"/>
+<column name="productID" type="text"/>
+<column name="determinationConfigID" type="id"/>
+<column name="flag" type="number"/>
+<column name="versionNo" type="number"/>
+</table>

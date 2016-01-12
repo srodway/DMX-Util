@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="CREOLERULESET" override="true">
+<column name="creoleRuleSetID" type="id"/>
+<column name="name" type="text"/>
+<column name="ruleSetDefinition" type="blob"/>
+<column name="ruleSetVersion" type="number"/>
+<column name="migrationAction" type="text"/>
+<column name="descriptionID" type="id"/>
+<column name="versionNo" type="number"/>
+<row>
+<attribute name="creoleRuleSetID">
+<value>11000</value>
+</attribute>
+<attribute name="name">
+<value>DynamicEvidenceRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_7_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>11008</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>19302</value>
+</attribute>
+<attribute name="name">
+<value>InitialContactRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_12_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>19002</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>19303</value>
+</attribute>
+<attribute name="name">
+<value>ApplicationTodoRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_13_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>19003</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>19304</value>
+</attribute>
+<attribute name="name">
+<value>ApplicationData</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_14_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>19004</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>2001</value>
+</attribute>
+<attribute name="name">
+<value>ProductEligibilityEntitlementRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_20_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>2006</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>2002</value>
+</attribute>
+<attribute name="name">
+<value>DefaultProductEligibilityEntitlementRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_21_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>2008</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>2011</value>
+</attribute>
+<attribute name="name">
+<value>ProductDecisionDetailsRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_22_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>2011</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>2012</value>
+</attribute>
+<attribute name="name">
+<value>DefaultProductDecisionDetailsRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_23_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>2010</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>2013</value>
+</attribute>
+<attribute name="name">
+<value>AbstractBasicProductDecisionDetailsRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_24_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>2009</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>2021</value>
+</attribute>
+<attribute name="name">
+<value>ProductKeyDataRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_25_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>2022</value>
+</attribute>
+<attribute name="name">
+<value>DefaultProductKeyDataRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_26_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>2012</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>2031</value>
+</attribute>
+<attribute name="name">
+<value>PropagatorRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_27_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>2032</value>
+</attribute>
+<attribute name="name">
+<value>RateRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_28_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>2033</value>
+</attribute>
+<attribute name="name">
+<value>ParticipantEntitiesRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_29_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>2007</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>2034</value>
+</attribute>
+<attribute name="name">
+<value>CaseEntitiesRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_30_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>2005</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>2201</value>
+</attribute>
+<attribute name="name">
+<value>CoreAdvisorRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_31_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>24000</value>
+</attribute>
+<attribute name="name">
+<value>DiagnosisRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_32_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>24003</value>
+</attribute>
+<attribute name="name">
+<value>IBProductTypeDataRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_35_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>24009</value>
+</attribute>
+<attribute name="name">
+<value>ASCProductRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_41_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>24045</value>
+</attribute>
+<attribute name="name">
+<value>ASCAlienDataRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_45_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>27004</value>
+</attribute>
+<attribute name="name">
+<value>CIInitialContactRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_51_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>27005</value>
+</attribute>
+<attribute name="name">
+<value>CIApplicationData</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_52_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>2731</value>
+</attribute>
+<attribute name="name">
+<value>VerificationRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_55_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>29001</value>
+</attribute>
+<attribute name="name">
+<value>PDCAddressDataRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_57_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>29017</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>29002</value>
+</attribute>
+<attribute name="name">
+<value>PDCEmailAddressRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_58_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>29030</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>29006</value>
+</attribute>
+<attribute name="name">
+<value>PDCBirthAndDeathRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_62_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>29018</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>29010</value>
+</attribute>
+<attribute name="name">
+<value>PDCPhoneNumberRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_66_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>29014</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>29015</value>
+</attribute>
+<attribute name="name">
+<value>PDCNameDataRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_71_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>29033</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>3732</value>
+</attribute>
+<attribute name="name">
+<value>SampleSummaryCategoryRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_97_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>4097</value>
+</attribute>
+<attribute name="name">
+<value>SELECTPRODFUNDS</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_98_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>5001</value>
+</attribute>
+<attribute name="name">
+<value>AbstractAllocationTargetsRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_99_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>2014</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>5002</value>
+</attribute>
+<attribute name="name">
+<value>DefaultAllocationTargetsRuleSet</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_100_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value>2015</value>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+<row>
+<attribute name="creoleRuleSetID">
+<value>9000</value>
+</attribute>
+<attribute name="name">
+<value>CoreCitizenCampaignRuleset</value>
+</attribute>
+<attribute name="ruleSetDefinition">
+<value>./blob/CREOLERuleSet_101_3</value>
+</attribute>
+<attribute name="ruleSetVersion">
+<value>1</value>
+</attribute>
+<attribute name="migrationAction">
+<value/>
+</attribute>
+<attribute name="descriptionID">
+<value/>
+</attribute>
+<attribute name="versionNo">
+<value>1</value>
+</attribute>
+</row>
+</table>

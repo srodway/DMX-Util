@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table name="ADVICECONTEXTRULES" override="true">
+<column name="adviceContextRulesID" type="id"/>
+<column name="adviceContextConfigurationID" type="id"/>
+<column name="creoleRulesetName" type="text"/>
+<column name="createdBy" type="text"/>
+<column name="startDate" type="date"/>
+<column name="endDate" type="date"/>
+<column name="versionNo" type="number"/>
+</table>

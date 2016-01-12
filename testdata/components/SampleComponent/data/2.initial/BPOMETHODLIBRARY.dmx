@@ -1,0 +1,1416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="BPOMETHODLIBRARY">
+  <column name="methodID" type="id" />
+  <column name="interfaceName" type="text" />
+  <column name="methodName" type="text" />
+  <column name="category" type="text" />
+  <column name="type" type="text" />
+  <column name="comments" type="text" />
+  <column name="versionNo" type="number" />
+  <column name="lastWritten" type="timestamp" />
+  <row>
+    <attribute name="methodID">
+      <value>10003</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.sec.mdt.workflow.intf.WorkflowAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>collaborationSharingAllocationStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>ISEMC01</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>27001</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.commonintake.authorisation.intf.AuthoriseWorkflow</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>authorise</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC4</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Authorisation process for straight through workflow.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>70</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.workspaceservices.workflow.intf.WSWorkflowHelper</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>getStatus</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC50</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Retrieves the status of an IntakeProgramApplication</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>71</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.workspaceservices.workflow.intf.WSWorkflowHelper</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>getWarningDate</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC50</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Retrieves the warning date of an IntakeProgramApplication</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>72</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.workspaceservices.workflow.intf.WSWorkflowHelper</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>raiseWarningEvent</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC50</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT3</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Raises an event warning the caseworker that a program application is approaching its deadline date</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>73</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.workspaceservices.workflow.intf.WSWorkflowHelper</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>createIntakeDataPDF</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC50</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Creates a PDF document representing the data collected during intake. Stores a reference to this PDF on the IntakeApplication record.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>74</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.workspaceservices.workflow.intf.WSWorkflowHelper</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>processApplication</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC50</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Invokes the WorkspaceServices component to process the online application.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>75</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.workspaceservices.workflow.intf.WSWorkflowHelper</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>processApplicationOnLegacySystem</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC50</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Invokes a legacy system via web services and passes it the intake data for processing.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>76</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.workspaceservices.workflow.intf.WSWorkflowHelper</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>raiseAppProcCompleteEvent</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC50</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Raises an event to indicate that the processing is complete.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>77</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.workspaceservices.workflow.intf.WSWorkflowHelper</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>allocateResolutionTask</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC50</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Allocates ownership for the intake resolution manual task.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>78</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.workspaceservices.workflow.intf.WSWorkflowHelper</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>createPersonsCasesAndMapEvidence</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC50</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value>A non resilient method which maps Intake Applications to Participants, Cases and Evidence.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>90</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.ise.workflow.intf.WorkflowAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>actionAllocationStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>ISEMC01</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Allocates an action arising out of a meeting to the given users</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>91</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.ise.workflow.intf.WorkflowDeadlineFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>actionDeadlineFunction</value>
+    </attribute>
+    <attribute name="category">
+      <value>ISEMC01</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT3</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Deadline handler for meeting actions.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>1</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.NotificationAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>defaultStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC2</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Allocates to the specified user</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>10</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.WorkflowAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>caseApprovalAllocationStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC1</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value>A case approval task allocation function</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>100</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.cpm.eua.facade.intf.AllocationStrategy</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>resourceManagerAllocationStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC20</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Allocates to the owner of the Provider Group</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>101</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.cpm.workflowprocesses.homestudy.intf.HomeStudyApproval</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>getProviderAndProviderOwnerDetails</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC20</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>102</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.cpm.workflowprocesses.homestudy.intf.HomeStudyApproval</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>getHomeStudyDetails</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC20</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>103</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.cpm.workflowprocesses.intf.WorkflowAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>providerSupervisorStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC20</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>104</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.cpm.workflowprocesses.intf.WorkflowAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>providerOwnerStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC20</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>11</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.WorkflowAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>caseReviewAllocationStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC1</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value>A case review task allocation function.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>12</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.WorkflowAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>caseSupervisorAllocationStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC1</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value>A case supervisor task allocation function</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>13</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.WorkflowDeadlineFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>defaultDeadlineHandler</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC1</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT3</value>
+    </attribute>
+    <attribute name="comments">
+      <value>A case review task allocation function</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>14</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.IssueDelivery</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>getRequiredDataForApproval</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC1</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>This method is used to retrieve data needed for manual approval by the case supervisor</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>15</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.ApprovalRequest</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>getStatusDescription</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC1</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>This method returns the status of a specified approval request as a string rather than a codetable value</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>16</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.intf.MaintainCase</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>readCaseReferenceConcernRoleNameProductNameByCaseID</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC1</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Reads the case header based on the case identifier value</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>17</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.facade.intf.Financial</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>searchCaseIDByFinInstructID</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC5</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>To retrieve all caseIDs from the InstructionLineItem entity based on the FinancialInstructionID.</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>18</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.facade.intf.ApprovalRequest</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>manualAllocationStragegy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC13</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>2</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.NotificationAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>usersSupervisorStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC4</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Allocates to the supervisor of the specified user</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>3</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.NotificationAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>caseSupervisorStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC1</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Allocates to the supervisor of the specified case</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>4</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.NotificationAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>caseOwnerStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC1</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Allocates to the owner of the specified case</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>4001</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.referral.workflowprocesses.intf.Referral</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>getFollwoUpAlertDetails</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC4000</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>4002</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.referral.workflowprocesses.intf.Referral</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>referralReferralDateOrFollowUpWarningDaysUpdated</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC4000</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT3</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>4003</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.assessmentplanning.workflowprocesses.intf.WorkflowDeadlineFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>approveRejectDeadlineHandler</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC4000</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT3</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>4004</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.assessmentplanning.workflowprocesses.intf.WorkflowAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>manualAllocationStragegy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC4000</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>41</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.sample.facade.intf.SampleBenefit</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>createAssociatedProductDeliveryForPlannedItem</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC4</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Creates associated product delivery for a planned item</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>42</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.serviceplans.sl.intf.PlannedItem</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>readDetailsForProductDeliveryCreation</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC9</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Reads details needed for associated case creation</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>43</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.serviceplans.sl.intf.PlanItem</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>read</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC9</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Reads a plan item's details</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>5</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.WorkflowAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>manualAllocationStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC1</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value>A manual task allocation function</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>50</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.verification.sl.infrastructure.intf.ProcessVerificationDueDate</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>calculateWarningDate</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC11</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>This method calculates the warning date for the future or the past</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>51</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.verification.sl.infrastructure.intf.ProcessVerificationDueDate</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>calculateDueDate</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC11</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>This method checks the due days</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>52</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.verification.sl.infrastructure.intf.ProcessVerificationDueDate</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>closeCase</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC11</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>This method closes the case by passing in the verification key</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>53</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.verification.sl.infrastructure.intf.ProcessVerificationDueDate</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>sendCommunication</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC11</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>This method stores the client communication information in the specified communication</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>54</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.verification.sl.infrastructure.intf.ProcessVerificationItemExpiryDate</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>calculateWarningDate</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC11</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>This method calculate the warning date of the verification item expiry</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>55</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.verification.sl.infrastructure.intf.ProcessVerificationItemExpiryDate</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>calculateExpiryDate</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC11</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>This method calculates the expiry date of verification item provided to satisfy the verification requirement</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>56</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.verification.sl.infrastructure.intf.ProcessVerificationItemExpiryDate</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>sendWarningNotification</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC11</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>This method sends the notification when the warning date of the verification item has been reached</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>57</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.verification.sl.infrastructure.intf.ProcessVerificationItemExpiryDate</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>sendItemExpiryNotification</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC11</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>This method sends the notification when the verification item expiry date has been reached</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>58</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.verification.sl.infrastructure.intf.ProcessVerificationDueDate</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>deadLineExpired</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC11</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT3</value>
+    </attribute>
+    <attribute name="comments">
+      <value>This method triggers the CloseCase Event or DeadlineElapsed Event</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>59</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.verification.sl.infrastructure.intf.ProcessVerificationItemExpiryDate</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>warningDateReached</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC11</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT3</value>
+    </attribute>
+    <attribute name="comments">
+      <value>This method raises the warning date elapsed workflow event</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>6</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.WorkflowAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>manualReserveStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC1</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value>A manual task reserve allocation function</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>60</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.verification.sl.infrastructure.intf.ProcessVerificationItemExpiryDate</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>expiryDateReached</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC11</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT3</value>
+    </attribute>
+    <attribute name="comments">
+      <value>This method checks whether the exipry date for a verification item warning has been reached and if it has raises the date expiration workflow event</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>7</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.WorkflowAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>processStandardAllocationStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC1</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Allocates to the owner of the specified case</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>8</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.WorkflowAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>processStandardCaseAllocationStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC1</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Allocates to the owner of the specified case</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="methodID">
+      <value>9</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.sl.intf.WorkflowAllocationFunction</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>caseOwnerAllocationStrategy</value>
+    </attribute>
+    <attribute name="category">
+      <value>MC1</value>
+    </attribute>
+    <attribute name="type">
+      <value>FT2</value>
+    </attribute>
+    <attribute name="comments">
+      <value>A case owner task allocation function</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2015-12-04-10.31.13</value>
+    </attribute>
+  </row>
+</table>
+

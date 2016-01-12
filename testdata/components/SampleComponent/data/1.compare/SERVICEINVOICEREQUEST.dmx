@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="SERVICEINVOICEREQUEST">
+  <column name="referenceNumber" type="text" />
+  <column name="requestID" type="id" />
+  <column name="externalRefNum" type="text" />
+  <row>
+    <attribute name="referenceNumber">
+      <value>789</value>
+    </attribute>
+    <attribute name="requestID">
+      <value>555</value>
+    </attribute>
+    <attribute name="externalRefNum">
+      <value>2587</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="referenceNumber">
+      <value>789</value>
+    </attribute>
+    <attribute name="requestID">
+      <value>777</value>
+    </attribute>
+    <attribute name="externalRefNum">
+      <value>3698</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="referenceNumber">
+      <value>790</value>
+    </attribute>
+    <attribute name="requestID">
+      <value>999</value>
+    </attribute>
+    <attribute name="externalRefNum">
+      <value>85236</value>
+    </attribute>
+  </row>
+</table>
+
