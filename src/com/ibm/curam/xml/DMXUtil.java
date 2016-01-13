@@ -14,25 +14,25 @@ import com.ibm.curam.xml.dmx.DMXClobImport;
 import com.ibm.curam.xml.dmx.DMXDifference;
 
 /**
- * This class will generate a new DMX file containing only the differences taken from two separate DMX files.
+ * <p>This class will generate a new DMX file containing only the differences taken from two separate DMX files.</p>
  * 
- * The class also addresses a number of other fix issues related to the creation of DEMO DMX files, necessary
+ * <p>The class also addresses a number of other fix issues related to the creation of DEMO DMX files, necessary
  * to ensure that importing the new data does not damage existing standard data already loaded in the database.
  * As such it will also set the table override attribute to true. The concept is that all data in OOTB components 
- * will be ignored in favour of that placed in the initial folder of a component.
+ * will be ignored in favour of that placed in the initial folder of a component.</p>
  * 
- * Also because CLOB data can be present in separate extract files, when the import is expecting it to be present 
- * in the DMX file, this is also imported back into the main file.
+ * <p>Also because CLOB data can be present in separate extract files, when the import is expecting it to be present 
+ * in the DMX file, this is also imported back into the main file.</p>
+ *
+ * <p>USAGE:</p>
  * 
- * 
- * USAGE:
- * 
- * DMXUtil has a number of parameters that are required for the successful processing of DMX data.
- * 
- * 	 path to baseline EJBServer directory (this can be an initial data extract from a baseline build)
- *   path to modified EJBServer directory (this can be a data extract from a modified build containing updated/changed data)
- *   Component Name (the name of the component that is to be processed)
- * 
+ * DMXUtil has a number of parameters that are required for the successful processing of DMX data.<br/>
+ * <ul>
+ * 	 <li>path to baseline EJBServer directory (this can be an initial data extract from a baseline build)</li>
+ *   <li>path to modified EJBServer directory (this can be a data extract from a modified build containing updated/changed data)</li>
+ *   <li>Component Name (the name of the component that is to be processed)</li>
+ * </ul>
+ * </p>
  * 
  * @author Simon Rodway
  */
