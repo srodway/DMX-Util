@@ -37,7 +37,7 @@ public class DMXClobImport {
 	 * 
 	 * @param initialDataDir
 	 */
-	public DMXClobImport(String initialDataDir) {
+	public DMXClobImport(final String initialDataDir) {
 		this.baseToClobDir = initialDataDir;
 		
 	}
@@ -51,7 +51,7 @@ public class DMXClobImport {
 	 * @param Node DMX File
 	 * @return Node containing all the original details plus updated CLOB reference content
 	 */
-	public Node fixClobReferences(Node node) {
+	public Node fixClobReferences(final Node node) {
 		
 		// Is the node part of a DMX file that contains CLOB references
 		if (!containsClobColumn(node)) {
@@ -71,7 +71,7 @@ public class DMXClobImport {
 	 * @param node
 	 * @return
 	 */
-	private NodeList processClobNodes(NodeList items) {
+	private NodeList processClobNodes(final NodeList items) {
 		for (int i = 0; items != null && i < items.getLength(); i++) {
 			final Node clobNode = items.item(i);
 			if (isRequiredNode(clobNode, Node.ELEMENT_NODE, VALUE)) {
@@ -101,23 +101,22 @@ public class DMXClobImport {
 	 * @param fileName
 	 * @return String containing the content of the file.
 	 */
-	private String getFileContent(String fileName) {
+	private String getFileContent(final String fileName) {
 		String clobContent = null;
 		FileInputStream inputStream = null;
 		try {
 			inputStream = new FileInputStream(fileName);
 		    clobContent = IOUtils.toString(inputStream);
 		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
+			System.out.println("Error: Unable to locate "+fileName);
 			e1.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			System.out.println("Error: Unable to read "+fileName);
 			e.printStackTrace();
 		} finally {
 		    try {
 				inputStream.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}	
@@ -134,7 +133,7 @@ public class DMXClobImport {
 	 * @param node
 	 * @return true if Node contains column of type clob, false otherwise.
 	 */
-	private boolean containsClobColumn(Node node) {
+	private boolean containsClobColumn(final Node node) {
 		boolean containsClob = false;
 		
 		if (node == null) 
@@ -163,7 +162,7 @@ public class DMXClobImport {
 	 * @param node
 	 * @return true if Node contains column of type clob, false otherwise.
 	 */
-	private boolean containsClobText(Node node) {
+	private boolean containsClobText(final Node node) {
 		if (node != null && node.getNodeValue() != null && node.getNodeValue().contains(CLOB_TEXT))
 			return true;
 				
@@ -179,7 +178,7 @@ public class DMXClobImport {
 	 * @param node
 	 * @return true if Node contains column of type clob, false otherwise.
 	 */
-	private boolean isRequiredNode(Node node, short nodeType, String nodeName) {
+	private boolean isRequiredNode(final Node node, final short nodeType, final String nodeName) {
 		if (node != null && node.getNodeName().equals(nodeName)) {
 			return true;
 		}

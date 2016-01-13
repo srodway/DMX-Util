@@ -108,10 +108,14 @@ public class DMXDifference {
 	}
 
 	/**
+	 * The method is responsible for processing the Nodes and returning a new updated Node that
+	 * contains the delta of the two Nodes passed in.
 	 * 
-	 * 
+	 * @param Node master - the baseline Node containing the details that will be seeded on initial install
+	 * @param Node modified - updated Node containing baseline details plus any additional information added
+	 * @return Node delta - Node containing the baseline table details, plus any additional rows not present in the baseline.
 	 */
-	private Node dmxDataDiff(Node master, Node modified) {
+	private Node dmxDataDiff(final Node master, final Node modified) {
 		final Node updated = master.cloneNode(true);
 
 		try {
@@ -139,7 +143,7 @@ public class DMXDifference {
 	 * @param nodeType
 	 * @param name
 	 */
-	private void removeAll(Node node, short nodeType, String name) {
+	private void removeAll(final Node node, final short nodeType, final String name) {
 		if (node.getNodeType() == nodeType && (name == null || node.getNodeName().equals(name))) {
 			node.getParentNode().removeChild(node);
 		} else {
@@ -151,7 +155,15 @@ public class DMXDifference {
 	}
 
 	/**
+	 * Method that builds the delta details, by checking the node rows against the rows in the supplied List.
+	 * Only when the row doesn't exist in the List is it added to the master.
 	 * 
+	 * @param rows : list of rows that where present in the baseline
+	 * @param master : new delta node that will contain rows when they're not present in the List rows.
+	 * @param node : node that contains data to compare with List.  This is typically a node that only contains information different
+	 * to the original baseline.  
+	 * @param nodeType : the node type that is being compared
+	 * @param name : name of the node that will be compared, e.g. <row>
 	 */
 	private void appendAll(List<Node> rows, Node master, Node node, short nodeType, String name) {
 		if (node.getNodeType() == nodeType && (name == null || node.getNodeName().equals(name))) {
@@ -188,7 +200,7 @@ public class DMXDifference {
 	 * 
 	 * @return ArrayList of Nodes
 	 */
-	private List<Node> getRows(Node master, List<Node> rows) {
+	private List<Node> getRows(final Node master, final List<Node> rows) {
 		if (master.getNodeType() == Node.ELEMENT_NODE && (master == null || master.getNodeName().equals(DATA_ROW))) {
 			rows.add(master.cloneNode(true));
 		} else {
@@ -203,7 +215,7 @@ public class DMXDifference {
 
 
 
-	private void cleanNode(Node node) {
+	private void cleanNode(final Node node) {
 
 		if (node == null)
 			return;
@@ -255,8 +267,7 @@ public class DMXDifference {
 	 * processor doesn't currently handle table/column changes so we need to
 	 * just work with standard data row details and ignore table details.
 	 * 
-	 * @param Node
-	 *            node
+	 * @param node : node that will be searched for the presence on a table override setting. When found this will be reset to TRUE.
 	 */
 	private void setTableOverride(Node node) {
 		if (node.getNodeType() == Node.ELEMENT_NODE && node.getNodeName().equals(TABLE_DEF)) {
