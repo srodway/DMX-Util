@@ -1,3 +1,14 @@
+/*
+ * IBM Confidential
+ *
+ * OCO Source Materials
+ *
+ * Copyright IBM Corporation 2016
+ *
+ * The source code for this program is not published or otherwise divested
+ * of its trade secrets, irrespective of what has been deposited with the US
+ * Copyright Office
+ */
 package com.ibm.curam.xml;
 
 import java.io.File;
@@ -10,8 +21,9 @@ import java.util.List;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.ibm.curam.xml.dmx.DMXClobImport;
-import com.ibm.curam.xml.dmx.DMXDifference;
+import com.ibm.curam.utils.FileUtil;
+import com.ibm.curam.xml.dmx.impl.DMXClobImport;
+import com.ibm.curam.xml.dmx.impl.DMXDifference;
 
 /**
  * <p>This class will generate a new DMX file containing only the differences taken from two separate DMX files.</p>
