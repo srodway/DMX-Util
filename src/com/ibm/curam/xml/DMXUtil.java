@@ -22,6 +22,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import com.ibm.curam.utils.FileUtil;
+import com.ibm.curam.xml.ctx.impl.DMX2CTXConvertor;
 import com.ibm.curam.xml.dmx.impl.DMXClobImport;
 import com.ibm.curam.xml.dmx.impl.DMXDifference;
 
@@ -54,6 +55,7 @@ public class DMXUtil {
 	private String compareDir;
 	private String initialDataDir;
 	private String demoDataDir;
+	private String codetableDir;
 	private String[] ignoreFiles;
 	private String[] clobExceptionFiles;
 	
@@ -68,6 +70,7 @@ public class DMXUtil {
 		this.compareDir = compareDir;
 		this.initialDataDir = this.serverDir + "/components/" + component + "/data/initial";  
 		this.demoDataDir = this.serverDir + "/components/" + component + "/data/demo";
+		this.codetableDir = this.serverDir + "/components/" + component + "/data/codetable";
 		this.ignoreFiles = ignoreFiles;
 		this.clobExceptionFiles = clobExceptionFiles;
 	}
@@ -89,8 +92,9 @@ public class DMXUtil {
 		try {
 			String[] ignore = {
 				"AUDITTRAIL", "BATCHPARAMDEF", "BATCHPARAMDESC", "BATCHPARAMDESCTRANSLATION", 
-				"BATCHPROCDEF", "BATCHPROCDESC", "BATCHPROCDESCTRANSLATION", "CODETABLEDATA", "CODETABLEHEADER", 
-				"CODETABLEHIERARCHY", "CODETABLEITEM", "CTDISPLAYNAME", "EVENTCLASS", "EVENTTYPE", "EVENTWAIT", 
+				"BATCHPROCDEF", "BATCHPROCDESC", "BATCHPROCDESCTRANSLATION", 
+				//"CODETABLEDATA", "CODETABLEHEADER","CODETABLEHIERARCHY", "CODETABLEITEM", 
+				"CTDISPLAYNAME", "EVENTCLASS", "EVENTTYPE", "EVENTWAIT", 
 				"FUNCTIONIDENTIFIER", "TASKASSIGNMENT", "BIZOBJASSOCIATION", "TASKHISTORY", "TASK", "ALERT", 
 				"WORKFLOWDEADLINE", "TRANSITIONINSTANCE", "PROCINSTWDODATA", "PROCESSINSTANCE", "ACTIVITYINSTANCE", 
 				"PROCESSDEFINITION", "PROCESSDEFINITIONTRANSLATION", "RULESETINFORMATION", "SECURITYFIDSID", 
@@ -98,10 +102,15 @@ public class DMXUtil {
 			};
 			
 			
-			String[] clobException = {"USERPAGECONFIG", "TEXTTRANSLATION"};
+			final String[] clobException = {"USERPAGECONFIG", "TEXTTRANSLATION"};
+			final String serverDir = args[0];
+			final String compareDir = args[1];
+			final String component = args[2];
 			
+			final DMXUtil util = new DMXUtil(serverDir, compareDir, component, ignore, clobException);
+			util.createUploadData();
+			util.generateCTX();		
 			
-			new DMXUtil(args[0], args[1], args[2], ignore, clobException).createUploadData();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}		
@@ -124,6 +133,15 @@ public class DMXUtil {
 		createDemoDataDiff(dmxFiles);
 	}
 
+	
+	
+	public void generateCTX() {
+		final DMX2CTXConvertor dmx2ctxConvertor = new DMX2CTXConvertor();
+		dmx2ctxConvertor.setDmxDir(demoDataDir);
+		dmx2ctxConvertor.setOutputDir(codetableDir);
+		dmx2ctxConvertor.execute();
+	}
+	
 	
 
 	/**
