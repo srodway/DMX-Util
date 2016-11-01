@@ -137,7 +137,7 @@ public class DMXUtil {
 	
 	public void generateCTX() {
 		final DMX2CTXConvertor dmx2ctxConvertor = new DMX2CTXConvertor();
-		dmx2ctxConvertor.setDmxDir(compareDir);
+		dmx2ctxConvertor.setDmxDir(demoDataDir);
 		dmx2ctxConvertor.setOutputDir(codetableDir);
 		dmx2ctxConvertor.execute();
 	}
