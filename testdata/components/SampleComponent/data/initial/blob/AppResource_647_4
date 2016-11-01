@@ -1,41 +1,25 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-# START NON-TRANSLATABLE 
-Image.Action=icon_action
-# END NON-TRANSLATABLE
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-# START NON-TRANSLATABLE 
-Message.Title={Action.Name}
-# END NON-TRANSLATABLE
-
-First.Sentence.FirstHalf = This activity will begin on {Start.Date}
-
-First.Sentence.DurationHours = for {Duration.Hours} hours
-
-First.Sentence.ForDurationMinutes = for {Duration.Minutes} minutes
-
-First.Sentence.AndDurationMinutes = and {Duration.Minutes} minutes
-# START NON-TRANSLATABLE 
-First.Sentence.FrequencyPattern = {Frequency.Pattern}
-# END NON-TRANSLATABLE
-
-First.Sentence.EndDate = until {End.Date}
-
-First.Sentence.StartDate = This activity will begin on {Start.Date}.
-
-First.Sentence.NoFrequency = This activity will begin on {Start.Date} until {End.Date}.
-
-Second.Sentence.HasContactDetails = Please contact {Action.Owner} at {Phone.Number} or {link:{Email.Address}:Email.Link} if you need more information.
-
-Second.Sentence.NoContactDetails=Please contact {Action.Owner} if you need more information.
-
-Third.Sentence = Click {link:My Activities:My.Activities} for a full list of your activities.
-# START NON-TRANSLATABLE 
-Link.MyActivities = CitizenAccount_listCitizenActivities
-# END NON-TRANSLATABLE
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="EventWaitActivityMenu">
+  
+  <mc:menu-item id="Edit" open-as="modal" page-id="ProcessDefinitionTool_editActivity" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
+  
+  <mc:menu-item id="IncomingTransition" open-as="modal" page-id="ProcessDefinitionTool_createIncomingTransition" title="MenuItem.Title.IncomingTransition" tooltip="MenuItem.Tooltip.IncomingTransition"/>
+      
+  <mc:menu-item id="OutgoingTransition" open-as="modal" page-id="ProcessDefinitionTool_createOutgoingTransition" title="MenuItem.Title.OutgoingTransition" tooltip="MenuItem.Tooltip.OutgoingTransition"/>
+  
+    
+</mc:menu-bar>

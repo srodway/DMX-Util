@@ -1,66 +1,115 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PDCBirthAndDeathSummaryRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
-  <Class extends="DefaultEvidenceSummary" extendsRuleSet="EvidenceSummaryRuleSet" name="PDCBirthAndDeathSummary">
-    <Attribute name="evidence">
+<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCNameDataRuleSet">
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCName">
+    <Annotations>
+      <SuccessionSetPopulation/>
+    </Annotations>
+    <Attribute name="middleName">
+      <Annotations/>
       <type>
-        <ruleclass name="PDCBirthAndDeath" ruleset="PDCBirthAndDeathRuleSet"/>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="java.lang.String"/>
+        </javaclass>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="summary">
+    <Attribute name="lastName">
+      <Annotations/>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="java.lang.String"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="title">
+      <Annotations/>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <codetableentry table="PersonTitle"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="initials">
+      <Annotations/>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="java.lang.String"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="firstName">
+      <Annotations/>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="java.lang.String"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="suffix">
+      <Annotations/>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <codetableentry table="PersonSuffix"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="nameType">
+      <Annotations/>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <codetableentry table="AlternateNameType"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <choose>
-          <type>
-            <javaclass name="curam.creole.value.Message"/>
-          </type>
-          <when>
-            <condition>
-              <reference attribute="isDead"/>
-            </condition>
-            <value>
-              <ResourceMessage key="summaryMessage2" resourceBundle="curam.pdc.rules.DynEvd_PDCBirthAndDeath_Summary">
-                <reference attribute="dateOfBirth">
-                  <reference attribute="evidence"/>
-                </reference>
-                <reference attribute="dateOfDeath">
-                  <reference attribute="evidence"/>
-                </reference>
-              </ResourceMessage>
-            </value>
-          </when>
-          <otherwise>
-            <value>
-              <ResourceMessage key="summaryMessage1" resourceBundle="curam.pdc.rules.DynEvd_PDCBirthAndDeath_Summary">
-                <reference attribute="dateOfBirth">
-                  <reference attribute="evidence"/>
-                </reference>
-              </ResourceMessage>
-            </value>
-          </otherwise>
-        </choose>
+        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="successionID"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="isDead">
+    <Attribute name="participant">
+      <Annotations/>
       <type>
-        <javaclass name="Boolean"/>
+        <javaclass name="java.lang.Number"/>
       </type>
       <derivation>
-        <not>
-          <equals>
-            <reference attribute="dateOfDeath">
-              <reference attribute="evidence"/>
-            </reference>
-            <null/>
-          </equals>
-        </not>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="related_participant">
+      <Annotations/>
+      <type>
+        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+      </type>
+      <derivation>
+        <reference attribute="caseParticipantRoleRecord">
+          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
+            <reference attribute="participant"/>
+          </create>
+        </reference>
       </derivation>
     </Attribute>
   </Class>

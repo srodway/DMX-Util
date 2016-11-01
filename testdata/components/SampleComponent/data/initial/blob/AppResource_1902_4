@@ -1,22 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Number.Wizard.Pages=2
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2010 Curam Software Ltd.
-  All rights reserved.
+Wizard.PageID.1=ConditionAdmin_conditionWizard
+ConditionAdmin_conditionWizard.Wizard.Item.Text=Condition
+ConditionAdmin_conditionWizard.Wizard.Page.Title=Step 1:
+ConditionAdmin_conditionWizard.Wizard.Page.Desc=Condition
 
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="WorkQueues">
-  
-  <tc:context tab-name="Details.Name.WorkQueues" tab-title="Details.Title.WorkQueues"/>
-  
-  <tc:navigation id="WorkQueues"/>
-
-</tc:tab-config>
+Wizard.PageID.2=RulesetCondition_detailsWizard
+RulesetCondition_detailsWizard.Wizard.Item.Text=Details
+RulesetCondition_detailsWizard.Wizard.Page.Title=Step 2:
+RulesetCondition_detailsWizard.Wizard.Page.Desc=Details

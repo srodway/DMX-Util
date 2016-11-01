@@ -1,20 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+MenuItem.Title.Edit=Edit
+MenuItem.Tooltip.Edit=Edit
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2012 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="RefundPersonPaymentsSearch">
-  <nc:nodes>
-    <nc:navigation-page id="RefundPersonPaymentsSearchHome" page-id="Financial_refundPaymentSearchPerson" title="Leaf.Title.Home" visible="true"/>
-  </nc:nodes>
-</nc:navigation>
+
+
+Submenu.Title.New=New
+Submenu.Tooltip.New=New
+
+Submenu.Title.Approval=Approval
+Submenu.Tooltip.Approval=Approval
+
+MenuItem.Title.Case=Case
+MenuItem.Tooltip.Case=Create an approval case.
+
+MenuItem.Title.TemporalEvidence=Temporal Evidence
+MenuItem.Tooltip.TemporalEvidence=Create a temporal evidence.
+
+MenuItem.Title.EvidenceTree=Evidence Tree
+MenuItem.Tooltip.EvidenceTree=Create an evidence tree.
+
+Submenu.Title.Deduction=Deduction
+Submenu.Tooltip.Deduction=Deduction
+
+MenuItem.Title.NewDeduction=New Deduction
+MenuItem.Tooltip.NewDeduction=Create a new deduction.
+
+MenuItem.Title.ExistingDeduction=Add Existing Deduction
+MenuItem.Tooltip.ExistingDeduction=Add existing deduction.
+
+MenuItem.Title.DeliveryPattern=Delivery Pattern
+MenuItem.Tooltip.DeliveryPattern=Add a delivery pattern.
+
+MenuItem.Title.ExistingAssessment=Link an Assessment
+MenuItem.Tooltip.ExistingAssessment=Associate Assessment.
+
+MenuItem.Title.Provision=Provision
+MenuItem.Tooltip.Provision=Create a provision.
+
+MenuItem.Title.TimeConstraint=Time Constraint
+MenuItem.Tooltip.TimeConstraint=Create a time constraint.
+
+MenuItem.Title.AdhocCriteria=Ad Hoc Criteria
+MenuItem.Tooltip.AdhocCriteria=Create an Ad Hoc Criteria.
+
+MenuItem.Title.ExistingRuleset=Assign a Ruleset
+MenuItem.Tooltip.ExistingRuleset=Assign a Ruleset.
+
+Submenu.Title.Search=Search
+Submenu.Tooltip.Search=Search
+
+MenuItem.Title.User=User
+MenuItem.Tooltip.User=Find an user.
+
+MenuItem.Title.ExternalUser=External User
+MenuItem.Tooltip.ExternalUser=Find an external user.

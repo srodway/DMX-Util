@@ -5,45 +5,19 @@
 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2010-2011 Curam Software Ltd.
-  All rights reserved.
-
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. (&quot;Confidential Information&quot;).  You shall not disclose such
-  Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><!--
-
-  Default implementations of the rules classes in ProgramRecommendationRuleSet.
-
-  Rule Set developers should extend these classes rather than directly extending the classes
-  defined in ProgramRecommendationRuleSet. These default implementations provide
-  some isolation against future changes.
---><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DefaultProgramRecommendationRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
-
-
-  <!-- Default ProgramRecommender Rule Class. -->
-  <Class abstract="true" extends="ProgramRecommender" extendsRuleSet="ProgramRecommendationRuleSet" name="DefaultProgramRecommender">
-
-
-    <!-- BEGIN, CR00316611, RB  -->
-    <!-- BEGIN, CR00340176, MST -->
-    <!-- Mark as specified -->
-    <Attribute name="productID">
+--><!-- Copyright (c) 2009-2011 Curam Software Ltd.                                 --><!-- All rights reserved.                                                   --><!-- This software is the confidential and proprietary information of Curam --><!-- Software, Ltd. ("Confidential Information"). You shall not disclose    --><!-- such Confidential Information and shall use it only in accordance with --><!-- the terms of the license agreement you entered into with Curam         --><!-- Software.                                                              --><!-- Description                                                            --><!-- This is the interface ruleset Evidence Summary Information.            --><!-- The individual elements of a summary information are declared as       --><!-- abstract. If an Evidence Type Version metadata specifies that CER is to--><!-- be used for calculating summary information, the Summary Rule Class in --><!-- the corresponding CER Ruleset should extend from the                   --><!-- AbstractEvidenceSummary class specified in this rule set.              --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EvidenceValidationRuleSet" xsi:noNamespaceSchemaLocation="../../CREOLEInfrastructure/xsd/curam/creole/xsd/RuleSetLax.xsd">
+  <Class abstract="true" name="AbstractEvidenceValidationResult">
+    <Attribute name="evidence">
       <type>
-        <javaclass name="Number"/>
+        <ruleclass name="DynamicEvidence" ruleset="DynamicEvidenceRuleSet"/>
       </type>
       <derivation>
-        <specified/>
+        <abstract/>
       </derivation>
     </Attribute>
-    <!-- END, CR00340176 -->
-
-
-    <Attribute name="startDate">
+    <Attribute name="validationMode">
       <type>
-        <javaclass name="curam.util.type.Date"/>
+        <ruleclass name="ValidationMode"/>
       </type>
       <derivation>
         <specified/>
@@ -51,215 +25,190 @@
     </Attribute>
 
 
-    <Attribute name="endDate">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <!-- END, CR00316611 -->
-
-
-    <!-- Mark as specified -->
-    <Attribute name="caseID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Empty list. -->
-    <Attribute name="simulatedDeterminations">
+    <Attribute name="detailsValidations">
       <type>
         <javaclass name="List">
-          <ruleclass name="SimulatedDetermination" ruleset="ProgramRecommendationRuleSet"/>
+          <ruleclass name="Validation"/>
         </javaclass>
       </type>
       <derivation>
-        <fixedlist>
-          <listof>
-            <ruleclass name="DefaultSimulatedDetermination"/>
-          </listof>
-          <members/>
-        </fixedlist>
+        <abstract/>
+      </derivation>
+    </Attribute>
+    <Attribute name="preCreateValidations">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Validation"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+    <Attribute name="preModifyValidations">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Validation"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+    <Attribute name="postCreateValidations">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Validation"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+    <Attribute name="postModifyValidations">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Validation"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+    <Attribute name="standardValidations">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Validation"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+  </Class>
+
+
+  <Class name="Validation">
+    <Initialization>
+      <Attribute name="isFailure">
+        <type>
+          <javaclass name="Boolean"/>
+        </type>
+      </Attribute>
+      <Attribute name="failureMessage">
+        <type>
+          <javaclass name="curam.creole.value.Message"/>
+        </type>
+      </Attribute>
+    </Initialization>
+    <Attribute name="informationalType">
+      <type>
+        <javaclass name="curam.dynamicevidence.validation.impl.InformationalType"/>
+      </type>
+      <derivation>
+        <call class="curam.dynamicevidence.validation.impl.InformationalType" method="error">
+          <type>
+            <javaclass name="curam.dynamicevidence.validation.impl.InformationalType"/>
+          </type>
+        </call>
       </derivation>
     </Attribute>
 
 
-  </Class>
-
-
-  <!--
-    Default Simulated Determination Rule Class.
-  -->
-  <Class abstract="true" extends="SimulatedDetermination" extendsRuleSet="ProgramRecommendationRuleSet" name="DefaultSimulatedDetermination">
-
-
-    <!-- Simple english-only text description -->
     <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <XmlMessage>Recommendation</XmlMessage>
+        <ResourceMessage key="Validation.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">             
+                </ResourceMessage>
       </derivation>
     </Attribute>
-
-
-    <!-- Mark as specified. -->
-    <Attribute name="programRecommendationCase">
-      <type>
-        <ruleclass name="ProgramRecommendationCase" ruleset="ProgramRecommendationRuleSet"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Empty list -->
-    <Attribute name="programRecommendationDisplayCases">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="ProgramRecommendationDisplayCase" ruleset="ProgramRecommendationDisplayRuleSet"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <fixedlist>
-          <listof>
-            <ruleclass name="ProgramRecommendationDisplayCase" ruleset="ProgramRecommendationDisplayRuleSet"/>
-          </listof>
-          <members/>
-        </fixedlist>
-
-
-      </derivation>
-    </Attribute>
-
-
-    <!-- BEGIN, CR00323679, PD-->
-    <!-- Empty list -->
-    <Attribute name="members">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="Member" ruleset="ProgramRecommendationRuleSet"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <fixedlist>
-          <listof>
-            <ruleclass name="Member" ruleset="ProgramRecommendationRuleSet"/>
-          </listof>
-          <members/>
-        </fixedlist>
-      </derivation>
-    </Attribute>
-    <!-- END, CR00323679 -->
-
-
-    <!-- BEGIN, CR00332324, MST -->
-    <!-- BEGIN, CR00335709, MST -->
-    <Attribute name="productID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <!-- END, CR00335709 -->
-    <!-- END, CR00332324 -->
-
-
-    <!-- BEGIN, CR00369873, MST -->
-    <Attribute name="productDeliveryID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <Number value="0"/>
-      </derivation>
-    </Attribute>
-    <!-- END, CR00369873 -->
-
-
   </Class>
 
 
-  <!--
-    Default implementation of the ProgramRecommendationCase rule class.
-  -->
-  <Class abstract="true" extends="ProgramRecommendationCase" extendsRuleSet="ProgramRecommendationRuleSet" name="DefaultProgramRecommendationCase">
-
-
-    <!--
-      False forever.
-    -->
-    <Attribute name="programRecommendationEligibilityTimeline">
+  <Class name="ValidationMode">
+    <Initialization>
+      <Attribute name="mode">
+        <type>
+          <javaclass name="curam.dynamicevidence.validation.impl.ValidationMode"/>
+        </type>
+      </Attribute>
+    </Initialization>
+    <Attribute name="description">
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Boolean"/>
-        </javaclass>
+        <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <timelineoperation>
-          <false/>
-        </timelineoperation>
+        <ResourceMessage key="ValidationMode.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">             
+                    </ResourceMessage>
       </derivation>
     </Attribute>
-
-
-    <!-- Empty list -->
-    <Attribute name="programRecommendationObjectiveTimelines">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="AbstractObjectiveTimeline" ruleset="ProductEligibilityEntitlementRuleSet"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <!-- empty list -->
-        <fixedlist>
-          <listof>
-            <ruleclass name="AbstractObjectiveTimeline" ruleset="ProductEligibilityEntitlementRuleSet"/>
-          </listof>
-          <members/>
-        </fixedlist>
-      </derivation>
-    </Attribute>
-
-
-    <!-- BEGIN, CR00316611, RB -->
-    <Attribute name="monthlyAmountTimeline">
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Number"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <!-- Null (interpreted as "not applicable" forever -->
-        <timelineoperation>
-          <null/>
-        </timelineoperation>
-      </derivation>
-    </Attribute>
-    <Attribute name="isEmergencyCase">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <!-- default to "not an emergency"-->
-        <false/>
-      </derivation>
-    </Attribute>
-    <!-- END, CR00316611 -->
-
-
   </Class>
 
 
+  <Class abstract="true" extends="AbstractEvidenceValidationResult" name="DefaultEvidenceValidationResult">
+
+
+    <Attribute name="detailsValidations">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Validation"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+    <Attribute name="preCreateValidations">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Validation"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+    <Attribute name="preModifyValidations">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Validation"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+    <Attribute name="postCreateValidations">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Validation"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+    <Attribute name="postModifyValidations">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Validation"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+    <Attribute name="standardValidations">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Validation"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+  </Class>
 </RuleSet>

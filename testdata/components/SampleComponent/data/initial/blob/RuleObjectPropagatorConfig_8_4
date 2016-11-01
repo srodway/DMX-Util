@@ -9,8 +9,10 @@
   US Government Users Restricted Rights - Use, duplication or disclosure
   restricted by GSA ADP Schedule Contract with IBM Corp.
 -->
-<propagator type="ROPT2004">
+<propagator type="ROPT2005">
   <configuration>
-
+    <evidence type="DET24002">
+      <ruleset name="PractitionerCertificateDataRuleSet"/>
+    </evidence>
   </configuration>
 </propagator>

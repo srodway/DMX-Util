@@ -68,6 +68,56 @@
   </row>
   <row>
     <attribute name="businessTypeCode">
+      <value>OUBTC20</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="creationDate">
+      <value>2011-03-04</value>
+    </attribute>
+    <attribute name="defaultPrinterID">
+      <value />
+    </attribute>
+    <attribute name="name">
+      <value>intakeOrg</value>
+    </attribute>
+    <attribute name="organisationUnitID">
+      <value>19001</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>OUSC1</value>
+    </attribute>
+    <attribute name="webAddress">
+      <value />
+    </attribute>
+    <attribute name="readSID">
+      <value />
+    </attribute>
+    <attribute name="maintainSID">
+      <value />
+    </attribute>
+    <attribute name="createUnitSID">
+      <value />
+    </attribute>
+    <attribute name="locationID">
+      <value />
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2011-03-04-20.13.22</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="businessTypeCode">
       <value>OUBTC3</value>
     </attribute>
     <attribute name="comments">
@@ -171,19 +221,19 @@
       <value>OUBTC20</value>
     </attribute>
     <attribute name="comments">
-      <value />
+      <value>Demo Hearing Officials</value>
     </attribute>
     <attribute name="creationDate">
-      <value>2011-03-04</value>
+      <value>2003-01-01</value>
     </attribute>
     <attribute name="defaultPrinterID">
       <value />
     </attribute>
     <attribute name="name">
-      <value>intakeOrg</value>
+      <value>Hearing Officials</value>
     </attribute>
     <attribute name="organisationUnitID">
-      <value>19001</value>
+      <value>4</value>
     </attribute>
     <attribute name="recordStatus">
       <value>RST1</value>
@@ -213,7 +263,207 @@
       <value>1</value>
     </attribute>
     <attribute name="lastWritten">
-      <value>2011-03-04-20.13.22</value>
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="businessTypeCode">
+      <value>OUBTC20</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Demo Hearing Reviewers</value>
+    </attribute>
+    <attribute name="creationDate">
+      <value>2003-01-01</value>
+    </attribute>
+    <attribute name="defaultPrinterID">
+      <value />
+    </attribute>
+    <attribute name="name">
+      <value>Hearing Reviewers</value>
+    </attribute>
+    <attribute name="organisationUnitID">
+      <value>5</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>OUSC1</value>
+    </attribute>
+    <attribute name="webAddress">
+      <value />
+    </attribute>
+    <attribute name="readSID">
+      <value />
+    </attribute>
+    <attribute name="maintainSID">
+      <value />
+    </attribute>
+    <attribute name="createUnitSID">
+      <value />
+    </attribute>
+    <attribute name="locationID">
+      <value />
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="businessTypeCode">
+      <value>OUBTC20</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Demo Hearing Schedulers</value>
+    </attribute>
+    <attribute name="creationDate">
+      <value>2003-01-01</value>
+    </attribute>
+    <attribute name="defaultPrinterID">
+      <value />
+    </attribute>
+    <attribute name="name">
+      <value>Hearing Schedulers</value>
+    </attribute>
+    <attribute name="organisationUnitID">
+      <value>6</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>OUSC1</value>
+    </attribute>
+    <attribute name="webAddress">
+      <value />
+    </attribute>
+    <attribute name="readSID">
+      <value />
+    </attribute>
+    <attribute name="maintainSID">
+      <value />
+    </attribute>
+    <attribute name="createUnitSID">
+      <value />
+    </attribute>
+    <attribute name="locationID">
+      <value />
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="businessTypeCode">
+      <value>OUBTC5</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Demo data for Secretaries</value>
+    </attribute>
+    <attribute name="creationDate">
+      <value>2003-01-01</value>
+    </attribute>
+    <attribute name="defaultPrinterID">
+      <value />
+    </attribute>
+    <attribute name="name">
+      <value>Secretaries</value>
+    </attribute>
+    <attribute name="organisationUnitID">
+      <value>7</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>OUSC1</value>
+    </attribute>
+    <attribute name="webAddress">
+      <value />
+    </attribute>
+    <attribute name="readSID">
+      <value />
+    </attribute>
+    <attribute name="maintainSID">
+      <value />
+    </attribute>
+    <attribute name="createUnitSID">
+      <value />
+    </attribute>
+    <attribute name="locationID">
+      <value />
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="businessTypeCode">
+      <value>OUBTC6</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Demo data for Claims Analysts</value>
+    </attribute>
+    <attribute name="creationDate">
+      <value>2003-01-01</value>
+    </attribute>
+    <attribute name="defaultPrinterID">
+      <value />
+    </attribute>
+    <attribute name="name">
+      <value>Claims Analysts</value>
+    </attribute>
+    <attribute name="organisationUnitID">
+      <value>8</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>OUSC1</value>
+    </attribute>
+    <attribute name="webAddress">
+      <value />
+    </attribute>
+    <attribute name="readSID">
+      <value />
+    </attribute>
+    <attribute name="maintainSID">
+      <value />
+    </attribute>
+    <attribute name="createUnitSID">
+      <value />
+    </attribute>
+    <attribute name="locationID">
+      <value />
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
     </attribute>
   </row>
 </table>

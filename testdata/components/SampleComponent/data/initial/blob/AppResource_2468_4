@@ -1,34 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009-2010 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="LoopBeginActivity">
-
-  <nc:nodes>
-  
-    <nc:navigation-page id="ViewLoopBeginActivity" page-id="ProcessDefinitionTool_viewLoopBeginActivity" title="Page.Title.LoopBeginActivity"/>
-    <nc:navigation-page id="ListLoopConditions" page-id="ProcessDefinitionTool_listLoopConditions" title="Page.Title.LoopConditions"/>
-    <nc:navigation-page id="Validations" page-id="ProcessDefinitionTool_validateActivity" title="Page.Title.Validations"/>
-    <nc:navigation-group id="Notification" title="Group.Title.Notification">
-	    <nc:navigation-page id="ActivityNotification" page-id="ProcessDefinitionTool_viewLoopBeginActivityNotification" title="Page.Title.ActivityNotification"/>
-	    <nc:navigation-page id="ActivityNotificationSubject" page-id="ProcessDefinitionTool_viewLoopBeginActivityNotificationSubject" title="Page.Title.ActivityNotificationSubject"/>
-	    <nc:navigation-page id="ActivityNotificationBody" page-id="ProcessDefinitionTool_viewLoopBeginActivityNotificationBody" title="Page.Title.ActivityNotificationBody"/>
-	    <nc:navigation-page id="ActivityNotificationActions" page-id="ProcessDefinitionTool_listLoopBeginActivityNotificationActions" title="Page.Title.ActivityNotificationActions"/>
-	    <nc:navigation-page id="ActivityNotificationAllocationStrategy" page-id="ProcessDefinitionTool_viewActivityNotificationAllocationStrategyRedirect" title="Page.Title.AllocationStrategy"/>
-	    <nc:navigation-page id="NotificationValidations" page-id="ProcessDefinitionTool_validateActivityNotification" title="Page.Title.NotificationValidations"/>
-	</nc:navigation-group>
-
-  </nc:nodes>
-   
-</nc:navigation>
+#Mon Oct 31 14:58:08 GMT 2016
+Container.Label.UpdatedBy=Updated By
+View.ActionControl.Label.Verifications=Verifications
+DisabilityCluster.Title.ID1=Disability
+Field.Label.UpdatedOn=Updated On
+View.ActionControl.Label.History.Help=Choose this to view the correction history of this record.
+ActionControl.Label.ViewHistory=
+childEvidenceType=DET0000512
+Field.Label.ApprovalRequestedInd=Approval Requested
+View.ActionControl.Label.Details=Details
+ActionControl.Label.Close=Close
+Field.Label.UpdatedBy=Updated By
+Field.Label.ChangeReason=Change Reason
+Field.Prompt.EffectiveDate=leave blank if making a correction
+Field.Label.ApprovalStatus=Approval Status
+View.ActionControl.Label.History=Corrections
+View.ActionControl.Label.Details.Help=Shows details of the current record.
+Field.Label.ReceivedDate=Received Date
+Field.Label.EffectiveDate=Effective Date of Change
+TiProvisionsClaimedField.Label.ID1=TI Provisions Claimed?
+Field.Label.StatusCode=Status
+Title.Childe.Details=Change Details
+View.ActionControl.Label.Issues=Issues
+Page.Title=View Scot Disability 
+ActionControl.Label.ViewHistoryCloseBracket=

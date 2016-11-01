@@ -1,39 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2010 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="OutcomePlanFactorMenu">
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Details.Name.LiabilityCaseAdmin=Liability Case Administration
+Details.Icon=a
 
-    <mc:loader-registry>
-        <mc:loader class="curam.outcomeplanning.tab.impl.OutcomePlanFactorMenuLoader"/>
-    </mc:loader-registry>
+Leaf.Title.Home=Home
 
-    <mc:menu-item dynamic="true" id="EditReason" open-as="modal" page-id="OutcomePlanFactor_updateReason" title="MenuItem.Title.EditReason" tooltip="MenuItem.Tooltip.EditReason" window-options="width=510,height=480"/>
-    <mc:menu-item dynamic="true" id="EditFactorName" open-as="modal" page-id="OutcomePlanFactor_updateFactorName" title="MenuItem.Title.EditFactorName" tooltip="MenuItem.Tooltip.EditFactorName"/>
-    <mc:menu-separator id="sep2"/>
+Folder.Title.Approvals=Approval Checks
+Leaf.Title.Case=Case
+Leaf.Title.Temporal=Evidence
+Leaf.Title.EvidenceTree=Evidence Tree
 
-    <mc:menu-item dynamic="true" id="UpdateProgress" open-as="modal" page-id="OutcomePlanFactor_updateProgress" title="MenuItem.Title.UpdateProgress" tooltip="MenuItem.Tooltip.UpdateProgress"/>
-    <mc:menu-item dynamic="true" id="UpdateRating" open-as="modal" page-id="OutcomePlanFactor_updateRating" title="MenuItem.Title.UpdateRating" tooltip="MenuItem.Tooltip.UpdateRating"/>
-    <mc:menu-item dynamic="true" id="SetAsPriority" open-as="modal" page-id="OutcomePlanFactor_setAsPriority" title="MenuItem.Title.SetAsPriority" tooltip="MenuItem.Tooltip.SetAsPriority"/>
-    <mc:menu-item dynamic="true" id="UnsetAsPriority" open-as="modal" page-id="OutcomePlanFactor_unsetAsPriority" title="MenuItem.Title.UnsetAsPriority" tooltip="MenuItem.Tooltip.UnsetAsPriority"/>
+Leaf.Title.Types=Evidence Types
 
-    <mc:menu-separator id="sep1"/>
+# BEGIN, CR00264960, ELG
+Leaf.Title.Rulesets=Rule Sets
+Leaf.Title.Published=Published
+Leaf.Title.InEdit=In Edit
+Leaf.Title.History=History
+# END, CR00264960
 
-    <mc:menu-item dynamic="true" id="AddNote" open-as="modal" page-id="OutcomePlanFactor_addNote" title="MenuItem.Title.AddNote" tooltip="MenuItem.Tooltip.AddNote"/>
-    <mc:menu-item dynamic="true" id="AddAttachment" open-as="modal" page-id="OutcomePlanFactor_addAttachment" title="MenuItem.Title.AddAttachment" tooltip="MenuItem.Tooltip.AddAttachment"/>
-    <mc:menu-separator id="sep3"/>
+Folder.Title.Financial=Financial
+Leaf.Title.BillingPatterns=Billing Patterns
+Leaf.Title.Provisions=Provisions
 
-    <mc:menu-item dynamic="true" id="Delete" open-as="modal" page-id="OutcomePlanFactor_cancel" title="MenuItem.Title.Delete" tooltip="MenuItem.Tooltip.Delete"/>
+Folder.Title.OnGoingCaseManagement=Ongoing Case Management
+Leaf.Title.TimeConstraints=Time Constraints
+#BEGIN, CR00217056, SS
+Leaf.Title.AbsenceReason=Absence Reasons
+#END, CR00217056
 
-</mc:menu-bar>
+Leaf.Title.Evidence=Evidence
+Folder.Title.Evidence=Evidence
+
+Leaf.Title.Pages=Pages
+Leaf.Title.GroupPages=Group Pages
+Leaf.Title.MapPages=Map Pages
+
+Leaf.Title.Milestones=Milestones

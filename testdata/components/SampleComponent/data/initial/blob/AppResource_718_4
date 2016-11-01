@@ -1,207 +1,31 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!--
-  Licensed Materials - Property of IBM
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Folder.Title.Administration=Administration
+Leaf.Title.Administrators=Administrators
+Leaf.Title.Roles=Roles
 
-  PID 5725-H26
+Folder.Title.Contacts=Contacts
+Leaf.Title.Addresses=Addresses
+Leaf.Title.Contacts=Contacts
+Leaf.Title.EmailAddresses=Email Addresses
+Leaf.Title.PhoneNumbers=Phone Numbers
+Leaf.Title.WebAddresses=Web Addresses
 
-  Copyright IBM Corporation 2014. All Rights Reserved.
+Folder.Title.Communications=Communications
+Leaf.Title.CommunicationExceptions=Communication Exceptions
+Leaf.Title.Interactions=Interactions
 
-  US Government Users Restricted Rights - Use, duplication or disclosure
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->
-<PAGE PAGE_ID="PDIncapacityBenefit_summary">
-  <PAGE_TITLE>
-    <CONNECT>
-      <SOURCE
-        NAME="TEXT"
-        PROPERTY="Page.Title"
-      />
-    </CONNECT>
-  </PAGE_TITLE>
+Leaf.Title.Attachments=Attachments
+# BEGIN, CR00333624, SSK
+Leaf.Title.AlternativeIds=Alternative Identifier(s)
+# END, CR00333624
+Leaf.Title.Notes=Notes
+Leaf.Title.Communications=Communications
 
-
-  <SERVER_INTERFACE
-    CLASS="CaseDetermination"
-    NAME="DISPLAY"
-    OPERATION="viewDecisionDisplayRulesCategoryXML"
-  />
-
-
-  <PAGE_PARAMETER NAME="determinationID"/>
-  <PAGE_PARAMETER NAME="displayDate"/>
-
-
-  <CONNECT>
-    <SOURCE
-      NAME="PAGE"
-      PROPERTY="determinationID"
-    />
-    <TARGET
-      NAME="DISPLAY"
-      PROPERTY="determinationID"
-    />
-  </CONNECT>
-  <CONNECT>
-    <SOURCE
-      NAME="PAGE"
-      PROPERTY="displayDate"
-    />
-    <TARGET
-      NAME="DISPLAY"
-      PROPERTY="date"
-    />
-  </CONNECT>
-  <CONNECT>
-    <SOURCE
-      NAME="TEXT"
-      PROPERTY="categoryRef"
-    />
-    <TARGET
-      NAME="DISPLAY"
-      PROPERTY="categoryRef"
-    />
-  </CONNECT>
-
-
-  <CLUSTER TITLE="Cluster.Summary.Title">
-
-
-    <FIELD LABEL="Field.Label.IsEligible">
-      <CONNECT>
-        <SOURCE
-          EXTENDED_PATH="/DecisionDetails/IncapacityBenefitSummaryCategory/isEligibleValueTimeline"
-          NAME="DISPLAY"
-          PROPERTY="xmlData"
-        />
-      </CONNECT>
-    </FIELD>
-
-
-    <FIELD LABEL="Field.Label.ClaimantName">
-      <CONNECT>
-        <SOURCE
-          EXTENDED_PATH="/DecisionDetails/IncapacityBenefitSummaryCategory/concernName"
-          NAME="DISPLAY"
-          PROPERTY="xmlData"
-        />
-      </CONNECT>
-    </FIELD>
-
-
-    <FIELD LABEL="Field.Label.AllotmentAmount">
-      <CONNECT>
-        <SOURCE
-          EXTENDED_PATH="/DecisionDetails/IncapacityBenefitSummaryCategory/maximumAllotmentOutputTimeline"
-          NAME="DISPLAY"
-          PROPERTY="xmlData"
-        />
-      </CONNECT>
-    </FIELD>
-
-
-    <FIELD LABEL="Field.Label.BenefitType">
-      <CONNECT>
-        <SOURCE
-          EXTENDED_PATH="/DecisionDetails/IncapacityBenefitSummaryCategory/benefitTypeTimeline"
-          NAME="DISPLAY"
-          PROPERTY="xmlData"
-        />
-      </CONNECT>
-    </FIELD>
-
-
-  </CLUSTER>
-
-
-  <CLUSTER TITLE="Cluster.PractitionerCertificates.Title">
-
-
-    <LIST>
-
-
-      <DETAILS_ROW>
-
-
-        <INLINE_PAGE PAGE_ID="PDIncapacityBenefit_diagnosisSubscreen">
-
-
-          <CONNECT>
-            <SOURCE
-              NAME="PAGE"
-              PROPERTY="determinationID"
-            />
-            <TARGET
-              NAME="PAGE"
-              PROPERTY="determinationID"
-            />
-          </CONNECT>
-          <CONNECT>
-            <SOURCE
-              NAME="PAGE"
-              PROPERTY="displayDate"
-            />
-            <TARGET
-              NAME="PAGE"
-              PROPERTY="displayDate"
-            />
-          </CONNECT>
-          <CONNECT>
-            <SOURCE
-              EXTENDED_PATH="/DecisionDetails/IncapacityBenefitSummaryCategory/practitionerCertIndexedList/Item[]"
-              NAME="DISPLAY"
-              PROPERTY="xmlData"
-            />
-            <TARGET
-              NAME="PAGE"
-              PROPERTY="businessObjectID"
-            />
-          </CONNECT>
-        </INLINE_PAGE>
-
-
-      </DETAILS_ROW>
-
-
-      <FIELD
-        DOMAIN="SVR_STRING"
-        LABEL="Field.Label.certificateType"
-      >
-        <CONNECT>
-          <SOURCE
-            EXTENDED_PATH="/DecisionDetails/IncapacityBenefitSummaryCategory/practitinerCertificateDisplayList/Item[]/displayType"
-            NAME="DISPLAY"
-            PROPERTY="xmlData"
-          />
-        </CONNECT>
-      </FIELD>
-
-
-      <FIELD LABEL="Field.Label.startDate">
-        <CONNECT>
-          <SOURCE
-            EXTENDED_PATH="/DecisionDetails/IncapacityBenefitSummaryCategory/practitinerCertificateDisplayList/Item[]/displayStartDate"
-            NAME="DISPLAY"
-            PROPERTY="xmlData"
-          />
-        </CONNECT>
-      </FIELD>
-
-
-      <FIELD LABEL="Field.Label.endDate">
-        <CONNECT>
-          <SOURCE
-            EXTENDED_PATH="/DecisionDetails/IncapacityBenefitSummaryCategory/practitinerCertificateDisplayList/Item[]/displayEndDate"
-            NAME="DISPLAY"
-            PROPERTY="xmlData"
-          />
-        </CONNECT>
-      </FIELD>
-
-
-    </LIST>
-
-
-  </CLUSTER>
-
-
-</PAGE>
+Leaf.Title.Home=Home

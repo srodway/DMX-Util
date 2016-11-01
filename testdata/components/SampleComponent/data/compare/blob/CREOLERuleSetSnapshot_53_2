@@ -1,10 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCBirthAndDeathDataRuleSet">
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCBirthAndDeath">
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><RuleSet name="ASCLivingArrangementDataRuleSet">
+
+
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="ASCLivingArrangement">
+
+
     <Annotations>
       <SuccessionSetPopulation/>
     </Annotations>
-    <Attribute name="dateOfBirth">
-      <Annotations/>
+
+
+    <Attribute name="startDate">
+      <Annotations>
+        <Label label-id="startDate" name="The start date of the living arrangement."/>
+      </Annotations>
       <type>
         <javaclass name="curam.util.type.Date"/>
       </type>
@@ -12,17 +29,25 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="birthLastName">
-      <Annotations/>
+
+
+    <Attribute name="livingArrangeStatus">
+      <Annotations>
+        <Label label-id="livingArrangeStatus" name="The status of the living arrangement, e.g. Permanent."/>
+      </Annotations>
       <type>
-        <javaclass name="java.lang.String"/>
+        <codetableentry table="LivingArrangementStatus"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="dateOfDeath">
-      <Annotations/>
+
+
+    <Attribute name="endDate">
+      <Annotations>
+        <Label label-id="endDate" name="The end date of the living arrangement."/>
+      </Annotations>
       <type>
         <javaclass name="curam.util.type.Date"/>
       </type>
@@ -30,15 +55,21 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="mothersBirthLastName">
-      <Annotations/>
+
+
+    <Attribute name="livingArrangeType">
+      <Annotations>
+        <Label label-id="livingArrangeType" name="The living arrangement type of the client, e.g. Adult Case Home, Foster Care etc."/>
+      </Annotations>
       <type>
-        <javaclass name="java.lang.String"/>
+        <codetableentry table="LivingArrangementType"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
+
+
     <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
@@ -49,8 +80,12 @@
         </ResourceMessage>
       </derivation>
     </Attribute>
-    <Attribute name="person">
-      <Annotations/>
+
+
+    <Attribute name="caseParticipantRoleID">
+      <Annotations>
+        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the client."/>
+      </Annotations>
       <type>
         <javaclass name="java.lang.Number"/>
       </type>
@@ -58,7 +93,9 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="related_person">
+
+
+    <Attribute name="related_caseParticipantRoleID">
       <Annotations/>
       <type>
         <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
@@ -66,10 +103,14 @@
       <derivation>
         <reference attribute="caseParticipantRoleRecord">
           <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="person"/>
+            <reference attribute="caseParticipantRoleID"/>
           </create>
         </reference>
       </derivation>
     </Attribute>
+
+
   </Class>
+
+
 </RuleSet>

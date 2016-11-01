@@ -300,7 +300,7 @@ public class DMX2CTXConvertor extends Task {
 	/**
 	 * Validate that all parameters have been specified correctly.
 	 */
-	private void validateParams() {
+	private void validateParams() throws BuildException {
 		final File dmxDir = new File(getDmxDir());
 		if (!dmxDir.exists()) {
 			throw new BuildException("The dmx directory '" + dmxDir + "' deosn't exist.");
@@ -309,7 +309,7 @@ public class DMX2CTXConvertor extends Task {
 		final File ctHeaderDMX = new File(getDmxDir() + File.separator + CODETABLEHEADER_DMX);
 		if (!ctHeaderDMX.exists()) {
 			throw new BuildException(
-					"The code table header dmx file '" + ctHeaderDMX.getAbsolutePath() + "' deosn't exist.");
+		   			"The code table header dmx file '" + ctHeaderDMX.getAbsolutePath() + "' dosen't exist.");
 		}
 
 		final File ctItemDMX = new File(getDmxDir() + File.separator + CODETABLEITEM_DMX);

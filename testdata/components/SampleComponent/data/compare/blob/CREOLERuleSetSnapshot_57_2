@@ -7,15 +7,10 @@
 
   US Government Users Restricted Rights - Use, duplication or disclosure
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet name="ASCAlienDataRuleSet">
+--><RuleSet name="ASCAlienRuleSet">
 
 
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="ASCAlien">
-
-
-    <Annotations>
-      <SuccessionSetPopulation endDateAttribute="endDate" startDateAttribute="dateOfEntry"/>
-    </Annotations>
+  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="ASCAlien">
 
 
     <Attribute name="alientStatusOnEntry">
@@ -92,18 +87,6 @@
       </type>
       <derivation>
         <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
-          <reference attribute="successionID"/>
-        </ResourceMessage>
       </derivation>
     </Attribute>
 

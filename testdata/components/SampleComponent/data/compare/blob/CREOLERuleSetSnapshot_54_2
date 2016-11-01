@@ -3,48 +3,41 @@
 
   PID 5725-H26
 
-  Copyright IBM Corporation 2014. All Rights Reserved.
+  Copyright IBM Corporation 2014,2015. All Rights Reserved.
 
   US Government Users Restricted Rights - Use, duplication or disclosure
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet name="IBProductTypeRuleSet">
+--><!--
+  Common ruleset contains data rule classes and common business rule classes.
+
+--><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ASCProductRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="HouseholdMember" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
 
 
-  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="IBProductType">
+    <Annotations>
+      <SuccessionSetPopulation endDateAttribute="endDate" startDateAttribute="startDate"/>
+    </Annotations>
 
 
-    <Attribute name="forceIVB">
-      <Annotations>
-        <Label label-id="forceIVB" name="Flag to indicate if invalidity benefit is being forced."/>
-      </Annotations>
+    <Attribute name="caseParticipantRoleRecord">
       <type>
-        <javaclass name="java.lang.Boolean"/>
+        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
       </type>
       <derivation>
-        <null/>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="CaseParticipantRole" ruleset="CaseEntitiesRuleSet">
+            <match retrievedattribute="caseParticipantRoleID">
+              <reference attribute="caseParticipantRoleID"/>
+            </match>
+          </readall>
+        </singleitem>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="claimType">
-      <Annotations>
-        <Label label-id="claimType" name="The type of claim being applied for, Sickness Benefit or Invalidity Benefit."/>
-      </Annotations>
+    <Attribute name="caseParticipantRoleID">
       <type>
-        <codetableentry table="IBClaimType"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="householdMember">
-      <Annotations>
-        <Label label-id="claimType" name="The case participant receiving the benefit."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Number"/>
+        <javaclass name="Number"/>
       </type>
       <derivation>
         <specified/>
@@ -52,16 +45,987 @@
     </Attribute>
 
 
-    <Attribute name="related_householdMember">
+    <Attribute name="description">
       <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+        <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="householdMember"/>
-          </create>
+        <ResourceMessage key="HouseholdMember.description" resourceBundle="curam.asc.rules.ASCProduct">
+          <reference attribute="concernRoleNameForCaseParticipantID">
+            <create ruleclass="DisplayHelper" ruleset="ParticipantEntitiesRuleSet">
+              <reference attribute="caseParticipantRoleID"/>
+              <null/>
+            </create>
+          </reference>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="startDate">
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="endDate">
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+  </Class>
+
+
+  <Class name="MemberCPRCalculator" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+    <Initialization>
+      <Attribute name="caseParticipantRoleRecord">
+        <type>
+          <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+        </type>
+      </Attribute>
+    </Initialization>
+
+
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="MemberCPRCalculator.description" resourceBundle="curam.asc.rules.ASCProduct">
+          <reference attribute="concernRoleNameForCaseParticipantID">
+            <create ruleclass="DisplayHelper" ruleset="ParticipantEntitiesRuleSet">
+              <reference attribute="caseParticipantRoleID"/>
+              <null/>
+            </create>
+          </reference>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="participantRoleID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <reference attribute="participantRoleID">
+          <reference attribute="caseParticipantRoleRecord"/>
         </reference>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="caseID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <reference attribute="caseID">
+          <reference attribute="caseParticipantRoleRecord"/>
+        </reference>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="caseParticipantRoleID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <reference attribute="caseParticipantRoleID">
+          <reference attribute="caseParticipantRoleRecord"/>
+        </reference>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="householdMemberRecords">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="HouseholdMember"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <!-- Smarter Dependency changes -->
+        <filter>
+          <list>
+            <readall ruleclass="HouseholdMember">
+              <match retrievedattribute="caseID">
+                <reference attribute="caseID">
+                  <reference attribute="caseParticipantRoleRecord"/>
+                </reference>
+              </match>
+            </readall>
+          </list>
+          <listitemexpression>
+            <equals>
+              <reference attribute="caseParticipantRoleID">
+                <current/>
+              </reference>
+              <reference attribute="caseParticipantRoleID"/>
+            </equals>
+          </listitemexpression>
+        </filter>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="personRecord">
+      <type>
+        <ruleclass name="Person" ruleset="ParticipantEntitiesRuleSet"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="Person" ruleset="ParticipantEntitiesRuleSet">
+            <match retrievedattribute="concernRoleID">
+              <reference attribute="participantRoleID"/>
+            </match>
+          </readall>
+        </singleitem>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="ibProductTypeRecords">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="IBProductType" ruleset="IBProductTypeDataRuleSet"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <filter>
+          <list>
+            <readall ruleclass="IBProductType" ruleset="IBProductTypeDataRuleSet">
+              <match retrievedattribute="caseID">
+                <reference attribute="caseID">
+                </reference>
+              </match>
+            </readall>
+          </list>
+          <listitemexpression>
+            <equals>
+              <reference attribute="householdMember">
+                <current/>
+              </reference>
+              <reference attribute="caseParticipantRoleID"/>
+            </equals>
+          </listitemexpression>
+        </filter>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="isClaimTypeSicknessBenefit">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <any>
+            <dynamiclist>
+              <list>
+                <reference attribute="ibProductTypeRecords"/>
+              </list>
+              <listitemexpression>
+                <choose>
+                  <type>
+                    <javaclass name="Boolean"/>
+                  </type>
+                  <when>
+                    <condition>
+                      <all>
+                        <fixedlist>
+                          <listof>
+                            <javaclass name="Boolean"/>
+                          </listof>
+                          <members>
+                            <equals>
+                              <intervalvalue>
+                                <reference attribute="claimType">
+                                  <current/>
+                                </reference>
+                              </intervalvalue>
+                              <!-- Sickness Benefit -->
+                              <Code table="IBClaimType">
+                                <String value="IBPT24000"/>
+                              </Code>
+                            </equals>
+                            <equals>
+                              <intervalvalue>
+                                <reference attribute="getSicknessBenefitDurationTimeline"/>
+                              </intervalvalue>
+                              <true/>
+                            </equals>
+                            <intervalvalue>
+                              <reference attribute="hasPractitionerCertificate"/>
+                            </intervalvalue>
+                          </members>
+                        </fixedlist>
+                      </all>
+                    </condition>
+                    <value>
+                      <true/>
+                    </value>
+                  </when>
+                  <otherwise>
+                    <value>
+                      <false/>
+                    </value>
+                  </otherwise>
+                </choose>
+              </listitemexpression>
+            </dynamiclist>
+          </any>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="isSicknessBenefitType">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <any>
+            <dynamiclist>
+              <list>
+                <reference attribute="ibProductTypeRecords"/>
+              </list>
+              <listitemexpression>
+                <choose>
+                  <type>
+                    <javaclass name="Boolean"/>
+                  </type>
+                  <when>
+                    <condition>
+                      <all>
+                        <fixedlist>
+                          <listof>
+                            <javaclass name="Boolean"/>
+                          </listof>
+                          <members>
+                            <equals>
+                              <intervalvalue>
+                                <reference attribute="claimType">
+                                  <current/>
+                                </reference>
+                              </intervalvalue>
+                              <!-- Sickness Benefit -->
+                              <Code table="IBClaimType">
+                                <String value="IBPT24000"/>
+                              </Code>
+                            </equals>
+                            <intervalvalue>
+                              <reference attribute="hasPractitionerCertificate"/>
+                            </intervalvalue>
+                          </members>
+                        </fixedlist>
+                      </all>
+                    </condition>
+                    <value>
+                      <true/>
+                    </value>
+                  </when>
+                  <otherwise>
+                    <value>
+                      <false/>
+                    </value>
+                  </otherwise>
+                </choose>
+              </listitemexpression>
+            </dynamiclist>
+          </any>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="isClaimTypeIncapacityBenefit">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <any>
+            <dynamiclist>
+              <list>
+                <reference attribute="ibProductTypeRecords"/>
+              </list>
+              <listitemexpression>
+                <choose>
+                  <type>
+                    <javaclass name="Boolean"/>
+                  </type>
+                  <when>
+                    <condition>
+                      <any>
+                        <fixedlist>
+                          <listof>
+                            <javaclass name="Boolean"/>
+                          </listof>
+                          <members>
+                            <equals>
+                              <intervalvalue>
+                                <reference attribute="claimType">
+                                  <current/>
+                                </reference>
+                              </intervalvalue>
+                              <!-- Invalidity Benefit -->
+                              <Code table="IBClaimType">
+                                <String value="IBPT24001"/>
+                              </Code>
+                            </equals>
+                            <all>
+                              <fixedlist>
+                                <listof>
+                                  <javaclass name="Boolean"/>
+                                </listof>
+                                <members>
+                                  <equals>
+                                    <intervalvalue>
+                                      <reference attribute="getSicknessBenefitDurationTimeline"/>
+                                    </intervalvalue>
+                                    <false/>
+                                  </equals>
+                                  <intervalvalue>
+                                    <reference attribute="hasPractitionerCertificate"/>
+                                  </intervalvalue>
+                                </members>
+                              </fixedlist>
+                            </all>
+                          </members>
+                        </fixedlist>
+                      </any>
+                    </condition>
+                    <value>
+                      <true/>
+                    </value>
+                  </when>
+                  <otherwise>
+                    <value>
+                      <false/>
+                    </value>
+                  </otherwise>
+                </choose>
+              </listitemexpression>
+            </dynamiclist>
+          </any>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="isInvalidityBenefitType">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <any>
+            <dynamiclist>
+              <list>
+                <reference attribute="ibProductTypeRecords"/>
+              </list>
+              <listitemexpression>
+                <choose>
+                  <type>
+                    <javaclass name="Boolean"/>
+                  </type>
+                  <when>
+                    <condition>
+                      <all>
+                        <fixedlist>
+                          <listof>
+                            <javaclass name="Boolean"/>
+                          </listof>
+                          <members>
+                            <equals>
+                              <intervalvalue>
+                                <reference attribute="claimType">
+                                  <current/>
+                                </reference>
+                              </intervalvalue>
+                              <!-- Invalidity Benefit -->
+                              <Code table="IBClaimType">
+                                <String value="IBPT24001"/>
+                              </Code>
+                            </equals>
+                            <intervalvalue>
+                              <reference attribute="hasPractitionerCertificate"/>
+                            </intervalvalue>
+                          </members>
+                        </fixedlist>
+                      </all>
+                    </condition>
+                    <value>
+                      <true/>
+                    </value>
+                  </when>
+                  <otherwise>
+                    <value>
+                      <false/>
+                    </value>
+                  </otherwise>
+                </choose>
+              </listitemexpression>
+            </dynamiclist>
+          </any>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="invalidityBenefitDurationTimeline">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <all>
+            <fixedlist>
+              <listof>
+                <javaclass name="Boolean"/>
+              </listof>
+              <members>
+                <equals>
+                  <intervalvalue>
+                    <reference attribute="getSicknessBenefitDurationTimeline"/>
+                  </intervalvalue>
+                  <false/>
+                </equals>
+                <intervalvalue>
+                  <reference attribute="hasPractitionerCertificate"/>
+                </intervalvalue>
+              </members>
+            </fixedlist>
+          </all>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="practitionerCertificateRecords">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="PractitionerCertificate" ruleset="PractitionerCertificateDataRuleSet"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <filter>
+          <list>
+            <readall ruleclass="PractitionerCertificate" ruleset="PractitionerCertificateDataRuleSet">
+              <match retrievedattribute="caseID">
+                <reference attribute="caseID"/>
+              </match>
+            </readall>
+          </list>
+          <listitemexpression>
+            <equals>
+              <reference attribute="householdMember">
+                <current/>
+              </reference>
+              <reference attribute="caseParticipantRoleID"/>
+            </equals>
+          </listitemexpression>
+        </filter>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="hasPractitionerCertificate">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <any>
+            <dynamiclist>
+              <list>
+                <reference attribute="practitionerCertificateRecords"/>
+              </list>
+              <listitemexpression>
+                <intervalvalue>
+                  <reference attribute="exists">
+                    <current/>
+                  </reference>
+                </intervalvalue>
+              </listitemexpression>
+            </dynamiclist>
+          </any>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="practitionerCertificateHasPractitionerSignature">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <any>
+            <dynamiclist>
+              <list>
+                <reference attribute="practitionerCertificateRecords"/>
+              </list>
+              <listitemexpression>
+                <choose>
+                  <type>
+                    <javaclass name="Boolean"/>
+                  </type>
+                  <when>
+                    <condition>
+                      <intervalvalue>
+                        <reference attribute="exists">
+                          <current/>
+                        </reference>
+                      </intervalvalue>
+                    </condition>
+                    <value>
+                      <reference attribute="claimFormSignedInd">
+                        <current/>
+                      </reference>
+                    </value>
+                  </when>
+                  <otherwise>
+                    <value>
+                      <false/>
+                    </value>
+                  </otherwise>
+                </choose>
+              </listitemexpression>
+            </dynamiclist>
+          </any>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="practitionerCertificateHasPractitioner">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <any>
+            <dynamiclist>
+              <list>
+                <reference attribute="practitionerCertificateRecords"/>
+              </list>
+              <listitemexpression>
+                <choose>
+                  <type>
+                    <javaclass name="Boolean"/>
+                  </type>
+                  <when>
+                    <condition>
+                      <all>
+                        <fixedlist>
+                          <listof>
+                            <javaclass name="Boolean"/>
+                          </listof>
+                          <members>
+                            <intervalvalue>
+                              <reference attribute="exists">
+                                <current/>
+                              </reference>
+                            </intervalvalue>
+                            <not>
+                              <equals>
+                                <reference attribute="practitioner">
+                                  <current/>
+                                </reference>
+                                <Number value="0"/>
+                              </equals>
+                            </not>
+                          </members>
+                        </fixedlist>
+                      </all>
+                    </condition>
+                    <value>
+                      <true/>
+                    </value>
+                  </when>
+                  <otherwise>
+                    <value>
+                      <false/>
+                    </value>
+                  </otherwise>
+                </choose>
+              </listitemexpression>
+            </dynamiclist>
+          </any>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="practitionerCertificateHasDiagnosis">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <any>
+            <dynamiclist>
+              <list>
+                <reference attribute="practitionerCertificateRecords"/>
+              </list>
+              <listitemexpression>
+                <choose>
+                  <type>
+                    <javaclass name="Boolean"/>
+                  </type>
+                  <when>
+                    <condition>
+                      <all>
+                        <fixedlist>
+                          <listof>
+                            <javaclass name="Boolean"/>
+                          </listof>
+                          <members>
+                            <intervalvalue>
+                              <reference attribute="exists">
+                                <current/>
+                              </reference>
+                            </intervalvalue>
+                            <not>
+                              <equals>
+                                <property name="size">
+                                  <object>
+                                    <reference attribute="related_Diagnosis">
+                                      <current/>
+                                    </reference>
+                                  </object>
+                                </property>
+                                <Number value="0"/>
+                              </equals>
+                            </not>
+                          </members>
+                        </fixedlist>
+                      </all>
+                    </condition>
+                    <value>
+                      <true/>
+                    </value>
+                  </when>
+                  <otherwise>
+                    <value>
+                      <false/>
+                    </value>
+                  </otherwise>
+                </choose>
+              </listitemexpression>
+            </dynamiclist>
+          </any>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="diagnosisRecords">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="ASCDiagnosis" ruleset="ASCDiagnosisDataRuleSet"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <joinlists>
+          <dynamiclist>
+            <list>
+              <reference attribute="practitionerCertificateRecords"/>
+            </list>
+            <listitemexpression>
+              <reference attribute="related_Diagnosis">
+                <current/>
+              </reference>
+            </listitemexpression>
+          </dynamiclist>
+        </joinlists>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="sicknessBenefitDurationTimeline">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <call class="curam.ascproduct.creole.statics.impl.Statics" method="calculateBenefitDurationTimeline">
+          <type>
+            <javaclass name="curam.creole.value.Timeline">
+              <javaclass name="Boolean"/>
+            </javaclass>
+          </type>
+          <!-- Pass in a timeline of exists practitionerCertificate
+            the start date of the first interval is used in calculating the
+            sickness benefit duration timeline -->
+          <arguments>
+            <reference attribute="hasPractitionerCertificate"/>
+            <Number value="182"/>
+          </arguments>
+        </call>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="getSicknessBenefitDurationTimeline">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <reference attribute="sicknessBenefitDurationTimeline"/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="isInAgeRangeIncapacityBenefit">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <all>
+            <fixedlist>
+              <listof>
+                <javaclass name="Boolean"/>
+              </listof>
+              <members>
+                <intervalvalue>
+                  <reference attribute="isInAgeRangeToBirthDateTimeline">
+                    <create ruleclass="AgeRangeCalculator">
+                      <reference attribute="personRecord"/>
+                      <Number value="18"/>
+                      <specify attribute="maximumAgeLimit">
+                        <Number value="65"/>
+                      </specify>
+                    </create>
+                  </reference>
+                </intervalvalue>
+                <intervalvalue>
+                  <reference attribute="isAliveTimeline">
+                    <create ruleclass="AgeRangeCalculator">
+                      <reference attribute="personRecord"/>
+                      <null/>
+                      <specify attribute="maximumAgeLimit">
+                        <Number value="110"/>
+                      </specify>
+                    </create>
+                  </reference>
+                </intervalvalue>
+              </members>
+            </fixedlist>
+          </all>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="isPractitionerCertified">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <all>
+            <fixedlist>
+              <listof>
+                <javaclass name="Boolean"/>
+              </listof>
+              <members>
+                <intervalvalue>
+                  <reference attribute="practitionerCertificateHasDiagnosis"/>
+                </intervalvalue>
+                <intervalvalue>
+                  <reference attribute="practitionerCertificateHasPractitionerSignature"/>
+                </intervalvalue>
+              </members>
+            </fixedlist>
+          </all>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+  </Class>
+
+
+  <Class name="AgeRangeCalculator" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+    <Initialization>
+      <Attribute name="personRecord">
+        <type>
+          <ruleclass name="Person" ruleset="ParticipantEntitiesRuleSet"/>
+        </type>
+      </Attribute>
+      <Attribute name="minimumAgeLimit">
+        <type>
+          <javaclass name="Number"/>
+        </type>
+      </Attribute>
+    </Initialization>
+
+
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="AgeRangeCalculator.description" resourceBundle="curam.asc.rules.ASCProduct">
+          <reference attribute="concernRoleNameForConcernRoleID">
+            <create ruleclass="DisplayHelper" ruleset="ParticipantEntitiesRuleSet">
+              <null/>
+              <reference attribute="concernRoleID">
+                <reference attribute="personRecord"/>
+              </reference>
+            </create>
+          </reference>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="isAliveTimeline">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <existencetimeline>
+          <intervaltype>
+            <javaclass name="Boolean"/>
+          </intervaltype>
+          <intervalfromdate>
+            <reference attribute="dateOfBirth">
+              <reference attribute="personRecord"/>
+            </reference>
+          </intervalfromdate>
+          <intervaltodate>
+            <reference attribute="dateOfDeath">
+              <reference attribute="personRecord"/>
+            </reference>
+          </intervaltodate>
+          <preExistenceValue>
+            <false/>
+          </preExistenceValue>
+          <existenceValue>
+            <true/>
+          </existenceValue>
+          <postExistenceValue>
+            <false/>
+          </postExistenceValue>
+        </existencetimeline>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="ageTimeline">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Number"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <call class="curam.ascproduct.creole.statics.impl.Statics" method="yearlyAnniversaryTimeline">
+          <type>
+            <javaclass name="curam.creole.value.Timeline">
+              <javaclass name="Number"/>
+            </javaclass>
+          </type>
+          <arguments>
+            <reference attribute="dateOfBirth">
+              <reference attribute="personRecord"/>
+            </reference>
+          </arguments>
+        </call>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="isInAgeRangeToBirthDateTimeline">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <all>
+            <fixedlist>
+              <listof>
+                <javaclass name="Boolean"/>
+              </listof>
+              <members>
+                <intervalvalue>
+                  <reference attribute="isAliveTimeline"/>
+                </intervalvalue>
+                <all>
+                  <fixedlist>
+                    <listof>
+                      <javaclass name="Boolean"/>
+                    </listof>
+                    <members>
+                      <compare comparison="&gt;=">
+                        <intervalvalue>
+                          <reference attribute="ageTimeline"/>
+                        </intervalvalue>
+                        <reference attribute="minimumAgeLimit"/>
+                      </compare>
+                      <compare comparison="&lt;">
+                        <intervalvalue>
+                          <reference attribute="ageTimeline"/>
+                        </intervalvalue>
+                        <reference attribute="maximumAgeLimit"/>
+                      </compare>
+                    </members>
+                  </fixedlist>
+                </all>
+              </members>
+            </fixedlist>
+          </all>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="maximumAgeLimit">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
       </derivation>
     </Attribute>
 

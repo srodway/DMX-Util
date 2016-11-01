@@ -1,30 +1,78 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCGenderDataRuleSet">
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCGender">
-    <Annotations>
-      <SuccessionSetPopulation/>
-    </Annotations>
-    <Attribute name="gender">
+<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCPhoneNumberRuleSet">
+  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="PDCPhoneNumber">
+    <Attribute name="phoneExtension">
       <Annotations/>
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <codetableentry table="Gender"/>
-        </javaclass>
+        <javaclass name="java.lang.String"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="description">
+    <Attribute name="fromDate">
+      <Annotations/>
       <type>
-        <javaclass name="curam.creole.value.Message"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
-          <reference attribute="successionID"/>
-        </ResourceMessage>
+        <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="person">
+    <Attribute name="phoneNumber">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="phoneCountryCode">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="phoneType">
+      <Annotations/>
+      <type>
+        <codetableentry table="PhoneType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="phoneAreaCode">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="toDate">
+      <Annotations/>
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="preferredInd">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.Boolean"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="participant">
       <Annotations/>
       <type>
         <javaclass name="java.lang.Number"/>
@@ -33,7 +81,7 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="related_person">
+    <Attribute name="related_participant">
       <Annotations/>
       <type>
         <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
@@ -41,7 +89,7 @@
       <derivation>
         <reference attribute="caseParticipantRoleRecord">
           <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="person"/>
+            <reference attribute="participant"/>
           </create>
         </reference>
       </derivation>

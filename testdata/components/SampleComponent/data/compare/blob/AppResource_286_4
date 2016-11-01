@@ -1,32 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2009 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="AssessmentDefinitionMenu">
-
-  <mc:menu-item id="EditAssessmentDefinition" open-as="modal" page-id="AssessmentPlanningAdmin_editAssessmentDefinitionFromView" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit" window-options="width=800"/>
-  
-  <mc:menu-separator id="AssessmentSeparator1"/>
-  
-  <mc:menu-item id="AddRoleToAssDef" open-as="modal" page-id="AssessmentPlanningAdmin_createAssessmentRole" title="MenuItem.Title.Role" tooltip="MenuItem.Tooltip.Role" window-options="width=700"/>
-  
-  <mc:menu-item id="AddCategoryToAssDef" open-as="modal" page-id="AssessmentPlanningAdmin_createCategory" title="MenuItem.Title.Category" tooltip="MenuItem.Tooltip.Category"/>
-  
-  <mc:menu-item id="AddFactorToAssDef" open-as="modal" page-id="AssessmentDefinitionFactorAdmin_createAssessmentDefinitionFactor" title="MenuItem.Title.Factor" tooltip="MenuItem.Tooltip.Factor"/>
-  
-    <mc:menu-item id="AddCaseToAssDef" open-as="modal" page-id="AssessmentDefinition_createCaseLink" title="MenuItem.Title.Case" tooltip="MenuItem.Tooltip.Case"/>
- 
- 
-  
-</mc:menu-bar>
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Details.Name.PersonalisedPageConfig=Personalized Pod Pages
+Details.Title.PersonalisedPageConfig=Personalized Pod Pages

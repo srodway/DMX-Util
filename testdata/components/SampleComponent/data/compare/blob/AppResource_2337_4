@@ -1,19 +1,22 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-AuditorAppSectionShortcuts.title=Shortcuts
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-Audits.Title=Audits
-MyCaseAudits.Title=My Case Audits
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="IntegratedCasesAdministrationMenu">
+  
 
-Searches.Title=Search
-CaseAuditSearch.Title=Case Audit\u2026
-AuditPlanSearch.Title=Audit Plan\u2026
-CaseSearch.Title=Case\u2026
-InvestigationSearch.Title=Investigation\u2026
-PersonSearch.Title=Person\u2026
+    <mc:menu-item id="IntegratedCase" open-as="modal" page-id="Resource_createIntegratedCaseType1" title="MenuItem.Title.IntegratedCase" tooltip="MenuItem.Tooltip.IntegratedCase"/>
+   
+
+</mc:menu-bar>

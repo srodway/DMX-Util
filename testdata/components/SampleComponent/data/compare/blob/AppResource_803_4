@@ -1,33 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM 
+#
+# PID 5725-H26
+#
+# Copyright IBM Corporation 2012,2014. All rights reserved. 
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+MenuItem.Title.Edit=Edit
+MenuItem.Tooltip.Edit=Edit
+MenuItem.Title.AddClassification=Add Classification
+MenuItem.Tooltip.AddClassification=Add Classification
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2010 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><ac:application xmlns:ac="http://www.curamsoftware.com/curam/util/client/application-config" id="COMBINAPP" logo="COMBINAPP.logo" subtitle="COMBINAPP.subtitle" title="COMBINAPP.title" user-message="COMBINAPP.UserMessage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    
-    <ac:application-menu>
-        <ac:preferences title="preferences.title"/>
-        <ac:help title="help.title"/>
-        <ac:logout title="logout.title"/>
-    </ac:application-menu>
-    
-    <ac:application-search default-search-page="Organization_applicationSearch" initial-text="Application.Search.InitialText"/>
-    
-     <ac:section-ref id="COMBINHOMEWorkspaceSection"/>
-
-     <ac:section-ref id="COMBINAPPWorkspaceSection"/>
-
-     <ac:section-ref id="DefaultAppInboxSection"/>
-    
-     <ac:section-ref id="DefaultAppCalendarSection"/>
-</ac:application>
+Submenu.Title.Recommend=Recommend
+MenuItem.Title.RecommendAction=Action
+MenuItem.Tooltip.RecommendAction=Recommend Action
+MenuItem.Title.RecommendService=Service
+MenuItem.Tooltip.RecommendService=Recommend Service
+MenuItem.Title.RecommendReferral=Referral
+MenuItem.Tooltip.RecommendReferral=Recommend Referral
+MenuItem.Title.RecommendGroup=Group
+MenuItem.Tooltip.RecommendGroup=Recommend Group
+MenuItem.Title.RecommendObjective=Objective
+MenuItem.Tooltip.RecommendObjective=Recommend Objective

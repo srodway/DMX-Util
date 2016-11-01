@@ -13,7 +13,7 @@
   </xsl:template>
   <xsl:template match="DATA">
     <!--Explicitly select the STRUCT to avoid processing anything else.-->
-    <xsl:apply-templates select="STRUCT[SNAME='LicenseNotificationDetails']"/>
+    <xsl:apply-templates select="STRUCT[SNAME='ProviderNotificationDetails']"/>
   </xsl:template>
   <xsl:template match="STRUCT">
     <fo:root>
@@ -47,9 +47,11 @@
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
                   <fo:inline font-size="12pt">
-                    We wish to inform you that your license has been rejected. The reason for rejection is as
-                       follows:
-                    <xsl:apply-templates select="FIELD[FNAME='rejectionReason']"/>
+                    We wish to inform you that you have been approved
+                    as a provider with our agency under Reference No.
+                    <xsl:apply-templates select="FIELD[FNAME='providerRefNumber']"/>
+                    effective as of
+                    <xsl:apply-templates select="FIELD[FNAME='providerEnrollDate']"/>
                     .
                   </fo:inline>
                   <fo:block>
@@ -66,7 +68,7 @@
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
                   <fo:inline font-size="12pt">
-                    <xsl:apply-templates select="FIELD[FNAME='organizationName']"/>
+                    <xsl:apply-templates select="FIELD[FNAME='organisationName']"/>
                     .
                   </fo:inline>
                 </fo:block>

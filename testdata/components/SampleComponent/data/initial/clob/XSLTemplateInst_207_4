@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:foa="http://fabio" version="1.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format" version="1.0">
   <xsl:variable name="fo:layout-master-set">
     <fo:layout-master-set>
       <fo:simple-page-master master-name="default-page" page-height="11in" page-width="8.5in" margin-left="0.6in" margin-right="0.6in">
@@ -7,18 +7,13 @@
       </fo:simple-page-master>
     </fo:layout-master-set>
   </xsl:variable>
-  <!-- BEGIN, CR00356535, PB -->
-  <xsl:attribute-set name="Normal_1" foa:class="inline">
-    <xsl:attribute name="font-size">12.0pt</xsl:attribute>
-  </xsl:attribute-set>
-  <!-- END, CR00356535 -->
   <xsl:template match="DOCUMENT">
     <!--Explicitly select DATA to ensure META element is ignored.-->
     <xsl:apply-templates select="DATA" />
   </xsl:template>
   <xsl:template match="DATA">
     <!--Explicitly select the STRUCT to avoid processing anything else.-->
-    <xsl:apply-templates select="STRUCT[SNAME='ContractNotificationDetails']" />
+    <xsl:apply-templates select="STRUCT[SNAME='FeeLetterData']" />
   </xsl:template>
   <xsl:template match="STRUCT">
     <fo:root>
@@ -29,58 +24,220 @@
           <!-- END NON-TRANSLATABLE -->
           <fo:block>
             <fo:block space-before.optimum="1pt" space-after.optimum="2pt">
-              <fo:block>
-                <xsl:text />
-              </fo:block>
-              <fo:block space-before.optimum="1pt" space-after.optimum="2pt">
-                <fo:block text-align="justify">
-                  <fo:block>
-                    <fo:leader leader-pattern="space" />
+              <fo:block text-align="center">
+                <fo:inline font-size="14pt" font-weight="bold">Fee Consideration</fo:inline>
+                <fo:block>
+                  <fo:leader leader-pattern="space" />
+                </fo:block>
+                <fo:block>
+                  <xsl:text />
+                </fo:block>
+                <fo:block space-before.optimum="1pt" space-after.optimum="2pt">
+                  <fo:block text-align="left">
+                    <fo:block space-before.optimum="1pt" space-after.optimum="2pt">
+                      <fo:block text-align="right">
+                        <fo:inline font-size="12pt">
+                          <xsl:apply-templates select="FIELD[FNAME='organizationName']" />
+                        </fo:inline>
+                        <fo:block space-before.optimum="1pt" space-after.optimum="2pt" white-space-collapse="false" linefeed-treatment="preserve" white-space-treatment="preserve">
+                          <fo:block>
+                            <fo:inline font-size="12pt">
+                              <xsl:apply-templates select="FIELD[FNAME='organizationAddress']" />
+                            </fo:inline>
+                            <fo:block>
+                              <xsl:text />
+                            </fo:block>
+                            <fo:block space-before.optimum="1pt" space-after.optimum="2pt">
+                              <fo:block text-align="left">
+                                <!-- BEGIN CR00425586, YF  -->
+                                <fo:inline font-size="12pt" font-weight="normal">
+                                  <xsl:apply-templates select="FIELD[FNAME='correspondentName']" />
+                                </fo:inline>
+                                <fo:block space-before.optimum="1pt" space-after.optimum="2pt">
+                                  <fo:block>
+                                    <fo:block space-before.optimum="1pt" space-after.optimum="2pt" white-space-collapse="false" linefeed-treatment="preserve" white-space-treatment="preserve">
+                                      <fo:block>
+                                        <fo:inline font-size="12pt">
+                                          <xsl:apply-templates select="FIELD[FNAME='correspondentAddress']" />
+                                        </fo:inline>
+                                        <!-- END CR00425586, YF  -->
+                                        <fo:block>
+                                          <fo:leader leader-pattern="space" />
+                                        </fo:block>
+                                        <fo:block>
+                                          <fo:leader leader-pattern="space" />
+                                        </fo:block>
+                                        <fo:inline font-size="12pt">
+                                          <xsl:apply-templates select="FIELD[FNAME='issueDate']" />
+                                        </fo:inline>
+                                        <fo:block>
+                                          <fo:leader leader-pattern="space" />
+                                        </fo:block>
+                                        <fo:block>
+                                          <fo:leader leader-pattern="space" />
+                                        </fo:block>
+                                        <fo:block>
+                                          <xsl:text />
+                                        </fo:block>
+                                        <fo:table width="100%" space-before.optimum="1pt" space-after.optimum="2pt">
+                                          <fo:table-column column-width="160pt" />
+                                          <fo:table-column />
+                                          <fo:table-body>
+                                            <fo:table-row>
+                                              <fo:table-cell width="160pt" padding-start="3pt" padding-end="3pt" padding-before="3pt" padding-after="3pt" display-align="center" text-align="start" border-style="solid" border-width="1pt" border-color="black">
+                                                <fo:block>
+                                                  <fo:inline font-size="12pt" font-weight="normal">Hearing No:</fo:inline>
+                                                </fo:block>
+                                              </fo:table-cell>
+                                              <fo:table-cell padding-start="3pt" padding-end="3pt" padding-before="3pt" padding-after="3pt" display-align="center" text-align="start" border-style="solid" border-width="1pt" border-color="black">
+                                                <fo:block>
+                                                  <fo:inline font-size="12pt" font-weight="normal">
+                                                    <xsl:apply-templates select="FIELD[FNAME='hearingReference']" />
+                                                  </fo:inline>
+                                                </fo:block>
+                                              </fo:table-cell>
+                                            </fo:table-row>
+                                            <fo:table-row>
+                                              <fo:table-cell width="160pt" padding-start="3pt" padding-end="3pt" padding-before="3pt" padding-after="3pt" display-align="center" text-align="start" border-style="solid" border-width="1pt" border-color="black">
+                                                <fo:block>
+                                                  <fo:inline font-size="12pt" font-weight="normal">Case No:</fo:inline>
+                                                </fo:block>
+                                              </fo:table-cell>
+                                              <fo:table-cell padding-start="3pt" padding-end="3pt" padding-before="3pt" padding-after="3pt" display-align="center" text-align="start" border-style="solid" border-width="1pt" border-color="black">
+                                                <fo:block>
+                                                  <fo:inline font-size="12pt" font-weight="normal">
+                                                    <xsl:apply-templates select="FIELD[FNAME='caseReference']" />
+                                                  </fo:inline>
+                                                </fo:block>
+                                              </fo:table-cell>
+                                            </fo:table-row>
+                                            <fo:table-row>
+                                              <fo:table-cell width="160pt" padding-start="3pt" padding-end="3pt" padding-before="3pt" padding-after="3pt" display-align="center" text-align="start" border-style="solid" border-width="1pt" border-color="black">
+                                                <fo:block>
+                                                  <fo:inline font-size="12pt">Representing:</fo:inline>
+                                                </fo:block>
+                                              </fo:table-cell>
+                                              <fo:table-cell padding-start="3pt" padding-end="3pt" padding-before="3pt" padding-after="3pt" display-align="center" text-align="start" border-style="solid" border-width="1pt" border-color="black">
+                                                <fo:block>
+                                                  <fo:inline font-size="12pt">
+                                                    <xsl:apply-templates select="FIELD[FNAME='representingName']" />
+                                                  </fo:inline>
+                                                </fo:block>
+                                              </fo:table-cell>
+                                            </fo:table-row>
+                                            <fo:table-row>
+                                              <fo:table-cell width="160pt" padding-start="3pt" padding-end="3pt" padding-before="3pt" padding-after="3pt" display-align="center" text-align="start" border-style="solid" border-width="1pt" border-color="black">
+                                                <fo:block>
+                                                  <fo:inline font-size="12pt" font-weight="normal">Appellant:</fo:inline>
+                                                </fo:block>
+                                              </fo:table-cell>
+                                              <fo:table-cell padding-start="3pt" padding-end="3pt" padding-before="3pt" padding-after="3pt" display-align="center" text-align="start" border-style="solid" border-width="1pt" border-color="black">
+                                                <fo:block>
+                                                  <fo:inline font-size="12pt" font-weight="normal">
+                                                    <xsl:apply-templates select="FIELD[FNAME='appellantName']" />
+                                                  </fo:inline>
+                                                </fo:block>
+                                              </fo:table-cell>
+                                            </fo:table-row>
+                                            <fo:table-row>
+                                              <fo:table-cell width="160pt" padding-start="3pt" padding-end="3pt" padding-before="3pt" padding-after="3pt" display-align="center" text-align="start" border-style="solid" border-width="1pt" border-color="black">
+                                                <fo:block>
+                                                  <fo:inline font-size="12pt" font-weight="normal">Hearing Date:</fo:inline>
+                                                </fo:block>
+                                              </fo:table-cell>
+                                              <fo:table-cell padding-start="3pt" padding-end="3pt" padding-before="3pt" padding-after="3pt" display-align="center" text-align="start" border-style="solid" border-width="1pt" border-color="black">
+                                                <fo:block>
+                                                  <fo:inline font-size="12pt" font-weight="normal">
+                                                    <xsl:apply-templates select="FIELD[FNAME='scheduledDate']" />
+                                                  </fo:inline>
+                                                </fo:block>
+                                              </fo:table-cell>
+                                            </fo:table-row>
+                                            <fo:table-row>
+                                              <fo:table-cell width="160pt" padding-start="3pt" padding-end="3pt" padding-before="3pt" padding-after="3pt" display-align="center" text-align="start" border-style="solid" border-width="1pt" border-color="black">
+                                                <fo:block>
+                                                  <fo:inline font-size="12pt">Fee:</fo:inline>
+                                                </fo:block>
+                                              </fo:table-cell>
+                                              <fo:table-cell padding-start="3pt" padding-end="3pt" padding-before="3pt" padding-after="3pt" display-align="center" text-align="start" border-style="solid" border-width="1pt" border-color="black">
+                                                <fo:block>
+                                                  <fo:inline font-size="12pt">
+                                                    <xsl:apply-templates select="FIELD[FNAME='feeAmount']" />
+                                                  </fo:inline>
+                                                </fo:block>
+                                              </fo:table-cell>
+                                            </fo:table-row>
+                                          </fo:table-body>
+                                        </fo:table>
+                                        <fo:block>
+                                          <xsl:text />
+                                        </fo:block>
+                                        <fo:block space-before.optimum="1pt" space-after.optimum="2pt">
+                                          <fo:block text-align="justify">
+                                            <fo:block>
+                                              <fo:leader leader-pattern="space" />
+                                            </fo:block>
+                                            <fo:block>
+                                              <fo:leader leader-pattern="space" />
+                                            </fo:block>
+                                            <fo:inline font-size="12pt" font-weight="normal">Dear Sir/Madam,</fo:inline>
+                                            <fo:block>
+                                              <fo:leader leader-pattern="space" />
+                                            </fo:block>
+                                            <fo:block>
+                                              <fo:leader leader-pattern="space" />
+                                            </fo:block>
+                                            <fo:inline font-size="12pt">
+                                              You have applied to charge a fee of $
+                                              <xsl:apply-templates select="FIELD[FNAME='feeAmount']" />
+                                              to
+                                              <xsl:apply-templates select="FIELD[FNAME='representingName']" />
+                                              in return for representation at the above hearing. This letter is to inform you that your request
+                                              <xsl:apply-templates select="FIELD[FNAME='feeApprovalString']" />
+                                              approved at this time. You may contact this office at the above address if you require further information in this matter.
+                                            </fo:inline>
+                                            <fo:block>
+                                              <fo:leader leader-pattern="space" />
+                                            </fo:block>
+                                            <fo:block>
+                                              <fo:leader leader-pattern="space" />
+                                            </fo:block>
+                                            <fo:inline font-size="12pt" font-weight="normal">Yours Sincerely,</fo:inline>
+                                            <fo:block>
+                                              <fo:leader leader-pattern="space" />
+                                            </fo:block>
+                                            <fo:block>
+                                              <fo:leader leader-pattern="space" />
+                                            </fo:block>
+                                            <fo:block>
+                                              <fo:leader leader-pattern="space" />
+                                            </fo:block>
+                                            <fo:inline font-size="12pt" font-weight="normal">______________________________________</fo:inline>
+                                            <fo:block>
+                                              <fo:leader leader-pattern="space" />
+                                            </fo:block>
+                                            <fo:block>
+                                              <fo:leader leader-pattern="space" />
+                                            </fo:block>
+                                            <fo:inline font-size="12pt">
+                                              <xsl:apply-templates select="FIELD[FNAME='userFullName']" />
+                                            </fo:inline>
+                                            <fo:block>
+                                              <xsl:text />
+                                            </fo:block>
+                                          </fo:block>
+                                        </fo:block>
+                                      </fo:block>
+                                    </fo:block>
+                                  </fo:block>
+                                </fo:block>
+                              </fo:block>
+                            </fo:block>
+                          </fo:block>
+                        </fo:block>
+                      </fo:block>
+                    </fo:block>
                   </fo:block>
-                  <fo:block>
-                    <fo:leader leader-pattern="space" />
-                  </fo:block>
-                  <fo:inline font-size="12pt" font-weight="normal">
-                    Dear
-                    <xsl:apply-templates select="FIELD[FNAME='providerName']" />
-                    ,
-                  </fo:inline>
-                  <fo:block>
-                    <fo:leader leader-pattern="space" />
-                  </fo:block>
-                  <fo:block>
-                    <fo:leader leader-pattern="space" />
-                  </fo:block>
-                  <!-- BEGIN, CR00356535, PB -->
-                  <fo:inline font-size="12pt">We wish to inform you that your contract '</fo:inline>
-                  <fo:inline xsl:use-attribute-sets="Normal_1">
-                    <xsl:apply-templates select="FIELD[FNAME='contractReferenceNumber']" />
-                  </fo:inline>
-                  <fo:inline font-size="12pt">
-                    ' has been terminated with effect from
-                    <xsl:apply-templates select="FIELD[FNAME='statusHistoryDate']" />
-                    for
-                    the following reason:
-                    <xsl:apply-templates select="FIELD[FNAME='terminationReason']" />
-                  </fo:inline>
-                  <!-- END, CR00356535 -->
-                  <fo:block>
-                    <fo:leader leader-pattern="space" />
-                  </fo:block>
-                  <fo:block>
-                    <fo:leader leader-pattern="space" />
-                  </fo:block>
-                  <fo:inline font-size="12pt" font-weight="normal">Regards,</fo:inline>
-                  <fo:block>
-                    <fo:leader leader-pattern="space" />
-                  </fo:block>
-                  <fo:block>
-                    <fo:leader leader-pattern="space" />
-                  </fo:block>
-                  <fo:inline font-size="12pt">
-                    <xsl:apply-templates select="FIELD[FNAME='organizationName']" />
-                    .
-                  </fo:inline>
                 </fo:block>
               </fo:block>
             </fo:block>

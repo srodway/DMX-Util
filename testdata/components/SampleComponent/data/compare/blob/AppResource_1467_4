@@ -1,53 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Page.Title=Provider Details
+Page.Description=Details about the Provider and the Service selected.
 
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd" isPopup="true">
-    <identifier name="SearchPDFOfficeByZip" />
-    <server alias="DISPLAY" class="LocalOfficeSearch" method="searchPDFFormOffice">
-        <param name="key$pdfFormID" path="/PAGE/pdfFormID" />
-        <param name="key$zipCode" path="/PAGE/q" />
-    </server>
-    <content>
-        <forward source="/PAGE/pdfFormID" target="/ans/pdfFormID" name="pdfFormID"/> 
-        <container>             
-            <param name="css-class" value="cwSeachOfficeTitleContainer"/>     
-            <cluster>
-                <title id="FindOffice.Title" />
-                <field id="q" type="PAGE_PLAYER_STRING_50" mandatory="true" width="50">
-                    <title id="ZipCode.Label" />
-                </field>
-                <layout>
-                    <num-cols>1</num-cols>
-                    <width>100</width>
-                    <label-width>50</label-width>
-                    <label-alignment>RIGHT</label-alignment>
-                </layout>
-            </cluster>
-        </container>
-        <container>             
-            <param name="css-class" value="cwSeachOfficeActionContainer"/>    
-            <navigation >
-                <nav-button name="find" type="action"/>
-                <nav-button name="print" type="print"/>
-            </navigation>
-        </container>
-        <container conditionalSource="/PAGE/q" false="$empty">            
-            <list>
-                <field source="/DISPLAY/dtls$addressDetails[]" type="CW_RICH_STRING"/>
-            </list>
-        </container>
-        <container>             
-            <param name="css-class" value="cwSeachOfficeCloseContainer"/>
-            <navigation align="right">
-                <nav-button name="close" page="Dismiss"/>
-            </navigation>
-        </container>
-    </content>
-</page>
+GET.DIRECTIONS=Get Directions
+GET.DIRECTIONS.TOOLTIP=Click here for assistance in finding this provider.
+REFER.ME=Refer Me
+REFER.ME.TOOLTIP=Click here to send your details to this provider.
+PRINT=Print
+PRINT.TOOLTIP=Click here to print this screen for your records. 
+
+No.Phone=No phone available
+No.Email=No email available
+No.Web=No web address available
+
+Contact.Information=Contact Information
+
+Other.Locations=Other Locations
+
+Service.Description=Service Description
+
+Other.Services=Other Services
+
+Specialties=Specialties
+
+Intake.Procedure=Intake Procedure
+
+Eligibility=Eligibility
+
+Accreditations=Accreditations
+
+Fees=Fees
+
+Areas.Served=Areas Served
+
+Documents.Needed=Documents Needed
+
+Map=Map
+
+# START NON-TRANSLATABLE
+Pin.Icon.Height=19
+Pin.Icon.Width=17
+
+List.Icon.Height=19
+List.Icon.Width=17
+
+Email.Icon.Location=../Images/email.png
+Email.Icon.Height=19
+Email.Icon.Width=17
+# END NON-TRANSLATABLE
+
+Empty.Title=  
+
+Button.Dismiss=Close
+Button.Dismiss.Tooltip=Click here to close this window
+
+No.Infomation.Text=None

@@ -1,22 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2010 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ListSpecialtyTypeIcons">
+#
+# Licensed Materials - Property of IBM 
+#
+# PID 5725-H26
+#
+# Copyright IBM Corporation 2012,2014. All rights reserved. 
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Number.Wizard.Pages=2
 
-    <tc:context tab-name="Details.Name.ListSpecialtyTypeIcons" tab-title="Details.Name.ListSpecialtyTypeIcons"/>
+Wizard.PageID.1=ObjectiveConditionsWizard_selectObjective
+ObjectiveConditionsWizard_selectObjective.Wizard.Item.Text=Select Objective
+ObjectiveConditionsWizard_selectObjective.Wizard.Page.Title=Step 1:
+ObjectiveConditionsWizard_selectObjective.Wizard.Page.Desc=Select an objective from the list
 
-    <tc:navigation page-id="ProviderManagement_listSpecialtyTypeIcon"/>
-
-</tc:tab-config>
+Wizard.PageID.2=ObjectiveConditionsWizard_selectObjectiveConditions
+ObjectiveConditionsWizard_selectObjectiveConditions.Wizard.Item.Text=Select Conditions
+ObjectiveConditionsWizard_selectObjectiveConditions.Wizard.Page.Title=Step 2:
+ObjectiveConditionsWizard_selectObjectiveConditions.Wizard.Page.Desc=Check all conditions that apply

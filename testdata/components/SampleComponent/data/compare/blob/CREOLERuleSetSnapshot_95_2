@@ -1,401 +1,216 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!-- 
-  Copyright 2009-2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information").  You shall not disclose such
-  Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><!--
-  Interface rule classes for propagation of database data to CREOLE rule objects.
-  
-  Customer code must not create, modify or remove instances of any of the rule
-  classes in this rule set.  Instances of these rule classes may only be
-  manipulated by the Rule Object Propagators.
-  
-  --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PropagatorRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
-
-
-  <!--*********************************************************-->
-  <!-- Evidence classes-->
-  <!--*********************************************************-->
-
-
-  <!-- 
-    All instances of evidence populated by the
-    ActiveEvidenceRowRuleObjectPropagator must inherit from this rule class.
-    
-    Each row of _active_ evidence will be propagated to a corresponding rule object. 
-    Superseded or canceled evidence rows are ignored. 
-  -->
-  <Class abstract="true" name="ActiveEvidenceRow">
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
+<?xml version="1.0" encoding="UTF-8"?><RuleSet internalID="id1352903514810" name="PDCDuplicateClientValidationRuleSet">
+  <Annotations internalID="id1352903514792">
+    <EditorMetadata internalID="id1352903514811">
+      <folders internalID="PDCDuplicateClientValidationRuleSet1352903657581">
+        <diagram id="ConcernRoleDuplicate.description" internalID="PDCDuplicateClientValidationRuleSet1352903658366">
+          <Annotations internalID="PDCDuplicateClientValidationRuleSet1352903658365">
+            <Label internalID="PDCDuplicateClientValidationRuleSet1352903658364" label-id="PDCDuplicateClientValidationRuleSetlabelID_1352903658363" name=""/>
+          </Annotations>
+          <Attributes internalID="PDCDuplicateClientValidationRuleSet1352903658509">
+            <Attribute id="ConcernRoleDuplicate.description" internalID="PDCDuplicateClientValidationRuleSet1352903658510"/>
+          </Attributes>
+        </diagram>
+        <diagram id="ConcernRoleDuplicate.duplicateConcernRoleID" internalID="PDCDuplicateClientValidationRuleSet1352903875835">
+          <Annotations internalID="PDCDuplicateClientValidationRuleSet1352903875834">
+            <Label internalID="PDCDuplicateClientValidationRuleSet1352903875833" label-id="PDCDuplicateClientValidationRuleSetlabelID_1352903875832" name=""/>
+          </Annotations>
+          <Attributes internalID="PDCDuplicateClientValidationRuleSet1352903875869">
+            <Attribute id="ConcernRoleDuplicate.duplicateConcernRoleID" internalID="PDCDuplicateClientValidationRuleSet1352903875870"/>
+          </Attributes>
+        </diagram>
+        <diagram id="ConcernRoleDuplicate.statusCode" internalID="PDCDuplicateClientValidationRuleSet1352903878014">
+          <Annotations internalID="PDCDuplicateClientValidationRuleSet1352903878013">
+            <Label internalID="PDCDuplicateClientValidationRuleSet1352903878012" label-id="PDCDuplicateClientValidationRuleSetlabelID_1352903878011" name=""/>
+          </Annotations>
+          <Attributes internalID="PDCDuplicateClientValidationRuleSet1352903878049">
+            <Attribute id="ConcernRoleDuplicate.statusCode" internalID="PDCDuplicateClientValidationRuleSet1352903878050"/>
+          </Attributes>
+        </diagram>
+        <diagram id="DuplicateClientCheck.concernRoleDuplicateRecords" internalID="PDCDuplicateClientValidationRuleSet1352904073849">
+          <Annotations internalID="PDCDuplicateClientValidationRuleSet1352904073848">
+            <Label internalID="PDCDuplicateClientValidationRuleSet1352904073847" label-id="PDCDuplicateClientValidationRuleSetlabelID_1352904073846" name=""/>
+          </Annotations>
+          <Attributes internalID="PDCDuplicateClientValidationRuleSet1352904073883">
+            <Attribute id="DuplicateClientCheck.concernRoleDuplicateRecords" internalID="PDCDuplicateClientValidationRuleSet1352904073884"/>
+          </Attributes>
+          <states internalID="PDCDuplicateClientValidationRuleSet1352904133193">
+            <state id="PDCDuplicateClientValidationRuleSet1352904131786" internalID="PDCDuplicateClientValidationRuleSet1352904133051" isComplexCompare="true"/>
+            <state id="PDCDuplicateClientValidationRuleSet1352904312640" internalID="PDCDuplicateClientValidationRuleSet1352904314249" isComplexCompare="true"/>
+          </states>
+        </diagram>
+        <diagram id="DuplicateClientCheck.duplicates" internalID="PDCDuplicateClientValidationRuleSet1352904398882">
+          <Annotations internalID="PDCDuplicateClientValidationRuleSet1352904398881">
+            <Label internalID="PDCDuplicateClientValidationRuleSet1352904398880" label-id="PDCDuplicateClientValidationRuleSetlabelID_1352904398879" name=""/>
+          </Annotations>
+          <Attributes internalID="PDCDuplicateClientValidationRuleSet1352904398932">
+            <Attribute id="DuplicateClientCheck.duplicates" internalID="PDCDuplicateClientValidationRuleSet1352904398933"/>
+          </Attributes>
+          <states internalID="PDCDuplicateClientValidationRuleSet1352904430016">
+            <state id="PDCDuplicateClientValidationRuleSet1352904428175" internalID="PDCDuplicateClientValidationRuleSet1352904429905" isComplexCompare="true"/>
+            <state id="PDCDuplicateClientValidationRuleSet1352904441841" internalID="PDCDuplicateClientValidationRuleSet1352904441842" isComplexCompare="true"/>
+          </states>
+        </diagram>
+        <diagram id="DuplicateClientCheck.isConcernRoleDuplicate" internalID="PDCDuplicateClientValidationRuleSet1352904650196">
+          <Annotations internalID="PDCDuplicateClientValidationRuleSet1352904650195">
+            <Label internalID="PDCDuplicateClientValidationRuleSet1352904650194" label-id="PDCDuplicateClientValidationRuleSetlabelID_1352904650193" name=""/>
+          </Annotations>
+          <Attributes internalID="PDCDuplicateClientValidationRuleSet1352904650245">
+            <Attribute id="DuplicateClientCheck.isConcernRoleDuplicate" internalID="PDCDuplicateClientValidationRuleSet1352904650246"/>
+          </Attributes>
+          <states internalID="PDCDuplicateClientValidationRuleSet1352904714993">
+            <state id="PDCDuplicateClientValidationRuleSet1352904713439" internalID="PDCDuplicateClientValidationRuleSet1352904714945" isComplexCompare="true"/>
+          </states>
+        </diagram>
+        <diagram id="DuplicateClientCheck.description" internalID="PDCDuplicateClientValidationRuleSet1352904884598">
+          <Annotations internalID="PDCDuplicateClientValidationRuleSet1352904884597">
+            <Label internalID="PDCDuplicateClientValidationRuleSet1352904884596" label-id="PDCDuplicateClientValidationRuleSetlabelID_1352904884595" name=""/>
+          </Annotations>
+          <Attributes internalID="PDCDuplicateClientValidationRuleSet1352904884648">
+            <Attribute id="DuplicateClientCheck.description" internalID="PDCDuplicateClientValidationRuleSet1352904884649"/>
+          </Attributes>
+        </diagram>
+        <diagram id="DuplicateClientCheck.concernRoleID" internalID="PDCDuplicateClientValidationRuleSet1353060503580">
+          <Annotations internalID="PDCDuplicateClientValidationRuleSet1353060503563">
+            <Label internalID="PDCDuplicateClientValidationRuleSet1353060503562" label-id="PDCDuplicateClientValidationRuleSetlabelID_1353060503561" name=""/>
+          </Annotations>
+          <Attributes internalID="PDCDuplicateClientValidationRuleSet1353060503864">
+            <Attribute id="DuplicateClientCheck.concernRoleID" internalID="PDCDuplicateClientValidationRuleSet1353060503865"/>
+          </Attributes>
+        </diagram>
+      </folders>
+      <config internalID="id1352905122930">
+        <faconfig internalID="id1352905122931"/>
+      </config>
+      <codetables internalID="PDCDuplicateClientValidationRuleSet1352904464476">
+        <codetable internalID="PDCDuplicateClientValidationRuleSet1352904464477" name="DuplicateStatus" value="DS1"/>
+      </codetables>
+    </EditorMetadata>
+  </Annotations>
+  <Class internalID="PDCDuplicateClientValidationRuleSet1352903523217" name="ConcernRoleDuplicate">
+    <Attribute internalID="PDCDuplicateClientValidationRuleSet1352903601756" name="duplicateConcernRoleID">
+      <type internalID="PDCDuplicateClientValidationRuleSet1352903601757">
+        <javaclass internalID="PDCDuplicateClientValidationRuleSet1352903607339" name="Number"/>
       </type>
-      <derivation>
-        <XmlMessage>Active evidence row for correction set with ID: <replace>
-            <reference attribute="correctionSetID"/>
-          </replace></XmlMessage>
+      <derivation internalID="PDCDuplicateClientValidationRuleSet1352903601759">
+        <specified internalID="PDCDuplicateClientValidationRuleSet1352903601760"/>
       </derivation>
     </Attribute>
-
-
-    <!-- Unique identifier for the correction set. -->
-    <Attribute name="correctionSetID">
-      <type>
-        <javaclass name="String"/>
+    <Attribute internalID="PDCDuplicateClientValidationRuleSet1352903618714" name="statusCode">
+      <type internalID="PDCDuplicateClientValidationRuleSet1352903618715">
+        <codetableentry internalID="PDCDuplicateClientValidationRuleSet1352903639138" table="DuplicateStatus"/>
       </type>
-      <derivation>
-        <specified/>
+      <derivation internalID="PDCDuplicateClientValidationRuleSet1352903618717">
+        <specified internalID="PDCDuplicateClientValidationRuleSet1352903618718"/>
       </derivation>
     </Attribute>
-
-
-    <!-- The effective date for this version of the evidence. -->
-    <Attribute name="effectiveDate">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
+    <Attribute internalID="PDCDuplicateClientValidationRuleSet1352903651247" name="description">
+      <type internalID="PDCDuplicateClientValidationRuleSet1352903651248">
+        <javaclass internalID="PDCDuplicateClientValidationRuleSet1352903655877" name="curam.creole.value.Message"/>
       </type>
-      <derivation>
-        <specified/>
+      <derivation internalID="PDCDuplicateClientValidationRuleSet1352903651250">
+        <ResourceMessage internalID="PDCDuplicateClientValidationRuleSet1352903666429" key="ConcernRoleDuplicate.description" resourceBundle="curam.pdc.rules.PDCDuplicateClientCERRules">
+          <Annotations internalID="PDCDuplicateClientValidationRuleSet1352903666432">
+            <Label internalID="PDCDuplicateClientValidationRuleSet1352903666431" label-id="PDCDuplicateClientValidationRuleSetlabelID_1352903666430" name=""/>
+          </Annotations>
+          <reference attribute="duplicateConcernRoleID" internalID="PDCDuplicateClientValidationRuleSet1352903732944"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
-
-
-    <!-- The identifier of the succession set to which this evidence version belongs. -->
-    <Attribute name="successionID">
-      <type>
-        <javaclass name="Number"/>
+    <Attribute internalID="PDCDuplicateClientValidationRuleSet1352909114540" name="concernRoleDuplicateID">
+      <type internalID="PDCDuplicateClientValidationRuleSet1352909114541">
+        <javaclass internalID="PDCDuplicateClientValidationRuleSet1352909119607" name="Number"/>
       </type>
-      <derivation>
-        <specified/>
+      <derivation internalID="PDCDuplicateClientValidationRuleSet1352909114543">
+        <specified internalID="PDCDuplicateClientValidationRuleSet1352909114544"/>
       </derivation>
     </Attribute>
-
-
-    <!-- The identifier of the evidence descriptor header record. -->
-    <Attribute name="evidenceDescriptorID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The identifier of the case to which the evidence belongs. -->
-    <Attribute name="caseID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
   </Class>
-
-
-  <!-- 
-    All instances of evidence populated by the
-    ActiveInEditEvidenceRowRuleObjectPropagator must inherit from this rule class.
-    
-    Each row of _active_/_in-edit_ evidence will be propagated to a corresponding rule object. 
-    Superseded or canceled evidence rows are ignored. 
-  -->
-  <Class abstract="true" name="ActiveInEditEvidenceRow">
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
+  <Class internalID="PDCDuplicateClientValidationRuleSet1352903996460" name="DuplicateClientCheck">
+    <Attribute internalID="PDCDuplicateClientValidationRuleSet1352904002116" name="concernRoleID">
+      <type internalID="PDCDuplicateClientValidationRuleSet1352904002117">
+        <javaclass internalID="PDCDuplicateClientValidationRuleSet1352904006371" name="Number"/>
       </type>
-      <derivation>
-        <XmlMessage>Active/In-Edit evidence row for correction set with ID: <replace>
-            <reference attribute="correctionSetID"/>
-          </replace></XmlMessage>
+      <derivation internalID="PDCDuplicateClientValidationRuleSet1352904002119">
+        <specified internalID="PDCDuplicateClientValidationRuleSet1352904002120"/>
       </derivation>
     </Attribute>
-
-
-    <!-- Unique identifier for the correction set. -->
-    <Attribute name="correctionSetID">
-      <type>
-        <javaclass name="String"/>
+    <Attribute internalID="PDCDuplicateClientValidationRuleSet1352904025588" name="isConcernRoleDuplicate">
+      <type internalID="PDCDuplicateClientValidationRuleSet1352904025589">
+        <javaclass internalID="PDCDuplicateClientValidationRuleSet1352904025590" name="Boolean"/>
       </type>
-      <derivation>
-        <specified/>
+      <derivation internalID="PDCDuplicateClientValidationRuleSet1352904025591">
+        <compare comparison="&gt;" internalID="PDCDuplicateClientValidationRuleSet1352904713439">
+          <Annotations internalID="PDCDuplicateClientValidationRuleSet1352904713438">
+            <Label internalID="PDCDuplicateClientValidationRuleSet1352904713437" label-id="PDCDuplicateClientValidationRuleSetlabelID_1352904713436" name=""/>
+          </Annotations>
+          <property internalID="PDCDuplicateClientValidationRuleSet1352904731674" name="size">
+            <object internalID="PDCDuplicateClientValidationRuleSet1352904731675">
+              <reference attribute="duplicates" internalID="PDCDuplicateClientValidationRuleSet1353062156636"/>
+            </object>
+          </property>
+          <Number internalID="PDCDuplicateClientValidationRuleSet1352904720480" value="0"/>
+        </compare>
       </derivation>
     </Attribute>
-
-
-    <!-- The effective date for this version of the evidence. -->
-    <Attribute name="effectiveDate">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The identifier of the succession set to which this evidence version belongs. -->
-    <Attribute name="successionID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The identifier of the evidence descriptor header record. -->
-    <Attribute name="evidenceDescriptorID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The identifier of the case to which the evidence belongs. -->
-    <Attribute name="caseID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <!-- 
-    All instances of evidence populated by the
-    ActiveSuccessionSetRuleObjectPropagator must inherit from this rule class, and the attributes which 
-    govern the start and end date of the succession set must be annotated with
-    <SuccessionStart/> and <SuccessionEnd/> respectively.
-    
-    The _active_ evidence rows contributing to an evidence succession set will be combined and 
-    propagated to a single rule object.
-    
-    The propagator will populate attribute values differently depending on whether the attribute returns
-    a Timeline:
-    - Timeline attributes will be populated with a value which varies according to the data in the succession set, changing
-      on the effectiveDate of the evidence rows contributing to the succession set; outside the succesion start and end
-      dates a default value will be used (governed by the type parameter within the Timeline).
-    - non-Timeline attributes will be populated with the value common across all the evidence rows in the succession set.
-      If these values are found to vary across the succession set, then the propagator will raise errors or warnings.
-    
-  -->
-  <Class abstract="true" name="ActiveSuccessionSet">
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <XmlMessage>Active succession set data for succession set with ID: <replace>
-            <!-- use toString so that the number is not formatted with commas nor precision truncated -->
-            <property name="toString">
-              <object>
-                <reference attribute="successionID"/>
-              </object>
-            </property>
-          </replace></XmlMessage>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The identifier of the case to which the evidence belongs. -->
-    <Attribute name="caseID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Unique identifier for the succession set. -->
-    <Attribute name="successionID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The varying identifier of the evidence descriptor header record contributing to
-           effective-dated intervals in the succession set's changes over time. -->
-    <Attribute name="evidenceDescriptorID">
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Number"/>
+    <Attribute internalID="PDCDuplicateClientValidationRuleSet1352904058809" name="concernRoleDuplicateRecords">
+      <type internalID="PDCDuplicateClientValidationRuleSet1352904058810">
+        <javaclass internalID="PDCDuplicateClientValidationRuleSet1352904071955" name="List">
+          <ruleclass internalID="PDCDuplicateClientValidationRuleSet1352904071954" name="ConcernRoleDuplicate"/>
         </javaclass>
       </type>
-      <derivation>
-        <specified/>
+      <derivation internalID="PDCDuplicateClientValidationRuleSet1352904058812">
+        <readall internalID="PDCDuplicateClientValidationRuleSet1352904352317" ruleclass="ConcernRoleDuplicate">
+          <match internalID="PDCDuplicateClientValidationRuleSet1353075236624" retrievedattribute="duplicateConcernRoleID">
+            <reference attribute="concernRoleID" internalID="PDCDuplicateClientValidationRuleSet1353075244927"/>
+          </match>
+        </readall>
       </derivation>
     </Attribute>
-
-
-    <!-- True for periods within the lifetime of the succession set,
-      i.e. between its start and end dates (inclusive), if any.
-      
-      The ActiveSuccessionSetRuleObjectPropagator forces the evaluation of this attribute,
-      and in turn the implementation of the static method forces the population of all 
-      the business attributes on the concrete rule object. 
-       -->
-    <Attribute name="exists">
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Boolean"/>
+    <Attribute internalID="PDCDuplicateClientValidationRuleSet1352904385368" name="duplicates">
+      <type internalID="PDCDuplicateClientValidationRuleSet1352904385369">
+        <javaclass internalID="PDCDuplicateClientValidationRuleSet1352904392482" name="List">
+          <ruleclass internalID="PDCDuplicateClientValidationRuleSet1352904392481" name="ConcernRoleDuplicate"/>
         </javaclass>
       </type>
-      <derivation>
-        <call class="curam.core.sl.infrastructure.propagator.impl.Statics" method="getSuccessionSetExistence">
-          <type>
-            <javaclass name="curam.creole.value.Timeline">
-              <javaclass name="Boolean"/>
-            </javaclass>
-          </type>
-          <arguments>
-            <this/>
-          </arguments>
-        </call>
+      <derivation internalID="PDCDuplicateClientValidationRuleSet1352904385371">
+        <filter internalID="PDCDuplicateClientValidationRuleSet1352904415051">
+          <list internalID="PDCDuplicateClientValidationRuleSet1352904415052">
+            <reference attribute="concernRoleDuplicateRecords" internalID="PDCDuplicateClientValidationRuleSet1353075325245"/>
+          </list>
+          <listitemexpression internalID="PDCDuplicateClientValidationRuleSet1352904415053">
+            <equals internalID="PDCDuplicateClientValidationRuleSet1353061463336">
+              <Annotations internalID="PDCDuplicateClientValidationRuleSet1353061463335">
+                <Label internalID="PDCDuplicateClientValidationRuleSet1353061463334" label-id="PDCDuplicateClientValidationRuleSetlabelID_1353061445202" name=""/>
+              </Annotations>
+              <reference attribute="statusCode" internalID="PDCDuplicateClientValidationRuleSet1353075262043">
+                <current internalID="PDCDuplicateClientValidationRuleSet1353075262044"/>
+              </reference>
+              <Code internalID="PDCDuplicateClientValidationRuleSet1353075271985" table="DuplicateStatus">
+                <Annotations internalID="PDCDuplicateClientValidationRuleSet1353075271988">
+                  <Label internalID="PDCDuplicateClientValidationRuleSet1353075271987" label-id="PDCDuplicateClientValidationRuleSetlabelID_1353075271986" name="Codetable"/>
+                </Annotations>
+                <String internalID="PDCDuplicateClientValidationRuleSet1353075271981" value="DS1">
+                  <Annotations internalID="PDCDuplicateClientValidationRuleSet1353075271984">
+                    <Label internalID="PDCDuplicateClientValidationRuleSet1353075271983" label-id="PDCDuplicateClientValidationRuleSetlabelID_1353075271982" name="String Value"/>
+                  </Annotations>
+                </String>
+              </Code>
+            </equals>
+          </listitemexpression>
+        </filter>
       </derivation>
     </Attribute>
-
-
+    <Attribute internalID="PDCDuplicateClientValidationRuleSet1352904875115" name="description">
+      <type internalID="PDCDuplicateClientValidationRuleSet1352904875116">
+        <javaclass internalID="PDCDuplicateClientValidationRuleSet1352904881650" name="curam.creole.value.Message"/>
+      </type>
+      <derivation internalID="PDCDuplicateClientValidationRuleSet1352904875118">
+        <ResourceMessage internalID="PDCDuplicateClientValidationRuleSet1352904888876" key="DuplicateClientCheck.description" resourceBundle="curam.pdc.rules.PDCDuplicateClientCERRules">
+          <Annotations internalID="PDCDuplicateClientValidationRuleSet1352904888879">
+            <Label internalID="PDCDuplicateClientValidationRuleSet1352904888878" label-id="PDCDuplicateClientValidationRuleSetlabelID_1352904888877" name=""/>
+          </Annotations>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
   </Class>
-
-
-  <!-- 
-      All instances of evidence populated by the
-      ActiveInEditSuccessionSetRuleObjectPropagator must inherit from this rule class, and the attributes which 
-      govern the start and end date of the succession set must be annotated with
-      <SuccessionStart/> and <SuccessionEnd/> respectively.
-      
-      The Active and InEdit evidence rows contributing to an evidence succession set will be combined and 
-      propagated to a single rule object.
-      
-      The propagator will populate attribute values differently depending on whether the attribute returns
-      a Timeline:
-      - Timeline attributes will be populated with a value which varies according to the data in the succession set, changing
-        on the effectiveDate of the evidence rows contributing to the succession set; outside the succesion start and end
-        dates a default value will be used (governed by the type parameter within the Timeline).
-      - non-Timeline attributes will be populated with the value common across all the evidence rows in the succession set.
-        If these values are found to vary across the succession set, then the propagator will raise errors or warnings.
-      
-    -->
-  <Class abstract="true" name="ActiveInEditSuccessionSet">
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <XmlMessage>Active or in-edit succession set data for succession set with ID: <replace>
-            <!-- use toString so that the number is not formatted with commas nor precision truncated -->
-            <property name="toString">
-              <object>
-                <reference attribute="successionID"/>
-              </object>
-            </property>
-          </replace></XmlMessage>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The identifier of the case to which the evidence belongs. -->
-    <Attribute name="caseID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Unique identifier for the succession set. -->
-    <Attribute name="successionID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The varying identifier of the evidence descriptor header record contributing to
-             effective-dated intervals in the succession set's changes over time. -->
-    <Attribute name="evidenceDescriptorID">
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Number"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- True for periods within the lifetime of the succession set,
-        i.e. between its start and end dates (inclusive), if any.
-        
-        The ActiveInEditSuccessionSetRuleObjectPropagator forces the evaluation of this attribute,
-        and in turn the implementation of the static method forces the population of all 
-        the business attributes on the concrete rule object. 
-         -->
-    <Attribute name="exists">
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Boolean"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <call class="curam.core.sl.infrastructure.propagator.impl.Statics" method="getSuccessionSetExistence">
-          <type>
-            <javaclass name="curam.creole.value.Timeline">
-              <javaclass name="Boolean"/>
-            </javaclass>
-          </type>
-          <arguments>
-            <this/>
-          </arguments>
-        </call>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
 </RuleSet>

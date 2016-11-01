@@ -1,21 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="DynamicEvidenceEditorView">
-  
-  <tc:page-param name="evidenceTypeVersionID"/>
-  <tc:page-param name="userLocale"/>
-  <tc:page-param name="evidenceTypeName"/>
-  <tc:page-param name="effectiveFrom"/>
-    
-  <!-- Page to specify dynamic tab name and title -->  
-    <tc:context height="0" page-id="DynamicEvidence_editorDetailsPanelView"/>
-    
-  <!-- Page to open in this tab. -->
-  <tc:navigation page-id="DynamicEvidence_viewEvidenceTypeVersion"/>
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2013. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+QuestionPage.AssessmentDetails.Title=SDM\u00AE Reunification Assessment
+Cluster.Title.FinalRisk=Risk
+RiskOverrides.InstructionText=<p style="font-family:tahoma;font-size:11px;color:#4e4e4e;">Please enter final risk finding</p>
+AssessmentResults.Display.Text.DeterminedRiskLevel=<p style="font-family:tahoma;font-size:11px;color:#4e4e4e;margin-left:-5px;">Risk Level: <b>%1s</b> </p>
+AssessmentResults.Display.Text.RiskScore=<p style="font-family:tahoma;font-size:12px;color:#4e4e4e;margin-left:-5px;">Risk Score: <b>%1s</b> </p>
+Cluster.Title.Overrides=Override
+Cluster.Desc.Overrides=<p style="font-family:tahoma;font-size:11px;color:#4e4e4e;">If there is no change to the overall risk level, select "No Override". If Policy Override is made, mark the conditions that are applicable in the current review period. If any of the conditions are applicable, override final risk level to Very High. If a discretionary override is made, indicate reason. Risk level may be overridden one level higher or lower.</p>
+Cluster.Desc.PolicyOverrideQuestions=<span style="margin-top: 5px; color:#5A5A5A">Indicate if any of the following are true in the current review period.</span>
+Cluster.Desc.DiscOverrideReason=<span style="margin-top: 5px; color:#5A5A5A">Reunification risk level may be adjusted up or down one level with a valid reason.</span>
+OverrideMessage.id=At least one condition must be specified if a policy override has been selected.
+DiscMessageID=Override direction and override reason must be entered if a discretionary override has been specified.
+Question.Label.AssessmentOverride=Override
+Question.Label.SexAbuseOverride=Sexual abuse; perpetrator has access to child.
+Question.Label.InjuryOverride=Has there been non-accidental injury to a child younger than 2 years old?
+Question.Label.SevereInjuryOverride=Serious non-accidental physical injury requiring hospital or medical treatment.
+Question.Label.DeathOverride=Death of a sibling as a result of abuse or neglect in the household.
+Question.Label.DiscretionaryOverrideReason=Override Reason
+Question.Label.AssessmentOverrideDirection=Override Direction
 
-</tc:tab-config>
+Question.Help.PolicyOverrideOptions=<help-text id="Question.Help.PolicyOverrideOptions">Policy override options include:<ul><li> Sexual abuse; perpetrator has access to child.<li> Has there been non-accidental injury to a child younger than 2 years old?.<li> Serious non-accidental physical injury requiring hospital or medical treatment.<li> Death of a sibling as a result of abuse or neglect in the household.</ul></help-text>
+
+   

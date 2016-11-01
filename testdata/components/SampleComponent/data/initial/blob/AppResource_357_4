@@ -6,14 +6,22 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Number.Wizard.Pages=2
+MenuItem.Title.Edit=Edit
+MenuItem.Tooltip.Edit=Edit
 
-RegisterInformationProvider_duplicateCheckWizard.Wizard.Item.Text=Registered Information Provider
-RegisterInformationProvider_duplicateCheckWizard.Wizard.Page.Title=Step 1:
-RegisterInformationProvider_duplicateCheckWizard.Wizard.Page.Desc=Registered Information Provider
-Wizard.PageID.1=RegisterInformationProvider_duplicateCheckWizard
+MenuItem.Title.Delete=Delete
+MenuItem.Tooltip.Delete=Delete
 
-RegisterInformationProvider_registerWizard.Wizard.Item.Text=Information Provider Details
-RegisterInformationProvider_registerWizard.Wizard.Page.Title=Step 2:
-RegisterInformationProvider_registerWizard.Wizard.Page.Desc=Information Provider Details
-Wizard.PageID.2=RegisterInformationProvider_registerWizard
+calendar.title=Calendar
+User.Pref.Title=User Preferences
+Logout.Title=Logout
+Help.Title=Help
+About.Title=About
+
+MenuItem.Title.MyCalendar=My Calendar
+MenuItem.Icon.MyCalendar=Calendar
+MenuItem.Tooltip.MyCalendar=My Calendar
+
+MenuItem.Title.AssignAssessment=Assign Rule Set
+MenuItem.Icon.AssignAssessment=Assign Rule Set
+MenuItem.Tooltip.AssignAssessment=Assign Set

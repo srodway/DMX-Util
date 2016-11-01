@@ -1,48 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
-
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
-    <identifier name="LoginFactors" />
-    <server alias="DISPLAY" method="getLoginFactors">
-        <param name="key$playerID" path="/PAGE/id" />
-    </server>    
-    <header>
-        <title id="Page.Title" />
-        <description id="Page.Description" />
-        <icon id="title_login" />
-    </header>
-    <content>
-        <container>
-            <title id="Applications.Title" />
-            <description id="Applications.Description" />
-            <help source="/DISPLAY/xmlData/help"/>
-            <login-factors name="test" source="/DISPLAY/xmlData/authentication-factor[]/factor-name">
-            	<param name="login-factor" value="/DISPLAY/xmlData/authentication-factor[]/factor-name"/>
-            	<login-factor source="/DISPLAY/xmlData/authentication-factor[]/factor-name">
-                    <param name="factor-title" source="/DISPLAY/xmlData/authentication-factor[]/factor-title"/>
-            	    <field mandatory="true" login-factor="true" width="30">                    
-                        <title source="/DISPLAY/xmlData/authentication-factor[]/factor-title" />
-                        <param name="login-factor" source="/DISPLAY/xmlData/authentication-factor[]/factor-name"/>
-                        <param name="login-factor-domain" source="/DISPLAY/xmlData/authentication-factor[]/factor-domain-name"/>
-                    </field>
-                </login-factor>
-            </login-factors>
-        </container>
-        
-        <forward source="/DISPLAY/xmlData/authentication-factor/factor-challenge1" target="/ans/factor-challenge1"/>
-        <forward source="/DISPLAY/xmlData/authentication-factor/factor-challenge2" target="/ans/factor-challenge2"/>
-        <forward source="/DISPLAY/xmlData/authentication-factor/factor-challenge3" target="/ans/factor-challenge3"/>
-        
-    </content>
-    <navigation>
-		<nav-button name="next" type="action"/> 
-        <nav-button name="exit" page="ResolveCitizenHome" page-type="resolve" />
-    </navigation>
-</page>
+--><!--
+  Copyright 2011 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="DefaultCaseProspectPersonHome">
+  <nc:nodes>
+    <nc:navigation-page id="caseprospectpersonhome" page-id="DefaultICProspectPerson_home" title="Leaf.Title.CaseProspectPersonHome"/>
+    <nc:navigation-page id="activities" page-id="DefaultICProspectPerson_resolveCalendar" title="Leaf.Title.Activities"/>
+    <nc:navigation-page id="communications" page-id="DefaultICProspectPerson_listCommunication" title="Leaf.Title.Communications"/>
+    <nc:navigation-page id="financials" page-id="DefaultICProspectPerson_listFinancial" title="Leaf.Title.Financials"/>
+    <nc:navigation-page id="notes" page-id="DefaultICProspectPerson_listNote" title="Leaf.Title.Notes"/>
+    <nc:navigation-page id="tasks" page-id="DefaultICProspectPerson_listTask" title="Leaf.Title.Tasks"/>        
+  </nc:nodes>
+</nc:navigation>

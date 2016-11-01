@@ -1,25 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2010 Curam Software Ltd.
-  All rights reserved.
-
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. (&quot;Confidential Information&quot;).  You shall not disclose such
-  Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PCRRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
-  <Class abstract="true" name="AbstractPCR">
-
-
-    <Attribute name="caseID">
+<?xml version="1.0" encoding="UTF-8"?><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PDCAddressSummaryRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+  <Class extends="DefaultEvidenceSummary" extendsRuleSet="EvidenceSummaryRuleSet" name="PDCAddressSummary">
+    <Attribute name="evidence">
       <type>
-        <javaclass name="Number"/>
+        <ruleclass name="PDCAddress" ruleset="PDCAddressRuleSet"/>
       </type>
       <derivation>
         <specified/>
@@ -27,65 +10,44 @@
     </Attribute>
 
 
-    <Attribute name="priorityRate">
+    <Attribute name="addressForDisplay">
+      <Annotations>
+        <Display/>
+      </Annotations>
       <type>
-        <javaclass name="Number"/>
+        <javaclass name="String"/>
       </type>
       <derivation>
-        <abstract/>
+        <call class="curam.pdc.impl.Statics" method="getAddress">
+          <type>
+            <javaclass name="String"/>
+          </type>
+          <arguments>
+            <reference attribute="address">
+              <reference attribute="evidence"/>
+            </reference>
+          </arguments>
+        </call>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="priorityReason">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="complexityRate">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="complexityReason">
+    <Attribute name="summary">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <abstract/>
+        <ResourceMessage key="summaryMessage1" resourceBundle="curam.pdc.rules.DynEvd_PDCAddress_Summary">
+          <reference attribute="addressType">
+            <reference attribute="evidence"/>
+          </reference>
+          <reference attribute="addressForDisplay"/>
+        </ResourceMessage>
+
+
       </derivation>
     </Attribute>
 
 
-    <Attribute name="riskRate">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="riskReason">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
   </Class>
-
-
 </RuleSet>

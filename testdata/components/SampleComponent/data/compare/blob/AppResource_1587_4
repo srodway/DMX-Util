@@ -6,24 +6,33 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Number.Wizard.Pages=4
 
-AppealProcessAdminWizard_selectStages.Wizard.Item.Text=Stages
-AppealProcessAdminWizard_selectStages.Wizard.Page.Title=Step 1:
-AppealProcessAdminWizard_selectStages.Wizard.Page.Desc=Stages
-Wizard.PageID.1=AppealProcessAdminWizard_selectStages
+Help.PageDescription=This page allows you to view the basic case display rules category.
+Page.Title=Basic Case
 
-AppealProcessAdminWizard_setTimeConstraints.Wizard.Item.Text=Time Constraints
-AppealProcessAdminWizard_setTimeConstraints.Wizard.Page.Title=Step 2:
-AppealProcessAdminWizard_setTimeConstraints.Wizard.Page.Desc=Time Constraints
-Wizard.PageID.2=AppealProcessAdminWizard_setTimeConstraints
+# START NON-TRANSLATABLE
+CategoryRef=CREOLE_BASIC_CASE
+# END NON-TRANSLATABLE
 
-AppealProcessAdminWizard_assignCaseTypes.Wizard.Item.Text=Assign
-AppealProcessAdminWizard_assignCaseTypes.Wizard.Page.Title=Step 3:
-AppealProcessAdminWizard_assignCaseTypes.Wizard.Page.Desc=Assign
-Wizard.PageID.3=AppealProcessAdminWizard_assignCaseTypes
+Cluster.Title.Eligiblity=Eligibility
 
-AppealProcessAdminWizard_confirm.Wizard.Item.Text=Confirm
-AppealProcessAdminWizard_confirm.Wizard.Page.Title=Step 4:
-AppealProcessAdminWizard_confirm.Wizard.Page.Desc=Confirm
-Wizard.PageID.4=AppealProcessAdminWizard_confirm
+Field.Value.NotEligible=The claim is not eligible.
+
+Field.Value.Eligible=The claim is eligible.
+
+Cluster.Title.Entitlement=Entitlement
+
+Field.Label.ObejctiveTypeID=Objective Type ID
+Field.Label.ObejctiveTypeID.Help=The type of the objective.
+
+Field.Label.Entitled=Entitled?
+Field.Label.Entitled.Help=Shows the entitlement for this specific objective. 
+
+Field.Label.Target=Target
+Field.Label.Target.Help=Target
+
+Field.Label.RelatedReference=Related Reference
+Field.Label.RelatedReference.Help=Related Reference
+
+Help.Xref.1.Topicname=CREOLECaseDecision
+

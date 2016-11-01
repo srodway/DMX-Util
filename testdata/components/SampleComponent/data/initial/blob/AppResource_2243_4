@@ -1,40 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM 
-
-  PID 5725-H26
-
-  Copyright IBM Corporation 2010,2012,2014. All rights reserved. 
-
-  US Government Users Restricted Rights - Use, duplication or disclosure
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="OutcomePlanExpectedOutcomeMenu">
-
-  <mc:loader-registry>
-    <mc:loader class="curam.outcomeplanning.tab.impl.OutcomePlanExpectedOutcomeMenuLoader"/>
-  </mc:loader-registry>
-
-
-  <mc:menu-item dynamic="true" id="EditExpectedOutcome" open-as="modal" page-id="OutcomePlan_editExpectedOutcome" title="MenuItem.Title.EditExpectedOutcome" tooltip="MenuItem.Tooltip.EditExpectedOutcome"/>
-  <mc:menu-item dynamic="true" id="AddNote" open-as="modal" page-id="OutcomePlan_addExpectedOutcomeNote" title="MenuItem.Title.AddNote" tooltip="MenuItem.Tooltip.AddNote"/>
-  <mc:menu-item dynamic="true" id="UpdateProgress" open-as="modal" page-id="OutcomePlan_updateExpectedOutcomeProgress" title="MenuItem.Title.UpdateProgress" tooltip="MenuItem.Tooltip.UpdateProgress"/>
-  <mc:menu-item dynamic="true" id="UpdateExpectedEndDate" open-as="modal" page-id="OutcomePlan_updateExpectedOutcomeExpectedEndDate" title="MenuItem.Title.UpdateExpectedEndDate" tooltip="MenuItem.Tooltip.UpdateExpectedEndDate"/>
-  <mc:menu-separator id="OutcomePlanExpectedOutcomeMenuSeparator1"/>
-  <mc:menu-item dynamic="true" id="CompleteExpectedOutcome" open-as="modal" page-id="OutcomePlan_completeExpectedOutcome" title="MenuItem.Title.CompleteExpectedOutcome" tooltip="MenuItem.Tooltip.CompleteExpectedOutcome"/>
-  <mc:menu-item dynamic="true" id="UpdateExpectedOutcomeCompletionDetails" open-as="modal" page-id="OutcomePlan_editExpectedOutcomeCompletionDetails" title="MenuItem.Title.UpdateExpectedOutcomeCompletionDetails" tooltip="MenuItem.Tooltip.UpdateExpectedOutcomeCompletionDetails"/>
-  <mc:menu-item dynamic="true" id="Review" open-as="modal" page-id="OutcomePlan_reviewExpectedOutcome" title="MenuItem.Title.ReviewExpectedOutcome" tooltip="MenuItem.Tooltip.ReviewExpectedOutcome"/>
-  <mc:menu-separator id="OutcomePlanExpectedOutcomeMenuSeparator5"/>
-  <mc:menu-item dynamic="true" id="AddClients" open-as="modal" page-id="OutcomePlan_addClientsToExpectedOutcome" title="MenuItem.Title.AddClients" tooltip="MenuItem.Tooltip.AddClients"/>
-  <mc:menu-item dynamic="true" id="RemoveClients" open-as="modal" page-id="OutcomePlan_removeClientsFromExpectedOutcome" title="MenuItem.Title.RemoveClients" tooltip="MenuItem.Tooltip.RemoveClients"/>
-  
-  
-  <mc:menu-separator id="OutcomePlanExpectedOutcomeMenuSeparator6"/>
-  <mc:menu-item dynamic="true" id="AddFactors" open-as="modal" page-id="OutcomePlan_addFactorsToExpectedOutcome" title="MenuItem.Title.AddFactors" tooltip="MenuItem.Tooltip.AddFactors"/>
-  <mc:menu-item dynamic="true" id="RemoveFactors" open-as="modal" page-id="OutcomePlan_removeFactorFromExpectedOutcome" title="MenuItem.Title.RemoveFactors" tooltip="MenuItem.Tooltip.RemoveFactors"/>
-  <mc:menu-separator id="OutcomePlanExpectedOutcomeMenuSeparator7"/>
-  
-  <mc:menu-item append-ellipsis="false" dynamic="true" id="ViewPrintableDocument" page-id="ViewExpectedOutcomePrintableDocument" title="MenuItem.Title.ViewPrintableDocument" tooltip="MenuItem.Tooltip.ViewPrintableDocument" type="FILE_DOWNLOAD"/>
-  <mc:menu-separator id="OutcomePlanExpectedOutcomeMenuSeparator8"/>
-  <mc:menu-item dynamic="true" id="Delete" open-as="modal" page-id="OutcomePlan_cancelExpectedOutcome" title="MenuItem.Title.DeleteExpectedOutcome" tooltip="MenuItem.Tooltip.DeleteExpectedOutcome"/>
-
-
-</mc:menu-bar>
+navigation-group.Verifications.title=Verifications
+navigation-group.Details.title=Home
+navigation-group.Issues.title=Issues
+navigation-group.ChangeHistory.title=Change History

@@ -1,20 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Page.Title=Existing Application
+Page.Description=You already have an existing saved application of this type.
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="CSSAPTSHome">
+RadioSelection.Title=Choose an Option
+Start.Title=<strong>Start a new application.</strong> This means that your existing saved application will be deleted.
+Retain.Title=<strong>Keep the previously saved application.</strong> This means that you will be returned to your list of applications.
 
-  <!-- No Page Menu -->
-  
-  <!-- No Page Param -->
-  
-  <!-- No Details panel -->
-  <tc:context tab-name="Details.Name.MyWorkspace" tab-title="Details.Title.MyWorkspace"/>
-
-  <!-- No Navigation panel -->
-  <tc:navigation page-id="SampleCSSAppointments_home"/>
-
-</tc:tab-config>

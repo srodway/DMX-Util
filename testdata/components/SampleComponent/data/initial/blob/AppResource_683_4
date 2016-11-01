@@ -6,26 +6,27 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-# This Properties file contains resource Strings for the household advice
+Details.Icon=a
+Leaf.Title.Home=Home
 
-InitialContactAdvice.description={0}
+Leaf.Title.ActionPlans=Action Plans
+Leaf.Title.Allegations=Allegations
+Leaf.Title.Assessments=Assessments
+Leaf.Title.Attachments=Attachments
 
-AdviceItem.startTriageAdvice={participant} is a new client. Start by carrying out {link:Triage:startTriageLink} for {participant}
-AdviceItem.startTriageAdvice.triageLink=Triage 
-#BEGIN, CR00269761, JD
-AdviceItem.startTriageAdvice.startTriageLink.title=Triage
-#END, CR00269761
-AdviceItem.startEstablishingLifeEventAdvice={0} has an existing case/existing cases for {1}. Start by  establishing a Life Event for {0}
-AdviceItem.startEstablishingLifeEventAdvice.lifeEventLink=Life Event
-AdviceItem.applicationVerificationAdviceForIntakeWoker={participant} has an existing application. Confirm whether {participant} has additional evidence or verifications for the {link:Application:applicationHomeLink}
-AdviceItem.applicationVerificationAdviceForIntakeWoker.applicationHomeLink.title=Application
-AdviceItem.applicationVerificationAdviceForIntakeWoker.applicationIntakeWokerLink=Application
-AdviceItem.applicationVerificationAdviceForEligibilityWoker={participant} has an existing application which is Ready For Determination and which must be authorized. Determine eligibility on the {link:Application:applicationHomeLink}. 
-AdviceItem.applicationVerificationAdviceForEligibilityWoker.applicationHomeLink.title=Application
-AdviceItem.applicationVerificationAdviceForEligibilityWoker.applicationEligibilityWokerLink=Application
-AdviceItem.screeningResultsAdvice={0} was recently screened for eligibility and was potentially eligible for {1}.  Review the Screening Results and confirm whether {0} wants to proceed with an application 
-AdviceItem.screeningResultsAdvice.screeningResultsLink=Screening Results
-AdviceItem.triageResultsAdvice={0} was recently triaged and had service recommendations for {1}. Review the Triage Results and confirm whether {0} wants to be referred to any of these services. 
-AdviceItem.triageResultsAdvice.triageResultsLink=Triage Results
-AdviceItem.triageResultsAdviceForPrograms={0} was recently triaged and had service recommendations for {1}. Review the Triage Results and confirm whether {0} wants to be referred to any of these services.
-AdviceItem.triageResultsAdviceForPrograms.triageResultsProgramseLink=Triage Results
+Folder.Title.Participants=Participants
+Folder.Title.Contact=Contact
+Folder.Title.Administration=Administration
+Leaf.Title.CaseMembers=Members
+Leaf.Title.CaseParticipants=Participants
+
+Leaf.Title.ContactLogs=Contact Log
+Leaf.Title.Communications=Communications
+Leaf.Title.Events=Events
+Leaf.Title.MeetingMinutes=Meeting Minutes
+Leaf.Title.Milestones=Milestones
+Leaf.Title.Notes=Notes
+Leaf.Title.RelatedCases=Related Cases
+Leaf.Title.StatusHistory=Status History
+Leaf.Title.Tasks=Tasks
+Leaf.Title.UserRoles=User Roles

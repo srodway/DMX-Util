@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<table name="PROCENACTMENTEVT" override="true">
-<column name="procStartEventID" type="id"/>
-<column name="eventClass" type="text"/>
-<column name="eventType" type="text"/>
-<column name="processToStart" type="text"/>
-<column name="enabled" type="bool"/>
-<column name="lastWritten" type="timestamp"/>
-</table>

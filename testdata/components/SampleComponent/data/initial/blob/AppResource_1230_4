@@ -1,12 +1,49 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Details.Name.SocialEnterpriseCollaboration=Social Enterprise Folders
-Details.Icon=a
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-Leaf.Title.SocialEnterpriseFolders=Social Enterprise Folders
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+    Copyright 2010 Curam Software Ltd.
+    All rights reserved.
+    
+    This software is the confidential and proprietary information of Curam
+    Software, Ltd. ("Confidential Information"). You shall not disclose
+    such Confidential Information and shall use it only in accordance with the
+    terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="ApplicationEligibility">
+    
+      <nc:loader-registry>
+        <nc:loader class="curam.intake.navigation.impl.ApplicationDynamicNavigationLoader"/>
+    </nc:loader-registry>
+    
+    <nc:nodes>
+        
+        <nc:navigation-group id="Summary" title="Folder.Title.Summary">
+            <nc:navigation-page description="Leaf.Description.Summary" id="Summary" page-id="ApplicationSummary" title="Leaf.Title.Summary"/>  
+            <nc:navigation-page description="Leaf.Description.Attachments" id="Attachments" page-id="ApplicationAttachments" title="Leaf.Title.Attachments"/>  
+        </nc:navigation-group>
+        
+        <nc:navigation-page description="Leaf.Description.Clients" id="Clients" page-id="ApplicationClients" title="Leaf.Title.Clients"/>  
+        <nc:navigation-page description="Leaf.Description.Programs" id="Programs" page-id="ApplicationPrograms1" title="Leaf.Title.Programs"/>  
+        <nc:navigation-page description="Leaf.Description.Timers" id="Timers" page-id="ApplicationTimers" title="Leaf.Title.Timers"/>  
+        <nc:navigation-page description="Leaf.Description.Interviews" id="Interviews" page-id="ApplicationInterviews" title="Leaf.Title.Interviews"/>  
+        <nc:navigation-page description="Leaf.Description.EvidenceAndVerifications" id="EvidenceAndVerifications" page-id="ApplicationEvidenceMaintenance" title="Leaf.Title.EvidenceAndVerifications"/>  
+                    
+        <nc:navigation-page description="Leaf.Description.RelatedCases" dynamic="true" id="CaseWithTransfer" page-id="Application_listActionableExistingCasesByApplication" title="Leaf.Title.RelatedCases"/>           
+        <nc:navigation-page description="Leaf.Description.RelatedCases" dynamic="true" id="Cases" page-id="Application_listExistingCasesByApplication" title="Leaf.Title.RelatedCases"/>   
+        
+        
+        <nc:navigation-page description="Leaf.Description.EligibiltyChecks" id="EligibiltyChecks" page-id="ApplicationEligibilityChecks" title="Leaf.Title.EligibiltyChecks"/>    
+            
+        <!-- BEGIN, CR00302810, JD -->   
+        <nc:navigation-group id="Contact" title="Folder.Title.Contact">
+            <nc:navigation-page description="Leaf.Description.QuickNotes" id="QuickNotes" page-id="ApplicationQuickNotes" title="Leaf.Title.QuickNotes"/>
+            <nc:navigation-page description="Leaf.Description.Communications" id="ApplicationCommunications" page-id="Application_listCommunication1" title="Leaf.Title.Communications"/>
+            
+        </nc:navigation-group>
+        <!-- END, CR00302810, JD -->    
+    </nc:nodes> 
+</nc:navigation>

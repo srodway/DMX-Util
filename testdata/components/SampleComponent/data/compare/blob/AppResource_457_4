@@ -1,27 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-	Copyright 2009 Curam Software Ltd.
-	All rights reserved.
-	
-	This software is the confidential and proprietary information of Curam
-	Software, Ltd. ("Confidential Information"). You shall not disclose
-	such Confidential Information and shall use it only in accordance with the
-	terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="FinancialWorkersHome">
+Submenu.Title.New=New
+Submenu.Tooltip.New=New
 
-	<tc:menu id="FinancialWorkersHomeMenu"/>
+MenuItem.Title.LegalAction=Legal Action
+MenuItem.Tooltip.LegalAction=Legal Action
 
-	<!-- Details panel -->
-	<tc:context tab-name="Details.Name.FinancialWorkersWorkspace" tab-title="Details.Title.FinancialWorkersWorkspace"/>
+MenuItem.Title.LegalCategory=Legal Category
+MenuItem.Tooltip.LegalCategory=Legal Category
 
-	<!-- Navigation Panel -->
-	<tc:navigation page-id="Financial_workspace"/>
+MenuItem.Title.LegalStatus=Legal Status
+MenuItem.Tooltip.LegalStatus=Legal Status
 
-
-</tc:tab-config>
+MenuItem.Title.Publish=Publish
+MenuItem.Tooltip.Publish=Publish

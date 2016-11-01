@@ -1,18 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCBirthAndDeathDataRuleSet">
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCBirthAndDeath">
+<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCPhoneNumberDataRuleSet">
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCPhoneNumber">
     <Annotations>
-      <SuccessionSetPopulation/>
+      <SuccessionSetPopulation endDateAttribute="toDate" startDateAttribute="fromDate"/>
     </Annotations>
-    <Attribute name="dateOfBirth">
-      <Annotations/>
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="birthLastName">
+    <Attribute name="phoneExtension">
       <Annotations/>
       <type>
         <javaclass name="java.lang.String"/>
@@ -21,7 +12,7 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="dateOfDeath">
+    <Attribute name="fromDate">
       <Annotations/>
       <type>
         <javaclass name="curam.util.type.Date"/>
@@ -30,10 +21,55 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="mothersBirthLastName">
+    <Attribute name="phoneNumber">
       <Annotations/>
       <type>
         <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="phoneCountryCode">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="phoneType">
+      <Annotations/>
+      <type>
+        <codetableentry table="PhoneType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="phoneAreaCode">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="toDate">
+      <Annotations/>
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="preferredInd">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.Boolean"/>
       </type>
       <derivation>
         <specified/>
@@ -49,7 +85,7 @@
         </ResourceMessage>
       </derivation>
     </Attribute>
-    <Attribute name="person">
+    <Attribute name="participant">
       <Annotations/>
       <type>
         <javaclass name="java.lang.Number"/>
@@ -58,7 +94,7 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="related_person">
+    <Attribute name="related_participant">
       <Annotations/>
       <type>
         <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
@@ -66,7 +102,7 @@
       <derivation>
         <reference attribute="caseParticipantRoleRecord">
           <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="person"/>
+            <reference attribute="participant"/>
           </create>
         </reference>
       </derivation>

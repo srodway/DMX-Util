@@ -1,67 +1,77 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012,2014. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Submenu.Title.New=New
+Submenu.Tooltip.New=New
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009-2011 Curam Software Ltd.
-  All rights reserved.
+MenuItem.Title.ApprovalCheck=Approval Check
+MenuItem.Tooltip.ApprovalCheck=Approval Check
 
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="UnderPaymentCase">
+MenuItem.Title.PaymentOption=New Payment Options
+MenuItem.Tooltip.PaymentOption=New Payment Options
 
-  <tc:page-param name="caseID"/>
+MenuItem.Title.Rate=New Rate
+MenuItem.Tooltip.Rate=New Rate
 
-  <tc:menu id="UnderPaymentCaseMenu"/> 
-  
-  <!-- Details panel -->
-  <tc:context height="140" page-id="ICBenefitUnderPayment_tabDetails"/>
+# BEGIN, CR00260853, GP
+MenuItem.Title.ServiceOffering=Service
+MenuItem.Tooltip.ServiceOffering=Service
+# END, CR00260853
 
-  <!-- See UnderPaymentCase.nav for details of the navigation links. -->
-  <tc:navigation id="UnderPaymentCase"/> 
-  
-  <tc:tab-refresh>
-  
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ICProductSample_modifyHeader"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseOwner"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseOwnerDetails"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_createCaseSupervisor"/>
-  
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_submit"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_activate"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_approve"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_reject"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_suspend"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_unsuspend"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_reactivate"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_close"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_createCaseRelationship"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseRelationshipFromView"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseRelationshipFromList"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_createCertification"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_cancelCertification1"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_modifyCertificationFromList"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_modifyCertificationFromView"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_generatePayment"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Financial_regeneratePayment1"/>    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Financial_cancelPayment1"/>         
-        
-    <tc:onsubmit context="false" menu-bar="true" navigation="false" page-id="Organization_createCaseBookmark"/>
-    <tc:onsubmit context="false" menu-bar="true" navigation="false" page-id="Organization_cancelCaseBookmark"/>
-    
-    
-  </tc:tab-refresh>
-  
+MenuItem.Title.ApprovalCriteria=Approval Criteria
+MenuItem.Tooltip.ApprovalCriteria=Approval Criteria
 
-</tc:tab-config>
+# BEGIN, CR00260853, GP
+Submenu.Title.ServiceOffering=Service
+Submenu.Tooltip.ServiceOffering=Service
+# END, CR00260853
+
+MenuItem.Title.Delete=Delete
+MenuItem.Tooltip.Delete=Delete
+
+MenuItem.Title.Edit=Edit
+MenuItem.Tooltip.Edit=Edit
+
+Submenu.Title.Search=Search
+Submenu.Tooltip.Search=Search
+
+# BEGIN, CR00260853, GP
+MenuItem.Title.ServiceOfferings=Service
+MenuItem.Tooltip.ServiceOfferings=Service
+# END, CR00260853
+
+MenuItem.Title.ServiceGroup=Service Group
+MenuItem.Tooltip.ServiceGroup=Service Group
+
+MenuItem.Title.Training=New Training Requirement
+MenuItem.Tooltip.Training=New Training Requirement
+
+MenuItem.Title.ServiceEvaluationCriterion=New Evaluation Criterion
+MenuItem.Tooltip.ServiceEvaluationCriterion=New Evaluation Criterion
+
+MenuItem.Title.PerformanceMeasures=New Performance Measure
+MenuItem.Tooltip.PerformanceMeasures=New Performance Measure
+
+MenuItem.Title.AbsenceReason=New Absence Reason
+MenuItem.Tooltip.AbsenceReason=New Absence Reason
+
+MenuItem.Title.NewTraining=New Training Requirement
+MenuItem.Tooltip.NewTraining=New Training Requirement
+
+MenuItem.Title.AddExistingEvaluationCriterion=Add Existing Evaluation Criterion
+MenuItem.Tooltip.AddExistingEvaluationCriterion=Add Existing Evaluation Criterion
+
+MenuItem.Title.AddExistingPerformanceMeasure=Add Existing Performance Measure
+MenuItem.Tooltip.AddExistingPerformanceMeasure=Add Existing Performance Measure
+
+MenuItem.Title.AddKeyword=Add Keyword
+MenuItem.Tooltip.AddKeyword=Add Keyword
+# BEGIN, CR00416878, HAR
+MenuItem.Title.Evidence=New Evidence
+MenuItem.Tooltip.Evidence=New Evidence
+#END, CR00416878

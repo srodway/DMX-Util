@@ -1,21 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Leaf.Title.Home=Home
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2010 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="IntakePersonSearch">
-  <nc:nodes>
-    <nc:navigation-page id="PersonSearchHome" page-id="CIPerson_search" title="Leaf.Title.Home" visible="true"/>
-  </nc:nodes>
-  
-</nc:navigation>
+Folder.Title.Administration=Administration
+Leaf.Title.Administrators=Administrators
+Leaf.Title.Roles=Roles
+
+Folder.Title.Contact=Contact
+Leaf.Title.Addresses=Addresses
+Leaf.Title.Contacts=Contacts
+Leaf.Title.EmailAddresses=Email Addresses
+Leaf.Title.PhoneNumbers=Phone Numbers
+Leaf.Title.WebAddresses=Web Addresses
+
+Folder.Title.Communications=Communications
+Leaf.Title.CommunicationExceptions=Communication Exceptions
+Leaf.Title.Interactions=Interactions
+
+Folder.Title.Financial=Financial
+Leaf.Title.BankAccounts=Bank Accounts
+Leaf.Title.Contracts=Contracts
+Leaf.Title.Returns=Returns
+
+# BEGIN, CR00333624, SSK
+Leaf.Title.AlternativeIds=Alternative Identifier(s)
+# END, CR00333624
+Leaf.Title.Attachments=Attachments
+Leaf.Title.Notes=Notes
+Leaf.Title.Services=Services
+Leaf.Title.Tasks=Tasks
+
+Leaf.Title.Financials=Transactions
+Leaf.Title.Communications=Communications

@@ -1,26 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009 Curam Software Ltd.
-  All rights reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Submenu.Title.New=New
+Submenu.Tooltip.New=New
 
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="CitizenSelfServiceTab">
-  
-  <!--<tc:menu id="CitizenSelfServiceMenu"/>-->
-  
-  <!-- No details panel -->
-  <tc:context tab-name="Details.Name.CitizenSelfService" tab-title="Details.Title.CitizenSelfService"/>
+MenuItem.Title.NewAuditPlan=New Audit Plan
+MenuItem.Tooltip.NewAuditPlan=Audit Plan
 
-  <!-- There is no page to link to yet. -->
-  <tc:navigation id="CitizenSelfServiceNav"/> 
+Submenu.Title.Search=Search
+Submenu.Tooltip.Search=Find an audit plan or a case audit.
 
-</tc:tab-config>
+MenuItem.Title.AuditPlan=Audit Plan
+MenuItem.Tooltip.AuditPlan=Audit Plan
+
+MenuItem.Title.CaseAudit=Case Audit
+MenuItem.Tooltip.CaseAudit=Case Audit

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!--
   Licensed Materials - Property of IBM
   
@@ -7,8 +7,117 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 -->  
-
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains">
-<xsd:import namespace="http://www.curamsoftware.com/BaseDomains" />
-<xsd:include schemaLocation="IEGDomains"/>
-</xsd:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains">
+    <xs:import namespace="http://www.curamsoftware.com/BaseDomains" />
+    <xs:include schemaLocation="IEGDomains" />
+    <xs:simpleType name="RISK_REASSESSMENT_INDICATOR">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RiskReassessmentIndicator</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RISK_REASSESSMENT_PRIORINVESTIGATIONS">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RRAPriorInvestigations</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RISK_REASSESSMENT_CHILDCHARACTERISTICS">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RRAChildCharacteristics</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RISK_REASSESSMENT_NOTADDRESSEDABUSE">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RRANotAddressedAbuse</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RISK_REASSESSMENT_PROBADULTRELATIONSHIPS">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RRAProbRelationships</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RISK_REASSESSMENT_PCCAREINCONSISTENT">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RRAPCCareInconsistent</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RISK_REASSESSMENT_CASEPLANOBJECTIVES">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RRACasePlanObjectives</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RISK_REASSESSMENT_OVERRIDE">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RRAOverride</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RISK_REASSESSMENT_RECOMMENDED_DECISION">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RRARecommendedDecision</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RISK_REASSESSMENT_DISCRETIONARY_OVERRIDE">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RRADiscretionaryOverride</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="REASSESSMENT_CLASSIFICATION_DIVISION_TYPE">
+      <xs:annotation>
+        <xs:appinfo>
+          <d:options>
+            <d:option name="code-table-name">ClassDivisionType</d:option>
+          </d:options>
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="IEG_CODETABLE_CODE"/>
+    </xs:simpleType>
+</xs:schema>

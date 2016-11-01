@@ -1,64 +1,33 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Page.Title=Provider Details
-Page.Description=Details about the Provider and the Service selected.
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+  
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010-2011 Curam Software Ltd.
+  All rights reserved.
 
-GET.DIRECTIONS=Get Directions
-GET.DIRECTIONS.TOOLTIP=Click here for assistance in finding this provider.
-REFER.ME=Refer Me
-REFER.ME.TOOLTIP=Click here to send your details to this provider.
-PRINT=Print
-PRINT.TOOLTIP=Click here to print this screen for your records. 
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="FacilityManagerProviderHome">
 
-No.Phone=No phone available
-No.Email=No email available
-No.Web=No web address available
+  <tc:page-param name="concernRoleID"/>
+  
+  <tc:menu id="FacilityManagerProviderHomeMenu"/> 
 
-Contact.Information=Contact Information
+  <tc:context height="127" page-id="ProviderManagement_viewProviderTabDetailsForFacilityManager"/> 
+  
+  <tc:navigation id="FacilityManagerProviderHome"/> 
 
-Other.Locations=Other Locations
-
-Service.Description=Service Description
-
-Other.Services=Other Services
-
-Specialties=Specialties
-
-Intake.Procedure=Intake Procedure
-
-Eligibility=Eligibility
-
-Accreditations=Accreditations
-
-Fees=Fees
-
-Areas.Served=Areas Served
-
-Documents.Needed=Documents Needed
-
-Map=Map
-
-# START NON-TRANSLATABLE
-Pin.Icon.Height=19
-Pin.Icon.Width=17
-
-List.Icon.Height=19
-List.Icon.Width=17
-
-Email.Icon.Location=../Images/email.png
-Email.Icon.Height=19
-Email.Icon.Width=17
-# END NON-TRANSLATABLE
-
-Empty.Title=  
-
-Button.Dismiss=Close
-Button.Dismiss.Tooltip=Click here to close this window
-
-No.Infomation.Text=None
+  <tc:tab-refresh>
+  
+    <!-- BEGIN, CR00273521, MR -->
+    <tc:onload context="true" page-id="ProviderManagement_providerHomeForFacilityManager"/>
+    <!-- END, CR00273521 -->
+  </tc:tab-refresh>
+  
+</tc:tab-config>

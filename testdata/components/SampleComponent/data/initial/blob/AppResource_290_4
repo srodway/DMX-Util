@@ -1,40 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
-
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
-    <identifier name="Select Life Event" />
-    <server alias="DISPLAY" class="CitizenLifeEvents" method="listLifeEventTypes" />
-    <header>
-        <title id="SelectApplication.Title" />
-        <description id="SelectApplication.Description" />
-        <icon id="title_selectprogram" />
-    </header>
-    <content>
-        <container>
-            <!--<title id="Applications.Title" />
-            <description id="Applications.Description" />
-            <help id="Applications.Help" />-->
-            <iterator>
-                <list source="/DISPLAY/xmlString/life-event-types[]">
-                    <title id="Applications.Title" />
-                    <description id="Applications.Description" />
-                    <field source="/DISPLAY/xmlString/life-event-types[]/life-event[]/id" target="/ans/lifeEventID" type="CW_APPLICATION_SELECT" width="3">
-                        <title source="/DISPLAY/xmlString/life-event-types[]/life-event[]/name" />
-                        <description source="/DISPLAY/xmlString/life-event-types[]/life-event[]/description" />
-                    </field>
-                </list>
-            </iterator>
-        </container>
-    </content>
-    <navigation>
-		<nav-button name="next" type="action" />
-        <nav-button name="exit" page="ResolveCitizenHome" page-type="resolve" />
-    </navigation>
-</page>
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="CodetableMenu">
+  
+  <mc:menu-item id="ChangeName" open-as="modal" page-id="System_modifyCodetableNameFromList" title="MenuItem.Title.ChangeName" tooltip="MenuItem.Tooltip.ChangeName"/>
+  
+  <mc:menu-item id="NewItem" open-as="modal" page-id="System_createCodetableItem" title="MenuItem.Title.NewItem" tooltip="MenuItem.Tooltip.NewItem"/>
+  
+  <mc:menu-item id="ChangeDefaultValue" open-as="modal" page-id="System_modifyCodetableDefault" title="MenuItem.Title.ChangeDefaultValue" tooltip="MenuItem.Tooltip.ChangeDefaultValue"/>
+  
+  <mc:menu-item id="Delete" open-as="modal" page-id="System_cancelCodetable" title="MenuItem.Title.Delete" tooltip="MenuItem.Tooltip.Delete"/>
+  
+</mc:menu-bar>

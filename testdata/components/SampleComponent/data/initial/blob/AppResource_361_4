@@ -1,17 +1,24 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2013. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-AbstractBasicProductDecisionDetailsRuleSet.label.1=Creates an Objective Timeline for display for each Objective Timeline on this case
-AbstractBasicProductDecisionDetailsRuleSet.label.2=Find the 0-based index of the current item in the list.  Used to provide a numerical key for each objective timeline for display.
-AbstractBasicProductDecisionDetailsRuleSet.label.3=Further display details for an objective, namely its list of tags.
-AbstractBasicProductDecisionDetailsRuleSet.label.4=The display data for an objective timeline.
-AbstractBasicProductDecisionDetailsRuleSet.label.5=The underlying objective timeline calculated as part of the case's entitlement.
-AbstractBasicProductDecisionDetailsRuleSet.label.6=The 0-based index of this objective timeline from the overall list of objective tlmelines for the case.  Used as a key so that the child tag timelines for display can be linked back to the parent objective timeline for display.
-AbstractBasicProductDecisionDetailsRuleSet.label.7=Creates a Tag Timeline for display for each Tag Timeline on this Objective Timeline
-AbstractBasicProductDecisionDetailsRuleSet.label.8=The display data for a tag timeline.
-AbstractBasicProductDecisionDetailsRuleSet.label.9=The underlying tag timeline calculated as part of the case's entitlement.
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010-2011 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="AuditorCaseAuditHomeMenu">
+
+  <mc:menu-item id="Edit" open-as="modal" page-id="CaseAudit_modifyCaseAudit" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
+
+  <mc:menu-separator id="sep1"/> 
+
+  <mc:menu-item id="CaseAuditSearch" page-id="CaseAudit_searchCaseAudit" title="MenuItem.Title.CaseAuditSearch" tooltip="MenuItem.Tooltip.CaseAuditSearch"/>
+      
+</mc:menu-bar>

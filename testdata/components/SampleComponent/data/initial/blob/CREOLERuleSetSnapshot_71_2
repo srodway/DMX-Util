@@ -1,14 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCPhoneNumberRuleSet">
-  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="PDCPhoneNumber">
-    <Attribute name="phoneExtension">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
+<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCEmailAddressDataRuleSet">
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCEmailAddress">
+    <Annotations>
+      <SuccessionSetPopulation endDateAttribute="toDate" startDateAttribute="fromDate"/>
+    </Annotations>
     <Attribute name="fromDate">
       <Annotations/>
       <type>
@@ -18,34 +12,16 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="phoneNumber">
+    <Attribute name="emailAddressType">
       <Annotations/>
       <type>
-        <javaclass name="java.lang.String"/>
+        <codetableentry table="EmailType"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="phoneCountryCode">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="phoneType">
-      <Annotations/>
-      <type>
-        <codetableentry table="PhoneType"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="phoneAreaCode">
+    <Attribute name="emailAddress">
       <Annotations/>
       <type>
         <javaclass name="java.lang.String"/>
@@ -70,6 +46,16 @@
       </type>
       <derivation>
         <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="successionID"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
     <Attribute name="participant">

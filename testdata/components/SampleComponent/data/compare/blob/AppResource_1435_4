@@ -1,70 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Page.Title=Your Next Step
+Page.Description=Now that you have an idea of what benefits you may be able to get, here are the next steps. When applying for benefits, you can <strong>apply online, print an application form</strong> or <strong>call into your local office</strong>. If you wish to make an appointment with your local office, you can print out the application forms and the information we have captured with your list of potential eligibility. If you do not wish to progress with the application at the moment, you can create an account and come back at a later stage to complete the process.
+Page.RelatedPrograms=Related Programs 
+Page.RelatedPrograms.Label=Program information
 
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
-    <identifier name="Select Application" />
-    <server alias="DISPLAY" method="listForms" />
-    <header>
-        <title id="PrintApplicationForms.Title" />
-        <description id="SelectApplication.Description" />
-        <icon id="title_print_app_forms" />
-    </header>
-    <content>
-        <container>
-            <title id="PrintApplicationForms.Select.Title" />
-            <description id="PrintApplicationForms.Select.Description" />
-            <help id="PrintApplicationForms.Select.Help" />
-            <list>
-                <field type="CW_RESOURCE_NAME" source="/DISPLAY/result/form[]/name" width="20">
-                    <title id="PrintApplicationForms.Label.Form" />
-                    <param name="label-extension" value="label" />
-                    <param name="uri-extension" value="uri" />
-                    <param name="open-new" value="true"/>
-                    <param name="title" id="PrintApplicationForms.Download.Link.Label"/>
-                    <param name="title-param" source="/DISPLAY/result/form[]/name"/>
-                    <param name="title-param-separator" value=" for "/>
-                </field>
-                <field type="CW_RICH_STRING" source="/DISPLAY/result/form[]/description" width="40">
-                    <title id="PrintApplicationForms.Label.Description" />
-                </field>
-                <field type="CW_HYPERLINKS" source="/DISPLAY/result/form[]/programs/program[]" width="15">
-                    <title id="PrintApplicationForms.Label.Programs" />
-                    <param name="label-extension" value="label" />
-                    <param name="uri-extension" value="uri" />
-                    <param name="is-list-capable" value="true" />
-                    <param name="open-new" value="true"/>
-                    <param name="title" id="PrintApplicationForms.Program.Link.Label"/>
-                    <param name="title-param" source="/DISPLAY/result/form[]/name"/>
-                </field>
-                <container style="cw-render-children" source="/DISPLAY/result/form[]" width="25">
-                    <title id="PrintApplicationForms.Label.Where" />
-                    <param name="use-new-lines" value="true" />
-                    <container style="cw-text-pluggable">
-                        <description id="PrintApplicationForms.Where.Label" />
-                        <field type="CW_HYPERLINKS" source="/DISPLAY/result/form[]/pdfFormID">
-                            <title id="PrintApplicationForms.Label.Search" />
-                            <param name="uri-prefix" value="SearchPDFOffice.jspx?pdfFormID="/>
-                            <param name="is-popup" value="true" />
-                            <param name="in-description" value="true" />
-                            <param name="prefix" value="" />
-                            <param name="popup-height" value="350" />
-                            <param name="popup-width" value="550" />
-                            <param name="title" id="PrintApplicationForms.Apply.Link.Label"/>
-                            <param name="title-param" source="/DISPLAY/result/form[]/name"/>
-                        </field>
-                    </container>
-                </container>
-            </list>
-        </container>
-    </content>
-    <navigation>
-        <nav-button type="link" name="back" page="SelectApplication" />
-    </navigation>
-</page>
+ApplyOnline.Title=Apply Online for the following programs
+ApplyOnline.Description=Indicates Potential Eligibility
+ApplyOnline.Help=You can apply online for a program by completing an online application. This is very similar to the type of form that you have just completed for screening. It may take you a little longer as we may ask you more questions. However, your application will be sent directly to us for processing when you are finished. This will help us to process your application faster. An online application may allow you to apply for more than one program at a time. The list below tells you the names of the programs that you may also apply for using the online application. You only have to complete the application one time. You do not need to complete it for each program.
+ApplyOnline.Link.Label=Apply Online
+ApplyOnline.Link.Title=Apply online
+ApplyOnline.Related.Programs=When you apply online for this program, you may also use the same online application to apply for:
+
+ApplyForm.Title=Print Out and Mail application forms for the following programs
+ApplyForm.Help=You can open and print an application form. You can then fill in the application form as you would for any standard paper form. Use the Where will i mail this to? link to find the name and address of the local office to which you should mail the application. Of course, you can bring the application in person to the office if you prefer. You may be able to use the same application form to apply for more than one program. For each program listed below, you are also told the programs that you can apply for using the same application form.
+ApplyForm.Link.Label=Where will I mail this to?
+ApplyForm.Link.Label.Accessibility=Mailing address link
+ApplyForm.Link.Title=Application form
+ApplyForm.Related.Programs=When you mail an application for for this program, you may also use the same application form to apply for:
+
+ApplyInPerson.Title=Apply at your local office for the following programs
+ApplyInPerson.Help=You can apply for any of the programs in the list below by calling into your local office. Use the Where is my local office? link to find out the name and address of the local office that you should visit. If the program that you want to apply for is available as an online application, it is a good idea to make the application online as we may be able to process your application faster.
+ApplyInPerson.Link.Label=Where is my local office?
+ApplyInPerson.Link.Title=Location of my local office

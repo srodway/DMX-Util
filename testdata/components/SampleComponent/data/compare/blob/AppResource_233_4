@@ -1,48 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2009-2010 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ProviderManagementAdminMenu">
-    
-    <mc:submenu id="NEW" title="Submenu.Title.New" tooltip="Submenu.Tooltip.New">
-        
-        <!-- NOTE turning off modals on all menu-items due to error with JDE004 -->
-        <!-- These need to be set before delivery -->
-        <mc:menu-item id="Certification" open-as="modal" page-id="ProviderManagement_createCertification" title="MenuItem.Title.Certification" tooltip="MenuItem.Tooltip.Certification"/>        
-      
-        <mc:submenu id="Configuration" title="Submenu.Title.Configuration" tooltip="Submenu.Tooltip.Configuration">  
-            <mc:submenu id="AttendanceTracking" title="Submenu.Title.AttendanceTracking" tooltip="Submenu.Tooltip.AttendanceTracking">
-                <mc:menu-item id="AbsenceReasons" open-as="modal" page-id="ProviderManagement_createAgencyAbsenceReasonConfiguration" title="MenuItem.Title.AbsenceReasons" tooltip="MenuItem.Tooltip.AbsenceReasons"/>
-                <mc:menu-item id="AttendancePaymentFrequency" open-as="modal" page-id="ProviderManagement_createAttendancePaymentFrequency" title="MenuItem.Title.AttendancePaymentFrequency" tooltip="MenuItem.Tooltip.AttendancePaymentFrequency"/>
-                <mc:menu-item id="RosterGenerationFrequency" open-as="modal" page-id="ProviderManagement_createRosterGenerationFrequency" title="MenuItem.Title.RosterGenerationFrequency" tooltip="MenuItem.Tooltip.RosterGenerationFrequency"/>
-            </mc:submenu>             
-        </mc:submenu>
-        <mc:menu-item id="ServiceGroup" open-as="modal" page-id="ProviderManagement_createServiceGroup" title="MenuItem.Title.ServiceGroup" tooltip="MenuItem.Tooltip.ServiceGroup"/>
-        <mc:menu-item id="ServiceOffering" open-as="modal" page-id="ProviderManagement_createServiceOffering" title="MenuItem.Title.ServiceOffering" tooltip="MenuItem.Tooltip.ServiceOffering"/>
-        <mc:menu-item id="Icon" open-as="modal" page-id="ProviderManagement_addSpecialtyTypeIcon" title="MenuItem.Title.Icon" tooltip="MenuItem.Tooltip.Icon"/>
-        
-        <mc:submenu id="Training" title="Submenu.Title.Training" tooltip="Tooltip.Title.Training">
-            <mc:menu-item id="TrainingRequirements" open-as="modal" page-id="ProviderManagement_listLicenseTypes" title="MenuItem.Title.TrainingRequirements" tooltip="MenuItem.Tooltip.TrainingRequirements"/>
-            <mc:menu-item id="TrainingItem" open-as="modal" page-id="ProviderManagement_createTraining" title="MenuItem.Title.TrainingItem" tooltip="MenuItem.Tooltip.TrainingItem"/>            
-        </mc:submenu>      
-       
-    </mc:submenu>
-    <mc:submenu id="Search" title="Submenu.Title.Search" tooltip="Submenu.Tooltip.Search">
-        <mc:menu-item id="SearchServiceOfferings" page-id="ProviderManagement_searchServiceOffering" title="MenuItem.Title.SearchServiceOfferings" tooltip="MenuItem.Tooltip.SearchServiceOfferings"/>
-        <mc:menu-item id="SearchServiceGroups" page-id="ProviderManagement_searchServiceGroup" title="MenuItem.Title.SearchServiceGroup" tooltip="MenuItem.Tooltip.SearchServiceGroup"/>
-        <mc:menu-item id="SearchTraining" page-id="ProviderManagement_searchTrainingPopup" title="MenuItem.Title.SearchTraining" tooltip="MenuItem.Tooltip.SearchTraining"/>           
-       
-    </mc:submenu> 
-    
-</mc:menu-bar>
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Page.Title.Dashboard=Dashboard
+# BEGIN, CR00333548, SSK
+page.title.EvidenceFlow=Evidence Flow
+# END, CR00333548
+Page.Title.Active=Active Evidence
+Page.Title.InEdit=In Edit Evidence
+Page.Title.Verifications=Verifications
+page.title.issues=Issues
+Page.Title.Certifications=Certifications
+Page.Title.IncomingEvidence=Incoming Evidence
+Smart.Panel.Title=Smart Panel

@@ -6,27 +6,11 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Submenu.Title.Manage=Manage
-Submenu.Icon.Manage=Manage
-Submenu.Tooltip.Manage=Manage
-MenuItem.Title.Edit=Edit
-MenuItem.Icon.Edit=Edit
-MenuItem.Tooltip.Edit=Edit
-MenuItem.Title.SpecifyProviderDetails=Specify Provider
-MenuItem.Icon.SpecifyProviderDetails=Specify Provider
-MenuItem.Tooltip.SpecifyProviderDetails=Specify the provider details
-MenuItem.Title.UndoProviderSelection=Undo Provider Selection
-MenuItem.Icon.UndoProviderSelection=Undo Provider Selection
-MenuItem.Tooltip.UndoProviderSelection=Removes the selected provider.
-MenuItem.Title.AddFactors=Add Factors
-MenuItem.Icon.AddFactors=Add Factors
-MenuItem.Tooltip.AddFactors=Associate additional factors with this referral
-MenuItem.Title.RemoveFactors=Remove Factors
-MenuItem.Icon.RemoveFactors=Remove Factors
-MenuItem.Tooltip.RemvoeFactors=Remove the association for the factors with this referral
-MenuItem.Title.AddAttachment=New Attachment
-MenuItem.Icon.AddAttachment=New Attachment
-MenuItem.Tooltip.AddAttachment=Adds an attachment to this referral
-MenuItem.Title.Delete=Delete
-MenuItem.Icon.Delete=Delete
-MenuItem.Tooltip.Delete=Delete this referral
+Grp1.Title=Asthma Adult
+Q1.Label=Q1 - What step of the treatment plan is the claimant on?
+Q1.HelpText=During the treatment of Asthma there are three stages a patient may be on. If you are unsure of which step of the treatment plan you are on please contact your personal doctor who will be able to advise you on this.
+Q2.Label=Q2 - What is the claimants peak flow/FEV1 reading?
+Q2.HelpText=The peak flow meter measures the patient's maximum ability to exhale, or peak expiratory flow rate (PEFR or PEF).  Your personal doctor will have taken these readings every time you have visited him/her in relation to your asthma.
+Q3.Label=Q3 - What are the effects of the symptoms and signs?
+Q3.HelpText=You have three choices here; "Occur daily minor effect", "Occur daily moderate affect" or "Occur daily major affect". This is to rate how much the condition affects you on a daily basis. Your answer will be verified by your personal doctor.
+Summary.Title=Summary for the Asthma Adult

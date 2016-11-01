@@ -6,11 +6,14 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Details.Name.LocationStructure=Location Structure
-Details.Icon.LocationStructure=Location Structure
-Details.Title.LocationStructure=Location Structure
+Number.Wizard.Pages=2
 
-Page.Title.Home=Home
-Page.Title.Locations=Locations
-Page.Title.treeView=Tree View
-Page.Title.AdditionalDetails=Additional Details
+IssueDelivery_selectEvidenceIssueTypeForPDWizard.Wizard.Item.Text=Issue
+IssueDelivery_selectEvidenceIssueTypeForPDWizard.Wizard.Page.Title=Step 1:
+IssueDelivery_selectEvidenceIssueTypeForPDWizard.Wizard.Page.Desc=Issue
+Wizard.PageID.1=IssueDelivery_selectEvidenceIssueTypeForPDWizard
+
+IssueDelivery_createIssueForPDWizard.Wizard.Item.Text=Details
+IssueDelivery_createIssueForPDWizard.Wizard.Page.Title=Step 2:
+IssueDelivery_createIssueForPDWizard.Wizard.Page.Desc=Details
+Wizard.PageID.2=IssueDelivery_createIssueForPDWizard

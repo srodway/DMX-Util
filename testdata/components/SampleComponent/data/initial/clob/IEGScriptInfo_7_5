@@ -3,105 +3,262 @@
   Licensed Materials - Property of IBM
   
   Copyright IBM Corporation 2012. All Rights Reserved.
-  
+ 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 -->
 <ieg-script
-  config-properties="DA_ieg-config"
-  finish-page="DecisionAssistApplication_saveAnswers"
-  quit-page="DecisionAssistApplication_saveAnswers"
+  config-properties="SDMAssessmentIEGConfig"
+  finish-page="AssessmentDelivery_executeAssessment"
+  quit-page="AssessmentScript_exit"
   show-progress-bar="false"
   show-sections="false"
+  validate-save-and-exit="true"
 >
   <identifier
-    id="AsthmaAdultV1"
+    id="SDMCGSN"
     scriptversionnumber="1"
     type="DecisionAssist"
   />
   <section>
-    <title id="Section.Title"/>
+    <title id="Section.AssessmentDetails.Title">Assessment Details Section</title>
     <question-page
-      entity="AsthmaAdult"
-      id="AsthmaAdultPage"
+      entity="Person"
+      id="CaregiverStrengthNeeds"
       progress="0"
       read-only="false"
+      set-focus="true"
       show-back-button="false"
       show-exit-button="true"
       show-next-button="true"
       show-person-tabs="false"
-      show-save-exit-button="false"
+      show-save-exit-button="true"
     >
-      <title id="Grp1.Title"/>
-      <description id="Grp1.Description"/>
+      <title id="QuestionPage_CaregiverStrengthNeeds.Title">SDM\u00AE Caregiver Strengths and Needs Assessment</title>
       <cluster>
-        <title id="Grp1.Title"/>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <display-text id="DisplayText.label">&lt;p style="font-family:tahoma;font-size:12px;color:#4e4e4e"&gt;The caregiver strengths and needs assessment (CGSNA) instrument is used to systematically identify critical family strengths and needs related to the caregiver and to help develop effective case plans. The following items should be considered for each caregiver. Worker should base selection on his/her assessment for each item, taking into account the family's perspective, child's perspective where appropriate, worker observations, collateral contacts, and available records. Refer to accompanying definitions to determine the most appropriate response.&lt;/p&gt;</display-text>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          display="horizontal"
+          entity="Person"
+          id="substanceAbuse"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="ListQuestion.SubstanceAbuse">SN1. Substance Abuse/Use</label>
+          <description id="questionDescription.substanceAbuse">Substances include alcohol, illegal drugs, inhalants, prescription/over-the-counter drugs.</description>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="help.SubstanceAbuse">&lt;b&gt;a. Teaches and demonstrates healthy understanding of alcohol and drugs. &lt;/b&gt;Caregiver may use alcohol or prescribed drugs; however, use does not negatively affect parenting skills and functioning, and caregiver teaches and demonstrates an understanding of the choices made about use or abstinence and the effects of alcohol and drugs on behavior and society. &lt;br /&gt;&lt;b&gt;b. Alcohol or prescribed drug use or no use. &lt;/b&gt;Caregiver may have a history of substance abuse or may currently use alcohol or prescribed drugs; however, it does not negatively affect parenting skills and functioning, or caregiver does not use alcohol or drugs. &lt;br/&gt;&lt;b&gt;c. Alcohol or drug abuse. &lt;/b&gt;Caregiver continues to use despite negative consequences in some areas such as family, social, health, legal, or financial. Needs help to achieve and/or maintain abstinence from alcohol or drugs. &lt;br/&gt;&lt;b&gt;d. Alcohol or drug dependency. &lt;/b&gt;Caregiver's use of alcohol or drugs results in behaviors that impede ability to meet his/her own and/or his/her child's basic needs. Experiences some degree of impairment in most areas including family, social, health, legal, and financial. Needs intensive structure and support to achieve abstinence from alcohol or drugs.</help-text>
+        </list-question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          entity="Person"
+          id="domesticViolence"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="Question.HouseholdRelationships">SN2. Household Relationships/Domestic Violence</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="help.HouseholdRelationships">&lt;b&gt;a. Supportive. &lt;/b&gt;Internal/external stressors (i.e., illness, financial problems, divorce, special needs) may be present, but household maintains positive interactions (i.e., mutual affection, respect, open communication, empathy) and shares responsibilities that are mutually agreed upon by household members. Household members mediate disputes and promote non-violence in the home. Individuals are safe from threats, intimidation, or assaults by household members.&lt;br /&gt;&lt;b&gt;b. Minor/occasional discord. &lt;/b&gt;Internal/external stressors are present, but household is coping despite some disruption of positive interactions. Conflicts may be resolved through less adaptive strategies such as avoidance; however, individuals do not control each other or threaten physical or sexual assault within the household. &lt;br /&gt;&lt;b&gt;c. Frequent discord. &lt;/b&gt;Internal/external stressors are present, and household is consistently experiencing increased disruption of positive interactions coupled with lack of cooperation and/or emotional/verbal abuse. Custody and visitation issues are characterized by frequent conflicts. Caregiver's pattern of adult relationships creates significant stress for the child. Adult relationships are characterized by occasional physical outbursts that do not result in injuries and/or controlling behavior that results in isolation or restriction of activities. Both perpetrator and victim seek help in reducing threats of violence. &lt;br /&gt;&lt;b&gt;d. Chronic discord. &lt;/b&gt;Internal/external stressors are present, and household experiences minimal or no positive interactions. Custody and visitation issues are characterized by severe conflict, such as multiple instances of malicious reports to law enforcement and/or CPS. Caregiver's pattern of adult relationships place the child at risk for maltreatment and/or contribute to severe emotional distress. One or more household members use regular and/or severe physical violence. Individuals engage in physically assaultive behaviors toward household members. Violent or controlling behavior has resulted in injury (i.e., bruises, cuts, burns, welts, broken bones, etc.).</help-text>
+        </list-question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          entity="Person"
+          id="socialSupportSystem"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="NewListQuestionLabelID_1315562362219">SN3. Social Support System</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="help.SocialSupportSystem">&lt;b&gt;a. Strong support system. &lt;/b&gt;Family regularly engages with a strong, constructive, mutual-support system. Interacts with extended family, friends, cultural, religious, and/or community support or services that provide a wide range of resources. &lt;br /&gt;&lt;b&gt;b. Adequate support system. &lt;/b&gt;As needs arise, family uses extended family, friends, cultural, religious, and community resources to provide support and/or services such as childcare, transportation, supervision, role-modeling for parents and children, parenting and emotional support, guidance, etc. &lt;br /&gt;&lt;b&gt;c. Limited support system. &lt;/b&gt;Family has limited support system, is isolated, or is reluctant to use available support. Caregiver perceives services and supports as unavailable or access as limited. Individuals may experience conflict with cultural/community identity that creates difficulties and/or cause internal conflict. &lt;br /&gt;&lt;b&gt;d. No support system. &lt;/b&gt;Family has no support system and does not utilize extended family and community resources. Connections with potential support networks are unavailable or perceived as unavailable due to lack of understanding of cultural/community and/or language differences. Household members experience conflict with cultural/community identity that is reflected in behavior. &lt;br /&gt;</help-text>
+        </list-question>
+      </cluster>
+      <cluster entity="Person">
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          entity="Person"
+          id="parentingSkills"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="Question.ParentingSkills">SN4. Parenting Skills</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="Help.ParentingSkills">&lt;b&gt;a. Strong skills. &lt;/b&gt;Caregiver displays good knowledge and understanding of age-appropriate parenting skills and integrates use on a daily basis. Caregiver expresses hope for and recognizes the child's abilities and strengths and encourages participation in family and community. Caregiver advocates for family and responds to changing needs. &lt;br /&gt;&lt;b&gt;b. Adequately parents and protects the child. &lt;/b&gt;Caregiver displays adequate, age-appropriate parenting patterns for the child in areas of expectations, discipline, communication, protection, and nurturing. Caregiver has basic knowledge and skills to parent. &lt;br /&gt; &lt;b&gt;c. Inadequately parents and protects the child. &lt;/b&gt;Improvement of basic parenting skills is needed by caregiver. Caregiver has some unrealistic expectations and gaps in parenting skills, demonstrates poor knowledge of age-appropriate disciplinary methods, and/or lacks knowledge of child development that interferes with effective parenting. &lt;br /&gt;&lt;b&gt;d. Destructive/abusive parenting. &lt;/b&gt;Caregiver displays destructive/abusive parenting patterns that result in harm to the child.</help-text>
+        </list-question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          display="horizontal"
+          entity="Person"
+          id="mentalHealthCopingSkills"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="ListQuestion.MentalHealth">SN5. Mental Health/Coping Skills</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="help.mentalHealth">&lt;b&gt;a. Strong coping skills. &lt;/b&gt; Caregiver demonstrates the ability to deal with adversity, crises, and long-term problems in a constructive manner. Demonstrates realistic, logical thinking and judgment. Displays resiliency; has a positive, hopeful attitude. &lt;br /&gt;&lt;b&gt;b. Adequate coping skills. &lt;/b&gt;Caregiver demonstrates emotional responses that are consistent with circumstances; displays no apparent inability to cope with adversity, crises, or long-term problems. &lt;br /&gt;&lt;b&gt;c. Mild to moderate symptoms. &lt;/b&gt; Caregiver displays periodic mental health symptoms including, but not limited to, depression, low self-esteem, or apathy. Caregiver has occasional difficulty dealing with situational stress, crises, or problems. &lt;br /&gt;&lt;b&gt;d. Chronic/severe symptoms. &lt;/b&gt;Caregiver displays chronic, severe mental health symptoms including, but not limited to, depression, apathy, or severe low self esteem. These symptoms impair the caregiver's ability to perform in one or more areas of parental functioning, employment, education, or provision of food and shelter. &lt;br /&gt;</help-text>
+        </list-question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          display="horizontal"
+          entity="Person"
+          id="resourceManagementBasicNeeds"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="Question.ResourceManagement">SN6. Resource Management/Basic Needs</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="help.ResourceManagement">&lt;b&gt;a. Resources sufficient to meet basic needs and are adequately managed. &lt;/b&gt; Caregiver has a history of consistently providing safe, healthy, and stable housing; nutritional food; and clothing. &lt;br /&gt;&lt;b&gt;b. Resources are limited but are adequately managed. &lt;/b&gt; Caregiver provides adequate housing, food, and clothing to meet basic needs. &lt;br /&gt;&lt;b&gt;c. Resources are insufficient or not well-managed. &lt;/b&gt; Caregiver provides housing, but it does not meet the basic needs of the child due to such things as inadequate plumbing, heating, wiring, or housekeeping. Food and/or clothing do not meet the child's basic needs. Family may be homeless; however, there is no evidence of harm or threat of harm to the child. &lt;br /&gt;&lt;b&gt;d. No resources or resources severely limited and/or mismanaged. &lt;/b&gt; Conditions exist in the household that have caused illness or injury to family members such as inadequate plumbing, heating, wiring, or housekeeping; there is no food; food is spoiled; or family members are malnourished. The child chronically presents with clothing that is unclean, inappropriate for weather conditions, or in poor repair. Family is homeless, which results in harm or threat of harm to the child.</help-text>
+        </list-question>
+      </cluster>
+      <cluster entity="Person">
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          display="horizontal"
+          entity="Person"
+          id="culturalIdentity"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="ListQuestion.CulturalIdentify">SN7. Cultural Identity</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="Help.CulturalIdendity">&lt;b&gt;a. Cultural component is sufficient and no conflict present. &lt;/b&gt; The child identifies with cultural and community heritage and beliefs and is connected with people who share similar belief systems. The child is aware of cultural/community resources, both formal and informal, and accesses them as needed. &lt;br /&gt;&lt;b&gt;b. No cultural component that supports or causes conflicts. &lt;/b&gt; The child identifies with cultural/community heritage and beliefs, practices, and traditions within the family. The child recognizes how to access resources in the greater community.  The child may experience some conflict and may struggle with cultural/community identity, yet he/she is able to cope. &lt;br /&gt;&lt;b&gt;c. Cultural component that causes some conflicts. &lt;/b&gt; The child experiences inter-generational and/or societal conflict surrounding values and norms related to cultural/community differences. The child perceives services and supports as unavailable or access as limited. Conflicts with cultural/community identity create difficulties for the child. &lt;br /&gt;&lt;b&gt;d. Cultural component that causes significant conflicts. &lt;/b&gt; The child is disconnected from cultural/community heritage and beliefs resulting in isolation, lack of support, and lack of access to resources. Connections are unavailable, or perceived as unavailable, due to lack of understanding of cultural and language differences of support networks. Conflicts with cultural/community identity result in problematic behavior.</help-text>
+        </list-question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          display="horizontal"
+          entity="Person"
+          id="physicalHealth"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="Question.PhysicalHealth">SN8. Physical Health</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="help.PhysicalHealth">&lt;b&gt;a. Preventive health care is practiced. &lt;/b&gt; Caregiver teaches and promotes good health. &lt;br /&gt;&lt;b&gt;b. Health issues do not affect family functioning. &lt;/b&gt; Caregiver has no current health concerns that affect family functioning. Caregiver accesses regular health resources for him/herself (e.g., medical/dental). &lt;br /&gt;&lt;b&gt;c. Health concerns/handicaps affect family functioning. &lt;/b&gt; Caregiver has health concerns or conditions that affect family functioning and/or family resources. &lt;br /&gt;&lt;b&gt;d. Serious health concerns/handicaps result in inability to care for the child. &lt;/b&gt; Caregiver has serious/chronic health problem(s) or condition(s) that affect his/her ability to care for and/or protect the child.</help-text>
+        </list-question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          entity="Person"
+          id="familyIdentifiedStrengthNeed"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="Question.IdentifyStrengthNeed">SN9. Identified Caregiver Strengths/Needs (not covered in SN1-SN8)</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="help.IdentifiedStrengthNeed">If the caseworker is aware of additional strengths or needs of the family that were not addressed in the Caregiver Strengths and Needs Assessment, they should be documented in the text box below.</help-text>
+        </list-question>
+      </cluster>
+      <cluster entity="Assessment">
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-alignment>left</label-alignment>
+        </layout>
         <question
           control-question="false"
-          id="treatmentPlanStep"
+          id="Comment"
           mandatory="false"
+          multi-select="false"
+          show-field-help="false"
         >
-          <label id="Q1.Label">
-            <alias type="at1"/>
-          </label>
-          <help-text id="Q1.HelpText"> </help-text>
-        </question>
-        <question
-          control-question="false"
-          id="peakFlowReading"
-          mandatory="false"
-        >
-          <label id="Q2.Label">
-          </label>
-          <help-text id="Q2.HelpText">
-          </help-text>
-        </question>
-        <question
-          control-question="false"
-          id="effects"
-          mandatory="false"
-        >
-          <label id="Q3.Label">
-          </label>
-          <help-text id="Q3.HelpText"/>
+          <label id="Question.Comment">Comment</label>
+          <layout>
+            <type>flow</type>
+            <num-rows>4</num-rows>
+          </layout>
         </question>
       </cluster>
     </question-page>
-    <summary-page
-      id="SummaryPage"
-      show-back-button="true"
-      show-exit-button="true"
-      show-next-button="true"
-      show-save-exit-button="false"
-    >
-      <title id="Summary.Title"/>
-      <cluster entity="AsthmaAdult">
-        <title id="Grp1.Title"/>
-        <question
-          control-question="false"
-          id="treatmentPlanStep"
-          mandatory="false"
-        >
-          <label id="Q1.Label"/>
-          <help-text id="Q1.HelpText"/>
-        </question>
-        <question
-          control-question="false"
-          id="peakFlowReading"
-          mandatory="false"
-        >
-          <label id="Q2.Label"/>
-          <help-text id="Q2.HelpText"/>
-        </question>
-        <question
-          control-question="false"
-          id="effects"
-          mandatory="false"
-        >
-          <label id="Q3.Label"/>
-          <help-text id="Q3.HelpText"/>
-        </question>
-      </cluster>
-    </summary-page>
   </section>
 </ieg-script>

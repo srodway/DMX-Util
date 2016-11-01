@@ -7,78 +7,101 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 -->  
-
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains" elementFormDefault="qualified">
-    <xsd:import namespace="http://www.curamsoftware.com/BaseDomains"/>
-    <xsd:include schemaLocation="IEGDomains"/>
-    <xsd:include schemaLocation="MotivationResultDomains"/>
-    <xsd:element name="Eligibility">
-        <xsd:complexType>
-            <xsd:sequence minOccurs="0">
-                <xsd:element ref="Context" minOccurs="0" maxOccurs="1"/>
-                <xsd:element ref="Results" minOccurs="0" maxOccurs="1"/>
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
-    <xsd:element name="Context">
-        <xsd:complexType>
-            <xsd:sequence minOccurs="0">
-                <xsd:element ref="Person" minOccurs="0" maxOccurs="unbounded"/>
-                <xsd:element ref="Summary" minOccurs="0" maxOccurs="1"/>
-            </xsd:sequence>                
-        </xsd:complexType>
-    </xsd:element>   
-    <xsd:element name="EligibleMembers">
-        <xsd:complexType>
-            <xsd:sequence minOccurs="0">
-                <xsd:element ref="Person" minOccurs="0" maxOccurs="unbounded"/>
-            </xsd:sequence>                
-        </xsd:complexType>        
-    </xsd:element>        
-    <xsd:element name="Person">
-        <xsd:complexType>
-            <xsd:attribute name="personID" type="IEG_INT64"/>
-            <xsd:attribute name="firstName" type="IEG_STRING"/>
-            <xsd:attribute name="lastName" type="IEG_STRING"/>
-            <xsd:attribute name="dateOfBirth" type="IEG_DATE"/>
-            <xsd:attribute name="status" type="CW_MOTIVATION_RESULTS_MEMBER_STATUS"/>
-            <xsd:attribute name="gender" type="IEG_GENDER"/>
-        </xsd:complexType>
-    </xsd:element>   
-    <xsd:element name="Summary">
-        <xsd:complexType>
-            <xsd:attribute name="isRichText" type="IEG_BOOLEAN"/>
-            <xsd:attribute name="summaryText" type="IEG_STRING"/>
-            <xsd:attribute name="title" type="IEG_STRING"/>
-        </xsd:complexType>
-    </xsd:element>    
-       
-    <xsd:element name="Results">
-        <xsd:complexType>
-            <xsd:sequence minOccurs="0">
-                <xsd:element ref="Category" minOccurs="0" maxOccurs="unbounded"/>
-            </xsd:sequence>                
-        </xsd:complexType>        
-    </xsd:element>
-            
-    <xsd:element name="Category">
-            <xsd:complexType>
-                <xsd:sequence minOccurs="0">
-                    <xsd:element ref="Result" minOccurs="0" maxOccurs="unbounded"/>
-                </xsd:sequence>                
-                <xsd:attribute name="categoryID" type="IEG_STRING"/>
-                <xsd:attribute name="isPrimary" type="IEG_BOOLEAN"/>                
-                <xsd:attribute name="status" type="CW_MOTIVATION_CATEGORY_ACTION_STATE"/>
-            </xsd:complexType>
-    </xsd:element>
-    <xsd:element name="Result">
-        <xsd:complexType>
-            <xsd:sequence minOccurs="0">
-                <xsd:element ref="Person" minOccurs="0" maxOccurs="unbounded"/>
-            </xsd:sequence>                 
-            <xsd:attribute name="resultID" type="IEG_STRING"/>            
-            <xsd:attribute name="resultDescription" type="IEG_STRING"/>            
-            <xsd:attribute name="status" type="CW_MOTIVATION_RESULT_ACTION_STATE"/>
-        </xsd:complexType>
-    </xsd:element>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains">
+    <xsd:import namespace="http://www.curamsoftware.com/BaseDomains" />
+    <xsd:simpleType name="IEG_PASSWORD">
+        <xsd:restriction base="d:SVR_STRING"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_CODETABLE_CODE">
+        <xsd:annotation>
+            <xsd:appinfo>
+                <d:options>
+                    <d:option name="code-table-root">true</d:option>
+                </d:options>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:restriction base="d:SVR_STRING">
+            <xsd:minLength value="0" />
+            <xsd:maxLength value="10" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_RELATIONSHIP_TYPE">
+        <xsd:annotation>
+            <xsd:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RelationshipTypeCoreDesc</d:option>
+                </d:options>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:restriction base="IEG_CODETABLE_CODE" />
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_GENDER">
+        <xsd:annotation>
+            <xsd:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">Gender</d:option>
+                </d:options>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:restriction base="IEG_CODETABLE_CODE" />
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_PERSON_TITLE">
+        <xsd:annotation>
+            <xsd:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">PersonTitle</d:option>
+                </d:options>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:restriction base="IEG_CODETABLE_CODE" />
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_YES_NO">
+        <xsd:annotation>
+            <xsd:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">IEGYesNo</d:option>
+                </d:options>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:restriction base="IEG_CODETABLE_CODE" />
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_BOOLEAN">
+        <xsd:restriction base="d:SVR_BOOLEAN" />
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_STRING">
+        <xsd:restriction base="d:SVR_STRING" />
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_CHAR">
+        <xsd:restriction base="d:SVR_CHAR" />
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_INT8">
+        <xsd:restriction base="d:SVR_INT8" />
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_INT16">
+        <xsd:restriction base="d:SVR_INT16" />
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_INT32">
+        <xsd:restriction base="d:SVR_INT32" />
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_INT64">
+        <xsd:restriction base="d:SVR_INT64" />
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_FLOAT">
+        <xsd:restriction base="d:SVR_FLOAT" />
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_DOUBLE">
+        <xsd:restriction base="d:SVR_DOUBLE" />
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_MONEY">
+        <xsd:restriction base="d:SVR_MONEY" />
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_DATE">
+        <xsd:restriction base="d:SVR_DATE" />
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_NON_FORMATTED_NUMBER">
+        <xsd:restriction base="d:SVR_INT64" />
+    </xsd:simpleType>
+    <xsd:simpleType name="IEG_THREE_FIELD_DATE">
+        <xsd:restriction base="IEG_DATE" />
+    </xsd:simpleType>
 </xsd:schema>

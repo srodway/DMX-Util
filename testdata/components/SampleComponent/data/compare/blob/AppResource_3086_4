@@ -1,9 +1,27 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-MDTEAPPCalendarSection.title=Calendar
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM 
+
+  PID 5725-H26
+
+  Copyright IBM Corporation 2009,2010,2012,2014. All rights reserved. 
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="OMAdminNonAssessmentFactor">
+
+  <tc:page-param name="outcomePlanFactorID"/>
+
+  <tc:menu id="OMAdminNonAssessmentFactorMenu"/>
+
+  <!-- Hidden details panel to set factor name as tab name-->
+  <tc:context height="0" page-id="AssessmentDefinitionFactorAdmin_contextPanel"/>
+  
+  <!-- See AssessmentDefinition.nav for details of the tree meta-data. -->
+  <tc:navigation id="OMAdminNonAssessmentFactor"/>
+  
+  <tc:tab-refresh>
+    <tc:onsubmit context="true" page-id="OutcomePlanActionAdmin_modifyOutcomePlanFactorAdmin"/>
+  </tc:tab-refresh>
+
+ 
+</tc:tab-config>

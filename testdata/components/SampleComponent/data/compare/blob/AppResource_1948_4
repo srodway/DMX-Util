@@ -1,4 +1,15 @@
-navigation-group.Verifications.title=Verifications
-navigation-group.Details.title=Home
-navigation-group.Issues.title=Issues
-navigation-group.ChangeHistory.title=Change History
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2013. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+QuestionPage.AssessmentDetails.Title=SDM\u00AE Reunification Assessment
+Question.Label.PlacementConsecutiveMonths=P1. In placement for 9 consecutive months.
+Question.Help.PlacementConsecutiveMonths=If the child has been has been in an out-of-home care for 9 or more consecutive months, respond "Yes".
+Question.Label.PlacementOutOfLastMonths=P2. In placement for 15 out of the last 22 months.
+Question.Help.PlacementOutOfLastMonths=If the child has been in an out-of-home care for a total duration of 15 months or more within the last 22 months, respond "Yes". For example, if a child has been removed from home for 10 months, then a 3 month gap, then another removal period of more than 5 months, so that the total duration is more than 15 months, respond "Yes". 
+Placement.validation.message=Both questions P1. and P2. can not be answered 'Yes'.
+Display.Text.ChildName = <p style="font-family:tahoma;font-size:12px;color:#4e4e4e;margin-left:-5px;">Child : <b>%1s</b> </p>

@@ -1,25 +1,36 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-# This Properties file contains resource Strings for the Product Eligibility/Entitlement Rule Set
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
 
-blankDate=...
-nonBlankDate={0,date,M/d/yyyy}
-
-problemCalculatingDecisionDetails=Error calculating decision details for case {0} during period {1} - {2} for display category {3}.  Blank decision details will be used for this period/category instead.
-problemCalculatingEligibilityEntitlement=Error calculating eligibility/entitlement for case {0} during period {1} - {2}.  The case will be indeterminable for this period.
-problemCalculatingKeyData=Error calculating key data for case {0} during period {1} - {2}.  Blank key data will be used for this period instead.
-noProductPeriodAvailable=No product period available to calculate the period {1} - {2} for case {0}.
-
-ProductDeliveryCase.description=Overall product delivery case rule object for case {0}
-ProductPeriod.description=Product Period, id {0}
-ProductPeriodDisplayCategory.description=Product Period Display Category, id {0}
-RuleClassLink.description=Rule Class Link, id {0}
-
-#Product Delivery Case Header
-ProductDeliveryCaseHeader.description=Product Delivery Case Header: {0}
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
+    <identifier name="SubmitAppCreateAccountLoginOrContinue" />
+    <header>
+        <title id="Page.Title" />
+        <description id="Page.Description" />
+        <icon id="title_getting_started" />
+    </header>
+    <content>
+        <container>
+            <title id="RadioSelection.Title" />
+            <help id="RadioSelection.Help" />
+            <radiobutton-container id="SELECTION" legend="RadioSelection.Legend">
+                <radiobutton id="LOGIN">
+                    <title id="Login.Title" />
+                </radiobutton>
+                <radiobutton id="CONTINUE">
+                    <title id="Continue.Title" />
+                </radiobutton>
+            </radiobutton-container>
+        </container>
+    </content>
+    <navigation> 
+		<nav-button name="next" type="action" />
+        <nav-button name="back" type="action"/>
+    </navigation>
+</page>

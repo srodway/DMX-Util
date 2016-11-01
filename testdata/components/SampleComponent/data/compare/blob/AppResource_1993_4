@@ -1,14 +1,26 @@
 #
 # Licensed Materials - Property of IBM
+#
+# PID 5725-H26
 # 
-# Copyright IBM Corporation 2012, 2013. All Rights Reserved.
+# Copyright IBM Corporation 2016. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-# This Properties file contains resource Strings for the PDC Name Summary Ruleset.
-summaryMessage1={0} {1} is the {2} name for this client.
-summaryMessage2={0} {1} {2} is the {3} name for this client.
-summaryMessage3={0} {1} ({2}) is the {3} name for this client.
-summaryMessage4={0} {1} {2} ({3}) is the {4} name for this client.
+Number.Wizard.Pages=3
 
+ASCAddMedicalCondition_start.Wizard.Item.Text=Certificate Details
+ASCAddMedicalCondition_start.Wizard.Page.Title=Step 1
+ASCAddMedicalCondition_start.Wizard.Page.Desc=Enter the practitioner certificate information
+Wizard.PageID.1=ASCAddMedicalCondition_start
+
+ASCAddMedicalCondition_diagnosis.Wizard.Item.Text=Diagnosis Details
+ASCAddMedicalCondition_diagnosis.Wizard.Page.Title=Step 2
+ASCAddMedicalCondition_diagnosis.Wizard.Page.Desc=Enter the diagnosis information
+Wizard.PageID.2=ASCAddMedicalCondition_diagnosis
+
+ASCAddMedicalCondition_summary.Wizard.Item.Text=Summary
+ASCAddMedicalCondition_summary.Wizard.Page.Title=Step 3
+ASCAddMedicalCondition_summary.Wizard.Page.Desc=This is a summary of the information given so far. Please review to ensure that it is all correct before submitting.
+Wizard.PageID.3=ASCAddMedicalCondition_summary

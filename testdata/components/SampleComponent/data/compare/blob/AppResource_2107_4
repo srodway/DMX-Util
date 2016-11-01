@@ -1,101 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2010-2011 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><sc:section-shortcut-panel xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-shortcut-panel" id="IWSUPAPPWorkspaceSectionShortcuts" title="IWSUPAPPWorkspaceSectionShortcuts.title">
-
-         <sc:nodes>
-                  
-                  <sc:node id="Intake" title="Intake.Title" type="group">
-                           <!-- BEGIN, CR00295937, JD -->
-                           <!-- BEGIN, CR00279884, GBA -->
-                           <sc:node id="IntakeApplicationSearch" page-id="ApplicationSearch_TabDetails2" title="IntakeApplicationSearch.Title" type="leaf">
-                           <!-- END, CR00279884 -->
-                           <!-- END, CR00295937 -->
-                           </sc:node>                                      
-                           
-                           <sc:node id="MyItemsOfInterest" page-id="Organization_listUserBookmark" title="MyItemsOfInterest.Title" type="leaf">
-                           </sc:node>
-                           
-                           <sc:node id="MyCaseQueries" open-as="modal" page-id="Case_createQuery" title="NewCaseQuery.Title" type="leaf">
-                           </sc:node>
-                           
-                           <sc:node id="CaseSearch" page-id="Case_search1" title="CaseSearch.Title" type="leaf">
-                           </sc:node>  
-                  </sc:node>
-                  
-                  
-                  <sc:node id="Searches" title="Searches.Title" type="group">
-                           <sc:node id="PersonSearch" page-id="IntakeShortCuts_personSearch" title="PersonSearch.Title" type="leaf">
-                           </sc:node>
-                           <sc:node id="EmployerSearch" page-id="Employer_search1" title="EmployerSearch.Title" type="leaf">
-                           </sc:node>
-                           <sc:node id="AllParticipantSearch" page-id="Participant_search" title="AllParticipantSearch.Title" type="leaf">
-			                              </sc:node>
-			                              
-                           <sc:node id="SearchSep1" type="separator"/>
-                             <!-- BEGIN, CR00279884, GBA -->
-                             <!-- BEGIN, CR00295937, JD -->
-                             <sc:node id="ApplicationSearch" page-id="ApplicationSearch_TabDetails2" title="Application.Title" type="leaf">
-			                              </sc:node>
-			               <!-- END, CR00279884 -->
-                           <!-- END, CR00295937 -->
-			                              <sc:node id="Case" page-id="Case_search1" title="Case.Title" type="leaf">
-			                              </sc:node>  
-			                              
-			                              <sc:node id="SearchSep2" type="separator"/>
-                           
-                           
-                           <sc:node id="EducationInstituteSearch" page-id="EducationalInstitute_search1" title="EducationInstituteSearch.Title" type="leaf">
-                           </sc:node>
-                           <sc:node id="ExternalPartySearch" page-id="ExternalParty_search1" title="ExternalPartySearch.Title" type="leaf">
-                           </sc:node>
-                           <sc:node id="ExternalPartyOfficeSearch" page-id="ExternalPartyOffice_search1" title="ExternalPartyOfficeSearch.Title" type="leaf">
-                           </sc:node>
-                           <sc:node id="InformationProviderSearch" page-id="InformationProvider_search1" title="InformationProviderSearch.Title" type="leaf">
-                           </sc:node>
-                           <sc:node id="UtilitySearch" page-id="Utility_search1" title="UtilitySearch.Title" type="leaf">
-                           </sc:node>
-                           
-                  </sc:node> 
-                  
-                  <sc:node id="ParticipantRegistration" title="ParticipantRegistration.Title" type="group">
-                           <sc:node id="RegPerson" open-as="modal" page-id="IntakeShortCuts_duplicateCheckForRegisterPerson" title="PersonRegistration.Title" type="leaf">
-                           </sc:node>
-                           <sc:node id="RegProspectPerson" open-as="modal" page-id="IntakeShortCuts_duplicateCheckForRegisterProspect" title="ProspectPersonRegistration.Title" type="leaf">
-                           </sc:node>
-                           
-                           <sc:node id="RegistrationSep1" type="separator"/>
-                           
-                           <sc:node id="RegEmployer" open-as="modal" page-id="RegisterEmployer_resolveStartWizard" title="EmployerRegistration.Title" type="leaf">
-                           </sc:node>
-                           <sc:node id="RegProspectEmployer" open-as="modal" page-id="AddProspectEmployer_resolveStartWizard" title="ProspectEmployerRegistration.Title" type="leaf">
-                           </sc:node>
-                           
-                           <sc:node id="RegistrationSep2" type="separator"/>
-                           
-                           <sc:node id="RegEducationalInsititute" open-as="modal" page-id="RegisterEducationalInstitute_resolveStartWizard" title="EducationInstituteRegistration.Title" type="leaf">
-                           </sc:node>
-                           <sc:node id="RegExternalParty" open-as="modal" page-id="RegisterExternalParty_resolveStartWizard" title="ExternalPartyRegistration.Title" type="leaf">
-                           </sc:node>
-                           <sc:node id="RegInformationProvider" open-as="modal" page-id="RegisterInformationProvider_resolveStartWizard" title="InformationProviderRegistration.Title" type="leaf">
-                           </sc:node>
-                           <sc:node id="RegUtility" open-as="modal" page-id="RegisterUtility_resolveStartWizard" title="UtilityRegistration.Title" type="leaf">
-                           </sc:node>
-                           
-                  </sc:node>          
-                  
-         </sc:nodes>
-         
-</sc:section-shortcut-panel>
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012, 2013. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+# This Properties file contains resource Strings for the PDC Phone Number Summary Ruleset.
+summaryMessage1={0} phone number is {1} {2} {3}
+summaryMessage2={0} phone number is {1} {2} {3} ({4})

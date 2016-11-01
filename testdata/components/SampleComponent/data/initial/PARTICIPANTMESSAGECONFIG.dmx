@@ -9,6 +9,75 @@
   <column name="versionNo" type="number" />
   <row>
     <attribute name="participantMessageConfigID">
+      <value>10023</value>
+    </attribute>
+    <attribute name="participantMessageType">
+      <value>PMT1008</value>
+    </attribute>
+    <attribute name="enabledInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>8</value>
+    </attribute>
+    <attribute name="description">
+      <value>Outcome Plan Action Message Description</value>
+    </attribute>
+    <attribute name="image">
+      <value>icon_action.png</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="participantMessageConfigID">
+      <value>10405</value>
+    </attribute>
+    <attribute name="participantMessageType">
+      <value>PMT1006</value>
+    </attribute>
+    <attribute name="enabledInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>6</value>
+    </attribute>
+    <attribute name="description">
+      <value>Service Delivery Message Description</value>
+    </attribute>
+    <attribute name="image">
+      <value>cw_icon_service.png</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="participantMessageConfigID">
+      <value>10406</value>
+    </attribute>
+    <attribute name="participantMessageType">
+      <value>PMT1007</value>
+    </attribute>
+    <attribute name="enabledInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>7</value>
+    </attribute>
+    <attribute name="description">
+      <value>Referral Message Description</value>
+    </attribute>
+    <attribute name="image">
+      <value>cw_icon_referral.png</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="participantMessageConfigID">
       <value>2110</value>
     </attribute>
     <attribute name="participantMessageType">
@@ -117,75 +186,6 @@
     </attribute>
     <attribute name="image">
       <value>cw_icon_app_acknow.png</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="participantMessageConfigID">
-      <value>10023</value>
-    </attribute>
-    <attribute name="participantMessageType">
-      <value>PMT1008</value>
-    </attribute>
-    <attribute name="enabledInd">
-      <value>1</value>
-    </attribute>
-    <attribute name="sortOrder">
-      <value>8</value>
-    </attribute>
-    <attribute name="description">
-      <value>Outcome Plan Action Message Description</value>
-    </attribute>
-    <attribute name="image">
-      <value>icon_action.png</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="participantMessageConfigID">
-      <value>10405</value>
-    </attribute>
-    <attribute name="participantMessageType">
-      <value>PMT1006</value>
-    </attribute>
-    <attribute name="enabledInd">
-      <value>1</value>
-    </attribute>
-    <attribute name="sortOrder">
-      <value>6</value>
-    </attribute>
-    <attribute name="description">
-      <value>Service Delivery Message Description</value>
-    </attribute>
-    <attribute name="image">
-      <value>cw_icon_service.png</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="participantMessageConfigID">
-      <value>10406</value>
-    </attribute>
-    <attribute name="participantMessageType">
-      <value>PMT1007</value>
-    </attribute>
-    <attribute name="enabledInd">
-      <value>1</value>
-    </attribute>
-    <attribute name="sortOrder">
-      <value>7</value>
-    </attribute>
-    <attribute name="description">
-      <value>Referral Message Description</value>
-    </attribute>
-    <attribute name="image">
-      <value>cw_icon_referral.png</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>

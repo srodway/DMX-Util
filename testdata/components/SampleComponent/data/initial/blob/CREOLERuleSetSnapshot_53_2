@@ -1,76 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><!-- 
-  Copyright 2009-2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information").  You shall not disclose such
-  Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><!--
-  Interface rule classes for the interaction between the CREOLE-based Assessment
-  Engine and CREOLE rules for the details explaining a case's
-  eligibility and entitlement decision.
-  
-  The rule classes for a CREOLE-based product must extend the rule classes in
-  this rule set, BUT NOTE that product rule classes should not extend these
-  rule classes directly - instead rule set developers for CREOLE-based products
-  should extend the default implementations in the
-  DefaultProductDecisionDetailsRuleSet rule set.  These default implementations provide
-  some isolation against future changes to the ProductDecisionDetailsRuleSet rule
-  classes in this rule set. 
-  
-  Customer code must not create, modify or remove instances of any of the rule
-  classes in this rule set.  Instances of these rule classes may only be
-  manipulated by the Curam Assessment Engine.
-  
-  --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProductDecisionDetailsRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+--><RuleSet name="ASCLivingArrangementDataRuleSet">
 
 
-  <!--
-      A view onto a case which provides a timeline of detailed explanations for
-      eligibility/entitlement decisions.
-      
-      The configuaration of a Curam Product to use decision detail rules will point to
-      a product-specific concrete sub class of this rule class.
-    -->
-  <Class abstract="true" name="AbstractCase">
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="ASCLivingArrangement">
 
 
-    <Attribute name="productDeliveryCase">
+    <Annotations>
+      <SuccessionSetPopulation/>
+    </Annotations>
+
+
+    <Attribute name="startDate">
+      <Annotations>
+        <Label label-id="startDate" name="The start date of the living arrangement."/>
+      </Annotations>
       <type>
-        <ruleclass name="ProductDeliveryCase" ruleset="ProductEligibilityEntitlementRuleSet"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <abstract/>
+        <specified/>
       </derivation>
     </Attribute>
 
 
-  </Class>
-
-
-  <!--
-    Base class for decision details subscreens
-  -->
-  <Class abstract="true" name="AbstractCaseSubscreenDisplay">
-
-
-    <!--
-      Business ID for identifying a particular Rule Object at runtime. 
-    -->
-    <Attribute name="businessObjectID">
+    <Attribute name="livingArrangeStatus">
+      <Annotations>
+        <Label label-id="livingArrangeStatus" name="The status of the living arrangement, e.g. Permanent."/>
+      </Annotations>
       <type>
-        <javaclass name="Number"/>
+        <codetableentry table="LivingArrangementStatus"/>
       </type>
       <derivation>
-        <abstract/>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="endDate">
+      <Annotations>
+        <Label label-id="endDate" name="The end date of the living arrangement."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="livingArrangeType">
+      <Annotations>
+        <Label label-id="livingArrangeType" name="The living arrangement type of the client, e.g. Adult Case Home, Foster Care etc."/>
+      </Annotations>
+      <type>
+        <codetableentry table="LivingArrangementType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="successionID"/>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="caseParticipantRoleID">
+      <Annotations>
+        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the client."/>
+      </Annotations>
+      <type>
+        <javaclass name="java.lang.Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="related_caseParticipantRoleID">
+      <Annotations/>
+      <type>
+        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+      </type>
+      <derivation>
+        <reference attribute="caseParticipantRoleRecord">
+          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
+            <reference attribute="caseParticipantRoleID"/>
+          </create>
+        </reference>
       </derivation>
     </Attribute>
 

@@ -236,6 +236,14 @@
   </row>
   <row>
     <attribute name="moduleClassName">
+      <value>curam.core.sl.util.timelinecalendar.impl.TimelineCalendarModule</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="moduleClassName">
       <value>curam.cpm.fundpm.relationtype.impl.FundRelationTypeModule</value>
     </attribute>
     <attribute name="lastWritten">
@@ -340,14 +348,6 @@
   </row>
   <row>
     <attribute name="moduleClassName">
-      <value>curam.eventadaptor.impl.Module</value>
-    </attribute>
-    <attribute name="lastWritten">
-      <value />
-    </attribute>
-  </row>
-  <row>
-    <attribute name="moduleClassName">
       <value>curam.evidence.evidenceflow.impl.Module</value>
     </attribute>
     <attribute name="lastWritten">
@@ -380,7 +380,7 @@
   </row>
   <row>
     <attribute name="moduleClassName">
-      <value>curam.householdcomposition.impl.Module</value>
+      <value>curam.guidedchanges.impl.Module</value>
     </attribute>
     <attribute name="lastWritten">
       <value />
@@ -388,7 +388,7 @@
   </row>
   <row>
     <attribute name="moduleClassName">
-      <value>curam.ibmis.cpm.impl.Module</value>
+      <value>curam.householdcomposition.impl.Module</value>
     </attribute>
     <attribute name="lastWritten">
       <value />
@@ -437,6 +437,14 @@
   <row>
     <attribute name="moduleClassName">
       <value>curam.meetings.impl.MeetingsModule</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="moduleClassName">
+      <value>curam.outcomemanagement.sdm.impl.OutcomeManagementSDMModule</value>
     </attribute>
     <attribute name="lastWritten">
       <value />
@@ -517,6 +525,22 @@
   <row>
     <attribute name="moduleClassName">
       <value>curam.samplingstrategy.impl.Module</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="moduleClassName">
+      <value>curam.scot.addressmapping.impl.Module</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="moduleClassName">
+      <value>curam.scot.impl.Module</value>
     </attribute>
     <attribute name="lastWritten">
       <value />

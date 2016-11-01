@@ -1,31 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><ac:application xmlns:ac="http://www.curamsoftware.com/curam/util/client/application-config" id="HEARINGOFF" logo="HEARINGOFF.logo" subtitle="HEARINGOFF.subtitle" title="HEARINGOFF.title" user-message="HEARINGOFF.UserMessage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+# This Properties file contains resource Strings for the PDC Alternate ID Validation Ruleset.
 
-  <ac:application-menu>
-    <ac:preferences title="preferences.title"/>
-    <ac:help title="help.title"/>
-    <ac:logout title="logout.title"/>
-  </ac:application-menu>
-  
-  <ac:application-search default-search-page="Organization_resolveApplicationSearch" initial-text="Application.Search.InitialText"/>
+ERR_RELATIONSHIPS_XRV_DUPLICATE_CLIENT_CREATE=New relationship details cannot be added for a client that is currently marked as a duplicate.
+ERR_RELATIONSHIPS_XRV_DUPLICATE_CLIENT_MODIFY=Relationship details of a client that is currently marked as a duplicate cannot be modified.
+ERR_RELATIONSHIPS_XRV_DUPLICATE_CLIENT_RELATIVE=A client that is currently marked as a duplicate cannot be selected as a relative to another client.
+ERR_RELATIONSHIPS_XRV_DUPLICATE_RELATIONSHIP=A relationship with these details already exists.
+ERR_RELATIONSHIPS_XRV_DUPLICATE_RELATIONSHIP_NO_TODATE=A relationship with these details already exists for the period {0,date,M/d/yyyy} - .
+ERR_RELATIONSHIPS_XRV_DUPLICATE_RELATIONSHIP_WITH_TODATE=A relationship with these details already exists for the period {0,date,M/d/yyyy} - {1,date,M/d/yyyy}.
+ERR_RELATIONSHIPS_XRV_START_DATE=The Relationship from date must be after {0} Date Of Birth - {1,date,M/d/yyyy}.
+ERR_RELATIONSHIPS_XRV_START_DATE_END_DATE=The Relationship from date must be before {0} Date Of Death - {1,date,M/d/yyyy}.
+ERR_RELATIONSHIPS_XRV_END_DATE=The Relationship to date must be before {0} Date Of Death - {1,date,M/d/yyyy}.
+ERR_RELATIONSHIPS_XRV_EFFECTIVE_DATE_DOB=The effective date of change must be after {0} Date Of Birth - {1,date,M/d/yyyy}.
+ERR_RELATIONSHIPS_FV_TYPE_CANNOT_BE_MODIFIED=Type cannot be modified.
 
-  <ac:section-ref id="HEARINGOFFHomeSection"/>
-  <ac:section-ref id="HEARINGOFFWorkspaceSection"/>
-  <ac:section-ref id="DefaultAppInboxSection"/>
-  <ac:section-ref id="DefaultAppCalendarSection"/>
-    
-</ac:application>
+PDCRelationshipValidationResult.description=PDC Relationships Validation Result For {0}

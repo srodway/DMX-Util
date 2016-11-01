@@ -1,92 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-  PID 5725-H26
-
-  Copyright IBM Corporation 2014. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure
+  US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet name="IBProductTypeDataRuleSet">
+--><!--
+    Copyright 2010-2011 Curam Software Ltd.
+    All rights reserved.
+
+    This software is the confidential and proprietary information of Curam
+    Software, Ltd. (&quot;Confidential Information&quot;).  You shall not disclose such
+    Confidential Information and shall use it only in accordance with the
+    terms of the license agreement you entered into with Curam Software.
+--><!--
+
+  A set of interface classes to be used for CREOLE-based programs implementing program recommendation.
+
+  Customers of Program Recommendation must provide implementations for the classes in this rule set.
+  However, rather than directly extending the classes, rule set developers should instead extend
+  the default implementations provided by the DefaultProgramRecommendationDisplayRuleSet. These
+  classes provide some isolation against future changes.
+
+--><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProgramRecommendationDisplayRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
 
 
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="IBProductType">
+  <!--
+        Abstract Program Recommendation Display Case which ultimately inherits from the
+        ProductDecisionDetailsRuleSet.AbstractCase rule class.
+    -->
+  <Class abstract="true" extends="DefaultCase" extendsRuleSet="DefaultProductDecisionDetailsRuleSet" name="ProgramRecommendationDisplayCase">
 
 
-    <Annotations>
-      <SuccessionSetPopulation/>
-    </Annotations>
-
-
-    <Attribute name="forceIVB">
-      <Annotations>
-        <Label label-id="forceIVB" name="Flag to indicate if invalidity benefit is being forced."/>
-      </Annotations>
+    <!-- Link to the CREOLEPROGRECDECISIONDISPCAT entity. -->
+    <Attribute name="displayCategoryID">
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="java.lang.Boolean"/>
-        </javaclass>
+        <javaclass name="Number"/>
       </type>
       <derivation>
-        <null/>
+        <abstract/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="claimType">
-      <Annotations>
-        <Label label-id="claimType" name="The type of claim being applied for, Sickness Benefit or Invalidity Benefit."/>
-      </Annotations>
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <codetableentry table="IBClaimType"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
+  </Class>
 
 
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
-          <reference attribute="successionID"/>
-        </ResourceMessage>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="householdMember">
-      <Annotations>
-        <Label label-id="claimType" name="The case participant receiving the benefit."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="related_householdMember">
-      <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="householdMember"/>
-          </create>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
+  <!--
+    Program Recommendation Subscreen Display.
+  -->
+  <Class abstract="true" extends="DefaultCaseSubscreenDisplay" extendsRuleSet="DefaultProductDecisionDetailsRuleSet" name="ProgramRecommendationSubscreenDisplay">
+    
+    
+    <!-- Place holder -->
   </Class>
 
 

@@ -1,25 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+MenuItem.Title.Edit=Edit
+MenuItem.Tooltip.Edit=Edit
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2010 Curam Software Ltd.
-  All rights reserved.
+MenuItem.Title.NewUseReference=New Use Reference
+MenuItem.Tooltip.NewUseReference=New Use Reference
 
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="WorkQueueTasks">
-  
-  <tc:page-param name="workQueueID"/>
-  <tc:page-param name="queueName"/>
-    
-  <tc:context height="0" page-id="Inbox_workQueueTaskTabDetails"/>
-  
-  <tc:navigation page-id="Inbox_listAvailableWorkQueueTasks"/>
+MenuItem.Title.NewRelatedConcept=New Related Concept
+MenuItem.Tooltip.NewRelatedConcept=New Related Concept
 
-</tc:tab-config>
+MenuItem.Title.NewRelatedTerm=New See Also Reference
+MenuItem.Tooltip.NewRelatedTerm=New See Also Reference
+
+MenuItem.Title.PublishTerm=Publish
+MenuItem.Tooltip.PublishTerm=Publish
+
+MenuItem.Title.Delete=Delete
+MenuItem.Tooltip.Delete=Delete
+

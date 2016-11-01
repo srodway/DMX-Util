@@ -1,35 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+MenuItem.Title.Assessment=New Assessment
+MenuItem.Tooltip.Assessment=Create a new Assessment for the Outcome Plan.
+MenuItem.Title.SetPriorityFactors=Set Priority Factors
+MenuItem.Tooltip.SetPriorityFactors=Set Priority Factors
+MenuItem.Title.AddAction=New Action
+MenuItem.Tooltip.AddAction=Add an Action to the Outcome Plan.
+MenuItem.Title.AddService=New Service
+MenuItem.Tooltip.AddService=Add an Service to the Outcome Plan.
+MenuItem.Title.AddReferral=New Referral
+MenuItem.Tooltip.AddReferral=Add an Referral to the Outcome Plan.
+MenuItem.Title.AddAgreement=New Agreement
+MenuItem.Tooltip.AddAgreement=Add an Agreement to the Outcome Plan.
+MenuItem.Title.AddPlanGoal=New Goal
+MenuItem.Tooltip.AddPlanGoal=Add a Goal to the Outcome Plan.
+MenuItem.Title.AddClientGoal=New Client Goal
+MenuItem.Tooltip.AddClientGoal=Add a Goal for a Client to the Outcome Plan.
+MenuItem.Title.UpdateProgress=Update Progress
+MenuItem.Tooltip.UpdateProgress=Update the latest Progress on the Outcome Plan.
+MenuItem.Title.NewReview=New Review
+MenuItem.Tooltip.NewReview=Add a new Review to the Outcome Plan.
+MenuItem.Title.NewExpectedOutcome=New Objective
+MenuItem.Tooltip.NewExpectedOutcome=Adds a new Objective to the Outcome Plan.
+MenuItem.Title.NewVisit=New Visitation Plan
+MenuItem.Tooltip.NewVisit=Adds a new Visit to the Outcome Plan.
+MenuItem.Title.RecordDailyParticipation=Record Daily Participation
+MenuItem.Tooltip.RecordDailyParticipation=Record Daily Participation for the Outcome Plan.
+MenuItem.Title.RecordScheduledParticipation=Record Scheduled Participation
+MenuItem.Tooltip.RecordScheduledParticipation=Record Scheduled Participation for the Outcome Plan.
+MenuItem.Title.RecordAbsencePeriod=Record Absence Period
+MenuItem.Tooltip.RecordAbsencePeriod=Record an Absence Period for the Outcome Plan.
+MenuItem.Title.Edit=Edit
+MenuItem.Tooltip.Edit=Edit the details of the Outcome Plan.
+MenuItem.Title.Close=Close
+MenuItem.Tooltip.Close=Close the Outcome Plan.
+MenuItem.Title.ViewPrintableDocument=View Printable Document
+MenuItem.Tooltip.ViewPrintableDocument=View Printable Document for the Outcome Plan.
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009-2010 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="AutomaticActivity">
 
-  <nc:nodes>
-  
-    <nc:navigation-page id="AutoActivity" page-id="ProcessDefinitionTool_viewAutomaticActivity" title="Page.Title.AutomaticActivity"/>
-    <nc:navigation-page id="InputMappings" page-id="ProcessDefinitionTool_viewInputMappings" title="Page.Title.InputMappings"/>
-    <nc:navigation-page id="OutputMappings" page-id="ProcessDefinitionTool_viewOutputMappings" title="Page.Title.OutputMappings"/>
-    <nc:navigation-page id="Validations" page-id="ProcessDefinitionTool_validateActivity" title="Page.Title.Validations"/>
-    <nc:navigation-group id="Notification" title="Group.Title.Notification">
-	    <nc:navigation-page id="ActivityNotification" page-id="ProcessDefinitionTool_viewAutomaticActivityNotification" title="Page.Title.ActivityNotification"/>
-	    <nc:navigation-page id="ActivityNotificationSubject" page-id="ProcessDefinitionTool_viewAutomaticActivityNotificationSubject" title="Page.Title.ActivityNotificationSubject"/>
-	    <nc:navigation-page id="ActivityNotificationBody" page-id="ProcessDefinitionTool_viewAutomaticActivityNotificationBody" title="Page.Title.ActivityNotificationBody"/>
-	    <nc:navigation-page id="ActivityNotificationActions" page-id="ProcessDefinitionTool_listAutomaticActivityNotificationActions" title="Page.Title.ActivityNotificationActions"/>
-	    <nc:navigation-page id="ActivityNotificationAllocationStrategy" page-id="ProcessDefinitionTool_viewActivityNotificationAllocationStrategyRedirect" title="Page.Title.AllocationStrategy"/>
-	    <nc:navigation-page id="NotificationValidations" page-id="ProcessDefinitionTool_validateActivityNotification" title="Page.Title.NotificationValidations"/>
-	</nc:navigation-group>
-	
-  </nc:nodes>
- 
-</nc:navigation>
+
+
+

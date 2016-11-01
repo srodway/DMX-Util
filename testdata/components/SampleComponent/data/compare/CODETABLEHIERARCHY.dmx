@@ -7,6 +7,23 @@
   <column name="lastWritten" type="timestamp" />
   <row>
     <attribute name="hierarchyName">
+      <value>DiseaseHierarchy</value>
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="codetable">
+      <value>Disease</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-11.28.11</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="hierarchyName">
       <value>IndigenousRegion</value>
     </attribute>
     <attribute name="description">
@@ -19,7 +36,7 @@
       <value>1</value>
     </attribute>
     <attribute name="lastWritten">
-      <value>2015-12-04-10.32.29</value>
+      <value>2016-10-28-11.28.13</value>
     </attribute>
   </row>
   <row>
@@ -36,7 +53,7 @@
       <value>1</value>
     </attribute>
     <attribute name="lastWritten">
-      <value>2015-12-04-10.32.32</value>
+      <value>2016-10-28-11.28.16</value>
     </attribute>
   </row>
   <row>
@@ -53,24 +70,7 @@
       <value>1</value>
     </attribute>
     <attribute name="lastWritten">
-      <value>2015-12-04-10.32.33</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="hierarchyName">
-      <value>ProgramAppReopenType</value>
-    </attribute>
-    <attribute name="description">
-      <value />
-    </attribute>
-    <attribute name="codetable">
-      <value>ProgramAppReopenType</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-    <attribute name="lastWritten">
-      <value>2015-12-04-10.32.34</value>
+      <value>2016-10-28-11.28.17</value>
     </attribute>
   </row>
   <row>
@@ -87,24 +87,24 @@
       <value>1</value>
     </attribute>
     <attribute name="lastWritten">
-      <value>2015-12-04-10.32.34</value>
+      <value>2016-10-28-11.28.18</value>
     </attribute>
   </row>
   <row>
     <attribute name="hierarchyName">
-      <value>ProviderCatTypeHierarchy</value>
+      <value>ProgramAppReopenType</value>
     </attribute>
     <attribute name="description">
       <value />
     </attribute>
     <attribute name="codetable">
-      <value>TrainingProviderCategory</value>
+      <value>ProgramAppReopenType</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
     </attribute>
     <attribute name="lastWritten">
-      <value>2015-12-04-10.32.35</value>
+      <value>2016-10-28-11.28.18</value>
     </attribute>
   </row>
   <row>
@@ -121,7 +121,7 @@
       <value>1</value>
     </attribute>
     <attribute name="lastWritten">
-      <value>2015-12-04-10.32.35</value>
+      <value>2016-10-28-11.28.19</value>
     </attribute>
   </row>
   <row>
@@ -138,7 +138,7 @@
       <value>1</value>
     </attribute>
     <attribute name="lastWritten">
-      <value>2015-12-04-10.32.36</value>
+      <value>2016-10-28-11.28.20</value>
     </attribute>
   </row>
   <row>
@@ -155,7 +155,7 @@
       <value>1</value>
     </attribute>
     <attribute name="lastWritten">
-      <value>2015-12-04-10.32.37</value>
+      <value>2016-10-28-11.28.21</value>
     </attribute>
   </row>
   <row>
@@ -172,7 +172,7 @@
       <value>1</value>
     </attribute>
     <attribute name="lastWritten">
-      <value>2015-12-04-10.32.37</value>
+      <value>2016-10-28-11.28.21</value>
     </attribute>
   </row>
   <row>
@@ -189,7 +189,7 @@
       <value>1</value>
     </attribute>
     <attribute name="lastWritten">
-      <value>2015-12-04-10.32.37</value>
+      <value>2016-10-28-11.28.21</value>
     </attribute>
   </row>
   <row>
@@ -206,7 +206,24 @@
       <value>1</value>
     </attribute>
     <attribute name="lastWritten">
-      <value>2015-12-04-10.32.38</value>
+      <value>2016-10-28-11.28.22</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="hierarchyName">
+      <value>ProviderCatTypeHierarchy</value>
+    </attribute>
+    <attribute name="description">
+      <value />
+    </attribute>
+    <attribute name="codetable">
+      <value>TrainingProviderCategory</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-11.28.18</value>
     </attribute>
   </row>
   <row>
@@ -223,7 +240,7 @@
       <value>1</value>
     </attribute>
     <attribute name="lastWritten">
-      <value>2015-12-04-10.32.39</value>
+      <value>2016-10-28-11.28.24</value>
     </attribute>
   </row>
 </table>

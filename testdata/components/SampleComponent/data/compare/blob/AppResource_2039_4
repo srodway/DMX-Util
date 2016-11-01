@@ -1,64 +1,30 @@
-/*
- * Styles for the High Contrast version of the Triage Results page.
- * Colors should be externalised to properties file
- * triage-styles-high-contrast.properties.
- */
- 
-.cw.ProviderServiceModal.high-contrast .title-details .modal-title{
-    font-size: 16pt;
-    color : black;
-    font-weight : bold;
-}
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012-2014. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Number.Wizard.Pages=3
 
-.cw.ProviderServiceModal.high-contrast .modal-contact-info .modal-contact-details{
-    background-color : #cce8f2;
-    border : 1px solid #666666;
-}
+CommonIntake_listProgramsToAppeal.Wizard.Item.Text=Select Program
+CommonIntake_listProgramsToAppeal.Wizard.Page.Title=Step 1:
+CommonIntake_listProgramsToAppeal.Wizard.Page.Desc=Select Program
+Wizard.PageID.1=CommonIntake_listProgramsToAppeal
 
-.cw.ProviderServiceModal.high-contrast .provider-modal-header-wrapper{
-    background-color : white;
-    border-bottom : 1px solid #666666;
-}
+#this second page of the wizard was replaced as part of the work for introducing Online Appeals
+#Appeal_createWizard.Wizard.Item.Text=Record Appeal Details
+#Appeal_createWizard.Wizard.Page.Title=Step 2:
+#Appeal_createWizard.Wizard.Page.Desc=Record Appeal Details
+#Wizard.PageID.2=Appeal_createWizard
 
-.cw.ProviderServiceModal.high-contrast .modal-footer {
-    background-color : white;
-    border-top : 1px solid #666666;
-    padding-top : 10px
-}
+AppealWizard_selectParticipants.Wizard.Item.Text=Select Appellant/Respondent
+AppealWizard_selectParticipants.Wizard.Page.Title=Step 2:
+AppealWizard_selectParticipants.Wizard.Page.Desc=Select Appellant/Respondent
+Wizard.PageID.2=AppealWizard_selectParticipants
 
-body.high-contrast div.modal-detail-title {
-    color:#C93F0C;
-    font-weight:bold;
-    border-bottom:1px solid #666666;
-}
-
-body.high-contrast div.referral h2 {
-    margin-bottom: 1px;
-    margin-top: 0px;
-    margin-left: 5px;
-    color: #c9350c;
-    font-weight: bold;
-    font-size: 13.5pt;
-    text-align:left;
-}
-
-body.cw.ReferMe.high-contrast .referral-head p {
-    color: #666666;
-    font-size: 13.5pt;
-    margin: 0;
-    padding-top: 5px;
-}
-
-body.cw.ReferMe.high-contrast .contactDetails h2 {
-    border-bottom: 1px solid #D9D9D9;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-bottom: 5px;
-    color: #000000;
-    font-size: 13.5pt;
-}
-
-body.cw.ReferMe.high-contrast div.desc-header {
-    color: #666666;
-    font-size: 13.5pt;
-}
+AppealWizard_createAppeal.Wizard.Item.Text=Record Appeal Details
+AppealWizard_createAppeal.Wizard.Page.Title=Step 3:
+AppealWizard_createAppeal.Wizard.Page.Desc=Record Appeal Details
+Wizard.PageID.3=AppealWizard_createAppeal

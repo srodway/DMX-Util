@@ -1,17 +1,12 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-INTAKEAPP.logo=CDEJ/themes/v6/images/application-logo.png
-INTAKEAPP.title=IBM C\u00FAram Social Program Management 
-INTAKEAPP.subtitle=Intake Worker
-INTAKEAPP.UserMessage=Welcome %user-full-name
-preferences.title=Preferences
-help.title=Help
-logout.title=Log out
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-Application.Search.InitialText=Enter Reference Number
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="CMISMetadataAdmin">
+  <nc:nodes>
+    <nc:navigation-page id="Attachment" page-id="CMISAdmin_metadataAttachmentList" title="Title.Attachment"/>
+  </nc:nodes>
+</nc:navigation>

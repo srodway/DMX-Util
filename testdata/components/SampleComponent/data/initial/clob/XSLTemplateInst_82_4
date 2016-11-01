@@ -13,7 +13,7 @@
   </xsl:template>
   <xsl:template match="DATA">
     <!--Explicitly select the STRUCT to avoid processing anything else.-->
-    <xsl:apply-templates select="STRUCT[SNAME='ContractNotificationDetails']"/>
+    <xsl:apply-templates select="STRUCT[SNAME='ProviderNotificationDetails']"/>
   </xsl:template>
   <xsl:template match="STRUCT">
     <fo:root>
@@ -37,7 +37,7 @@
                   </fo:block>
                   <fo:inline font-size="12pt" font-weight="normal">
                     Dear
-                    <xsl:apply-templates select="FIELD[FNAME='providerGroupName']"/>
+                    <xsl:apply-templates select="FIELD[FNAME='providerGrpName']"/>
                     ,
                   </fo:inline>
                   <fo:block>
@@ -46,9 +46,14 @@
                   <fo:block>
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
-                  <fo:inline font-size="12pt">Please find enclosed your contract with our agency to deliver services to
-                    our clients.
-                    Please read and sign the contract and return it to us using the prepaid envelope enclosed.</fo:inline>
+                  <fo:inline font-size="12pt">
+                    We wish to inform you that you have been re-opened
+                      as a provider group with our agency under Reference No.
+                    <xsl:apply-templates select="FIELD[FNAME='providerGrpRefNumber']"/>
+                    effective as of
+                    <xsl:apply-templates select="FIELD[FNAME='currentDate']"/>
+                    .
+                  </fo:inline>
                   <fo:block>
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
@@ -63,7 +68,7 @@
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
                   <fo:inline font-size="12pt">
-                    <xsl:apply-templates select="FIELD[FNAME='organizationName']"/>
+                    <xsl:apply-templates select="FIELD[FNAME='organisationName']"/>
                     .
                   </fo:inline>
                 </fo:block>

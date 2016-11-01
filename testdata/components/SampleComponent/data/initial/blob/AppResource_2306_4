@@ -1,25 +1,97 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-	Copyright 2011 Curam Software Ltd.
-	All rights reserved.
-	
-	This software is the confidential and proprietary information of Curam
-	Software, Ltd. ("Confidential Information"). You shall not disclose
-	such Confidential Information and shall use it only in accordance with the
-	terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="CPMRMSProviderEnquiryList">
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+MenuItem.Title.MyInbox=My Inbox
+MenuItem.Icon.MyInbox=Inbox
+MenuItem.Tooltip.MyInbox=Inbox
 
-	<!-- Details panel -->
-	<tc:context tab-name="Details.Name.CPMRMSProviderEnquiryList" tab-title="Details.Name.CPMRMSProviderEnquiryList"/>
+MenuItem.Title.MyCalendar=My Calendar
+MenuItem.Icon.MyCalendar=Calendar
+MenuItem.Tooltip.MyCalendar=My Calendar
 
-	<!-- Navigation Panel -->
-	<tc:navigation page-id="ProviderManagement_listEnquiriesForResMgrSupervisor"/>
+Submenu.Title.New=New
+Submenu.Icon.New=New
+Submenu.Tooltip.New=New
+
+SubmenuItem.Title.Product=Product
+Submenu.Title.Product=Product
+Submenu.Tooltip.Product=Create a new Product
+
+MenuItem.Title.Benefit=Benefit
+MenuItem.Tooltip.Benefit=Benefit
+
+MenuItem.Title.Liability=Liability
+MenuItem.Tooltip.Liability=Liability
+
+MenuItem.Title.IntegratedCase=Integrated Case
+MenuItem.Tooltip.IntegratedCase=Integrated Case
+
+MenuItem.Title.Assessment=Assessment
+MenuItem.Tooltip.Assessment=Assessment
+
+MenuItem.Title.Issue=Issue
+MenuItem.Tooltip.Issue=Issue
+
+MenuItem.Title.Investigation=Investigation
+MenuItem.Tooltip.Investigation=Investigation
+
+MenuItem.Title.Screening=Screening
+MenuItem.Tooltip.Screening=Screening
+
+SubmenuItem.Title.ServicePlan=Service Plan
+Submenu.Tooltip.ServicePlan=Service Plan
+      
+MenuItem.Title.Plan=Plan
+MenuItem.Tooltip.Plan=Plan
+MenuItem.Title.ExpectedOutcome=Expected Outcome
+MenuItem.Tooltip.ExpectedOutcome=Expected Outcome
+MenuItem.Title.Goal=Goal
+MenuItem.Tooltip.Goal=Goal
+MenuItem.Title.GoodCause=Good Cause
+MenuItem.Tooltip.GoodCause=Good Cause
+MenuItem.Title.PlanItem=Plan Item
+MenuItem.Tooltip.PlanItem=Plan Item
+MenuItem.Title.SubGoal=Sub Goal
+MenuItem.Tooltip.SubGoal=Sub Goal
+MenuItem.Title.Template=Template
+MenuItem.Tooltip.Template=Template
+
+Submenu.Title.Search=Search
+Submenu.Icon.Search=Search
+Submenu.Tooltip.Search=Find a User
+
+MenuItem.Title.User=User
+MenuItem.Tooltip.User=User
+
+MenuItem.Title.ExternalUser=External User
+MenuItem.Tooltip.ExternalUser=External User
 
 
-</tc:tab-config>
+MenuItem.Title.Milestone=New Milestone
+MenuItem.Tooltip.Milestone=New Milestone
+
+MenuItem.Title.Deduction=New Deduction
+MenuItem.Tooltip.Deduction=New Deduction
+
+MenuItem.Title.Resolution=New Resolution
+MenuItem.Tooltip.Resolution=New Resolution
+
+MenuItem.Title.DeliveryMethod=New Delivery Method
+MenuItem.Tooltip.DeliveryMethod=New Delivery Method
+
+MenuItem.Title.Service=New Service
+MenuItem.Tooltip.Service=New Service
+
+
+
+
+
+
+
+
+

@@ -23,75 +23,10 @@
   <column name="versionNo" type="number" />
   <row>
     <attribute name="outcomePlanAdminID">
-      <value>24000</value>
+      <value>10104</value>
     </attribute>
     <attribute name="nameTextID">
-      <value>24168</value>
-    </attribute>
-    <attribute name="reference">
-      <value>NeedsAssess</value>
-    </attribute>
-    <attribute name="homePage">
-      <value />
-    </attribute>
-    <attribute name="descriptionTextID">
-      <value>24169</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="goalsApplicableTo">
-      <value>OPGAT10001</value>
-    </attribute>
-    <attribute name="userDefinedExpectedOutcomeInd">
-      <value>1</value>
-    </attribute>
-    <attribute name="userDefinedFactorInd">
-      <value>1</value>
-    </attribute>
-    <attribute name="userDefinedActionInd">
-      <value>1</value>
-    </attribute>
-    <attribute name="firstReviewNoDays">
-      <value>30</value>
-    </attribute>
-    <attribute name="reviewFrequency">
-      <value>30</value>
-    </attribute>
-    <attribute name="reviewFrequencyCalculation">
-      <value>PRFC10001</value>
-    </attribute>
-    <attribute name="ownershipStrategyName">
-      <value />
-    </attribute>
-    <attribute name="visitsApplicable">
-      <value />
-    </attribute>
-    <attribute name="visitingUpperAgeLimit">
-      <value />
-    </attribute>
-    <attribute name="visitingLowerAgeLimit">
-      <value />
-    </attribute>
-    <attribute name="visitAcceptableDurationPercent">
-      <value />
-    </attribute>
-    <attribute name="recommendationRulesetID">
-      <value />
-    </attribute>
-    <attribute name="workspace">
-      <value />
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="outcomePlanAdminID">
-      <value>50035</value>
-    </attribute>
-    <attribute name="nameTextID">
-      <value>50021</value>
+      <value>10104</value>
     </attribute>
     <attribute name="reference">
       <value />
@@ -100,7 +35,7 @@
       <value />
     </attribute>
     <attribute name="descriptionTextID">
-      <value>50022</value>
+      <value>10105</value>
     </attribute>
     <attribute name="recordStatus">
       <value>RST1</value>
@@ -109,37 +44,37 @@
       <value>OPGAT10003</value>
     </attribute>
     <attribute name="userDefinedExpectedOutcomeInd">
-      <value>0</value>
-    </attribute>
-    <attribute name="userDefinedFactorInd">
       <value>1</value>
     </attribute>
-    <attribute name="userDefinedActionInd">
+    <attribute name="userDefinedFactorInd">
       <value>0</value>
+    </attribute>
+    <attribute name="userDefinedActionInd">
+      <value>1</value>
     </attribute>
     <attribute name="firstReviewNoDays">
       <value>30</value>
     </attribute>
     <attribute name="reviewFrequency">
-      <value>30</value>
+      <value>60</value>
     </attribute>
     <attribute name="reviewFrequencyCalculation">
-      <value>PRFC10001</value>
+      <value>PRFC10002</value>
     </attribute>
     <attribute name="ownershipStrategyName">
       <value />
     </attribute>
     <attribute name="visitsApplicable">
-      <value>OPVA10002</value>
+      <value>OPVA10001</value>
     </attribute>
     <attribute name="visitingUpperAgeLimit">
-      <value />
+      <value>21</value>
     </attribute>
     <attribute name="visitingLowerAgeLimit">
-      <value />
+      <value>0</value>
     </attribute>
     <attribute name="visitAcceptableDurationPercent">
-      <value />
+      <value>50</value>
     </attribute>
     <attribute name="recommendationRulesetID">
       <value />
@@ -148,7 +83,7 @@
       <value />
     </attribute>
     <attribute name="versionNo">
-      <value>8</value>
+      <value>1</value>
     </attribute>
   </row>
 </table>

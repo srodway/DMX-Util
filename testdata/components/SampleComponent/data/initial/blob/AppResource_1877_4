@@ -1,24 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  PID 5725-H26
- 
-  Copyright IBM Corporation 2014. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Number.Wizard.Pages=2
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="DynamicEvidenceObjectDET2400220140101">
+Wizard.PageID.1=ActivityConditionsWizard_selectService
+ActivityConditionsWizard_selectService.Wizard.Item.Text=Select Service
+ActivityConditionsWizard_selectService.Wizard.Page.Title=Step 1:
+ActivityConditionsWizard_selectService.Wizard.Page.Desc=Search and select a Service
 
-  <tc:navigation id="DynamicEvidenceObjectDET2400220140101Nav"/>
-
-  <tc:page-param name="successionID"/>
-  <tc:page-param name="evidenceType"/>
-  <tc:page-param name="effectiveDate"/>
-  <tc:page-param name="evidenceID"/>
-  <tc:page-param name="caseID"/>
-
-  <tc:context height="0" page-id="DynamicEvidence_EvidenceObjectTabDetails" tab-name="context.tab-name" tab-title="context.tab-title"/>
-
-  <tc:menu id="DynamicEvidenceObjectDET2400220140101Menu"/>
-
-</tc:tab-config>
+Wizard.PageID.2=ActivityConditionsWizard_selectServiceConditions
+ActivityConditionsWizard_selectServiceConditions.Wizard.Item.Text=Select Conditions
+ActivityConditionsWizard_selectServiceConditions.Wizard.Page.Title=Step 2:
+ActivityConditionsWizard_selectServiceConditions.Wizard.Page.Desc=Check all conditions that apply

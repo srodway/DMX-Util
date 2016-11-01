@@ -1,377 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012 - 2013. All Rights Reserved.
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><!-- 
-  Copyright 2009-2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information").  You shall not disclose such
-  Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><!-- 
-     A very basic implementation of display rules.
-     
-     This implementation may be useful during the initial development of
-     products, in order to get the product working with the CREOLE-based
-     Assessment Engine. 
-  
-     The following data will be output when displaying a period within a
-     determination:
-     - A simple sentence describing whether the claim is/is not eligible.
-     - If the claim is eligible, a breakdown of the objectives/tags available.
- --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="AbstractBasicProductDecisionDetailsRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+--><RuleSet name="PractitionerCertificateDataRuleSet">
 
 
-  <Class abstract="true" extends="DefaultCase" extendsRuleSet="DefaultProductDecisionDetailsRuleSet" name="AbstractBasicCase">
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="abstractBasicCase" resourceBundle="curam.core.rules.ProductDecisionDetailsRuleSet">
-          <!-- use toString so that the number is not formatted with commas nor precision truncated -->
-          <property name="toString">
-            <object>
-              <reference attribute="caseID">
-                <reference attribute="productDeliveryCase"/>
-              </reference>
-            </object>
-          </property>
-        </ResourceMessage>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="isEligibleTimeline">
-      <Annotations>
-        <Display domain="SVR_BOOLEAN"/>
-      </Annotations>
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Boolean"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <reference attribute="isEligibleTimeline">
-          <reference attribute="abstractCase"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Subclasses must create an instance of the appropriate rule class which
-         is responsible for calculating the case's eligibility and entitlement.
-    -->
-    <Attribute name="abstractCase">
-      <type>
-        <ruleclass name="AbstractCase" ruleset="ProductEligibilityEntitlementRuleSet"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="displayObjectiveTimelines">
-      <Annotations>
-        <Display/>
-        <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.1" name="Creates an Objective Timeline for display for each Objective Timeline on this case"/>
-      </Annotations>
-      <type>
-        <javaclass name="List">
-          <ruleclass name="DisplayObjectiveTimeline"/>
-        </javaclass>
-      </type>
-      <derivation>
-
-
-        <dynamiclist>
-          <list>
-            <reference attribute="objectiveTimelines">
-              <reference attribute="abstractCase"/>
-            </reference>
-          </list>
-          <listitemexpression>
-            <create ruleclass="DisplayObjectiveTimeline">
-              <specify attribute="objectiveTimeline">
-                <current/>
-              </specify>
-              <specify attribute="index">
-                <property name="indexOf">
-                  <Annotations>
-                    <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.2" name="Find the 0-based index of the current item in the list.  Used to provide a numerical key for each objective timeline for display."/>
-                  </Annotations>
-                  <object>
-                    <reference attribute="objectiveTimelines">
-                      <reference attribute="abstractCase"/>
-                    </reference>
-                  </object>
-                  <arguments>
-                    <current/>
-                  </arguments>
-                </property>
-
-
-              </specify>
-            </create>
-          </listitemexpression>
-        </dynamiclist>
-
-
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="displayObjectiveTimelineSubscreens">
-      <Annotations>
-        <DisplaySubscreen/>
-      </Annotations>
-      <type>
-        <javaclass name="List">
-          <ruleclass name="DisplayObjectiveTimelineSubscreen"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <dynamiclist>
-          <list>
-            <reference attribute="displayObjectiveTimelines"/>
-          </list>
-          <listitemexpression>
-            <create ruleclass="DisplayObjectiveTimelineSubscreen">
-              <specify attribute="displayObjectiveTimeline">
-                <current/>
-              </specify>
-            </create>
-          </listitemexpression>
-        </dynamiclist>
-
-
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <Class extends="DefaultCaseSubscreenDisplay" extendsRuleSet="DefaultProductDecisionDetailsRuleSet" name="DisplayObjectiveTimelineSubscreen">
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PractitionerCertificate">
     <Annotations>
-      <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.3" name="Further display details for an objective, namely its list of tags."/>
+      <SuccessionSetPopulation endDateAttribute="specifiedCertToDate" startDateAttribute="certFromDate"/>
     </Annotations>
 
 
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="subscreen" resourceBundle="curam.core.rules.ProductDecisionDetailsRuleSet">    
-        </ResourceMessage>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="displayObjectiveTimeline">
-      <type>
-        <ruleclass name="DisplayObjectiveTimeline"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="businessObjectID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <reference attribute="index">
-          <reference attribute="displayObjectiveTimeline"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="displayTagTimelines">
+    <Attribute name="certificateType">
       <Annotations>
-        <Display/>
+        <Label label-id="certificateType" name="The type of practitioner certificate, e.g. Doctor, Dentist etc."/>
       </Annotations>
       <type>
-        <javaclass name="List">
-          <ruleclass name="DisplayTagTimeline"/>
-        </javaclass>
+        <codetableentry table="PractitionerCertType"/>
       </type>
       <derivation>
-
-
-        <reference attribute="displayTagTimelines">
-          <reference attribute="displayObjectiveTimeline"/>
-        </reference>
-
-
+        <null/>
       </derivation>
     </Attribute>
 
 
-  </Class>
-
-
-  <Class name="DisplayObjectiveTimeline">
-
-
-    <Annotations>
-      <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.4" name="The display data for an objective timeline."/>
-    </Annotations>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="objectiveTimeline" resourceBundle="curam.core.rules.ProductDecisionDetailsRuleSet">        
-        </ResourceMessage>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="objectiveTimeline">
+    <Attribute name="certFromDate">
       <Annotations>
-        <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.5" name="The underlying objective timeline calculated as part of the case's entitlement."/>
+        <Label label-id="certFromDate" name="The date from which the certificate is valid."/>
       </Annotations>
       <type>
-        <ruleclass name="AbstractObjectiveTimeline" ruleset="ProductEligibilityEntitlementRuleSet"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <specified/>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="index">
+    <Attribute name="signatureDate">
       <Annotations>
-        <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.6" name="The 0-based index of this objective timeline from the overall list of objective tlmelines for the case.  Used as a key so that the child tag timelines for display can be linked back to the parent objective timeline for display."/>
-        <Display/>
+        <Label label-id="signatureDate" name="The date the certificate was signed by the practitioner."/>
       </Annotations>
       <type>
-        <javaclass name="Number"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <specified/>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="objectiveTypeID">
+    <Attribute name="certPeriodType">
       <Annotations>
-        <Display/>
+        <Label label-id="certPeriodType" name="The certificate will cover this number of periods, e.g. Weeks."/>
       </Annotations>
       <type>
-        <javaclass name="String"/>
+        <codetableentry table="PeriodDuration"/>
       </type>
       <derivation>
-        <reference attribute="objectiveTypeID">
-          <reference attribute="objectiveType">
-            <reference attribute="objectiveTimeline"/>
-          </reference>
-        </reference>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="isEntitledTimeline">
+    <Attribute name="claimFormSignedInd">
       <Annotations>
-        <Display/>
+        <Label label-id="claimFormSignedInd" name="Flag to indicate if the certificate was signed by the practitioner."/>
       </Annotations>
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Boolean"/>
-        </javaclass>
+        <javaclass name="java.lang.Boolean"/>
       </type>
       <derivation>
-        <reference attribute="isEntitledTimeline">
-          <reference attribute="objectiveTimeline"/>
-        </reference>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="targetIDTimeline">
+    <Attribute name="examinationDate">
       <Annotations>
-        <Display/>
+        <Label label-id="examinationDate" name="The date on which the examination took place."/>
       </Annotations>
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Number"/>
-        </javaclass>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <reference attribute="targetIDTimeline">
-          <reference attribute="objectiveTimeline"/>
-        </reference>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="relatedReferenceTimeline">
+    <Attribute name="certPeriodCount">
       <Annotations>
-        <Display/>
+        <Label label-id="certPeriodCount" name="The amount of periods, weeks for example, the certificate is covering."/>
       </Annotations>
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="String"/>
-        </javaclass>
+        <javaclass name="java.lang.Number"/>
       </type>
       <derivation>
-        <reference attribute="relatedReferenceTimeline">
-          <reference attribute="objectiveTimeline"/>
-        </reference>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="displayTagTimelines">
+    <Attribute name="specifiedCertToDate">
       <Annotations>
-        <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.7" name="Creates a Tag Timeline for display for each Tag Timeline on this Objective Timeline"/>
+        <Label label-id="specifiedCertToDate" name="The date the certificate is valid to."/>
       </Annotations>
       <type>
-        <javaclass name="List">
-          <ruleclass name="DisplayTagTimeline"/>
-        </javaclass>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <dynamiclist>
-          <list>
-            <reference attribute="tagTimelines">
-              <reference attribute="objectiveTimeline"/>
-            </reference>
-          </list>
-          <listitemexpression>
-            <create ruleclass="DisplayTagTimeline">
-              <specify attribute="tagTimeline">
-                <current/>
-              </specify>
-            </create>
-          </listitemexpression>
-        </dynamiclist>
-
-
+        <null/>
       </derivation>
     </Attribute>
-  </Class>
-
-
-  <Class name="DisplayTagTimeline">
-
-
-    <Annotations>
-      <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.8" name="The display data for a tag timeline."/>
-    </Annotations>
 
 
     <Attribute name="description">
@@ -379,18 +125,19 @@
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <ResourceMessage key="tagTimeline" resourceBundle="curam.core.rules.ProductDecisionDetailsRuleSet">
+        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="successionID"/>
         </ResourceMessage>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="tagTimeline">
+    <Attribute name="householdMember">
       <Annotations>
-        <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.9" name="The underlying tag timeline calculated as part of the case's entitlement."/>
+        <Label label-id="householdMember" name="The client receiving the certificate."/>
       </Annotations>
       <type>
-        <ruleclass name="AbstractTagTimeline" ruleset="ProductEligibilityEntitlementRuleSet"/>
+        <javaclass name="java.lang.Number"/>
       </type>
       <derivation>
         <specified/>
@@ -398,36 +145,71 @@
     </Attribute>
 
 
-    <Attribute name="valueTimeline">
-      <Annotations>
-        <Display/>
-      </Annotations>
+    <Attribute name="related_householdMember">
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Object"/>
-        </javaclass>
+        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
       </type>
       <derivation>
-        <reference attribute="valueTimeline">
-          <reference attribute="tagTimeline"/>
+        <reference attribute="caseParticipantRoleRecord">
+          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
+            <reference attribute="householdMember"/>
+          </create>
         </reference>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="pattern">
+    <Attribute name="practitioner">
       <Annotations>
-        <Display domain="FREQUENCY_PATTERN"/>
+        <Label label-id="practitioner" name="The practitioner who issued the certificate."/>
       </Annotations>
       <type>
-        <javaclass name="curam.util.type.FrequencyPattern"/>
+        <javaclass name="java.lang.Number"/>
       </type>
       <derivation>
-        <reference attribute="pattern">
-          <reference attribute="tagType">
-            <reference attribute="tagTimeline"/>
-          </reference>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="practitionerName">
+      <Annotations>
+        <Label label-id="practitionerName" name="The name of the practitioner who issues the certificate."/>
+      </Annotations>
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="related_practitioner">
+      <type>
+        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+      </type>
+      <derivation>
+        <reference attribute="caseParticipantRoleRecord">
+          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
+            <reference attribute="practitioner"/>
+          </create>
         </reference>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="related_Diagnosis">
+      <Annotations>
+        <relatedSuccessionSet relationship="child"/>
+      </Annotations>
+      <type>
+        <javaclass name="java.util.List">
+          <ruleclass name="ASCDiagnosis" ruleset="ASCDiagnosisDataRuleSet"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
       </derivation>
     </Attribute>
 

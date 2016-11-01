@@ -1,97 +1,269 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!--
   Licensed Materials - Property of IBM
- 
+  
   Copyright IBM Corporation 2012. All Rights Reserved.
-
+ 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
--->
-<!--
-    Copyright 2009 Curam Software Ltd.
-    All rights reserved.
-
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information").  You shall not disclose such
-    Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
--->
- 
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains" elementFormDefault="qualified">
-    <xsd:import namespace="http://www.curamsoftware.com/BaseDomains"/>
-    <xsd:include schemaLocation="IEGDomains"/>
-    <xsd:include schemaLocation="TriageDomains"/>
-    
-    <xsd:element name="Triage">
-        <xsd:complexType>
-        <xsd:sequence minOccurs="0">
-            <xsd:element ref="FoodShelter" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="Finance" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="PhysicalHealthDisability" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="MedicalHealthSubsAbuse" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="Safety" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="Education" minOccurs="0" maxOccurs="unbounded"/>
-        </xsd:sequence>
-            <xsd:attribute name="triageID" type="d:SVR_INT32"/>
-        </xsd:complexType>
-    </xsd:element>	
- 
-    <xsd:element name="Finance">
-        <xsd:complexType>
-            <xsd:attribute name="ableMakeEndsMeet" type="TRIAGE_YESNO"/>
-            <xsd:attribute name="worriedIncomeNotSufficient" type="TRIAGE_YESNO"/>
-        </xsd:complexType>
-    </xsd:element>
-  
-    <xsd:element name="FoodShelter">
-        <xsd:complexType>
-            <xsd:attribute name="housingWorries" type="TRIAGE_YESNO"/>
-            <xsd:attribute name="foodWorries" type="TRIAGE_YESNO"/>
-            <xsd:attribute name="otherWorries" type="TRIAGE_YESNO"/>
-        </xsd:complexType>
-    </xsd:element>
-  
-    <xsd:element name="PhysicalHealthDisability">
-        <xsd:complexType>
-            <xsd:attribute name="healthConcern" type="TRIAGE_YESNO"/>
-            <xsd:attribute name="healthPreventWork" type="TRIAGE_YESNO"/>
-            <xsd:attribute name="childConcern" type="TRIAGE_YESNO"/>
-        </xsd:complexType>
-    </xsd:element>
-  
-    <xsd:element name="MedicalHealthSubsAbuse">
-        <xsd:complexType>
-            <xsd:attribute name="hurtSelfOthers" type="TRIAGE_YESNO"/>
-            <xsd:attribute name="depression" type="TRIAGE_YESNO"/>
-            <xsd:attribute name="alcoholDrugs" type="TRIAGE_YESNO"/>
-        </xsd:complexType>
-    </xsd:element>
-  
-    <xsd:element name="Safety">
-        <xsd:complexType>
-            <xsd:attribute name="unsafeAfraid" type="TRIAGE_YESNO"/>
-            <xsd:attribute name="familySafe" type="TRIAGE_YESNO"/>
-            <xsd:attribute name="manageChildren" type="TRIAGE_YESNO"/>
-        </xsd:complexType>
-    </xsd:element>
-  
-    <xsd:element name="Education">
-        <xsd:complexType>
-            <xsd:attribute name="childAcademically" type="TRIAGE_YESNO"/>
-            <xsd:attribute name="childLearning" type="TRIAGE_YESNO"/>
-            <xsd:attribute name="childCare" type="TRIAGE_YESNO"/>
-        </xsd:complexType>
-    </xsd:element>
-  
-    <xsd:element name="Application">
-        <xsd:annotation>
-            <xsd:documentation>root entity</xsd:documentation>
-            <xsd:documentation>@curam.ieg.forced.creation=true</xsd:documentation>
-        </xsd:annotation>
-        <xsd:complexType>
-            <xsd:sequence minOccurs="0">
-                <xsd:element ref="Triage" minOccurs="0" maxOccurs="unbounded"/>
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
-</xsd:schema>
+-->  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains">
+    <xs:import namespace="http://www.curamsoftware.com/BaseDomains" />
+    <xs:include schemaLocation="RiskReassessmentDomains" />
+    <xs:element name="Application">
+        <xs:annotation>
+            <xs:documentation>Top level application table</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence minOccurs="0">
+                <xs:element ref="Assessment" minOccurs="0" maxOccurs="1" />
+                <xs:element ref="Group" minOccurs="0" maxOccurs="1" />
+								<xs:element ref="Person" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Group">
+        <xs:annotation>
+            <xs:documentation>Holds the answers to the assessment questions for the group</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="groupID" type="d:SVR_KEY">
+                <xs:annotation>
+                    <xs:documentation>The identifier for the group</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="groupName" type="IEG_STRING">
+                <xs:annotation>
+                    <xs:documentation>The groups name</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="priorInvestigations" type="RISK_REASSESSMENT_PRIORINVESTIGATIONS">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="previouslyReceivedCPS" type="RISK_REASSESSMENT_INDICATOR">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="pcHistory" type="RISK_REASSESSMENT_INDICATOR">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="childCharacteristics" type="RISK_REASSESSMENT_CHILDCHARACTERISTICS">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="devDisabledInd" type="IEG_BOOLEAN">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="learningDisabledInd" type="IEG_BOOLEAN">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="physicalDisabledInd" type="IEG_BOOLEAN">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="medicallyFragileInd" type="IEG_BOOLEAN">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="newInvestigation" type="RISK_REASSESSMENT_INDICATOR">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="notAddressedAbuse" type="RISK_REASSESSMENT_NOTADDRESSEDABUSE">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="alcoholInd" type="IEG_BOOLEAN">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="marijuanaInd" type="IEG_BOOLEAN">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="methamphetamineInd" type="IEG_BOOLEAN">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="heroinInd" type="IEG_BOOLEAN">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="cocaineInd" type="IEG_BOOLEAN">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="otherAbuseInd" type="IEG_BOOLEAN">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="otherAbuseText" type="IEG_STRING">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="probAdultRelationships" type="RISK_REASSESSMENT_PROBADULTRELATIONSHIPS">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="pcHasMentalProblem" type="RISK_REASSESSMENT_INDICATOR">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="pcCareInconsistent" type="RISK_REASSESSMENT_INDICATOR">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+        <xs:key name="Group_Key">
+            <xs:selector xpath="./Group" />
+            <xs:field xpath="@groupID" />
+        </xs:key>
+    </xs:element>
+		<xs:element name="Person">
+			<xs:annotation>
+				<xs:documentation>Holds the answers for each person</xs:documentation>
+			</xs:annotation>
+			<xs:complexType>
+				<xs:attribute name="personID" type="d:SVR_KEY">
+					<xs:annotation>
+						<xs:documentation>The identifier for the person</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="firstName" type="IEG_STRING">
+					<xs:annotation>
+						<xs:documentation>The persons first name</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="gender" type="IEG_GENDER">
+					<xs:annotation>
+						<xs:documentation>The persons gender</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="dateOfBirth" type="IEG_DATE">
+					<xs:annotation>
+						<xs:documentation>The persons date of birth</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="roleID" type="IEG_INT64">
+					<xs:annotation>
+						<xs:documentation>The id of the assessment delivery role record</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="participantID" type="IEG_INT64">
+					<xs:annotation>
+						<xs:documentation>Identifier of the person. Used for locating instances of person entities on the data store the relate to a single individual</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="questionsApplicableInd" type="IEG_BOOLEAN">
+					<xs:annotation>
+						<xs:documentation>Indicates if the assessment questions should be asked of this role.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="casePlanObjectives" type="RISK_REASSESSMENT_CASEPLANOBJECTIVES">
+					<xs:annotation>
+						<xs:documentation></xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:complexType>
+			<xs:key name="Person_Key">
+				<xs:selector xpath="./Person"/>
+				<xs:field xpath="@personID"/>
+			</xs:key>
+		</xs:element>
+    <xs:element name="Assessment">
+        <xs:annotation>
+            <xs:documentation>Indicates which factors should be assessed as part of the assessment</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="initialAssessmentInd" type="IEG_BOOLEAN">
+                <xs:annotation>
+                    <xs:documentation>Indicates if this is the first time this assessment is being executed</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="assessmentDefinitionID" type="IEG_INT64">
+                <xs:annotation>
+                    <xs:documentation>The identifier for the admin assessment definition entity which holds the details of the assessment configuration.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="assessmentInstanceID" type="IEG_INT64">
+                <xs:annotation>
+                    <xs:documentation>The identifier of the assessment instance record which relates to this execution of the assessment.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="riskOverride" type="RISK_REASSESSMENT_OVERRIDE">
+                <xs:annotation>
+                    <xs:documentation>The assessment override value.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="policyOverrideSexAbuseCaseInd" type="IEG_BOOLEAN">
+                <xs:annotation>
+                    <xs:documentation>Policy overide for sexual abuse case and the perpetrator is likely to have access to the child.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="policyOverrideInjuryInd" type="IEG_BOOLEAN">
+                <xs:annotation>
+                    <xs:documentation>Policy overide for non-accidental injury to a child under age two years.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="policyOverrideSevereInjuryInd" type="IEG_BOOLEAN">
+                <xs:annotation>
+                    <xs:documentation>Policy overide for severe non-accidental injury.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="policyOverrideDeathInd" type="IEG_BOOLEAN">
+                <xs:annotation>
+                    <xs:documentation>Policy overide where caregiver action or inaction resulted in the death of a child due to abuse or neglect (previous or current).</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="discretionaryOverrideLevel" type="RISK_REASSESSMENT_DISCRETIONARY_OVERRIDE">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="discretionaryOverrideReason" type="IEG_STRING">
+                <xs:annotation>
+                    <xs:documentation>Reason text for the discretionary override.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="recommendedDecision" type="REASSESSMENT_CLASSIFICATION_DIVISION_TYPE">
+                <xs:annotation>
+                    <xs:documentation>The assessment recommended decision.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="scoredClassification" type="REASSESSMENT_CLASSIFICATION_DIVISION_TYPE">
+                <xs:annotation>
+                    <xs:documentation>The classification retrieved from the rules execution for the scored risk factor.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="finalClassification" type="REASSESSMENT_CLASSIFICATION_DIVISION_TYPE">
+                <xs:annotation>
+                    <xs:documentation>The classification retrieved from the rules execution for the final factor.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

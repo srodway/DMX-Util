@@ -1,48 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCIdentificationRuleSet">
-  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="PDCIdentification">
-    <Attribute name="alternateID">
+<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCContactPreferencesDataRuleSet">
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCContactPreferences">
+    <Annotations>
+      <SuccessionSetPopulation/>
+    </Annotations>
+    <Attribute name="preferredCommunication">
       <Annotations/>
       <type>
-        <javaclass name="java.lang.String"/>
+        <javaclass name="curam.creole.value.Timeline">
+          <codetableentry table="CommunicationMethod"/>
+        </javaclass>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="fromDate">
+    <Attribute name="preferredLanguage">
       <Annotations/>
       <type>
-        <javaclass name="curam.util.type.Date"/>
+        <javaclass name="curam.creole.value.Timeline">
+          <codetableentry table="Language"/>
+        </javaclass>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="altIDType">
-      <Annotations/>
+    <Attribute name="description">
       <type>
-        <codetableentry table="ConcernRoleAlternateID"/>
+        <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="toDate">
-      <Annotations/>
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="preferredInd">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
+        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="successionID"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
     <Attribute name="participant">

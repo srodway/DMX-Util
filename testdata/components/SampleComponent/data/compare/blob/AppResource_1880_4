@@ -1,31 +1,421 @@
 #
 # Licensed Materials - Property of IBM
-#
-# PID 5725-H26
 # 
-# Copyright IBM Corporation 2014. All Rights Reserved.
+# Copyright IBM Corporation 2012. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-# This Properties file contains resource Strings for the Adult Social Care Product Rule Set.
+######  SDM Assessment settings #####
 
-CaseHeader.description = Case ID {0}
-Calculator.description=Calculator Class for {0}
-CaseParticipantRole.description={0}
-Person.description=Person {0}
-HouseholdMember.description=Household Member Record for {0}
-ConcernRole.description={0}
-Person.description=Person Record for {0}
-MemberCPRCalculator.description=Member CaseParticipantRole Calculator Class for {0}
-HouseholdMember.description=HouseholdMember Record for {0}
+# Property that controls if the page parameters passed into the IEG script 
+# should be passed along to the finish/quit page
+# START NON-TRANSLATABLE
+forward.page.params=true
+# END NON-TRANSLATABLE
 
-AgeRangeCalculator.description=Age Range Calculator class for {0}
-DisplayHelper.description={0}
+# Hide the banner
+# START NON-TRANSLATABLE
+banner.show=false
+# END NON-TRANSLATABLE
 
-Application.description=Application {0}
+# Updated help properties
+# START NON-TRANSLATABLE
+compile.cluster.help=false
+# END NON-TRANSLATABLE
 
-ContributionByYear.description= Contribution By Year Class for {0}
-ContributionsByYearCalculator.description= Contribution By Year
+# Updated button text property
+navpanel.button.exit.text=Cancel
 
-PractitionerCert.description=Practitioner Certification with start date {0}
+# Set the width of the modal
+# START NON-TRANSLATABLE
+modal.width=1000
+# END NON-TRANSLATABLE
+
+
+# Set the font-weight for list questions
+# START NON-TRANSLATABLE
+matrix.label.weight=normal
+# END NON-TRANSLATABLE
+
+###### Properties copied from ieg-config.properties #####
+
+# properties that apply to the whole player
+# START NON-TRANSLATABLE
+font.family=tahoma
+icon.mandatory=mandatory.gif
+# END NON-TRANSLATABLE
+
+icon.mandatory.alt=Mandatory
+
+# banner area properties
+banner.systitle=IBM
+banner.apptitle=Citizen Self Service
+
+# START NON-TRANSLATABLE
+banner.background.color=#FFFFFF
+banner.background.image=banner_background
+banner.border.color=#DDDDDD
+banner.text.color=#3276AD
+banner.text.weight=bold
+# END NON-TRANSLATABLE
+
+banner.link.print=PRINT
+banner.link.print.desc=Click here to print this page
+
+# START NON-TRANSLATABLE
+logo=logo.png
+# END NON-TRANSLATABLE
+
+logo.alt=Citizen Self Service
+
+# banner menu properties
+# START NON-TRANSLATABLE
+print.logo=ieg_print
+print.logo.hover=ieg_print_roll
+print.logo.click=ieg_print_click
+menu.item.color=#376F8F
+# END NON-TRANSLATABLE
+
+
+# progress bar properties
+# START NON-TRANSLATABLE
+progress.panel.border.color=#DDDDDD
+progress.panel.background.color=#F3F5F8
+progress.panel.background.image=progress_background
+progress.bar.border.color=#DCE1E9
+progress.bar.background.color=#FFFFFF
+# END NON-TRANSLATABLE
+
+progress.bar.text=complete
+
+# START NON-TRANSLATABLE
+progress.bar.text.color=#9E9E9E
+progress.total.bar.background.color=#E0E9F4
+progress.total.bar.background.image=progress_total_background
+progress.total.bar.border.color=#D1DCEB
+progress.completed.bar.background.color=#A6D169
+progress.completed.bar.background.image=progress_completed_background
+progress.completed.bar.border.color=#7DB334
+progress.pagetext.color=#3276AD
+# END NON-TRANSLATABLE
+ 
+# notes button properties
+notes.button.text=Notes
+
+# START NON-TRANSLATABLE
+notes.button.hide.image=notes_up_arrow
+notes.button.hide.selected.image=notes_up_arrow_selected
+notes.button.show.image=notes_down_arrow
+notes.button.show.selected.image=notes_down_arrow_selected
+# END NON-TRANSLATABLE
+
+# notes panel properties
+notes.panel.title.text=Notes
+
+# sections panel properties
+# START NON-TRANSLATABLE
+sectionspanel.border.color=#DDDDDD
+sectionspanel.background.color=#F8F9FB
+sectionspanel.background.image=section_panel_background
+sectionspanel.selected.color=#000000
+sectionspanel.selected.border.color=#BDCDE3
+sectionspanel.selected.background.color=#E0EBFA
+sectionspanel.selected.background.image=selected_section_background
+sectionspanel.enabled.border.color=#DDDDDD
+sectionspanel.enabled.background.color=#EEF0F3
+sectionspanel.enabled.background.image=enabled_section_background
+# END NON-TRANSLATABLE
+
+sectionspanel.desc.prev=%1s : Completed Section
+sectionspanel.desc.current=%1s : Current Section
+
+# START NON-TRANSLATABLE
+sectionspanel.horizontal.max.display=14
+sectionspanel.horizontal.arrow.move.amount=3
+sectionspanel.horizontal.truncate.limit=11
+# END NON-TRANSLATABLE
+
+# If changing size of section panel boxes, the text can be moved and text size changed
+# to accommodate this by adjusting the following 2 properties.
+# START NON-TRANSLATABLE
+sectionspanel.horizontal.text.top.margin=33px
+sectionspanel.horizontal.text.size=8pt
+# END NON-TRANSLATABLE
+
+# START NON-TRANSLATABLE
+sectionspanel.horizontal.background.color=#F8F9FB
+sectionspanel.horizontal.border.color=#B2B2B2
+sectionspanel.horizontal.enabled.color=#E0E7EF
+sectionspanel.horizontal.enabled.text.color=#3276AD
+sectionspanel.horizontal.text.disabled.color=#B2B2B2
+sectionspanel.horizontal.bar.text.color=#3276AD
+sectionspanel.horizontal.bar.background.color=#E0E7EF
+sectionspanel.horizontal.enabled.background.image=enabled_section_background
+sectionspanel.horizontal.box.height=50px
+sectionspanel.horizontal.box.width=61px
+sectionspanel.horizontal.back.arrow.image=left_arrow
+sectionspanel.horizontal.next.arrow.image=right_arrow
+# END NON-TRANSLATABLE
+
+sectionspanel.horizontal.back.arrow.title=View Previous Section Tabs
+sectionspanel.horizontal.next.arrow.title=View Next Section Tabs 
+
+# START NON-TRANSLATABLE
+sectionspanel.horizontal.arrow.width=20px
+# END NON-TRANSLATABLE
+
+# page title properties
+# START NON-TRANSLATABLE
+pagetitle.border.color=#BDCDE3
+pagetitle.background.color=#E7F2FF
+pagetitle.background.image=page_title_background
+pagetitle.color=#000000
+pagetitle.description.color=#5D5D5D
+pagetitle.imagecell.width=135px
+policy.logo=ieg_policy
+policy.logo.hover=ieg_policy_roll
+policy.logo.click=ieg_policy_click
+legislation.logo=ieg_legislation
+legislation.logo.hover=ieg_legislation_roll
+legislation.logo.click=ieg_legislation_click
+# END NON-TRANSLATABLE
+
+# cluster properties
+# START NON-TRANSLATABLE
+cluster.title.color=#3276AD
+cluster.title.border.color=#DEDFE1
+cluster.combobox.width=auto
+# END NON-TRANSLATABLE
+
+# Message Panel properties
+# START NON-TRANSLATABLE
+messages.panel.color=#F39002
+messages.panel.border.color=#E3E6EB
+messages.panel.background.color=#F2F4F7
+# END NON-TRANSLATABLE
+
+# help properties
+help.link.moreinfo=Help
+help.link.desc.moreinfo=Click here to display help information
+help.link.desc.cxt.moreinfo=Click here to display help information for '%1s'
+# START NON-TRANSLATABLE
+help.panel.background.color=#F6F9FA
+help.panel.color=#000000
+help.panel.heading.color=#3276AD
+help.bottompanel.background.color=#DFE9EF
+help.bottompanel.background.image=help_panel_bottom_background
+help.link.image.open=help_arrow
+help.link.image.roll=help_roll
+help.link.image.selected=help_arrow_selected
+help.link.image.close=help_close
+help.link.image.close.roll=help_close_roll
+dialog.help.link.image.close=dialog_help_close
+dialog.help.link.image.close.roll=dialog_help_close_roll
+# END NON-TRANSLATABLE
+
+help.link.policy=Policy
+help.link.desc.policy=Click here to display policy information for '%1s'
+help.link.legislation=Legislation
+help.link.desc.legislation=Click here to display legislation information for '%1s'
+help.panel.close=Close help panel
+help.close.title=Click here to close help panel
+
+# START NON-TRANSLATABLE
+show.cluster.help.dialog=false
+help.link.moreinfo.hide=false
+# END NON-TRANSLATABLE
+
+# cluster and list action link properties
+action.edit=Edit
+action.desc.edit=Click here to change this information
+action.desc.cxt.edit=Click here to change the information for '%1s'
+
+list.action.label=Action
+list.action.add=Add
+list.action.desc.add.select=Add to list
+list.action.desc.add=Click here to add another item to the list
+list.action.edit=Edit
+list.action.desc.edit=Click here to edit this item
+list.action.delete=Delete
+list.action.desc.delete=Click here to delete this item
+list.action.delete.confirm=Are you sure you wish to delete this item?
+
+# START NON-TRANSLATABLE
+cluster.value.readonly.color=#000000
+# END NON-TRANSLATABLE
+
+# Message displayed when a list does not have any data (i.e. zero rows)
+# START NON-TRANSLATABLE
+list.no.data.text=No information entered
+# END NON-TRANSLATABLE
+
+# read-only page properties
+# messages panel properties
+messages.panel.description=Please correct the following errors before proceeding.
+
+# person tabs panel properties
+# START NON-TRANSLATABLE
+persontabs.background.color=#F4F4F4
+persontabs.background.image=person_tabs_background
+persontabs.border.color=#CBCBCB
+persontabs.max.word.size=13
+persontabs.tab.width=80
+# END NON-TRANSLATABLE
+
+# navigation panel properties
+# START NON-TRANSLATABLE
+navpanel.button.background.image=cp_action_control
+navpanel.button.background.image.hover=action_control_background_roll
+navpanel.button.background.image.corner=cp_action_control_corners
+navpanel.button.background.image.corner.hover=action_control_corners_roll
+navpanel.button.background.color=#D0E1F7
+navpanel.button.color=#000000
+navpanel.button.selected.background.image=action_control_background_sel
+navpanel.button.selected.background.color=#FFE59F
+navpanel.button.active.background.image=button_active_background
+navpanel.button.active.background.color=#FEE069
+navpanel.button.back.background.image=back_arrow
+navpanel.button.next.background.image=next_arrow
+# END NON-TRANSLATABLE
+
+navpanel.button.back.text=Back
+# navpanel.button.exit.text=Exit
+navpanel.button.quit.text=Save & Exit
+navpanel.button.next.text=Next
+navpanel.button.back.desc=Click here to display the previous page.
+navpanel.button.exit.desc=Click here to exit without submitting the answers on this page.
+navpanel.button.quit.desc=Click here to submit the answers on this page and exit.
+navpanel.button.next.desc=Click here to submit your answers and display the next page.
+
+# START NON-TRANSLATABLE
+navpanel.modal.button.background.image=modal-action-control-background
+navpanel.modal.button.right.corner.image=modal-action-control-corners
+navpanel.modal.button.wrapper.image=modal-button-wrapper
+# END NON-TRANSLATABLE
+
+# code table drop-down list blank entry description
+dropdown.list.blank.entry.description=--Please Select--
+dropdown.list.description=Please select one option
+
+# Person relationship capture configuration properties
+# When capturing relationships the user is presented with some text and an
+# drop-down list input control in the following form.
+# <From Person Name> <drop-down list> <To Person Name>
+# e.g. Patrick is the father of Mary
+# For different languages the order of the person names and input control may
+# have to change. This can be achieved by using the following three properties
+# to specify the order of the three items involved for relationship capture
+# using the following keywords:
+# from = The text of representing the first person in the relationship 
+# input = The input control used. (Currently a drop-down list of relationships)
+# to = The text of representing the second person in the relationship
+# For RTL locales the order flows accordingly and does not have to be adjusted
+# here.
+# Note: Validation of the values is not performed to ensure they are correct. 
+# For example, if all items are set to "from". The behaviour is "undefined" in 
+# this case.
+# START NON-TRANSLATABLE
+relationship.capture.item.1=from
+relationship.capture.item.2=input
+relationship.capture.item.3=to
+relationship.person.name.maxLength=13
+# END NON-TRANSLATABLE
+
+# This property allows the domain used for the relationship type to be
+# configured.
+# START NON-TRANSLATABLE
+relationship.type.domain.name=IEG_RELATIONSHIP_TYPE
+# END NON-TRANSLATABLE
+
+relationship.from.label=From
+relationship.type.label=Type
+relationship.to.label=To
+relationship.action.label=Action
+
+#Messaging styles
+# START NON-TRANSLATABLE
+messages.highlight.color=#ffff99
+messages.label.color=#000
+messages.label.weight=bold
+# END NON-TRANSLATABLE
+
+# Translation for boolean values
+true=Yes
+false=No
+
+# Calendar values
+calendar.today=Today
+calendar.icon.alt=Click here to select a date in the calendar
+
+# Width of date fields
+# START NON-TRANSLATABLE
+date.field.width=60%
+# END NON-TRANSLATABLE
+
+# Width of standard text inputs
+# START NON-TRANSLATABLE
+input.standard.width=100
+# END NON-TRANSLATABLE
+
+# multi-select layout properties
+# START NON-TRANSLATABLE
+multiselect.layout.optimum.columns=3
+# END NON-TRANSLATABLE
+
+# modal-specific properties
+# START NON-TRANSLATABLE
+modal.anchor.nav.panel=true
+modal.hide.title.panel=true
+# END NON-TRANSLATABLE
+#modal.width=900
+# START NON-TRANSLATABLE
+modal.height=600
+modal.close.dialog.on.exit=false
+# END NON-TRANSLATABLE
+
+
+multiselect.mandatory.message=At least one selection must be made for '%1s'.
+listquestion.mandatory.message=A selection must be made for '%1s'.
+
+# START NON-TRANSLATABLE
+log.missing.properties=false
+# END NON-TRANSLATABLE
+
+# navigation message properties
+navigation.error.message=Do not use the browser back button, please use the "Back" button on the page. You will now be returned to the page that was displayed when you pressed the browser back button.
+navigation.link.message=Click here to continue.
+
+# Section disabled properties
+# START NON-TRANSLATABLE
+navigation.update.message.display=true
+# END NON-TRANSLATABLE
+navigation.update.message=Due to answers that have just changed subsequent answers need to be verified.\\nSome navigation options have now been disabled.
+
+# session timeout message properties
+session.timeout.error.message=The session has expired. Please re-enter your login details.
+session.timeout.link.message=Click here to continue.
+# START NON-TRANSLATABLE
+session.timeout.link.url=IEG2_listAllIEG2Scripts
+# END NON-TRANSLATABLE
+
+# item label maxLength property
+# START NON-TRANSLATABLE
+item.itemLabel.maxLength=12
+# END NON-TRANSLATABLE
+
+# list question mandatory message for multi and single select question
+checkbox.mandatory.message=: You must choose at least one option
+radioButton.mandatory.message=: You must choose one option
+
+# title of dropdown list on relationship page
+relationship.dropdown.message=Please choose a relationship between %1s and %2s
+
+# matrix images message property
+matrix.image.selected=Selected
+matrix.image.notSelected=Not Selected
+
+# standard alignment of label texts
+# START NON-TRANSLATABLE
+label.align=left
+# END NON-TRANSLATABLE

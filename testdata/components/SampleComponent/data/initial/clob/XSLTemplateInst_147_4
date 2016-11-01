@@ -42,7 +42,7 @@
                   </fo:block>
                   <fo:inline font-size="12pt" font-weight="normal">
                     Dear
-                    <xsl:apply-templates select="FIELD[FNAME='providerGroupName']"/>
+                    <xsl:apply-templates select="FIELD[FNAME='providerName']"/>
                     ,
                   </fo:inline>
                   <fo:block>
@@ -60,8 +60,8 @@
                     ' is due to end on
                     <xsl:apply-templates select="FIELD[FNAME='endDate']"/>
                     . Please contact us if you wish to renew your contract.
-                    <!-- END, CR00356535 -->
                   </fo:inline>
+                  <!-- END, CR00356535 -->
                   <fo:block>
                     <fo:leader leader-pattern="space"/>
                   </fo:block>

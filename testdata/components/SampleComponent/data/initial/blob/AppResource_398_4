@@ -1,18 +1,20 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Group4.Title=Family or Community resources
-Group4.Description=
-Q17.Label=Has the youth been victimized by family?
-Q17.HelpText=Has this juvenile been taken advantage of by family members. To clarify, has the youth been sent out by a family member to perform any illegal activity resulting in profit for the family
-Q18.Label=Has the youth victimized the family?
-Q18.HelpText=Has the juvenile encouraged or forced any of his/her family members to partake in illegal activities for his/her own profit?
-Q19.Label=Is the youth in custody of Social Services?
-Q19.HelpText=Is the youth under the protection of Social Services and not under the care of his own family members?
-Q20.Label=Does the youth have a history of repeated runaways?
-Q20.HelpText=In the past has the youth run away from home or from the care of social services?
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="SupervisorOrgUnitAssignedTasksByMonth">
+  <nc:nodes>
+    <nc:navigation-page id="SupervisorOrgUnitAssignedTasksByMonth" page-id="Supervisor_orgUnitAssignedTasksDueByWeek" title="Leaf.Title.OrgUnitAssignedTasks" visible="true"/>
+  </nc:nodes>
+</nc:navigation>

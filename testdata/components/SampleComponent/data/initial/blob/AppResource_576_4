@@ -1,19 +1,25 @@
-Welcome.Message.Line1=Welcome to 
-Welcome.Message.Line2=IBM C\u00FAram Universal Access
-Welcome.Message.Line3=IBM C\u00FAram Universal Access is a quick and easy way for citizens to get information about government benefits and community services.
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-Government.Benefits.Title=Government Benefits and You
-Government.Benefits.Description=Check if you are eligible for government benefits and apply online. There is a wide range of government benefits and programs that you may be eligible for. You can use the options below to check your eligibility and to apply for benefits and programs online.
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="BanksMenu">
+  
 
-Services.Title=Services Available in your Community
-Services.Description=Answer some basic questions about your circumstances to find services and programs in your community that may help you.
-
-Screening.Button.Text=Check if I am Eligible
-Screening.Button.Alt.Text=Check if I am Eligible
-
-Apply.Button.Text=Apply For Benefits
-Apply.Button.Alt.Text=Apply For Benefits
-
-Triage.Button.Text=Find Community Help
-Triage.Button.Alt.Text=Find Community Help
-
+  
+    <mc:menu-item id="Bank" open-as="modal" page-id="Organization_createBank" title="MenuItem.Title.Bank" tooltip="MenuItem.Tooltip.Bank"/>
+      
+    <mc:menu-item id="BankBranch" open-as="modal" page-id="Organization_createBankBranch" title="MenuItem.Title.BankBranch" tooltip="MenuItem.Tooltip.BankBranch"/>
+      
+   
+</mc:menu-bar>

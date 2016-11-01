@@ -6,23 +6,102 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
+MenuItem.Title.RegisterEmployer=Register Employer
 
-# START NON-TRANSLATABLE 
-Message.Title={Service.Name}
+MenuItem.Title.AddProspectEmployer=Add Prospect Employer
+
+Submenu.Title.New=New
+# START NON-TRANSLATABLE
+Submenu.Icon.New=New
 # END NON-TRANSLATABLE
-First.Sentence.StartDate.Provider=This service will begin on {Start.Date} and is provided by {link:{Provider.Name}:ProviderModalLink}.
-First.Sentence.StartDate.NoProvider=This service will begin on {Start.Date}.
-First.Sentence.StartDate.EndDate.Provider=This service will begin on {Start.Date} until {End.Date} and is provided by {link:{Provider.Name}:ProviderModalLink}.
-First.Sentence.StartDate.EndDate.NoProvider=This service will begin on {Start.Date} until {End.Date}.
-First.Sentence.StartDate.Hours.DayOfWeek.Provider=This service will begin on {Start.Date} for {Hours} hours every {Days.Of.Week} and is provided by {link:{Provider.Name}:ProviderModalLink}.
-First.Sentence.StartDate.Hours.DayOfWeek.EndDate.Provider=This service will begin on {Start.Date} for {Hours} hours every {Days.Of.Week} until {End.Date} provided by {link:{Provider.Name}:ProviderModalLink}.
-First.Sentence.StartDate.Hours.DayOfWeek.NoProvider=This service will begin on {Start.Date} for {Hours} hours every {Days.Of.Week}.
-First.Sentence.StartDate.Hours.DayOfWeek.EndDate.NoProvider=This service will begin on {Start.Date} for {Hours} hours every {Days.Of.Week} until {End.Date}.
-Second.Sentence.HasContactDetails=Please contact {Service.Owner} at {Phone.Number} or {link:{Email.Address}:Email.Link} if you need more information.
-Second.Sentence.NoContactDetails=Please contact {Service.Owner} if you need more information.
-Third.Sentence=Click {link:My Activities:My.Activities} for a full list of your activities.
+Submenu.Tooltip.New=New
 
-#START NON-TRANSLATABLE
-Image=icon_service
-Link.MyActivities=CitizenAccount_listCitizenActivities
-#END NON-TRANSLATABLE
+MenuItem.Title.CreateCase=Case
+# START NON-TRANSLATABLE
+MenuItem.Icon.CreateCase=Case
+# END NON-TRANSLATABLE
+MenuItem.Tooltip.CreateCase=Create new case.
+
+MenuItem.Title.Participant=Participant Registration
+# START NON-TRANSLATABLE
+MenuItem.Icon.Participant=Participant
+# END NON-TRANSLATABLE
+MenuItem.Tooltip.Participant=Create new participant.
+
+Submenu.Title.Search=Search
+# START NON-TRANSLATABLE
+Submenu.Icon.Search=Search
+# END NON-TRANSLATABLE
+Submenu.Tooltip.Search=Find a case or participant.
+
+MenuItem.Title.SearchCase=Case
+# START NON-TRANSLATABLE
+MenuItem.Icon.SearchCase=SearchCase
+# END NON-TRANSLATABLE
+MenuItem.Tooltip.SearchCase=Find a case.
+
+Submenu.Title.Participant=Participant
+# START NON-TRANSLATABLE
+Submenu.Icon.Participant=Partcipant
+# END NON-TRANSLATABLE
+Submenu.Tooltip.Participant=Find a participant.
+
+MenuItem.Title.Employer=Employer
+# START NON-TRANSLATABLE
+MenuItem.Icon.Employer=Employer
+# END NON-TRANSLATABLE
+MenuItem.Tooltip.Employer=Find an employer.
+
+MenuItem.Title.InformationProvider=Information Provider
+# START NON-TRANSLATABLE
+MenuItem.Icon.InformationProvider=InformationProvider
+# END NON-TRANSLATABLE
+MenuItem.Tooltip.InformationProvider=Find an information provider.
+
+MenuItem.Title.Person=Person
+# START NON-TRANSLATABLE
+MenuItem.Icon.Person=Person
+# END NON-TRANSLATABLE
+MenuItem.Tooltip.Person=Find a person or prospect person.
+
+MenuItem.Title.ProductProvider=Product Provider
+# START NON-TRANSLATABLE
+MenuItem.Icon.ProductProvider=ProductProvider
+# END NON-TRANSLATABLE
+MenuItem.Tooltip.ProductProvider=Find a product provider.
+
+MenuItem.Title.ServiceSupplier=Service Supplier
+# START NON-TRANSLATABLE
+MenuItem.Icon.ServiceSupplier=ServiceSupplier
+# END NON-TRANSLATABLE
+MenuItem.Tooltip.ServiceSupplier=Find a service supplier.
+
+MenuItem.Title.EducationalInstitute=Educational Institute
+# START NON-TRANSLATABLE
+MenuItem.Icon.EducationalInstitute=EducationalInstitute
+# END NON-TRANSLATABLE
+MenuItem.Tooltip.EducationalInstitute=Find an educational institute.
+
+MenuItem.Title.ExternalParty=External Party
+# START NON-TRANSLATABLE
+MenuItem.Icon.ExternalParty=ExternalParty
+# END NON-TRANSLATABLE
+MenuItem.Tooltip.ExternalParty=Find an external party.
+
+MenuItem.Title.ExternalPartyOffice=External Party Office
+# START NON-TRANSLATABLE
+MenuItem.Icon.ExternalPartyOffice=ExternalPartyOffice
+# END NON-TRANSLATABLE
+MenuItem.Tooltip.ExternalPartyOffice=Find an external party office.
+
+MenuItem.Title.Utility=Utility
+# START NON-TRANSLATABLE
+MenuItem.Icon.Utility=Utility
+# END NON-TRANSLATABLE
+MenuItem.Tooltip.Utility=Find a utility.
+
+MenuItem.Title.AllParticipant=All Participant
+# START NON-TRANSLATABLE
+MenuItem.Icon.AllParticipant=AllParticipant
+# END NON-TRANSLATABLE
+MenuItem.Tooltip.AllParticipant=Find a participant.

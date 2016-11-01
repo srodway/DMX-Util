@@ -6,9 +6,11 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
+# This Properties file contains resource Strings for the Participat entities CER Ruleset.
 
 
-leaf.title.Home=Home 
-leaf.title.ChangeHistory=Change History 
-leaf.title.Verifications=Verifications 
-leaf.title.Issues=Issues 
+verificationdeterminatorresult=Conditional Verification result for the evidence
+
+verificationdeterminator=Conditional Verification Determinator
+
+verificationdeterminatorparam=Conditional Verification input parameters for the evidence: {0}

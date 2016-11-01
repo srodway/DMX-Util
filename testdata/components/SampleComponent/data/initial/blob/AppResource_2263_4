@@ -1,42 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2009-2011 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="QuestionnaireViewMenu">
-    
-    <mc:loader-registry>
-        <mc:loader class="curam.decisionassist.sl.tab.impl.QuestionnaireViewMenuLoader"/>
-    </mc:loader-registry>
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Details.Name.SampleBOHome=Business Object
+Details.Title.SampleBOHome=Business Object
+Details.Icon.SampleBOHome=Business Object
 
-    <mc:menu-item dynamic="true" id="EditDetails" open-as="modal" page-id="DecisionAssistAdmin_modifyQuestionnaire" title="MenuItem.Title.EditDetails" tooltip="MenuItem.Tooltip.EditDetails"/>
-
-    <mc:menu-item dynamic="true" id="EditQuestionScript" page-id="DecisionAssistAdmin_resolveEditQuestionsScript" title="MenuItem.Title.EditQuestionScript" tooltip="MenuItem.Tooltip.EditQuestionScript"/>
-
-    <mc:menu-item id="SynchroniseTypicalPicture" open-as="modal" page-id="DecisionAssistAdmin_synchronizeTypicalPicture" title="MenuItem.Title.SynchroniseTypicalPicture" tooltip="MenuItem.Tooltip.SynchroniseTypicalPicture"/>
-
-    <mc:menu-item id="ValidateQuestionScript" open-as="modal" page-id="DecisionAssistAdmin_resolveValidateQuestionScript" title="MenuItem.Title.ValidateQuestionScript" tooltip="MenuItem.Tooltip.ValidateQuestionScript"/>
-
-    <mc:menu-item dynamic="true" id="Release" open-as="modal" page-id="DecisionAssistAdmin_releaseQuestionnaireVersion" title="MenuItem.Title.Release" tooltip="MenuItem.Tooltip.Release"/>
-
-    <mc:menu-separator id="sep1"/>
-
-    <mc:menu-item dynamic="true" id="NewTypicalPicture" open-as="modal" page-id="DecisionAssistAdmin_createTypicalPicture" title="MenuItem.Title.NewTypicalPicture" tooltip="MenuItem.Title.NewTypicalPicture"/>
-
-    <mc:menu-item dynamic="true" id="NewVersion" open-as="modal" page-id="DecisionAssistAdmin_createQuestionnaireVersion" title="MenuItem.Title.NewVersion" tooltip="MenuItem.Title.NewVersion"/>
-
-    <mc:menu-separator id="sep2"/>
-
-    <mc:menu-item id="Delete" open-as="modal" page-id="DecisionAssistAdmin_deleteQuestionnaireVersion" title="MenuItem.Title.Delete" tooltip="MenuItem.Tooltip.Delete"/>
-    
-</mc:menu-bar>
+page.title.sampleHome=Business Object Home

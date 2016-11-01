@@ -5,6 +5,17 @@
   <column name="questionnaireVersionID" type="id" />
   <row>
     <attribute name="dpQuestionnaireLinkID">
+      <value>900</value>
+    </attribute>
+    <attribute name="determinationPackageVersionID">
+      <value>950</value>
+    </attribute>
+    <attribute name="questionnaireVersionID">
+      <value>600</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="dpQuestionnaireLinkID">
       <value>216</value>
     </attribute>
     <attribute name="determinationPackageVersionID">
@@ -23,17 +34,6 @@
     </attribute>
     <attribute name="questionnaireVersionID">
       <value>784</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="dpQuestionnaireLinkID">
-      <value>900</value>
-    </attribute>
-    <attribute name="determinationPackageVersionID">
-      <value>950</value>
-    </attribute>
-    <attribute name="questionnaireVersionID">
-      <value>600</value>
     </attribute>
   </row>
 </table>

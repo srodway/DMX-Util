@@ -1,30 +1,50 @@
 #
 # Licensed Materials - Property of IBM
+#
+# PID 5725-H26
 # 
 # Copyright IBM Corporation 2014. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-# This Properties file contains resource Strings for the PDC Bank Account Validation Ruleset.
+PractitionerCertificateDetails.Title=Practitioner Certificate Details 
+PractitionerCertificate.Description=Please tell us a little more about the incapacity benefit certificate. 
 
-ERR_BANKACCOUNT_XRV_DUPLICATE_CLIENT_CREATE=New bank account details cannot be added for a client that is currently marked as a duplicate.
-ERR_BANKACCOUNT_XRV_DUPLICATE_CLIENT_MODIFY=Bank Account details of a client that is currently marked as a duplicate cannot be modified.
-ERR_BANKACCOUNT_XRV_BIC_NOT_EXIST=The BIC {0} does not exist.
-ERR_BANKACCOUNT_XRV_SORT_CODE_NOT_EXIST=The sort code {0} does not exist.
-ERR_BANKACCOUNT_XRV_JOINT_SHAREDNAME_NOT_MATCH=Bank account name of the shared account does not match the bank account name entered.
-ERR_BANKACCOUNT_XRV_ACCOUNTDATES_INVALID=Bank account to and from dates must be in between bank branch start and end dates.
-ERR_BANKACCOUNT_BRANCH_CANCELLED=The bank branch selected for this bank account is cancelled. Please select another bank account.
-ERR_BANKACCOUNT_DUPLICATE_BIC=Duplicate branches with the same BIC found. Please contact the system administrator.
-ERR_BANKACCOUNT_ACCOUNTEXISTS_DUPLICATE_IBAN=An account exists in this branch with this IBAN.
-ERR_BANKACCOUNT_SHAREDACCOUNT_TYPENOTMATCH=Bank account type of the shared account does not match the bank account type entered.
-INFO_BANKACCOUNT_CLOSED=The bank account has been closed or the end date set. If there are payments scheduled to this Bank Account they will not be issued.
-ERR_BANKACCOUNT_XRV_EFFECTIVE_DATE_DOB=The effective date of change must be after the date of birth.
-ERR_BANKACCOUNT_SHAREDACCOUNT_TYPEMODIFIED=You cannot change a joint account type.
-ERR_BANKACCOUNT_ACCOUNT_CLOSED=You cannot modify a bank account when the bank account status is closed.
-ERR_BANKACCOUNT_TYPEMODIFIED=Type cannot be modified.
-ERR_BANKACCOUNT_PAYMENTS_ISSUED=A payment has been issued to this bank account therefore the modification cannot be applied. A new bank account should be created.
-ERR_BANKACCOUNT_XFV_BIC_SORT_CODE_BELONG_TO_SAME_BRANCH=Entered Sort Code and BIC should belong to same bank branch.
-ERR_BANKACCOUNT_FV_IBAN_NUM_EMPTY=At least IBAN and BIC or Account Number and Sort Code must be entered.
-PDCBankAccountValidationResult.description=PDC Bank Account Validation Result For {0}
-ERR_BANKACCOUNT_MULTIPLE_PREFERRED_BANKACCOUNT=You cannot have more than one preferred bank account.
+ExaminationDetails.Title=Examination Details
+PCEDHelp=Collect information on the certificate type and the date on which the examination took place.
+MedicalCertificateType.Label=What is the medical certificate type?
+ExaminationDate.Label=On what date did examination take place?
+
+HasPractitionerCertifiedDate.Title=Practitioner Certified Date
+HasPractitionerCertifiedDate.Label=Has the practitioner certified to a specified date?
+PCHPCDHelp=Medical certificates can be issued to a specific date or for a period of days, weeks, months.
+
+PractitionerCertifiedDate.Label=What date has the practitioner certified the client fit to return to work?
+PCPCDHelp=The practitioner may issue a certificate on which they declare when a client is fit to return to work.
+
+CertifiedPeriodLength.Label=What period length has been certified?
+PCCPLHelp=Where a practitioner has not given a specific date for a period of incapacity a period of days, weeks or months may be specified on the certificate.
+
+CertifiedFrequency.Label=What is the period type frequency?
+PCCFHelp=The frequency is either days, weeks or months.
+
+PractitionerDetails.Title=Practitioner Details
+PCPDHelp=Here information on the practitioner (doctor, dentist or Physiotherapist) is collected.
+PractitionerName.Label=What is the practitioner's name?
+PractitionerCertificateSignedDate.Label=What date did the practitioner sign the certificate?
+
+Comments.Title=Comments
+PCCommentsHelp=Any comments made by the practitioner are captured here.
+
+CerfiticationDetails.Title=Certification Details
+PCCertificationDetailsHelp=Details in relation to certification are captured.
+CertificationStartDate.Label=On what date does certification start?
+IsSignedByClaimant.Label=Has the claim form been signed by the client?
+
+PractitionerCertificateDiagnosisDetails.Title=Diagnosis Details
+PCDDHelp=Details in relation to the medical diagnosis are captured. There may be more than one diagnosis.
+PractitionerCertificateDiagnosisDetails.Label=Are there diagnosis details for the incapacity benefit?
+
+
+RequiredField.Indicator=<span style="color: orange">* Indicates a required item</span>

@@ -1,28 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012, 2016. All Rights Reserved.
  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009 Curam Software Ltd.
+  Copyright 2010 Curam Software Ltd.
   All rights reserved.
-
+  
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="LiabilitySample">
+--><ac:application xmlns:ac="http://www.curamsoftware.com/curam/util/client/application-config" id="CITWSAPP" mode="external" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ac:landing-page icon="landing.logo" page-id="CitizenWorkspace_landingPage" title="landing.title"/>
 
-  <tc:page-param name="caseID"/>
-
-  <tc:menu id="LiabilitySampleMenu"/> 
+  <ac:navigation id="StandardUser" width="navbar.width"/>
   
-  <!-- Details panel -->
-  <tc:context page-id="LiabilitySample_tabDetails"/>
+  <ac:navigation id="CitizenAccount" width="navbar.width"/>
+  
+  <ac:banner-menu title="mega.title" type="mega">
+      
+    <ac:menu-item icon="menu.screening.icon" id="screening" page-id="PagePlayerResolveWrapper" text="menu.screening.text" title="menu.screening.title">
+      <ac:param description="" name="page" value="SetupScreening"/>
+    </ac:menu-item>  
+    
+    <!-- BEGIN, CR00464534, MV -->
+    
+    <ac:menu-item icon="menu.intake.icon" id="intake" page-id="CitizenWorkspace_apply" text="menu.intake.text" title="menu.intake.title"/>
 
-  <!-- See LiabilitySample.nav for details of the navigation links. -->
-  <tc:navigation id="LiabilitySample"/> 
+    <ac:menu-item icon="menu.triage.icon" id="triage" page-id="PagePlayerResolveWrapper" text="menu.triage.text" title="menu.triage.title">
+      <ac:param description="" name="page" value="SetupTriage"/>
+    </ac:menu-item>
+    <!-- END, CR00464534 -->
 
-</tc:tab-config>
+  </ac:banner-menu>
+  
+  <ac:banner-menu title="print.title" type="print"/>
+  
+  <ac:banner-menu title="menu.help.title" type="help">
+  
+    <ac:menu-item icon="menu.contactus.icon" id="contactUs" page-id="CitizenWorkspace_ContactUs" text="menu.contactus.text" title="menu.contactus.title"/>
+    
+    <ac:menu-item icon="menu.faq.icon" id="faq" page-id="CitizenWorkspace_FAQ" text="menu.faq.text" title="menu.faq.title"/>
+    
+  </ac:banner-menu>
+
+  <ac:banner-menu page-id="CitizenWorkspace_userHomeResolver" title="person.title" type="person">      
+    
+    <ac:menu-item id="p1" page-id="PagePlayerWrapper" text="menu.resetpassword.text" title="menu.resetpassword.title">
+      <ac:param description="" name="page" value="ResetPasswordExistingPassword"/>
+    </ac:menu-item>
+  <!-- BEGIN, CR00467393, PC -->      
+  </ac:banner-menu>
+  <ac:banner-menu title="logout.title" type="logout"/>
+  <!-- END, CR00467393 -->
+</ac:application>

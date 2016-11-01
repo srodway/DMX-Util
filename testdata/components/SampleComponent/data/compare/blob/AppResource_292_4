@@ -1,21 +1,26 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-# BEGIN, CR00350636, VT
-Help.leaf.description= This leaf contains the utility functionality. Administration services are provided to maintain financial information for the organization. This includes information on banks and bank branches, currency exchange rates, organization bank accounts, and insurance return periods. There is also a financial processing calendar that is used to maintain the financial processing dates for different delivery methods.
-# END, CR00350636
-
-folder.title.financial=Financial
-folder.title.financial.Help=Case financials are the payments and bills issued for eligible and active product delivery cases. These financials are generated as a result of case processing, including the generation of payments and bills for eligible case components. Case financials also include account maintenance on a case such as the allocation of funds from a payment toward a bill, and receipt of payments from case participants in respect of their bills.
-leaf.title.Financials=Financial
-leaf.title.bankaccnts=Bank Accounts
-leaf.title.bankaccnts.Help=Utility's bank account details
-# BEGIN, CR00341469, VT
-leaf.title.utilityhome=Home
-# END, CR00341469
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="CodetableMenu">
+  
+  <mc:menu-item id="ChangeName" open-as="modal" page-id="System_modifyCodetableNameFromList" title="MenuItem.Title.ChangeName" tooltip="MenuItem.Tooltip.ChangeName"/>
+  
+  <mc:menu-item id="NewItem" open-as="modal" page-id="System_createCodetableItem" title="MenuItem.Title.NewItem" tooltip="MenuItem.Tooltip.NewItem"/>
+  
+  <mc:menu-item id="ChangeDefaultValue" open-as="modal" page-id="System_modifyCodetableDefault" title="MenuItem.Title.ChangeDefaultValue" tooltip="MenuItem.Tooltip.ChangeDefaultValue"/>
+  
+  <mc:menu-item id="Delete" open-as="modal" page-id="System_cancelCodetable" title="MenuItem.Title.Delete" tooltip="MenuItem.Tooltip.Delete"/>
+  
+</mc:menu-bar>

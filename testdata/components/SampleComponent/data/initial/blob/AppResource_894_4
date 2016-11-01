@@ -1,11 +1,18 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2013. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Section.Title.AdultNeeds=Adult Needs Section
-QUIT_PAGE_ID=AssessmentScript_exit
-FINISH_PAGE_ID=AssessmentDelivery_executeAssessment
+ResidencyPage.Title=Residency
+WorkingAbroadCluster.Desc=Working & Living
+WorkingAbroadCluster.Title=Working and Living Abroad
+Nationality.LabelID=What is your nationality?
+Nationality.HelpID=Select your nationality from the list
+CurrentRegion.LabelID=Where are you living in now?
+CurrentRegion.HelpID=Select the region you are currently living from the list
+NormalRegion.LabelID=Is this the region you normally live in?
+NormalRegion.HelpID=New Question Help Text
+AbroadFourWeeks.LabelID=Have you been abroad for more than four weeks at a time out of the last four years?
+AbroadFourWeeks.HelpID=Have you been ou of the country from more than 4 weeks in the last 4 years
+AbroadCluster.Title=Abroad
+AbroadCountry.LabelID=Country
+AbroadCountry.HelpID=Select the country from the list
+CountryFromDate.LabelID=From
+CountryFromDate.HelpID=Enter the date you were out of the country, or click the calendar icon and select the date
+CountryToDate.LabelID=To
+CountryToDate.HelpID=Enter the date you were out of the country to, or click the calendar icon and select the date

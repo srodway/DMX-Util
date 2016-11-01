@@ -7,11 +7,15 @@
 
   US Government Users Restricted Rights - Use, duplication or disclosure
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet name="ASCHouseholdMemberRuleSet">
-  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="ASCHouseholdMember">
+--><RuleSet name="ASCLivingArrangementRuleSet">
+
+
+  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="ASCLivingArrangement">
+
+
     <Attribute name="startDate">
       <Annotations>
-        <Label label-id="startDate" name="The date the client became a household member."/>
+        <Label label-id="startDate" name="The start date of the living arrangement."/>
       </Annotations>
       <type>
         <javaclass name="curam.util.type.Date"/>
@@ -22,25 +26,12 @@
     </Attribute>
 
 
-    <Attribute name="blackOrAfricanAmerican">
+    <Attribute name="livingArrangeStatus">
       <Annotations>
-        <Label label-id="blackOrAfricanAmerican" name="Indicates if the client is black or African American."/>
+        <Label label-id="livingArrangeStatus" name="The status of the living arrangement, e.g. Permanent."/>
       </Annotations>
       <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="ssnStatus">
-      <Annotations>
-        <Label label-id="ssnStatus" name="The client's ssn status. This indicates if the client has a social security number."/>
-      </Annotations>
-      <type>
-        <codetableentry table="SSNApplicationStatus"/>
+        <codetableentry table="LivingArrangementStatus"/>
       </type>
       <derivation>
         <specified/>
@@ -50,7 +41,7 @@
 
     <Attribute name="endDate">
       <Annotations>
-        <Label label-id="endDate" name="The date the client ceased being a household member."/>
+        <Label label-id="endDate" name="The end date of the living arrangement."/>
       </Annotations>
       <type>
         <javaclass name="curam.util.type.Date"/>
@@ -61,116 +52,12 @@
     </Attribute>
 
 
-    <Attribute name="nativeHawiianOrPacificIslander">
+    <Attribute name="livingArrangeType">
       <Annotations>
-        <Label label-id="nativeHawiianOrPacificIslander" name="Indicates if the client is Hawaiian or a Pacific Islander."/>
+        <Label label-id="livingArrangeType" name="The living arrangement type of the client, e.g. Adult Case Home, Foster Care etc."/>
       </Annotations>
       <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="citizenStatus">
-      <Annotations>
-        <Label label-id="citizenStatus" name="The citizenship status of a household member. This is populated from the alien status code table."/>
-      </Annotations>
-      <type>
-        <codetableentry table="AlienStatus"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="asian">
-      <Annotations>
-        <Label label-id="asian" name="Indicates if the client is Asian."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="veteranStatus">
-      <Annotations>
-        <Label label-id="veteranStatus" name="An individual's veteran status e.g. Active Duty, Disabled Veteran, Spouse of Active Duty etc."/>
-      </Annotations>
-      <type>
-        <codetableentry table="VeteranStatus"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="nativeAlaskanOrAmericanIndian">
-      <Annotations>
-        <Label label-id="nativeAlaskanOrAmericanIndian" name="c"/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="hispanicOrLatino">
-      <Annotations>
-        <Label label-id="hispanicOrLatino" name="Indicates if the client is Hispanic or Latino."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="whiteOrCaucasian">
-      <Annotations>
-        <Label label-id="whiteOrCaucasian" name="Indicates if the client is white or caucasian."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="migrantOrSeasonalFarmWorker">
-      <Annotations>
-        <Label label-id="migrantOrSeasonalFarmWorker" name="Indicates if the client is a migrant or seasonal farm worker."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="residencyStatus">
-      <Annotations>
-        <Label label-id="residencyStatus" name="The residency status for a household member. For example, indicates if a member is permanently or temporarily resident in the household."/>
-      </Annotations>
-      <type>
-        <codetableentry table="ResidencyStatus"/>
+        <codetableentry table="LivingArrangementType"/>
       </type>
       <derivation>
         <specified/>
@@ -180,7 +67,7 @@
 
     <Attribute name="caseParticipantRoleID">
       <Annotations>
-        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the household member."/>
+        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the client."/>
       </Annotations>
       <type>
         <javaclass name="java.lang.Number"/>
@@ -192,9 +79,7 @@
 
 
     <Attribute name="related_caseParticipantRoleID">
-      <Annotations>
-        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the household member."/>
-      </Annotations>
+      <Annotations/>
       <type>
         <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
       </type>

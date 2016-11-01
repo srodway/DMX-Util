@@ -6,14 +6,35 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-# This Properties file contains resource Strings for the PDC Email Address Validation Ruleset.
+MenuItem.Title.AddComment=Add Comment
+MenuItem.Tooltip.AddComment=Add Comment
 
-ERR_CONCERNROLEEMAILADDRESS_XRV_DUPLICATE_CLIENT_CREATE=New email address details cannot be added for a client that is currently marked as a duplicate.
-ERR_CONCERNROLEEMAILADDRESS_XRV_DUPLICATE_CLIENT_MODIFY=Email address details of a client that is currently marked as a duplicate cannot be modified.
-ERR_CONCERNROLE_EMAILADDRESS_XRV_START_DATE=The email address from date must be after {0} Date of Birth - {1,date,M/d/yyyy}.
-ERR_CONCERNROLE_XRV_START_DATE_END_DATE=The email address from date must be before {0} Date of Death - {1,date,M/d/yyyy}.
-ERR_CONCERNROLE_XRV_END_DATE=The email address to date must be before {0} Date of Death - {1,date,M/d/yyyy}.
-ERR_EMAILADDRESS_XRV_EFFECTIVE_DATE_DOB=The effective date of change must be after the date of birth.
-ERR_EMAILADDRESS_TYPEMODIFIED=Type cannot be modified.
-PDCEmailAddressValidationResult.description=PDC Email Address Validation Result For {0}
-ERR_EMAILADDRESS_MULTIPLE_PREFERRED_EMAILADDRESS=You cannot have more than one preferred email address.
+MenuItem.Title.Close=Close
+MenuItem.Tooltip.Close=Close
+
+MenuItem.Title.Reserve=Add To My Tasks
+MenuItem.Tooltip.Reserve=Add To My Tasks
+
+MenuItem.Title.Un-reserve=Make Available
+MenuItem.Tooltip.Un-reserve=Make Available
+
+MenuItem.Title.Forward=Forward
+MenuItem.Tooltip.Forward=Forward
+
+MenuItem.Title.Reallocate=Reallocate
+MenuItem.Tooltip.Reallocate=Reallocate
+
+MenuItem.Title.Defer=Defer
+MenuItem.Tooltip.Defer=Defer
+
+MenuItem.Title.Restart=Restart
+MenuItem.Tooltip.Restart=Restart
+
+MenuItem.Title.UpdateTimeWorked=Update Time Worked
+MenuItem.Tooltip.UpdateTimeWorked=Update Time Worked
+
+MenuItem.Title.EditPriority=Edit Priority
+MenuItem.Tooltip.EditPriority=Edit Priority
+
+MenuItem.Title.EditDeadline=Edit Deadline
+MenuItem.Tooltip.EditDeadline=Edit Deadline

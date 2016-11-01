@@ -1,30 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
  
-  Copyright IBM Corporation 2012. All Rights Reserved.
+  Copyright IBM Corporation 2012, 2014. All Rights Reserved.
 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2010 Curam Software Ltd.
+  Copyright 2010-2011 Curam Software Ltd.
   All rights reserved.
   
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="ClassicDecisionComparison">
+--><sc:section xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-config" id="FINAPPSection" title="FinancialAppSection.title" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     
-  <nc:loader-registry>
-    <nc:loader class="curam.core.sl.tab.impl.ReassessmentNavStateLoader"/>
-  </nc:loader-registry>    
-    
-  <nc:nodes>
-    <nc:navigation-page id="CompareRules" page-id="ProductDelivery_compareDecisionRules" title="Page.Title.CompareRules"/>
-    <nc:navigation-page dynamic="true" id="CompareEvidenceDifferenceOnly" page-id="ProductDelivery_compareEvidenceDifferenceOnly" title="Page.Title.CompareEvidenceDifferenceOnly"/>
-    <nc:navigation-page id="CompareAllEvidence" page-id="ProductDelivery_compareDecisionEvidence" title="Page.Title.CompareAllEvidence"/>
-    <nc:navigation-page dynamic="true" id="ViewOldDecision" page-id="ProductDelivery_viewOldDecisionWithStaticRulesTreeOnly" title="Page.Title.ViewOldDecision"/>
-    <nc:navigation-page id="ViewNewDecision" page-id="ProductDelivery_viewNewDecisionWithStaticRulesTreeOnly" title="Page.Title.ViewNewDecision"/>
-  </nc:nodes>
-    
-</nc:navigation>
+  <sc:tab id="ReceivedPaymentsSearch"/>
+  <sc:tab id="RefundPersonPaymentsSearch"/>
+  <sc:tab id="RefundEmployerPaymentsSearch"/>
+  <sc:tab id="SuspenseAccountSearch"/>
+  <sc:tab id="IssuedPaymentsSearch"/>
+  <sc:tab id="CaseSearch"/>
+  <sc:tab id="MyItemsOfInterest"/>
+  <sc:tab id="InsuranceReturnPeriods"/>
+
+  <sc:tab id="FinLiabilitiesSearch"/>
+ 
+  <sc:tab id="FinPersonHome"/>
+  <sc:tab id="FinPersonSearch"/>
+
+  <sc:tab id="FinEmployerHome"/>
+  <sc:tab id="FinEmployerSearch"/>
+  
+  <sc:tab id="FinExternalPartySearch"/>
+  <sc:tab id="FinExternalParty"/>
+  <sc:tab id="ExternalUserHome"/>  
+
+  <sc:tab id="FinUtility"/> 
+  <sc:tab id="UtilitySearch"/>
+  <sc:tab id="FinOverPaymentCase"/>
+  <sc:tab id="FinUnderPaymentCase"/>
+  <sc:tab id="FinPaymentCorrectionCase"/>
+  
+  <!-- BEGIN, CR00248774, NS -->
+  <!-- Service Plans -->
+  <sc:tab id="PlanItemView"/>
+  <sc:tab id="ServicePlanHome"/>
+  <sc:tab id="ServiceUnitPlanItemView"/>
+  <sc:tab id="IntegratedServicePlan"/>
+  <sc:tab id="ServicePlanGroup"/>
+  <sc:tab id="CustomPlanItemView"/>
+  <!-- END, CR00248774 -->
+
+  <sc:shortcut-panel-ref id="FINAPPSectionShortcuts"/>
+
+<sc:tab id="DynamicEvidenceObjectPDC000025719000101"/><sc:tab id="DynamicEvidenceObjectPDC000026019000101"/><sc:tab id="DynamicEvidenceObjectPDC000025919000101"/><sc:tab id="DynamicEvidenceObjectPDC000025719000102"/><sc:tab id="DynamicEvidenceObjectPDC000026019000102"/><sc:tab id="DynamicEvidenceObjectPDC000025919000102"/><sc:tab id="DynamicEvidenceObjectPDC000025819000101"/><sc:tab id="DynamicEvidenceObjectPDC000026519000101"/><sc:tab id="DynamicEvidenceObjectPDC000026519000102"/><sc:tab id="DynamicEvidenceObjectPDC000026219000101"/><sc:tab id="DynamicEvidenceObjectPDC000026319000101"/><sc:tab id="DynamicEvidenceObjectPDC000026419000101"/><sc:tab id="DynamicEvidenceObjectPDC000025619000101"/><sc:tab id="DynamicEvidenceObjectPDC000026119000101"/><sc:tab id="DynamicEvidenceObjectPDC000025619000102"/><sc:tab id="DynamicEvidenceObjectPDC000026119000102"/><sc:tab id="DynamicEvidenceObjectPDC000025619000103"/><sc:tab id="DynamicEvidenceObjectPDC000026119000103"/><sc:tab id="ServiceInvoiceView"/><sc:tab id="ServiceInvoiceSearch"/><sc:tab id="ProviderSearch"/><sc:tab id="DynamicEvidenceObjectDET000026220160929"/><sc:tab id="DynamicEvidenceObjectDET000026020160929"/><sc:tab id="DynamicEvidenceObjectDET000025720160929"/><sc:tab id="DynamicEvidenceObjectDET000025620160929"/><sc:tab id="DynamicEvidenceObjectDET000051220160929"/><sc:tab id="DynamicEvidenceObjectDET000026420160929"/><sc:tab id="DynamicEvidenceObjectDET000025820160929"/><sc:tab id="DynamicEvidenceObjectDET000025920160929"/><sc:tab id="DynamicEvidenceObjectDET000026320160929"/><sc:tab id="DynamicEvidenceObjectDET000026120160929"/></sc:section>

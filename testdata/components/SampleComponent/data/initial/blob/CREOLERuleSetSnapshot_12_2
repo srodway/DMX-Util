@@ -1,39 +1,90 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet name="ParticipantEvidenceRuleSet">
-  <Annotations internalID="id1369055081879">
-    <EditorMetadata internalID="id1369055082165">
-      <config internalID="id1369055650563">
-        <faconfig internalID="id1369055650564"/>
-      </config>
-      <folders internalID="ParticipantEvidenceRuleSet1369055325464">
-        <diagram id="NameEvidence.related_participant" internalID="ParticipantEvidenceRuleSet1369056646581">
-          <Annotations internalID="ParticipantEvidenceRuleSet1369056646580">
-            <Label internalID="ParticipantEvidenceRuleSet1369056646579" label-id="ParticipantEvidenceRuleSetlabelID_1369056646577" name="related_participant"/>
-          </Annotations>
-          <Attributes internalID="ParticipantEvidenceRuleSet1369056646640">
-            <Attribute id="NameEvidence.related_participant" internalID="ParticipantEvidenceRuleSet1369056646760"/>
-          </Attributes>
-        </diagram>
-        <diagram id="BirthAndDeathEvidence.related_person" internalID="ParticipantEvidenceRuleSet1369056744879">
-          <Annotations internalID="ParticipantEvidenceRuleSet1369056744877">
-            <Label internalID="ParticipantEvidenceRuleSet1369056744876" label-id="ParticipantEvidenceRuleSetlabelID_1369056744875" name="related_person"/>
-          </Annotations>
-          <Attributes internalID="ParticipantEvidenceRuleSet1369056744897">
-            <Attribute id="BirthAndDeathEvidence.related_person" internalID="ParticipantEvidenceRuleSet1369056745163"/>
-          </Attributes>
-        </diagram>
-        <diagram id="AddressEvidence.related_participant" internalID="ParticipantEvidenceRuleSet1369056749495">
-          <Annotations internalID="ParticipantEvidenceRuleSet1369056749494">
-            <Label internalID="ParticipantEvidenceRuleSet1369056749493" label-id="ParticipantEvidenceRuleSetlabelID_1369056749492" name="related_participant"/>
-          </Annotations>
-          <Attributes internalID="ParticipantEvidenceRuleSet1369056749522">
-            <Attribute id="AddressEvidence.related_participant" internalID="ParticipantEvidenceRuleSet1369056749523"/>
-          </Attributes>
-        </diagram>
-      </folders>
-    </EditorMetadata>
-  </Annotations>
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="BirthAndDeathEvidence">
-    <Attribute name="dateOfBirth">
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009-2012 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information").  You shall not disclose such
+  Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><!--
+  Case Entities Rule Set.
+  This Rule Set contains Rule Class representation of common Case Manager
+  entities that are used in Determination Rule Sets.
+--><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaseEntitiesRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+  <!--
+    CaseHeader Data Rule Class.
+    CaseHeader evidence records details of an interaction a participant has with
+    the organization.
+  -->
+  <Class name="CaseHeader">
+
+
+    <!-- Case ID. -->
+    <Attribute name="caseID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!--  Status Code.-->
+    <Attribute name="statusCode">
+      <type>
+        <codetableentry table="CaseStatus"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!--  Case Type Code.-->
+    <Attribute name="caseTypeCode">
+      <type>
+        <codetableentry table="CaseTypeCode"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Integrated CaseID -->
+    <Attribute name="integratedCaseID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!--  Case Reference-->
+    <Attribute name="caseReference">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- The expected start date of the case. -->
+    <Attribute name="expectedStartDate">
       <type>
         <javaclass name="curam.util.type.Date"/>
       </type>
@@ -41,7 +92,10 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="dateOfDeath">
+
+
+    <!-- The start date of the case. -->
+    <Attribute name="startDate">
       <type>
         <javaclass name="curam.util.type.Date"/>
       </type>
@@ -49,36 +103,121 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="person">
+
+
+    <!-- The expected end date of the case. -->
+    <Attribute name="expectedEndDate">
       <type>
-        <javaclass name="java.lang.Number"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="related_person">
+
+
+    <!-- The end date of the case. -->
+    <Attribute name="endDate">
       <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="person"/>
-          </create>
-        </reference>
+        <specified/>
       </derivation>
     </Attribute>
+
+
+    <!-- BEGIN, CR00304503, PB -->
+    <!-- The registration date of the case. -->
+    <Attribute name="registrationDate">
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <!-- END, CR00304503 -->
+
+
+    <!-- Concern Role ID of the primary client of the case. -->
+    <Attribute name="concernRoleID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Description for this Rule Class. -->
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="CaseHeader.description" resourceBundle="curam.core.rules.CaseCERRules">
+          <reference attribute="caseReference"/>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+
+
   </Class>
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="IdentificationEvidence">
-    <Attribute name="alternateID">
+
+
+  <!-- *************************************************************** -->
+  <!-- 
+    CaseParticipantRole Data Rule Class.
+    CaseParticipantRole evidence records details of a participant associated with
+    a case. A participant can have multiple case participant roles in a single 
+    case. A participant can have many different roles in different cases. A case 
+    may have one or more case participant roles.
+  -->
+  <!-- *************************************************************** -->
+  <Class name="CaseParticipantRole" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+    <!-- Case Participant Role ID -->
+    <Attribute name="caseParticipantRoleID">
       <type>
-        <javaclass name="java.lang.String"/>
+        <javaclass name="Number"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
+
+
+    <!-- Description for this Rule Class. -->
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="CaseParticipantRole.description" resourceBundle="curam.core.rules.CaseCERRules">
+          <reference attribute="concernRoleName">
+            <reference attribute="participantRole"/>
+          </reference>
+          <reference attribute="typeCode"/>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Participant Role ID -->
+    <Attribute name="participantRoleID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- From Date -->
     <Attribute name="fromDate">
       <type>
         <javaclass name="curam.util.type.Date"/>
@@ -87,6 +226,9 @@
         <specified/>
       </derivation>
     </Attribute>
+
+
+    <!-- To Date -->
     <Attribute name="toDate">
       <type>
         <javaclass name="curam.util.type.Date"/>
@@ -94,190 +236,126 @@
       <derivation>
         <specified/>
       </derivation>
+
+
     </Attribute>
-    <Attribute name="altIDType">
+    <Attribute name="endReason">
       <type>
-        <codetableentry table="ConcernRoleAlternateID"/>
+        <codetableentry table="ParticipantRoleEndReason"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="participant">
+
+
+    <!-- Case Participant Role Type -->
+    <Attribute name="typeCode">
       <type>
-        <javaclass name="java.lang.Number"/>
+        <codetableentry table="CaseParticipantRoleType"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="related_participant">
+
+
+    <!-- CaseId of case to which the case participant belong -->
+    <Attribute name="caseID">
       <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="participant"/>
-          </create>
-        </reference>
-      </derivation>
-    </Attribute>
-    <Attribute name="preferredInd">
-      <type>
-        <javaclass name="Boolean"/>
+        <javaclass name="Number"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-  </Class>
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PhoneNumberEvidence">
-    <Attribute name="participant">
+
+
+    <!-- Participant Record to which the case participant belong -->
+    <Attribute name="participantRole">
       <type>
-        <javaclass name="java.lang.Number"/>
+        <ruleclass name="ConcernRole" ruleset="ParticipantEntitiesRuleSet"/>
       </type>
       <derivation>
-        <specified/>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="ConcernRole" ruleset="ParticipantEntitiesRuleSet">
+            <match retrievedattribute="concernRoleID">
+              <reference attribute="participantRoleID"/>
+            </match>
+          </readall>
+        </singleitem>
       </derivation>
     </Attribute>
-    <Attribute name="related_participant">
+
+
+    <!-- Case Record of case to which the case participant belong -->
+    <Attribute name="relatedCase">
       <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+        <ruleclass name="CaseHeader"/>
       </type>
       <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="participant"/>
-          </create>
-        </reference>
-      </derivation>
-    </Attribute>
-    <Attribute name="preferredInd">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-  </Class>
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="EmailAddressEvidence">
-    <Attribute name="participant">
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="related_participant">
-      <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="participant"/>
-          </create>
-        </reference>
-      </derivation>
-    </Attribute>
-    <Attribute name="preferredInd">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-  </Class>
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="ContactPreferenceEvidence">
-    <Attribute name="participant">
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="related_participant">
-      <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="participant"/>
-          </create>
-        </reference>
-      </derivation>
-    </Attribute>
-  </Class>
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="NameEvidence">
-    <Attribute name="nameType">
-      <type>
-        <codetableentry table="AlternateNameType"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="participant">
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="related_participant">
-      <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="participant"/>
-          </create>
-        </reference>
-      </derivation>
-    </Attribute>
-  </Class>
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="GenderEvidence">
-    <Attribute name="person">
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="related_person">
-      <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="person"/>
-          </create>
-        </reference>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="CaseHeader">
+            <match retrievedattribute="caseID">
+              <reference attribute="caseID"/>
+            </match>
+          </readall>
+        </singleitem>
       </derivation>
     </Attribute>
   </Class>
 
 
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="RelationshipEvidence">
-    <Attribute name="relationshipType">
+  <!-- *************************************************************** -->
+  <!-- 
+    CaseGroups Data Rule Class.
+    Case Groups records details of the case group and its members.
+  -->
+  <!-- *************************************************************** -->
+  <Class name="CaseGroups" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+    <Attribute name="caseClientGroupID">
       <type>
-        <codetableentry table="RelationshipTypeCode"/>
+        <javaclass name="Number"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="fromDate">
+
+
+    <Attribute name="caseID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="concernRoleID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="groupCode">
+      <type>
+        <codetableentry table="CaseGroupType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="startDate">
       <type>
         <javaclass name="curam.util.type.Date"/>
       </type>
@@ -285,7 +363,9 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="toDate">
+
+
+    <Attribute name="endDate">
       <type>
         <javaclass name="curam.util.type.Date"/>
       </type>
@@ -293,347 +373,93 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="relatedParticipant">
+
+
+    <!-- Description for this Rule Class. -->
+    <Attribute name="description">
       <type>
-        <javaclass name="java.lang.Number"/>
+        <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="related_relatedParticipant">
-      <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="relatedParticipant"/>
-          </create>
-        </reference>
-      </derivation>
-    </Attribute>
-    <Attribute name="participant">
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="related_participant">
-      <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="participant"/>
-          </create>
-        </reference>
+        <ResourceMessage key="CaseGroups.description" resourceBundle="curam.core.rules.CaseCERRules">
+          <reference attribute="concernRoleNameForConcernRoleID">
+            <create ruleclass="DisplayHelper" ruleset="ParticipantEntitiesRuleSet">
+              <null/>
+              <reference attribute="concernRoleID"/>
+            </create>
+          </reference>
+          <reference attribute="groupCode"/>
+          <reference attribute="caseID"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
   </Class>
-  <Class extends="ActiveEvidenceRow" extendsRuleSet="PropagatorRuleSet" name="ActiveNameEvidenceRow">
-    <Attribute name="nameType">
+
+
+  <!-- *************************************************************** -->
+  <!-- 
+    ProductDelivery Data Rule Class.
+    Product delivery records details of a product provided by the organization 
+    received by a participant.
+  -->
+  <!-- *************************************************************** -->
+  <Class name="ProductDelivery" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+    <Attribute name="caseID">
       <type>
-        <codetableentry table="AlternateNameType"/>
+        <javaclass name="Number"/>
       </type>
       <derivation>
         <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="productID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="productType">
+      <type>
+        <codetableentry table="ProductType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Concern Role ID of the Primary Client -->
+    <Attribute name="recipConcernRoleID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Description for this Rule Class. -->
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="ProductDelivery.description" resourceBundle="curam.core.rules.CaseCERRules">
+          <reference attribute="productType"/>
+          <reference attribute="recipConcernRoleID"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
   </Class>
-  <Class extends="ActiveEvidenceRow" extendsRuleSet="PropagatorRuleSet" name="ActiveAddressEvidenceRow">
-    <Attribute name="addressType">
-      <type>
-        <codetableentry table="AddressType"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-  </Class>
-  <Class extends="ActiveEvidenceRow" extendsRuleSet="PropagatorRuleSet" name="ActiveIdentificationEvidenceRow">
-    <Attribute name="altIDType">
-      <type>
-        <codetableentry table="ConcernRoleAlternateID"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-  </Class>
-  <Class extends="ActiveEvidenceRow" extendsRuleSet="PropagatorRuleSet" name="ActiveRelationshipEvidenceRow">
-    <Attribute name="relationshipType">
-      <type>
-        <codetableentry table="RelationshipTypeCode"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-  </Class>
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="BankAccountEvidence">
-    <Attribute name="evidenceID">
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="jointAccountInd">
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="accountNumber">
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <!-- BEGIN, CR00407584, SS -->
-    <Attribute name="iban">
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <!-- END, CR00407584 -->
-    <Attribute name="accountName">
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="fromDate">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="accountStatus">
-      <type>
-        <codetableentry table="BankAccountStatus"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="sortCode">
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <!-- BEGIN, CR00407584, SS -->
-    <Attribute name="bic">
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <!-- END, CR00407584 -->
-    <Attribute name="accountType">
-      <type>
-        <codetableentry table="BankAccountType"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="toDate">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="preferredInd">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="related_participant">
-      <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="participant"/>
-          </create>
-        </reference>
-      </derivation>
-    </Attribute>
-    <Attribute name="participant">
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-  </Class>
-  <Class extends="ActiveEvidenceRow" extendsRuleSet="PropagatorRuleSet" name="BankAccountActiveEvidenceRow">
-    <Attribute name="evidenceID">
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="jointAccountInd">
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="accountNumber">
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="accountName">
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="fromDate">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="accountStatus">
-      <type>
-        <codetableentry table="BankAccountStatus"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="sortCode">
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="accountType">
-      <type>
-        <codetableentry table="BankAccountType"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="toDate">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-  </Class>
-  <Class extends="ActiveEvidenceRow" extendsRuleSet="PropagatorRuleSet" name="PhoneNumberActiveEvidenceRow">
-    <Attribute name="evidenceID">
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="phoneType">
-      <type>
-        <codetableentry table="PhoneType"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-  </Class>
-  <Class extends="ActiveEvidenceRow" extendsRuleSet="PropagatorRuleSet" name="EmailAddressActiveEvidenceRow">
-    <Attribute name="evidenceID">
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="emailAddressType">
-      <type>
-        <codetableentry table="EmailType"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-  </Class>
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" internalID="ParticipantEvidenceRuleSet1369055333518" name="AddressEvidence">
-    <Attribute internalID="ParticipantEvidenceRuleSet1369055346428" name="preferredInd">
-      <type internalID="ParticipantEvidenceRuleSet1369055346429">
-        <javaclass internalID="ParticipantEvidenceRuleSet1369055346430" name="Boolean"/>
-      </type>
-      <derivation internalID="ParticipantEvidenceRuleSet1369055346431">
-        <specified internalID="ParticipantEvidenceRuleSet1369055346432"/>
-      </derivation>
-    </Attribute>
-    <Attribute internalID="ParticipantEvidenceRuleSet1369056638564" name="related_participant">
-      <type internalID="ParticipantEvidenceRuleSet1369056638565">
-        <ruleclass internalID="ParticipantEvidenceRuleSet1369057142298" name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation internalID="ParticipantEvidenceRuleSet1369056638567">
-        <reference attribute="caseParticipantRoleRecord" internalID="ParticipantEvidenceRuleSet1369057061451">
-          <create internalID="ParticipantEvidenceRuleSet1369057061449" ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="participant" internalID="ParticipantEvidenceRuleSet1369057067224"/>
-          </create>
-        </reference>
-      </derivation>
-    </Attribute>
-    <Attribute internalID="ParticipantEvidenceRuleSet1369056660009" name="participant">
-      <type internalID="ParticipantEvidenceRuleSet1369056660010">
-        <javaclass internalID="ParticipantEvidenceRuleSet1369056694118" name="java.lang.Number"/>
-      </type>
-      <derivation internalID="ParticipantEvidenceRuleSet1369056660012">
-        <specified internalID="ParticipantEvidenceRuleSet1369056660013"/>
-      </derivation>
-    </Attribute>
-  </Class>
+
+
 </RuleSet>

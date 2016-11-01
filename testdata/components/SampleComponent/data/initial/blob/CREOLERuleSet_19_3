@@ -6,250 +6,598 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2010-2011 Curam Software Ltd.
-  All rights reserved.
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information").  You shall not disclose such
-  Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CoreCitizenCampaignRuleset" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
-    
-    <!-- This rule class represents an administration CitizenCampaign record. The expiryDateTime and Image references are stored here. -->
-    <Class name="CitizenCampaignAdmin">
-    
-    
-        <!-- BEGIN, CR00324421, RB -->
-        <Attribute name="citizenCampaignID">
-            <type>
-                <javaclass name="Number"/>
-            </type>
-            <derivation>
-                <specified/>
-            </derivation>
-        </Attribute>
-        <!-- END, CR00324421 -->
-    
-        
-        <Attribute name="expiryDateTime">
-            <type>
-                <javaclass name="curam.util.type.DateTime"/>
-            </type>
-            <derivation>
-                <specified/>
-            </derivation>
-        </Attribute>
-        
-        <Attribute name="name">
-            <type>
-                <javaclass name="String"/>
-            </type>
-            <derivation>
-                <specified/>
-            </derivation>
-        </Attribute>
-        
-        <Attribute name="imageID">
-            <type>
-                <javaclass name="Number"/>
-            </type>
-            <derivation>
-                <specified/>
-            </derivation>
-        </Attribute>
+    Copyright 2011 Curam Software Ltd.
+    All rights reserved.
+    This software is the confidential and proprietary information
+    of Curam Software, Ltd. ("Confidential Information").  You
+    shall not disclose such Confidential Information and shall use
+    it only in accordance with the terms of the license agreement
+    you entered into with Curam Software.
+--><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ReunificationAssessmentRuleSet" xsi:noNamespaceSchemaLocation="file:/D:/CC/RuleSet.xsd">
+  <Class extends="AbstractFactorList" extendsRuleSet="AssessmentRulesInterface" name="FactorList">
+    <Attribute name="factors">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Factor"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <joinlists>
+          <fixedlist>
+            <listof>
+              <javaclass name="List">
+                <ruleclass name="Factor"/>
+              </javaclass>
+            </listof>
+            <members>
+              <fixedlist>
+                <listof>
+                  <ruleclass name="Factor"/>
+                </listof>
+                <members>
+                  <reference attribute="finalRiskFactor"/>
+                </members>
+              </fixedlist>
+              <fixedlist>
+                <listof>
+                  <ruleclass name="Factor"/>
+                </listof>
+                <members>
+                  <reference attribute="determinedSafetyFactor"/>
+                </members>
+              </fixedlist>
+              <reference attribute="visitEvaluationFactor"/>
+              <reference attribute="recommendedGoalFactor"/>
+              <reference attribute="placementFactor"/>
+            </members>
+          </fixedlist>
+        </joinlists>
+      </derivation>
+    </Attribute>
+    <Attribute name="relatedPerson">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Person"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <readall ruleclass="Person"/>
+      </derivation>
+    </Attribute>
+    <Attribute name="finalRiskFactor">
+      <type>
+        <ruleclass name="FinalRisk"/>
+      </type>
+      <derivation>
+        <create ruleclass="FinalRisk">
+          <specify attribute="factorList">
+            <this/>
+          </specify>
+        </create>
+      </derivation>
+    </Attribute>
+    <Attribute name="visitEvaluationFactor">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="VisitEvaluation"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <dynamiclist>
+          <list>
+            <reference attribute="relatedPerson"/>
+          </list>
+          <listitemexpression>
+            <create ruleclass="VisitEvaluation">
+              <specify attribute="roleID">
+                <reference attribute="roleID">
+                  <current/>
+                </reference>
+              </specify>
+            </create>
+          </listitemexpression>
+        </dynamiclist>
+      </derivation>
+    </Attribute>
+    <Attribute name="determinedSafetyFactor">
+      <type>
+        <ruleclass name="DeterminedSafety"/>
+      </type>
+      <derivation>
+        <create ruleclass="DeterminedSafety">
+          <specify attribute="factorList">
+            <this/>
+          </specify>
+        </create>
+      </derivation>
+    </Attribute>
+    <Attribute name="recommendedGoalFactor">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="RecommendedGoal"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <dynamiclist>
+          <list>
+            <reference attribute="relatedPerson"/>
+          </list>
+          <listitemexpression>
+            <create ruleclass="RecommendedGoal">
+              <specify attribute="roleID">
+                <reference attribute="roleID">
+                  <current/>
+                </reference>
+              </specify>
+            </create>
+          </listitemexpression>
+        </dynamiclist>
+      </derivation>
+    </Attribute>
+    <Attribute name="placementFactor">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Placement"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <dynamiclist>
+          <list>
+            <reference attribute="relatedPerson"/>
+          </list>
+          <listitemexpression>
+            <create ruleclass="Placement">
+              <specify attribute="roleID">
+                <reference attribute="roleID">
+                  <current/>
+                </reference>
+              </specify>
+            </create>
+          </listitemexpression>
+        </dynamiclist>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class extends="AbstractGroup" extendsRuleSet="AssessmentRulesInterface" name="Group">
     </Class>
-
-    <!-- this is the Abstract rules class that all a customer's Campagin Rules classes must inherit from -->
-    <Class name="AbstractCampaignAdviceItem" extends="AbstractAdviceItem" extendsRuleSet="CoreAdvisorRuleSet" abstract="true">
-
-        <Attribute name="showAdvice">
-            <type>
-                <javaclass name="Boolean"/>
-            </type>
-            <derivation>
-                <all>
-                    <fixedlist>
-                        <listof>
-                            <javaclass name="Boolean"/>
-                        </listof>
-                        <members>
-                            <reference attribute="campaignRuleObjectExists"/>
-                            <reference attribute="campaignShowAdvice"/>
-                        </members>
-                    </fixedlist>
-                </all>
-            </derivation>
-        </Attribute>
-
-        <!-- the name of the citizen campaign record. specified in concerete child classes. -->
-        <Attribute name="citizenCampaignName">
-            <type>
-                <javaclass name="String"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>
-
-        <!-- whether this Campaign should be displayed to this Participant. Determined in concerete child classes. -->
-        <Attribute name="campaignShowAdvice">
-            <type>
-                <javaclass name="Boolean"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>
-
-        <Attribute name="campaignRuleObjectExists">
-            <type>
-                <javaclass name="Boolean"/>
-            </type>
-            <derivation>
-                <not>
-                    <equals>
-                        <reference attribute="citizenCampaignAdminRuleObject"/>
-                        <null/>
-                    </equals>
-                </not>
-            </derivation>
-        </Attribute>
-
-        <!-- reference to the campaign rule object -->
-        <Attribute name="citizenCampaignAdminRuleObject">
-            <type>
-                <ruleclass name="CitizenCampaignAdmin"/>
-            </type>
-            <derivation>
-                <singleitem onEmpty="returnNull" onMultiple="error">
-                    <filter>
-                        <list>
-                            <readall ruleclass="CitizenCampaignAdmin"/>
-                        </list>
-                        <listitemexpression>
-                            <equals>
-                                <!-- match up the name defined in this rule set with the name of the campaign rule object -->
-                                <reference attribute="name">
-                                    <current/>
-                                </reference>
-                                <reference attribute="citizenCampaignName"/>
-                            </equals>
-                        </listitemexpression>
-                    </filter>
-                </singleitem>
-            </derivation>
-        </Attribute>
-
-        <!-- default implementation, can be overridden if certain campaigns wish to expire 
-            their advice on dates other than the campaign expiry, e.g. on some date computed 
-            from the person's circumstances -->
-        <Attribute name="expiryDateTime">
-            <type>
-                <javaclass name="curam.util.type.DateTime"/>
-            </type>
-            <derivation>
-                <choose>
-                    <type>
-                        <javaclass name="curam.util.type.DateTime"/>
-                    </type>
-                    <when>
-                        <condition>
-                            <reference attribute="campaignRuleObjectExists"/>
-                        </condition>
-                        <value>
-                            <reference attribute="expiryDateTime">
-                                <reference attribute="citizenCampaignAdminRuleObject"/>
-                            </reference>
-                        </value>
-                    </when>
-                    <otherwise>
-                        <value>
-                            <!-- If no campaign rule object, expiry date time set to null -->
-                            <null/>
-                        </value>
-                    </otherwise>
-                </choose>
-            </derivation>
-        </Attribute>
-
-        <Attribute name="campaignImage">
-           <type>
-                <ruleclass name="Image" ruleset="CoreAdvisorRuleSet"/>
-            </type>
-            <derivation>
-                <choose>
-                    <type>
-                        <ruleclass name="Image" ruleset="CoreAdvisorRuleSet"/>
-                    </type>
-                    <when>
-                        <condition>
-                            <reference attribute="campaignRuleObjectExists"/>
-                        </condition>
-                        <value>
-                            <create ruleclass="Image" ruleset="CoreAdvisorRuleSet">
-                                <specify attribute="imageID">
-                                    <reference attribute="imageID">
-                                        <reference attribute="citizenCampaignAdminRuleObject"/>
-                                    </reference>
-                                </specify>
-                            </create>
-                        </value>
-                    </when>
-                    <otherwise>
-                        <value>
-                            <null/>
-                        </value>
-                    </otherwise>
-                </choose>
-            </derivation>
-        </Attribute>
-
-        <Attribute name="category">
-            <type>
-                <codetableentry table="AdviceCategory"/>
-            </type>
-            <derivation>
-                <Code table="AdviceCategory">
-                    <String value="AC10000"/>
-                </Code>
-            </derivation>
-        </Attribute>
-
-        <Attribute name="status">
-            <type>
-                <codetableentry table="AdviceStatus"/>
-            </type>
-            <derivation>
-                <Code table="AdviceStatus">
-                    <String value="AS2002"/>
-                </Code>
-            </derivation>
-        </Attribute>
-
-        <Attribute name="priority">
-            <type>
-                <codetableentry table="AdvicePriority"/>
-            </type>
-            <derivation>
-                <Code table="AdvicePriority">
-                    <String value="AP2001"/>
-                </Code>
-            </derivation>
-        </Attribute>
-    </Class>
-    
- <!-- <Class
-    extends="UserRole"
-    extendsRuleSet="CoreAdvisorRuleSet"
-    name="SuperUserRole"
-  >
-    <Attribute name="roleName">
+  <Class extends="Factor" name="RecommendedGoal">
+    <!-- Reference of this factor -->
+    <Attribute name="reference">
       <type>
         <javaclass name="String"/>
       </type>
       <derivation>
-        <String value="SUPERROLE"/>
+        <String value="RECOMMENDEDGOAL"/>
       </derivation>
     </Attribute>
-  </Class>     -->
-
+    <Attribute name="recommendedGoal">
+      <type>
+        <ruleclass name="RecommendedGoal"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="RecommendedGoal"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+    <Attribute name="score">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value=""/>
+      </derivation>
+    </Attribute>
+    <Attribute name="classification">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <reference attribute="recommendedGoal">
+          <reference attribute="relatedPerson"/>
+        </reference>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class extends="Factor" name="VisitEvaluation">
+    <Attribute name="reference">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value="VISIT"/>
+      </derivation>
+    </Attribute>
+    <Attribute name="visitEvaluation">
+      <type>
+        <ruleclass name="VisitEvaluation"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="VisitEvaluation"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+    <Attribute name="score">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value=""/>
+      </derivation>
+    </Attribute>
+    <Attribute name="classification">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <codetableentry table="ClassDivisionType"/>
+          </type>
+          <test>
+            <reference attribute="finalVisitLevelCode">
+              <reference attribute="relatedPerson"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="VisitationEvaluation">
+                <String value="VE10000"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10130"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="VisitationEvaluation">
+                <String value="VE10001"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10131"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="VisitationEvaluation">
+                <String value="VE10002"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10132"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="VisitationEvaluation">
+                <String value="VE10003"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10133"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="VisitationEvaluation">
+                <String value="VE20001"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT20001"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="VisitationEvaluation">
+                <String value="VE20002"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT20002"/>
+              </Code>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class extends="Factor" name="Placement">
+    <Attribute name="reference">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value="PLACEMENT"/>
+      </derivation>
+    </Attribute>
+    <Attribute name="score">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value=""/>
+      </derivation>
+    </Attribute>
+    <Attribute name="classification">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <codetableentry table="ClassDivisionType"/>
+          </type>
+          <when>
+            <condition>
+              <equals>
+                <reference attribute="consecutivePlacementInd">
+                  <reference attribute="relatedPerson"/>
+                </reference>
+                <Code table="RUAIndicator">
+                  <String value="RAI10000"/>
+                </Code>
+              </equals>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10141"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <equals>
+                <reference attribute="accumulatedPlacementInd">
+                  <reference attribute="relatedPerson"/>
+                </reference>
+                <Code table="RUAIndicator">
+                  <String value="RAI10000"/>
+                </Code>
+              </equals>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10142"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <all>
+                <fixedlist>
+                  <listof>
+                    <javaclass name="Boolean"/>
+                  </listof>
+                  <members>
+                    <equals>
+                      <reference attribute="consecutivePlacementInd">
+                        <reference attribute="relatedPerson"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10001"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="accumulatedPlacementInd">
+                        <reference attribute="relatedPerson"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10001"/>
+                      </Code>
+                    </equals>
+                  </members>
+                </fixedlist>
+              </all>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10143"/>
+              </Code>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value=""/>
+              </Code>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class extends="Factor" name="FinalRisk">
+    <!-- Reference of this factor -->
+    <Attribute name="reference">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value="RISK"/>
+      </derivation>
+    </Attribute>
+    <Attribute name="finalRisk">
+      <type>
+        <ruleclass name="FinalRisk"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="FinalRisk"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+    <Attribute name="score">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value=""/>
+      </derivation>
+    </Attribute>
+    <Attribute name="classification">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <reference attribute="finalRiskLevel">
+          <reference attribute="assessment"/>
+        </reference>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class extends="Factor" name="DeterminedSafety">
+    <!-- Reference of this factor -->
+    <Attribute name="reference">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value="SAFETY"/>
+      </derivation>
+    </Attribute>
+    <Attribute name="determinedSafety">
+      <type>
+        <ruleclass name="DeterminedSafety"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="DeterminedSafety"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+    <Attribute name="score">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value=""/>
+      </derivation>
+    </Attribute>
+    <Attribute name="classification">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <reference attribute="determinedSafetyLevel">
+          <reference attribute="assessment"/>
+        </reference>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class extends="AbstractAssessment" extendsRuleSet="AssessmentRulesInterface" name="Assessment">
+    <Attribute name="determinedSafetyLevel">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="finalRiskLevel">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class extends="AbstractPerson" extendsRuleSet="AssessmentRulesInterface" name="Person">
+    <Attribute name="finalVisitLevelCode">
+      <type>
+        <codetableentry table="VisitationEvaluation"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="recommendedGoal">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="consecutivePlacementInd">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="accumulatedPlacementInd">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class abstract="true" extends="AbstractFactor" extendsRuleSet="AssessmentRulesInterface" name="Factor">
+    <Attribute name="assessment">
+      <type>
+        <ruleclass name="Assessment"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="Assessment"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+    <Attribute name="factorList">
+      <type>
+        <ruleclass name="FactorList"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="group">
+      <type>
+        <ruleclass name="Group"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="Group"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+    <Attribute name="relatedPerson">
+      <type>
+        <ruleclass name="Person"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="Person">
+            <match retrievedattribute="roleID">
+              <reference attribute="roleID"/>
+            </match>
+          </readall>
+        </singleitem>
+      </derivation>
+    </Attribute>
+  </Class>
 </RuleSet>

@@ -1,30 +1,34 @@
 #
 # Licensed Materials - Property of IBM
 # 
-# Copyright IBM Corporation 2014. All Rights Reserved.
-#
-# PID 5725-H26
+# Copyright IBM Corporation 2012. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Page.Title=Benefit Summary
+Number.Wizard.Pages=5
 
-categoryRef=ibSummaryCategory
+CreateActionWizard_details.Wizard.Item.Text=Details
+CreateActionWizard_details.Wizard.Page.Title=Step 1:
+CreateActionWizard_details.Wizard.Page.Desc=Details
+Wizard.PageID.1=CreateActionWizard_details
 
-Cluster.Summary.Title=Product Delivery Summary
-Field.Label.IsEligible=Product Delivery Entitlement Result
-Field.Label.ClaimantName=Claimant Name
-Field.Label.AllotmentAmount=Weekly Eligibility Entitlement Amount
-Field.Label.BenefitType=Benefit Type
+CreateActionWizard_schedule.Wizard.Item.Text=Schedule
+CreateActionWizard_schedule.Wizard.Page.Title=Step 2:
+CreateActionWizard_schedule.Wizard.Page.Desc=Schedule
+Wizard.PageID.2=CreateActionWizard_schedule
 
-Cluster.PractitionerCertificates.Title=Practitioner Certificates
-Field.Label.certificateType=Practitioner Certificate Type
-Field.Label.startDate=Start Date
-Field.Label.endDate=End Date
+CreateActionWizard_factors.Wizard.Item.Text=Factors
+CreateActionWizard_factors.Wizard.Page.Title=Step 3:
+CreateActionWizard_factors.Wizard.Page.Desc=Factors
+Wizard.PageID.3=CreateActionWizard_factors
 
-Cluster.Diagnosis.Title=Diagnosis
-Field.Label.DiagnosisList=Diagnosis List
+CreateActionWizard_owner.Wizard.Item.Text=Owner
+CreateActionWizard_owner.Wizard.Page.Title=Step 4:
+CreateActionWizard_owner.Wizard.Page.Desc=Owner
+Wizard.PageID.4=CreateActionWizard_owner
 
-Field.Label.Type=Type
-Field.Label.ExaminationDate=Examination Date
+CreateActionWizard_sharing.Wizard.Item.Text=Sharing
+CreateActionWizard_sharing.Wizard.Page.Title=Step 5:
+CreateActionWizard_sharing.Wizard.Page.Desc=Sharing
+Wizard.PageID.5=CreateActionWizard_sharing

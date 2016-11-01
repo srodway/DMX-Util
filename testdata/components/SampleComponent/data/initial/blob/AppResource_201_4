@@ -1,16 +1,24 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Page.Title=Save Screening
-Page.Description=In order to save your screening you must either create an account or log in to an existing account.
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-RadioSelection.Title=Choose an Option
-RadioSelection.Legend=Screening options
-SaveApplicationCreateAccount.Title=<strong>Create an account.</strong> Creating your own account will let you save your screening and come back to it later.
-SaveApplicationLogin.Title=<strong>Log in</strong> if you already have an account.
-
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--  Copyright 2010 Curam Software Ltd.                                    --><!--  All rights reserved.                                                  --><!-- This software is the confidential and proprietary information of Curam --><!--   Software, Ltd. ("Confidential Information"). You shall not disclose  --><!--   such Confidential Information and shall use it only in accordance    --><!--   with the terms of the license agreement you entered into with Curam  --><!--   Software.                                                            --><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="RelationshipObject">
+  
+    <tc:page-param name="successionID"/>
+    <tc:page-param name="concernRoleRelationshipID"/>
+      
+    <tc:context height="0" page-id="Person_evidenceViewRelationshipObjSummary"/>
+      
+    <tc:navigation id="RelationshipObject"/>
+      
+    <tc:tab-refresh>
+        <tc:onsubmit context="true" menu-bar="true" navigation="false" page-id="Person_modifyRelationship"/>
+        <tc:onsubmit context="true" menu-bar="true" navigation="false" page-id="Evidence_removeActiveObject"/>
+        <tc:onsubmit context="true" menu-bar="true" navigation="false" page-id="Evidence_discardPendingUpdateObject"/>
+        <tc:onsubmit context="true" menu-bar="true" navigation="false" page-id="Evidence_discardPendingRemoveForActiveObject"/>
+    </tc:tab-refresh>
+    
+</tc:tab-config>

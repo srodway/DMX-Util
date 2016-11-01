@@ -1,18 +1,133 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2014. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   xmlns:D="http://www.curamsoftware.com/BaseDomains" elementFormDefault="qualified">
-   <xsd:import namespace="http://www.curamsoftware.com/BaseDomains"/>
-   <xsd:element name="TargetIncomingEvidenceDataStore">
-      <xsd:complexType>
-		 <xsd:attribute name="TargetIncomingEvidenceList" type="D:SVR_STRING"/>
-      </xsd:complexType>
-   </xsd:element>
-</xsd:schema>
+    Licensed Materials - Property of IBM
+    
+    Copyright IBM Corporation 2012-2013. All Rights Reserved.
+    
+    US Government Users Restricted Rights - Use, duplication or disclosure 
+    restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains">
+    <xs:import namespace="http://www.curamsoftware.com/BaseDomains" />
+    <xs:include schemaLocation="IEGDomains" />
+    <xs:simpleType name="RUA_RISK_LEVEL">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RUARiskLevel</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RUA_INDICATOR">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RUAIndicator</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RUA_OVERRIDE">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RUAOverride</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RUA_VISIT_EVALUATION">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">VisitationEvaluation</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RUA_VISIT_COMPLIANCE">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">VisitationComplianceLevel</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RUA_CLASSIFICATION_DIVISION_TYPE">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">ClassDivisionType</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RUA_CASE_PLAN_GOAL_PROGRESS">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RUACasePlanGoalProgress</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RUA_OVERRIDE_DIRECTION">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RUAOverrideDirection</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+    <xs:simpleType name="RUAS_INDICATOR">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RUASubstantiationInd</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>	
+    <xs:simpleType name="RUA_VISITATION_EVALUATION">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">VisitationEvaluation</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+     <xs:simpleType name="RUA_VISIT_OVERRIDE">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RUAVisitOverride</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+	 <xs:simpleType name="RUA_RECC_OVERRIDE">
+        <xs:annotation>
+            <xs:appinfo>
+                <d:options>
+                    <d:option name="code-table-name">RUARecommendation</d:option>
+                </d:options>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="IEG_CODETABLE_CODE" />
+    </xs:simpleType>
+</xs:schema>

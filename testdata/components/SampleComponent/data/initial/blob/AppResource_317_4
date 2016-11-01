@@ -1,29 +1,22 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Number.Wizard.Pages=4
-
-CaseAudit_ICCaseSampleSearch.Wizard.Item.Text=Criteria
-CaseAudit_ICCaseSampleSearch.Wizard.Page.Title=Step 1:
-CaseAudit_ICCaseSampleSearch.Wizard.Page.Desc=Select Criteria
-Wizard.PageID.1=CaseAudit_ICCaseSampleSearch
-
-CaseAudit_ICCaseSampleSelectAmount.Wizard.Item.Text=Specify Amount
-CaseAudit_ICCaseSampleSelectAmount.Wizard.Page.Title=Step 2:
-CaseAudit_ICCaseSampleSelectAmount.Wizard.Page.Desc=Specify Amount of Cases to Audit
-Wizard.PageID.2=CaseAudit_ICCaseSampleSelectAmount
-
-CaseAudit_ICCaseSampleConfigureAlgorithm.Wizard.Item.Text=Algorithm Parameters
-CaseAudit_ICCaseSampleConfigureAlgorithm.Wizard.Page.Title=Step 3:
-CaseAudit_ICCaseSampleConfigureAlgorithm.Wizard.Page.Desc=Configure Algorithm Parameters
-Wizard.PageID.3=CaseAudit_ICCaseSampleConfigureAlgorithm
-
-CaseAudit_confirmICCaseSampleGeneration.Wizard.Item.Text=Confirm
-CaseAudit_confirmICCaseSampleGeneration.Wizard.Page.Title=Step 4:
-CaseAudit_confirmICCaseSampleGeneration.Wizard.Page.Desc=Confirm Cases to Audit
-Wizard.PageID.4=CaseAudit_confirmICCaseSampleGeneration
+DailyLiving.Title=Daily Living
+DailyLivingCluster.Desc=Daily Living
+DailyLivingCluster.Title=Daily Living
+TakingNutrition.LabelID=Taking Nutrition
+TakingNutrition.HelpID=Select the level of nutrition from the list
+ManagingTherapy.LabelID=Managing therapy or monitoring a health condition
+ManagingTherapy.HelpID=Select the ability to manage therapy from the list
+Bathing.LabelID=Bathing and grooming
+Bathing.HelpID=Select the level of bathing ability from the list
+QualifyingPeriod.Title=Qualifying Period
+QualifyingPeriodCluster.Desc=Qualifying Period
+QualifyingPeriodCluster.Title=Qualifying Period
+QualPeriodSatisfied.LabelID=Was the Qualifying Period satisfied before the date of claim?
+QualPeriodSatisfied.HelpID=Select either Yes or No
+ProspectiveTestMet.LabelID=Will the Prospective Test be met?
+ProspectiveTestMet.HelpID=Select either Yes or No
+QualifyingPeriodDateCluster.Desc=Date Satisfied
+QualifyingPeriodDateCluster.Title=Qualifying Period Date
+QualSatisfiedDate.LabelID=When will the Qualifying Period be satisfied?
+QualSatisfiedDate.HelpID=Enter the date, or click on calendar icon and select date
+WillQualPeriod.LabelID=Will the Qualifying Period be satisfied?
+WillQualPeriod.HelpID=Select either Yes or No

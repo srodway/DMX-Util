@@ -6,14 +6,23 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Number.Wizard.Pages=2
 
-Wizard.PageID.1=ActivityConditionsWizard_selectAction
-ActivityConditionsWizard_selectAction.Wizard.Item.Text=Select Action
-ActivityConditionsWizard_selectAction.Wizard.Page.Title=Step 1:
-ActivityConditionsWizard_selectAction.Wizard.Page.Desc=Select an action from the list
+# START NON-TRANSLATABLE 
+Message.Title={Service.Name}
+# END NON-TRANSLATABLE
+First.Sentence.StartDate.Provider=This service will begin on {Start.Date} and is provided by {link:{Provider.Name}:ProviderModalLink}.
+First.Sentence.StartDate.NoProvider=This service will begin on {Start.Date}.
+First.Sentence.StartDate.EndDate.Provider=This service will begin on {Start.Date} until {End.Date} and is provided by {link:{Provider.Name}:ProviderModalLink}.
+First.Sentence.StartDate.EndDate.NoProvider=This service will begin on {Start.Date} until {End.Date}.
+First.Sentence.StartDate.Hours.DayOfWeek.Provider=This service will begin on {Start.Date} for {Hours} hours every {Days.Of.Week} and is provided by {link:{Provider.Name}:ProviderModalLink}.
+First.Sentence.StartDate.Hours.DayOfWeek.EndDate.Provider=This service will begin on {Start.Date} for {Hours} hours every {Days.Of.Week} until {End.Date} provided by {link:{Provider.Name}:ProviderModalLink}.
+First.Sentence.StartDate.Hours.DayOfWeek.NoProvider=This service will begin on {Start.Date} for {Hours} hours every {Days.Of.Week}.
+First.Sentence.StartDate.Hours.DayOfWeek.EndDate.NoProvider=This service will begin on {Start.Date} for {Hours} hours every {Days.Of.Week} until {End.Date}.
+Second.Sentence.HasContactDetails=Please contact {Service.Owner} at {Phone.Number} or {link:{Email.Address}:Email.Link} if you need more information.
+Second.Sentence.NoContactDetails=Please contact {Service.Owner} if you need more information.
+Third.Sentence=Click {link:My Activities:My.Activities} for a full list of your activities.
 
-Wizard.PageID.2=ActivityConditionsWizard_selectActionConditions
-ActivityConditionsWizard_selectActionConditions.Wizard.Item.Text=Select Conditions
-ActivityConditionsWizard_selectActionConditions.Wizard.Page.Title=Step 2:
-ActivityConditionsWizard_selectActionConditions.Wizard.Page.Desc=Check all conditions that apply
+#START NON-TRANSLATABLE
+Image=icon_service
+Link.MyActivities=CitizenAccount_listCitizenActivities
+#END NON-TRANSLATABLE

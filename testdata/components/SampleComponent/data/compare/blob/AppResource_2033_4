@@ -1,10 +1,18 @@
 #
 # Licensed Materials - Property of IBM
+#
+# PID 5725-H26
 # 
 # Copyright IBM Corporation 2014. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-# This Properties file contains resource Strings for the PDC Bank Account IBAN Summary Ruleset.
-summaryMessage1={0} {1} held in the name of {2}.
+AnyPractitionerCertificate.Title=Incapacity Benefit Information
+PractitionerCertificate.Description=Please tell us about the examination details of the client. 
+
+PractitionerCertificate.Label=Are there examination details for the client?
+PCDHelp=We would like to know about clients incapacity benefit details, otherwise select No.
+
+
+RequiredField.Indicator=<span style="color: orange">* Indicates a required item</span>

@@ -1,62 +1,20 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Submenu.Title.New=New
-Submenu.Tooltip.New=New
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-MenuItem.Title.Certification=Certifications
-MenuItem.Tooltip.Certification=Certifications
-
-Submenu.Title.Configuration=Configuration
-Submenu.Tooltip.Configuration=Configuration
-
-Submenu.Title.AttendanceTracking=Attendance Tracking
-Submenu.Tooltip.AttendanceTracking=Attendance Tracking
-
-MenuItem.Title.AbsenceReasons=Absence Reasons
-MenuItem.Tooltip.AbsenceReasons=Absence Reasons
-
-MenuItem.Title.AttendancePaymentFrequency=Attendance
-MenuItem.Tooltip.AttendancePaymentFrequency=Attendance
-
-MenuItem.Title.RosterGenerationFrequency=Roster
-MenuItem.Tooltip.RosterGenerationFrequency=Roster
-
-MenuItem.Title.ServiceGroup=Service Group
-MenuItem.Tooltip.ServiceGroup=Service Group
-
-# BEGIN, CR00260853, GP
-MenuItem.Title.ServiceOffering=Service
-MenuItem.Tooltip.ServiceOffering=Service
-# END, CR00260853
-
-MenuItem.Title.Icon=Specialty Type Icon
-MenuItem.Tooltip.Icon=Specialty Type Icon
-
-Submenu.Title.Training=Training
-Tooltip.Title.Training=Training
-
-MenuItem.Title.TrainingRequirements=License Training Requirements
-MenuItem.Tooltip.TrainingRequirements=License Training Requirements
-
-MenuItem.Title.TrainingItem=Training
-MenuItem.Tooltip.TrainingItem=Training
-
-Submenu.Title.Search=Search
-Submenu.Tooltip.Search=Search
-
-# BEGIN, CR00260853, GP
-MenuItem.Title.SearchServiceOfferings=Services
-MenuItem.Tooltip.SearchServiceOfferings=Services
-# END, CR00260853
-
-MenuItem.Title.SearchServiceGroup=Service Groups
-MenuItem.Tooltip.SearchServiceGroup=Service Groups
-
-MenuItem.Title.SearchTraining=Training
-MenuItem.Tooltip.SearchTraining=Training
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009 Curam Software Ltd.
+  All rights reserved.
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="AppActionsMenu">
+    <mc:menu-item id="Banner" open-as="modal" page-id="UIAdminApplication_editBanner" title="Banner.title"/>
+    <mc:menu-item id="SysMenu" open-as="modal" page-id="UIAdminApplication_editSysMenu" title="SysMenu.title"/>
+    <mc:menu-item id="AppSearch" open-as="modal" page-id="UIAdminApplication_editAppSearch" title="AppSearch.title"/>
+    <mc:menu-item id="Sections" open-as="modal" page-id="UIAdminApplication_addSection" title="Sections.title"/>
+</mc:menu-bar>

@@ -1,24 +1,56 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2013. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Number.Wizard.Pages=3
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
 
-ProductDelivery_getParticipantLiabilityWizard.Wizard.Item.Text=Select Client
-ProductDelivery_getParticipantLiabilityWizard.Wizard.Page.Title=Step 1:
-ProductDelivery_getParticipantLiabilityWizard.Wizard.Page.Desc=Select Client
-Wizard.PageID.1=ProductDelivery_getParticipantLiabilityWizard
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="page-schema.xsd">
+    <!-- this is the page that lists the service offerings and 
+        plots all services on map by service offering -->
+    <identifier name="LifeEventRecommendations"/>
+    <server class="CitizenLifeEvents" alias="DISPLAY" method="getLifeEventRecommendations">
+        <param name="arg1$lifeEventID" path="lifeEventID"/>
+    </server>
+    <header>
+        <title id="Page.Title"/>
+        <description id="Page.Description"/> 
+        <icon id="title_current_apps"/>
+    </header>
+    <content>
+        
+        <container style="triage-results-alert" conditionalSource="/DISPLAY/listData/root/alert-messages[]/alert/text" false="$empty">
+            <field source="/DISPLAY/listData/root/alert-messages[]" >
+            </field>
+        </container>                        
+        
+        <container style="triage-results-header">
+		<param name="show-min-zoom-passed-message" source="/DISPLAY/listData/root/show-min-zoom-passed-message"/>                    
+        </container>                       
+        
+        <container style="government-services">
+            <!--<field source="/DISPLAY/govServicesData$xmlData/root" type="GOVERNMENT_SERVICES_XML">
+            </field>-->
+        </container>
+        
+        
+        <!-- should all this be conditional? what to do if/when no services are output? -->
+        <container style="community-services">
+            
+		<field source="/DISPLAY/listData/root/service-offerings" type="TRIAGE_SERVICE_OFFERING_LIST">
+		    <param name="num-checked-services" source="/DISPLAY/listData/root/num-checked-services"/>
+		    <param name="list-title" source="/DISPLAY/listData/root/list-title"/>
+		</field>
 
-Financial_createAppliedFixedDeductionWizard.Wizard.Item.Text=Deduction Details
-Financial_createAppliedFixedDeductionWizard.Wizard.Page.Title=Step 2:
-Financial_createAppliedFixedDeductionWizard.Wizard.Page.Desc=Deduction Details
-Wizard.PageID.2=Financial_createAppliedFixedDeductionWizard
-
-Financial_regenerateAppliedFixedDeduction.Wizard.Item.Text=Confirm & Reissue
-Financial_regenerateAppliedFixedDeduction.Wizard.Page.Title=Step 3:
-Financial_regenerateAppliedFixedDeduction.Wizard.Page.Desc=Confirm & Reissue
-Wizard.PageID.3=Financial_regenerateAppliedFixedDeduction
+		<field source="/DISPLAY/mapData" type="TRIAGE_GOOGLE_MAPS_XML">
+			<param name="pins-min-zoom-level" source="/DISPLAY/listData/root/pins-min-zoom-level"/>
+		</field>
+            
+        </container>
+        
+    </content>
+</page>

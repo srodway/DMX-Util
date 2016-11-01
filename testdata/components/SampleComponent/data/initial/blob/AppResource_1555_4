@@ -1,20 +1,36 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-
-MenuItem.Title.Bookmark=Add as Item of Interest
-MenuItem.Tooltip.Bookmark=Click the Add to My Items of Interest link to add the issue to your bookmarks.
-
-MenuItem.Title.RemoveBookmark=Remove from My Items of Interest
-MenuItem.Tooltip.RemoveBookmark=Click the Remove from My Items of Interest link to remove the issue from your bookmarks.
-
-MenuItem.Title.Edit=Edit
-MenuItem.Tooltip.Edit=Edit this issue.
-
-MenuItem.Title.IssueAppeal=New Issue Appeal
-MenuItem.Tooltip.IssueAppeal=Create a new appeal for the Issue
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Licensed Materials - Property of IBM
+    
+    Copyright IBM Corporation 2013. All Rights Reserved.
+    
+    US Government Users Restricted Rights - Use, duplication or disclosure 
+    restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
+    <identifier name="MotivationOptionalNoCreateLogin" />
+    <header>
+        <title id="Page.Title" />
+        <description id="Page.Description" />
+        <icon id="title_getting_started" />
+    </header>
+    <content>
+        <container>
+            <title id="Selection.Title" />
+            <description id="Selection.Description" />
+            <help id="Selection.Help" />
+            <radiobutton-container id="SELECTION" legend="Selection.Legend">
+                <radiobutton id="LOGIN">
+                    <title id="Login.Title" />
+                </radiobutton>
+                <radiobutton id="START">
+                    <title id="Start.Title" />
+                </radiobutton>
+            </radiobutton-container>
+        </container>
+    </content>
+    <navigation> 
+        <nav-button name="next" type="action" />
+		<nav-button name="back" page="ResolveCitizenHome" page-type="resolve" />
+    </navigation>
+</page>

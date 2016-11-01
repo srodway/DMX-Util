@@ -13,18 +13,16 @@
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="CaseEvidence">
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="AUDITORAPPHome">
 
-  <tc:page-param name="caseID"/>
-
-  <tc:menu id="CaseEvidenceMenu"/> 
+  <!-- No Page Menu -->
   
-  <!-- Details panel -->
-  <tc:context height="0" page-id="Evidence_viewCaseSummary"/>
-
-  <!-- See CaseEvidence.nav for details of the navigation links. -->
-  <tc:navigation id="CaseEvidence"/>
+  <!-- No Page Param -->
   
-  <tc:smart-panel collapsed="true" page-id="Evidence_smartPanelCase" title="Smart.Panel.Title" width="200"/>
+  <!-- No Details panel -->
+  <tc:context tab-name="Details.Name.MyWorkspace" tab-title="Details.Title.MyWorkspace"/>
+
+  <!-- No Navigation panel -->
+  <tc:navigation page-id="AuditorCustomHome"/>
 
 </tc:tab-config>

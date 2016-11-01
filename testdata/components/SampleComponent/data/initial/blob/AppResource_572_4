@@ -1,13 +1,32 @@
-motivationresults.display.myitems=My Items
-motivationresults.display.category.help=Help Me Decide
-motivationresults.display.category.action.close=Close
-motivationresults.display.category.show=Show
-motivationresults.display.category.hide=Hide
-motivationresults.display.result.help.close=Close
-motivationresults.display.result.show=show details
-motivationresults.display.result.hide=hide details
-motivationresults.display.category.helpicon=Help Icon
-motivationresults.text.child.male=Child Male
-motivationresults.text.child.female=Child Female
-motivationresults.text.adult.male=Adult Male
-motivationresults.text.adult.female=Adult Female
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Submenu.Title.Manage=Manage
+Submenu.Icon.Manage=Manage
+Submenu.Tooltip.Manage=Manage
+MenuItem.Title.Edit=Edit
+MenuItem.Icon.Edit=Edit
+MenuItem.Tooltip.Edit=Edit
+MenuItem.Title.SpecifyProviderDetails=Specify Provider
+MenuItem.Icon.SpecifyProviderDetails=Specify Provider
+MenuItem.Tooltip.SpecifyProviderDetails=Specify the provider details
+MenuItem.Title.UndoProviderSelection=Undo Provider Selection
+MenuItem.Icon.UndoProviderSelection=Undo Provider Selection
+MenuItem.Tooltip.UndoProviderSelection=Removes the selected provider.
+MenuItem.Title.AddFactors=Add Factors
+MenuItem.Icon.AddFactors=Add Factors
+MenuItem.Tooltip.AddFactors=Associate additional factors with this referral
+MenuItem.Title.RemoveFactors=Remove Factors
+MenuItem.Icon.RemoveFactors=Remove Factors
+MenuItem.Tooltip.RemvoeFactors=Remove the association for the factors with this referral
+MenuItem.Title.AddAttachment=New Attachment
+MenuItem.Icon.AddAttachment=New Attachment
+MenuItem.Tooltip.AddAttachment=Adds an attachment to this referral
+MenuItem.Title.Delete=Delete
+MenuItem.Icon.Delete=Delete
+MenuItem.Tooltip.Delete=Delete this referral

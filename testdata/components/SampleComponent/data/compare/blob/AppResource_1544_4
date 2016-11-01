@@ -1,17 +1,91 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2013. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-AbstractBasicProductDecisionDetailsRuleSet.label.1=Creates an Objective Timeline for display for each Objective Timeline on this case
-AbstractBasicProductDecisionDetailsRuleSet.label.2=Find the 0-based index of the current item in the list.  Used to provide a numerical key for each objective timeline for display.
-AbstractBasicProductDecisionDetailsRuleSet.label.3=Further display details for an objective, namely its list of tags.
-AbstractBasicProductDecisionDetailsRuleSet.label.4=The display data for an objective timeline.
-AbstractBasicProductDecisionDetailsRuleSet.label.5=The underlying objective timeline calculated as part of the case's entitlement.
-AbstractBasicProductDecisionDetailsRuleSet.label.6=The 0-based index of this objective timeline from the overall list of objective tlmelines for the case.  Used as a key so that the child tag timelines for display can be linked back to the parent objective timeline for display.
-AbstractBasicProductDecisionDetailsRuleSet.label.7=Creates a Tag Timeline for display for each Tag Timeline on this Objective Timeline
-AbstractBasicProductDecisionDetailsRuleSet.label.8=The display data for a tag timeline.
-AbstractBasicProductDecisionDetailsRuleSet.label.9=The underlying tag timeline calculated as part of the case's entitlement.
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<page
+  isPopup="true"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="page-schema.xsd"
+>
+  <identifier name="GetDirections"/>
+  <server
+    alias="DISPLAY"
+    class="Triage"
+    method="getProviderModalDetails"
+  >
+    <param
+      name="key$serviceID"
+      path="serviceID"
+    />
+    <param
+      name="key$hasMultipleLocations"
+      path="hasMultipleLocations"
+    />
+  </server>
+
+
+  <content>
+
+
+    <container style="referral-field">
+      <param
+        name="isHeader"
+        value="true"
+      />
+      <title id="Page.Title"/>
+      <description id="Page.Description"/>
+    </container>
+
+
+    <container style="referral-field">
+      <field
+        id="start"
+        mandatory="true"
+        type="PAGE_PLAYER_STRING_50"
+        width="85"
+      >
+        <title id="Start.From"/>
+      </field>
+      <field
+        source="/DISPLAY/xmlData/address"
+        style="rich-text"
+        width="85"
+      >
+        <title id="End.At"/>
+      </field>
+      <field
+        id="modeOfTransport"
+        type="CW_MODE_OF_TRANSPORT"
+        width="30"
+      >
+        <title id="Transport.Mode"/>
+      </field>
+    </container>
+
+
+    <container style="get-directions">
+      <param
+        name="providerName"
+        source="/DISPLAY/xmlData/provider-name/"
+      />
+      <param
+        name="map-api-key"
+        source="/DISPLAY/xmlData/map-api-key"
+      />
+      <param
+        name="calculate-distance-in"
+        source="/DISPLAY/xmlData/unit-of-distance"
+      />
+      <field source="/DISPLAY/xmlData/"/>
+    </container>
+
+
+  </content>
+
+
+</page>

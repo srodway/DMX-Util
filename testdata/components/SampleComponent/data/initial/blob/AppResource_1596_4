@@ -6,25 +6,14 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Details.Name.Representative=Representative
-Details.Title.Representative=Representative
+Number.Wizard.Pages=2
 
+RegisterInformationProvider_duplicateCheckWizard.Wizard.Item.Text=Registered Information Provider
+RegisterInformationProvider_duplicateCheckWizard.Wizard.Page.Title=Step 1:
+RegisterInformationProvider_duplicateCheckWizard.Wizard.Page.Desc=Registered Information Provider
+Wizard.PageID.1=RegisterInformationProvider_duplicateCheckWizard
 
-Help.leaf.Description=This leaf describes the functionality of Representative.
-
-leaf.title.home=Home
-
-folder.title.financial=Financial
-leaf.title.Financial=Financial
-leaf.title.FinancialInstrument=Financial Instrument
-leaf.title.BankAccount=Bank Account
-
-folder.title.contact=Contact
-leaf.title.Address=Address
-leaf.title.EmailAddress=Email Address
-leaf.title.PhoneNumber=Phone Number
-leaf.title.WebAddress=Web Address
-
-# BEGIN, CR00333624, SSK
-leaf.title.AlternateID=Alternate Identifier
-# END, CR00333624
+RegisterInformationProvider_registerWizard.Wizard.Item.Text=Information Provider Details
+RegisterInformationProvider_registerWizard.Wizard.Page.Title=Step 2:
+RegisterInformationProvider_registerWizard.Wizard.Page.Desc=Information Provider Details
+Wizard.PageID.2=RegisterInformationProvider_registerWizard

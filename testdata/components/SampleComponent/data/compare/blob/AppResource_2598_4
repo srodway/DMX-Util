@@ -1,52 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-    Copyright 2009 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="OutcomePlanServiceMenu">
+Copyright 2009-2011 Curam Software Ltd.
+All rights reserved.
 
- <mc:loader-registry>
-  <mc:loader class="curam.outcomeplanning.tab.impl.OutcomePlanServiceMenuLoader"/>
- </mc:loader-registry>
+This software is the confidential and proprietary information of Curam
+Software, Ltd. ("Confidential Information"). You shall not disclose
+such Confidential Information and shall use it only in accordance with the
+terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="SupervisorHomeMenu">
 
- <!--  Dynamic menu using loader above-->
+  <mc:menu-item id="User" page-id="Supervisor_userSearchDetails" title="MenuItem.Title.User" tooltip="MenuItem.Tooltip.User"/>
 
- <mc:menu-item dynamic="true" id="Edit" open-as="modal" page-id="ProviderManagement_editService" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit" visible="true"/>
- <mc:menu-separator id="OutcomePlanServiceMenu1"/>
- <mc:menu-item dynamic="true" id="EditSharing" open-as="modal" page-id="OutcomePlanService_resolveEditSharingService" title="MenuItem.Title.EditSharing" tooltip="MenuItem.Tooltip.EditSharing" visible="true"/>
- <mc:menu-item dynamic="true" id="Submit" open-as="modal" page-id="ProviderManagement_confirmSubmitService" title="MenuItem.Title.Submit" tooltip="MenuItem.Tooltip.Submit" visible="true"/>
- <mc:menu-item dynamic="true" id="Complete" open-as="modal" page-id="ProviderManagement_completeService" title="MenuItem.Title.Complete" tooltip="MenuItem.Tooltip.Complete" visible="true"/>
- <mc:menu-item dynamic="true" id="Approve" open-as="modal" page-id="ProviderManagement_confirmServiceApproval" title="MenuItem.Title.Approve" tooltip="MenuItem.Tooltip.Approve" visible="true"/>
- <mc:menu-item dynamic="true" id="Reject" open-as="modal" page-id="ProviderManagement_rejectServiceApproval" title="MenuItem.Title.Reject" tooltip="MenuItem.Tooltip.Reject" visible="true"/>
- <mc:menu-item dynamic="true" id="Review" open-as="modal" page-id="OutcomePlanService_reviewService" title="MenuItem.Title.Review" tooltip="MenuItem.Tooltip.Review" visible="true"/>
- <mc:menu-separator id="OutcomePlanServiceMenu2"/>
- <mc:menu-item dynamic="true" id="UndoProviderSelection" open-as="modal" page-id="ProviderManagement_confirmCancelProviderSelection" title="MenuItem.Title.UndoProviderSelection" tooltip="MenuItem.Tooltip.UndoProviderSelection" visible="true"/>
- <mc:menu-item dynamic="true" id="SelectProviderType" open-as="modal" page-id="ProviderManagement_addProviderTypeSelection" title="MenuItem.Title.SelectProviderType" tooltip="MenuItem.Tooltip.SelectProviderType" visible="true"/>
- <mc:menu-item dynamic="true" id="UndoProviderTypeSelection" open-as="modal" page-id="ProviderManagement_confirmCancelProviderTypeSelection" title="MenuItem.Title.UndoProviderTypeSelection" tooltip="MenuItem.Tooltip.UndoProviderTypeSelection" visible="true"/>
- <mc:menu-separator id="OutcomePlanServiceMenu3"/>
- <mc:menu-item dynamic="true" id="AddNote" open-as="modal" page-id="ProviderManagement_addServiceComment" title="MenuItem.Title.AddNote" tooltip="MenuItem.Tooltip.AddNote" visible="true"/>
- <mc:menu-item dynamic="true" id="UpdateProgress" open-as="modal" page-id="OutcomePlanService_updateProgress" title="MenuItem.Title.UpdateProgress" tooltip="MenuItem.Tooltip.UpdateProgress" visible="true"/>
- <mc:menu-separator id="OutcomePlanServiceMenu4"/>
- <mc:menu-item dynamic="true" id="AddFactors" open-as="modal" page-id="OutcomePlanService_addFactors" title="MenuItem.Title.AddFactors" tooltip="MenuItem.Tooltip.AddFactors" visible="true"/>
- <mc:menu-item dynamic="true" id="RemoveFactors" open-as="modal" page-id="OutcomePlanService_removeFactors" title="MenuItem.Title.RemoveFactors" tooltip="MenuItem.Tooltip.RemoveFactors" visible="true"/>
- 
- <mc:menu-separator id="OutcomePlanServiceMenu5"/>
- <mc:menu-item append-ellipsis="false" dynamic="true" id="ViewPrintableDocument" open-as="modal" page-id="OutcomePlanService_viewPrintableDocument" title="MenuItem.Title.ViewPrintableDocument" tooltip="MenuItem.Tooltip.ViewPrintableDocument"/>
- <mc:menu-separator id="OutcomePlanServiceMenu6"/>
- 
- <mc:menu-item dynamic="true" id="Delete" open-as="modal" page-id="ProviderManagement_cancelService" title="MenuItem.Title.Delete" tooltip="MenuItem.Tooltip.Delete" visible="true"/>
- <mc:menu-separator id="OutcomePlanServiceMenu7"/>
- <mc:menu-item dynamic="true" id="Evaluate" open-as="modal" page-id="ProviderManagement_evaluateService" title="MenuItem.Title.Evaluate" tooltip="MenuItem.Tooltip.Evaluate" visible="true"/>
- <mc:menu-item dynamic="true" id="UpdateEvaluation" open-as="modal" page-id="ProviderManagement_updateServiceEvaluation" title="MenuItem.Title.UpdateEvaluation" tooltip="MenuItem.Tooltip.UpdateEvaluation" visible="true"/>
- <mc:menu-item dynamic="true" id="DeleteEvaluation" open-as="modal" page-id="ProviderManagement_cancelServiceEvaluation" title="MenuItem.Title.DeleteEvaluation" tooltip="MenuItem.Tooltip.DeleteEvaluation" visible="true"/>
+  <mc:menu-item id="Task" page-id="Supervisor_searchTask" title="MenuItem.Title.Task" tooltip="MenuItem.Tooltip.Task"/>
+
 </mc:menu-bar>

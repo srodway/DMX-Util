@@ -1,40 +1,19 @@
 #
 # Licensed Materials - Property of IBM
-#
-# PID 5725-H26
 # 
-# Copyright IBM Corporation 2014. All Rights Reserved.
+# Copyright IBM Corporation 2012. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-#Thu Jun 16 19:38:07 BST 2014
-Cluster.PractitionerCertificate.Date.Help=Enter the certification dates.
-PractitionerCertificate.MedicalPractitioner.Description=Medical Practitioner
-Cluster.PractitionerCertificate.Claimant=Claimant
-SignatureDetails.claimFormSignedInd=Claim Form Signed
-Modify.Page.Description=The modify page for the practitioner certificate.
-ExaminationDetails.certPeriodType=Certification Period Type
-Cluster.PractitionerCertificate.CalcToDate=Calculated To Date
-ExaminationDetails.certificateType=Certificate Type
-Cluster.PractitionerCertificate.MedicalPractitioner.Help=Select the practitioner who issued the certificate.
-Cluster.Comments.Help=Additional practitioner comments.
-PractitionerCertificate.ExaminationDetails.Help=Enter the examination details.
-PractitionerCertificate.CalculatedDate.calculatedCertToDate=Calculated To Date
-ExaminationDetails.certPeriodCount=Certification Period Length
-CertificationDates.certFromDateLabel10=Certification From Date
-Cluster.PractitionerCertificate.CalcToDate.Help=The calculated certification to date.
-Cluster.PractitionerCertificate.MedicalPractitioner=Medical Practitioner
-Cluster.PractitionerCertificate.Claimant.Help=Select the citizen to whom the practitioner certificate applies.
-Create.Page.Description=The create page for the practitioner certificate.
-Cluster.Comments=Comments
-SignatureDetails.signatureDate=Signature Date
-Cluster.PractitionerCertificate.Date=Certification Dates
-PractitionerCertificate.Claimant.Description=Claimant
-Cluster.PractitionerCertificate.SignatureDetails=Signature Details
-PractitionerCert.SummaryMessage=Practitioner Certificate runs from {0}
-PractitionerCertificate.CertificationDates.specifiedCertToDateLabel11=Specified Certification To Date
-Cluster.PractitionerCertificate.SignatureDetails.Help=Enter the signature details for the certificate.
-View.Page.Description=The view page for the practitioner certificate.
-ExaminationDetails.ExaminationDate=Examination Date
-PractitionerCertificate.ExaminationDetails=Examination Details
+Number.Wizard.Pages=2
+
+Wizard.PageID.1=ActivityConditionsWizard_selectService
+ActivityConditionsWizard_selectService.Wizard.Item.Text=Select Service
+ActivityConditionsWizard_selectService.Wizard.Page.Title=Step 1:
+ActivityConditionsWizard_selectService.Wizard.Page.Desc=Search and select a Service
+
+Wizard.PageID.2=ActivityConditionsWizard_selectServiceConditions
+ActivityConditionsWizard_selectServiceConditions.Wizard.Item.Text=Select Conditions
+ActivityConditionsWizard_selectServiceConditions.Wizard.Page.Title=Step 2:
+ActivityConditionsWizard_selectServiceConditions.Wizard.Page.Desc=Check all conditions that apply

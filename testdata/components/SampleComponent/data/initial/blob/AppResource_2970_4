@@ -1,100 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
- Copyright 2011 Curam Software Ltd.
- All rights reserved.
- 
- This software is the confidential and proprietary information of Curam
- Software, Ltd. ("Confidential Information"). You shall not disclose
- such Confidential Information and shall use it only in accordance with the
- terms of the license agreement you entered into with Curam Software.
---><sc:section xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-config" id="INTAKEAPPWorkspaceSection" title="INTAKEAPPWorkspaceSection.title" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
- <!--CEF Tabs need to be reviewed -->
-
-
- <sc:tab id="AssessmentHometab"/>
- <sc:tab id="BankAccount"/>
- <sc:tab id="Banks"/>
- <sc:tab id="CaseMemberHome"/>
- <sc:tab id="Corrections"/>
- <sc:tab id="EducationalInstituteHome"/>
- <sc:tab id="EmployerHome"/>
- <sc:tab id="EvidenceBroker"/>
- <sc:tab id="ExternalParty"/>
- <sc:tab id="ExternalUserHome"/>
- <sc:tab id="ExternalUserSearch"/>
- <sc:tab id="Incident"/>
- <sc:tab id="InformationProviderHome"/>
- <sc:tab id="IntegratedCase"/>
- <sc:tab id="IntegratedCasesAdministration"/>
-
- <!--<sc:tab id="MyCalendar"/> -->
- <sc:tab id="OverPaymentCase"/>
- <sc:tab id="PlanItemView"/>
- <sc:tab id="ProdProvHome"/>
- <sc:tab id="ProductDelivery"/>
- <sc:tab id="ProductDeliveryCases"/>
- <sc:tab id="ProspectEmployerHome"/>
- <sc:tab id="ServicePlanHome"/>
- <sc:tab id="ServicePlans"/>
- <sc:tab id="ServiceSupplierHome"/>
- <sc:tab id="ServiceUnitPlanItemView"/>
- <sc:tab id="StaticEvidence"/>
- <sc:tab id="SupervisorCase"/>
- <sc:tab id="SupervisorCases"/>
- <sc:tab id="SupervisorHome"/>
- <sc:tab id="SupervisorOrgUnit"/>
- <sc:tab id="SupervisorOrgUnitHome"/>
- <sc:tab id="SupervisorTaskSearch"/>
- <sc:tab id="SupervisorUserHome"/>
- <sc:tab id="SupervisorUsers"/>
- <sc:tab id="SupervisorWorkQueue"/>
- <sc:tab id="SupervisorWorkQueueHome"/>
- <sc:tab id="UserSearch"/>
- <sc:tab id="Utility"/>
- <sc:tab id="VerificationsHome"/>
- <sc:tab id="CaseEvidence"/>
- <sc:tab id="EvidenceType"/>
- <sc:tab id="ParticipantSearch"/>
- <sc:tab id="MyItemsOfInterest"/>
- <sc:tab id="CaseSearch"/> 
- <sc:tab id="EducationalInstituteSearch"/>
- <sc:tab id="EmployerSearch"/>
- <sc:tab id="ExternalPartyOfficeSearch"/>
- <sc:tab id="ExternalPartySearch"/> 
- <sc:tab id="InformationProviderSearch"/>
- <sc:tab id="IncidentSearch"/>
- <sc:tab id="ProductProviderSearch"/>
- <sc:tab id="ServiceSupplierSearch"/>
- <sc:tab id="UtilitySearch"/>
- <sc:tab id="ParticipantInvestigationHome"/>
-
-
- <!--INTAKE Specific Tabs -->
- <sc:tab id="Application"/>
- <sc:tab id="Individual"/>
- <sc:tab id="ScreeningResults"/>
- <sc:tab id="SearchResults"/>
- <sc:tab id="TriageResults"/>
- <sc:tab id="LifeEventResults"/>
- <sc:tab id="IntakeApplicationSearch"/>
- <!-- BEGIN, CR00278776, GBA -->
- <sc:tab id="IntakeApplicationSearch1"/>
- <sc:tab id="MyApplications"/>
- <sc:tab id="WorkQueueTaskSearch"/>
- <sc:tab id="ApplicationQuickSearch"/>
- <sc:tab id="IntakePersonSearch"/>
-    <sc:tab id="PersonHome"/> 
-    <sc:tab id="ProspectPersonHome"/>  
-
- 
- 
- <sc:shortcut-panel-ref id="INTAKEAPPWorkspaceSectionShortcuts"/>
-
-</sc:section>
+Employment.PageTitle=Employment
+JobCluster.Title=Job
+EmploymentStartDate.LabelID=When did your carer start this job?
+EmploymentStartDate.HelpID=Enter startdate, or click calendar icon and select date
+JobFinished.LabelID=Has the job finished?
+JobFinished.HelpID=Select Yes or No from the list
+EndDate.LabelID=When did your carer last work?
+EndDate.HelpID=Enter the date, or click the calendar icon and select the date
+JobType.LabelID=Type of job?
+JobType.HelpID=Select the job type from the list
+EmployersName.LabelID=Employer's Name:
+EmployersName.HelpID=Enter the employer's name
+EarningsCluster.Title=Earnings
+GrossPayAmount.LabelID=What was your carer's gross pay?
+GrossPayAmount.HelpID=Enter the gross pay
+GrossPayFreq.LabelID=How often was your carer paid?
+GrossPayFreq.HelpID=Select the frequency from the list
+TaxPayAmount.LabelID=How much did your carer pay in tax?
+TaxPayAmount.HelpID=Enter the amount you paid in taxes
+TaxPayFreq.LabelID=How often did your carer pay
+TaxPayFreq.HelpID=Select the frequency from the list
+NIPayAmount.LabelID=How much did your carer pay in national insurance Contributions?
+NIPayAmount.HelpID=Enter the amount you paid in national insurance
+NIPayFreq.LabelID=How often did your carer pay
+NIPayFreq.HelpID=Select the frequency from the list
+PaidExpenses.LabelID=Where you paid expenses?
+PaidExpenses.HelpID=Select Yes or No from the list
+ExpensesPayAmount.LabelID=How much were you paid for expenses?
+ExpensesPayAmount.HelpID=Enter the amount you were paid for expenses
+ExpensesPayFreq.LabelID=how often were you paid
+ExpensesPayFreq.HelpID=Select the frequency form the list
+pension.LabelID=Does your carer have an occupational pension?
+pension.HelpID=Select Yes or No from the list
+PensionCluster.Title=Pension
+PensionPayAmount.LabelID=How much does your carer pay in occupational pension contributions?
+PensionPayAmount.HelpID=Enter the amount of contributions to your pension
+PensionPayFreq.LabelID=How often does your carer pay
+PensionPayFreq.HelpID=Select the frequency from the list
+Employed.LabelID=Has your carer been employed at any time during the six months before the date you want to claim from?

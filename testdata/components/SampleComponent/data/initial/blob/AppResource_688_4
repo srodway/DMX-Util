@@ -6,19 +6,25 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Number.Wizard.Pages=3
+MenuItem.Title.EditPlanItem=Edit
+MenuItem.Tooltip.EditPlanItem=Edit the plan item.
 
-SelectReferralServiceOffering.Wizard.Item.Text=Select Service Offering
-SelectReferralServiceOffering.Wizard.Page.Title=Step 1:
-SelectReferralServiceOffering.Wizard.Page.Desc=Select the service you wish to refer the client to.
-Wizard.PageID.1=SelectReferralServiceOffering
+MenuItem.Title.RecordClientParticipation=Record Client Participation
+MenuItem.Tooltip.RecordClientParticipation=Record client participation information.
 
-SearchForProviderOffering.Wizard.Item.Text=Provider Search
-SearchForProviderOffering.Wizard.Page.Title=Step 2:
-SearchForProviderOffering.Wizard.Page.Desc=Search for and select the provider you wish to refer the client to.
-Wizard.PageID.2=SearchForProviderOffering
+MenuItem.Title.EditAuthorizedUnits=Edit Authorized Units
+MenuItem.Tooltip.EditAuthorizedUnits=Edit authorized units for the plan item.
 
-CreateLiteProviderReferral.Wizard.Item.Text=Additional Details
-CreateLiteProviderReferral.Wizard.Page.Title=Step 3:
-CreateLiteProviderReferral.Wizard.Page.Desc=Complete additional details
-Wizard.PageID.3=CreateLiteProviderReferral
+MenuItem.Title.RecordServiceUnit=Record Service Unit
+MenuItem.Tooltip.RecordServiceUnit=Record delivery of service unit details for the plan item.
+
+MenuItem.Title.SubmitForApproval=Submit For Approval
+MenuItem.Tooltip.SubmitForApproval=Submit the plan item For approval.
+
+MenuItem.Title.Approve=Approve
+MenuItem.Tooltip.Approve=Create a new approval request for the plan item.
+
+MenuItem.Title.Reject=Reject
+MenuItem.Tooltip.Reject=Reject the plan item.
+
+

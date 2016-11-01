@@ -17,53 +17,6 @@
   <column name="versionNo" type="number" />
   <row>
     <attribute name="determinationConfigID">
-      <value>256</value>
-    </attribute>
-    <attribute name="determinationalReference">
-      <value />
-    </attribute>
-    <attribute name="name">
-      <value>Asthma Adult</value>
-    </attribute>
-    <attribute name="type">
-      <value>DET1</value>
-    </attribute>
-    <attribute name="startDate">
-      <value>2005-05-12</value>
-    </attribute>
-    <attribute name="endDate">
-      <value />
-    </attribute>
-    <attribute name="multipleSourceInd">
-      <value>1</value>
-    </attribute>
-    <attribute name="comments">
-      <value />
-    </attribute>
-    <attribute name="dateCreated">
-      <value>2007-03-24-13.09.00</value>
-    </attribute>
-    <attribute name="createdBy">
-      <value>admin</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="standAlone">
-      <value>1</value>
-    </attribute>
-    <attribute name="supportCocProcessing">
-      <value>1</value>
-    </attribute>
-    <attribute name="automaticConsolidation">
-      <value>0</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>4</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="determinationConfigID">
       <value>801</value>
     </attribute>
     <attribute name="determinationalReference">
@@ -107,6 +60,53 @@
     </attribute>
     <attribute name="versionNo">
       <value>3</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="determinationConfigID">
+      <value>256</value>
+    </attribute>
+    <attribute name="determinationalReference">
+      <value />
+    </attribute>
+    <attribute name="name">
+      <value>Asthma Adult</value>
+    </attribute>
+    <attribute name="type">
+      <value>DET1</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2005-05-12</value>
+    </attribute>
+    <attribute name="endDate">
+      <value />
+    </attribute>
+    <attribute name="multipleSourceInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="dateCreated">
+      <value>2007-03-24-13.09.00</value>
+    </attribute>
+    <attribute name="createdBy">
+      <value>admin</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="standAlone">
+      <value>1</value>
+    </attribute>
+    <attribute name="supportCocProcessing">
+      <value>1</value>
+    </attribute>
+    <attribute name="automaticConsolidation">
+      <value>0</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>4</value>
     </attribute>
   </row>
 </table>

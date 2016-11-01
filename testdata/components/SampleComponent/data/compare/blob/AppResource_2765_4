@@ -6,72 +6,15 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009-2011 Curam Software Ltd.
+  Copyright 2010 Curam Software Ltd.
   All rights reserved.
-
+  
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ProductDelivery">
-
-  <tc:page-param name="caseID"/>
-
-  <tc:menu id="ProductDeliveryMenu"/> 
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="SecurityGroupMenu">
   
-  <tc:context height="155" page-id="ProductDelivery_tabDetails"/>
-
-  <tc:navigation id="ProductDelivery"/> 
+  <mc:menu-item id="AddIdentifiers" open-as="modal" page-id="System_addIdentifierToSecurityGroup" title="MenuItem.Title.AddIdentifiers" tooltip="MenuItem.Tooltip.AddIdentifiers"/>
   
-  <tc:tab-refresh>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ICProductSample_modifyHeader"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseOwner"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseOwnerDetails"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_createCaseSupervisor"/>
-
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_createReview"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyReviewFromList1"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyReviewFromView1"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_modifyCertificationFrequency"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_modifyDeliveryPattern"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_setOverrideMDR"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_unsetOverrideMDR"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_submit"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_activate"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_approve"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_reject"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_suspend"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_unsuspend"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_reactivate"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ICProductSample_close"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_createCaseRelationship"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseRelationshipFromView"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseRelationshipFromList"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_createCertification"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_generatePayment"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="BenefitSample_modifyEffectiveDatedEvidence"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="BenefitSample_activateEffectiveDatedEvidence"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="BenefitSample_cancelEditableEffectiveDatedEvidence"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="BenefitSample_suspendEffectiveDatedEvidence"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="BenefitSample_cancelEditableEffectiveDatedEvidence"/>
-      
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_cancelCertification1"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_modifyCertificationFromList"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_modifyCertificationFromView"/>
-    
-    <tc:onsubmit context="false" menu-bar="true" navigation="false" page-id="Organization_createCaseBookmark"/>
-    <tc:onsubmit context="false" menu-bar="true" navigation="false" page-id="Organization_cancelCaseBookmark"/>    
-    
-  </tc:tab-refresh>
-
-</tc:tab-config>
+</mc:menu-bar>

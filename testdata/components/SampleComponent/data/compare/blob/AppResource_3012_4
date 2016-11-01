@@ -1,36 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Submenu.Title.Add=Add 
+Submenu.Toolip.Add=Add
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2010-2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="PlanItemViewMenu">
-  
-  <mc:loader-registry>
-          <mc:loader class="curam.serviceplans.sl.impl.PlanItemViewMenuLoader"/>
-   </mc:loader-registry>
-      
-   <mc:menu-item id="EditPlanItem" open-as="modal" page-id="ServicePlanDelivery_resolveModifyPlanItemPage" title="MenuItem.Title.EditPlanItem" tooltip="MenuItem.Tooltip.EditPlanItem"/>        
-          
-   <mc:menu-separator id="sep1"/>
-        
-   <mc:menu-item dynamic="true" id="SubmitForApproval" open-as="modal" page-id="ServicePlanDelivery_submitServicePlanPlanItem" title="MenuItem.Title.SubmitForApproval" tooltip="MenuItem.Tooltip.SubmitForApproval"/>                     
-        
-   <mc:menu-item dynamic="true" id="Approve" open-as="modal" page-id="ServicePlanDelivery_approveServicePlanPlanItem" title="MenuItem.Title.Approve" tooltip="MenuItem.Tooltip.Approve"/>
-        
-   <mc:menu-item dynamic="true" id="Reject" open-as="modal" page-id="ServicePlanDelivery_rejectServicePlanPlanItem" title="MenuItem.Title.Reject" tooltip="MenuItem.Tooltip.Reject"/>
-        
-   <mc:menu-separator id="sep2"/>
-      
-   <mc:menu-item id="RecordParticipation" open-as="modal" page-id="ServicePlanDelivery_addClientParticipationDefaultPlanItem" title="MenuItem.Title.RecordClientParticipation" tooltip="MenuItem.Tooltip.RecordClientParticipation"/>
+MenuItem.Title.Edit=Edit
+MenuItem.Tooltip.Edit=Edit
 
-</mc:menu-bar>
+MenuItem.Title.IncomingTransition=New Incoming Transition
+MenuItem.Tooltip.IncomingTransition=New Incoming Transition
+
+MenuItem.Title.OutgoingTransition=New Outgoing Transition
+MenuItem.Tooltip.OutgoingTransition=New Outgoing Transition
+
+MenuItem.Title.ShowGraphicalView=Graphical View
+MenuItem.Tooltip.ShowGraphicalView=Graphical View
+
+MenuItem.Title.ValidateActivity=Validate
+MenuItem.Tooltip.ValidateActivity=Validate
+
+MenuItem.Title.ChangeLoopType=Change Loop Type
+MenuItem.Tooltip.ChangeLoopType=Change Loop Type

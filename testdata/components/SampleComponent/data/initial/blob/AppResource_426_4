@@ -1,20 +1,40 @@
 #
 # Licensed Materials - Property of IBM
 # 
-# Copyright IBM Corporation 2012, 2014. All Rights Reserved.
+# Copyright IBM Corporation 2012. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Number.Wizard.Pages=2
-#BEGIN, CR00440019, AC
-ProviderManagement_searchProviderGroupNotRegistered.Wizard.Item.Text=Provider Group Search
-ProviderManagement_searchProviderGroupNotRegistered.Wizard.Page.Title=Step 1:
-ProviderManagement_searchProviderGroupNotRegistered.Wizard.Page.Desc=Confirm Provider Group Not Already Enrolled
-Wizard.PageID.1=ProviderManagement_searchProviderGroupNotRegistered
 
-ProviderManagement_enrollAsProviderGroup.Wizard.Item.Text=Provider Group Details
-ProviderManagement_enrollAsProviderGroup.Wizard.Page.Title=Step 2:
-ProviderManagement_enrollAsProviderGroup.Wizard.Page.Desc=Enter Provider Group Details
-Wizard.PageID.2=ProviderManagement_enrollAsProviderGroup
-#END, CR00440019
+
+
+MenuItem.Title.Edit=Edit
+MenuItem.Tooltip.Edit=Click the Edit button to make changes to the Hearing
+
+MenuItem.Title.CompleteHearing=Complete Hearing
+MenuItem.Tooltip.CompleteHearing=Click the Complete Hearing button to complete the hearing
+
+MenuItem.Title.ContinueHearing=Continue Hearing
+MenuItem.Tooltip.ContinueHearing=Click the Continue Hearing button to continue the hearing
+
+MenuItem.Title.RescheduleHearing=Reschedule Hearing
+MenuItem.Tooltip.RescheduleHearing=Click the Reschedule Hearing button reschedule the hearing
+
+MenuItem.Title.AdjournHearing=Adjourn Hearing
+MenuItem.Tooltip.AdjournHearing=Click the Adjourn Hearing button to adjourn the hearing
+
+MenuItem.Title.AddWitness=Add Witness
+MenuItem.Tooltip.AddWitness=Click the Add Witness button to add a witness to the hearing
+
+MenuItem.Title.AddRepresentative=Add Representative
+MenuItem.Tooltip.AddRepresentative=Click the Add Representative button to add a representative to the hearing
+
+MenuItem.Title.AddInterpreter=Add Interpreter
+MenuItem.Tooltip.AddInterpreter=Click the Add Interpreter button to add an interpreter to the hearing
+
+MenuItem.Title.AddAttendee=Add Attendee
+MenuItem.Tooltip.AddAttendee=Click the Attendee button to add an attendee to the hearing
+
+MenuItem.Title.RequestTranscription=Request Transcription
+MenuItem.Tooltip.RequestTranscription=To request a transcription of the hearing, click the Request Transcription button

@@ -1,20 +1,36 @@
 #
 # Licensed Materials - Property of IBM
-#
-# PID 5725-H26
 # 
-# Copyright IBM Corporation 2014. All Rights Reserved.
+# Copyright IBM Corporation 2012. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-navigation-group.ChangeHistory.title=Change History
-navigation-group.RelatedEvidenceDET24002.title=Practitioner Certificate
-navigation-group.Details.description=
-navigation-group.RelatedEvidenceDET24002.description=
-navigation-group.Issues.description=
-navigation-group.ChangeHistory.description=
-navigation-group.Details.title=Home
-navigation-group.Verifications.title=Verifications
-navigation-group.Verifications.description=
-navigation-group.Issues.title=Issues
+Leaf.Title.Home=Home
+
+Folder.Title.Administration=Administration
+Leaf.Title.Administrators=Administrators
+Leaf.Title.Roles=Roles
+
+Folder.Title.Contact=Contact
+Leaf.Title.Addresses=Addresses
+Leaf.Title.Contacts=Contacts
+Leaf.Title.EmailAddresses=Email Addresses
+Leaf.Title.PhoneNumbers=Phone Numbers
+Leaf.Title.WebAddresses=Web Addresses
+
+Folder.Title.Communications=Communications
+Leaf.Title.CommunicationExceptions = Communication Exceptions
+Leaf.Title.Interactions=Interactions
+
+Folder.Title.Financial=Financial
+Leaf.Title.Financial=Transactions
+Leaf.Title.BankAccounts=Bank Accounts
+
+# BEGIN, CR00333624, SSK
+Leaf.Title.AlternativeIds=Alternative Identifier(s)
+# END, CR00333624
+Leaf.Title.Attachments=Attachments
+Leaf.Title.Notes=Notes
+Leaf.Title.Tasks=Tasks
+Leaf.Title.Communications=Communications

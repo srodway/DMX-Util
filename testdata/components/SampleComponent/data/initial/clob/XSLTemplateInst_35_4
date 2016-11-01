@@ -1,49 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xsl:stylesheet [<!ENTITY nbsp "&#160;">]>
 
-<!-- BEGIN, CR00357205, PB -->
+ <!-- BEGIN, CR00357205, PB -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:foa="http://fabio" version="1.0">
-  <!-- END, CR00357205 -->
+   <!-- END, CR00357205 -->
   <!-- BEGIN, CR00352142, PB -->
-<xsl:attribute-set name="Normal_1" foa:class="block">
+	<xsl:attribute-set name="Normal_1" foa:class="block">
     <xsl:attribute name="font-size">12.0pt</xsl:attribute>
 	<xsl:attribute name="line-height">5mm</xsl:attribute>
 	<xsl:attribute name="text-align">right</xsl:attribute>
-	<xsl:attribute name="white-space-collapse">false</xsl:attribute>
    </xsl:attribute-set>
- <xsl:attribute-set name="Normal_2" foa:class="block">
+  	  		    <xsl:attribute-set name="Normal_2" foa:class="block">
     <xsl:attribute name="font-size">12.0pt</xsl:attribute>
 	<xsl:attribute name="line-height">5mm</xsl:attribute>
 	<xsl:attribute name="text-indent">110mm</xsl:attribute>
-	<xsl:attribute name="white-space-collapse">false</xsl:attribute>
-	<xsl:attribute name="white-space-treatment">preserve</xsl:attribute>
-	<xsl:attribute name="text-align">right</xsl:attribute>
-   </xsl:attribute-set>
-   <xsl:attribute-set name="Normal_3" foa:class="block">
+<xsl:attribute name="white-space-collapse">false</xsl:attribute>
+<xsl:attribute name="linefeed-treatment">preserve</xsl:attribute>
+<xsl:attribute name="white-space-treatment">preserve</xsl:attribute>
+<xsl:attribute name="text-align">right</xsl:attribute>
+</xsl:attribute-set>
+  <xsl:attribute-set name="Normal_3" foa:class="block">
     <xsl:attribute name="font-size">12.0pt</xsl:attribute>
-		<xsl:attribute name="line-height">5mm</xsl:attribute>
+	<xsl:attribute name="line-height">5mm</xsl:attribute>
 	<xsl:attribute name="text-indent">0mm</xsl:attribute>
   </xsl:attribute-set>
- <xsl:attribute-set name="Normal_4" foa:class="block">
+  <xsl:attribute-set name="Normal_4" foa:class="block">
+    <xsl:attribute name="font-size">12.0pt</xsl:attribute>
+	<xsl:attribute name="line-height">15mm</xsl:attribute>
+	<xsl:attribute name="text-indent">0mm</xsl:attribute>
+  </xsl:attribute-set>
+    <xsl:attribute-set name="Normal_5" foa:class="block">
     <xsl:attribute name="font-size">12.0pt</xsl:attribute>
 	<xsl:attribute name="line-height">7mm</xsl:attribute>
 	<xsl:attribute name="text-indent">0mm</xsl:attribute>
-	<xsl:attribute name="white-space-collapse">false</xsl:attribute>
-	<xsl:attribute name="white-space-treatment">preserve</xsl:attribute>
+<xsl:attribute name="white-space-collapse">false</xsl:attribute>
+<xsl:attribute name="linefeed-treatment">preserve</xsl:attribute>
+<xsl:attribute name="white-space-treatment">preserve</xsl:attribute>
 </xsl:attribute-set>
- <xsl:attribute-set name="Normal_5" foa:class="block">
-    <xsl:attribute name="font-size">12.0pt</xsl:attribute>
-		<xsl:attribute name="line-height">15mm</xsl:attribute>
-	<xsl:attribute name="text-indent">0mm</xsl:attribute>
-  </xsl:attribute-set>
   <xsl:attribute-set name="Normal_6" foa:class="block">
     <xsl:attribute name="font-size">12.0pt</xsl:attribute>
-		<xsl:attribute name="line-height">7mm</xsl:attribute>
-	<xsl:attribute name="text-indent">0mm</xsl:attribute>
-  </xsl:attribute-set>
-    <xsl:attribute-set name="Normal_7" foa:class="block">
-    <xsl:attribute name="font-size">12.0pt</xsl:attribute>
-		<xsl:attribute name="line-height">5mm</xsl:attribute>
+	<xsl:attribute name="line-height">7mm</xsl:attribute>
 	<xsl:attribute name="text-indent">0mm</xsl:attribute>
   </xsl:attribute-set>
   <!-- END, CR00352142 -->
@@ -66,7 +62,7 @@
       <fo:page-sequence master-reference="only">
 	    <!-- START NON-TRANSLATABLE -->
         <fo:flow flow-name="xsl-region-body" font-family="WT Sans">
-        <!-- END NON-TRANSLATABLE -->
+        <!-- END NON-TRANSLATABLE -->		
 <!-- BEGIN, CR00352142, PB -->
           <fo:block xsl:use-attribute-sets="Normal_1">
             <xsl:apply-templates select="FIELD[FNAME='organisationName']" />
@@ -75,38 +71,31 @@
             <xsl:apply-templates select="FIELD[FNAME='userAddress']" />
           </fo:block>
           <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
-          <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
-          <fo:block xsl:use-attribute-sets="Normal_4">
+          <fo:block xsl:use-attribute-sets="Normal_4">&nbsp;</fo:block>
+          <fo:block xsl:use-attribute-sets="Normal_4">&nbsp;</fo:block>
+          <fo:block xsl:use-attribute-sets="Normal_5">
             <xsl:apply-templates select="FIELD[FNAME='concernRoleAddress']" />
           </fo:block>
-          <fo:block xsl:use-attribute-sets="Normal_5">&nbsp;</fo:block>
-          <!-- BEGIN, CR00357029, PB -->
           <fo:block xsl:use-attribute-sets="Normal_6">
             Dear
             <xsl:apply-templates select="FIELD[FNAME='concernRoleName']" />
           </fo:block>
-          <!-- END, CR00357029 -->
-          <fo:block xsl:use-attribute-sets="Normal_7">&nbsp;</fo:block>
+          <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
           <fo:block xsl:use-attribute-sets="Normal_6">
-            We wish to inform you that your
+            We wish to inform you that the
             <xsl:apply-templates select="FIELD[FNAME='productType']" />
-            case with Reference No.
+            Case Referral with Reference No.
             <xsl:apply-templates select="FIELD[FNAME='caseReference']" />
-            ,
-            has been closed on
-            <xsl:apply-templates select="FIELD[FNAME='caseClosureDate']" />
-            for the following reason -
+            has been cancelled
             <xsl:apply-templates select="FIELD[FNAME='caseClosureReason']" />
             .
           </fo:block>
-          <fo:block xsl:use-attribute-sets="Normal_7">&nbsp;</fo:block>
+          <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
           <fo:block xsl:use-attribute-sets="Normal_6">Sincerely,</fo:block>
-          <fo:block xsl:use-attribute-sets="Normal_7">&nbsp;</fo:block>
-          <!-- BEGIN, CR00357029, PB -->
+          <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
           <fo:block xsl:use-attribute-sets="Normal_6">
             <xsl:apply-templates select="FIELD[FNAME='userFullName']" />
           </fo:block>
-		  <!-- END, CR00357029 -->
 <!-- END, CR00352142 -->
         </fo:flow>
       </fo:page-sequence>

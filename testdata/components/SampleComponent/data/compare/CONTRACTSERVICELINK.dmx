@@ -5,6 +5,39 @@
   <column name="contractID" type="id" />
   <row>
     <attribute name="contractServiceLinkID">
+      <value>4001</value>
+    </attribute>
+    <attribute name="serviceID">
+      <value>3002</value>
+    </attribute>
+    <attribute name="contractID">
+      <value>4101</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contractServiceLinkID">
+      <value>4002</value>
+    </attribute>
+    <attribute name="serviceID">
+      <value>3004</value>
+    </attribute>
+    <attribute name="contractID">
+      <value>4102</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contractServiceLinkID">
+      <value>4003</value>
+    </attribute>
+    <attribute name="serviceID">
+      <value>3003</value>
+    </attribute>
+    <attribute name="contractID">
+      <value>4103</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="contractServiceLinkID">
       <value>4004</value>
     </attribute>
     <attribute name="serviceID">
@@ -49,13 +82,13 @@
   </row>
   <row>
     <attribute name="contractServiceLinkID">
-      <value>4001</value>
+      <value>4008</value>
     </attribute>
     <attribute name="serviceID">
-      <value>3002</value>
+      <value>3005</value>
     </attribute>
     <attribute name="contractID">
-      <value>4101</value>
+      <value>4108</value>
     </attribute>
   </row>
   <row>
@@ -67,39 +100,6 @@
     </attribute>
     <attribute name="contractID">
       <value>4109</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="contractServiceLinkID">
-      <value>4003</value>
-    </attribute>
-    <attribute name="serviceID">
-      <value>3003</value>
-    </attribute>
-    <attribute name="contractID">
-      <value>4103</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="contractServiceLinkID">
-      <value>4002</value>
-    </attribute>
-    <attribute name="serviceID">
-      <value>3004</value>
-    </attribute>
-    <attribute name="contractID">
-      <value>4102</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="contractServiceLinkID">
-      <value>4008</value>
-    </attribute>
-    <attribute name="serviceID">
-      <value>3005</value>
-    </attribute>
-    <attribute name="contractID">
-      <value>4108</value>
     </attribute>
   </row>
 </table>

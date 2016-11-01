@@ -13,9 +13,15 @@
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="RecentlyViewedInvestigations">
-  <nc:nodes>
-    <nc:navigation-page id="RecentlyViewedInvestigations" page-id="Organization_listRecentViewedInvestigationForUser" title="Details.Title.RecentlyViewedInvestigations" visible="true"/>
-  </nc:nodes>
-  
-</nc:navigation>
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ParticipantSearch">
+
+  <!-- No Action Menu -->
+
+  <!-- Details panel -->
+  <tc:context tab-name="Details.Name.AllParticipantSearch" tab-title="Details.Title.AllParticipantSearch"/>
+
+  <!-- Navigation Panel -->
+  <tc:navigation page-id="Participant_search"/>
+
+
+</tc:tab-config>

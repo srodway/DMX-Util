@@ -1,9 +1,51 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Details.Name.PIErrors=Process Instance Errors
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2011 Curam Software Ltd.
+  All rights reserved.
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="DefaultIntegratedCaseMenu">
+  
+  <mc:loader-registry>
+    <mc:loader class="curam.core.sl.tab.impl.CaseHomeMenuLoader"/>
+  <mc:loader class="curam.ascproduct.tab.impl.ASCIntegratedCaseMenuStateLoader"/></mc:loader-registry>
+  
+  <mc:menu-item id="Edit" open-as="modal" page-id="IntegratedCase_modifyHeader" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
+  <mc:menu-separator id="sep1"/>
+  
+  <mc:menu-item dynamic="true" id="Bookmark" open-as="modal" page-id="Organization_createCaseBookmark" title="MenuItem.Title.Bookmark" tooltip="MenuItem.Tooltip.Bookmark"/>
+  
+  <mc:menu-item dynamic="true" id="RemoveBookmark" open-as="modal" page-id="Organization_cancelCaseBookmark" title="MenuItem.Title.RemoveBookmark" tooltip="MenuItem.Tooltip.RemoveBookmark"/>
+
+  
+  <mc:menu-separator id="sep2"/>
+  
+  <mc:menu-item id="Meeting" open-as="modal" page-id="CalendarMeeting_createMeeting" title="MenuItem.Title.Meeting" tooltip="MenuItem.Tooltip.Meeting"/>
+  
+  <mc:menu-item id="Note" open-as="modal" page-id="Case_createNote1" title="MenuItem.Title.Note" tooltip="MenuItem.Tooltip.Note"/>  
+  
+  <mc:menu-separator id="sep3"/>
+  
+  <mc:menu-item id="Member" open-as="modal" page-id="Case_createCaseMember" title="MenuItem.Title.Member" tooltip="MenuItem.Tooltip.Member"/>
+  
+  <mc:menu-separator id="sep4"/>
+  
+  <mc:menu-item id="ApplyEvidenceChanges" open-as="modal" page-id="Evidence_applyChanges1" title="MenuItem.Title.ApplyEvidenceChanges" tooltip="MenuItem.Tooltip.ApplyEvidenceChanges"/>
+  
+  <mc:menu-separator id="sep5"/>
+  
+  <mc:menu-item id="NewCase" open-as="modal" page-id="DefaultIC_selectMember" title="MenuItem.Title.NewCase" tooltip="MenuItem.Tooltip.NewCase"/>
+  
+  <mc:menu-separator id="sep6"/>
+  
+  <mc:menu-item id="Close" open-as="modal" page-id="IntegratedCase_close" title="MenuItem.Title.Close" tooltip="MenuItem.Tooltip.Close"/> 
+
+<mc:submenu id="GuidedChange" title="Submenu.Title.GuidedChange" tooltip="Submenu.Tooltip.GuidedChange"><mc:menu-item id="AddMedicalCondition" open-as="modal" page-id="ASCAddMedicalCondition_resolveStartPage" title="MenuItem.Title.AddMedicalCondition" tooltip="MenuItem.Tooltip.AddMedicalCondition"/></mc:submenu></mc:menu-bar>

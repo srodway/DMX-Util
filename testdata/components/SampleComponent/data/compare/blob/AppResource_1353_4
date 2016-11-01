@@ -1,25 +1,161 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-PrintApplicationForms.Title=Print and Mail Application Form
-SelectApplication.Description=The list below contains the application forms that you can print out and mail to your local agency office.<br/>To view an application click on the icon <img src="../Images/ftPdf16.png"> or application form name. To open the application form you will need to have a program called Adobe Acrobat Reader. If you don't have this program on your computer, you may install it for free by clicking <a href="http://www.adobe.com/acrobat" target="_new">here</a>.
+/* Gum-1100 Fix whiteout issue. */
+.dijit_a11y * {
+  background-color: black !important;
+}
+/* End Gum-1100 */
 
-PrintApplicationForms.Select.Title=Application Forms
-PrintApplicationForms.Select.Description=
-PrintApplicationForms.Select.Help=The list below contains a set of application forms that you can open and print.The Programs column gives you the names of all the programs that you can apply for using the application form. You can fill out the application form and mail it to your local agency for processing. If you cannot open a form on your computer it is most likely because you do not have a program called Adobe Acrobat Reader. You can install this for free by clicking <a href="http://www.adobe.com/acrobat" target="_new">here</a>.<br/>You can find out where to mail your application by clicking on the appropriate link in the Where To Apply column. This will open a screen that allows you to use your address to get the address of the agency office to which you should mail your application.
+/* Gum-2052 (Fix UI issues after UCEF take on for 6.0 SP2) */
+select[title="Question:Mandatory"], select[title="Time available:"] {
+  width: 30% !important; /* Override widths for certain fields that have changed. */
+}
+input[title="Date of BirthMandatory"], input[title="Date of birth: Mandatory"], input[title="Social Security NumberMandatory"] {
+  width: 35% !important; /* Override widths for certain fields that have changed. */
+}
+/* End Gum-2052 */
 
-PrintApplicationForms.Label.Form=Name
-PrintApplicationForms.Label.Description=Description
-PrintApplicationForms.Label.Programs=Programs
-PrintApplicationForms.Label.Where=Where To Apply?
-PrintApplicationForms.Label.Search=here.
-PrintApplicationForms.Where.Label=To find your local office, click
+/* Gum-2131 (Horizontal scroll bar is displayed IEG script in CSS) */
+.listQuestionDiv {
+  overflow-x: auto !important; /* Allow scrollbar to appear when needed. */
+}
+.listQuestionLabel {
+  width: 95% !important; /* This label is slightly too wide and is causing scrollbar to appear all the time. */
+}
+/* End Gum-2131 */
 
-PrintApplicationForms.Download.Link.Label=Download Application Form
-PrintApplicationForms.Program.Link.Label=Link to program
-PrintApplicationForms.Apply.Link.Label=To find your local office, click here
+/* Gum-2126 (PDF forms and program names are not displayed in application forms page) */
+.tabForm {
+  overflow-x: auto !important; /* Allow scrollbar to appear when page is too small to show all data. */
+}
+/* End Gum-2126 */
+
+/* Gum-2158 (Styling Issues introduced to nightly build 27/11/11) */
+html {
+  overflow-y: auto; /* Remove disabled vertical scrollbar in IE. */
+}
+/* End Gum-2158 */
+
+div.banner-panel {
+  background: url("${resource-uri:banner.background.image}") repeat-x;
+  margin-top: 10px;
+  border-left: ${banner.border.color} 1px solid;
+  border-right: ${banner.border.color} 1px solid;
+  height: 34px;
+}
+
+div.banner-title {
+  background: url("${resource-uri:banner.icon}") no-repeat 0 -200%;
+  color: ${banner.title.color};
+  width: 50%;
+  float: left;
+}
+
+div.banner-title-text {
+  margin-top: 7px;
+  margin-left: 70px;
+  font-size: ${banner.title.text.size};
+}
+
+div.banner-buttons {
+  float: right;
+  margin-right: 15px;
+}
+
+div.banner-button {
+  float: left;
+}
+
+div.banner-button .banner-icon, 
+div.banner-button .banner-link {
+  float: left;
+}
+
+div.banner-button .banner-icon img {
+  margin-top: 6px;
+  margin-left: 10px;
+}
+
+div.banner-button .banner-link {
+  color: ${banner.button.text.color};
+  margin-left: 6px;
+  margin-top: 11px;
+  font-size: ${banner.button.text.size};
+  text-decoration: none;
+}
+
+div.banner-button a.banner-icon-link {
+  background-position: top left;
+  background-repeat: no-repeat;
+  height: 25px;
+  padding-left: 29px;
+  padding-top: 5px;
+  margin-top: 6px;
+}
+
+div.banner-button a:hover {
+  text-decoration: underline;
+}
+
+/*
+ Over-riding some styles from IEG that are not possible to do via the config
+ */
+/*
+div.t2 {
+    max-width: 74.923em;
+}
+div.t2 > div#hd {
+    font-family: Tahoma;
+}
+div.t2 > div#bd {
+    font-family: Tahoma;
+}
+div.cluster h3.desc-header {
+    font-size: 13px;
+}
+body .field-label-text {
+    font-size: 13px;
+    color: black;
+}
+div.cluster select {
+    font-size: 13px;
+}
+.buttonDiv {
+    font-size: 100%;
+    padding: 0 16px 4px 18px;
+}
+div.pageHeading {
+    font-size: 15px;
+}
+body input[type="text"], body input[type="password"], body textarea, body select {
+    font-size: 13px;
+}
+div.cluster h2 {
+    font-size: 13px;
+}
+div.list h2 {
+    font-size: 13px;
+}
+body div.list table.listBody {
+    font-size: 13px;
+}
+div.pagedescription {
+    font-size: 13px;
+}
+.openHelpLink, .openHelpLinkSelected {
+    font-size: 13px;
+}
+.helpDiv .helpFieldHeading {
+    font-size: 13px;
+}
+.closeHelpLink {
+    font-size: 13px;
+}
+.listQuestionLabel {
+    font-size: 13px;
+}
+div.listQuestionText {
+    font-size: 13px;
+}
+.openHelpLink {
+    width: 80px;
+}
+*/

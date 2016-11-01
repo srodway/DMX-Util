@@ -1,24 +1,40 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Number.Wizard.Pages=3
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
 
-CaseAudit_fixedQueryFilteredCaseSampleSelectAmount.Wizard.Item.Text=Specify Amount
-CaseAudit_fixedQueryFilteredCaseSampleSelectAmount.Wizard.Page.Title=Step 1:
-CaseAudit_fixedQueryFilteredCaseSampleSelectAmount.Wizard.Page.Desc=Specify Amount of Cases to Audit
-Wizard.PageID.1=CaseAudit_fixedQueryFilteredCaseSampleSelectAmount
-
-CaseAudit_fixedQueryCaseSampleConfigureAlgorithm.Wizard.Item.Text=Algorithm Parameters
-CaseAudit_fixedQueryCaseSampleConfigureAlgorithm.Wizard.Page.Title=Step 2:
-CaseAudit_fixedQueryCaseSampleConfigureAlgorithm.Wizard.Page.Desc=Configure Algorithm Parameters
-Wizard.PageID.2=CaseAudit_fixedQueryCaseSampleConfigureAlgorithm
-
-CaseAudit_confirmFixedQueryCaseSampleGeneration.Wizard.Item.Text=Confirm
-CaseAudit_confirmFixedQueryCaseSampleGeneration.Wizard.Page.Title=Step 3:
-CaseAudit_confirmFixedQueryCaseSampleGeneration.Wizard.Page.Desc=Confirm Cases to Audit
-Wizard.PageID.3=CaseAudit_confirmFixedQueryCaseSampleGeneration
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
+    <identifier name="SaveSubmitOrExit" />
+    <header>
+        <title id="Page.Title" />
+        <description id="Page.Description" />
+        <icon id="title_save" />
+    </header>
+    <content>
+        <container>
+            <title id="RadioSelection.Title" />
+            <description id="RadioSelection.Description" />
+            <help id="RadioSelection.Help" />
+            <radiobutton-container id="SELECTION" legend="RadioSelection.Legend">
+                <radiobutton id="SAVE">
+                    <title id="SaveApplication.Title" />
+                </radiobutton>
+                <radiobutton id="SUBMIT">
+                    <title id="SubmitApplication.Title" />
+                </radiobutton>
+                <radiobutton id="EXIT">
+                    <title id="ExitSaveApplication.Title" />
+                </radiobutton>
+            </radiobutton-container>
+        </container>
+    </content>
+    <navigation>
+		<nav-button name="next" type="action" />
+        <nav-button name="back" type="action" />
+    </navigation>
+</page>

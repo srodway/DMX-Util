@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCEmailAddressRuleSet">
-  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="PDCEmailAddress">
+<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCAddressDataRuleSet">
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCAddress">
+    <Annotations>
+      <SuccessionSetPopulation endDateAttribute="toDate" startDateAttribute="fromDate"/>
+    </Annotations>
     <Attribute name="fromDate">
       <Annotations/>
       <type>
@@ -9,19 +12,10 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="emailAddressType">
+    <Attribute name="addressType">
       <Annotations/>
       <type>
-        <codetableentry table="EmailType"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="emailAddress">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.String"/>
+        <codetableentry table="AddressType"/>
       </type>
       <derivation>
         <specified/>
@@ -45,6 +39,16 @@
         <specified/>
       </derivation>
     </Attribute>
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="successionID"/>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
     <Attribute name="participant">
       <Annotations/>
       <type>
@@ -63,6 +67,28 @@
         <reference attribute="caseParticipantRoleRecord">
           <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
             <reference attribute="participant"/>
+          </create>
+        </reference>
+      </derivation>
+    </Attribute>
+    <Attribute name="address">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="related_address">
+      <Annotations/>
+      <type>
+        <ruleclass name="Address" ruleset="ParticipantEntitiesRuleSet"/>
+      </type>
+      <derivation>
+        <reference attribute="addressRecord">
+          <create ruleclass="AddressCalculator" ruleset="DynamicEvidenceRuleSet">
+            <reference attribute="address"/>
           </create>
         </reference>
       </derivation>

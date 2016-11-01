@@ -1,11 +1,22 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Details.Name.ApplicationSearch=Search Results
-Details.Title.ApplicationSearch=Search Results
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  PID 5725-H26
+ 
+  Copyright IBM Corporation 2014. All Rights Reserved.
 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="DynamicEvidenceObjectDET2400320140101">
+
+  <tc:navigation id="DynamicEvidenceObjectDET2400320140101Nav"/>
+
+  <tc:page-param name="successionID"/>
+  <tc:page-param name="evidenceType"/>
+  <tc:page-param name="effectiveDate"/>
+  <tc:page-param name="evidenceID"/>
+  <tc:page-param name="caseID"/>
+
+  <tc:context height="0" page-id="DynamicEvidence_EvidenceObjectTabDetails" tab-name="context.tab-name" tab-title="context.tab-title"/>
+
+</tc:tab-config>

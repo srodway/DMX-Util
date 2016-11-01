@@ -6,24 +6,43 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Number.Wizard.Pages=4
+Details.Name.AppealHearingCaseHome=Hearing Case Home
 
-CaseAudit_LPDCaseSampleSearch.Wizard.Item.Text=Criteria
-CaseAudit_LPDCaseSampleSearch.Wizard.Page.Title=Step 1:
-CaseAudit_LPDCaseSampleSearch.Wizard.Page.Desc=Select Criteria
-Wizard.PageID.1=CaseAudit_LPDCaseSampleSearch
+Details.Icon=a
+Leaf.Title.Home=Home
 
-CaseAudit_LPDCaseSampleSelectAmount.Wizard.Item.Text=Specify Amount
-CaseAudit_LPDCaseSampleSelectAmount.Wizard.Page.Title=Step 2:
-CaseAudit_LPDCaseSampleSelectAmount.Wizard.Page.Desc=Specify Amount of Cases to Audit
-Wizard.PageID.2=CaseAudit_LPDCaseSampleSelectAmount
+page.title.assistancehearingcasehome=Home
 
-CaseAudit_LPDCaseSampleConfigureAlgorithm.Wizard.Item.Text=Algorithm Parameters
-CaseAudit_LPDCaseSampleConfigureAlgorithm.Wizard.Page.Title=Step 3:
-CaseAudit_LPDCaseSampleConfigureAlgorithm.Wizard.Page.Desc=Configure Algorithm Parameters
-Wizard.PageID.3=CaseAudit_LPDCaseSampleConfigureAlgorithm
+page.title.ItemsUnderAppeal=Items Under Appeal
+folder.title.CasesUnderAppeal=Cases Under Appeal
+page.title.appealedcases=Appealed Cases
+page.title.appealedissues=Appealed Issues
 
-CaseAudit_confirmLPDCaseSampleGeneration.Wizard.Item.Text=Confirm
-CaseAudit_confirmLPDCaseSampleGeneration.Wizard.Page.Title=Step 4:
-CaseAudit_confirmLPDCaseSampleGeneration.Wizard.Page.Desc=Confirm Cases to Audit
-Wizard.PageID.4=CaseAudit_confirmLPDCaseSampleGeneration
+folder.title.Participants=Participants
+page.title.appellants=Appellants
+page.title.caseparticipants=Case Participants
+page.title.thirdparties=Third Parties
+
+page.title.hearings=Hearings
+
+
+
+folder.title.Contact=Contact
+page.title.notes=Notes
+page.title.attachments=Attachments
+page.title.communications=Communications
+
+page.title.events=Events
+
+page.title.tasks=Tasks
+
+folder.title.Decisions=Decisions
+page.title.managedecisions=Manage Decisions
+page.title.decisionrejections=Decision Rejections
+
+folder.title.administration=Administration 
+page.title.relatedcases=Related Cases
+page.title.reopenhistory=Reopen History
+page.title.statushistory=Status History
+page.title.userroles=User Roles
+

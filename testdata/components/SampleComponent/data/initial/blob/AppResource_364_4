@@ -1,19 +1,22 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2013. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Number.Wizard.Pages=2
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-Financial_createUnappliedDeductionWizard.Wizard.Item.Text=Deduction Details
-Financial_createUnappliedDeductionWizard.Wizard.Page.Title=Step 1:
-Financial_createUnappliedDeductionWizard.Wizard.Page.Desc=Deduction Details
-Wizard.PageID.1=Financial_createUnappliedDeductionWizard
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="OrganizationStructureMenu">
 
-Financial_regenerateUnappliedDeduction.Wizard.Item.Text=Confirm & Reissue
-Financial_regenerateUnappliedDeduction.Wizard.Page.Title=Step 2:
-Financial_regenerateUnappliedDeduction.Wizard.Page.Desc=Confirm & Reissue
-Wizard.PageID.2=Financial_regenerateUnappliedDeduction
+  <mc:menu-item id="Edit" open-as="modal" page-id="Organization_modifyOrgStructureFromView" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
+
+  <mc:menu-item id="Clone" open-as="modal" page-id="Organization_cloneOrgStructure" title="MenuItem.Title.Clone" tooltip="MenuItem.Tooltip.Clone"/>
+  
+</mc:menu-bar>

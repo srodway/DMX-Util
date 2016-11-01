@@ -6,17 +6,19 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-MenuItem.Title.EditPlanItem=Edit
-MenuItem.Tooltip.EditPlanItem=Edit the plan item.
+Number.Wizard.Pages=3
 
-MenuItem.Title.RecordClientParticipation=Record Client Participation
-MenuItem.Tooltip.RecordClientParticipation=Record client participation information.
+CaseAudit_fixedQueryFilteredCaseSampleSelectAmount.Wizard.Item.Text=Specify Amount
+CaseAudit_fixedQueryFilteredCaseSampleSelectAmount.Wizard.Page.Title=Step 1:
+CaseAudit_fixedQueryFilteredCaseSampleSelectAmount.Wizard.Page.Desc=Specify Amount of Cases to Audit
+Wizard.PageID.1=CaseAudit_fixedQueryFilteredCaseSampleSelectAmount
 
-MenuItem.Title.SubmitForApproval=Submit For Approval
-MenuItem.Tooltip.SubmitForApproval=Submit the plan item For approval.
+CaseAudit_fixedQueryCaseSampleConfigureAlgorithm.Wizard.Item.Text=Algorithm Parameters
+CaseAudit_fixedQueryCaseSampleConfigureAlgorithm.Wizard.Page.Title=Step 2:
+CaseAudit_fixedQueryCaseSampleConfigureAlgorithm.Wizard.Page.Desc=Configure Algorithm Parameters
+Wizard.PageID.2=CaseAudit_fixedQueryCaseSampleConfigureAlgorithm
 
-MenuItem.Title.Approve=Approve
-MenuItem.Tooltip.Approve=Create a new approval request for the plan item.
-
-MenuItem.Title.Reject=Reject
-MenuItem.Tooltip.Reject=Reject the plan item.
+CaseAudit_confirmFixedQueryCaseSampleGeneration.Wizard.Item.Text=Confirm
+CaseAudit_confirmFixedQueryCaseSampleGeneration.Wizard.Page.Title=Step 3:
+CaseAudit_confirmFixedQueryCaseSampleGeneration.Wizard.Page.Desc=Confirm Cases to Audit
+Wizard.PageID.3=CaseAudit_confirmFixedQueryCaseSampleGeneration

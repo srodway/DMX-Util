@@ -7,48 +7,66 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 -->
-<propagator type="ROPT2004">
+<propagator type="ROPT2005">
   <configuration>
-    <evidence type="PDC0000258">
+    <evidence type="PDC0000264">
       <ruleset
         name="ParticipantEvidenceRuleSet"
-        ruleclass="ActiveNameEvidenceRow"
-      />
-    </evidence>
-    <evidence type="PDC0000261">
-      <ruleset
-        name="ParticipantEvidenceRuleSet"
-        ruleclass="ActiveAddressEvidenceRow"
+        ruleclass="BirthAndDeathEvidence"
       />
     </evidence>
     <evidence type="PDC0000259">
       <ruleset
         name="ParticipantEvidenceRuleSet"
-        ruleclass="ActiveIdentificationEvidenceRow"
+        ruleclass="IdentificationEvidence"
+      />
+    </evidence>
+    <evidence type="PDC0000263">
+      <ruleset
+        name="ParticipantEvidenceRuleSet"
+        ruleclass="ContactPreferenceEvidence"
+      />
+    </evidence>
+    <evidence type="PDC0000258">
+      <ruleset
+        name="ParticipantEvidenceRuleSet"
+        ruleclass="NameEvidence"
+      />
+    </evidence>
+    <evidence type="PDC0000262">
+      <ruleset
+        name="ParticipantEvidenceRuleSet"
+        ruleclass="GenderEvidence"
       />
     </evidence>
     <evidence type="PDC0000265">
       <ruleset
         name="ParticipantEvidenceRuleSet"
-        ruleclass="ActiveRelationshipEvidenceRow"
+        ruleclass="RelationshipEvidence"
       />
     </evidence>
     <evidence type="PDC0000257">
       <ruleset
         name="ParticipantEvidenceRuleSet"
-        ruleclass="BankAccountActiveEvidenceRow"
+        ruleclass="BankAccountEvidence"
+      />
+    </evidence>
+    <evidence type="PDC0000261">
+      <ruleset
+        name="ParticipantEvidenceRuleSet"
+        ruleclass="AddressEvidence"
       />
     </evidence>
     <evidence type="PDC0000260">
       <ruleset
         name="ParticipantEvidenceRuleSet"
-        ruleclass="EmailAddressActiveEvidenceRow"
+        ruleclass="EmailAddressEvidence"
       />
     </evidence>
     <evidence type="PDC0000256">
       <ruleset
         name="ParticipantEvidenceRuleSet"
-        ruleclass="PhoneNumberActiveEvidenceRow"
+        ruleclass="PhoneNumberEvidence"
       />
     </evidence>
   </configuration>

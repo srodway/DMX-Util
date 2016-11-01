@@ -6,56 +6,23 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009-2011 Curam Software Ltd.
+  Copyright 2011 Curam Software Ltd.
   All rights reserved.
   
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ServicePlanHomeMenu">
-  
-  
-  <mc:loader-registry>
-    <mc:loader class="curam.serviceplans.sl.impl.ServicePlanHomeMenuLoader"/>
-  </mc:loader-registry>
-    
-  <mc:menu-item dynamic="true" id="Bookmark" open-as="modal" page-id="Organization_createCaseBookmark" title="MenuItem.Title.Bookmark" tooltip="MenuItem.Tooltip.Bookmark"/>
-  
-  <mc:menu-item dynamic="true" id="RemoveBookmark" open-as="modal" page-id="Organization_cancelCaseBookmark" title="MenuItem.Title.RemoveBookmark" tooltip="MenuItem.Tooltip.RemoveBookmark"/>
-    
-  <mc:menu-separator id="sep1"/>  
-  
-  <mc:menu-item dynamic="true" id="EditServicePlan" open-as="modal" page-id="ServicePlanDelivery_modifyDetails" title="MenuItem.Title.EditServicePlan" tooltip="MenuItem.Tooltip.EditServicePlan"/>
-  
-  <mc:menu-item id="EditGoal" open-as="modal" page-id="ServicePlanDelivery_modifyGoal" title="MenuItem.Title.EditGoal" tooltip="MenuItem.Tooltip.EditGoal"/>    
-    
-  <mc:menu-item id="EditPlanType" open-as="modal" page-id="ServicePlanDelivery_modifyType1" title="MenuItem.Title.EditPlanType" tooltip="MenuItem.Tooltip.EditPlanType"/>      
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="DefaultCasePPHome">
 
-  <mc:menu-separator id="sep2"/>  
-  
-  <mc:menu-item id="ChangeOwner" open-as="modal" page-id="ServicePlanDelivery_changePlanOwner" title="MenuItem.Title.ChangeOwner" tooltip="MenuItem.Tooltip.ChangeOwner"/>
-       
-  <mc:menu-separator id="sep3"/>  
-  
-  <mc:menu-item id="Note" open-as="modal" page-id="Case_createNote1" title="MenuItem.Title.Note" tooltip="MenuItem.Tooltip.Note"/>
-    
-  <mc:menu-separator id="sep4"/>    
-    
-  <mc:menu-item dynamic="true" id="SubmitPlan" open-as="modal" page-id="ServicePlanDelivery_submit" title="MenuItem.Title.SubmitPlan" tooltip="MenuItem.Tooltip.SubmitPlan"/>     
-    
-  <mc:menu-item dynamic="true" id="ApprovePlan" open-as="modal" page-id="ServicePlanDelivery_approve" title="MenuItem.Title.ApprovePlan" tooltip="MenuItem.Tooltip.ApprovePlan"/> 
-    
-  <mc:menu-item dynamic="true" id="RejectPlan" open-as="modal" page-id="ServicePlanDelivery_reject" title="MenuItem.Title.RejectPlan" tooltip="MenuItem.Tooltip.RejectPlan"/>
-    
-  <mc:menu-separator id="sep5"/> 
-  
-  <mc:menu-item dynamic="true" id="ClosePlan" open-as="modal" page-id="ServicePlanDelivery_close" title="MenuItem.Title.ClosePlan" tooltip="MenuItem.Tooltip.ClosePlan"/>
-    
-  <mc:menu-item dynamic="true" id="ChangePlanClosure" open-as="modal" page-id="ServicePlanDelivery_modifyClose1" title="MenuItem.Title.ChangeClosure" tooltip="MenuItem.Tooltip.ChangeClosure"/>     
-  
-  <mc:menu-separator id="sep6"/> 
-  
-  <mc:menu-item dynamic="true" id="ClonePlan" open-as="modal" page-id="ServicePlanDelivery_clone" title="MenuItem.Title.ClonePlan" tooltip="MenuItem.Tooltip.ClonePlan"/>
+  <tc:page-param name="caseParticipantRoleID"/>
+  <tc:page-param name="caseID"/>
 
-</mc:menu-bar>
+  <tc:menu id="DefaultCasePPHomeMenu"/>
+  <!-- Details panel -->
+      <tc:context height="200" page-id="DefaultICProductProvider_homeTabDetails"/>
+  
+  <!-- Navigation Panel -->
+  <tc:navigation id="DefaultICProductProvider_home"/>
+
+</tc:tab-config>

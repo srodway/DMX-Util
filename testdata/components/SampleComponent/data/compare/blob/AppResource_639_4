@@ -1,34 +1,108 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-MenuItem.Title.Bookmark=Add as Item of Interest
-MenuItem.Tooltip.Bookmark=Add as Item of Interest
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  PID 5725-H26
+  
+  Copyright IBM Corporation 2014. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><sc:section xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-config" id="ASCEWAPPWorkspaceSection" title="ASCEWAPPWorkspaceSection.title" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  
+ <sc:tab id="AssessmentHometab"/>
+ <sc:tab id="BankAccount"/>
+ <sc:tab id="Banks"/>
+ <sc:tab id="CaseMemberHome"/>
+ <sc:tab id="Corrections"/>
+ <sc:tab id="DefaultProductDelivery"/>
+ <sc:tab id="EducationalInstituteHome"/>
+ <sc:tab id="EmployerHome"/>
+ 
+ <!-- BEGIN CR00442688, COC -->
+ <sc:tab id="PersonHome"/>
+ <sc:tab id="PersonSearch"/> 
+ <sc:tab id="DefaultIntegratedCase"/>
+ <sc:tab id="ProspectPersonHome"/>
+ <sc:tab id="DefaultCaseMemberHome"/>
 
-MenuItem.Title.RemoveBookmark=Remove as Item of Interest
-MenuItem.Tooltip.RemoveBookmark=Remove as Item of Interest
+  <!--INTAKE Specific Tabs -->
+  <sc:tab id="CommonIntakeMyApplications"/>
+  <sc:tab id="CommonIntakeApplicationCase"/>
+  <sc:tab id="CommonIntakeApplicationSearch"/>
+ 
+ <!-- Cases -->
+ <sc:tab id="MyRecentlyViewedCases"/>
+ <sc:tab id="MyRecentlyAssignedCases"/>
+ <sc:tab id="MyRecentlyApprovedCases"/> 
+ <!-- END CR00442688 -->
+ 
+ <sc:tab id="EvidenceBroker"/>
+ <sc:tab id="ExternalParty"/>
+ <sc:tab id="ExternalUserHome"/>
+ <sc:tab id="ExternalUserSearch"/>
+ <sc:tab id="FinancialAdministration"/>
+ <sc:tab id="Incident"/>
+ <sc:tab id="InformationProviderHome"/>
+ <sc:tab id="IntegratedCase"/>
+ <sc:tab id="IntegratedCasesAdministration"/>
+ <sc:tab id="OverPaymentCase"/>
+ <sc:tab id="PlanItemView"/>
+ <sc:tab id="ProdProvHome"/>
+ <sc:tab id="ProductDelivery"/>
+ <sc:tab id="ProductDeliveryCases"/>
+ <sc:tab id="ProspectEmployerHome"/>
+ <sc:tab id="ServicePlanHome"/>
+ <sc:tab id="ServicePlans"/>
+ <sc:tab id="ServiceSupplierHome"/>
+ <sc:tab id="ServiceUnitPlanItemView"/>
+ <sc:tab id="StaticEvidence"/>
+ <sc:tab id="UserSearch"/>
+ <sc:tab id="Utility"/>
+ <sc:tab id="VerificationsHome"/>
+ <sc:tab id="EvidenceType"/>
+ <sc:tab id="ParticipantSearch"/>
+ <sc:tab id="MyItemsOfInterest"/>
+ <sc:tab id="CaseEvidence"/>
+ <sc:tab id="CaseSearch"/> 
+ <sc:tab id="EducationalInstituteSearch"/>
+ <sc:tab id="EmployerSearch"/>
+ <sc:tab id="ExternalPartyOfficeSearch"/>
+ <sc:tab id="ExternalPartySearch"/> 
+ <sc:tab id="InformationProviderSearch"/>
+ <sc:tab id="IncidentSearch"/>
+ <sc:tab id="ProductProviderSearch"/>
+ <sc:tab id="ServiceSupplierSearch"/>
+ <sc:tab id="UtilitySearch"/>
+ <sc:tab id="PaymentCorrectionCase"/>
+ <sc:tab id="MyCaseQueries"/>
+ <sc:tab id="MyCases"/>
+ <sc:tab id="QueryResults"/>
+ <sc:tab id="UnderPaymentCase"/>
+   
+  <!--NPG Outcome Tabs -->
+  <!--<sc:tab id="OutcomePlan"/>-->
+ 
+  <!--Tabs from common intake -->
+  <sc:tab id="Individual"/>
+  <sc:tab id="TriageResults"/>
+  <sc:tab id="ScreeningResults"/>
+  <sc:tab id="LifeEventResults"/>
+  <sc:tab id="MyApplications"/>
+  <sc:tab id="ApplicationQuickSearch"/>
+  <sc:tab id="IntakeApplicationSearch"/>
+  <sc:tab id="IntakePersonSearch"/>
+  <sc:tab id="WorkQueueTaskSearch"/>
+  <sc:tab id="SearchResults"/>
+  <sc:tab id="Application"/>
+  
+  <!-- Adult Social Care Tab -->
+  <sc:tab id="DynamicEvidenceObjectDET2400120140101"/>
+  <sc:tab id="DynamicEvidenceObjectDET2400220140101"/>
+  <sc:tab id="DynamicEvidenceObjectDET2400320140101"/>
+  <sc:tab id="DynamicEvidenceObjectDET2400420140101"/>
+  <sc:tab id="DynamicEvidenceObjectDET2400520140101"/>
+  <sc:tab id="DynamicEvidenceObjectDET2400620140101"/>
+  
+  <sc:shortcut-panel-ref id="ASCEWAPPWorkspaceSectionShortcuts"/>
 
-MenuItem.Title.Edit=Edit
-MenuItem.Tooltip.Edit=Edit
-
-MenuItem.Title.ApplyEvidenceChanges=Apply Evidence Changes
-MenuItem.Tooltip.ApplyEvidenceChanges=Apply Evidence Changes
-
-MenuItem.Title.Meeting=New Meeting
-MenuItem.Tooltip.Meeting=New Meeting
-
-MenuItem.Title.Note=New Note
-MenuItem.Tooltip.Note=New Note
-
-MenuItem.Title.Member=New Member
-MenuItem.Tooltip.Member=New Member
-
-MenuItem.Title.NewCase=New Case
-MenuItem.Tooltip.NewCase=New Case
-
-MenuItem.Title.Close=Close Case
-MenuItem.Tooltip.Close=Close Case
+<sc:tab id="IncapacityBenefitProductDisplay"/><sc:tab id="PDIncapacityBenefitProductDisplay"/></sc:section>

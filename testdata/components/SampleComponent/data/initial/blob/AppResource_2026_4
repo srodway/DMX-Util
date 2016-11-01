@@ -1,14 +1,50 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+#
+# PID 5725-H26
+# 
+# Copyright IBM Corporation 2014. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+PractitionerCertificateDetails.Title=Practitioner Certificate Details 
+PractitionerCertificate.Description=Please tell us a little more about the incapacity benefit certificate. 
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ApplicationCaseList">
-  
-  <tc:context tab-name="home.tab.name" tab-title="home.tab.title"/>
-  <tc:navigation page-id="CommonIntake_listApplicationCaseAdmin"/> 
-   
-  
-</tc:tab-config>
+ExaminationDetails.Title=Examination Details
+PCEDHelp=Collect information on the certificate type and the date on which the examination took place.
+MedicalCertificateType.Label=What is the medical certificate type?
+ExaminationDate.Label=On what date did examination take place?
+
+HasPractitionerCertifiedDate.Title=Practitioner Certified Date
+HasPractitionerCertifiedDate.Label=Has the practitioner certified to a specified date?
+PCHPCDHelp=Medical certificates can be issued to a specific date or for a period of days, weeks, months.
+
+PractitionerCertifiedDate.Label=What date has the practitioner certified the client fit to return to work?
+PCPCDHelp=The practitioner may issue a certificate on which they declare when a client is fit to return to work.
+
+CertifiedPeriodLength.Label=What period length has been certified?
+PCCPLHelp=Where a practitioner has not given a specific date for a period of incapacity a period of days, weeks or months may be specified on the certificate.
+
+CertifiedFrequency.Label=What is the period type frequency?
+PCCFHelp=The frequency is either days, weeks or months.
+
+PractitionerDetails.Title=Practitioner Details
+PCPDHelp=Here information on the practitioner (doctor, dentist or Physiotherapist) is collected.
+PractitionerName.Label=What is the practitioner's name?
+PractitionerCertificateSignedDate.Label=What date did the practitioner sign the certificate?
+
+Comments.Title=Comments
+PCCommentsHelp=Any comments made by the practitioner are captured here.
+
+CerfiticationDetails.Title=Certification Details
+PCCertificationDetailsHelp=Details in relation to certification are captured.
+CertificationStartDate.Label=On what date does certification start?
+IsSignedByClaimant.Label=Has the claim form been signed by the client?
+
+PractitionerCertificateDiagnosisDetails.Title=Diagnosis Details
+PCDDHelp=Details in relation to the medical diagnosis are captured. There may be more than one diagnosis.
+PractitionerCertificateDiagnosisDetails.Label=Are there diagnosis details for the incapacity benefit?
+
+
+RequiredField.Indicator=<span style="color: orange">* Indicates a required item</span>

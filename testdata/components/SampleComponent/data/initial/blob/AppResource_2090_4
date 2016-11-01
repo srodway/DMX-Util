@@ -1,51 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+# This Properties file contains resource Strings for the PDC Duplicate Client CER Ruleset.
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009-2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="FinancialWorkersHomeMenu">
+ConcernRoleDuplicate.description=ConcernRoleDuplicate record for {0}
 
-  <mc:submenu id="NEW" title="Submenu.Title.New" tooltip="Submenu.Tooltip.New">
-
-    <mc:menu-item id="Activity" open-as="modal" page-id="Activity_createStandardUserActivity" title="MenuItem.Title.Activity" tooltip="MenuItem.Tooltip.Activity"/>
-
-    <mc:menu-item id="Case" open-as="modal" page-id="ICSample_selectPersonType" title="MenuItem.Title.Case" tooltip="MenuItem.Tooltip.Case"/>
-
-    <mc:menu-item id="ManualPayment" open-as="modal" page-id="Financial_manualPaymentSearchPersonWizard" title="MenuItem.Title.ManualPayment" tooltip="MenuItem.Tooltip.ManualPayment"/>
-
-    <mc:menu-item id="PaymentReceived" open-as="modal" page-id="Financial_selectPaymentReceivedClientType" title="MenuItem.Title.PaymentReceived" tooltip="MenuItem.Tooltip.PaymentReceived"/>
-
-    <mc:menu-item id="RecurringActivity" open-as="modal" page-id="Activity_createRecurringUserActivity" title="MenuItem.Title.RecurringActivity" tooltip="MenuItem.Tooltip.RecurringActivity"/>
-
-    <mc:menu-item id="Task" open-as="modal" page-id="Task_createTask" title="MenuItem.Title.Task" tooltip="MenuItem.Tooltip.Task"/>
-
-  <mc:menu-item id="ServiceInvoice" open-as="modal" page-id="ProviderManagement_createServiceInvoice" title="MenuItem.Title.ServiceInvoice" tooltip="MenuItem.Tooltip.ServiceInvoice"/>
-
-  </mc:submenu>
-
-  <mc:submenu id="Search" title="Submenu.Title.Search" tooltip="Submenu.Tooltip.Search">
-
-    <mc:menu-item id="SearchCase" page-id="Case_search1" title="MenuItem.Title.SearchCase" tooltip="MenuItem.Tooltip.SearchCase"/>
-
-    <mc:menu-item id="SearchIssuedPayments" page-id="Financial_paymentSearch" title="MenuItem.Title.SearchIssuedPayments" tooltip="MenuItem.Tooltip.SearchIssuedPayments"/>
-
-    <mc:menu-item id="SearchLiabilities" page-id="Financial_liabilitySearch" title="MenuItem.Title.SearchLiabilities" tooltip="MenuItem.Tooltip.SearchLiabilities"/>
-
-    <mc:menu-item id="SearchReceivedPayments" page-id="Financial_paymentReceivedSearch" title="MenuItem.Title.SearchReceivedPayments" tooltip="MenuItem.Tooltip.SearchReceivedPayments"/>
-      
-      <mc:menu-item id="SearchSuspenseAccount" page-id="Financial_suspenseAccountSearch" title="MenuItem.Title.SearchSuspenseAccount" tooltip="MenuItem.Tooltip.SearchSuspenseAccount"/>      
-
-  <mc:menu-item id="SearchServiceInvoice" page-id="ProviderManagement_searchServiceInvoice" title="MenuItem.Title.SearchServiceInvoice" tooltip="MenuItem.Tooltip.SearchServiceInvoice"/>
-  </mc:submenu>
-
-</mc:menu-bar>
+DuplicateClientCheck.description=Determining if Concern Role {0} is a duplicate

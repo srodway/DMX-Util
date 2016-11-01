@@ -1,29 +1,32 @@
 #
 # Licensed Materials - Property of IBM
 # 
-# Copyright IBM Corporation 2012, 2014. All Rights Reserved.
+# Copyright IBM Corporation 2015, 2016. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Number.Wizard.Pages=4
 
-CreateServiceDeliveryWizard_service1.Wizard.Item.Text=Service
-CreateServiceDeliveryWizard_service1.Wizard.Page.Title=Step 1:
-CreateServiceDeliveryWizard_service1.Wizard.Page.Desc=Service
-Wizard.PageID.1=CreateServiceDeliveryWizard_service1
+# This file is used to configure Member Eligibility View
+# Allowable configurations are:
+# {casetype}.showRowTitles - boolean
+# {TimelineCalendarIntervalValue.id}.innerColor - Hex Color (e.g. #A2E or #A1DE2B)
+# {TimelineCalendarIntervalValue.id}.outerColor - Hex Color (e.g. #A2E or #A1DE2B)
 
-CreateServiceDeliveryWizard_details1.Wizard.Item.Text=Details
-CreateServiceDeliveryWizard_details1.Wizard.Page.Title=Step 2:
-CreateServiceDeliveryWizard_details1.Wizard.Page.Desc=Details
-Wizard.PageID.2=CreateServiceDeliveryWizard_details1
+# START NON-TRANSLATABLE
 
-CreateServiceDeliveryWizard_schedule.Wizard.Item.Text=Schedule
-CreateServiceDeliveryWizard_schedule.Wizard.Page.Title=Step 3:
-CreateServiceDeliveryWizard_schedule.Wizard.Page.Desc=Schedule
-Wizard.PageID.3=CreateServiceDeliveryWizard_schedule
+#ParticipantDataCase
+CT2001.showRowTitles=false
 
-CreateServiceDeliveryWizard_sharing.Wizard.Item.Text=Sharing
-CreateServiceDeliveryWizard_sharing.Wizard.Page.Title=Step 4:
-CreateServiceDeliveryWizard_sharing.Wizard.Page.Desc=Sharing
-Wizard.PageID.4=CreateServiceDeliveryWizard_sharing
+### Integrated CaseType (Product Category) ###
+#Assistance
+PC1.showRowTitles=true
+
+# The year which the list view drop down should begin
+ListView.startYear=2010
+
+# The number of years after the current year which the list view should show
+ListView.numYearsAfterCurrentYear=2
+
+
+# END NON-TRANSLATABLE

@@ -1,25 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xsl:stylesheet [<!ENTITY nbsp "&#160;">]>
 
-<!-- BEGIN, CR00357205, PB -->
+ <!-- BEGIN, CR00357205, PB -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:foa="http://fabio" version="1.0">
-<!-- END, CR00357205 -->
-  <xsl:output method="xml" indent="yes" />
+   <!-- END, CR00357205 -->
   <!-- BEGIN, CR00352142, PB -->
-  <xsl:attribute-set name="Normal_1" foa:class="block">
+	<xsl:attribute-set name="Normal_1" foa:class="block">
     <xsl:attribute name="font-size">12.0pt</xsl:attribute>
-	<xsl:attribute name="line-height">6mm</xsl:attribute>
-	<xsl:attribute name="text-indent">0.0mm</xsl:attribute>
+	<xsl:attribute name="line-height">5mm</xsl:attribute>
+	<xsl:attribute name="text-align">right</xsl:attribute>
    </xsl:attribute-set>
-   <!-- END, CR00352142 -->
-   <!-- Handles the formatting of the External Party Register Notification.  -->
+  	  		    <xsl:attribute-set name="Normal_2" foa:class="block">
+    <xsl:attribute name="font-size">12.0pt</xsl:attribute>
+	<xsl:attribute name="line-height">5mm</xsl:attribute>
+	<xsl:attribute name="text-indent">110mm</xsl:attribute>
+<xsl:attribute name="white-space-collapse">false</xsl:attribute>
+<xsl:attribute name="linefeed-treatment">preserve</xsl:attribute>
+<xsl:attribute name="white-space-treatment">preserve</xsl:attribute>
+<xsl:attribute name="text-align">right</xsl:attribute>
+</xsl:attribute-set>
+  <xsl:attribute-set name="Normal_3" foa:class="block">
+    <xsl:attribute name="font-size">12.0pt</xsl:attribute>
+	<xsl:attribute name="line-height">5mm</xsl:attribute>
+	<xsl:attribute name="text-indent">0mm</xsl:attribute>
+  </xsl:attribute-set>
+  <xsl:attribute-set name="Normal_4" foa:class="block">
+    <xsl:attribute name="font-size">12.0pt</xsl:attribute>
+	<xsl:attribute name="line-height">15mm</xsl:attribute>
+	<xsl:attribute name="text-indent">0mm</xsl:attribute>
+  </xsl:attribute-set>
+    <xsl:attribute-set name="Normal_5" foa:class="block">
+    <xsl:attribute name="font-size">12.0pt</xsl:attribute>
+	<xsl:attribute name="line-height">7mm</xsl:attribute>
+	<xsl:attribute name="text-indent">0mm</xsl:attribute>
+<xsl:attribute name="white-space-collapse">false</xsl:attribute>
+<xsl:attribute name="linefeed-treatment">preserve</xsl:attribute>
+<xsl:attribute name="white-space-treatment">preserve</xsl:attribute>
+</xsl:attribute-set>
+  <xsl:attribute-set name="Normal_6" foa:class="block">
+    <xsl:attribute name="font-size">12.0pt</xsl:attribute>
+	<xsl:attribute name="line-height">7mm</xsl:attribute>
+	<xsl:attribute name="text-indent">0mm</xsl:attribute>
+  </xsl:attribute-set>
+  <!-- END, CR00352142 -->
   <xsl:template match="DOCUMENT">
     <!--Explicitly select DATA to ensure META element is ignored.-->
     <xsl:apply-templates select="DATA" />
   </xsl:template>
   <xsl:template match="DATA">
     <!--Explicitly select the STRUCT to avoid processing anything else.-->
-    <xsl:apply-templates select="STRUCT[SNAME='ExternalPartyRegisterData']" />
+    <!-- to do: change SNAME name -->
+    <xsl:apply-templates select="STRUCT[SNAME='ProFormaDocumentData']" />
   </xsl:template>
   <xsl:template match="STRUCT">
     <fo:root>
@@ -31,74 +62,39 @@
       <fo:page-sequence master-reference="only">
 	    <!-- START NON-TRANSLATABLE -->
         <fo:flow flow-name="xsl-region-body" font-family="WT Sans">
-        <!-- END NON-TRANSLATABLE -->
-           <!-- Build address strings -->
-          <xsl:variable name="number">
-            <xsl:value-of select="./FIELD[FNAME='externalPartyAddressDtls']/STRUCT[SNAME='DocumentAddress']/FIELD[FNAME='addressLine1']/VALUE" />
-          </xsl:variable>
-          <xsl:variable name="street">
-            <xsl:value-of select="./FIELD[FNAME='externalPartyAddressDtls']/STRUCT[SNAME='DocumentAddress']/FIELD[FNAME='addressLine2']/VALUE" />
-          </xsl:variable>
-          <xsl:variable name="line3">
-            <xsl:value-of select="./FIELD[FNAME='externalPartyAddressDtls']/STRUCT[SNAME='DocumentAddress']/FIELD[FNAME='addressLine3']/VALUE" />
-          </xsl:variable>
-          <xsl:variable name="line4">
-            <xsl:value-of select="./FIELD[FNAME='externalPartyAddressDtls']/STRUCT[SNAME='DocumentAddress']/FIELD[FNAME='addressLine4']/VALUE" />
-          </xsl:variable>
-          <xsl:variable name="line5">
-            <xsl:value-of select="./FIELD[FNAME='externalPartyAddressDtls']/STRUCT[SNAME='DocumentAddress']/FIELD[FNAME='addressLine5']/VALUE" />
-          </xsl:variable>
-          <xsl:variable name="numberStreet">
-            <xsl:value-of select="concat($number,' ',$street)" />
-          </xsl:variable>
+        <!-- END NON-TRANSLATABLE -->		
 <!-- BEGIN, CR00352142, PB -->
-          <!-- Claimant Name and Address -->
           <fo:block xsl:use-attribute-sets="Normal_1">
-            <xsl:apply-templates select="./FIELD[FNAME='externalPartyDtls']/STRUCT[SNAME='ConcernNameAlternateIDRegDate']/FIELD[FNAME='concernRoleName']" />
+            <xsl:apply-templates select="FIELD[FNAME='organisationName']" />
           </fo:block>
-          <fo:block xsl:use-attribute-sets="Normal_1">
-            <xsl:value-of select="$numberStreet" />
+          <fo:block xsl:use-attribute-sets="Normal_2">
+            <xsl:apply-templates select="FIELD[FNAME='userAddress']" />
           </fo:block>
-          <xsl:if test="string-length($line3) &gt; 0">
-            <fo:block xsl:use-attribute-sets="Normal_1">
-              <xsl:value-of select="$line3" />
-            </fo:block>
-          </xsl:if>
-          <xsl:if test="string-length($line4) &gt; 0">
-            <fo:block xsl:use-attribute-sets="Normal_1">
-              <xsl:value-of select="$line4" />
-            </fo:block>
-          </xsl:if>
-          <xsl:if test="string-length($line5) &gt; 0">
-            <fo:block xsl:use-attribute-sets="Normal_1">
-              <xsl:value-of select="$line5" />
-            </fo:block>
-          </xsl:if>
-          <fo:block xsl:use-attribute-sets="Normal_1">
-            <xsl:apply-templates select="./FIELD[FNAME='externalPartyAddressDtls']/STRUCT[SNAME='DocumentAddress']/FIELD[FNAME='city']" />
+          <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
+          <fo:block xsl:use-attribute-sets="Normal_4">&nbsp;</fo:block>
+          <fo:block xsl:use-attribute-sets="Normal_4">&nbsp;</fo:block>
+          <fo:block xsl:use-attribute-sets="Normal_5">
+            <xsl:apply-templates select="FIELD[FNAME='concernRoleAddress']" />
           </fo:block>
-          <fo:block font-size="12.0pt" margin-left="0.0pt" space-after="0.0pt" space-before="0.0pt" text-align="start" text-indent="0.0pt">&nbsp;</fo:block>
-          <!-- Dear .. -->
-          <fo:block xsl:use-attribute-sets="Normal_1">
+          <fo:block xsl:use-attribute-sets="Normal_6">
             Dear
-            <xsl:apply-templates select="./FIELD[FNAME='externalPartyDtls']/STRUCT[SNAME='ConcernNameAlternateIDRegDate']/FIELD[FNAME='concernRoleName']" />
-            ,
+            <xsl:apply-templates select="FIELD[FNAME='concernRoleName']" />
           </fo:block>
-          <fo:block linefeed-treatment="preserve" font-size="12.0pt" margin-left="0.0pt" space-after="0.0pt" space-before="0.0pt" text-align="start" text-indent="0.0pt">&nbsp;</fo:block>
-          <!-- Main body -->
-          <fo:block xsl:use-attribute-sets="Normal_1">
-            We wish to inform you that you have been registered as a external party with our agency under Reference No. 
-            <xsl:apply-templates select="./FIELD[FNAME='externalPartyDtls']/STRUCT[SNAME='ConcernNameAlternateIDRegDate']/FIELD[FNAME='primaryAlternateID']" />
-            effective as of
-            <xsl:apply-templates select="./FIELD[FNAME='externalPartyDtls']/STRUCT[SNAME='ConcernNameAlternateIDRegDate']/FIELD[FNAME='registrationDate']" />
+          <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
+          <fo:block xsl:use-attribute-sets="Normal_6">
+            We wish to inform you that the
+            <xsl:apply-templates select="FIELD[FNAME='productType']" />
+            Case Referral with Reference No.
+            <xsl:apply-templates select="FIELD[FNAME='caseReference']" />
+            has been cancelled
+            <xsl:apply-templates select="FIELD[FNAME='caseClosureReason']" />
             .
           </fo:block>
-          <fo:block linefeed-treatment="preserve" font-size="12.0pt" margin-left="0.0pt" space-after="0.0pt" space-before="0.0pt" text-align="start" text-indent="0.0pt">&nbsp;</fo:block>
-          <!-- Closing block -->
-          <fo:block xsl:use-attribute-sets="Normal_1">Regards,</fo:block>
-          <fo:block linefeed-treatment="preserve" font-size="12.0pt" margin-left="0.0pt" space-after="0.0pt" space-before="0.0pt" text-align="start" text-indent="0.0pt">&nbsp;</fo:block>
-          <fo:block xsl:use-attribute-sets="Normal_1">
-            <xsl:apply-templates select="./FIELD[FNAME='organisationDtls']/STRUCT[SNAME='OrganisationNameWebAddress']/FIELD[FNAME='name']" />
+          <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
+          <fo:block xsl:use-attribute-sets="Normal_6">Sincerely,</fo:block>
+          <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
+          <fo:block xsl:use-attribute-sets="Normal_6">
+            <xsl:apply-templates select="FIELD[FNAME='userFullName']" />
           </fo:block>
 <!-- END, CR00352142 -->
         </fo:flow>
@@ -112,28 +108,14 @@
           <xsl:when test="VALUE='false'">No</xsl:when>
           <xsl:otherwise>Yes</xsl:otherwise>
         </xsl:choose>
-      </xsl:when>
-      <xsl:when test="TYPE='SVR_DATE'">
-        <xsl:call-template name="format-date">
-          <xsl:with-param name="date" select="VALUE" />
-                </xsl:call-template>
-            </xsl:when>
-            <xsl:otherwise>
+          </xsl:when>
+          <xsl:otherwise>
         <xsl:value-of select="VALUE" />
-            </xsl:otherwise>
+          </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
-  <xsl:template name="format-date">
-    <xsl:param name="date" />
-    <xsl:variable name="day" select="substring-after(substring-after($date, '-'), '-')" />
-    <xsl:variable name="month" select="substring-before(substring-after($date, '-'), '-')" />
-    <xsl:variable name="year" select="substring-before($date, '-')" />
-    <xsl:choose>
-      <xsl:when test="$year!='0001'">
-        <xsl:value-of select="concat($day, '/', $month, '/', $year)" />
-      </xsl:when>
-      <xsl:otherwise>&nbsp;</xsl:otherwise>
-    </xsl:choose>
+  </xsl:template>
+  <xsl:template match="NewTemplate">
+    <xsl:apply-templates />
   </xsl:template>
 </xsl:stylesheet>
 

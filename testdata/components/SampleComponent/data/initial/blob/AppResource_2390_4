@@ -1,55 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  PID 5725-H26
-  
-  Copyright IBM Corporation 2011, 2014. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="PDServiceDelivery">
-  <!-- The id of the service delivery record -->
-  <tc:page-param name="serviceDeliveryID"/>
-  <!-- The id of the related product delivery case (populated from deliveryTypeRelatedID)-->
-  <tc:page-param name="caseID"/>
-
-  <tc:menu id="PDServiceDeliveryMenu"/>
-
-  <tc:context height="157" page-id="ProviderManagement_viewServiceSummaryDetails"/>
-
-  <tc:navigation id="PDServiceDelivery"/>
-
-  <tc:tab-refresh>
-    <tc:onload context="true" menu-bar="true" page-id="PDServiceDelivery_home"/>
-    <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_listEnquiriesForService"/>
-    <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_confirmSubmitService"/>
-    <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_completeService"/>
-    <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_confirmProviderSelection"/>
-    <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_addProviderTypeSelection"/>
-    <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_confirmCancelProviderSelection"/>
-    <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_confirmCancelProviderTypeSelection"/>
-    <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_evaluateService"/>
-    <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_cancelServiceEvaluation"/>
-    
-    <!-- BEGIN, CR00407985, SG -->
-    <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_cancelService1"/>
-    <!-- END, CR00407985 -->
-    
-    <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_confirmServiceApproval"/>
-    <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_rejectServiceApproval"/>
-    <!-- BEGIN, CR00293153, GYH -->
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProductDelivery_generatePayment"/>
-    <tc:onload context="true" menu-bar="false" navigation="false" page-id="ServiceDelivery_listTransaction"/>
-    <tc:onload context="true" menu-bar="false" navigation="false" page-id="PDServiceDelivery_listTransaction"/>
-    <!-- END, CR00293153 -->
-
-  </tc:tab-refresh>
-</tc:tab-config>
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Details.Name.ProviderEnquirySearch=Provider Enquiry Search
+Details.Icon=a
+Leaf.Title.Home=Home

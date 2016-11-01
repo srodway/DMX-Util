@@ -6,35 +6,12 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-MenuItem.Title.Edit=Edit
-MenuItem.Tooltip.Edit=Edit
+folder.title.financial=Financial
+folder.title.financial.Help=Case financials are the payments and bills issued for eligible and active product delivery cases. These financials are generated as a result of case processing, including the generation of payments and bills for eligible case components. Case financials also include account maintenance on a case such as the allocation of funds from a payment toward a bill, and receipt of payments from case participants in respect of their bills.
+leaf.title.bankaccnts=Bank Accounts
+leaf.title.bankaccnts.Help=Bank account information is used to facilitate the transfer of EFT payments to a nominee's bank account. EFT payments cannot be made to a nominee unless the nominee's bank account information is recorded on the system.
 
-MenuItem.Title.Delete=Delete
-MenuItem.Tooltip.Delete=Delete
-
-Submenu.Title.AssociateAssessment=Associate an Assessment
-Submenu.Tooltip.AssociateAssessment=Associate Assessment.
-
-MenuItem.Title.NewAssessment=New Assessment
-MenuItem.Tooltip.NewAssessment=New Assessment.
-
-MenuItem.Title.ExistingAssessment=Add Existing Assessment
-MenuItem.Tooltip.ExistingAssessment=Add Existing Assessment.
-
-Submenu.Title.AddEvidence=Add Evidence
-Submenu.Tooltip.AddEvidence=Add Evidence.
-
-MenuItem.Title.NewEvidence=New Evidence
-MenuItem.Tooltip.NewEvidence=New Evidence.
-
-MenuItem.Title.ExistingEvidence=Add Existing Evidence
-MenuItem.Tooltip.ExistingEvidence=Add Existing Evidence.
-
-Submenu.Title.Search=Search
-Submenu.Tooltip.Search=Find a case or participant.
-
-MenuItem.Title.User=User
-MenuItem.Tooltip.User=Find an user.
-
-MenuItem.Title.ExternalUser=External User
-MenuItem.Tooltip.ExternalUser=Find an external user.
+Leaf.Title.Financial=Financial
+# BEGIN, CR00349716, VT
+leaf.title.externalpartyhome=Home
+# END, CR00349716

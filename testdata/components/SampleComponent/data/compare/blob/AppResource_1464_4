@@ -1,40 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Page.Title=Triage Results
+Page.Description=You can seek help from within your community, or from state or governmental agencies in the form of programs and benefits.
 
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
-    <identifier name="SubmitPrintOrExit" />
-    <header>
-        <title id="Page.Title" />
-        <description id="Page.Description" />
-        <icon id="title_save" />
-    </header>
-    <content>
-        <container>
-            <title id="RadioSelection.Title" />
-            <description id="RadioSelection.Description" />
-            <help id="RadioSelection.Help" />
-            <radiobutton-container id="SELECTION" legend="RadioSelection.Legend">
-                <radiobutton id="SUBMIT">
-                    <title id="SubmitApplication.Title" />
-                </radiobutton>
-                <radiobutton id="PRINT">
-                    <title id="PrintApplication.Title" />
-                </radiobutton>
-                <radiobutton id="EXIT">
-                    <title id="ExitSaveApplication.Title" />
-                </radiobutton>
-            </radiobutton-container>
-        </container>
-    </content>
-    <navigation>
-		<nav-button name="next" type="action" />
-        <nav-button name="back" type="action" />
-    </navigation>
-</page>
+
+Community.Title=Click here to get help from your community.
+Community.Description=Community services are services offered by community based organisations. These organisations offer a wide range of support services within the community. Normally you will be able to find immediate assistance within your community.
+
+
+Agency.Title=Click here to get help from the government. 
+Agency.Description=The state and federal government provides assistance in the forms of programs and benefits that you may apply for, either on line, via post or in person. You will need to provide information about your circumstances and family in order to determine if you are eligible for the programs offered.

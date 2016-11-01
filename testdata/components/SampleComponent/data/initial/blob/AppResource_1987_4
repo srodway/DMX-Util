@@ -1,33 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+#
+# PID 5725-H26
+# 
+# Copyright IBM Corporation 2016. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Number.Wizard.Pages=3
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009, 2011 Curam Software Ltd.
-  All rights reserved.
+ASCAddMedicalCondition_start.Wizard.Item.Text=Certificate Details
+ASCAddMedicalCondition_start.Wizard.Page.Title=Step 1
+ASCAddMedicalCondition_start.Wizard.Page.Desc=Enter the practitioner certificate information
+Wizard.PageID.1=ASCAddMedicalCondition_start
 
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="AssessmentHometab">
-       
-  <tc:page-param name="assessmentConfigurationID"/>
-  
-  <tc:menu id="AssessmentHomeMenu"/> 
+ASCAddMedicalCondition_diagnosis.Wizard.Item.Text=Diagnosis Details
+ASCAddMedicalCondition_diagnosis.Wizard.Page.Title=Step 2
+ASCAddMedicalCondition_diagnosis.Wizard.Page.Desc=Enter the diagnosis information
+Wizard.PageID.2=ASCAddMedicalCondition_diagnosis
 
-  <!-- No details panel -->
-  <tc:context height="0" page-id="Resource_assessmentTab" tab-name="Details.Name.AssessmentHometab"/>
-  
-  <tc:navigation id="AssessmentHome"/>
- 
-  <tc:tab-refresh>
-    <tc:onsubmit context="true" page-id="Resource_modifyAssessmentFromView"/>
-  </tc:tab-refresh>
-
-  
-  
-</tc:tab-config>
+ASCAddMedicalCondition_summary.Wizard.Item.Text=Summary
+ASCAddMedicalCondition_summary.Wizard.Page.Title=Step 3
+ASCAddMedicalCondition_summary.Wizard.Page.Desc=This is a summary of the information given so far. Please review to ensure that it is all correct before submitting.
+Wizard.PageID.3=ASCAddMedicalCondition_summary

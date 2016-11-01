@@ -1,16 +1,21 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Details.Title.AssessmentDefinitionHome=Assessment Definition Home
-Details.Name.AssessmentDefinition=Assessment Definition
-Details.Icon=a
-Leaf.Title.Home=Home
-Leaf.Title.Roles=Roles
-Leaf.Title.Categories=Categories
-Leaf.Title.Factors=Factors
-Leaf.Title.Cases=Cases
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="IEGScriptEditor">
+  
+  <tc:page-param name="scriptID"/>
+  <tc:page-param name="scriptType"/>
+  <tc:page-param name="scriptVersion"/>
+  <tc:page-param name="schemaName"/>
+  <tc:page-param name="name"/>  
+  
+  <tc:context height="0" page-id="System_IEGEditorDetails"/> 
+   
+  <!-- Page to open in this tab  -->
+  <tc:navigation page-id="System_scriptEditor"/>
+
+</tc:tab-config>

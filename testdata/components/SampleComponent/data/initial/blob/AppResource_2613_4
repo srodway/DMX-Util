@@ -6,31 +6,30 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009-2010 Curam Software Ltd.
+  Copyright 2010 Curam Software Ltd.
   All rights reserved.
   
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="OMAdminAssessmentBasedFactor">
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="PlanReview">
   
-  <tc:page-param name="assessmentDefinitionFactorID"/>
+  <tc:page-param name="planReviewID"/>
   
-  <tc:menu id="OMAdminAssessmentBasedFactorMenu"/>
+  <tc:menu id="PlanReviewMenu"/>
   
-  <tc:context height="0" page-id="AssessmentDefinitionFactorAdmin_contextPanelAssessmentFactor"/>
+  <tc:context height="103" page-id="OutcomePlan_viewReviewContext"/>
   
-  <!-- See AssessmentDefinition.nav for details of the tree meta-data. -->
-  <tc:navigation id="OMAdminAssessmentBasedFactor"/>
+  <!-- See PlanReview.nav for details of the tree meta-data. -->
+  <tc:navigation id="PlanReview"/>
   
   <tc:tab-refresh>
-    <tc:onsubmit menu-bar="true" page-id="AssessmentPlanningAdmin_addDAOutcomeFactorAssessmentLinkFromViewFactorFromList"/>
-    <tc:onsubmit menu-bar="true" page-id="AssessmentPlanningAdmin_removeDAOutcomeLinkFromScoringFactor"/>
-    <tc:onsubmit menu-bar="true" page-id="AssessmentPlanningAdmin_addDAOutcomeFactorClassificationAssessmentLinkFromViewFactorFromList"/>
-    <tc:onsubmit menu-bar="true" page-id="AssessmentPlanningAdmin_removeDAOutcomeLinkFromViewFactorFromList"/>
-    <tc:onsubmit context="true" page-id="AssessmentDefinitionFactorAdmin_editAssessmentDefinitionFactorFromViewFactorFromList"/>
-    <tc:onsubmit context="true" page-id="AssessmentDefinitionFactorAdmin_editAssessmentDefinitionFactorFromViewFactorFromListro"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="OutcomePlan_editReview"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="OutcomePlan_completeReview"/>
+    <tc:onsubmit context="true" page-id="OutcomePlan_editCompletedReview"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="OutcomePlan_editReviewExpectedCompletionDate"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="OutcomePlan_cancelReview"/>
   </tc:tab-refresh>
   
 </tc:tab-config>

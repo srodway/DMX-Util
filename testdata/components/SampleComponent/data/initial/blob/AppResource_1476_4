@@ -6,16 +6,11 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-MenuItem.Title.Edit=Edit
-MenuItem.Icon.Edit=Edit
-MenuItem.Tooltip.Edit=Edit
+Verification.Message.Title=Verification Documentation Required
+Verification.Message.Body=We need to verify information we have received from you. In order to verify this information, you will need to provide us with a {Documents.to.be.submitted}.
+Verification.Image.AltText=Verification Message
+Verification.message.documents.separator=or
 
-MenuItem.Title.AddEvidenceType=Add Evidence Type
-MenuItem.Icon.AddEvidenceType=Add Evidence Type
-MenuItem.Tooltip.AddEvidenceType=Add Evidence Type
-
-MenuItem.Title.ReorderEvidenceTypes=Reorder Evidence Types
-MenuItem.Icon.ReorderEvidenceTypes=Reorder Evidence Types
-MenuItem.Tooltip.ReorderEvidenceTypes=Reorder Evidence Types
-
-
+#START NON-TRANSLATABLE
+Verification.Image=icon_documentation.png
+#END NON-TRANSLATABLE

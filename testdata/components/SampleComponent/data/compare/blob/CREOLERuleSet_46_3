@@ -7,203 +7,64 @@
 
   US Government Users Restricted Rights - Use, duplication or disclosure
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet name="ASCHouseholdMemberRuleSet">
-  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="ASCHouseholdMember">
-    <Attribute name="startDate">
+--><RuleSet name="ASCDiagnosisDataRuleSet">
+
+
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="ASCDiagnosis">
+
+
+    <Annotations>
+      <SuccessionSetPopulation/>
+    </Annotations>
+
+
+    <Attribute name="examinationDate">
       <Annotations>
-        <Label label-id="startDate" name="The date the client became a household member."/>
+        <Label label-id="examinationDate" name="The date on which the examination by the practitioner took place."/>
       </Annotations>
       <type>
         <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <specified/>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="blackOrAfricanAmerican">
+    <Attribute name="diagnosis">
       <Annotations>
-        <Label label-id="blackOrAfricanAmerican" name="Indicates if the client is black or African American."/>
+        <Label label-id="diagnosis" name="The diagnosis as determined by a practitioner."/>
       </Annotations>
       <type>
-        <javaclass name="java.lang.Boolean"/>
+        <codetableentry table="IncapacityDiagnosis"/>
       </type>
       <derivation>
-        <specified/>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="ssnStatus">
-      <Annotations>
-        <Label label-id="ssnStatus" name="The client's ssn status. This indicates if the client has a social security number."/>
-      </Annotations>
+    <Attribute name="description">
       <type>
-        <codetableentry table="SSNApplicationStatus"/>
+        <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <specified/>
+        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="successionID"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="endDate">
+    <Attribute name="cert">
       <Annotations>
-        <Label label-id="endDate" name="The date the client ceased being a household member."/>
+        <relatedSuccessionSet relationship="parent"/>
       </Annotations>
       <type>
-        <javaclass name="curam.util.type.Date"/>
+        <ruleclass name="PractitionerCertificate" ruleset="PractitionerCertificateDataRuleSet"/>
       </type>
       <derivation>
         <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="nativeHawiianOrPacificIslander">
-      <Annotations>
-        <Label label-id="nativeHawiianOrPacificIslander" name="Indicates if the client is Hawaiian or a Pacific Islander."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="citizenStatus">
-      <Annotations>
-        <Label label-id="citizenStatus" name="The citizenship status of a household member. This is populated from the alien status code table."/>
-      </Annotations>
-      <type>
-        <codetableentry table="AlienStatus"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="asian">
-      <Annotations>
-        <Label label-id="asian" name="Indicates if the client is Asian."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="veteranStatus">
-      <Annotations>
-        <Label label-id="veteranStatus" name="An individual's veteran status e.g. Active Duty, Disabled Veteran, Spouse of Active Duty etc."/>
-      </Annotations>
-      <type>
-        <codetableentry table="VeteranStatus"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="nativeAlaskanOrAmericanIndian">
-      <Annotations>
-        <Label label-id="nativeAlaskanOrAmericanIndian" name="c"/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="hispanicOrLatino">
-      <Annotations>
-        <Label label-id="hispanicOrLatino" name="Indicates if the client is Hispanic or Latino."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="whiteOrCaucasian">
-      <Annotations>
-        <Label label-id="whiteOrCaucasian" name="Indicates if the client is white or caucasian."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="migrantOrSeasonalFarmWorker">
-      <Annotations>
-        <Label label-id="migrantOrSeasonalFarmWorker" name="Indicates if the client is a migrant or seasonal farm worker."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="residencyStatus">
-      <Annotations>
-        <Label label-id="residencyStatus" name="The residency status for a household member. For example, indicates if a member is permanently or temporarily resident in the household."/>
-      </Annotations>
-      <type>
-        <codetableentry table="ResidencyStatus"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="caseParticipantRoleID">
-      <Annotations>
-        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the household member."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="related_caseParticipantRoleID">
-      <Annotations>
-        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the household member."/>
-      </Annotations>
-      <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="caseParticipantRoleID"/>
-          </create>
-        </reference>
       </derivation>
     </Attribute>
 

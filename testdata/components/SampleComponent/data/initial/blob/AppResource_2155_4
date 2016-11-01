@@ -1,22 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
+/*
+ * Styles for the High Contrast version of the Triage Results page.
+ * Colors should be externalised to properties file
+ * triage-styles-high-contrast.properties.
+ */
  
-  Copyright IBM Corporation 2012. All Rights Reserved.
+.cw.ProviderServiceModal.high-contrast .title-details .modal-title{
+    font-size: 16pt;
+    color : black;
+    font-weight : bold;
+}
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009-2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="IntegratedCasesAdministration">
-  <nc:nodes>
+.cw.ProviderServiceModal.high-contrast .modal-contact-info .modal-contact-details{
+    background-color : #cce8f2;
+    border : 1px solid #666666;
+}
 
-     <nc:navigation-page id="Integratedcases" page-id="Resource_listIntegratedCaseType1" title="leaf.title.integratedcases"/>
-    
-  </nc:nodes>
-</nc:navigation>
+.cw.ProviderServiceModal.high-contrast .provider-modal-header-wrapper{
+    background-color : white;
+    border-bottom : 1px solid #666666;
+}
+
+.cw.ProviderServiceModal.high-contrast .modal-footer {
+    background-color : white;
+    border-top : 1px solid #666666;
+    padding-top : 10px
+}
+
+body.high-contrast div.modal-detail-title {
+    color:#C93F0C;
+    font-weight:bold;
+    border-bottom:1px solid #666666;
+}
+
+body.high-contrast div.referral h2 {
+    margin-bottom: 1px;
+    margin-top: 0px;
+    margin-left: 5px;
+    color: #c9350c;
+    font-weight: bold;
+    font-size: 13.5pt;
+    text-align:left;
+}
+
+body.cw.ReferMe.high-contrast .referral-head p {
+    color: #666666;
+    font-size: 13.5pt;
+    margin: 0;
+    padding-top: 5px;
+}
+
+body.cw.ReferMe.high-contrast .contactDetails h2 {
+    border-bottom: 1px solid #D9D9D9;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 5px;
+    color: #000000;
+    font-size: 13.5pt;
+}
+
+body.cw.ReferMe.high-contrast div.desc-header {
+    color: #666666;
+    font-size: 13.5pt;
+}

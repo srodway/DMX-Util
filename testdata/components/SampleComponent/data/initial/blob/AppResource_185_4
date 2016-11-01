@@ -6,27 +6,64 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Page.Title=Forgotten Your Password
-Page.Description=Select the same secret question you gave when you set up your account.
+MenuItem.Title.Submit=Submit for Approval
+MenuItem.Tooltip.Submit=Submit for Approval.
 
-PasswordHint.Title=Password Hint
-PasswordHint.Description=
-PasswordHint.Help=When you set up your account, you entered a user name and you also answered the secret question. You need to enter the same user name here, select the secret question that you answered from the set of questions, and provide the same answer that you gave us when you set up your account.
-Username.Label=User Name:
-Question.Label=Question:
-Answer.Label=Answer:
+MenuItem.Title.Approve=Approve
+MenuItem.Tooltip.Approve=Approve the Investigation.
 
-NewPassword.Title=New Password
-NewPassword.Description=Please enter a new password. Your Password must be at least 8 characters and contain at least one number and/or a special character.
-NewPassword.Help=Your password should be something that is easy for you to remember but difficult for others to guess.
-Password.Label=Password:
-ConfirmPassword.Label=Re-type Password:
+MenuItem.Title.Reject=Reject
+MenuItem.Tooltip.Reject=Reject the Investigation.
 
-ERR_INVALID_USER=Invalid user.
-ERR_INVALID_SECURITY_QUESTION=This is not the security question that you selected when you set up your account. Please select the correct security question.
-ERR_INVALID_ANSWER=Invalid question or answer. Please try again.
-ERR_USER_PASSWORD_ERROR=The Password field and the Confirm Password field contain different values.
-ERR_INVALID_USER_QUESTION_OR_ANSWER=Invalid user, question or answer. Please try again.
-ERR_INVALID_USER_QUESTION_OR_ANSWER_FINAL=Invalid user, question or answer.
-Error.Title=Oops! Something has gone wrong.
-Error.Description=Please use the Home button to start again. We hope that this hasn't caused you any inconvenience.
+MenuItem.Title.Close=Close
+MenuItem.Tooltip.Close=Close the Investigation.
+
+MenuItem.Title.ChangeClosureDetails=Change Closure Details
+MenuItem.Tooltip.ChangeClosureDetails=Change Closure Details.
+
+MenuItem.Title.Reopen=Re-Open
+MenuItem.Tooltip.Reopen=Re-Open the Investigation.
+
+MenuItem.Title.ActionPlan=New Action Plan
+MenuItem.Tooltip.ActionPlan=Create a new action plan for the investigation.
+
+MenuItem.Title.Allegation=New Allegation
+MenuItem.Tooltip.Allegation=Create a new allegation for the investigation.
+
+MenuItem.Title.ContactLog=New Contact
+MenuItem.Tooltip.ContactLog=Create a new contact log for the investigation.
+
+MenuItem.Title.Note=New Note
+MenuItem.Tooltip.Note=Create a new note for the investigation.
+
+MenuItem.Title.AddBookmark=Add as Item of Interest
+MenuItem.Tooltip.AddBookmark=Add as Item of Interest.
+
+MenuItem.Title.Meeting=New Meeting
+MenuItem.Tooltip.Meeting=Create a new meeting.
+
+MenuItem.Title.AddResolution=New Resolution
+MenuItem.Tooltip.AddResolution=Create a new Resolution.
+
+MenuItem.Title.EditResolution=Edit Resolution
+MenuItem.Tooltip.EditResolution=Edit a Resolution.
+
+MenuItem.Title.RemoveResolution=Remove Resolution
+MenuItem.Tooltip.RemoveResolution=Remove a Resolution.
+
+MenuItem.Title.ViewResolutionHistory=View Resolution History
+MenuItem.Tooltip.ViewResolutionHistory=View Resolution history. 
+
+MenuItem.Title.Milestone=New Milestone
+MenuItem.Tooltip.Milestone=Create a new milestone for investigation.
+
+MenuItem.Title.RelateIncident=Relate Incident
+MenuItem.Tooltip.RelateIncident=View the list of related incidents for the investigation.
+
+MenuItem.Title.CaseMember=New Case Member
+MenuItem.Tooltip.CaseMember=Create a new case member for investigation.
+
+# BEGIN, CR00260824, SSK
+MenuItem.Title.EditInvestigation=Edit
+MenuItem.Tooltip.EditInvestigation=Edit Investigation.
+# END, CR00260824

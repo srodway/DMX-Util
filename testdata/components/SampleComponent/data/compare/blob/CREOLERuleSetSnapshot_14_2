@@ -1,70 +1,105 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCEmailAddressRuleSet">
-  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="PDCEmailAddress">
-    <Attribute name="fromDate">
-      <Annotations/>
+<?xml version="1.0" encoding="UTF-8"?><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="VerificationRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+  <Class abstract="true" name="VerificationDeterminator">
+    <Attribute name="description">
       <type>
-        <javaclass name="curam.util.type.Date"/>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="verificationdeterminator" resourceBundle="curam.verification.rules.VerificationRuleSet">
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="verificationDeterminatorParams">
+      <type>
+        <ruleclass name="VerificationDeterminatorParams"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="emailAddressType">
-      <Annotations/>
+    <Attribute name="displayName">
       <type>
-        <codetableentry table="EmailType"/>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+    <Attribute name="determine">
+      <type>
+        <ruleclass name="VerificationDeterminatorResult"/>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class name="VerificationDeterminatorResult">
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="verificationdeterminatorresult" resourceBundle="curam.verification.rules.VerificationRuleSet">
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+    <Attribute name="result">
+      <type>
+        <javaclass name="Boolean"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="emailAddress">
-      <Annotations/>
+    <Attribute name="reason">
       <type>
-        <javaclass name="java.lang.String"/>
+        <codetableentry table="VerificationSkippedReason"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="toDate">
-      <Annotations/>
+  </Class>
+  <Class name="VerificationDeterminatorParams">
+    <Attribute name="description">
       <type>
-        <javaclass name="curam.util.type.Date"/>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="verificationdeterminatorparam" resourceBundle="curam.verification.rules.VerificationRuleSet">
+
+
+          <reference attribute="evidenceDescriptorID"/>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+    <Attribute name="verifiableDataItemName">
+      <type>
+        <javaclass name="String"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="preferredInd">
-      <Annotations/>
+    <Attribute name="evidenceDescriptorID">
       <type>
-        <javaclass name="java.lang.Boolean"/>
+        <javaclass name="Number"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="participant">
-      <Annotations/>
+    <Attribute name="caseID">
       <type>
-        <javaclass name="java.lang.Number"/>
+        <javaclass name="Number"/>
       </type>
       <derivation>
         <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="related_participant">
-      <Annotations/>
-      <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="participant"/>
-          </create>
-        </reference>
       </derivation>
     </Attribute>
   </Class>

@@ -1451,6 +1451,20 @@
       <value>1</value>
     </attribute>
     <attribute name="configurable">
+      <value>1</value>
+    </attribute>
+    <attribute name="validationConfigurationID">
+      <value>10900</value>
+    </attribute>
+    <attribute name="exceptionID">
+      <value>reunification_assessment_override_value_not_same_determined_value|e|</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="enabled">
+      <value>1</value>
+    </attribute>
+    <attribute name="configurable">
       <value>0</value>
     </attribute>
     <attribute name="validationConfigurationID">
@@ -1542,6 +1556,20 @@
     </attribute>
     <attribute name="exceptionID">
       <value>bpoevidencecontroller.err_controller_apply_changes_where_remove_and_update_set|a|</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="enabled">
+      <value>1</value>
+    </attribute>
+    <attribute name="configurable">
+      <value>0</value>
+    </attribute>
+    <attribute name="validationConfigurationID">
+      <value>20143</value>
+    </attribute>
+    <attribute name="exceptionID">
+      <value>entdeterminationdelivery.err_determination_delivery_status_completed_cannot_create_decision|b|</value>
     </attribute>
   </row>
   <row>
@@ -19924,20 +19952,6 @@
     </attribute>
     <attribute name="exceptionID">
       <value>entdeterminationdelivery.err_determination_delivery_status_superseded_cannot_create_decision|b|</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="enabled">
-      <value>1</value>
-    </attribute>
-    <attribute name="configurable">
-      <value>0</value>
-    </attribute>
-    <attribute name="validationConfigurationID">
-      <value>20143</value>
-    </attribute>
-    <attribute name="exceptionID">
-      <value>entdeterminationdelivery.err_determination_delivery_status_completed_cannot_create_decision|b|</value>
     </attribute>
   </row>
   <row>
@@ -103116,7 +103130,7 @@
   </row>
   <row>
     <attribute name="enabled">
-      <value>0</value>
+      <value>1</value>
     </attribute>
     <attribute name="configurable">
       <value>1</value>
@@ -115824,6 +115838,62 @@
     </attribute>
     <attribute name="exceptionID">
       <value>bpomaintainconcernrolephone.err_concernrolephone_xfv_phonetype_phonenumber|a|3</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="enabled">
+      <value>1</value>
+    </attribute>
+    <attribute name="configurable">
+      <value>0</value>
+    </attribute>
+    <attribute name="validationConfigurationID">
+      <value>8005</value>
+    </attribute>
+    <attribute name="exceptionID">
+      <value>bpoevidencecontroller.err_controller_cannot_discard_participant_evidence_awaiting_approval|a|</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="enabled">
+      <value>1</value>
+    </attribute>
+    <attribute name="configurable">
+      <value>1</value>
+    </attribute>
+    <attribute name="validationConfigurationID">
+      <value>8006</value>
+    </attribute>
+    <attribute name="exceptionID">
+      <value>bposubmitfordelayedreassessment.inf_reassessment_in_progress|a|</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="enabled">
+      <value>1</value>
+    </attribute>
+    <attribute name="configurable">
+      <value>1</value>
+    </attribute>
+    <attribute name="validationConfigurationID">
+      <value>8007</value>
+    </attribute>
+    <attribute name="exceptionID">
+      <value>bposubmitfordelayedreassessment.inf_reassessment_changes_pending|a|</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="enabled">
+      <value>1</value>
+    </attribute>
+    <attribute name="configurable">
+      <value>1</value>
+    </attribute>
+    <attribute name="validationConfigurationID">
+      <value>8008</value>
+    </attribute>
+    <attribute name="exceptionID">
+      <value>bposubmitfordelayedreassessment.inf_reassessment_deferred_to_batch|a|</value>
     </attribute>
   </row>
   <row>

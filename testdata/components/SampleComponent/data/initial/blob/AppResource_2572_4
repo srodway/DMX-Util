@@ -13,9 +13,14 @@
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="ParticipantSearch">
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="UserInterfaceAndReports">
   <nc:nodes>
-    <nc:navigation-page id="ParticipantSearchHome" page-id="Participant_search" title="Leaf.Title.Home" visible="true"/>
+  
+   <!-- <nc:navigation-page id="home" page-id="CustomPageAdmin_listCustomPages" title="page.title.home" />-->
+   <!-- <nc:navigation-page id="quickLinks" page-id="Organization_listQuickLinks" title="page.title.quicklinks" />-->
+   <!-- <nc:navigation-page id="securityRole" page-id="Organization_listSecurityRole" title="page.title.securityroles" /> -->
+   <!-- <nc:navigation-page id="reports" page-id="Organization_listReports" title="page.title.reports" />-->
+    
   </nc:nodes>
   
 </nc:navigation>

@@ -6,8 +6,14 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-CWS.Header.Sender=IBMUniversalAccess
-CWSResults.Header.HeadLine=CAP Event for screening results
-CWSResults.Header.Description=CAP Event raised immediately after the Screening ruleset has been executed
+Submenu.Title.Search=Search
+Submenu.Tooltip.Search=Find a case or participant.
 
-CWSResults.NoProgram=No Program
+MenuItem.Title.User=User
+MenuItem.Tooltip.User=User
+
+MenuItem.Title.ExternalUser=External User
+MenuItem.Tooltip.ExternalUser=External User
+
+MenuItem.Title.CreateExternalUserAccount=Create External User Account
+MenuItem.Tooltip.CreateExternalUserAccount=Create External User Account

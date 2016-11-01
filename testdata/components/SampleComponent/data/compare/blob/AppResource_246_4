@@ -1,25 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-	Copyright 2009 Curam Software Ltd.
-	All rights reserved.
-	
-	This software is the confidential and proprietary information of Curam
-	Software, Ltd. ("Confidential Information"). You shall not disclose
-	such Confidential Information and shall use it only in accordance with the
-	terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ExternalSystemsTab">
-
-	<!-- Details panel -->
-	<tc:context tab-name="Details.Name.ExternalSystems" tab-title="Details.Title.ExternalSystems"/>
-
-	<!-- Navigation Panel -->
-	<tc:navigation page-id="RemoteSystem_listRemoteSystem"/>
-
-
-</tc:tab-config>
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+PlannerAppWorkspaceSectionShortcuts.title=Shortcuts
+OutcomePlans.Title=Outcome Plans
+MyOutcomePlans.Title=My Outcome Plans
+Searches.Title=Searches
+NewOutcomePlan.Title=New Outcome Plan
+PersonSearch.Title=Person\u2026
+CaseSearch.Title=Case\u2026
+OutcomePlanSearch.Title=Outcome Plan\u2026
+ItemsDueToComplete.Title=Items Due To Complete\u2026
+ItemsDueToStart.Title=Activities Due To Start\u2026
+ItemsOverdueCompletion.Title=Items Past Expected End Date\u2026

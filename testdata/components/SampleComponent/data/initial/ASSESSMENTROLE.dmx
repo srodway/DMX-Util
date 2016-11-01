@@ -14,28 +14,28 @@
   <column name="versionNo" type="number" />
   <row>
     <attribute name="assessmentRoleID">
-      <value>24000</value>
+      <value>10103</value>
     </attribute>
     <attribute name="assessmentDefinitionID">
-      <value>24000</value>
+      <value>10301</value>
     </attribute>
     <attribute name="typeTextID">
-      <value>24167</value>
+      <value>10877</value>
     </attribute>
     <attribute name="typeAbbreviationTextID">
-      <value>24166</value>
+      <value>10876</value>
     </attribute>
     <attribute name="mandatoryInd">
       <value>1</value>
     </attribute>
     <attribute name="multipleClientsInd">
-      <value>0</value>
+      <value>1</value>
     </attribute>
     <attribute name="description">
-      <value />
+      <value>Children in the family.</value>
     </attribute>
     <attribute name="reference">
-      <value />
+      <value>CHILD</value>
     </attribute>
     <attribute name="questionsApplicableInd">
       <value>1</value>
@@ -44,7 +44,7 @@
       <value>RST1</value>
     </attribute>
     <attribute name="sortOrder">
-      <value>0</value>
+      <value>1</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -52,16 +52,16 @@
   </row>
   <row>
     <attribute name="assessmentRoleID">
-      <value>34403</value>
+      <value>10101</value>
     </attribute>
     <attribute name="assessmentDefinitionID">
-      <value>34402</value>
+      <value>10301</value>
     </attribute>
     <attribute name="typeTextID">
-      <value>34447</value>
+      <value>10879</value>
     </attribute>
     <attribute name="typeAbbreviationTextID">
-      <value>34432</value>
+      <value>10878</value>
     </attribute>
     <attribute name="mandatoryInd">
       <value>1</value>
@@ -70,10 +70,10 @@
       <value>0</value>
     </attribute>
     <attribute name="description">
-      <value />
+      <value>The primary caregiver responsible for the children.</value>
     </attribute>
     <attribute name="reference">
-      <value />
+      <value>PRIMARYCAREGIVER</value>
     </attribute>
     <attribute name="questionsApplicableInd">
       <value>1</value>
@@ -82,7 +82,7 @@
       <value>RST1</value>
     </attribute>
     <attribute name="sortOrder">
-      <value>0</value>
+      <value>2</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -90,25 +90,101 @@
   </row>
   <row>
     <attribute name="assessmentRoleID">
-      <value>3638908498923757568</value>
+      <value>10102</value>
     </attribute>
     <attribute name="assessmentDefinitionID">
-      <value>-3566850904869036032</value>
+      <value>10301</value>
     </attribute>
     <attribute name="typeTextID">
-      <value>-7962364141182640128</value>
+      <value>10881</value>
     </attribute>
     <attribute name="typeAbbreviationTextID">
-      <value>972777519520423936</value>
+      <value>10880</value>
     </attribute>
     <attribute name="mandatoryInd">
-      <value>1</value>
+      <value>0</value>
     </attribute>
     <attribute name="multipleClientsInd">
       <value>0</value>
     </attribute>
     <attribute name="description">
-      <value />
+      <value>Any other caregiver in the family.</value>
+    </attribute>
+    <attribute name="reference">
+      <value>SECONDARYCAREGIVER</value>
+    </attribute>
+    <attribute name="questionsApplicableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>3</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="assessmentRoleID">
+      <value>10100</value>
+    </attribute>
+    <attribute name="assessmentDefinitionID">
+      <value>10301</value>
+    </attribute>
+    <attribute name="typeTextID">
+      <value>10883</value>
+    </attribute>
+    <attribute name="typeAbbreviationTextID">
+      <value>10882</value>
+    </attribute>
+    <attribute name="mandatoryInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="multipleClientsInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="description">
+      <value>Any other member in the household.</value>
+    </attribute>
+    <attribute name="reference">
+      <value>OTHER</value>
+    </attribute>
+    <attribute name="questionsApplicableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>4</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="assessmentRoleID">
+      <value>13537</value>
+    </attribute>
+    <attribute name="assessmentDefinitionID">
+      <value>13525</value>
+    </attribute>
+    <attribute name="typeTextID">
+      <value>14536</value>
+    </attribute>
+    <attribute name="typeAbbreviationTextID">
+      <value>14552</value>
+    </attribute>
+    <attribute name="mandatoryInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="multipleClientsInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="description">
+      <value>Any other caregiver in the family.</value>
     </attribute>
     <attribute name="reference">
       <value />
@@ -120,7 +196,349 @@
       <value>RST1</value>
     </attribute>
     <attribute name="sortOrder">
+      <value>2</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="assessmentRoleID">
+      <value>13536</value>
+    </attribute>
+    <attribute name="assessmentDefinitionID">
+      <value>13525</value>
+    </attribute>
+    <attribute name="typeTextID">
+      <value>14525</value>
+    </attribute>
+    <attribute name="typeAbbreviationTextID">
+      <value>14553</value>
+    </attribute>
+    <attribute name="mandatoryInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="multipleClientsInd">
       <value>0</value>
+    </attribute>
+    <attribute name="description">
+      <value>The primary caregiver responsible for the children.</value>
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="questionsApplicableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="assessmentRoleID">
+      <value>14538</value>
+    </attribute>
+    <attribute name="assessmentDefinitionID">
+      <value>13525</value>
+    </attribute>
+    <attribute name="typeTextID">
+      <value>14560</value>
+    </attribute>
+    <attribute name="typeAbbreviationTextID">
+      <value>14561</value>
+    </attribute>
+    <attribute name="mandatoryInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="multipleClientsInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="description">
+      <value>Children in the family.</value>
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="questionsApplicableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>3</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="assessmentRoleID">
+      <value>51603</value>
+    </attribute>
+    <attribute name="assessmentDefinitionID">
+      <value>51593</value>
+    </attribute>
+    <attribute name="typeTextID">
+      <value>51601</value>
+    </attribute>
+    <attribute name="typeAbbreviationTextID">
+      <value>51600</value>
+    </attribute>
+    <attribute name="mandatoryInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="multipleClientsInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="description">
+      <value>The primary caregiver responsible for the children.</value>
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="questionsApplicableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="assessmentRoleID">
+      <value>51607</value>
+    </attribute>
+    <attribute name="assessmentDefinitionID">
+      <value>51593</value>
+    </attribute>
+    <attribute name="typeTextID">
+      <value>51605</value>
+    </attribute>
+    <attribute name="typeAbbreviationTextID">
+      <value>51604</value>
+    </attribute>
+    <attribute name="mandatoryInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="multipleClientsInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="description">
+      <value>Any other caregiver in the family.</value>
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="questionsApplicableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>2</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="assessmentRoleID">
+      <value>51611</value>
+    </attribute>
+    <attribute name="assessmentDefinitionID">
+      <value>51593</value>
+    </attribute>
+    <attribute name="typeTextID">
+      <value>51609</value>
+    </attribute>
+    <attribute name="typeAbbreviationTextID">
+      <value>51608</value>
+    </attribute>
+    <attribute name="mandatoryInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="multipleClientsInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="description">
+      <value>Children in the family.</value>
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="questionsApplicableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>3</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="assessmentRoleID">
+      <value>51615</value>
+    </attribute>
+    <attribute name="assessmentDefinitionID">
+      <value>51593</value>
+    </attribute>
+    <attribute name="typeTextID">
+      <value>51613</value>
+    </attribute>
+    <attribute name="typeAbbreviationTextID">
+      <value>51612</value>
+    </attribute>
+    <attribute name="mandatoryInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="multipleClientsInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="description">
+      <value>Any other member in the family.</value>
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="questionsApplicableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>4</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="assessmentRoleID">
+      <value>54509</value>
+    </attribute>
+    <attribute name="assessmentDefinitionID">
+      <value>54500</value>
+    </attribute>
+    <attribute name="typeTextID">
+      <value>54510</value>
+    </attribute>
+    <attribute name="typeAbbreviationTextID">
+      <value>54511</value>
+    </attribute>
+    <attribute name="mandatoryInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="multipleClientsInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="description">
+      <value>The child in the family.</value>
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="questionsApplicableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="assessmentRoleID">
+      <value>54510</value>
+    </attribute>
+    <attribute name="assessmentDefinitionID">
+      <value>54500</value>
+    </attribute>
+    <attribute name="typeTextID">
+      <value>54887</value>
+    </attribute>
+    <attribute name="typeAbbreviationTextID">
+      <value>54885</value>
+    </attribute>
+    <attribute name="mandatoryInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="multipleClientsInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="description">
+      <value>The primary caregiver responsible for the child.</value>
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="questionsApplicableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>2</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="assessmentRoleID">
+      <value>54511</value>
+    </attribute>
+    <attribute name="assessmentDefinitionID">
+      <value>54500</value>
+    </attribute>
+    <attribute name="typeTextID">
+      <value>54889</value>
+    </attribute>
+    <attribute name="typeAbbreviationTextID">
+      <value>54890</value>
+    </attribute>
+    <attribute name="mandatoryInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="multipleClientsInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="description">
+      <value>Any other caregiver in the family.</value>
+    </attribute>
+    <attribute name="reference">
+      <value />
+    </attribute>
+    <attribute name="questionsApplicableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="sortOrder">
+      <value>3</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>

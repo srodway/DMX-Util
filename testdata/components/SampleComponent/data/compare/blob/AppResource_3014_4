@@ -1,33 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2010 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="CustomServicePlanItemFromGanttView">
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+MenuItem.Title.Edit=Edit
+MenuItem.Tooltip.Edit=Edit
 
-  <tc:page-param name="plannedItemID"/>
-  <tc:page-param name="description"/>
+MenuItem.Title.Clone=Clone
+MenuItem.Tooltip.Clone=Clone
 
-  <tc:menu id="PlanItemViewMenu"/>
+MenuItem.Title.Activate=Activate
+MenuItem.Tooltip.Activate=Activate
 
-  <!-- Details panel -->
-  <tc:context page-id="ServicePlanDelivery_planItemTabDetails" tab-name="Details.Name.PlanItemView"/>
+MenuItem.Title.CreateRoot=Create Root
+MenuItem.Tooltip.CreateRoot=Create Root
 
-  <!-- Navigation Panel -->
-  <tc:navigation id="CustomServicePlanItemFromGanttView"/>
-  
-  <tc:tab-refresh>
-    <tc:onsubmit context="true" page-id="ServicePlanDelivery_viewCustomServicePlanItem_fromGantt"/>
-  </tc:tab-refresh>  
+MenuItem.Title.TreeView=Manage Structure in Tree View
+MenuItem.Tooltip.TreeView=Manage Structure in Tree View
+    
+Submenu.Title.Search=Search
+Submenu.Tooltip.Search=Find a case or participant.
 
-</tc:tab-config>
+MenuItem.Title.User=User
+MenuItem.Tooltip.User=User
+
+MenuItem.Title.ExternalUser=External User
+MenuItem.Tooltip.ExternalUser=External User

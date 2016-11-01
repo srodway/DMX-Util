@@ -1,61 +1,30 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-MenuItem.Title.Edit=Edit
-MenuItem.Tooltip.Edit=Edit
-
-MenuItem.Title.ChildLocation=New Child Location
-MenuItem.Tooltip.ChildLocation=New Child Location
-
-MenuItem.Title.Schedule=New Schedule
-MenuItem.Tooltip.Schedule=New Schedule
-
-MenuItem.Title.AssignLocationAccess=Assign Location Access
-MenuItem.Tooltip.AssignLocationAccess=Assign Location Access
-
-MenuItem.Title.DeleteLocation=Delete
-MenuItem.Tooltip.DeleteLocation=Delete Location
-
-
-
-
-
-
-
-
-
-Submenu.Title.New=New
-Submenu.Tooltip.New=New
-
-MenuItem.Title.LocationAccessAssignment=Location Access Assignment
-MenuItem.Tooltip.LocationAccessAssignment=Location Access Assignment
-
-MenuItem.Title.LocationHoliday=Location Holiday
-MenuItem.Tooltip.LocationHoliday=Location Holiday
-
-MenuItem.Title.Resource=Resource
-MenuItem.Tooltip.Resource=Resource
-
-MenuItem.Title.ResourceAssignment=Resource Assignment
-MenuItem.Tooltip.ResourceAssignment=Resource Assignment
-
-MenuItem.Title.WorkingPattern=Working Pattern
-MenuItem.Tooltip.WorkingPattern=Working Pattern
-
-MenuItem.Title.TreeView=Manage Location in Tree View
-MenuItem.Tooltip.TreeView=Manage Location in Tree View
-        
-Submenu.Title.Search=Search
-Submenu.Tooltip.Search=Find a case or participant.
-
-MenuItem.Title.User=User
-MenuItem.Tooltip.User=User
-
-MenuItem.Title.ExternalUser=External User
-MenuItem.Tooltip.ExternalUser=External User
-
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010-2011 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="MDTNonCaseMeetingTab">
+  
+  <tc:page-param name="activityID"/>  
+  
+  <tc:context height="0" page-id="MDTExternal_nonCaseMeetingContextPanel"/>
+  
+  <tc:navigation id="MDTNonCaseMeetingTab"/>
+  
+  <tc:tab-refresh>
+    <tc:onload context="false" menu-bar="false" navigation="true" page-id="Meeting_viewMeetingNotFromCaseTab"/>
+  </tc:tab-refresh>
+  
+  
+  
+</tc:tab-config>

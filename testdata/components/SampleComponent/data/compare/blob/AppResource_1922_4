@@ -1,20 +1,11 @@
 #
 # Licensed Materials - Property of IBM
-#
-# PID 5725-H26
 # 
-# Copyright IBM Corporation 2014. All Rights Reserved.
+# Copyright IBM Corporation 2012-2013. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-DiagnosisDetails.Description=This section collects information on the practitioner's diagnoses of the client's ailments.  There may be more than one diagnosis.
-DiagnosisDetails.Title=Diagnosis Details
-DiagnosisDetailsInformation.Label=Diagnosis Details
-
-DDHelp=Collect details of ailment and the date on which the examination took place to detect this ailment.
-DiagnosisElement.Label=What ailment is the client suffering from?
-DiagnosisExaminationDate.Label=When was the examination date?
-AnyMoreDiagnosisDetails.Label=Are there more ailments diagnosed for client?
-
-RequiredField.Indicator=<span style="color: orange">* Indicates a required item</span>
+QuestionPage.SafetyThreatResolution.Title=SDM\u00AE Reunification Assessment
+Cluster.Title.SafetyThreatResolution=Safety Threat Resolution
+Question.Label.SafetyThreatResolution=<p style="font-family:tahoma;font-size:11px;color:#4e4e4e;">Review the safety assessment that led to removal. For any safety threat present at removal that is no longer present, document how safety threats were resolved.</p>

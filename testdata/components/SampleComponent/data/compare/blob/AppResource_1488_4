@@ -9,7 +9,7 @@
 -->  
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
-    <identifier name="ScreeningOptionalLoginNoCreate" />
+    <identifier name="IntakeMandatoryLogin" />
     <header>
         <title id="Page.Title" />
         <description id="Page.Description" />
@@ -17,21 +17,21 @@
     </header>
     <content>
         <container>
-            <title id="Selection.Title" />
-            <description id="Selection.Description" />
-            <help id="Selection.Help" />
-            <radiobutton-container id="SELECTION" legend="Selection.Legend">
+            <title id="IntakeLogin.Title" />
+            <description id="IntakeLogin.Description" />
+            <help id="IntakeLogin.Help" />
+            <radiobutton-container id="SELECTION" legend="IntakeLogin.Legend">
+                <radiobutton id="CREATE_ACC">
+                    <title id="CreateAccount.Title" />
+                </radiobutton>
                 <radiobutton id="LOGIN">
                     <title id="Login.Title" />
-                </radiobutton>
-                <radiobutton id="START">
-                    <title id="Start.Title" />
                 </radiobutton>
             </radiobutton-container>
         </container>
     </content>
-    <navigation> 
+    <navigation>
 		<nav-button name="next" type="action" />
-        <nav-button name="back" page="ResolveCitizenHome" page-type="resolve" />
+        <nav-button name="back" page="ResolveCitizenHome" page-type="resolve" /> 
     </navigation>
 </page>

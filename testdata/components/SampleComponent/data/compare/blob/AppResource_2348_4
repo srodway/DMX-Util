@@ -1,29 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+MenuItem.Title.CreateUAAccount=New Universal Access Account
+MenuItem.Title.EnableUAAccount=Enable Universal Access Account
+MenuItem.Title.DisableUAAccount=Disable Universal Access Account
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2011 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="InvestigationQueryResults">
-  
-  <tc:page-param name="queryID"/>
-  <tc:page-param name="queryName"/>
-  
-  <!-- No Actions menu -->
-
-  <!-- Details panel -->
-  <tc:context height="0" page-id="Investigation_queryResultsTabDetails" tab-name="Details.Name.InvestigationQueryResults"/>
-
-  <!-- No Navigation Panel -->
-  <tc:navigation page-id="Investigation_queryResults"/>
-
-</tc:tab-config>
+MenuItem.Tooltip.CreateUAAccount=New Universal Access Account
+MenuItem.Tooltip.EnableUAAccount=Enable Universal Access Account
+MenuItem.Tooltip.DisableUAAccount=Disable Universal Access Account
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012, 2014. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+MenuItem.Title.EditDetails=Edit
+MenuItem.Tooltip.EditDetails=Edit the details for the person
+MenuItem.Title.Triage=New Triage
+MenuItem.Tooltip.Triage=Create a new triage case for the person.
+MenuItem.Title.Screening=New Screening
+MenuItem.Tooltip.Screening=Create a new investigation for the person.
+MenuItem.Title.ApplicationForm=New Application Form
+MenuItem.Tooltip.ApplicationForm=Create a new application form for the person.
+MenuItem.Title.ApplicationCase=New Application Case
+MenuItem.Tooltip.ApplicationCase=Create a new application case for the person.
+MenuItem.Title.Case=New Case
+MenuItem.Tooltip.Case=Create a new case for the person.
+MenuItem.Title.Evidence=New Evidence
+MenuItem.Tooltip.Evidence=Create a new evidence for the person.
+MenuItem.Title.Note=New Note
+MenuItem.Tooltip.Note=Create a new note for the person.
+MenuItem.Title.CommunityServiceReferral=New Community Service Referral
+MenuItem.Tooltip.CommunityServiceReferral=Create a new community service referral for the person.
+MenuItem.Title.ExternalAgencyReferral=New External Agency Referral
+MenuItem.Tooltip.ExternalAgencyReferral=Create a new external agency referral for the person.
+MenuItem.Title.SpecialCaution=New Special Caution
+MenuItem.Tooltip.SpecialCaution=Create a new special caution for the person.
+MenuItem.Title.CreateUniversalAccessAccount=New Universal Access Account
+MenuItem.Tooltip.CreateUniversalAccessAccount=Create a new universal access account for the person.
+MenuItem.Title.EnableUniversalAccessAccount=Enable Universal Access Account
+MenuItem.Tooltip.EnableUniversalAccessAccount=Enable the universal access account for the person.
+MenuItem.Title.DisableUniversalAccessAccount=Disable Universal Access Account
+MenuItem.Tooltip.DisableUniversalAccessAccount=Disable the universal access account for the person.
+#BEGIN, CR00406699, AK
+MenuItem.Title.ReferralApplicationCase=New Referral
+MenuItem.Tooltip.ReferralApplicationCase=Create a new referral for the person.
+#END, CR00406699
+#BEGIN, CR00446053, SD
+MenuItem.Title.OutcomePlanCase=New Outcome Plan
+MenuItem.Tooltip.OutcomePlanCase=Create a new outcome plan for the person.
+#END, CR00446053

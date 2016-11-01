@@ -1,84 +1,809 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCAddressRuleSet">
-  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="PDCAddress">
-    <Attribute name="fromDate">
-      <Annotations/>
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014,2015. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IncapacityBenefitDisplayRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+  <Class extends="DefaultCase" extendsRuleSet="DefaultProductDecisionDetailsRuleSet" name="IncapacityBenefitSummaryCategory">
+
+
+    <!-- Description for this Rule Class. -->
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="IncapacityBenefitDisplayRules.description" resourceBundle="curam.asc.rules.IncapacityBenefitDisplay">
+          <reference attribute="caseID">
+            <reference attribute="productDeliveryCase"/>
+          </reference>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+
+
+    <!--
+      The eligibility rule object associated with this case.
+      At Program Recommenation level, this attribute will be specified.
+    -->
+    <Attribute name="incapacityBenefitProductCase">
+      <type>
+        <ruleclass name="IncapacityBenefitProductCase" ruleset="IncapacityBenefitRuleSet"/>
+      </type>
+      <derivation>
+        <create ruleclass="IncapacityBenefitProductCase" ruleset="IncapacityBenefitRuleSet">
+          <specify attribute="productDeliveryCase">
+            <reference attribute="productDeliveryCase"/>
+          </specify>
+        </create>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="programEligibilityTimeline">
+      <Annotations>
+        <Display/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <reference attribute="isEligibleTimeline">
+          <reference attribute="incapacityBenefitProductCase"/>
+        </reference>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="programEligibilityValueTimeline">
+      <Annotations>
+        <Display/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="String"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <choose>
+            <type>
+              <javaclass name="String"/>
+            </type>
+            <when>
+              <condition>
+                <equals>
+                  <intervalvalue>
+                    <reference attribute="isEligibleTimeline">
+                      <reference attribute="incapacityBenefitProductCase"/>
+                    </reference>
+                  </intervalvalue>
+                  <true/>
+                </equals>
+              </condition>
+              <value>
+                <String value="Yes"/>
+              </value>
+            </when>
+            <otherwise>
+              <value>
+                <String value="No"/>
+              </value>
+            </otherwise>
+          </choose>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="isEligibleTimeline">
+      <Annotations>
+        <Display/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <reference attribute="isEligibleTimeline">
+          <reference attribute="incapacityBenefitProductCase"/>
+        </reference>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="isEligibleValueTimeline">
+      <Annotations>
+        <Display/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="String"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <choose>
+            <type>
+              <javaclass name="String"/>
+            </type>
+            <when>
+              <condition>
+                <equals>
+                  <intervalvalue>
+                    <reference attribute="isEligibleTimeline">
+                      <reference attribute="incapacityBenefitProductCase"/>
+                    </reference>
+                  </intervalvalue>
+                  <true/>
+                </equals>
+              </condition>
+              <value>
+                <String value="Yes"/>
+              </value>
+            </when>
+            <otherwise>
+              <value>
+                <String value="No"/>
+              </value>
+            </otherwise>
+          </choose>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Claimant Name-->
+    <Attribute name="concernName">
+      <Annotations>
+        <Display/>
+      </Annotations>
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <reference attribute="concernRoleName">
+          <reference attribute="participantRole">
+            <reference attribute="caseParticipantRole">
+              <reference attribute="incapacityBenefitProductCase"/>
+            </reference>
+          </reference>
+        </reference>
+      </derivation>
+    </Attribute>
+
+
+    <!-- List of practitioner certificates -->
+    <Attribute name="practitinerCertificateDisplayList">
+      <Annotations>
+        <Display/>
+      </Annotations>
+      <type>
+        <javaclass name="List">
+          <ruleclass name="DisplayListItemPractitionerCertificate"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <dynamiclist>
+          <list>
+            <reference attribute="practitionerCertificateRecords">
+              <reference attribute="primaryMemberCPRCalculator">
+                <reference attribute="programCalculator">
+                  <reference attribute="incapacityBenefitProductCase"/>
+                </reference>
+              </reference>
+            </reference>
+          </list>
+          <listitemexpression>
+            <create ruleclass="DisplayListItemPractitionerCertificate">
+              <reference attribute="certificateType">
+                <current/>
+              </reference>
+              <reference attribute="certFromDate">
+                <current/>
+              </reference>
+              <reference attribute="specifiedCertToDate">
+                <current/>
+              </reference>
+              <reference attribute="related_Diagnosis">
+                <current/>
+              </reference>
+              <reference attribute="successionID">
+                <current/>
+              </reference>
+            </create>
+          </listitemexpression>
+        </dynamiclist>
+      </derivation>
+    </Attribute>
+
+
+    <!-- List of diagnoses -->
+    <Attribute name="diagnosisList">
+      <Annotations>
+        <Display/>
+      </Annotations>
+      <type>
+        <javaclass name="List">
+          <ruleclass name="DisplayListItemDiagnosis"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <dynamiclist>
+          <list>
+            <reference attribute="diagnosisRecords">
+              <reference attribute="primaryMemberCPRCalculator">
+                <reference attribute="programCalculator">
+                  <reference attribute="incapacityBenefitProductCase"/>
+                </reference>
+              </reference>
+            </reference>
+          </list>
+          <listitemexpression>
+            <create ruleclass="DisplayListItemDiagnosis">
+              <reference attribute="diagnosis">
+                <current/>
+              </reference>
+              <reference attribute="examinationDate">
+                <current/>
+              </reference>
+            </create>
+          </listitemexpression>
+        </dynamiclist>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Amount output for program recommendateion -->
+    <Attribute name="maximumAllotmentOutputTimeline">
+      <Annotations>
+        <Display domain="CURAM_AMOUNT"/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="Number"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <choose>
+            <type>
+              <javaclass name="Number"/>
+            </type>
+            <when>
+              <condition>
+                <all>
+                  <fixedlist>
+                    <listof>
+                      <javaclass name="Boolean"/>
+                    </listof>
+                    <members>
+                      <equals>
+                        <intervalvalue>
+                          <reference attribute="isEligibleTimeline">
+                            <reference attribute="incapacityBenefitProductCase"/>
+                          </reference>
+                        </intervalvalue>
+                        <true/>
+                      </equals>
+                      <equals>
+                        <intervalvalue>
+                          <reference attribute="isClaimTypeSicknessBenefit">
+                            <reference attribute="primaryMemberCPRCalculator">
+                              <reference attribute="programCalculator">
+                                <reference attribute="incapacityBenefitProductCase"/>
+                              </reference>
+                            </reference>
+                          </reference>
+                        </intervalvalue>
+                        <true/>
+                      </equals>
+                    </members>
+                  </fixedlist>
+                </all>
+              </condition>
+              <value>
+                <intervalvalue>
+                  <reference attribute="maximumAllotmentTimeline">
+                    <reference attribute="programCalculator">
+                      <reference attribute="incapacityBenefitProductCase"/>
+                    </reference>
+                  </reference>
+                </intervalvalue>
+              </value>
+            </when>
+            <when>
+              <condition>
+                <all>
+                  <fixedlist>
+                    <listof>
+                      <javaclass name="Boolean"/>
+                    </listof>
+                    <members>
+                      <equals>
+                        <intervalvalue>
+                          <reference attribute="isEligibleTimeline">
+                            <reference attribute="incapacityBenefitProductCase"/>
+                          </reference>
+                        </intervalvalue>
+                        <true/>
+                      </equals>
+
+
+                      <equals>
+                        <intervalvalue>
+                          <reference attribute="isClaimTypeIncapacityBenefit">
+                            <reference attribute="primaryMemberCPRCalculator">
+                              <reference attribute="programCalculator">
+                                <reference attribute="incapacityBenefitProductCase"/>
+                              </reference>
+                            </reference>
+                          </reference>
+                        </intervalvalue>
+                        <true/>
+                      </equals>
+
+
+                    </members>
+                  </fixedlist>
+                </all>
+              </condition>
+              <value>
+                <intervalvalue>
+                  <reference attribute="maximumAllotmentTimeline">
+                    <reference attribute="programCalculator">
+                      <reference attribute="incapacityBenefitProductCase"/>
+                    </reference>
+                  </reference>
+                </intervalvalue>
+              </value>
+            </when>
+            <otherwise>
+              <value>
+                <Number value="0"/>
+              </value>
+            </otherwise>
+          </choose>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="benefitTypeTimeline">
+      <Annotations>
+        <Display/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="String"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <choose>
+            <type>
+              <javaclass name="String"/>
+            </type>
+            <when>
+              <condition>
+                <all>
+                  <fixedlist>
+                    <listof>
+                      <javaclass name="Boolean"/>
+                    </listof>
+                    <members>
+
+
+                      <equals>
+                        <intervalvalue>
+                          <reference attribute="isEligibleTimeline">
+                            <reference attribute="incapacityBenefitProductCase"/>
+                          </reference>
+                        </intervalvalue>
+                        <true/>
+                      </equals>
+
+
+                      <equals>
+                        <intervalvalue>
+                          <reference attribute="isClaimTypeSicknessBenefit">
+                            <reference attribute="primaryMemberCPRCalculator">
+                              <reference attribute="programCalculator">
+                                <reference attribute="incapacityBenefitProductCase"/>
+                              </reference>
+                            </reference>
+                          </reference>
+                        </intervalvalue>
+                        <true/>
+                      </equals>
+                    </members>
+                  </fixedlist>
+                </all>
+              </condition>
+              <value>
+                <String value="Sickness Benefit"/>
+              </value>
+            </when>
+            <when>
+              <condition>
+                <all>
+                  <fixedlist>
+                    <listof>
+                      <javaclass name="Boolean"/>
+                    </listof>
+                    <members>
+                      <equals>
+                        <intervalvalue>
+                          <reference attribute="isEligibleTimeline">
+                            <reference attribute="incapacityBenefitProductCase"/>
+                          </reference>
+                        </intervalvalue>
+                        <true/>
+                      </equals>
+
+
+                      <equals>
+                        <intervalvalue>
+                          <reference attribute="isClaimTypeIncapacityBenefit">
+                            <reference attribute="primaryMemberCPRCalculator">
+                              <reference attribute="programCalculator">
+                                <reference attribute="incapacityBenefitProductCase"/>
+                              </reference>
+                            </reference>
+                          </reference>
+                        </intervalvalue>
+                        <true/>
+                      </equals>
+
+
+                    </members>
+                  </fixedlist>
+                </all>
+              </condition>
+              <value>
+                <String value="Invalidity Benefit"/>
+              </value>
+            </when>
+            <otherwise>
+              <value>
+                <String value=""/>
+              </value>
+            </otherwise>
+          </choose>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="practitionerCertIndexedList">
+      <Annotations>
+        <Display/>
+      </Annotations>
+      <type>
+        <javaclass name="List">
+          <javaclass name="Number"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <dynamiclist>
+          <list>
+            <reference attribute="practitionerCertificateRecords">
+              <reference attribute="primaryMemberCPRCalculator">
+                <reference attribute="programCalculator">
+                  <reference attribute="incapacityBenefitProductCase"/>
+                </reference>
+              </reference>
+            </reference>
+          </list>
+          <listitemexpression>
+            <reference attribute="successionID">
+              <current/>
+            </reference>
+          </listitemexpression>
+        </dynamiclist>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="displayPractitionerCertSubscreens">
+      <Annotations>
+        <DisplaySubscreen/>
+      </Annotations>
+      <type>
+        <javaclass name="List">
+          <ruleclass name="DisplayPractitionerCertSubscreen"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <dynamiclist>
+          <list>
+            <reference attribute="practitinerCertificateDisplayList"/>
+          </list>
+          <listitemexpression>
+            <create ruleclass="DisplayPractitionerCertSubscreen">
+              <current/>
+            </create>
+          </listitemexpression>
+        </dynamiclist>
+      </derivation>
+    </Attribute>
+
+
+  </Class>
+
+
+  <Class extends="DefaultCaseSubscreenDisplay" extendsRuleSet="DefaultProductDecisionDetailsRuleSet" name="DisplayPractitionerCertSubscreen">
+    <Annotations>
+      <Label label-id="" name="Further display details for a practitioner cert, namely its list of diagnoses."/>
+    </Annotations>
+
+
+    <Initialization>
+      <Attribute name="practitinerCertificateDisplayList">
+        <type>
+          <ruleclass name="DisplayListItemPractitionerCertificate"/>
+        </type>
+      </Attribute>
+    </Initialization>
+
+
+    <Attribute name="diagnosises">
+      <type>
+        <javaclass name="java.util.List">
+          <ruleclass name="ASCDiagnosis" ruleset="ASCDiagnosisDataRuleSet"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <reference attribute="related_Diagnosis">
+          <reference attribute="practitinerCertificateDisplayList"/>
+        </reference>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="diagnosisDate">
+      <Annotations>
+        <Display domain="SVR_STRING"/>
+      </Annotations>
+      <type>
+        <javaclass name="List">
+          <javaclass name="curam.util.type.Date"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <dynamiclist>
+          <list>
+            <reference attribute="diagnosises"/>
+          </list>
+          <listitemexpression>
+            <reference attribute="examinationDate">
+              <current/>
+            </reference>
+          </listitemexpression>
+        </dynamiclist>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="diagnosisType">
+      <Annotations>
+        <Display/>
+      </Annotations>
+      <type>
+        <javaclass name="List">
+          <javaclass name="Object"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <dynamiclist>
+          <list>
+            <reference attribute="diagnosises"/>
+          </list>
+          <listitemexpression>
+            <reference attribute="diagnosis">
+              <current/>
+            </reference>
+          </listitemexpression>
+        </dynamiclist>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="subscreen" resourceBundle="curam.core.rules.ProductDecisionDetailsRuleSet">
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="businessObjectID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <reference attribute="index">
+          <reference attribute="practitinerCertificateDisplayList"/>
+        </reference>
+      </derivation>
+    </Attribute>
+
+
+  </Class>
+
+
+  <Class name="DisplayListItemPractitionerCertificate">
+
+
+    <Annotations>
+      <Label label-id="" name="The display data for a practitioner certificate timeline."/>
+    </Annotations>
+
+
+    <Initialization>
+      <Attribute name="certificateType">
+        <type>
+          <javaclass name="Object"/>
+        </type>
+      </Attribute>
+      <Attribute name="certFromDate">
+        <type>
+          <javaclass name="curam.util.type.Date"/>
+        </type>
+      </Attribute>
+      <Attribute name="specifiedCertToDate">
+        <type>
+          <javaclass name="curam.util.type.Date"/>
+        </type>
+      </Attribute>
+      <Attribute name="related_Diagnosis">
+        <type>
+          <javaclass name="java.util.List">
+            <ruleclass name="ASCDiagnosis" ruleset="ASCDiagnosisDataRuleSet"/>
+          </javaclass>
+        </type>
+      </Attribute>
+      <Attribute name="successionID">
+        <type>
+          <javaclass name="Number"/>
+        </type>
+      </Attribute>
+    </Initialization>
+
+
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="objectiveTimeline" resourceBundle="curam.core.rules.ProductDecisionDetailsRuleSet">
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="index">
+      <Annotations>
+        <Label label-id="" name="The 0-based index of this practitioner cert timeline from the overall list of practitioner cert tlmelines for the case. Used as a key so that the child diagnoses timelines for display can be linked back to the parent practitioner cert timeline for display."/>
+        <Display/>
+      </Annotations>
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <reference attribute="successionID"/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="displayType">
+      <Annotations>
+        <Display/>
+      </Annotations>
+      <type>
+        <javaclass name="Object"/>
+      </type>
+      <derivation>
+        <reference attribute="certificateType"/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Convert date  -->
+    <Attribute name="displayStartDate">
+      <Annotations>
+        <Display domain="SVR_STRING"/>
+      </Annotations>
       <type>
         <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <null/>
+        <reference attribute="certFromDate"/>
       </derivation>
     </Attribute>
-    <Attribute name="addressType">
-      <Annotations/>
-      <type>
-        <codetableentry table="AddressType"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-    <Attribute name="toDate">
-      <Annotations/>
+
+
+    <Attribute name="displayEndDate">
+      <Annotations>
+        <Display domain="SVR_STRING"/>
+      </Annotations>
       <type>
         <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-    <Attribute name="preferredInd">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-    <Attribute name="participant">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="related_participant">
-      <Annotations/>
-      <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="participant"/>
-          </create>
-        </reference>
-      </derivation>
-    </Attribute>
-    <Attribute name="address">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="related_address">
-      <Annotations/>
-      <type>
-        <ruleclass name="Address" ruleset="ParticipantEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="addressRecord">
-          <create ruleclass="AddressCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="address"/>
-          </create>
-        </reference>
+        <reference attribute="specifiedCertToDate"/>
       </derivation>
     </Attribute>
   </Class>
+
+
+  <Class name="DisplayListItemDiagnosis">
+
+
+    <Initialization>
+      <Attribute name="diagnosis">
+        <type>
+          <javaclass name="Object"/>
+        </type>
+      </Attribute>
+      <Attribute name="examinationDate">
+        <type>
+          <javaclass name="curam.util.type.Date"/>
+        </type>
+      </Attribute>
+    </Initialization>
+
+
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="DisplayListItemDiagnosis.description" resourceBundle="curam.asc.rules.IncapacityBenefitDisplay"/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="displayType">
+      <Annotations>
+        <Display/>
+      </Annotations>
+      <type>
+        <javaclass name="Object"/>
+      </type>
+      <derivation>
+        <reference attribute="diagnosis"/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Convert date  -->
+    <Attribute name="displayExaminationDate">
+      <Annotations>
+        <Display domain="SVR_STRING"/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <reference attribute="examinationDate"/>
+      </derivation>
+    </Attribute>
+
+
+  </Class>
+
+
 </RuleSet>

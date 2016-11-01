@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:foa="http://fabio" version="1.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format" version="1.0">
   <xsl:variable name="fo:layout-master-set">
     <fo:layout-master-set>
       <fo:simple-page-master master-name="default-page" page-height="11in" page-width="8.5in" margin-left="0.6in" margin-right="0.6in">
@@ -7,18 +7,13 @@
       </fo:simple-page-master>
     </fo:layout-master-set>
   </xsl:variable>
-  <!-- BEGIN, CR00356535, PB -->
-  <xsl:attribute-set name="Normal_1" foa:class="inline">
-    <xsl:attribute name="font-size">12.0pt</xsl:attribute>
-  </xsl:attribute-set>
-  <!-- END, CR00356535 -->
   <xsl:template match="DOCUMENT">
     <!--Explicitly select DATA to ensure META element is ignored.-->
     <xsl:apply-templates select="DATA"/>
   </xsl:template>
   <xsl:template match="DATA">
     <!--Explicitly select the STRUCT to avoid processing anything else.-->
-    <xsl:apply-templates select="STRUCT[SNAME='ContractNotificationDetails']"/>
+    <xsl:apply-templates select="STRUCT[SNAME='ProviderNotificationDetails']"/>
   </xsl:template>
   <xsl:template match="STRUCT">
     <fo:root>
@@ -42,7 +37,7 @@
                   </fo:block>
                   <fo:inline font-size="12pt" font-weight="normal">
                     Dear
-                    <xsl:apply-templates select="FIELD[FNAME='providerName']"/>
+                    <xsl:apply-templates select="FIELD[FNAME='providerGrpName']"/>
                     ,
                   </fo:inline>
                   <fo:block>
@@ -51,17 +46,15 @@
                   <fo:block>
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
-                  <fo:inline font-size="12pt">We wish to inform you that your contract '</fo:inline>
-                  <!-- BEGIN, CR00356535, PB -->
-                  <fo:inline xsl:use-attribute-sets="Normal_1">
-                    <xsl:apply-templates select="FIELD[FNAME='contractReferenceNumber']"/>
-                  </fo:inline>
                   <fo:inline font-size="12pt">
-                    ' is due to end on
-                    <xsl:apply-templates select="FIELD[FNAME='endDate']"/>
-                    . Please contact us if you wish to renew your contract.
+                    We wish to inform you that you have been enrolled
+                      as a provider group with our agency under Reference No.
+                    <xsl:apply-templates select="FIELD[FNAME='providerGrpRefNumber']"/>
+                    effective as
+                      of
+                    <xsl:apply-templates select="FIELD[FNAME='providerGrpEnrollDate']"/>
+                    .
                   </fo:inline>
-                  <!-- END, CR00356535 -->
                   <fo:block>
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
@@ -76,7 +69,7 @@
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
                   <fo:inline font-size="12pt">
-                    <xsl:apply-templates select="FIELD[FNAME='organizationName']"/>
+                    <xsl:apply-templates select="FIELD[FNAME='organisationName']"/>
                     .
                   </fo:inline>
                 </fo:block>

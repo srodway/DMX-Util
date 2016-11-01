@@ -13,10 +13,12 @@
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="WorkQueues">
-  
-  <tc:context tab-name="Details.Name.WorkQueues" tab-title="Details.Title.WorkQueues"/>
-  
-  <tc:navigation id="WorkQueues"/>
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="TriageResults">
 
+  <tc:page-param name="participantTriageID"/>
+  
+  <tc:context height="0" page-id="TriageResultsTabDetails"/>
+
+  <tc:navigation id="TriageResults"/>  
+  <tc:smart-panel collapsed="false" page-id="Triage_smartPanel" title="Leaf.Title.SmartPanel" width="250"/>
 </tc:tab-config>

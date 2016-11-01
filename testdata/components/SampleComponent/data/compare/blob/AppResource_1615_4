@@ -1,20 +1,21 @@
 #
 # Licensed Materials - Property of IBM
 # 
-# Copyright IBM Corporation 2012, 2014. All Rights Reserved.
+# Copyright IBM Corporation 2012. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Number.Wizard.Pages=2
-#BEGIN, CR00440019, AC
-ProviderManagement_searchConfirmProviderEnquiry.Wizard.Item.Text=Enquiry Search
-ProviderManagement_searchConfirmProviderEnquiry.Wizard.Page.Title=Step 1:
-ProviderManagement_searchConfirmProviderEnquiry.Wizard.Page.Desc=Confirm open enquiry does not exist
-Wizard.PageID.1=ProviderManagement_searchConfirmProviderEnquiry
+# This Properties file contains resource Strings for the Participat entities CER Ruleset.
 
-ProviderManagement_enrollProviderEnquiry.Wizard.Item.Text=Enquiry Details
-ProviderManagement_enrollProviderEnquiry.Wizard.Page.Title=Step 2:
-ProviderManagement_enrollProviderEnquiry.Wizard.Page.Desc=Enter Enquiry Details
-Wizard.PageID.2=ProviderManagement_enrollProviderEnquiry
-#END, CR00440019
+#Case Header
+CaseHeader.description=Case: {0}
+
+#Case Participant Role
+CaseParticipantRole.description=Case Participant: {0} : {1}
+
+#Case Groups
+CaseGroups.description={0} is in the {1} group for Case ID: {2}
+
+#Product Delivery
+ProductDelivery.description={0} Product Delivery for {1}

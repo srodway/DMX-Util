@@ -1,21 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2010 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><sc:section xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-config" default-page-id="ResourceManagerCustomHome" hide-tab-container="true" id="CPMRMAPPHomeSection" title="CPMRMAPPHomeSection.title">
-  
-  <sc:tab id="CPMRMAPPHome"/>
-    
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+MenuItem.Title.EditPlanItem=Edit
+MenuItem.Tooltip.EditPlanItem=Edit the plan item.
 
-</sc:section>
+MenuItem.Title.RecordClientParticipation=Record Client Participation
+MenuItem.Tooltip.RecordClientParticipation=Record client participation information.
+
+MenuItem.Title.EditAuthorizedUnits=Edit Authorised Units
+MenuItem.Tooltip.EditAuthorizedUnits=Edit authorised units for the plan item.
+
+MenuItem.Title.RecordServiceUnit=Record Service Unit
+MenuItem.Tooltip.RecordServiceUnit=Record delivery of service unit details for the plan item.
+
+MenuItem.Title.SubmitForApproval=Submit For Approval
+MenuItem.Tooltip.SubmitForApproval=Submit the plan item For approval.
+
+MenuItem.Title.Approve=Approve
+MenuItem.Tooltip.Approve=Create a new approval request for the plan item.
+
+MenuItem.Title.Reject=Reject
+MenuItem.Tooltip.Reject=Reject the plan item.
+
+

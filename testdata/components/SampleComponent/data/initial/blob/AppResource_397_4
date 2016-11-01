@@ -1,12 +1,21 @@
 #
 # Licensed Materials - Property of IBM
 # 
-# Copyright IBM Corporation 2012. All Rights Reserved.
+# PID 5725-H26
+#
+# Copyright IBM Corporation 2012-2014. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Group5.Title=Felony Charge
-Group5.Description=
-Q22.Label=Is the current arrest for a felony charge?
-Q22.HelpText=Is the current charge for a crime that would be considered a felony?
+# START NON-TRANSLATABLE
+AuditCoordinatorApp.logo=CDEJ/themes/v6/images/application-logo.png
+AuditCoordinatorApp.title=IBM C\u00FAram
+# END NON-TRANSLATABLE
+AuditCoordinatorApp.subtitle=Audit Coordinator
+AuditCoordinatorApp.UserMessage=Welcome %user-full-name
+preferences.title=Preferences
+help.title=Help
+logout.title=Log out
+
+Application.Search.InitialText=Enter Reference Number

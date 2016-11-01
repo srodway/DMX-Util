@@ -1,23 +1,391 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Licensed Materials - Property of IBM
-
-  Copyright IBM Corporation 2012. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->
-
-<ieg-script
-finish-page="cw/FinishIEGScript.jspx"
-quit-page="cw/ExitIEGScript.jspx"
-show-sections="true"
-show-progress-bar="true"
-config-properties="online-app-config"
-validate-save-and-exit="true">
-<identifier id="UniversalAccessTemplate"
-scriptversionnumber="V1"
-type="Intake"/>
-<section internal-id="1330012874500">
-</section>
+<ieg-script finish-page="null" quit-page="null" show-sections="true" show-progress-bar="true" validate-save-and-exit="true">
+  <identifier id="ScotAssessment" scriptversionnumber="V1" type="Assessment" />
+  <section>
+    <title id="PipAssessment.Title">PIP Assessment</title>
+    <question-page id="Introduction.PageID" entity="AssessmentType" progress="0" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="true">
+      <title id="Introduction.Title">Introduction</title>
+      <cluster>
+        <title id="AssessmentTypeCluster.Title">Assessment Type</title>
+        <description id="AssessmentTypeCluster.Desc">Select the type of assessment</description>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <question id="assessmentType" mandatory="true" control-question="false" multi-select="false" show-field-help="false">
+          <label id="AssessmentType.LabelID">Type of Assessment</label>
+          <help-text id="AssessmentType.HelpID">Select the type of assessment from the list</help-text>
+        </question>
+      </cluster>
+      <cluster>
+        <title id="TerminalIllnessCluster.Title">Terminal Illness</title>
+        <description id="TerminalIllnessCluster.Desc">Terminally Ill Provisions</description>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <question id="tiProvisionsClaimed" mandatory="true" control-question="false" multi-select="false" show-field-help="false">
+          <label id="TiProvisionsClaimed.LabelID">Terminally Ill Provisions Claimed?</label>
+          <help-text id="TiProvisionsClaimed.HelpID">Enter the TI provisions already claimed</help-text>
+        </question>
+        <question id="tiProvisionsMet" mandatory="true" control-question="false" multi-select="false" show-field-help="false">
+          <label id="TiProvisionsMet.LabelID">Terminally Ill Provisions Met?</label>
+          <help-text id="TiProvisionsMet.HelpID">Select either Yes or No</help-text>
+        </question>
+      </cluster>
+    </question-page>
+    <loop loop-expression="recAddImpairment==&quot;YN1&quot;" loop-type="while" entity="Disability">
+      <question-page id="Disability.PageID" entity="Disability" progress="25" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="true">
+        <title id="Disability.Title">Disability</title>
+        <cluster>
+          <title id="DisabilityCluster.Title">Disability</title>
+          <description id="DisabilityCluster.Desc">Disability Type</description>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question id="subCategory" mandatory="true" control-question="false" multi-select="false" show-field-help="false">
+            <label id="SubCategory.LabelID">Sub Category</label>
+            <help-text id="SubCategory.HelpID">Select the sub category of disability from the list</help-text>
+            <codetable-hierarchy-layout vertical="true" hide-description="false" hide-label="true" show-path="false" />
+          </question>
+          <question id="recAddImpairment" mandatory="false" control-question="true" control-question-type="IEG_YES_NO" multi-select="false" show-field-help="false">
+            <label id="RecAddImpairment.LabelID">Record Additional Impairment?</label>
+            <help-text id="RecAddImpairment.HelpID">Select Yes if there are more impairments to record, else select No</help-text>
+          </question>
+        </cluster>
+      </question-page>
+    </loop>
+    <question-page id="DailyLiving.PageID" entity="DailyLiving" progress="50" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="false">
+      <title id="DailyLiving.Title">Daily Living</title>
+      <cluster entity="DailyLiving">
+        <title id="QualifyingPeriodCluster.Title">null</title>
+        <description id="QualifyingPeriodCluster.Desc">null</description>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <question id="qualPeriodSatisfied" mandatory="true" control-question="true" control-question-type="IEG_YES_NO" multi-select="false" show-field-help="false">
+          <label id="QualPeriodSatisfied.LabelID">null</label>
+          <help-text id="QualPeriodSatisfied.HelpID">null</help-text>
+        </question>
+      </cluster>
+      <condition expression="qualPeriodSatisfied==&quot;YN2&quot;">
+        <cluster entity="DailyLiving">
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question id="willQualPeriodBeSatisfied" mandatory="false" control-question="true" control-question-type="IEG_YES_NO" multi-select="false" show-field-help="false">
+            <label id="WillQualPeriod.LabelID">null</label>
+            <help-text id="WillQualPeriod.HelpID">null</help-text>
+          </question>
+        </cluster>
+      </condition>
+      <condition expression="willQualPeriodBeSatisfied==&quot;YN1&quot;">
+        <cluster entity="DailyLiving">
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question id="qualSatisfiedDate" mandatory="false" control-question="false" multi-select="false" show-field-help="false">
+            <label id="QualSatisfiedDate.LabelID">null</label>
+            <help-text id="QualSatisfiedDate.HelpID">null</help-text>
+          </question>
+        </cluster>
+      </condition>
+      <cluster entity="DailyLiving">
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <question id="prospectiveTestMet" mandatory="true" control-question="true" control-question-type="IEG_YES_NO" multi-select="false" show-field-help="false">
+          <label id="ProspectiveTestMet.LabelID">null</label>
+          <help-text id="ProspectiveTestMet.HelpID">null</help-text>
+        </question>
+      </cluster>
+      <condition expression="(prospectiveTestMet==&quot;YN1&quot; and qualPeriodSatisfied==&quot;YN1&quot;) or willQualPeriodBeSatisfied==&quot;YN1&quot;">
+        <cluster>
+          <title id="DailyLivingCluster.Title">Daily Living</title>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question id="takingNutrition" mandatory="true" control-question="false" multi-select="false" show-field-help="false">
+            <label id="TakingNutrition.LabelID">Taking Nutrition</label>
+            <help-text id="TakingNutrition.HelpID">Select the level of nutrition from the list</help-text>
+          </question>
+          <question id="managingTherapy" mandatory="true" control-question="false" multi-select="false" show-field-help="false">
+            <label id="ManagingTherapy.LabelID">Managing therapy or monitoring a health condition</label>
+            <help-text id="ManagingTherapy.HelpID">Select the ability to manage therapy from the list</help-text>
+          </question>
+          <question id="bathing" mandatory="true" control-question="false" multi-select="false" show-field-help="false">
+            <label id="Bathing.LabelID">Bathing and grooming</label>
+            <help-text id="Bathing.HelpID">Select the level of bathing ability from the list</help-text>
+          </question>
+        </cluster>
+      </condition>
+    </question-page>
+    <question-page id="QualifyingPeriod.PageID" entity="Mobility" progress="75" show-person-tabs="false" read-only="false" show-back-button="true" show-exit-button="false" show-save-exit-button="true" show-next-button="true" set-focus="true">
+      <title id="Mobility.Title">Mobility</title>
+      <cluster entity="Mobility">
+        <title id="QualifyingPeriodCluster.Title">Qualifying Period</title>
+        <description id="QualifyingPeriodCluster.Desc">Qualifying Period</description>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <question id="mQualPeriodSatisfied" mandatory="true" control-question="true" control-question-type="IEG_YES_NO" multi-select="false" show-field-help="false">
+          <label id="QualPeriodSatisfied.LabelID">Was the Qualifying Period satisfied before the date of claim?</label>
+          <help-text id="QualPeriodSatisfied.HelpID">Select either Yes or No</help-text>
+        </question>
+      </cluster>
+      <condition expression="mQualPeriodSatisfied==&quot;YN2&quot;">
+        <cluster entity="Mobility">
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question id="mWillQualPeriodBeSatisfied" mandatory="false" control-question="true" control-question-type="IEG_YES_NO" multi-select="false" show-field-help="false">
+            <label id="WillQualPeriod.LabelID">Will the qualifying period be satisfied?</label>
+            <help-text id="WillQualPeriod.HelpID">null</help-text>
+          </question>
+        </cluster>
+      </condition>
+      <condition expression="mWillQualPeriodBeSatisfied==&quot;YN1&quot;">
+        <cluster entity="Mobility">
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question id="qualSatisfiedDate" mandatory="false" control-question="false" multi-select="false" show-field-help="false">
+            <label id="QualSatisfiedDate.LabelID">When will the Qualifying Period be satisfied?</label>
+            <help-text id="QualSatisfiedDate.HelpID">Enter the date, or click on calendar icon and select date</help-text>
+          </question>
+        </cluster>
+      </condition>
+      <cluster entity="Mobility">
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <question id="mProspectiveTestMet" mandatory="true" control-question="true" control-question-type="IEG_YES_NO" multi-select="false" show-field-help="false">
+          <label id="ProspectiveTestMet.LabelID">Will the Prospective Test be met?</label>
+          <help-text id="ProspectiveTestMet.HelpID">Select either Yes or No</help-text>
+        </question>
+      </cluster>
+      <condition expression="(mProspectiveTestMet==&quot;YN1&quot; and  mQualPeriodSatisfied==&quot;YN1&quot;) or mWillQualPeriodBeSatisfied==&quot;YN1&quot;">
+        <cluster>
+          <title id="MobilityCluster.Title">Mobility</title>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question id="planningJourney" mandatory="true" control-question="false" multi-select="false" show-field-help="false">
+            <label id="PlanningJourney.LabelID">Planning and following a journey</label>
+            <help-text id="PlanningJourney.HelpID">Select the level of planning</help-text>
+          </question>
+          <question id="movingAround" mandatory="true" control-question="false" multi-select="false" show-field-help="false">
+            <label id="MovingAround.LabelID">Moving around</label>
+            <help-text id="MovingAround.HelpID">Select the level of mobility</help-text>
+          </question>
+        </cluster>
+      </condition>
+    </question-page>
+  </section>
+  <section>
+    <title id="Summary.Title">Summary</title>
+    <summary-page id="Summary.PageID" entity="AssessmentType" progress="0" show-back-button="true" show-exit-button="true" show-save-exit-button="true" show-next-button="false" set-focus="false">
+      <title id="SummaryPage.Title">Summary</title>
+      <description id="SummaryPage.Desc">Please review all information on this page for accuracy. If you need to add information about any individual, please click the 'Add' link next to the appropriate question. To modify any of the information provided, please click the Change link next to the appropriate record. Click the 'Remove' link to remove a record.</description>
+      <cluster>
+        <title id="AssessmenttypeSummary.Title">Assessment Type</title>
+        <description id="AssessmenttypeSummary.Desc">Assessment</description>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <question id="assessmentType" mandatory="false" control-question="false" multi-select="false" show-field-help="false">
+          <label id="AssessmentTypeSummary.LabelID">Assessment Type</label>
+          <help-text id="AssessmentTypeSummary.HelpID">The type of assessment carried out</help-text>
+        </question>
+      </cluster>
+      <cluster>
+        <title id="TerminalIllnessSummary.Title">Terminal Illness</title>
+        <description id="TerminalIllnessSummary.Desc">Terminal Illness</description>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <question id="tiProvisionsClaimed" mandatory="false" control-question="false" multi-select="false" show-field-help="false">
+          <label id="TiProvisionsClaimedSummary.LabelID">Terminally Ill Provisions Claimed</label>
+          <help-text id="TiProvisionsClaimedSummary.HelpID">The TI Provisions that have already been claimed</help-text>
+        </question>
+        <question id="tiProvisionsMet" mandatory="false" control-question="false" multi-select="false" show-field-help="false">
+          <label id="TiProvisionsMet.LabelID">Terminally Ill Provisions Met</label>
+          <help-text id="TiProvisionsMet.HelpID">New Question Help Text</help-text>
+        </question>
+      </cluster>
+      <list entity="Disability" show-icons="false">
+        <title id="ImpairmentSummary.Title">Impairment</title>
+        <column id="subCategory">
+          <title id="SubCategoryColumn.Title">Sub Category</title>
+        </column>
+      </list>
+      <cluster entity="DailyLiving">
+        <title id="QualifyingPeriodCluster.Title">null</title>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <question id="qualPeriodSatisfied" mandatory="true" control-question="true" control-question-type="IEG_YES_NO" multi-select="false" show-field-help="false">
+          <label id="QualPeriodSatisfied.LabelID">null</label>
+          <help-text id="QualPeriodSatisfied.HelpID">null</help-text>
+        </question>
+      </cluster>
+      <condition expression="qualPeriodSatisfied==&quot;YN2&quot;">
+        <cluster entity="DailyLiving">
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question id="willQualPeriodBeSatisfied" mandatory="false" control-question="true" control-question-type="IEG_YES_NO" multi-select="false" show-field-help="false">
+            <label id="WillQualPeriod.LabelID">null</label>
+            <help-text id="WillQualPeriod.HelpID">null</help-text>
+          </question>
+        </cluster>
+      </condition>
+      <condition expression="willQualPeriodBeSatisfied==&quot;YN1&quot;">
+        <cluster entity="DailyLiving">
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question id="qualSatisfiedDate" mandatory="false" control-question="false" multi-select="false" show-field-help="false">
+            <label id="QualSatisfiedDate.LabelID">null</label>
+            <help-text id="QualSatisfiedDate.HelpID">null</help-text>
+          </question>
+        </cluster>
+      </condition>
+      <cluster entity="DailyLiving">
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <question id="prospectiveTestMet" mandatory="true" control-question="true" control-question-type="IEG_YES_NO" multi-select="false" show-field-help="false">
+          <label id="ProspectiveTestMet.LabelID">null</label>
+          <help-text id="ProspectiveTestMet.HelpID">null</help-text>
+        </question>
+      </cluster>
+      <condition expression="(prospectiveTestMet==&quot;YN1&quot; and qualPeriodSatisfied==&quot;YN1&quot;) or willQualPeriodBeSatisfied==&quot;YN1&quot;">
+        <cluster entity="DailyLiving">
+          <title id="DailyLivingCluster.Title">null</title>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question id="takingNutrition" mandatory="true" control-question="false" multi-select="false" show-field-help="false">
+            <label id="TakingNutrition.LabelID">null</label>
+            <help-text id="TakingNutrition.HelpID">null</help-text>
+          </question>
+          <question id="managingTherapy" mandatory="true" control-question="false" multi-select="false" show-field-help="false">
+            <label id="ManagingTherapy.LabelID">null</label>
+            <help-text id="ManagingTherapy.HelpID">null</help-text>
+          </question>
+          <question id="bathing" mandatory="true" control-question="false" multi-select="false" show-field-help="false">
+            <label id="Bathing.LabelID">null</label>
+            <help-text id="Bathing.HelpID">null</help-text>
+          </question>
+        </cluster>
+      </condition>
+      <cluster entity="Mobility">
+        <title id="QualifyingPeriodCluster.Title">null</title>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <question id="mQualPeriodSatisfied" mandatory="true" control-question="true" control-question-type="IEG_YES_NO" multi-select="false" show-field-help="false">
+          <label id="QualPeriodSatisfied.LabelID">null</label>
+          <help-text id="QualPeriodSatisfied.HelpID">null</help-text>
+        </question>
+      </cluster>
+      <condition expression="mQualPeriodSatisfied==&quot;YN2&quot;">
+        <cluster entity="Mobility">
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question id="mWillQualPeriodBeSatisfied" mandatory="false" control-question="true" control-question-type="IEG_YES_NO" multi-select="false" show-field-help="false">
+            <label id="WillQualPeriod.LabelID">null</label>
+            <help-text id="WillQualPeriod.HelpID">null</help-text>
+          </question>
+        </cluster>
+      </condition>
+      <condition expression="mWillQualPeriodBeSatisfied==&quot;YN1&quot;">
+        <cluster entity="Mobility">
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question id="qualSatisfiedDate" mandatory="false" control-question="false" multi-select="false" show-field-help="false">
+            <label id="QualSatisfiedDate.LabelID">null</label>
+            <help-text id="QualSatisfiedDate.HelpID">null</help-text>
+          </question>
+        </cluster>
+      </condition>
+      <cluster entity="Mobility">
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <question id="mProspectiveTestMet" mandatory="true" control-question="true" control-question-type="IEG_YES_NO" multi-select="false" show-field-help="false">
+          <label id="ProspectiveTestMet.LabelID">null</label>
+          <help-text id="ProspectiveTestMet.HelpID">null</help-text>
+        </question>
+      </cluster>
+      <condition expression="(mProspectiveTestMet==&quot;YN1&quot; and  mQualPeriodSatisfied==&quot;YN1&quot;) or mWillQualPeriodBeSatisfied==&quot;YN1&quot;">
+        <cluster entity="Mobility">
+          <title id="MobilityCluster.Title">null</title>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question id="planningJourney" mandatory="true" control-question="false" multi-select="false" show-field-help="false">
+            <label id="PlanningJourney.LabelID">null</label>
+            <help-text id="PlanningJourney.HelpID">null</help-text>
+          </question>
+          <question id="movingAround" mandatory="true" control-question="false" multi-select="false" show-field-help="false">
+            <label id="MovingAround.LabelID">null</label>
+            <help-text id="MovingAround.HelpID">null</help-text>
+          </question>
+        </cluster>
+      </condition>
+    </summary-page>
+  </section>
 </ieg-script>
+

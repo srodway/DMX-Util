@@ -1,19 +1,25 @@
 #
 # Licensed Materials - Property of IBM
+#
+# PID 5725-H26
 # 
-# Copyright IBM Corporation 2012. All Rights Reserved.
+# Copyright IBM Corporation 2014. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-# This Properties file contains resource Strings for the PDC Email Address Validation Ruleset.
+# This Properties file contains resource Strings for the Incapacity Benefit rules.
+IncapacityBenefitProductCase.description=Incapacity Benefit Product Case
+IncapacityBenefitSimulatedDetermination.description=Incapacity Benefit Simulated Determination
+IncapacityBenefitProgramRecommender.description=Incapacity Benefit Program Recommender
+InvalidityBenefitAmountObjectives.description=Invalidity Benefit Amount Objectives
+SicknessBenefitAmountObjectives.description=Sickness Benefit Amount Objectives
+IncapacityBenefitTagType.description=Incapacity Benefit Tag Type
+IncapacityBenefitTagTimeline.description=Incapacity Benefit Tag Timeline
+IncapacityBenefitObjectiveType.description=Incapacity Benefit Objective Type
+IncapacityBenefitObjectiveTimeline.description=Incapacity Benefit Objective Timeline
+IncapacityBenefitObjectiveCalculator.description=Incapacity Benefit Objective Calculator
+IncapacityBenefitProduct.description=Incapacity Benefit Product
 
-ERR_CONCERNROLEEMAILADDRESS_XRV_DUPLICATE_CLIENT_CREATE=New email address details cannot be added for a client that is currently marked as a duplicate.
-ERR_CONCERNROLEEMAILADDRESS_XRV_DUPLICATE_CLIENT_MODIFY=Email address details of a client that is currently marked as a duplicate cannot be modified.
-ERR_CONCERNROLE_EMAILADDRESS_XRV_START_DATE=The email address from date must be after {0} Date of Birth - {1,date,M/d/yyyy}.
-ERR_CONCERNROLE_XRV_START_DATE_END_DATE=The email address from date must be before {0} Date of Death - {1,date,M/d/yyyy}.
-ERR_CONCERNROLE_XRV_END_DATE=The email address to date must be before {0} Date of Death - {1,date,M/d/yyyy}.
-ERR_EMAILADDRESS_XRV_EFFECTIVE_DATE_DOB=The effective date of change must be after the date of birth.
-ERR_EMAILADDRESS_TYPEMODIFIED=Type cannot be modified.
-PDCEmailAddressValidationResult.description=PDC Email Address Validation Result For {0}
-ERR_EMAILADDRESS_MULTIPLE_PREFERRED_EMAILADDRESS=You cannot have more than one preferred email address.
+#Program Calculator 
+ProgramCalculator.description=Program Calculator Class for Case Id {0}

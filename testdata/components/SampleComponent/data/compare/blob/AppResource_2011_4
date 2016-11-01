@@ -1,4 +1,125 @@
-navigation-group.Verifications.title=Verifications
-navigation-group.Details.title=Home
-navigation-group.Issues.title=Issues
-navigation-group.ChangeHistory.title=Change History
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<PAGE
+  PAGE_ID="PDIncapacityBenefit_diagnosisSubscreen"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="file://Curam/UIMSchema.xsd"
+>
+  <PAGE_TITLE>
+    <CONNECT>
+      <SOURCE
+        NAME="TEXT"
+        PROPERTY="Page.Title"
+      />
+    </CONNECT>
+  </PAGE_TITLE>
+
+
+  <PAGE_PARAMETER NAME="determinationID"/>
+  <PAGE_PARAMETER NAME="displayDate"/>
+  <PAGE_PARAMETER NAME="businessObjectID"/>
+
+
+  <SERVER_INTERFACE
+    CLASS="CaseDetermination"
+    NAME="DISPLAY"
+    OPERATION="viewDecisionDisplayRuleCategorySubscreenXML"
+  />
+
+
+  <CONNECT>
+    <SOURCE
+      NAME="PAGE"
+      PROPERTY="determinationID"
+    />
+    <TARGET
+      NAME="DISPLAY"
+      PROPERTY="key$determinationID"
+    />
+  </CONNECT>
+  <CONNECT>
+    <SOURCE
+      NAME="PAGE"
+      PROPERTY="displayDate"
+    />
+    <TARGET
+      NAME="DISPLAY"
+      PROPERTY="key$date"
+    />
+  </CONNECT>
+  <CONNECT>
+    <SOURCE
+      NAME="TEXT"
+      PROPERTY="CategoryRef"
+    />
+    <TARGET
+      NAME="DISPLAY"
+      PROPERTY="key$categoryRef"
+    />
+  </CONNECT>
+  <CONNECT>
+    <SOURCE
+      NAME="PAGE"
+      PROPERTY="businessObjectID"
+    />
+    <TARGET
+      NAME="DISPLAY"
+      PROPERTY="key$businessObjectID"
+    />
+  </CONNECT>
+  <CONNECT>
+    <SOURCE
+      NAME="TEXT"
+      PROPERTY="SubscreenName"
+    />
+    <TARGET
+      NAME="DISPLAY"
+      PROPERTY="key$subscreenName"
+    />
+  </CONNECT>
+
+
+  <CLUSTER NUM_COLS="1">
+
+
+    <LIST>
+
+
+      <FIELD LABEL="Field.Label.Type">
+        <CONNECT>
+          <SOURCE
+            EXTENDED_PATH="/Item/diagnosisType/Item[]"
+            NAME="DISPLAY"
+            PROPERTY="xmlData"
+          />
+        </CONNECT>
+      </FIELD>
+
+
+      <FIELD LABEL="Field.Label.ExaminationDate">
+        <CONNECT>
+          <SOURCE
+            EXTENDED_PATH="/Item/diagnosisDate/Item[]"
+            NAME="DISPLAY"
+            PROPERTY="xmlData"
+          />
+        </CONNECT>
+      </FIELD>
+
+
+    </LIST>
+
+
+  </CLUSTER>
+
+
+</PAGE>

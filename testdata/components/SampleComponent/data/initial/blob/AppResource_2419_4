@@ -6,21 +6,21 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2011 Curam Software Ltd.
+  Copyright 2010 Curam Software Ltd.
   All rights reserved.
-
+  
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ViewReleasedChangeSet">
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="CorrectionProductAdminMenu">
+  
+  <mc:menu-item id="Edit" open-as="modal" page-id="Product_modifyCorrection" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
+  
+  <mc:menu-separator id="sep1"/>
+  
+  <mc:menu-item id="ExistingDeduction" open-as="modal" page-id="Product_addDeduction" title="MenuItem.Title.ExistingDeduction" tooltip="MenuItem.Tooltip.ExistingDeduction"/>
+  
+  <mc:menu-item id="NewDeduction" open-as="modal" page-id="Product_createDeduction" title="MenuItem.Title.NewDeduction" tooltip="MenuItem.Tooltip.NewDeduction"/>
 
-<tc:page-param name="changeSetID"/>
-  
-    <!-- Details panel -->
-    <tc:context height="0" page-id="CTM_viewReleasedChangeSetTabDetails"/>
-  
-  <!-- No navigation Panel -->
-  <tc:navigation page-id="CTM_viewReleasedChangeSet"/>
-  
-</tc:tab-config>
+</mc:menu-bar>

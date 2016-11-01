@@ -1,26 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
  
-  Copyright IBM Corporation 2012. All Rights Reserved.
+  PID 5725-H26
+ 
+  Copyright IBM Corporation 2010, 2014. All Rights Reserved.
 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2010 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="Nicknames">
-  
-  <!-- No Action Menus -->
+    Copyright 2010-2012 Curam Software Ltd.
+    All rights reserved.
     
-  <!-- No details panel -->
-  <tc:context tab-name="Details.Name.Nicknames" tab-title="Details.Title.Nicknames"/>
+    This software is the confidential and proprietary information of Curam
+    Software, Ltd. ("Confidential Information"). You shall not disclose
+    such Confidential Information and shall use it only in accordance with the
+    terms of the license agreement you entered into with Curam Software.
+--><sc:section-shortcut-panel xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-shortcut-panel" id="SUPERAPPSectionShortcuts" title="SupervisorAppSectionShortcuts.title">
 
-  <!-- No navigation Panel -->
-  <tc:navigation page-id="System_listNickname"/>
+  <sc:nodes>
+    <sc:node id="Users" title="Users.Title" type="group">
+      <sc:node id="MyUsers" page-id="Supervisor_listUsers" title="MyUsers.Title" type="leaf">
+      </sc:node>
+      <!-- BEGIN, CR00440455, VT -->
+      <sc:node id="MyWorkQueues" page-id="Supervisor_userSubscribedWorkQueues" title="MyWorkQueues.Title" type="leaf">
+      </sc:node>
+      <!-- END, CR00440455 -->
+      <sc:node id="MyOrganizationUnits" page-id="Supervisor_listOrgUnits" title="MyOrganizationUnits.Title" type="leaf">
+      </sc:node>
+      <sc:node id="UserWorkLoads" page-id="Supervisor_casesHome" title="UserWorkLoads.Title" type="leaf">
+      </sc:node>
+      
+      <sc:node id="UsersSep1" type="separator"/>
+      <!-- BEGIN, CR00311377, AKr -->
+      <sc:node id="CasesWithAppeals" page-id="SupervisorAppeals_casesWithAppealsHeatMap" title="CasesWithAppeals.Title" type="leaf">
+      </sc:node>
+      <!-- END, CR00311377 -->
+      <sc:node id="CasesWithIssues" page-id="Supervisor_resolveCasesWithIssues" title="CasesWithIssues.Title" type="leaf">
+      </sc:node>
 
-</tc:tab-config>
+    </sc:node>
+
+    
+    <sc:node id="MyWorkLoad" title="MyWorkload.Title" type="group">
+      <sc:node id="NewCaseQuery" open-as="modal" page-id="Case_createQuery" title="NewCaseQuery.Title" type="leaf">
+      </sc:node>
+      <sc:node id="RegisterPersonCreateCase" open-as="modal" page-id="Case_resolveRegisterPersonAndCreateCase" title="RegisterPersonCreateCase.Title" type="leaf">
+      </sc:node>
+      <sc:node id="AddProspectCreateCase" open-as="modal" page-id="Case_resolveRegisterProspectPersonAndCreateCase" title="AddProspectCreateCase.Title" type="leaf">
+      </sc:node>  
+      <sc:node id="MyWorkloadSep1" type="separator"/>
+      
+      <sc:node id="MyCaseQueries" page-id="Case_queryList1" title="MyCaseQueries.Title" type="leaf">
+      </sc:node>
+      <sc:node id="MyItemsOfInterest" page-id="Organization_listUserBookmark" title="MyItemsOfInterest.Title" type="leaf">
+      </sc:node>
+      
+      <sc:node id="MyWorkloadSep2" type="separator"/>
+      
+      <sc:node id="MyCases" page-id="Organization_userCases" title="MyCases.Title" type="leaf">
+      </sc:node>
+      <sc:node id="MyRecentlyApprovedCase" page-id="Organization_listRecentApprovedCaseForUser1" title="MyRecentlyApproved.Title" type="leaf">
+      </sc:node>
+      <sc:node id="MyRecentlyAssignedCase" page-id="Organization_listRecentAssignedCaseForUser1" title="MyRecentlyAssigned.Title" type="leaf">
+      </sc:node>
+      <sc:node id="MyRecentlyViewedCase" page-id="Organization_listRecentViewedCaseForUser" title="MyRecentlyViewed.Title" type="leaf">
+      </sc:node>
+      
+      <sc:node id="MyWorkloadSep3" type="separator"/>
+      
+      <sc:node id="NewInvestigation" open-as="modal" page-id="InvestigationSample_selectPersonType" title="NewInvestigation.Title" type="leaf">
+      </sc:node>
+      <sc:node id="NewInvestigationQuery" open-as="modal" page-id="Investigation_createQuery" title="NewInvestigationQuery.Title" type="leaf">
+      </sc:node>
+      
+      <sc:node id="MyWorkloadSep4" type="separator"/>
+      
+      <sc:node id="MyInvestigations" page-id="Organization_userInvestigation" title="MyInvestigations.Title" type="leaf">
+      </sc:node>
+    </sc:node> 
+
+    <sc:node id="Searches" title="Searches.Title" type="group">
+      <sc:node id="UserSearch" page-id="Supervisor_userSearchDetails" title="UserSearch.Title" type="leaf">
+      </sc:node>
+      <sc:node id="TaskSearch" page-id="Supervisor_searchTask" title="TaskSearch.Title" type="leaf">
+      </sc:node>
+      
+      <sc:node id="SearchesSep1" type="separator"/>
+      
+      <sc:node id="CaseSearch" page-id="Case_search1" title="CaseSearch.Title" type="leaf">
+      </sc:node>
+      <sc:node id="SearchForIncident" page-id="Incident_search" title="SearchForIncident.Title" type="leaf">
+      </sc:node>
+      <sc:node id="SearchForAppeal" page-id="Appeal_search" title="SearchForAppeal.Title" type="leaf">
+      </sc:node>
+      
+      <sc:node id="SearchesSep2" type="separator"/>
+      
+      <sc:node id="PersonSearch" page-id="Person_search1" title="PersonSearch.Title" type="leaf">
+      </sc:node> 
+      <sc:node id="EmployerSearch" page-id="Employer_search1" title="EmployerSearch.Title" type="leaf">
+      </sc:node> 
+    </sc:node>
+
+
+    <sc:node id="ParticipantRegistration" title="Registration.Title" type="group">
+      <sc:node id="PersonRegistration" open-as="modal" page-id="RegisterPerson_resolveStartWizard" title="PersonRegistration.Title" type="leaf">
+      </sc:node>
+      <sc:node id="ProspectPersonRegistration" open-as="modal" page-id="AddProspectPerson_resolveStartWizard" title="ProspectPersonRegistration.Title" type="leaf">
+      </sc:node>
+      
+      <sc:node id="RegistrationSep1" type="separator"/>
+      
+      <sc:node id="EmployerRegistration" open-as="modal" page-id="RegisterEmployer_resolveStartWizard" title="EmployerRegistration.Title" type="leaf">
+      </sc:node>
+      <sc:node id="ProspectEmployerRegistration" open-as="modal" page-id="AddProspectEmployer_resolveStartWizard" title="ProspectEmployerRegistration.Title" type="leaf">
+      </sc:node>
+    </sc:node>
+  </sc:nodes>
+  
+</sc:section-shortcut-panel>

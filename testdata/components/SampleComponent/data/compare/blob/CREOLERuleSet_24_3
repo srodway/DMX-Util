@@ -1,438 +1,1015 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2014. All Rights Reserved.
  
-  Copyright IBM Corporation 2012 - 2013. All Rights Reserved.
-
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!-- 
-  Copyright 2009-2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information").  You shall not disclose such
-  Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><!-- 
-     A very basic implementation of display rules.
-     
-     This implementation may be useful during the initial development of
-     products, in order to get the product working with the CREOLE-based
-     Assessment Engine. 
-  
-     The following data will be output when displaying a period within a
-     determination:
-     - A simple sentence describing whether the claim is/is not eligible.
-     - If the claim is eligible, a breakdown of the objectives/tags available.
- --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="AbstractBasicProductDecisionDetailsRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
-
-
-  <Class abstract="true" extends="DefaultCase" extendsRuleSet="DefaultProductDecisionDetailsRuleSet" name="AbstractBasicCase">
-    <Attribute name="description">
+    Copyright 2011 Curam Software Ltd.
+    All rights reserved. 
+    This software is the confidential and proprietary information
+    of Curam Software, Ltd. ("Confidential Information").  You
+    shall not disclose such Confidential Information and shall use
+    it only in accordance with the terms of the license agreement
+    you entered into with Curam Software.
+--><!-- This Ruleset is created for Safety which comes after Reunify.Created for the report purpose --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ReunificationSafetyAfterReunifyRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+  <Class extends="AbstractFactorList" name="FactorList">
+    <Attribute name="factors">
       <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="abstractBasicCase" resourceBundle="curam.core.rules.ProductDecisionDetailsRuleSet">
-          <!-- use toString so that the number is not formatted with commas nor precision truncated -->
-          <property name="toString">
-            <object>
-              <reference attribute="caseID">
-                <reference attribute="productDeliveryCase"/>
-              </reference>
-            </object>
-          </property>
-        </ResourceMessage>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="isEligibleTimeline">
-      <Annotations>
-        <Display domain="SVR_BOOLEAN"/>
-      </Annotations>
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Boolean"/>
+        <javaclass name="List">
+          <ruleclass name="Factor"/>
         </javaclass>
       </type>
       <derivation>
-        <reference attribute="isEligibleTimeline">
-          <reference attribute="abstractCase"/>
-        </reference>
+        <fixedlist>
+          <listof>
+            <ruleclass name="Factor"/>
+          </listof>
+          <members>
+            <reference attribute="determinedSafetyFactor"/>
+          </members>
+        </fixedlist>
       </derivation>
     </Attribute>
-
-
-    <!-- Subclasses must create an instance of the appropriate rule class which
-         is responsible for calculating the case's eligibility and entitlement.
-    -->
-    <Attribute name="abstractCase">
+    <Attribute name="determinedSafetyFactor">
       <type>
-        <ruleclass name="AbstractCase" ruleset="ProductEligibilityEntitlementRuleSet"/>
+        <ruleclass name="DeterminedSafety"/>
+      </type>
+      <derivation>
+        <create ruleclass="DeterminedSafety"/>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class extends="Factor" name="DeterminedSafety">
+    <!-- Reference of this factor -->
+    <Attribute name="reference">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value="SAFETY"/>
+      </derivation>
+    </Attribute>
+    <Attribute name="roleID">
+      <type>
+        <javaclass name="Long"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="determinedSafety">
+      <type>
+        <ruleclass name="DeterminedSafety"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="DeterminedSafety"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+    <!-- Classification for 'safe'-->
+    <Attribute name="classification">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <codetableentry table="ClassDivisionType"/>
+          </type>
+          <when>
+            <condition>
+              <all>
+                <fixedlist>
+                  <listof>
+                    <javaclass name="Boolean"/>
+                  </listof>
+                  <members>
+                    <equals>
+                      <reference attribute="physicalHarmReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10001"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="previousIncidentsReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10001"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="sexualAbuseReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10001"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="threatenedHarmReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10001"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="immediateConcernReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10001"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="refusingAccessReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10001"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="immediateNeedsReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10001"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="livingConditionsReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10001"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="affectingAbilityReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10001"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="domesticViolenceReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10001"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="negativeTermsReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10001"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="emotionalStabilityReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10001"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="otherReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10001"/>
+                      </Code>
+                    </equals>
+                  </members>
+                </fixedlist>
+              </all>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT8258"/>
+              </Code>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <reference attribute="unsafeOrConditionallySafe"/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <!-- common attribute to calculate 'unsafe' and 'conditionally safe' outcome -->
+    <Attribute name="safetyFactors">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <codetableentry table="RUAIndicator"/>
+          </type>
+          <when>
+            <condition>
+              <any>
+                <fixedlist>
+                  <listof>
+                    <javaclass name="Boolean"/>
+                  </listof>
+                  <members>
+                    <equals>
+                      <reference attribute="physicalHarmReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="previousIncidentsReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="sexualAbuseReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="threatenedHarmReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="immediateConcernReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="refusingAccessReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="immediateNeedsReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="livingConditionsReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="affectingAbilityReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="domesticViolenceReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="negativeTermsReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="emotionalStabilityReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="otherReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                  </members>
+                </fixedlist>
+              </any>
+            </condition>
+            <value>
+              <Code table="RUAIndicator">
+                <String value="RAI10000"/>
+              </Code>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <Code table="RUAIndicator">
+                <String value="RAI10001"/>
+              </Code>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <!-- classification for 'unsafe' or 'conditionally safe' -->
+    <Attribute name="unsafeOrConditionallySafe">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <codetableentry table="ClassDivisionType"/>
+          </type>
+          <when>
+            <condition>
+              <all>
+                <fixedlist>
+                  <listof>
+                    <javaclass name="Boolean"/>
+                  </listof>
+                  <members>
+                    <equals>
+                      <reference attribute="safetyFactors"/>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="safetyInterventions"/>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="PlacementProtectiveCustodyReunify"/>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10001"/>
+                      </Code>
+                    </equals>
+                  </members>
+                </fixedlist>
+              </all>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT8259"/>
+              </Code>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT8260"/>
+              </Code>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <!-- common attribute to calculate 'unsafe' and 'conditionally safe' outcome -->
+    <Attribute name="safetyInterventions">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <codetableentry table="RUAIndicator"/>
+          </type>
+          <when>
+            <condition>
+              <any>
+                <fixedlist>
+                  <listof>
+                    <javaclass name="Boolean"/>
+                  </listof>
+                  <members>
+                    <equals>
+                      <reference attribute="directServicesReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="safetyResourcesReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="communityAgenciesReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="protectVictimReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="leaveHomeReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="safeEnvironmentReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="plannedLegalActionReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="specifyOtherReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                  </members>
+                </fixedlist>
+              </any>
+            </condition>
+            <value>
+              <Code table="RUAIndicator">
+                <String value="RAI10000"/>
+              </Code>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <Code table="RUAIndicator">
+                <String value="RAI10001"/>
+              </Code>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="PlacementProtectiveCustodyReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <codetableentry table="RUAIndicator"/>
+          </type>
+          <when>
+            <condition>
+              <any>
+                <fixedlist>
+                  <listof>
+                    <javaclass name="Boolean"/>
+                  </listof>
+                  <members>
+                    <equals>
+                      <reference attribute="voluntaryPlacementReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                    <equals>
+                      <reference attribute="protectiveCustodyReunify">
+                        <reference attribute="reunificationAssessment"/>
+                      </reference>
+                      <Code table="RUAIndicator">
+                        <String value="RAI10000"/>
+                      </Code>
+                    </equals>
+                  </members>
+                </fixedlist>
+              </any>
+            </condition>
+            <value>
+              <Code table="RUAIndicator">
+                <String value="RAI10000"/>
+              </Code>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <Code table="RUAIndicator">
+                <String value="RAI10001"/>
+              </Code>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class abstract="true" extends="AbstractFactor" name="Factor">
+    <Attribute name="assessment">
+      <type>
+        <ruleclass name="Assessment"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="Assessment"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+    <Attribute name="reunificationAssessment">
+      <type>
+        <ruleclass name="Group"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="Group"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+    <Attribute name="classificationPriority">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Number"/>
+          </type>
+          <test>
+            <reference attribute="classification"/>
+          </test>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT8258"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="1"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT8259"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="2"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT8260"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="3"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="factorList">
+      <type>
+        <ruleclass name="FactorList"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="FactorList"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+  </Class>
+  <!-- This class must be extended by all rule sets invoked by the Assessment 
+      and planning processing. This class is used to hold the list of factors 
+      that should be assessed during the assessment-->
+  <Class abstract="true" name="AbstractFactorList">
+    <Attribute name="factors">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="AbstractFactor"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <!-- Subclasses of AbstractFactorList must override
+            this attribute to create a list of the factors
+            supported by the rule set. -->
+        <abstract/>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class abstract="true" name="AbstractFactor">
+    <!-- The reference for the factor. -->
+    <Attribute name="reference">
+      <type>
+        <javaclass name="String"/>
       </type>
       <derivation>
         <abstract/>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="displayObjectiveTimelines">
-      <Annotations>
-        <Display/>
-        <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.1" name="Creates an Objective Timeline for display for each Objective Timeline on this case"/>
-      </Annotations>
+    <!-- The id of role that the factor is related to. -->
+    <Attribute name="roleID">
       <type>
-        <javaclass name="List">
-          <ruleclass name="DisplayObjectiveTimeline"/>
-        </javaclass>
+        <javaclass name="Long"/>
       </type>
       <derivation>
-
-
-        <dynamiclist>
-          <list>
-            <reference attribute="objectiveTimelines">
-              <reference attribute="abstractCase"/>
-            </reference>
-          </list>
-          <listitemexpression>
-            <create ruleclass="DisplayObjectiveTimeline">
-              <specify attribute="objectiveTimeline">
-                <current/>
-              </specify>
-              <specify attribute="index">
-                <property name="indexOf">
-                  <Annotations>
-                    <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.2" name="Find the 0-based index of the current item in the list.  Used to provide a numerical key for each objective timeline for display."/>
-                  </Annotations>
-                  <object>
-                    <reference attribute="objectiveTimelines">
-                      <reference attribute="abstractCase"/>
-                    </reference>
-                  </object>
-                  <arguments>
-                    <current/>
-                  </arguments>
-                </property>
-
-
-              </specify>
-            </create>
-          </listitemexpression>
-        </dynamiclist>
-
-
+        <abstract/>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="displayObjectiveTimelineSubscreens">
-      <Annotations>
-        <DisplaySubscreen/>
-      </Annotations>
-      <type>
-        <javaclass name="List">
-          <ruleclass name="DisplayObjectiveTimelineSubscreen"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <dynamiclist>
-          <list>
-            <reference attribute="displayObjectiveTimelines"/>
-          </list>
-          <listitemexpression>
-            <create ruleclass="DisplayObjectiveTimelineSubscreen">
-              <specify attribute="displayObjectiveTimeline">
-                <current/>
-              </specify>
-            </create>
-          </listitemexpression>
-        </dynamiclist>
-
-
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <Class extends="DefaultCaseSubscreenDisplay" extendsRuleSet="DefaultProductDecisionDetailsRuleSet" name="DisplayObjectiveTimelineSubscreen">
-    <Annotations>
-      <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.3" name="Further display details for an objective, namely its list of tags."/>
-    </Annotations>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="subscreen" resourceBundle="curam.core.rules.ProductDecisionDetailsRuleSet">    
-        </ResourceMessage>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="displayObjectiveTimeline">
-      <type>
-        <ruleclass name="DisplayObjectiveTimeline"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="businessObjectID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <reference attribute="index">
-          <reference attribute="displayObjectiveTimeline"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="displayTagTimelines">
-      <Annotations>
-        <Display/>
-      </Annotations>
-      <type>
-        <javaclass name="List">
-          <ruleclass name="DisplayTagTimeline"/>
-        </javaclass>
-      </type>
-      <derivation>
-
-
-        <reference attribute="displayTagTimelines">
-          <reference attribute="displayObjectiveTimeline"/>
-        </reference>
-
-
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <Class name="DisplayObjectiveTimeline">
-
-
-    <Annotations>
-      <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.4" name="The display data for an objective timeline."/>
-    </Annotations>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="objectiveTimeline" resourceBundle="curam.core.rules.ProductDecisionDetailsRuleSet">        
-        </ResourceMessage>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="objectiveTimeline">
-      <Annotations>
-        <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.5" name="The underlying objective timeline calculated as part of the case's entitlement."/>
-      </Annotations>
-      <type>
-        <ruleclass name="AbstractObjectiveTimeline" ruleset="ProductEligibilityEntitlementRuleSet"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="index">
-      <Annotations>
-        <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.6" name="The 0-based index of this objective timeline from the overall list of objective tlmelines for the case.  Used as a key so that the child tag timelines for display can be linked back to the parent objective timeline for display."/>
-        <Display/>
-      </Annotations>
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="objectiveTypeID">
-      <Annotations>
-        <Display/>
-      </Annotations>
+    <!-- The score of the factor. Either a score or classification must be provided, 
+        if both are provided the classification is used -->
+    <Attribute name="score">
       <type>
         <javaclass name="String"/>
       </type>
       <derivation>
-        <reference attribute="objectiveTypeID">
-          <reference attribute="objectiveType">
-            <reference attribute="objectiveTimeline"/>
-          </reference>
-        </reference>
+        <String value="0"/>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="isEntitledTimeline">
-      <Annotations>
-        <Display/>
-      </Annotations>
+    <!-- The classification of the factor. Either a score or classification must be provided, 
+        if both are provided the classification is used -->
+    <Attribute name="classification">
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Boolean"/>
-        </javaclass>
+        <codetableentry table="ClassDivisionType"/>
       </type>
       <derivation>
-        <reference attribute="isEntitledTimeline">
-          <reference attribute="objectiveTimeline"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="targetIDTimeline">
-      <Annotations>
-        <Display/>
-      </Annotations>
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Number"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <reference attribute="targetIDTimeline">
-          <reference attribute="objectiveTimeline"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="relatedReferenceTimeline">
-      <Annotations>
-        <Display/>
-      </Annotations>
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="String"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <reference attribute="relatedReferenceTimeline">
-          <reference attribute="objectiveTimeline"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="displayTagTimelines">
-      <Annotations>
-        <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.7" name="Creates a Tag Timeline for display for each Tag Timeline on this Objective Timeline"/>
-      </Annotations>
-      <type>
-        <javaclass name="List">
-          <ruleclass name="DisplayTagTimeline"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <dynamiclist>
-          <list>
-            <reference attribute="tagTimelines">
-              <reference attribute="objectiveTimeline"/>
-            </reference>
-          </list>
-          <listitemexpression>
-            <create ruleclass="DisplayTagTimeline">
-              <specify attribute="tagTimeline">
-                <current/>
-              </specify>
-            </create>
-          </listitemexpression>
-        </dynamiclist>
-
-
+        <abstract/>
       </derivation>
     </Attribute>
   </Class>
-
-
-  <Class name="DisplayTagTimeline">
-
-
-    <Annotations>
-      <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.8" name="The display data for a tag timeline."/>
-    </Annotations>
-
-
-    <Attribute name="description">
+  <Class name="Group">
+    <!-- Attributes for Safety Assessment -->
+    <Attribute name="agerangeReunify">
       <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="tagTimeline" resourceBundle="curam.core.rules.ProductDecisionDetailsRuleSet">
-        </ResourceMessage>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="tagTimeline">
-      <Annotations>
-        <Label label-id="AbstractBasicProductDecisionDetailsRuleSet.label.9" name="The underlying tag timeline calculated as part of the case's entitlement."/>
-      </Annotations>
-      <type>
-        <ruleclass name="AbstractTagTimeline" ruleset="ProductEligibilityEntitlementRuleSet"/>
+        <javaclass name="Boolean"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="valueTimeline">
-      <Annotations>
-        <Display/>
-      </Annotations>
+    <Attribute name="diagnosedDisorderReunify">
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Object"/>
-        </javaclass>
+        <javaclass name="Boolean"/>
       </type>
       <derivation>
-        <reference attribute="valueTimeline">
-          <reference attribute="tagTimeline"/>
-        </reference>
+        <specified/>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="pattern">
-      <Annotations>
-        <Display domain="FREQUENCY_PATTERN"/>
-      </Annotations>
+    <Attribute name="schoolAgeReunify">
       <type>
-        <javaclass name="curam.util.type.FrequencyPattern"/>
+        <javaclass name="Boolean"/>
       </type>
       <derivation>
-        <reference attribute="pattern">
-          <reference attribute="tagType">
-            <reference attribute="tagTimeline"/>
-          </reference>
-        </reference>
+        <specified/>
       </derivation>
     </Attribute>
-
-
+    <Attribute name="mentalCapacityReunify">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="physicalCapacityReunify">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="physicalHarmReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="seriousInjuryReunify">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="maltreatedChildReunify">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="threatOfHarmReunify">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="excessiveDisciplineReunify">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="drugExposedReunify">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="previousIncidentsReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="sexualAbuseReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="threatenedHarmReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="immediateConcernReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="refusingAccessReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="immediateNeedsReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="livingConditionsReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="affectingAbilityReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="domesticViolenceReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="negativeTermsReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="emotionalStabilityReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="otherReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="otherCommentsReunify">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="safetyThreatResolutionReunify">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="directServicesReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="safetyResourcesReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="communityAgenciesReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="protectVictimReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="leaveHomeReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="safeEnvironmentReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="plannedLegalActionReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="specifyOtherReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="otherDetailsReunify">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="voluntaryPlacementReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="protectiveCustodyReunify">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
   </Class>
-
-
+  <Class name="Assessment">
+    <Attribute name="assessmentInstanceID">
+      <type>
+        <javaclass name="Long"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="assessmentDefinitionID">
+      <type>
+        <javaclass name="Long"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+  </Class>
 </RuleSet>

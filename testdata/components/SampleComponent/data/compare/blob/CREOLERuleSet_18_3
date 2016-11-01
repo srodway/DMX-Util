@@ -1,65 +1,130 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2010-2011 Curam Software Ltd.
-    All rights reserved.
-
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. (&quot;Confidential Information&quot;).  You shall not disclose such
-    Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><!--
-  
-  Default implementations of the rules classes in ProgramRecommendationDisplayRuleSet.
-  
-  Rule Set developers should extend these classes rather than directly extending the classes
-  defined in ProgramRecommendationRuleSet. These default implementations provide
-  some isolation against future changes.
---><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DefaultProgramRecommendationDisplayRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
-
-
-  <!--
-    Default implementation of ProgramRecommendationDisplayCase.
-    -->
-  <Class abstract="true" extends="ProgramRecommendationDisplayCase" extendsRuleSet="ProgramRecommendationDisplayRuleSet" name="DefaultProgramRecommendationDisplayCase">
-
-
-    <Attribute name="displayCategoryID">
+<?xml version="1.0" encoding="UTF-8"?><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DefaultAllocationTargetsRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+  <Class extends="AbstractAllocationTargets" extendsRuleSet="AbstractAllocationTargetsRuleSet" name="AllocationTargetsImpl">
+    <Annotations>
+      <Documentation documentation-id="DefaultAllocationTargetsRuleSetDocumentationID_1354547070210" text="This is the default implementation class for a workflow allocation ruleset. It extends from the abstract Allocation Targets ruleset that describes the structure of allocation rules. Any class that extends this class can be considered a primary class which is used to hold the targets for allocation."/>
+    </Annotations>
+    <Attribute name="description">
       <type>
-        <javaclass name="Number"/>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="AllocationTargetsImpl" resourceBundle="curam.core.rules.DefaultAllocationTargetsRuleSet">    
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+    <Attribute name="targets">
+      <Annotations>
+        <Documentation documentation-id="DefaultAllocationTargetsRuleSetDocumentationID_1354547084844" text="This is a mandatory attribute for any workflow allocation ruleset. Targets is a list of allocation target classes that is required by the workflow engine to assign the task, notification, decision or reminder. Each target must contain an allocation type and an instance  of the chosen type."/>
+      </Annotations>
+      <type>
+        <javaclass name="List">
+          <ruleclass name="AllocationTarget" ruleset="AbstractAllocationTargetsRuleSet"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="List">
+              <ruleclass name="AllocationTarget" ruleset="AbstractAllocationTargetsRuleSet"/>
+            </javaclass>
+          </type>
+          <when>
+            <condition>
+              <equals>
+                <reference attribute="priority"/>
+                <String value="TP2"/>
+              </equals>
+            </condition>
+            <value>
+              <fixedlist>
+                <listof>
+                  <ruleclass name="AllocationTarget" ruleset="AbstractAllocationTargetsRuleSet"/>
+                </listof>
+                <members>
+                  <create ruleclass="AllocationTarget" ruleset="AbstractAllocationTargetsRuleSet">
+                    <specify attribute="type">
+                      <Code table="TargetItemType">
+                        <String value="RL23"/>
+                      </Code>
+                    </specify>
+                    <specify attribute="identifier">
+                      <String value="">
+                        <Annotations>
+                          <Label label-id="DefaultAllocationTargetsRuleSetlabelID_1354275303168" name="Queue Identifier"/>
+                        </Annotations>
+                      </String>
+                    </specify>
+                  </create>
+                  <create ruleclass="AllocationTarget" ruleset="AbstractAllocationTargetsRuleSet">
+                    <specify attribute="type">
+                      <Code table="TargetItemType">
+                        <String value="RL9"/>
+                      </Code>
+                    </specify>
+                    <specify attribute="identifier">
+                      <String value="">
+                        <Annotations>
+                          <Label label-id="DefaultAllocationTargetsRuleSetlabelID_1354275310837" name="User Name"/>
+                        </Annotations>
+                      </String>
+                    </specify>
+                  </create>
+                </members>
+              </fixedlist>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <fixedlist>
+                <listof>
+                  <ruleclass name="AllocationTarget" ruleset="AbstractAllocationTargetsRuleSet"/>
+                </listof>
+                <members>
+                  <create ruleclass="AllocationTarget" ruleset="AbstractAllocationTargetsRuleSet">
+                    <specify attribute="type">
+                      <Code table="TargetItemType">
+                        <Annotations>
+                          <Label label-id="DefaultAllocationTargetsRuleSetlabelID_1354276444597" name=""/>
+                        </Annotations>
+                        <String value="RL23"/>
+                      </Code>
+                    </specify>
+                    <specify attribute="identifier">
+                      <String value="">
+                        <Annotations>
+                          <Label label-id="DefaultAllocationTargetsRuleSetlabelID_1354275303168" name="Queue Identifier"/>
+                        </Annotations>
+                      </String>
+                    </specify>
+                  </create>
+                </members>
+              </fixedlist>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="priority">
+      <Annotations>
+        <Documentation documentation-id="DefaultAllocationTargetsRuleSetDocumentationID_1354547098450" text="This is an attribute that can be mapped from a workflow data object attribute. This can be used to in an expression to evaluate the assignment of a task, notification, decision and reminders."/>
+      </Annotations>
+      <type>
+        <javaclass name="String"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-
-
   </Class>
-
-
-  <!-- 
-    Default implementation of DefaultProgramRecommendationSubscreenDisplay. 
-  -->
-  <Class abstract="true" extends="ProgramRecommendationSubscreenDisplay" extendsRuleSet="ProgramRecommendationDisplayRuleSet" name="DefaultProgramRecommendationSubscreenDisplay">
-
-
-    <!-- Require that the value is specified externally. -->
-    <Attribute name="businessObjectID">
+  <Class extends="WorkAllocation" extendsRuleSet="AbstractAllocationTargetsRuleSet" name="WorkAllocation">
+    <Attribute name="description">
       <type>
-        <javaclass name="Number"/>
+        <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <specified/>
+        <ResourceMessage key="WorkAllocation" resourceBundle="curam.core.rules.DefaultAllocationTargetsRuleSet">    
+        </ResourceMessage>
       </derivation>
     </Attribute>
-
-
   </Class>
-
-
 </RuleSet>

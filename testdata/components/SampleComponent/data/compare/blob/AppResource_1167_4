@@ -1,35 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM 
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-  PID 5725-H26
-
-  Copyright IBM Corporation 2010,2012,2014. All rights reserved. 
-
-  US Government Users Restricted Rights - Use, duplication or disclosure
+  US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="OutcomePlanAction">
-  
-  <nc:loader-registry>
-    <nc:loader class="curam.outcomeplanning.tab.impl.OutcomePlanActionNavigationLoader"/>
-  </nc:loader-registry>
-  
+--><!--
+  Copyright 2009, 2011 Curam Software Ltd.
+  All rights reserved.
+
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="IssuesAdmin">
   <nc:nodes>
-    <nc:navigation-page id="Home" page-id="OutcomePlan_viewActionHome" title="Leaf.Title.Home"/>
-    <nc:navigation-page id="Progress" page-id="OutcomePlan_listActionProgress" title="Leaf.Title.Progress"/>
-    <nc:navigation-page id="Reviews" page-id="OutcomePlan_listReviewItemsForAction" title="Leaf.Title.Reviews"/>
-	
-	<nc:navigation-group dynamic="true" id="EvidenceFolder" title="Folder.Title.Evidence">
-        <nc:navigation-page id="Evidence" page-id="OutcomePlan_listActivityEvidence" title="Page.Title.Evidence"/>
-        <nc:navigation-page id="EvidenceIssues" page-id="OutcomePlanAction_listIssues" title="Page.Title.EvidenceIssues"/>   
-      </nc:navigation-group>  
-	  
-	
-    <nc:navigation-page dynamic="true" id="ParticipationCalendar" page-id="OutcomePlan_resolveActionParticipationCalendar" title="Leaf.Title.Participation"/>
-    <nc:navigation-page dynamic="true" id="Objectives" page-id="OutcomePlan_listActionObjectives" title="Leaf.Title.Objectives"/>
-    <nc:navigation-page id="Factors" page-id="OutcomePlan_listFactorsForAction" title="Leaf.Title.FactorsHistory"/>
-    <nc:navigation-page id="Notes" page-id="OutcomePlan_listActionNotes" title="Leaf.Title.Notes"/>
-    <nc:navigation-page id="Attachments" page-id="OutcomePlan_listActionAttachments" title="Leaf.Title.Attachments"/>
-    <nc:navigation-page dynamic="true" id="Sharing" page-id="OutcomePlan_listActionSharing" title="Leaf.Title.Sharing"/>
-    <nc:navigation-page id="Comments" page-id="OutcomePlan_listActionParticipantComments" title="Leaf.Title.Comments"/>
-  </nc:nodes>
+    <nc:navigation-page id="IssuesAdminHome" page-id="Product_viewIssueConfiguration" title="Leaf.Title.Home"/>
+
+    <nc:navigation-page id="Resolutions" page-id="Product_listResolutionsForIssue" title="Leaf.Title.Resolutions"/>
+
+    <nc:navigation-page id="ResolutionApprovals" page-id="Product_listResolutionApprovalChecksForIssue1" title="Leaf.Title.ResolutionApprovals"/>
+
+    <nc:navigation-page id="TimeConstraints" page-id="Product_listIssueTimeConstraint" title="Leaf.Title.TimeConstraints"/>
+
+   </nc:nodes>
 </nc:navigation>

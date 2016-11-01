@@ -1,77 +1,87 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2010, 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+#
+# PID 5725-H26
+# 
+# Copyright IBM Corporation 2012, 2013. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Submenu.Title.GoTo=Go To
+Submenu.Icon.GoTo=GoTo
+Submenu.Tooltip.GoTo=Go To
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2010-2012 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><sc:section-shortcut-panel xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-shortcut-panel" id="FINAPPSectionShortcuts" title="FinancialAppSectionShortcuts.title">
+MenuItem.Title.Home=Home
+MenuItem.Icon.Home=Home
+MenuItem.Tooltip.Home=Home
 
-  <sc:nodes>
-    <sc:node id="Payments" title="Payments.Title" type="group">
-      <sc:node id="PaymentReceivedSearch" page-id="Financial_paymentReceivedSearch" title="PaymentReceivedSearch.Title" type="leaf">
-      </sc:node>
-      <sc:node id="ReceivePaymentForPerson" open-as="modal" page-id="Financial_paymentReceivedSearchPerson" title="ReceivePaymentForPerson.Title" type="leaf">
-      </sc:node>
-      <sc:node id="ReceivePaymentForEmployer" open-as="modal" page-id="Financial_paymentReceivedSearchEmployer" title="ReceivePaymentForEmployer.Title" type="leaf">
-      </sc:node>
-      
-      <sc:node id="RefundPaymentForPerson" page-id="Financial_refundPaymentSearchPerson" title="RefundPaymentForPerson.Title" type="leaf">
-      </sc:node>
-      <sc:node id="RefundPaymentForEmployer" page-id="Financial_refundPaymentSearchEmployer" title="RefundPaymentForEmployer.Title" type="leaf">
-      </sc:node>      
-      
-      <sc:node id="SuspenseAccountSearch" page-id="Financial_suspenseAccountSearch" title="SuspenseAccountSearch.Title" type="leaf">
-      </sc:node>
-      <sc:node id="ReceiveSuspensePaymentAccount" open-as="modal" page-id="Financial_recordPaymentReceivedInSuspense" title="ReceiveSuspensePaymentAccount.Title" type="leaf">
-      </sc:node>
-      
-      <sc:node id="RecordManuallyIssuedPayment" open-as="modal" page-id="Financial_manualPaymentSearchPersonWizard" title="RecordManuallyIssuedPayment.Title" type="leaf">
-      </sc:node>
-      
-      <sc:node id="PaymentIssuedSearch" page-id="Financial_paymentSearch" title="PaymentIssuedSearch.Title" type="leaf">
-      </sc:node>
-      <sc:node id="CaseSearch" page-id="Case_search1" title="CaseSearch.Title" type="leaf">
-      </sc:node>
-    </sc:node>
-    <sc:node id="Liabilities" title="Liabilities.Title" type="group">
-      <sc:node id="LiabilitySearch" page-id="Financial_liabilitySearch" title="LiabilitySearch" type="leaf">
-      </sc:node>
-      <sc:node id="CaseSearch1" page-id="Case_search1" title="CaseSearch.Title" type="leaf">
-      </sc:node>
-    </sc:node>
-    
-    <sc:node id="Invoices" title="Invoices.Title" type="group">
-      <sc:node id="NewServiceInvoice" open-as="modal" page-id="ProviderManagement_createServiceInvoice" title="NewServiceInvoice.Title" type="leaf">
-      </sc:node>
-      <sc:node id="SearchServiceInvoice" page-id="ProviderManagement_searchServiceInvoice" title="SearchServiceInvoice.Title" type="leaf">
-      </sc:node>
-    </sc:node>
-     
-    <sc:node id="ParticipantSearches" title="ParticipantSearches.Title" type="group">
-      <sc:node id="PersonSearch" page-id="Person_search1" title="PersonSearch.Title" type="leaf">
-      </sc:node>
-      
-      <!-- BEGIN, CR00320876, MR -->
-      <sc:node id="ProviderSearch" page-id="ProviderManagement_searchProvider" title="ProviderSearch.Title" type="leaf">
-      </sc:node>
-      
-      <!-- END, CR00320876 -->
-      <sc:node id="EmployerSearch" page-id="Employer_search1" title="EmployerSearch.Title" type="leaf">
-      </sc:node>
-      <sc:node id="ExternalPartySearch" page-id="ExternalParty_search1" title="ExternalPartySearch.Title" type="leaf">
-      </sc:node>
-      <sc:node id="UtilitySearch" page-id="Utility_search1" title="UtilitySearch.Title" type="leaf">
-      </sc:node>
-    </sc:node>
-  </sc:nodes>
+Submenu.Title.MyInbox=My Inbox
+Submenu.Icon.MyInbox=Inbox
+Submenu.Tooltip.MyInbox=Inbox
 
-</sc:section-shortcut-panel>
+MenuItem.Title.AssignedTasks=Assigned Tasks
+MenuItem.Icon.AssignedTasks=AssignedTasks
+MenuItem.Tooltip.AssignedTasks=Assigned Tasks
+
+MenuItem.Title.DeferredTasks=Deferred Tasks
+MenuItem.Icon.DeferredTasks=DeferredTasks
+MenuItem.Tooltip.DeferredTasks=Deferred Tasks
+
+MenuItem.Title.Notifications=Notifications
+MenuItem.Icon.Notifications=Notifications
+MenuItem.Tooltip.Notifications=Notifications
+
+MenuItem.Title.ReservedTasks=Reserved Tasks
+MenuItem.Icon.ReservedTasks=ReservedTasks
+MenuItem.Tooltip.ReservedTasks=Reserved Tasks
+
+MenuItem.Title.WorkQueues=Work Queues
+MenuItem.Icon.WorkQueues=WorkQueues
+MenuItem.Tooltip.WorkQueues=Work Queues
+
+MenuItem.Title.MyCalendar=My Calendar
+MenuItem.Icon.MyCalendar=Calendar
+MenuItem.Tooltip.MyCalendar=My Calendar
+
+
+Submenu.Title.New=New
+Submenu.Icon.New=New
+Submenu.Tooltip.New=New
+
+MenuItem.Title.EnrollProvider=Enroll New Provider
+MenuItem.Tooltip.EnrollProvider=Enroll New Provider
+
+
+Submenu.Title.Search=Search
+Submenu.Icon.Search=Search
+Submenu.Tooltip.Search=Find a place,enquiry,service invoice,external access requests,unassigned provider member or participant.
+
+
+MenuItem.Title.SearchAvailablePlaces=Available Place
+MenuItem.Tooltip.SearchAvailablePlaces=Find a available place.
+
+MenuItem.Title.SearchEnquiry=Enquiry
+MenuItem.Tooltip.SearchEnquiry=Find a enquiry.
+
+MenuItem.Title.SearchExternalAccessRequests=External Access Requests
+MenuItem.Tooltip.SearchExternalAccessRequests=Find the external access requests.
+
+Submenu.Title.Participant=Participant
+
+# BEGIN, CR00380476, MR
+Submenu.Icon.Participant=Participant
+# END, CR00380476
+Submenu.Tooltip.Participant=Find a participant.
+
+MenuItem.Title.SearchProvider=Provider
+MenuItem.Tooltip.SearchProvider=Find a provider.
+
+MenuItem.Title.SearchProviderGroup=Provider Group
+MenuItem.Tooltip.SearchProviderGroup=Find a provider group.
+
+MenuItem.Title.SearchUnassignedProviderMember=Unassigned Provider Member
+MenuItem.Tooltip.SearchUnassignedProviderMember=Find a unassigned provider member.
+
+MenuItem.Title.SearchServiceInvoice=Service Invoice
+MenuItem.Tooltip.SearchServiceInvoice=Find a service invoice.

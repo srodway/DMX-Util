@@ -1,55 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+MenuItem.Title.EditDetails=Edit
+MenuItem.Tooltip.EditDetails=Edit the details for the employer
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-	Copyright 2009 Curam Software Ltd.
-	All rights reserved.
-	
-	This software is the confidential and proprietary information of Curam
-	Software, Ltd. ("Confidential Information"). You shall not disclose
-	such Confidential Information and shall use it only in accordance with the
-	terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="IssuedPaymentsSearchMenu">
+Submenu.Title.New=New
+Submenu.Tooltip.New=Create new items
 
-	<mc:submenu id="Search" title="Submenu.Title.Search" tooltip="Submenu.Tooltip.Search">
+MenuItem.Title.Address=Address
+MenuItem.Tooltip.Address=Create a new address for the employer.
 
-		<mc:menu-item id="SearchCase" page-id="Case_search1" title="MenuItem.Title.SearchCase" tooltip="MenuItem.Tooltip.SearchCase"/>
+MenuItem.Title.PhoneNumber=Phone Number
+MenuItem.Tooltip.PhoneNumber=Create a new phone number for the employer.
 
-		<mc:submenu id="Participant" title="Submenu.Title.Participant" tooltip="Submenu.Tooltip.Participant">
+MenuItem.Title.BankAccount=Bank Account
+MenuItem.Tooltip.BankAccount=Create a new bank account for the employer.
 
-			<mc:menu-item id="EducationalInstitute" page-id="EducationalInstitute_search1" title="MenuItem.Title.EducationalInstitute" tooltip="MenuItem.Tooltip.EducationalInstitute"/>
+MenuItem.Title.AlternateId=Alternate Identification
+MenuItem.Tooltip.AlternateId=Create alternate identification for the employer.
 
-			<mc:menu-item id="Employer" page-id="Employer_search1" title="MenuItem.Title.Employer" tooltip="MenuItem.Tooltip.Employer"/>
+MenuItem.Title.RelatedCompany=Related Company
+MenuItem.Tooltip.RelatedCompany=Create a new Realated Company for the employer.
 
-			<mc:menu-item id="ExternalParty" page-id="ExternalParty_search1" title="MenuItem.Title.ExternalParty" tooltip="MenuItem.Tooltip.ExternalParty"/>
+MenuItem.Title.TradingStatus=Trading Status
+MenuItem.Tooltip.TradingStatus=
 
-			<mc:menu-item id="ExternalPartyOffice" page-id="ExternalPartyOffice_search1" title="MenuItem.Title.ExternalPartyOffice" tooltip="MenuItem.Tooltip.ExternalPartyOffice"/>
+MenuItem.Title.Note=New Note
+MenuItem.Tooltip.Note=Create a new note for the employer.
 
-			<mc:menu-item id="InformationProvider" page-id="InformationProvider_search1" title="MenuItem.Title.InformationProvider" tooltip="MenuItem.Tooltip.InformationProvider"/>
+MenuItem.Title.Attachment=Attachment
+MenuItem.Tooltip.Attachment=Create a new attachment for the employer.
 
-			<mc:menu-item id="Person" page-id="Person_search1" title="MenuItem.Title.Person" tooltip="MenuItem.Tooltip.Person"/>
+MenuItem.Title.EmailComm=Email Communication
+MenuItem.Tooltip.EmailComm=Create a new email correspondence with the employer.
 
-			<mc:menu-item id="ProductProvider" page-id="ProductProvider_search1" title="MenuItem.Title.ProductProvider" tooltip="MenuItem.Tooltip.ProductProvider"/>
+MenuItem.Title.MSWord=Microsoft Word Communication
+MenuItem.Tooltip.MSWord=Create an Microsoft Word communication with the employer.
 
-			<mc:menu-item id="ServiceSupplier" page-id="ServiceSupplier_search1" title="MenuItem.Title.ServiceSupplier" tooltip="MenuItem.Tooltip.ServiceSupplier"/>
+MenuItem.Title.ProForma=Pro Forma Communication
+MenuItem.Tooltip.ProForma=Create a new Pro Forma communication with the employer.
 
-			<mc:menu-item id="Utility" page-id="Utility_search1" title="MenuItem.Title.Utility" tooltip="MenuItem.Tooltip.Utility"/>
+MenuItem.Title.RecordedCommunication=Recorded Communication
+MenuItem.Tooltip.RecordedCommunication=Create a record of a communication.
 
-			<mc:menu-item id="AllParticipant" page-id="Participant_search" title="MenuItem.Title.AllParticipant" tooltip="MenuItem.Tooltip.AllParticipant"/>
+MenuItem.Title.CommsException=Communications Exception
+MenuItem.Tooltip.CommsException=Create a communications exception.
 
-		</mc:submenu>
+MenuItem.Title.Contact=Contact
+MenuItem.Tooltip.Contact=Create a new contact for the employer.
 
-		<mc:menu-item id="Incidents" page-id="Incident_search" title="MenuItem.Title.Incidents" tooltip="MenuItem.Tooltip.Incidents"/>
+MenuItem.Title.EmailAdd=Email Address
+MenuItem.Tooltip.EmailAdd=Create a new web address for the employer.
 
-		<mc:menu-item id="Investigation" page-id="Organization_investigationTypeSearchPopup" title="MenuItem.Title.Investigation" tooltip="MenuItem.Tooltip.Investigation"/>
+MenuItem.Title.WebAdd=Web Address
+MenuItem.Tooltip.WebAdd=Create a new web address for the employer.
 
-		<mc:menu-item id="Task" page-id="Inbox_searchTask" title="MenuItem.Title.Task" tooltip="MenuItem.Tooltip.Task"/>
-
-
-	</mc:submenu>
-
-</mc:menu-bar>

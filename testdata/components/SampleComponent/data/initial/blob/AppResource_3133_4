@@ -1,43 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+page.title.integratedcasehome=Home
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="DefaultCaseIPHomeMenu">
-  
-  <mc:submenu id="NEW" title="Submenu.Title.New" tooltip="Submenu.Tooltip.New">
-    <mc:submenu id="CalendarEvent" title="Submenu.Title.CalendarEvent" tooltip="Submenu.Tooltip.CalendarEvent">  
-      
-      <mc:menu-item id="Activity" open-as="modal" page-id="ICMember_createMemberActivity" title="MenuItem.Title.Activity" tooltip="MenuItem.Tooltip.Activity"/>
-          
-      <mc:menu-item id="RecurringActivity" open-as="modal" page-id="ICMember_createRecurringMemberActivity" title="MenuItem.Title.RecurringActivity" tooltip="MenuItem.Tooltip.RecurringActivity"/>
-          
-    </mc:submenu>
+folder.title.evidence=Evidence
+Page.Title.Dashboard=Dashboard
+Page.Title.Flow=EvidenceFlow
+Page.Title.Active=Active Evidence
+Page.Title.InEdit=In Edit Evidence
+Page.Title.Verifications=Verifications
+Page.Title.EvidenceIssues=Issues
+Page.Title.IncomingEvidence=Incoming Evidence
 
-    <mc:submenu id="Communication" title="Submenu.Title.Communication" tooltip="Submenu.Tooltip.Communication">  
-      
-      <mc:menu-item id="Email" open-as="modal" page-id="Case_getEmailCorrespondent" title="MenuItem.Title.Email" tooltip="MenuItem.Tooltip.Email"/>
-          
-      <mc:menu-item id="MSWord" open-as="modal" page-id="Case_getMSWordCorrespondentCaseMember" title="MenuItem.Title.MSWord" tooltip="MenuItem.Tooltip.MSWord"/>
-          
-      <mc:menu-item id="ProForma" open-as="modal" page-id="Case_getProFormaCorrespondent" title="MenuItem.Title.ProForma" tooltip="MenuItem.Tooltip.ProForma"/>
-        
-      <mc:menu-item id="RecordedCommunication" open-as="modal" page-id="Case_getRecordCommCorrespondent" title="MenuItem.Title.RecordedCommunication" tooltip="MenuItem.Tooltip.RecordedCommunication"/>
-          
-    </mc:submenu> 
-    <mc:menu-item id="Note" open-as="modal" page-id="ICMember_createNote1" title="MenuItem.Title.Note" tooltip="MenuItem.Tooltip.Note"/>
+folder.title.participant=Participant
+page.title.casemembers=Case Members
+page.title.caseparticipants=Case Participants
 
-    <mc:menu-item id="Task" open-as="modal" page-id="ICMember_createTask" title="MenuItem.Title.Task" tooltip="MenuItem.Tooltip.Task"/>
-  </mc:submenu>
+folder.title.contact=Contact
+page.title.notes=Notes
+page.title.attachments=Attachments
+page.title.communications=Communications
+page.title.meetingminutes=Meeting Minutes
 
-</mc:menu-bar>
+page.title.serviceplans=Service Plans
+
+page.title.assessments=Assessments
+
+page.title.investigations=Investigations
+
+page.title.issues=Issues
+
+page.title.events=Events
+
+page.title.tasks=Tasks
+
+folder.title.admin=Administration
+page.title.relatedcases=Related Cases
+page.title.transactionhistory=Transaction History
+page.title.userroles=User Roles
+page.title.contracts=Contracts

@@ -1,43 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009-2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><!-- The menu hierarchy file for the service group.              --><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ServiceGroupMenu">
-  
-  <mc:submenu id="GO" title="Submenu.Title.GoTo" tooltip="Submenu.Tooltip.GoTo">
-    <mc:menu-item id="ServiceOfferings" page-id="ProviderManagement_listServiceOffering" title="MenuItem.Title.ServiceOfferings" tooltip="MenuItem.Tooltip.ServiceOfferings"/>
-  </mc:submenu>
-  <mc:submenu id="NEW" title="Submenu.Title.New" tooltip="Submenu.Tooltip.New">
-    <mc:menu-item id="ServiceGroup" open-as="modal" page-id="ProviderManagement_createServiceGroup" title="MenuItem.Title.ServiceGroup" tooltip="MenuItem.Tooltip.ServiceGroup"/>
-  </mc:submenu>
-  
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Submenu.Title.New=New
+Submenu.Tooltip.New=New
+        
+MenuItem.Title.Bank=Bank
+MenuItem.Tooltip.Bank=Bank
+      
+MenuItem.Title.BankAccount=Bank Account
+MenuItem.Tooltip.BankAccount=Bank Account
+      
+MenuItem.Title.CurrencyExchange=Currency Exchange
+MenuItem.Tooltip.CurrencyExchange=Currency Exchange
+      
+MenuItem.Title.InsuranceReturnPeriod=Insurance Return Period
+MenuItem.Tooltip.InsuranceReturnPeriod=Insurance Return Period      
+      
+Submenu.Title.PaymentExclDate=Payment Exclusion Date
+Submenu.Toolip.PaymentExclDate=Payment Exclusion Date
+        
+MenuItem.Title.Cash=Cash
+MenuItem.Tooltip.Cash=Cash    
+        
+MenuItem.Title.Check=Cheque
+MenuItem.Tooltip.Check=Cheque
+        
+MenuItem.Title.EFT=EFT
+MenuItem.Tooltip.EFT=EFT
+        
+MenuItem.Title.Invoice=Invoice
+MenuItem.Tooltip.Invoice=Invoice
+        
+MenuItem.Title.Voucher=Voucher
+MenuItem.Tooltip.Voucher=Voucher
 
-  <mc:submenu id="Browse" title="Submenu.Title.Browse" tooltip="Submenu.Tooltip.Browse">
-    <!-- BEGIN, CR00281453, GP -->
-    <mc:menu-item id="ServiceGroups" page-id="ProviderManagement_browseAllServiceGroups" title="MenuItem.Title.ServiceGroups" tooltip="MenuItem.Tooltip.ServiceGroups"/>
-    <!-- END, CR00281453 -->
-  </mc:submenu>
-  
-  <mc:submenu id="ServiceGroupMnu" title="Submenu.Title.ServiceGroup" tooltip="Submenu.Tooltip.ServiceGroup">
-    <mc:menu-item id="Delete" page-id="ProviderManagement_cancelServiceGroupFrmList" title="MenuItem.Title.Delete" tooltip="MenuItem.Tooltip.Delete"/>
-    <mc:menu-item id="Edit" page-id="ProviderManagement_editServiceGroupFromView" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
-    <mc:menu-item id="AddExisting" page-id="ProviderManagement_addServiceGroupToAnotherServiceGroup" title="MenuItem.Title.AddExisting" tooltip="MenuItem.Tooltip.AddExisting"/>
-    <mc:menu-item id="CreateServiceGroup" page-id="ProviderManagement_createChildServiceGroup" title="MenuItem.Title.CreateServiceGroup" tooltip="MenuItem.Tooltip.CreateServiceGroup"/>
-  </mc:submenu>
-  <mc:submenu id="Search" title="Submenu.Title.Search" tooltip="Submenu.Tooltip.Search">
-    <mc:menu-item id="ServiceGroupSearch" page-id="ProviderManagement_searchServiceGroup" title="MenuItem.Title.ServiceGroupSearch" tooltip="MenuItem.Tooltip.ServiceGroupSearch"/>
-    <mc:menu-item id="ServiceOfferingSearch" page-id="ProviderManagement_searchServiceOffering" title="MenuItem.Title.ServiceOfferings" tooltip="MenuItem.Tooltip.ServiceOfferings"/>
-    <mc:menu-item id="Training" page-id="ProviderManagement_searchTrainingPopup" title="MenuItem.Title.Training" tooltip="MenuItem.Tooltip.Training"/>
-  </mc:submenu>
-</mc:menu-bar>
+Submenu.Title.Search=Search
+Submenu.Tooltip.Search=Search
+
+MenuItem.Title.User=User
+MenuItem.Tooltip.User=User
+
+MenuItem.Title.ExternalUser=External User
+MenuItem.Tooltip.ExternalUser=External User

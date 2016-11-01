@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM 
-
-  PID 5725-H26
-
-  Copyright IBM Corporation 2009,2010,2012,2014. All rights reserved. 
-
-  US Government Users Restricted Rights - Use, duplication or disclosure
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="OMAdminNonAssessmentFactor">
-
-  <tc:page-param name="outcomePlanFactorID"/>
-
-  <tc:menu id="OMAdminNonAssessmentFactorMenu"/>
-
-  <!-- Hidden details panel to set factor name as tab name-->
-  <tc:context height="0" page-id="AssessmentDefinitionFactorAdmin_contextPanel"/>
-  
-  <!-- See AssessmentDefinition.nav for details of the tree meta-data. -->
-  <tc:navigation id="OMAdminNonAssessmentFactor"/>
-  
-  <tc:tab-refresh>
-    <tc:onsubmit context="true" page-id="OutcomePlanActionAdmin_modifyOutcomePlanFactorAdmin"/>
-  </tc:tab-refresh>
-
+  Licensed Materials - Property of IBM
  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="SupervisorCasesWithIssues">
+
+  <tc:page-param name="week"/>
+
+  <tc:menu id="SupervisorCasesMenu"/>
+
+  <!-- Details panel -->
+  <tc:context tab-name="Details.Name.SupervisorCasesWithIssues" tab-title="Details.Title.SupervisorCasesWithIssues"/>
+
+  <!-- Navigation Panel -->
+  <tc:navigation page-id="Supervisor_casesWithIssuesHeatMap"/>
+
+
 </tc:tab-config>

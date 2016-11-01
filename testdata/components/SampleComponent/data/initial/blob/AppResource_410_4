@@ -6,14 +6,48 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Number.Wizard.Pages=2
 
-ProviderManagement_createRelatedConceptElementWiz.Wizard.Item.Text=Concept Details
-ProviderManagement_createRelatedConceptElementWiz.Wizard.Page.Title=Step 1: 
-ProviderManagement_createRelatedConceptElementWiz.Wizard.Page.Desc=Concept Details
-Wizard.PageID.1=ProviderManagement_createRelatedConceptElementWiz
+MenuItem.Title.Edit=Edit
+MenuItem.Tooltip.Edit=Edit
 
-ProviderManagement_addTermsToRelatedConceptElementWiz.Wizard.Item.Text=Add Taxonomy Terms
-ProviderManagement_addTermsToRelatedConceptElementWiz.Wizard.Page.Title=Step 2: 
-ProviderManagement_addTermsToRelatedConceptElementWiz.Wizard.Page.Desc=Add Taxonomy Terms
-Wizard.PageID.2=ProviderManagement_addTermsToRelatedConceptElementWiz
+MenuItem.Title.Delete=Delete
+MenuItem.Tooltip.Delete=Delete
+
+MenuItem.Title.AddCategory= Add Category
+MenuItem.Tooltip.AddCategory=Add Category
+
+Submenu.Title.New=New
+Submenu.Tooltip.New=New
+
+Submenu.Title.Approval=Approval
+Submenu.Tooltip.Approval=Approval
+
+MenuItem.Title.Case=New Case Approval
+MenuItem.Tooltip.Case=Create an approval case.
+
+MenuItem.Title.TemporalEvidence=Temporal Evidence
+MenuItem.Tooltip.TemporalEvidence=Create a temporal evidence.
+
+MenuItem.Title.EvidenceTree=Evidence Tree
+MenuItem.Tooltip.EvidenceTree=Create an evidence tree.
+
+MenuItem.Title.BillingPattern=Billing Pattern
+MenuItem.Tooltip.BillingPattern=Add a billing pattern.
+
+MenuItem.Title.Provision=Provision
+MenuItem.Tooltip.Provision=Create a provision.
+
+MenuItem.Title.TimeConstraint=Time Constraint
+MenuItem.Tooltip.TimeConstraint=Create a time constraint.
+
+MenuItem.Title.ExistingRuleset=Assign a Ruleset
+MenuItem.Tooltip.ExistingRuleset=Assign a Ruleset.
+
+Submenu.Title.Search=Search
+Submenu.Tooltip.Search=Search
+
+MenuItem.Title.User=User
+MenuItem.Tooltip.User=Find an user.
+
+MenuItem.Title.ExternalUser=External User
+MenuItem.Tooltip.ExternalUser=Find an external user.

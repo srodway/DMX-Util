@@ -1,12 +1,20 @@
 #
 # Licensed Materials - Property of IBM
-#
-# PID 5725-H26
 # 
-# Copyright IBM Corporation 2014. All Rights Reserved.
+# Copyright IBM Corporation 2012. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-#Tue Nov 04 11:38:06 GMT 2014
-ASCAlien.description=An alien household member is an individual who is not a citizen or national. Alien types include refugee and asylee. The alien must be determined an eligible alien to receive assistance from certain programs.
+Number.Wizard.Pages=2
+
+AddExpectedOutcomeWizard_details.Wizard.Item.Text=Details
+AddExpectedOutcomeWizard_details.Wizard.Page.Title=Step 1:
+AddExpectedOutcomeWizard_details.Wizard.Page.Desc=Details
+Wizard.PageID.1=AddExpectedOutcomeWizard_details
+
+
+AddExpectedOutcomeWizard_factors.Wizard.Item.Text=Factors
+AddExpectedOutcomeWizard_factors.Wizard.Page.Title=Step 2:
+AddExpectedOutcomeWizard_factors.Wizard.Page.Desc=Factors
+Wizard.PageID.2=AddExpectedOutcomeWizard_factors

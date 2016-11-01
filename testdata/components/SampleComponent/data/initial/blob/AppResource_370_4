@@ -1,16 +1,24 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2013. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-# This Properties file contains resource Strings for the workflow allocation rule set
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-DefaultAllocationTargetsRuleSetlabelID_1354275303168=Queue Identifier
-DefaultAllocationTargetsRuleSetDocumentationID_1354547084844=This is a mandatory attribute for any workflow allocation ruleset. Targets is a list of allocation target classes that is required by the workflow engine to assign the task, notification, decision or reminder. Each target must contain an allocation type and an instance  of the chosen type.
-DefaultAllocationTargetsRuleSetlabelID_1354276444597=Queue Identifier Type
-DefaultAllocationTargetsRuleSetlabelID_1354275310837=User Name
-DefaultAllocationTargetsRuleSetDocumentationID_1354547098450=This is an attribute that can be mapped from a workflow data object attribute. This can be used to in an expression to evaluate the assignment of a task, notification, decision and reminders.
-DefaultAllocationTargetsRuleSetDocumentationID_1354547070210=This is the default implementation class for a workflow allocation ruleset. It extends from the abstract Allocation Targets ruleset that describes the structure of allocation rules. Any class that extends this class can be considered a primary class which is used to hold the targets for allocation.
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="ScreeningAdmin">
+  <nc:nodes>
+    <nc:navigation-page id="ScreeningAdmin_Home" page-id="Resource_screeningHome" title="Leaf.Title.Home" visible="true"/>
+
+    <nc:navigation-page id="ScreeningAdmin_Assessment" page-id="Resource_listScreeningAssessment" title="Leaf.Title.Assessment" visible="true"/>
+
+    <nc:navigation-page id="ScreeningAdmin_Milestones" page-id="Product_resolveListMilestone" title="Leaf.Title.Milestones" visible="true"/>
+  </nc:nodes>
+</nc:navigation>

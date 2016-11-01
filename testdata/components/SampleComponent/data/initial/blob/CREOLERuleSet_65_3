@@ -1,129 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCBankAccountRuleSet">
-  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="PDCBankAccount">
-    <Attribute name="jointAccountInd">
-      <Annotations/>
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Common data rule classes for  Applications Case.
+  --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CIApplicationData" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+  <Class name="ApplicationCase" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+    
+    
+    <Attribute name="description">
       <type>
-        <javaclass name="java.lang.Boolean"/>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="CIApplication.description" resourceBundle="curam.commonintake.rules.CIInitialContactRuleSet"/>
+      </derivation>
+    </Attribute>
+    
+    
+    <!-- Application Case ID-->
+    <Attribute name="applicationCaseID">
+      <type>
+        <javaclass name="Number"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="accountNumber">
-      <Annotations/>
+    
+    
+    <!-- Application Case Status-->
+    <Attribute name="status">
       <type>
-        <javaclass name="java.lang.String"/>
+        <codetableentry table="ApplicationCaseStatus"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <!-- BEGIN, CR00407584, SS -->
-    <Attribute name="iban">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <!-- END, CR00407584 -->
-    <Attribute name="accountName">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="fromDate">
-      <Annotations/>
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="accountStatus">
-      <Annotations/>
-      <type>
-        <codetableentry table="BankAccountStatus"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="sortCode">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <!-- BEGIN, CR00407584, SS -->
-    <Attribute name="bic">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <!-- END, CR00407584 -->
-    <Attribute name="accountType">
-      <Annotations/>
-      <type>
-        <codetableentry table="BankAccountType"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="toDate">
-      <Annotations/>
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="preferredInd">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="participant">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="related_participant">
-      <Annotations/>
-      <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="participant"/>
-          </create>
-        </reference>
-      </derivation>
-    </Attribute>
+    
   </Class>
+
 </RuleSet>

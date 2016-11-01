@@ -1,19 +1,40 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Number.Wizard.Pages=2
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
 
-RegisterExternalParty_duplicateCheckWizard.Wizard.Item.Text=Registered External Party Check
-RegisterExternalParty_duplicateCheckWizard.Wizard.Page.Title=Step 1:
-RegisterExternalParty_duplicateCheckWizard.Wizard.Page.Desc=Registered External Party Check
-Wizard.PageID.1=RegisterExternalParty_duplicateCheckWizard
-
-RegisterExternalParty_registerWizard.Wizard.Item.Text=External Party Details
-RegisterExternalParty_registerWizard.Wizard.Page.Title=Step 2:
-RegisterExternalParty_registerWizard.Wizard.Page.Desc=External Party Details
-Wizard.PageID.2=RegisterExternalParty_registerWizard
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
+    <identifier name="Select Life Event" />
+    <server alias="DISPLAY" class="CitizenLifeEvents" method="listLifeEventTypes" />
+    <header>
+        <title id="SelectApplication.Title" />
+        <description id="SelectApplication.Description" />
+        <icon id="title_selectprogram" />
+    </header>
+    <content>
+        <container>
+            <!--<title id="Applications.Title" />
+            <description id="Applications.Description" />
+            <help id="Applications.Help" />-->
+            <iterator>
+                <list source="/DISPLAY/xmlString/life-event-types[]">
+                    <title id="Applications.Title" />
+                    <description id="Applications.Description" />
+                    <field source="/DISPLAY/xmlString/life-event-types[]/life-event[]/id" target="/ans/lifeEventID" type="CW_APPLICATION_SELECT" width="3">
+                        <title source="/DISPLAY/xmlString/life-event-types[]/life-event[]/name" />
+                        <description source="/DISPLAY/xmlString/life-event-types[]/life-event[]/description" />
+                    </field>
+                </list>
+            </iterator>
+        </container>
+    </content>
+    <navigation>
+		<nav-button name="next" type="action" />
+        <nav-button name="exit" page="ResolveCitizenHome" page-type="resolve" />
+    </navigation>
+</page>

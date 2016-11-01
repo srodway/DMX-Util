@@ -1,4 +1,6 @@
 <page-config><contexts><sequence
-        domain="CURAM_CONTEXT"></sequence></contexts><availablePods><sequence
-        domain="POD_TYPE_SELECT"><value>PT2002</value><value>PT2021</value><value>PT2008</value><value>PT2014</value><value>PT2016</value><value>PT2029</value></sequence></availablePods><layout><sequence
-        domain="COL_SIZE"><value>33</value><value>33</value><value>33</value></sequence></layout></page-config>
+        DOMAIN="CURAM_CONTEXT"/></contexts><availablePods><sequence
+        DOMAIN="POD_TYPE_SELECT"><value>PT2002</value><value>PT19001</value><value>PT2018</value><value>PT2029</value><value>PT19002</value><value>PT2017</value><value>PT19004</value></sequence></availablePods><layout><sequence
+        DOMAIN="COL_SIZE"><value>33</value><value>33</value><value>33</value></sequence></layout><searching
+        enabled="false"><sequence
+        DOMAIN="SEARCHING"/></searching></page-config>

@@ -1,28 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2010-2011 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="AppealHearingReviewHomeMenuIC">
-
-  <mc:menu-item id="Edit" open-as="modal" page-id="Appeal_modifyHearingReview" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
-
-  <mc:menu-item id="Case" open-as="modal" page-id="Appeal_searchHearingReviewCaseForIC" title="MenuItem.Title.AddCase" tooltip="MenuItem.Tooltip.AddCase"/>
-  
-  <mc:menu-item id="Issue" open-as="modal" page-id="Appeal_searchIssueForHearingReview" title="MenuItem.Title.AddIssue" tooltip="MenuItem.Tooltip.AddIssue"/>
-  
-  <mc:menu-item id="Statement" open-as="modal" page-id="Appeal_createStatement" title="MenuItem.Title.AddStatement" tooltip="MenuItem.Tooltip.AddStatement"/>
-  
-  <mc:menu-item id="Appellant" open-as="modal" page-id="Appeal_createAppellant" title="MenuItem.Title.AddAppellant" tooltip="MenuItem.Tooltip.AddAppellant"/>
-  
-</mc:menu-bar>
+#
+# Licensed Materials - Property of IBM 
+#
+# PID 5725-H26
+#
+# Copyright IBM Corporation 2012,2014. All rights reserved. 
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Details.Name.Conditions=Recommendation Conditions
+Tab.Title.Conditions=Recommendation Conditions
+Leaf.Title.Conditions=Conditions
+Leaf.Title.ConditionSets=Condition Sets
+Leaf.Title.ConditionRuleSets=Condition Rule Sets
+Leaf.Title.ActivityConditions=Activity Conditions
+Leaf.Title.ObjectiveConditions=Objective Conditions

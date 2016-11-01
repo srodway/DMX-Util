@@ -1,462 +1,1221 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
- 
+  
   Copyright IBM Corporation 2012. All Rights Reserved.
-
+ 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009-2012 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information").  You shall not disclose such
-  Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><!--
-  Case Entities Rule Set.
-  This Rule Set contains Rule Class representation of common Case Manager
-  entities that are used in Determination Rule Sets.
---><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaseEntitiesRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+--><!-- 
+    Copyright 2009-2011 Curam Software Ltd.
+    All rights reserved. 
+    This software is the confidential and proprietary information
+    of Curam Software, Ltd. ("Confidential Information").  You
+    shall not disclose such Confidential Information and shall use
+    it only in accordance with the terms of the license agreement
+    you entered into with Curam Software.
+--><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="RiskReassessmentRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
 
 
-  <!--
-    CaseHeader Data Rule Class.
-    CaseHeader evidence records details of an interaction a participant has with
-    the organization.
-  -->
-  <Class name="CaseHeader">
+  <!-- All assessment rule sets must contain a ruleclass named FactorList 
+    that extends the AbstractFactorList ruleclass -->
+  <Class extends="AbstractFactorList" extendsRuleSet="AssessmentRulesInterface" name="FactorList">
+    <Attribute name="factors">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Factor"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <fixedlist>
+          <listof>
+            <ruleclass name="Factor"/>
+          </listof>
+          <members>
+            <reference attribute="scoredFactor"/>
+            <reference attribute="finalFactor"/>
+            <reference attribute="decisionFactor"/>
+          </members>
+        </fixedlist>
+      </derivation>
+    </Attribute>
+    <Attribute name="scoredFactor">
+      <type>
+        <ruleclass name="Scored"/>
+      </type>
+      <derivation>
+        <create ruleclass="Scored">
+          <specify attribute="factorList">
+            <this/>
+          </specify>
+        </create>
+      </derivation>
+    </Attribute>
+    <Attribute name="finalFactor">
+      <type>
+        <ruleclass name="Final"/>
+      </type>
+      <derivation>
+        <create ruleclass="Final">
+          <specify attribute="factorList">
+            <this/>
+          </specify>
+        </create>
+      </derivation>
+    </Attribute>
+    <Attribute name="decisionFactor">
+      <type>
+        <ruleclass name="Decision"/>
+      </type>
+      <derivation>
+        <create ruleclass="Decision">
+          <specify attribute="factorList">
+            <this/>
+          </specify>
+        </create>
+      </derivation>
+    </Attribute>
+  </Class>
 
 
-    <!-- Case ID. -->
-    <Attribute name="caseID">
+  <Class name="Assessment">
+    <Attribute name="assessmentInstanceID">
+      <type>
+        <javaclass name="Long"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="assessmentDefinitionID">
+      <type>
+        <javaclass name="Long"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <!-- This attribute is defaulted to 'No overrides', however this value will be populated 
+      by what is selected in the IEG script when the user reaches the override screen -->
+    <Attribute name="riskOverride">
+      <type>
+        <codetableentry table="RRAOverride"/>
+      </type>
+      <derivation>
+        <Code table="RRAOverride">
+          <String value="RO10001"/>
+        </Code>
+      </derivation>
+    </Attribute>
+    <Attribute name="discretionaryOverrideLevel">
+      <type>
+        <codetableentry table="RRADiscretionaryOverride"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+  </Class>
+
+
+  <Class extends="AbstractGroup" extendsRuleSet="AssessmentRulesInterface" name="Group">
+    <Attribute name="priorInvestigations">
+      <type>
+        <codetableentry table="RRAPriorInvestigations"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="previouslyReceivedCPS">
+      <type>
+        <codetableentry table="RiskReassessmentIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="pcHistory">
+      <type>
+        <codetableentry table="RiskReassessmentIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="childCharacteristics">
+      <type>
+        <codetableentry table="RRAChildCharacteristics"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="newInvestigation">
+      <type>
+        <codetableentry table="RiskReassessmentIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="notAddressedAbuse">
+      <type>
+        <codetableentry table="RRANotAddressedAbuse"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="probAdultRelationships">
+      <type>
+        <codetableentry table="RRAProbRelationships"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="pcHasMentalProblem">
+      <type>
+        <codetableentry table="RiskReassessmentIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="pcCareInconsistent">
+      <type>
+        <codetableentry table="RiskReassessmentIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+  </Class>
+
+
+  <Class extends="AbstractPerson" extendsRuleSet="AssessmentRulesInterface" name="Person">
+    <Attribute name="casePlanObjectives">
+      <type>
+        <codetableentry table="RRACasePlanObjectives"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="personCasePlanObjectivesScore">
       <type>
         <javaclass name="Number"/>
       </type>
       <derivation>
-        <specified/>
+        <choose>
+          <type>
+            <javaclass name="Number"/>
+          </type>
+          <test>
+            <reference attribute="casePlanObjectives"/>
+          </test>
+          <when>
+            <condition>
+              <Code table="RRACasePlanObjectives">
+                <String value="CPO10001"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="0"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RRACasePlanObjectives">
+                <String value="CPO10002"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="1"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
       </derivation>
     </Attribute>
+  </Class>
 
 
-    <!--  Status Code.-->
-    <Attribute name="statusCode">
-      <type>
-        <codetableentry table="CaseStatus"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!--  Case Type Code.-->
-    <Attribute name="caseTypeCode">
-      <type>
-        <codetableentry table="CaseTypeCode"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Integrated CaseID -->
-    <Attribute name="integratedCaseID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!--  Case Reference-->
-    <Attribute name="caseReference">
+  <Class extends="Factor" name="Scored">
+    <Attribute name="reference">
       <type>
         <javaclass name="String"/>
       </type>
       <derivation>
-        <specified/>
+        <String value="SCORED"/>
       </derivation>
     </Attribute>
-
-
-    <!-- The expected start date of the case. -->
-    <Attribute name="expectedStartDate">
+    <Attribute name="score">
       <type>
-        <javaclass name="curam.util.type.Date"/>
+        <javaclass name="String"/>
       </type>
       <derivation>
-        <specified/>
+        <call class="curam.assessmentplanning.assessmentengine.impl.CERTAssessmentRulesHelper" method="convertNumberToString">
+          <type>
+            <javaclass name="String"/>
+          </type>
+          <arguments>
+            <reference attribute="totalScore"/>
+          </arguments>
+        </call>
       </derivation>
     </Attribute>
-
-
-    <!-- The start date of the case. -->
-    <Attribute name="startDate">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The expected end date of the case. -->
-    <Attribute name="expectedEndDate">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The end date of the case. -->
-    <Attribute name="endDate">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- BEGIN, CR00304503, PB -->
-    <!-- The registration date of the case. -->
-    <Attribute name="registrationDate">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <!-- END, CR00304503 -->
-
-
-    <!-- Concern Role ID of the primary client of the case. -->
-    <Attribute name="concernRoleID">
+    <Attribute name="totalScore">
       <type>
         <javaclass name="Number"/>
       </type>
       <derivation>
-        <specified/>
+        <sum>
+          <fixedlist>
+            <listof>
+              <javaclass name="Number"/>
+            </listof>
+            <members>
+              <reference attribute="priorInvestigationsScore"/>
+              <reference attribute="previouslyReceivedCPSScore"/>
+              <reference attribute="pcHistoryScore"/>
+              <reference attribute="childCharacteristicsScore"/>
+              <reference attribute="newInvestigationScore"/>
+              <reference attribute="notAddressedAbuseScore"/>
+              <reference attribute="probAdultRelationshipsScore"/>
+              <reference attribute="pcHasMentalProblemScore"/>
+              <reference attribute="pcCareInconsistentScore"/>
+              <reference attribute="casePlanObjectivesScore"/>
+            </members>
+          </fixedlist>
+        </sum>
       </derivation>
     </Attribute>
-
-
-    <!-- Description for this Rule Class. -->
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="CaseHeader.description" resourceBundle="curam.core.rules.CaseCERRules">
-          <reference attribute="caseReference"/>
-        </ResourceMessage>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <!-- *************************************************************** -->
-  <!-- 
-    CaseParticipantRole Data Rule Class.
-    CaseParticipantRole evidence records details of a participant associated with
-    a case. A participant can have multiple case participant roles in a single 
-    case. A participant can have many different roles in different cases. A case 
-    may have one or more case participant roles.
-  -->
-  <!-- *************************************************************** -->
-  <Class name="CaseParticipantRole" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
-
-
-    <!-- Case Participant Role ID -->
-    <Attribute name="caseParticipantRoleID">
+    <Attribute name="priorInvestigationsScore">
       <type>
         <javaclass name="Number"/>
       </type>
       <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Description for this Rule Class. -->
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="CaseParticipantRole.description" resourceBundle="curam.core.rules.CaseCERRules">
-          <reference attribute="concernRoleName">
-            <reference attribute="participantRole"/>
-          </reference>
-          <reference attribute="typeCode"/>
-        </ResourceMessage>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Participant Role ID -->
-    <Attribute name="participantRoleID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- From Date -->
-    <Attribute name="fromDate">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- To Date -->
-    <Attribute name="toDate">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-
-
-    </Attribute>
-    <Attribute name="endReason">
-      <type>
-        <codetableentry table="ParticipantRoleEndReason"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Case Participant Role Type -->
-    <Attribute name="typeCode">
-      <type>
-        <codetableentry table="CaseParticipantRoleType"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- CaseId of case to which the case participant belong -->
-    <Attribute name="caseID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Participant Record to which the case participant belong -->
-    <Attribute name="participantRole">
-      <type>
-        <ruleclass name="ConcernRole" ruleset="ParticipantEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <singleitem onEmpty="error" onMultiple="error">
-          <readall ruleclass="ConcernRole" ruleset="ParticipantEntitiesRuleSet">
-            <match retrievedattribute="concernRoleID">
-              <reference attribute="participantRoleID"/>
-            </match>
-          </readall>
-        </singleitem>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Case Record of case to which the case participant belong -->
-    <Attribute name="relatedCase">
-      <type>
-        <ruleclass name="CaseHeader"/>
-      </type>
-      <derivation>
-        <singleitem onEmpty="error" onMultiple="error">
-          <readall ruleclass="CaseHeader">
-            <match retrievedattribute="caseID">
-              <reference attribute="caseID"/>
-            </match>
-          </readall>
-        </singleitem>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <!-- *************************************************************** -->
-  <!-- 
-    CaseGroups Data Rule Class.
-    Case Groups records details of the case group and its members.
-  -->
-  <!-- *************************************************************** -->
-  <Class name="CaseGroups" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
-
-
-    <Attribute name="caseClientGroupID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="caseID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="concernRoleID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="groupCode">
-      <type>
-        <codetableentry table="CaseGroupType"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="startDate">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="endDate">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Description for this Rule Class. -->
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="CaseGroups.description" resourceBundle="curam.core.rules.CaseCERRules">
-          <reference attribute="concernRoleNameForConcernRoleID">
-            <create ruleclass="DisplayHelper" ruleset="ParticipantEntitiesRuleSet">
+        <choose>
+          <type>
+            <javaclass name="Number"/>
+          </type>
+          <test>
+            <reference attribute="priorInvestigations">
+              <reference attribute="group"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RRAPriorInvestigations">
+                <String value="PI10001"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="0"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RRAPriorInvestigations">
+                <String value="PI10002"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="1"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RRAPriorInvestigations">
+                <String value="PI10003"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="2"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
               <null/>
-              <reference attribute="concernRoleID"/>
-            </create>
-          </reference>
-          <reference attribute="groupCode"/>
-          <reference attribute="caseID"/>
-        </ResourceMessage>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="previouslyReceivedCPSScore">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Number"/>
+          </type>
+          <test>
+            <reference attribute="previouslyReceivedCPS">
+              <reference attribute="group"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RiskReassessmentIndicator">
+                <String value="RI10001"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="0"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RiskReassessmentIndicator">
+                <String value="RI10002"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="1"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="pcHistoryScore">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Number"/>
+          </type>
+          <test>
+            <reference attribute="pcHistory">
+              <reference attribute="group"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RiskReassessmentIndicator">
+                <String value="RI10001"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="0"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RiskReassessmentIndicator">
+                <String value="RI10002"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="1"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="childCharacteristicsScore">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Number"/>
+          </type>
+          <test>
+            <reference attribute="childCharacteristics">
+              <reference attribute="group"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RRAChildCharacteristics">
+                <String value="CC10001"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="0"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RRAChildCharacteristics">
+                <String value="CC10002"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="1"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="newInvestigationScore">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Number"/>
+          </type>
+          <test>
+            <reference attribute="newInvestigation">
+              <reference attribute="group"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RiskReassessmentIndicator">
+                <String value="RI10001"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="0"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RiskReassessmentIndicator">
+                <String value="RI10002"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="1"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="notAddressedAbuseScore">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Number"/>
+          </type>
+          <test>
+            <reference attribute="notAddressedAbuse">
+              <reference attribute="group"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RRANotAddressedAbuse">
+                <String value="NAA10001"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="0"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RRANotAddressedAbuse">
+                <String value="NAA10002"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="0"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RRANotAddressedAbuse">
+                <String value="NAA10003"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="0"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RRANotAddressedAbuse">
+                <String value="NAA10004"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="1"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="probAdultRelationshipsScore">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Number"/>
+          </type>
+          <test>
+            <reference attribute="probAdultRelationships">
+              <reference attribute="group"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RRAProbRelationships">
+                <String value="PR10001"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="0"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RRAProbRelationships">
+                <String value="PR10002"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="1"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="pcHasMentalProblemScore">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Number"/>
+          </type>
+          <test>
+            <reference attribute="pcHasMentalProblem">
+              <reference attribute="group"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RiskReassessmentIndicator">
+                <String value="RI10001"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="0"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RiskReassessmentIndicator">
+                <String value="RI10002"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="1"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="pcCareInconsistentScore">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Number"/>
+          </type>
+          <test>
+            <reference attribute="pcCareInconsistent">
+              <reference attribute="group"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RiskReassessmentIndicator">
+                <String value="RI10001"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="0"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RiskReassessmentIndicator">
+                <String value="RI10002"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="1"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="casePlanObjectivesScore">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <max>
+          <dynamiclist>
+            <list>
+              <reference attribute="people"/>
+            </list>
+            <listitemexpression>
+              <reference attribute="personCasePlanObjectivesScore">
+                <current/>
+              </reference>
+            </listitemexpression>
+          </dynamiclist>
+        </max>
+      </derivation>
+    </Attribute>
+    <Attribute name="people">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Person"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <readall ruleclass="Person"/>
+      </derivation>
+    </Attribute>
+    <Attribute name="classification">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <call class="curam.assessmentplanning.assessmentengine.impl.CERTAssessmentRulesHelper" method="getClassification">
+          <type>
+            <codetableentry table="ClassDivisionType"/>
+          </type>
+          <arguments>
+            <reference attribute="assessment"/>
+            <this/>
+          </arguments>
+        </call>
       </derivation>
     </Attribute>
   </Class>
 
 
-  <!-- *************************************************************** -->
-  <!-- 
-    ProductDelivery Data Rule Class.
-    Product delivery records details of a product provided by the organization 
-    received by a participant.
-  -->
-  <!-- *************************************************************** -->
-  <Class name="ProductDelivery" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
-
-
-    <Attribute name="caseID">
+  <Class extends="Factor" name="Final">
+    <Attribute name="reference">
       <type>
-        <javaclass name="Number"/>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value="FINAL"/>
+      </derivation>
+    </Attribute>
+    <Attribute name="score">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value=""/>
+      </derivation>
+    </Attribute>
+    <Attribute name="classification">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <codetableentry table="ClassDivisionType"/>
+          </type>
+          <test>
+            <reference attribute="riskOverride">
+              <reference attribute="assessment"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RRAOverride">
+                <String value="RO10001"/>
+              </Code>
+            </condition>
+            <value>
+              <reference attribute="classification">
+                <reference attribute="scoredFactor"/>
+              </reference>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RRAOverride">
+                <String value="RO10002"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10214"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RRAOverride">
+                <String value="RO10003"/>
+              </Code>
+            </condition>
+            <value>
+              <reference attribute="discretionaryOverrideClassification"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <reference attribute="classification">
+                <reference attribute="scoredFactor"/>
+              </reference>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="discretionaryOverrideClassification">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <codetableentry table="ClassDivisionType"/>
+          </type>
+          <test>
+            <reference attribute="discretionaryOverrideLevel">
+              <reference attribute="assessment"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RRADiscretionaryOverride">
+                <String value="RDO10101"/>
+              </Code>
+            </condition>
+            <value>
+              <reference attribute="higherDiscretionaryOverride"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RRADiscretionaryOverride">
+                <String value="RDO10102"/>
+              </Code>
+            </condition>
+            <value>
+              <reference attribute="lowerDiscretionaryOverride"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="higherDiscretionaryOverride">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <codetableentry table="ClassDivisionType"/>
+          </type>
+          <test>
+            <reference attribute="classification">
+              <reference attribute="scoredFactor"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10101"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10202"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10102"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10203"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10103"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10204"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10104"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10204"/>
+              </Code>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <reference attribute="classification">
+                <reference attribute="scoredFactor"/>
+              </reference>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="lowerDiscretionaryOverride">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <codetableentry table="ClassDivisionType"/>
+          </type>
+          <test>
+            <reference attribute="classification">
+              <reference attribute="scoredFactor"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10101"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10201"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10102"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10201"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10103"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10202"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10104"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10203"/>
+              </Code>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <reference attribute="classification">
+                <reference attribute="scoredFactor"/>
+              </reference>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="scoredFactor">
+      <type>
+        <ruleclass name="Scored"/>
+      </type>
+      <derivation>
+        <reference attribute="scoredFactor">
+          <reference attribute="factorList"/>
+        </reference>
+      </derivation>
+    </Attribute>
+  </Class>
+
+
+  <Class extends="Factor" name="Decision">
+    <Attribute name="reference">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value="DECISION"/>
+      </derivation>
+    </Attribute>
+    <Attribute name="score">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value=""/>
+      </derivation>
+    </Attribute>
+    <!-- Set the Recommended Decision classification based on the 
+      classification of the final factor -->
+    <Attribute name="classification">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <codetableentry table="ClassDivisionType"/>
+          </type>
+          <test>
+            <reference attribute="classification">
+              <reference attribute="finalFactor"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10101"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10113"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10201"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10113"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10102"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10113"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10202"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10113"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10103"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10112"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10203"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10112"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10104"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10112"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10204"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10112"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10214"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10112"/>
+              </Code>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10112"/>
+              </Code>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="finalFactor">
+      <type>
+        <ruleclass name="Final"/>
+      </type>
+      <derivation>
+        <reference attribute="finalFactor">
+          <reference attribute="factorList"/>
+        </reference>
+      </derivation>
+    </Attribute>
+  </Class>
+
+
+  <Class abstract="true" extends="AbstractFactor" extendsRuleSet="AssessmentRulesInterface" name="Factor">
+    <Attribute name="assessment">
+      <type>
+        <ruleclass name="Assessment"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="Assessment"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+    <Attribute name="group">
+      <type>
+        <ruleclass name="Group"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="Group"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+    <Attribute name="factorList">
+      <type>
+        <ruleclass name="FactorList"/>
       </type>
       <derivation>
         <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="productID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="productType">
-      <type>
-        <codetableentry table="ProductType"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Concern Role ID of the Primary Client -->
-    <Attribute name="recipConcernRoleID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Description for this Rule Class. -->
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="ProductDelivery.description" resourceBundle="curam.core.rules.CaseCERRules">
-          <reference attribute="productType"/>
-          <reference attribute="recipConcernRoleID"/>
-        </ResourceMessage>
       </derivation>
     </Attribute>
   </Class>

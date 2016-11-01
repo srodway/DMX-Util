@@ -1,30 +1,25 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-# This Properties file contains resource Strings for the Application Todo advice
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM 
 
-AdviceItem.ResolveProspectAdvice={link:Resolve:startResolveProspectPersonLink} prospect applicants
-#BEGIN, CR00269761, JD
-AdviceItem.ResolveProspectAdvice.startResolveProspectPersonLink.title=Resolve
-#END, CR00269761
-AdviceItem.ResolveEvidenceAdvice={link:Resolve:startResolveProspectEvidenceLink} evidence issues.
-#BEGIN, CR00269761, JD
-AdviceItem.ResolveEvidenceAdvice.startResolveProspectEvidenceLink.title=Resolve
-#END, CR00269761
-AdviceItem.DetermineEligibilityeAdvice={link:Determine:determineEligibilityLink} eligibility on the application.
-#BEGIN, CR00269761, JD
-AdviceItem.DetermineEligibilityeAdvice.determineEligibilityLink.title=Determine
-#END, CR00269761
-AdviceItem.CaptureOutstandingVerificationLink={link:capture:captureOutstandingVerificationLink} outstanding verification information .
-#BEGIN, CR00269761, JD
-AdviceItem.CaptureOutstandingVerificationLink.captureOutstandingVerificationLink.title=capture
-#END, CR00269761
-AdviceItem.checkEligibilityAdvice={link:Check:checkEligibilityLink} the client''s potential eligibility for benefits.
-#BEGIN, CR00269761, JD
-AdviceItem.checkEligibilityAdvice.checkEligibilityLink.title=Check
-#END, CR00269761
+  PID 5725-H26
+
+  Copyright IBM Corporation 2010,2012,2014. All rights reserved. 
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="OutcomePlanExpectedOutcome">
+  <nc:loader-registry>
+    <nc:loader class="curam.outcomeplanning.tab.impl.OutcomePlanExpectedOutcomeNavigationLoader"/>
+  </nc:loader-registry>
+  
+  <nc:nodes>
+    <nc:navigation-page id="OutcomePlanExpectedOutcomeHome" page-id="OutcomePlan_viewExpectedOutcomeHome" title="Leaf.Title.Home"/>
+    <nc:navigation-page id="ExpectedOutcomeProgress" page-id="OutcomePlan_listExpectedOutcomeProgress" title="Leaf.Title.Progress"/>
+    <nc:navigation-page id="ExpectedOutcomeReviews" page-id="OutcomePlan_listReviewItemsForExpectedOutcome" title="Leaf.Title.Reviews"/>
+    <nc:navigation-page dynamic="true" id="ExpectedOutcomeActivities" page-id="OutcomePlan_listExpectedOutcomeCurrentActivities" title="Leaf.Title.Activities"/>
+    <nc:navigation-page dynamic="true" id="ExpectedOutcomeLinkedActivities" page-id="OutcomePlan_listExpectedOutcomeCurrentLinkedActivities" title="Leaf.Title.Activities"/>
+    <nc:navigation-page id="ExpectedOutcomeFactors" page-id="OutcomePlan_viewExpectedOutcomeFactorHistory" title="Leaf.Title.FactorsHistory"/>
+    <nc:navigation-page id="ObjectiveNotes" page-id="OutcomePlan_viewObjectiveNotes" title="Leaf.Title.Notes"/>
+    <nc:navigation-page id="ObjectiveEndDateHistory" page-id="OutcomePlan_viewObjectiveEndDateHistory" title="Leaf.Title.EndDateHistory"/>
+  </nc:nodes>
+</nc:navigation>

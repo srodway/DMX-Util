@@ -1,22 +1,27 @@
-# Licensed Materials - Property of IBM
-# 
-# PID 5725-H26
-# 
-# Copyright IBM Corporation 2015. All Rights Reserved.
-# 
-# US Government Users Restricted Rights - Use, duplication or disclosure
-# restricted by GSA ADP Schedule Contract with IBM Corp.
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-#
-Group2.Title=Daily Routine
-Group2.Description=These questions are related to daily routine and whether the client requires help performing everyday tasks.
-Q6.Label=Can the client wash themselves?
-Q6.HelpText=Is the client capable of taking a bath or shower without assistance?  
-Q7.Label=Can the client feed themselves?
-Q7.HelpText=Is the client capable of feeding themselves or do they require assistance?
-Q8.Label=Can the client obtain food, medicines and household items?
-Q8.HelpText=Is the client capable of doing their own shopping?  This includes preparing shopping lists, getting to and from the shops, and managing money.
-Q9.Label=Can the client access the toilet without assistance?
-Q9.HelpText=Is the client capable of going to and from, and using, the toilet without assistance?
-Q10.Label=Can the client walk long distances without assistance?
-Q10.HelpText=Client cannot walk long distances without tiring quickly.
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009-2011 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="VerificationsHome">
+  
+  <tc:menu id="VerificationsHomeMenu"/>
+
+  <!-- Details panel -->
+  <tc:context tab-name="Details.Name.VerificationsHome" tab-title="Details.Title.VerificationsHome"/>
+
+  <!-- Navigation Panel -->
+  <tc:navigation page-id="VerificationAdmin_resolveCategories"/>
+
+
+</tc:tab-config>

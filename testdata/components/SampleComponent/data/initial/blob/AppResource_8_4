@@ -1,10 +1,30 @@
-page3.Title=Personal Care
-cluster3.desc=Do you have any difficulties with any of the following things?
-cluster3=Personal Care Questionnaire
-washing.label=Washing
-dressing.label=Dressing
-toilet.label=Getting to the toilet
-bathing.label=Bathing
-perexamples.label=If you answer yes to any of the above or have any other issues with your personal careplease give examples below.
-peranyonehelp.label=If you do, does anyone help you?
-anymorehelp.label=Do you think you need any more help with any of these things?
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="AssessmentHome">
+  <nc:nodes>
+    <nc:navigation-page id="AssessmentHome" page-id="Resource_assessmentHome" title="Leaf.Title.Home"/>
+
+    <nc:navigation-page id="BenefitProduct" page-id="Resource_listBenefitProductForAssessment" title="Leaf.Title.BenefitProduct"/>
+
+
+     <nc:navigation-page id="IntegratedCase" page-id="Resource_listIntegratedCaseTypeForAssessment" title="Leaf.Title.IntegratedCase"/>
+
+     <nc:navigation-page id="RuleSet" page-id="Resource_listAssessmentRuleSet" title="Leaf.Title.RuleSet"/>
+
+
+  </nc:nodes>
+  
+</nc:navigation>

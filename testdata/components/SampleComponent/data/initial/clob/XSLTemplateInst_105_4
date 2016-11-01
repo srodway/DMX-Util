@@ -13,7 +13,7 @@
   </xsl:template>
   <xsl:template match="DATA">
     <!--Explicitly select the STRUCT to avoid processing anything else.-->
-    <xsl:apply-templates select="STRUCT[SNAME='FinancialNotificationDetails']"/>
+    <xsl:apply-templates select="STRUCT[SNAME='LicenseNotificationDetails']"/>
   </xsl:template>
   <xsl:template match="STRUCT">
     <fo:root>
@@ -37,7 +37,7 @@
                   </fo:block>
                   <fo:inline font-size="12pt" font-weight="normal">
                     Dear
-                    <xsl:apply-templates select="FIELD[FNAME='name']"/>
+                    <xsl:apply-templates select="FIELD[FNAME='providerName']"/>
                     ,
                   </fo:inline>
                   <fo:block>
@@ -47,17 +47,11 @@
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
                   <fo:inline font-size="12pt">
-                    We wish to inform you that as a result of a correction to service invoice line item
-                    <xsl:apply-templates select="FIELD[FNAME='SILIReferenceNo']"/>
-                    from service invoice
-                    <xsl:apply-templates select="FIELD[FNAME='SIReferenceNo']"/>
-                    received on
-                    <xsl:apply-templates select="FIELD[FNAME='receiptDate']"/>
-                    for the delivery of
-                    <xsl:apply-templates select="FIELD[FNAME='serviceOfferingName']"/>
-                    , a payment was detected,
-                    and as a result you will be issued a payment in the amount of
-                    <xsl:apply-templates select="FIELD[FNAME='amount']"/>
+                    We wish to inform you that your license has been suspended with effect from
+                    <xsl:apply-templates select="FIELD[FNAME='eventDate']"/>
+                    . Your
+                       license has been suspended for the following reason:
+                    <xsl:apply-templates select="FIELD[FNAME='suspensionReason']"/>
                     .
                   </fo:inline>
                   <fo:block>
@@ -74,7 +68,7 @@
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
                   <fo:inline font-size="12pt">
-                    <xsl:apply-templates select="FIELD[FNAME='organisationName']"/>
+                    <xsl:apply-templates select="FIELD[FNAME='organizationName']"/>
                     .
                   </fo:inline>
                 </fo:block>

@@ -1,36 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
-
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
-    <identifier name="SaveOrExit" />
-    <header>
-        <title id="Page.Title" />
-        <description id="Page.Description" />
-        <icon id="title_save" />
-    </header>
-    <content>
-        <container>
-            <title id="RadioSelection.Title" />
-            <description id="RadioSelection.Description" />
-            <radiobutton-container id="SELECTION" legend="RadioSelection.Legend">
-                <radiobutton id="SAVE">
-                    <title id="SaveApplication.Title" />
-                </radiobutton>
-                <radiobutton id="EXIT">
-                    <title id="ExitSaveApplication.Title" />
-                </radiobutton>
-            </radiobutton-container>
-        </container>
-    </content>
-    <navigation>
-		<nav-button name="next" type="action" />
-        <nav-button name="back" type="action" />
-    </navigation>
-</page>
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+List.Title=Select the programs you would like to apply for
+List.Description=Indicates Potential Eligibility. 
+List.Help=The program you selected on the previous page has been automatically selected for you.  The programs which you have been previously approved for are highlighted with an asterisk.  Choose one or more programs and click the next button.
+List.SelectAll=Select All Programs
+Help.Label=More Info
+Eligible.Label=You have been approved for this program

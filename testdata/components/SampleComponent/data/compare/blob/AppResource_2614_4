@@ -6,23 +6,16 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2010 Curam Software Ltd.
+  Copyright 2011 Curam Software Ltd.
   All rights reserved.
-
+  
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="SYSADMAPPHome">
-
-  <!-- No Page Menu -->
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="PCR">
   
-  <!-- No Page Param -->
+  <tc:context tab-name="home.tab.name" tab-title="home.tab.title"/>
+  <tc:navigation id="PCRHome"/> 
   
-  <!-- No Details panel -->
-  <tc:context tab-name="Details.Name.MyWorkspace" tab-title="Details.Title.MyWorkspace"/>
-
-  <!-- No Navigation panel -->
-  <tc:navigation page-id="SysAdminCustomHome"/>
-
 </tc:tab-config>

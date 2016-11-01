@@ -2,106 +2,505 @@
 <!--
   Licensed Materials - Property of IBM
   
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
+  Copyright IBM Corporation 2012-2013. All Rights Reserved.
+ 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 -->
 <ieg-script
-  config-properties="DA_ieg-config"
-  finish-page="DecisionAssistApplication_saveAnswers"
-  quit-page="DecisionAssistApplication_saveAnswers"
+  config-properties="SDMAssessmentIEGConfig"
+  finish-page="AssessmentDelivery_executeAssessment"
+  quit-page="AssessmentScript_exit"
   show-progress-bar="false"
   show-sections="false"
+  validate-save-and-exit="true"
 >
   <identifier
-    id="AsthmaAdultV1"
+    id="RiskReassessment"
     scriptversionnumber="1"
-    type="DecisionAssist"
+    type="CERAssessment"
   />
   <section>
-    <title id="Section.Title"/>
+    <title id="Section.AssessmentDetails.Title">Assessment Details Section</title>
     <question-page
-      entity="AsthmaAdult"
-      id="AsthmaAdultPage"
+      entity="Group"
+      id="AssessmentDetails"
       progress="0"
       read-only="false"
+      set-focus="true"
       show-back-button="false"
       show-exit-button="true"
       show-next-button="true"
       show-person-tabs="false"
-      show-save-exit-button="false"
+      show-save-exit-button="true"
     >
-      <title id="Grp1.Title"/>
-      <description id="Grp1.Description"/>
+      <title id="QuestionPage.AssessmentDetails.Title">SDM\u00AE Risk Reassessment</title>
       <cluster>
-        <title id="Grp1.Title"/>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <display-text id="NewDisplayTextID">&lt;p style="font-family:tahoma;font-size:12px;color:#4e4e4e"&gt;The Family Risk Reassessment combines items from the original Risk assessment with additional items that evaluate a family's progress toward case plan goals. Research has demonstrated that for the reassessment, a single index best categorizes risk for future maltreatment. Therefore, the Risk Reassessment is comprised of a single index, as opposed to the initial Risk Assessment, which has separate indices for abuse and neglect.&lt;/p&gt;</display-text>
+      </cluster>
+      <cluster>
+        <title id="Cluster.Title.RiskReassessment">Prior History</title>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>50</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
         <question
           control-question="false"
-          id="treatmentPlanStep"
-          mandatory="false"
+          id="priorInvestigations"
+          mandatory="true"
+          multi-select="false"
+          show-field-help="true"
         >
-          <label id="Q1.Label">
-            <alias type="at1"/>
-          </label>
-          <help-text id="Q1.HelpText"> </help-text>
-        </question>
-        <question
-          control-question="false"
-          id="peakFlowReading"
-          mandatory="false"
-        >
-          <label id="Q2.Label">
-          </label>
-          <help-text id="Q2.HelpText">
-          </help-text>
-        </question>
-        <question
-          control-question="false"
-          id="effects"
-          mandatory="false"
-        >
-          <label id="Q3.Label">
-          </label>
-          <help-text id="Q3.HelpText"/>
+          <label id="Question.Label.R1">R1. Number of prior neglect or abuse CPS investigations</label>
+          <help-text id="Question.Help.R1">Answer based on the count of all investigations, substantiated or not, that were assigned for CPS investigation for any type of abuse or neglect prior to the investigation resulting in the current case. Where possible, history from other county or state jurisdictions should be marked. Exclude investigations of out-of-home perpetrators (e.g., daycare) unless one or more caregivers failed to protect.</help-text>
         </question>
       </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>50</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question
+          control-question="false"
+          id="previouslyReceivedCPS"
+          mandatory="true"
+          multi-select="false"
+          show-field-help="true"
+        >
+          <label id="Question.Label.R2">R2. Household has previously received CPS (voluntary/ court ordered)</label>
+          <help-text id="Question.Help.R2">Count prior investigations involving any adult members of the current household who are alleged perpetrators. Do not count prior investigations in which allegations were perpetrated by an adult who does not currently live in the household. Do not answer 'YES' if household has received CPS prior to the investigation resulting in the current case. Service history includes voluntary or court-ordered family services or Family Preservation Services but does not include delinquency services.</help-text>
+        </question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>50</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question
+          control-question="false"
+          id="pcHistory"
+          mandatory="true"
+          multi-select="false"
+          show-field-help="true"
+        >
+          <label id="Question.Label.R3">R3. Primary caregiver has a history of abuse or neglect as a child</label>
+          <help-text id="Question.Help.R3">Assess "Yes" if credible statements by the primary caregiver or others indicate that the primary caregiver was abused or neglected as a child, regardless of agency history/intervention.</help-text>
+        </question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>50</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question
+          control-question="false"
+          control-question-type="RISK_REASSESSMENT_CHILDCHARACTERISTICS"
+          id="childCharacteristics"
+          mandatory="true"
+          multi-select="false"
+          show-field-help="true"
+        >
+          <label id="Question.Label.R4">R4. Child Characteristics (mark all applicable items)</label>
+          <help-text id="Question.Help.R4">Answer 'No child has any of the characteristics below' if no child in the household exhibits characteristics listed below. Answer yes if one or more of the children in the household has a developmental or physical disability, including any of the following: mental retardation, learning disability, other developmental problem, or significant physical handicap or if at least one investigation has been initiated since the initial risk assessment or last reassessment. This includes open or completed investigations, regardless of investigation conclusion that have been initiated since the initial assessment or last reassessment.</help-text>
+        </question>
+      </cluster>
+      <cluster read-only-expression="Group.childCharacteristics!=&quot;CC10002&quot;">
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>50</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question
+          control-question="false"
+          id="devDisabledInd"
+          mandatory="false"
+          multi-select="false"
+          show-field-help="false"
+        >
+          <label id="Question.Label.R4a">&amp;nbsp;&amp;nbsp;4a. One or more children in the household is developmentally disabled</label>
+        </question>
+        <question
+          control-question="false"
+          id="learningDisabledInd"
+          mandatory="false"
+          multi-select="false"
+          show-field-help="false"
+        >
+          <label id="Question.Label.R4b">&amp;nbsp;&amp;nbsp;4b. One or more children in the household has a learning disability</label>
+        </question>
+        <question
+          control-question="false"
+          id="physicalDisabledInd"
+          mandatory="false"
+          multi-select="false"
+          show-field-help="false"
+        >
+          <label id="Question.Label.R4c">&amp;nbsp;&amp;nbsp;4c. One or more children in the household is physically disabled</label>
+        </question>
+        <question
+          control-question="false"
+          id="medicallyFragileInd"
+          mandatory="false"
+          multi-select="false"
+          show-field-help="false"
+        >
+          <label id="Question.Label.R4d">&amp;nbsp;&amp;nbsp;4d. One or more children in the household are medically fragile or diagnosed with failure to thrive</label>
+        </question>
+      </cluster>
+      <cluster>
+        <title id="Observations.Title">Observations</title>
+        <description id="Observations.Text">&lt;p style="font-family:tahoma;font-size:12px;color:#4e4e4e"&gt;The following case observations should pertain to the period since the last assessment/reassessment.&lt;/p&gt;</description>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>50</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question
+          control-question="false"
+          id="newInvestigation"
+          mandatory="true"
+          multi-select="false"
+          show-field-help="true"
+        >
+          <label id="Question.Label.R5">R5. New investigation of abuse or neglect since the Initial Risk Assessment or the Last Reassessment</label>
+          <help-text id="Question.Help.R5">Answer 'YES' if at least one investigation has been initiated since the initial risk assessment or last reassessment. This includes open or completed investigations, regardless of investigation conclusion, that have been initiated since the initial assessment or last reassessment.</help-text>
+        </question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>50</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question
+          control-question="false"
+          id="notAddressedAbuse"
+          mandatory="true"
+          multi-select="false"
+          show-field-help="true"
+        >
+          <label id="Question.Label.R6">R6. Caregiver has not addressed alcohol or drug abuse problem since the last assessment/reassessment.</label>
+          <help-text id="Question.Help.R6">Indicate whether or not the primary and/or secondary caregiver has a current alcohol/drug abuse problem that interferes with the caregiver's or the family's functioning, and he/she is not addressing the problem. If both caregivers have a substance abuse problem, rate the more negative behavior of the two caregivers. Not addressing the problem is evidenced by:&lt;ul&gt;&lt;li&gt; Substance use that affects or affected the caregiver's employment; criminal involvement; marital or family relationships; or his/her ability to provide protection, supervision, and care for the child;&lt;li&gt; An arrest since the last assessment/reassessment for driving under the influence or refusing breathalyzer testing;&lt;li&gt; Self-report of a problem;&lt;li&gt; Multiple positive urine samples;&lt;li&gt; Health/medical problems resulting from substance use;&lt;li&gt; The child's diagnosis with Fetal Alcohol Syndrome or Exposure (FAS or FAE), or the child had positive toxicology screen at birth and the primary or secondary caregiver was the birth parent.&lt;/ul&gt;Legal, non-abusive prescription drug use should not be scored.</help-text>
+          <layout>
+            <type>flow</type>
+          </layout>
+        </question>
+      </cluster>
+      <condition expression="((Group.notAddressedAbuse==&quot;NAA10003&quot;) or (Group.notAddressedAbuse==&quot;NAA10004&quot;))">
+        <cluster>
+          <description id="Cluster.Desc.R6SubQuestions">&lt;span style="margin-top: 5px; color:#5A5A5A"&gt;If "c" or "d" is selected for R6, please indicate each type of substance used during review period&lt;/span&gt;</description>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-width>50</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="alcoholInd"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.R6a">Alcohol</label>
+          </question>
+          <question
+            control-question="false"
+            id="marijuanaInd"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.R6b">Marijuana</label>
+          </question>
+          <question
+            control-question="false"
+            id="methamphetamineInd"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.R6c">Methamphetamine</label>
+          </question>
+          <question
+            control-question="false"
+            id="heroinInd"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.R6d">Heroin</label>
+          </question>
+          <question
+            control-question="false"
+            id="cocaineInd"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.R6e">Cocaine</label>
+          </question>
+          <question
+            control-question="false"
+            id="otherAbuseInd"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.R6f">Other</label>
+          </question>
+        </cluster>
+      </condition>
+      <condition expression="((Group.otherAbuseInd==true) and ((Group.notAddressedAbuse==&quot;NAA10003&quot;) or (Group.notAddressedAbuse==&quot;NAA10004&quot;)))">
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-width>50</label-width>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="otherAbuseText"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.OtherAbuseText">Describe:</label>
+            <layout>
+              <type>flow</type>
+              <num-rows>4</num-rows>
+            </layout>
+          </question>
+        </cluster>
+      </condition>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>50</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question
+          control-question="false"
+          id="probAdultRelationships"
+          mandatory="true"
+          multi-select="false"
+          show-field-help="true"
+        >
+          <label id="Question.Label.R7">R7. Problems with adult relationships</label>
+          <help-text id="Question.Help.R7">Answer based upon current status of adult relationships in the household:&lt;br/&gt;a. Answer 'none applicable' if the question does not apply or there are no problems observed.&lt;br/&gt;b. Answer 'Yes', if adult relationships in the household are harmful/disruptive or if domestic violence is present. Harmful/tumultuous relationships have not yet reach the threshold of domestic violence; however, there is evidence of the following:&lt;ul&gt;&lt;li&gt; Child needs are going unmet;&lt;li&gt; The frequency and severity of arguments is increasing; or&lt;li&gt; Adult relationships are becoming progressively more unstable.&lt;/ul&gt;Domestic violence is evidence in a household that has had, since the most recent assessment, physical assault(s) or periods of intimidation/threats/harassment between caregivers or between a caregiver and another adult.</help-text>
+        </question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>50</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question
+          control-question="false"
+          id="pcHasMentalProblem"
+          mandatory="true"
+          multi-select="false"
+          show-field-help="true"
+        >
+          <label id="Question.Label.R8">R8. Primary caregiver has/had a mental health problem</label>
+          <help-text id="Question.Help.R8">Answer 'Yes' if credible and/or verifiable statements by the primary caregiver or others indicate that the primary caregiver:&lt;ul&gt;&lt;li&gt; Has been diagnosed with a Diagnostic and Statistical Manual (DSM) condition by a mental health clinician;&lt;li&gt; Had repeated referrals for mental health/psychological evaluations; or&lt;li&gt; Was recommended for treatment/hospitalization or treated/hospitalized for emotional problems at any time.&lt;/ul&gt;</help-text>
+        </question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>50</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question
+          control-question="false"
+          id="pcCareInconsistent"
+          mandatory="true"
+          multi-select="false"
+          show-field-help="true"
+        >
+          <label id="Question.Label.R9">R9. Primary caregiver provides physical care inconsistent with child needs</label>
+          <help-text id="Question.Help.R9">Answer 'YES' if physical care of the child (age-appropriate feeding, clothing, shelter, hygiene, and medical care of the child) threatens the child's well-being or results in harm to the child. Examples include:&lt;ul&gt;&lt;li&gt; Repeated failure to obtain required immunizations;&lt;li&gt; Failure to obtain medical care for severe or chronic illness;&lt;li&gt; Repeated failure to provide the child with weather-appropriate clothing;&lt;li&gt; Persistent rat or roach infestations;&lt;li&gt; Inadequate or inoperative plumbing or heating;&lt;li&gt; Poisonous substances or dangerous objects lying within reach of small child;&lt;li&gt; The child is wearing filthy clothes for extended periods of time; or&lt;li&gt; The child is not being bathed regularly, resulting in dirt-caked skin and hair and a strong odor.&lt;/ul&gt;</help-text>
+        </question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <list-question
+          entity="Person"
+          id="casePlanObjectives"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="Question.Label.R10">R10. Caregiver progress with the case plan objectives (score based on the caregiver demonstrating the least progress)</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="Question.Help.R10">Rate this item for both primary and secondary caregivers, but enter one overall score based on the caregiver with the least demonstrated progress.&lt;ol type='a'&gt;&lt;li&gt; Answer 'Demonstrates new skills consistent with case plan objectives OR is actively engaged in services and activities to gain new skills consistent with case plan objectives' if the caregiver successfully completed all recommended services, is actively participating in services, or is pursuing objectives detailed in case plans. Observation demonstrates the caregiver's application of learned skills in interactions between child/caregiver, caregiver to caregiver, caregiver to other significant adult(s), self-care, home maintenance, financial management, or demonstration of skills toward reaching the behavioral objectives agreed upon in the case plan.&lt;/li&gt;&lt;li&gt; Answer 'Does not demonstrate new skills consistent with case plan objectives AND/OR participation is minimal and insufficient to contribute to achieving case plan objectives' if there was minimal participation in pursuing objectives in the case plan. The caregiver is minimally participating in services OR has made progress but is not fully complying with the objectives in the case plan and/or caregiver has participated in services, but he/she is not meeting case plan objectives, refused involvement in services, or failed to comply/participate as required. The caregiver refuses services, sporadically follows the case plan, or has not demonstrated the necessary skills due to a failure or inability to participate.&lt;/li&gt;&lt;/ol&gt;</help-text>
+        </list-question>
+      </cluster>
     </question-page>
-    <summary-page
-      id="SummaryPage"
+    <callout
+      expression="GetRiskReassessmentResults()"
+      id="GetRiskReassessmentResults"
+    />
+    <question-page
+      entity="Assessment"
+      id="AssessmentOverrides"
+      progress="0"
+      read-only="false"
+      set-focus="true"
       show-back-button="true"
       show-exit-button="true"
       show-next-button="true"
-      show-save-exit-button="false"
+      show-person-tabs="false"
+      show-save-exit-button="true"
     >
-      <title id="Summary.Title"/>
-      <cluster entity="AsthmaAdult">
-        <title id="Grp1.Title"/>
+      <title id="Page.Title.AssessmentResults">SDM\u00AE Risk Reassessment</title>
+      <description id="ScoringAndOverrides.Description">Scoring and Overrides</description>
+      <validation expression="Assessment.riskOverride==&quot;RO10001&quot; or Assessment.riskOverride==&quot;RO10003&quot; or (Assessment.riskOverride==&quot;RO10002&quot; and ((isNotNull(Assessment.policyOverrideSexAbuseCaseInd) and Assessment.policyOverrideSexAbuseCaseInd==true) or (isNotNull(Assessment.policyOverrideInjuryInd) and Assessment.policyOverrideInjuryInd==true) or (isNotNull(Assessment.policyOverrideSevereInjuryInd) and Assessment.policyOverrideSevereInjuryInd==true) or (isNotNull(Assessment.policyOverrideDeathInd) and Assessment.policyOverrideDeathInd==true)))">
+        <message id="OverrideMessage.id">At least one condition must be specified if a policy override has been selected.</message>
+      </validation>
+      <validation expression="Assessment.riskOverride==&quot;RO10001&quot; or Assessment.riskOverride==&quot;RO10002&quot;   or (Assessment.riskOverride==&quot;RO10003&quot; and isNotNull(Assessment.discretionaryOverrideLevel) and (Assessment.discretionaryOverrideLevel==&quot;RDO10101&quot; or Assessment.discretionaryOverrideLevel==&quot;RDO10102&quot;))">
+        <message id="DiscMessageID">Override direction must be selected if a discretionary override has been specified.</message>
+      </validation>
+      <cluster>
+        <title id="Cluster.Title.ScoredRiskLevel">Scored Risk Level</title>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <display-text id="AssessmentResults.Display.Text.RiskResult">
+          &lt;p style="font-family:tahoma;font-size:11px;color:#4e4e4e"&gt;Risk Level: &lt;b&gt;%1c&lt;/b&gt; &lt;/p&gt;
+          <argument id="Assessment.scoredClassification"/>
+        </display-text>
+      </cluster>
+      <cluster>
+        <title id="Cluster.Title.Overrides">Overrides</title>
+        <description id="Cluster.Desc.Overrides">&lt;p style="font-family:tahoma;font-size:11px;color:#4e4e4e"&gt;Please select an override code. If a policy override is made, mark 'yes' to all applicable conditions in the current review period. If any condition is applicable, override final risk level to very high. If a discretionary override is made, indicate reason. Risk level may be overridden one level higher or lower.&lt;/p&gt;</description>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>40</label-width>
+          <label-alignment>right</label-alignment>
+        </layout>
         <question
           control-question="false"
-          id="treatmentPlanStep"
-          mandatory="false"
+          id="riskOverride"
+          mandatory="true"
+          multi-select="false"
+          show-field-help="false"
         >
-          <label id="Q1.Label"/>
-          <help-text id="Q1.HelpText"/>
-        </question>
-        <question
-          control-question="false"
-          id="peakFlowReading"
-          mandatory="false"
-        >
-          <label id="Q2.Label"/>
-          <help-text id="Q2.HelpText"/>
-        </question>
-        <question
-          control-question="false"
-          id="effects"
-          mandatory="false"
-        >
-          <label id="Q3.Label"/>
-          <help-text id="Q3.HelpText"/>
+          <label id="Question.Label.AssessmentOverride">Assessment Override</label>
         </question>
       </cluster>
-    </summary-page>
+      <condition expression="(Assessment.riskOverride==&quot;RO10002&quot;)">
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-width>70</label-width>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="policyOverrideSexAbuseCaseInd"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.SexAbuseOverride">Sexual abuse case AND the perpetrator is likely to have access to the child.</label>
+          </question>
+          <question
+            control-question="false"
+            id="policyOverrideInjuryInd"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.InjuryOverride">Non-accidental injury to a child younger than two years old.</label>
+          </question>
+          <question
+            control-question="false"
+            id="policyOverrideSevereInjuryInd"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.SevereInjuryOverride">Severe non-accidental injury.</label>
+          </question>
+          <question
+            control-question="false"
+            id="policyOverrideDeathInd"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.DeathOverride">Caregiver(s) action or inaction resulted in death of a child due to abuse or neglect (previous or current).</label>
+          </question>
+        </cluster>
+      </condition>
+      <condition expression="(Assessment.riskOverride==&quot;RO10003&quot;)">
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-width>40</label-width>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="discretionaryOverrideLevel"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.DiscretionaryOverrideLevel">Override Direction</label>
+          </question>
+          <question
+            control-question="false"
+            id="discretionaryOverrideReason"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.DiscretionaryOverrideReason">Description</label>
+            <layout>
+              <type>flow</type>
+              <num-rows>4</num-rows>
+            </layout>
+          </question>
+        </cluster>
+      </condition>
+    </question-page>
   </section>
 </ieg-script>

@@ -1,20 +1,10 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2013. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-QuestionPage.Title.AdultNeeds=Adult Needs
-Cluster.Desc.AdultNeeds=<b>Please tell us about your current situation including the things that are working well for you as well as the challenges that you face.</b>
-QuestionLabelID.keepingHomeClean=1. Do you need help with keeping your home clean?
-QuestionLabel.shopping=2. Do you need help with shopping for food and cleaning materials?
-QuestionLabel.doingLaundry=3. Do you need help with doing your laundry?
-QuestionLabel.managingMoney=4. Do you need help with managing your money?
-QuestionLabel.makingFood=5. Do you need help with making food and drinks?
-QuestionLabel.eatingRegularly=6. Do you need help with eating regularly?
-QuestionLabel.goingToTheToilet=7. Do you need help with going to the toilet?
-DisplayText.Developed=<i>Developed by xyz.</i>
-
-
+MedicalInformation.Title=Medical Information
+MedicalInformationCluster.Title=Medical Information
+Illness.LabelID=What is your illness?
+Illness.HelpID=Select you illness from the list
+tiSpecialRules.LabelID=Is the claim being made under the special rules for terminally ill people?
+tiSpecialRules.HelpID=Select Yes or No from the list
+ConsentCluster.Desc=Consent
+ConsentCluster.Title=Consent
+consentContactGP.LabelID=Consent to contact your GP
+consentContactGP.HelpID=Select Yes or No from the list

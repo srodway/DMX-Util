@@ -1,19 +1,19 @@
 #
 # Licensed Materials - Property of IBM
 # 
-# Copyright IBM Corporation 2014. All Rights Reserved.
+# Copyright IBM Corporation 2012. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Appeal.Acknowledgement.Title=Appeal Request Acknowledgement
-Appeal.Rejected.Title=Appeal Request Disallowed
+MenuItem.Title.CancelAssessment=Cancel Assessment
+MenuItem.Tooltip.CancelAssessment=Cancel the Assessment
 
-Appeal.Acknowledgement.Text=We have received your {link:Appeal Request:listOnlineAppealRequests} and it is currently under review. We will contact you shortly to confirm the next steps.
-Appeal.Rejected.Text=We have reviewed your appeal request and determined it to be an invalid appeal. We will send you written notice of this, including further details.
+MenuItem.Title.CloneAssessment=Clone Assessment
+MenuItem.Tooltip.CloneAssessment=Clone the Assessment
 
-Your.Appeal.Requests.Link=listOnlineAppealRequests
-Your.Appeal.Requests.Target=CitizenAccount_listOnlineAppealRequest
+MenuItem.Title.CompleteAssessment=Complete Assessment
+MenuItem.Tooltip.CompleteAssessment=Complete the Assessment
 
-# START NON-TRANSLATABLE
-Num.Days.To.Expiry=7# END NON-TRANSLATABLE
+MenuItem.Title.MakeDecision=Make Decision
+MenuItem.Tooltip.MakeDecision=Make a Decision

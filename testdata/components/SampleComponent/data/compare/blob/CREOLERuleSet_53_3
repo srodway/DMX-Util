@@ -1,60 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
 
-  Copyright IBM Corporation 2012,2013. All Rights Reserved.
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
 
   US Government Users Restricted Rights - Use, duplication or disclosure
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="OutcomePlanClientSelectionInterfaceRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+--><RuleSet name="ASCLivingArrangementDataRuleSet">
 
-  <!-- This interface should return a list of application case clients whom will 
-       be added to the outcome plan created or modified as part of the authorisation of 
-       the specified IntakeProgramApplication. The following can be specified:
 
-     * clients - The list of clients for the outcome plan if the
-       creation of one is configured. If the creation or usage of a outcome plan
-       is configured this attribute is treated as mandatory by the system.
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="ASCLivingArrangement">
 
-     * comments - Comments on the authorisation of the IntakeProgramApplication.
-       The attribute is treated as optional by the system.
-  -->
- 
-  <Class abstract="false" name="AbstractClients">    
 
-    <!-- 
-      The application case on which the intake program and the clients
-      reside. 
-    -->    
-    <Attribute name="applicationCaseID">
+    <Annotations>
+      <SuccessionSetPopulation/>
+    </Annotations>
+
+
+    <Attribute name="startDate">
+      <Annotations>
+        <Label label-id="startDate" name="The start date of the living arrangement."/>
+      </Annotations>
       <type>
-        <javaclass name="Number"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
-    </Attribute>   
-    
-    <!-- 
-      The clients for the outcome plan being created as a 
-      result of  authorisation 
-    -->    
-    <Attribute name="outcomePlanClients">
+    </Attribute>
+
+
+    <Attribute name="livingArrangeStatus">
+      <Annotations>
+        <Label label-id="livingArrangeStatus" name="The status of the living arrangement, e.g. Permanent."/>
+      </Annotations>
       <type>
-        <javaclass name="List">
-          <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-        </javaclass>
+        <codetableentry table="LivingArrangementStatus"/>
       </type>
       <derivation>
-        <readall ruleclass="CaseParticipantRole" ruleset="CaseEntitiesRuleSet">
-          <match retrievedattribute="caseID">
-            <reference attribute="applicationCaseID"/>
-          </match>
-        </readall>                   
+        <specified/>
       </derivation>
     </Attribute>
-        
-    <!-- The class description.  -->
-       
+
+
+    <Attribute name="endDate">
+      <Annotations>
+        <Label label-id="endDate" name="The end date of the living arrangement."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="livingArrangeType">
+      <Annotations>
+        <Label label-id="livingArrangeType" name="The living arrangement type of the client, e.g. Adult Case Home, Foster Care etc."/>
+      </Annotations>
+      <type>
+        <codetableentry table="LivingArrangementType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="successionID"/>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="caseParticipantRoleID">
+      <Annotations>
+        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the client."/>
+      </Annotations>
+      <type>
+        <javaclass name="java.lang.Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="related_caseParticipantRoleID">
+      <Annotations/>
+      <type>
+        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+      </type>
+      <derivation>
+        <reference attribute="caseParticipantRoleRecord">
+          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
+            <reference attribute="caseParticipantRoleID"/>
+          </create>
+        </reference>
+      </derivation>
+    </Attribute>
+
+
   </Class>
+
 
 </RuleSet>

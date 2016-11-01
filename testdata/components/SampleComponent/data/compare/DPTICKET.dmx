@@ -15,7 +15,2098 @@
   <column name="lastWritten" type="timestamp" />
   <row>
     <attribute name="ticketID">
-      <value>257</value>
+      <value>283</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>281</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-8927260361355165696</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.28.12</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.28.12</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.28.12</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>267</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>264</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-8855202767317237760</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.23.14</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.23.14</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.23.14</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>568</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>566</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-8792152372534050816</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.04.09</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.04.09</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.04.09</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>593</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>591</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-8754434725654822912</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.20.56</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.20.56</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.20.56</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>272</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>269</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-8711087579241381888</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.26.03</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.26.03</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.26.03</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>684</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>683</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-8632837535715819520</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.46.40</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.46.40</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.46.40</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>652</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>650</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-8335599960309366784</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.35.35</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.35.35</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.35.35</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>644</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>640</value>
+    </attribute>
+    <attribute name="processName">
+      <value>SHARE_EVIDENCE_CP</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-8173470373724028928</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvdForCaseParticipant</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-16.12.26</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-16.12.26</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-16.12.26</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>601</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>600</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-8123930777822953472</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.23.15</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.23.16</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.23.16</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>549</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>547</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-7531144476870311936</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.54.36</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.54.36</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.54.36</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>589</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>586</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-7529455627010048000</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.20.22</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.20.22</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.20.22</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>523</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>520</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-6864611732019478528</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.07.47</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.07.47</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.07.47</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>277</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share removal of evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>275</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_REMOVAL</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-6333186975989760000</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidenceRemoval</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.27.23</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.27.23</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.27.23</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>529</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>526</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-6306165378225537024</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.09.51</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.09.51</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.09.51</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>637</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>636</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-6155857740662046720</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-16.12.16</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-16.12.16</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-16.12.16</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>541</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>538</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-6089992596111753216</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.11.49</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.11.49</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.11.49</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>584</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>583</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-6016246152213561344</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.17.42</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.17.42</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.17.42</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>577</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>575</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-5981906205054861312</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.07.10</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.07.10</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.07.10</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>597</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>594</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-5746030174571331584</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.21.34</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.21.34</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.21.34</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>288</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>286</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-5720697426667372544</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.45.49</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.45.49</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.45.49</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>560</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>558</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-5657647031884185600</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-12.00.29</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-12.00.29</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-12.00.29</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>672</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>669</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-5633440183887069184</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.40.55</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.40.55</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.40.55</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>619</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>617</value>
+    </attribute>
+    <attribute name="processName">
+      <value>SHARE_EVIDENCE_CP</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-5205598219286872064</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvdForCaseParticipant</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-14.55.18</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-14.55.19</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-14.55.19</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>656</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>653</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-5201094619659501568</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.37.58</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.37.58</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.37.58</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>635</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>632</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-5074993830093127680</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-16.12.01</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-16.12.01</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-16.12.01</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>627</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>624</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-5034461433446793216</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-15.11.48</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-15.11.48</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-15.11.48</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>705</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>703</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-5011943435309940736</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-14.15.05</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-14.15.05</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-14.15.05</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>556</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>554</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-4937071091504906240</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.56.17</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.56.17</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.56.17</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>573</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>571</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-4901042294485942272</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.06.53</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.06.53</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.06.53</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>518</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>516</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-4846999098957496320</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.06.42</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.06.42</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.06.42</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>696</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>694</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-4633641066610819072</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.49.23</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.49.23</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.49.23</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>664</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>659</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-4624633867356078080</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.39.12</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.39.12</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.39.12</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>296</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>294</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-4585790320570007552</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.52.02</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.52.02</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.52.02</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>545</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>542</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-4504725527277338624</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.24.44</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.24.44</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.24.44</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>648</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>646</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-4444489882261258240</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.33.45</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.33.46</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.33.46</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>689</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing when a program authorization has been requested.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>5778681271869767680</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PROGRAMAUTHORIZATION</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-4381439487478071296</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.commonintake.authorisation.intf.DeferredAuthorisation</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>authoriseProgram</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.49.20</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.49.21</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>TT27001</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.49.21</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>642</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>639</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-4354417889713848320</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-16.12.26</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-16.12.26</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-16.12.26</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>668</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>666</value>
+    </attribute>
+    <attribute name="processName">
+      <value>SHARE_EVIDENCE_CP</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-4336403491204366336</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvdForCaseParticipant</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.39.54</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.39.54</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.39.54</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>631</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>628</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-4282360295675920384</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-15.28.10</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-15.28.10</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-15.28.10</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>273</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>270</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-3739113590624354304</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.26.03</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.26.03</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.26.03</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>285</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>282</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-3594998402548498432</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.28.12</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.28.12</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.28.12</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>602</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>598</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-3079899195167997952</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.23.15</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.23.15</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.23.15</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>564</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share removal of evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>563</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_REMOVAL</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-2847400864404996096</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidenceRemoval</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-12.01.54</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-12.01.54</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-12.01.54</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>533</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>530</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-2415055300177428480</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.10.50</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.10.50</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.10.50</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>623</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>620</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-2296272860005531648</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-15.07.32</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-15.07.32</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-15.07.32</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>515</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>512</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-2288954510611054592</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-10.35.39</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-10.35.40</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-10.35.40</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>682</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>679</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-2219711666340233216</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.44.07</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.44.07</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.44.07</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>678</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>676</value>
+    </attribute>
+    <attribute name="processName">
+      <value>SHARE_EVIDENCE_CP</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-1958502887952744448</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvdForCaseParticipant</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.43.30</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.43.30</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.43.30</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>693</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>690</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-1787366102112665600</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.49.21</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.49.21</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.49.21</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>607</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>604</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-1746833705466331136</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.54.49</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.54.49</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.54.49</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>662</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>660</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-1742330105838960640</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.39.12</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.39.12</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.39.12</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>259</value>
     </attribute>
     <attribute name="subject">
       <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
@@ -27,7 +2118,7 @@
       <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
     </attribute>
     <attribute name="processInstID">
-      <value>4196228952802459648</value>
+      <value>-1536853372840181760</value>
     </attribute>
     <attribute name="interfaceName">
       <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
@@ -36,10 +2127,10 @@
       <value>dequeue</value>
     </attribute>
     <attribute name="creationTS">
-      <value>2015-12-04-11.06.29</value>
+      <value>2016-10-28-14.23.39</value>
     </attribute>
     <attribute name="closureTS">
-      <value>2015-12-04-11.06.29</value>
+      <value>2016-10-28-14.23.40</value>
     </attribute>
     <attribute name="status">
       <value>WS4</value>
@@ -51,24 +2142,24 @@
       <value />
     </attribute>
     <attribute name="lastWritten">
-      <value>2015-12-04-11.06.29</value>
+      <value>2016-10-28-14.23.40</value>
     </attribute>
   </row>
   <row>
     <attribute name="ticketID">
-      <value>259</value>
+      <value>611</value>
     </attribute>
     <attribute name="subject">
       <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
     </attribute>
     <attribute name="instDataID">
-      <value>258</value>
+      <value>608</value>
     </attribute>
     <attribute name="processName">
       <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
     </attribute>
     <attribute name="processInstID">
-      <value>3763883388574892032</value>
+      <value>-1458603329314619392</value>
     </attribute>
     <attribute name="interfaceName">
       <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
@@ -77,10 +2168,10 @@
       <value>dequeue</value>
     </attribute>
     <attribute name="creationTS">
-      <value>2015-12-04-11.50.08</value>
+      <value>2016-10-31-13.55.57</value>
     </attribute>
     <attribute name="closureTS">
-      <value>2015-12-04-11.50.08</value>
+      <value>2016-10-31-13.55.57</value>
     </attribute>
     <attribute name="status">
       <value>WS4</value>
@@ -92,7 +2183,2836 @@
       <value />
     </attribute>
     <attribute name="lastWritten">
-      <value>2015-12-04-11.50.08</value>
+      <value>2016-10-31-13.55.57</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>263</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>260</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-1374723786254843904</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.22.17</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.22.17</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.22.17</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>292</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>290</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-1253126596315840512</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.48.48</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.48.48</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.48.48</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>580</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>579</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-1224416148691353600</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.09.56</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.09.56</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.09.56</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>552</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>550</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-973903419418869760</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.55.13</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.55.13</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.55.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>674</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>673</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-877638977383825408</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.42.40</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.42.40</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.42.40</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>539</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>536</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-541557855191302144</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.11.49</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.11.49</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.11.49</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>615</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>612</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-449797012783628288</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-14.54.43</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-14.54.43</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-14.54.43</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>528</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>525</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-397442667115446272</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.09.51</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.09.51</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.09.51</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>301</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>299</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>-46161896180547584</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.54.16</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.54.16</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.54.16</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>565</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>562</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>179018085187977216</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-12.01.54</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-12.01.54</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-12.01.54</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>535</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share removal of evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>531</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_REMOVAL</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>395190867301761024</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidenceRemoval</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.10.50</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.10.50</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.10.50</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>519</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>517</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>485262859849170944</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.06.42</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.06.42</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.06.42</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>622</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>621</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>1018376465739153408</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-15.07.32</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-15.07.32</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-15.07.32</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>647</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>645</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>1103944858659192832</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.33.45</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.33.45</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.33.45</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>585</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>582</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>1117455657541304320</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.17.42</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.17.42</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.17.42</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>697</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>695</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>1130966456423415808</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.49.23</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.49.23</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.49.23</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>614</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>613</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>1135470056050786304</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-14.54.43</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-14.54.43</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-14.54.43</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>297</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>295</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>1394989984578011136</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.52.02</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.52.02</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.52.02</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>522</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>521</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>1494069176380162048</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.07.47</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.07.47</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.07.47</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>544</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>543</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>1548112371908608000</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.24.44</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.24.44</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.24.44</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>561</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>559</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>1620169965946535936</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-12.00.29</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-12.00.29</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-12.00.29</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>688</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>687</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>1671398411707875328</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.49.20</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.49.20</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.49.20</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>258</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>257</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>1777795952904503296</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-14.23.39</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-14.23.40</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-14.23.40</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>606</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>605</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>2072218778543849472</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.54.49</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.54.49</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.54.49</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>266</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>265</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>2169609120485736448</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.23.14</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.23.14</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.23.14</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>658</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>655</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>2292895160285003776</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.37.58</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.37.58</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.37.58</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>651</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>649</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>2400981551341895680</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.35.35</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.35.35</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.35.35</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>514</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>513</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>2466846695892189184</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-10.35.39</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-10.35.40</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-10.35.40</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>704</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>702</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>2482046344634564608</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-14.15.05</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-14.15.05</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-14.15.05</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>303</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>300</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>2547911489184858112</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.54.16</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.54.16</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.54.16</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>548</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>546</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>2556918688439599104</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.54.36</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.54.36</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.54.36</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>588</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>587</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>2702722726375718912</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.20.22</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.20.22</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.20.22</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>626</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>625</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>3396277068990775296</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-15.11.48</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-15.11.48</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-15.11.48</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>634</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>633</value>
+    </attribute>
+    <attribute name="processName">
+      <value>SHARE_EVIDENCE_CP</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>3427802266382368768</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvdForCaseParticipant</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-16.12.01</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-16.12.01</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-16.12.01</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>692</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>691</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>3472838262656073728</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.49.21</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.49.23</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.49.23</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>681</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>680</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>3833126232845713408</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.44.07</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.44.07</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.44.07</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>278</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share removal of evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>276</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_REMOVAL</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>3971048971433934848</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidenceRemoval</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.27.23</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.27.23</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.27.23</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>592</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>590</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>4071817013096349696</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.20.56</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.20.56</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.20.56</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>686</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>685</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>4265471797073281024</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.47.39</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.47.39</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.47.39</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>262</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>261</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>4317826142741463040</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.22.17</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.22.17</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.22.17</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>557</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share removal of evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>555</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_REMOVAL</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>4646588915539509248</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidenceRemoval</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.56.17</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.56.17</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.56.17</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>671</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>670</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>4742853357574553600</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.40.55</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.40.55</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.40.55</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>699</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing to assess eligibility for a given Interactive case</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>698</value>
+    </attribute>
+    <attribute name="processName">
+      <value>ASSESSCASE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>5022076534471524352</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.core.intf.DetermineEligibility</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>assessBenefitCase</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.50.27</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.50.28</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>CLAIM</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.50.28</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>657</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>654</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>5175198921802121216</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.37.58</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.37.58</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.37.58</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>289</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>287</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>5304114461135601664</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.45.49</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.45.49</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.45.49</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>677</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>675</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>5535486891991760896</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.43.30</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.43.30</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.43.30</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>293</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>291</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>5736460025363169280</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.48.48</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.48.48</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.48.48</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>663</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>661</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>5751659674105544704</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.39.12</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.39.12</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.39.12</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>271</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>268</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>5772488822382133248</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.26.03</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.26.03</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.26.03</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>284</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>280</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>5916604010457989120</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.28.12</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.28.12</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.28.12</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>553</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>551</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>6087740796298067968</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.55.13</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.55.13</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.55.13</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>581</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>578</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>6197516037215223808</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.09.56</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.09.56</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.09.56</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>596</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>595</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>6287588029762633728</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.21.34</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.21.34</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.21.34</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>643</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>641</value>
+    </attribute>
+    <attribute name="processName">
+      <value>SHARE_EVIDENCE_CP</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>6382163621937414144</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvdForCaseParticipant</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-16.12.26</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-16.12.26</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-16.12.26</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>569</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>567</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>6484057563506671616</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.04.09</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.04.09</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.04.09</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>302</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>298</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>6655194349346750464</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.54.16</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.54.16</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.54.16</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>527</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>524</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>6664201548601491456</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.09.51</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.09.51</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.09.51</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>630</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidences in bulk from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>629</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE_BULK</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>6814509186164981760</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareBulkEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-15.28.10</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-15.28.10</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-15.28.10</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>540</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>537</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>6880374330715275264</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.11.49</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.11.49</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.11.49</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>610</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>609</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>7044192767160877056</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.55.57</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.55.57</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.55.57</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>534</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share removal of evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>532</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_REMOVAL</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>7673007865132482560</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidenceRemoval</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-11.10.50</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-11.10.50</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-11.10.50</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>572</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>570</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>7781094256189374464</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.06.53</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.06.53</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.06.53</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>701</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>700</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>7832322701950713856</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.50.28</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.50.28</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.50.28</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>603</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Share evidence from source case to target case.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>599</value>
+    </attribute>
+    <attribute name="processName">
+      <value>EVIDENCE_SHARE</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>8305200662824615936</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.evidencebroker.sl.intf.EvidenceBrokerDP</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>shareEvidence</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.23.15</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.23.16</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>INF</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.23.16</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>667</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>665</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>8345733059470950400</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-11-01-13.39.54</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-11-01-13.39.54</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-11-01-13.39.54</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>576</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>574</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>8429612602530725888</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-13.07.10</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-13.07.10</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-13.07.10</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>279</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>274</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>8943022960050962432</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-28-15.27.23</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-28-15.27.23</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-28-15.27.23</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>618</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Performs recalculation of dependents which may be affected by changes in various precedent values.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>616</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PERFORM_DEFERRED_RECALCULATIONS_FROM_PRECEDENT_CHANGE_SET</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>8989747806184931328</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.dependency.intf.PerformDeferredRecalculationsFromPrecedentChangeSet</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>dequeue</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-14.55.18</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-14.55.18</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value />
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-14.55.18</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="ticketID">
+      <value>638</value>
+    </attribute>
+    <attribute name="subject">
+      <value>Delayed processing when a program authorization has been requested.</value>
+    </attribute>
+    <attribute name="instDataID">
+      <value>5013069335216783360</value>
+    </attribute>
+    <attribute name="processName">
+      <value>PROGRAMAUTHORIZATION</value>
+    </attribute>
+    <attribute name="processInstID">
+      <value>9192409789416603648</value>
+    </attribute>
+    <attribute name="interfaceName">
+      <value>curam.commonintake.authorisation.intf.DeferredAuthorisation</value>
+    </attribute>
+    <attribute name="methodName">
+      <value>authoriseProgram</value>
+    </attribute>
+    <attribute name="creationTS">
+      <value>2016-10-31-16.12.16</value>
+    </attribute>
+    <attribute name="closureTS">
+      <value>2016-10-31-16.12.26</value>
+    </attribute>
+    <attribute name="status">
+      <value>WS4</value>
+    </attribute>
+    <attribute name="resolutionCode">
+      <value>RC1</value>
+    </attribute>
+    <attribute name="ticketType">
+      <value>TT27001</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2016-10-31-16.12.26</value>
     </attribute>
   </row>
 </table>

@@ -5,27 +5,12 @@
 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2011 Curam Software Ltd.
-  All rights reserved.
+--><!-- This IEG tab is referenced from the CEF file ADMINAPPSection.sec --><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ApplicationResources">
 
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="EvidenceType">
+  <!-- Reference to properties for details. -->
+  <tc:context tab-name="resources.name" tab-title="resources.name"/>
 
-  <tc:page-param name="caseID"/>
-  <tc:page-param name="evidenceType"/>
-
-  <tc:menu id="EvidenceTypeMenu"/> 
-  
-  <!-- Details panel -->
-  <tc:context height="0" page-id="Evidence_workspaceTypeSummary"/>
-
-  <!-- See CaseEvidence.nav for details of the navigation links. -->
-  <tc:navigation id="EvidenceType"/>
-  
-  <tc:smart-panel collapsed="true" page-id="Evidence_smartPanelType" title="Smart.Panel.Title" width="200"/>
+  <!-- Reference to Resourcestore.nav file. -->
+  <tc:navigation page-id="IEG2_listAllResourcesByCategory"/>
 
 </tc:tab-config>

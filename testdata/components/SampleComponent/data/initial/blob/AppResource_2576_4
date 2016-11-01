@@ -1,22 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+MenuItem.Title.Edit=Edit
+MenuItem.Tooltip.Edit=Edit
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ServicePlansMenu">
-  <mc:menu-item id="Plan" open-as="modal" page-id="ServicePlanAdmin_createServicePlan" title="MenuItem.Title.Plan" tooltip="MenuItem.Tooltip.Plan"/>
-  
-  <mc:menu-item id="Template" open-as="modal" page-id="ServicePlanAdmin_createTemplate" title="MenuItem.Title.Template" tooltip="MenuItem.Tooltip.Template"/>      
-  
+MenuItem.Title.AssociateLegalAction=Associate Legal Action
+MenuItem.Tooltip.AssociateLegalAction=Associate Legal Action
 
-</mc:menu-bar>
+MenuItem.Title.ScheduleHearing =Schedule Hearing
+MenuItem.Tooltip.ScheduleHearing =Schcedule Hearing
+
+MenuItem.Title.CreateStatement=Create Statement
+MenuItem.Tooltip.CreateStatement=Create Statement
+
+MenuItem.Title.Close=Close
+MenuItem.Tooltip.Close=Close
+
+MenuItem.Title.NewLegalAction=New Legal Action
+MenuItem.Tooltip.NewLegalAction=New Legal Action
+
+MenuItem.Title.Delete=Delete
+MenuItem.Tooltip.Delete=Delete

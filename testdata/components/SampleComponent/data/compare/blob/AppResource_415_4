@@ -1,38 +1,22 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-DefaultAppInboxSectionShortcuts.title=Shortcuts
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012, 2016. All Rights Reserved.
+  
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010-2011 Curam Software Ltd.
+  All rights reserved.
 
-Inbox.Group=Tasks
-MyTasksShortcut.title=My Tasks
-AvailableTasksShortcut.title=Available Tasks
-NotificationsShortcut.title= My Notifications
-WorkQueuesShortcut.title=My Work Queues
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><!-- BEGIN, CR00280287, MR --><!-- BEGIN, CR00468380, MNS --><sc:section xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-config" default-page-id="PME_resolveProviderProviderGroupHome" hide-tab-container="false" id="CPMEXPRGRPWorkspaceSection" title="CPMEXPRGRPWorkspaceSection.title" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!-- END, CR00468380 -->
+<!-- END, CR00280287 -->
+  <sc:tab id="CPMEXPRGRPWorkspace"/>
+  <sc:tab id="CPMEXProviderForProviderGroup"/>
 
-WorkQ.Group=Work Queues
-
-Notifications.Group=Notifications
-
-
-
-Search.Group=Search
-InboxTaskQueryShortcut.title= My Task Queries
-InboxSearchShortcut.title=Task Search 
-
-QuickLinks.Group=Quick Links
-
-ReserveNextTaskShortcut.title=Get Next Available Task
-ReserveNextTaskFromPreferredQueueShortcut.title=Get Next Task From Preferred Queue
-ReserveNextTaskFromQueueShortcut.title=Get Next Task From Queue
-InboxNewTaskShortcut.title=New Task
-InboxOptionsShortcut.title=Task Preferences
-InboxNewTaskQueryShortcut.title=New Task Query
-InboxSearchTaskShortcut.title=Search for a Task
-SubscribeToQueueShortcut.title=Subscribe to a Work Queue
-UnsubscribeToQueueShortcut.title=Unsubscribe from a Work Queue
-GetNextTask.title=Get Next Task
+</sc:section>

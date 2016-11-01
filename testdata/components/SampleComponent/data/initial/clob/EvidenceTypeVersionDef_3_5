@@ -53,7 +53,7 @@
     <SummaryMapping>
       <Summary>
         <parameter name="diagnosis"/>
-        <SummaryResource id="Diagnosis.message"/>
+        <SummaryResource id="ASCDiagnosis.message"/>
       </Summary>
     </SummaryMapping>
   </SummaryInformation>
@@ -68,15 +68,15 @@
         isOnViewPage="true"
         numberOfColumns="2"
       >
-        <Title id="Cluster.Diagnosis"/>
-        <OnlineText id="Cluster.Diagnosis.Help"/>
+        <Title id="Cluster.ASCDiagnosis"/>
+        <OnlineText id="Cluster.ASCDiagnosis.Help"/>
         <StandardClusterField>
           <StandardField
             modifiable="true"
             source="diagnosis"
             useDefault="true"
           >
-            <Label id="Diagnosis.DiagnosisDetails.diagnosisLabel1"/>
+            <Label id="ASCDiagnosis.DiagnosisDetails.diagnosisLabel1"/>
           </StandardField>
         </StandardClusterField>
         <StandardClusterField>

@@ -313,23 +313,6 @@
   </row>
   <row>
     <attribute name="procEvtMappingID">
-      <value>201</value>
-    </attribute>
-    <attribute name="procStartEventID">
-      <value>201</value>
-    </attribute>
-    <attribute name="eventField">
-      <value>EVF2</value>
-    </attribute>
-    <attribute name="wdoAttribute">
-      <value>IntakeProgramApplicationDetails.intakeProgramApplicationID</value>
-    </attribute>
-    <attribute name="lastWritten">
-      <value />
-    </attribute>
-  </row>
-  <row>
-    <attribute name="procEvtMappingID">
       <value>300</value>
     </attribute>
     <attribute name="procStartEventID">
@@ -340,6 +323,23 @@
     </attribute>
     <attribute name="wdoAttribute">
       <value>RequiredObjectIDs.plannedItemID</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="procEvtMappingID">
+      <value>201</value>
+    </attribute>
+    <attribute name="procStartEventID">
+      <value>201</value>
+    </attribute>
+    <attribute name="eventField">
+      <value>EVF2</value>
+    </attribute>
+    <attribute name="wdoAttribute">
+      <value>IntakeProgramApplicationDetails.intakeProgramApplicationID</value>
     </attribute>
     <attribute name="lastWritten">
       <value />

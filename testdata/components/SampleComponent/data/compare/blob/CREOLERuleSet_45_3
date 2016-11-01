@@ -7,133 +7,56 @@
 
   US Government Users Restricted Rights - Use, duplication or disclosure
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet name="ASCAlienDataRuleSet">
+--><RuleSet name="ASCDiagnosisRuleSet">
 
 
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="ASCAlien">
+  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="ASCDiagnosis">
 
 
-    <Annotations>
-      <SuccessionSetPopulation endDateAttribute="endDate" startDateAttribute="dateOfEntry"/>
-    </Annotations>
-
-
-    <Attribute name="alientStatusOnEntry">
+    <Attribute name="examinationDate">
       <Annotations>
-        <Label label-id="alientStatusOnEntry" name="The alien's status on entering the country, e.g. Deportation Withheld"/>
-      </Annotations>
-      <type>
-        <codetableentry table="AlienStatusOnEntry"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="dateOfEntry">
-      <Annotations>
-        <Label label-id="dateOfEntry" name="The date the alien entered the country."/>
+        <Label label-id="examinationDate" name="The date on which the examination by the practitioner took place."/>
       </Annotations>
       <type>
         <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <specified/>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="endDate">
+    <Attribute name="diagnosis">
       <Annotations>
-        <Label label-id="endDate" name="The end date for the alien."/>
+        <Label label-id="diagnosis" name="The diagnosis as determined by a practitioner."/>
       </Annotations>
       <type>
-        <javaclass name="curam.util.type.Date"/>
+        <codetableentry table="IncapacityDiagnosis"/>
       </type>
       <derivation>
-        <specified/>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="alienType">
-      <Annotations>
-        <Label label-id="alienType" name="The type of alien the household member is categorized under e.g. refugee."/>
-      </Annotations>
+    <Attribute name="cert">
       <type>
-        <codetableentry table="InAlienStatus"/>
+        <javaclass name="java.util.List">
+          <ruleclass name="PractitionerCertificate" ruleset="PractitionerCertificateRuleSet"/>
+        </javaclass>
       </type>
       <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="alienRegNumber">
-      <Annotations>
-        <Label label-id="alienRegNumber" name="The alien's registration number."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="countryOfOrigin">
-      <Annotations>
-        <Label label-id="countryOfOrigin" name="The alien's country of origin."/>
-      </Annotations>
-      <type>
-        <codetableentry table="Country"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
-          <reference attribute="successionID"/>
-        </ResourceMessage>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="caseParticipantRoleID">
-      <Annotations>
-        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the alien."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="related_caseParticipantRoleID">
-      <Annotations>
-        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the alien."/>
-      </Annotations>
-      <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="caseParticipantRoleID"/>
-          </create>
-        </reference>
+        <call class="curam.dynamicevidence.cer.impl.DynamicEvidenceStatics" method="getParentList">
+          <type>
+            <javaclass name="java.util.List">
+              <ruleclass name="PractitionerCertificate" ruleset="PractitionerCertificateRuleSet"/>
+            </javaclass>
+          </type>
+          <arguments>
+            <this/>
+            <String value="PractitionerCertificate"/>
+          </arguments>
+        </call>
       </derivation>
     </Attribute>
 

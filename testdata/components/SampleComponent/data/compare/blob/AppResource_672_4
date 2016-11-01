@@ -1,33 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2010 Curam Software Ltd.
-    All rights reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+MenuItem.Title.StandardView=Manage Structure in Standard View
+MenuItem.Tooltip.StandardView=Manage Structure in Standard View
     
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="PlanReview">
-  <nc:loader-registry>
-    <nc:loader class="curam.outcomeplanning.tab.impl.PlanReviewNavigationLoader"/>
-  </nc:loader-registry>
-  <nc:nodes>
-    <nc:navigation-page id="PlanReviewHome" page-id="OutcomePlan_viewReviewHome" title="Leaf.Title.Home"/>
-    <nc:navigation-page id="Activities" page-id="OutcomePlan_viewReviewActivities" title="Leaf.Title.Activities"/>
-    <nc:navigation-page id="Goals" page-id="OutcomePlan_viewReviewGoals" title="Leaf.Title.Goals"/> 
-    <nc:navigation-page id="Objectives" page-id="OutcomePlan_viewReviewExpectedOutcomes" title="Leaf.Title.Objectives"/>
-    <nc:navigation-page dynamic="true" id="Assessments" page-id="OutcomePlan_listAssessmentsForReview" title="Leaf.Title.Assessments"/>
-    <nc:navigation-page dynamic="true" id="VisitsNonSDM" page-id="VisitationEvaluation_listByPlanReviewNonSDM" title="Leaf.Title.Visits"/>
-    <nc:navigation-page dynamic="true" id="VisitsSDM" page-id="VisitationEvaluation_listByPlanReviewSDM" title="Leaf.Title.Visits"/>
-    
-    <nc:navigation-page id="Notes" page-id="OutcomePlan_viewReviewNotes" title="Leaf.Title.Notes"/>     
-    <nc:navigation-page id="ExpectedCompletionDateHistory" page-id="OutcomePlan_viewReviewExpectedCompletionDateHistory" title="Leaf.Title.ExpectedCompletionDateHistory"/>     
-  </nc:nodes>
+Submenu.Title.Search=Search
+Submenu.Tooltip.Search=Find a case or participant.
 
-</nc:navigation>
+MenuItem.Title.User=User
+MenuItem.Tooltip.User=User
+
+MenuItem.Title.ExternalUser=External User
+MenuItem.Tooltip.ExternalUser=External User

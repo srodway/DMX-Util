@@ -6,75 +6,22 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009 Curam Software Ltd.
-  All rights reserved.
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="LiabilitySampleMenu">
-    <mc:submenu id="NEW" title="Submenu.Title.New" tooltip="Submenu.Tooltip.New">
-        <mc:menu-item id="Attachment" open-as="modal" page-id="Case_createAttachment" title="MenuItem.Title.Attachment" tooltip="MenuItem.Tooltip.Attachment"/>
-        <mc:submenu id="CalendarEvent" title="Submenu.Title.CalendarEvent" tooltip="Submenu.Tooltip.CalendarEvent">
-            <mc:menu-item id="Activity" open-as="modal" page-id="ICProductSample_createActivity" title="MenuItem.Title.Activity" tooltip="MenuItem.Tooltip.Activity"/>
-            <mc:menu-item id="RecurringActivity" open-as="modal" page-id="ICProductSample_createRecurringActivity" title="MenuItem.Title.RecurringActivity" tooltip="MenuItem.Tooltip.RecurringActivity"/>
-<!-- TODO: Create menu items for Create Meeting/Recurring Meeting once these pages exist -->
-            <mc:menu-item id="Appeal" open-as="modal" page-id="Case_createAppeal" title="MenuItem.Title.Appeal" tooltip="MenuItem.Tooltip.Appeal"/>
-            <mc:menu-item id="Referral" open-as="modal" page-id="Case_createReferral" title="MenuItem.Title.Referral" tooltip="MenuItem.Tooltip.Activity"/>
-            <mc:menu-item id="Review" open-as="modal" page-id="Case_createReview" title="MenuItem.Title.Review" tooltip="MenuItem.Tooltip.Activity"/>
-        </mc:submenu>
-        <mc:submenu id="Communication" title="Submenu.Title.Communication" tooltip="Submenu.Tooltip.Communication">
-            <mc:menu-item id="Email" open-as="modal" page-id="Case_getEmailCorrespondent" title="MenuItem.Title.Email" tooltip="MenuItem.Tooltip.Email"/>
-            <mc:menu-item id="MSWord" open-as="modal" page-id="Case_getMSWordCorrespondentCaseMember" title="MenuItem.Title.MSWord" tooltip="MenuItem.Tooltip.MSWord"/>
-            <mc:menu-item id="ProForma" open-as="modal" page-id="Case_getProFormaCorrespondent" title="MenuItem.Title.ProForma" tooltip="MenuItem.Tooltip.ProForma"/>
-            <mc:menu-item id="RecordedCommunication" open-as="modal" page-id="Case_getRecordCommCorrespondent" title="MenuItem.Title.RecordedCommunication" tooltip="MenuItem.Tooltip.RecordedCommunication"/>
-        </mc:submenu>
-        <mc:menu-item id="Certification" open-as="modal" page-id="ProductDelivery_createCertification" title="MenuItem.Title.Certification" tooltip="MenuItem.Tooltip.Certification"/>
-        <mc:submenu id="Deduction" title="Submenu.Title.Deduction" tooltip="Submenu.Tooltip.Deduction">
-            <mc:submenu id="Applied" title="Submenu.Title.Applied" tooltip="Submenu.Tooltip.Applied">
-                <mc:menu-item id="AppFixed" open-as="modal" page-id="ProductDelivery_getParticipantAndLiabilityWizard" title="MenuItem.Title.Fixed" tooltip="MenuItem.Tooltip.Fixed"/>
-                <mc:menu-item id="AppVariable" open-as="modal" page-id="ProductDelivery_getParticipantAndLiabilityForVariableWizard" title="MenuItem.Title.Variable" tooltip="MenuItem.Tooltip.Variable"/>
-            </mc:submenu>
-            <mc:submenu id="ThirdParty" title="Submenu.Title.ThirdParty" tooltip="Submenu.Tooltip.ThirdParty">
-                <mc:menu-item id="TPFixed" open-as="modal" page-id="ProductDelivery_createThirdPartyFixedDeduction1" title="MenuItem.Title.Fixed" tooltip="MenuItem.Tooltip.Fixed"/>
-                <mc:menu-item id="TPVariable" open-as="modal" page-id="ProductDelivery_createThirdPartyVariableDeduction1" title="MenuItem.Title.Variable" tooltip="MenuItem.Tooltip.Variable"/>
-            </mc:submenu>
-            <mc:submenu id="UnApplied" title="Submenu.Title.UnApplied" tooltip="Submenu.Tooltip.UnApplied">
-                <mc:menu-item id="UnAppFixed" open-as="modal" page-id="ProductDelivery_createUnappliedFixedDeduction1" title="MenuItem.Title.Fixed" tooltip="MenuItem.Tooltip.Fixed"/>
-                <mc:menu-item id="UnAppVariable" open-as="modal" page-id="ProductDelivery_createUnappliedVariableDeduction1" title="MenuItem.Title.Variable" tooltip="MenuItem.Tooltip.Variable"/>
-            </mc:submenu>
-        </mc:submenu>
-        <mc:menu-item id="Nominee" open-as="modal" page-id="ProductDelivery_selectRegisteredNomineeType" title="MenuItem.Title.Nominee" tooltip="MenuItem.Tooltip.Nominee"/>
-        <mc:menu-item id="Note" open-as="modal" page-id="Case_createNote1" title="MenuItem.Title.Note" tooltip="MenuItem.Tooltip.Note"/>
-        <mc:menu-item id="RelatedCase" open-as="modal" page-id="Case_createCaseRelationship" title="MenuItem.Title.RelatedCase" tooltip="MenuItem.Tooltip.RelatedCase"/>
-        <mc:menu-item id="Task" open-as="modal" page-id="Case_createTask" title="MenuItem.Title.Task" tooltip="MenuItem.Tooltip.Task"/>
-        <mc:submenu id="UserRole" title="Submenu.Title.UserRole" tooltip="Submenu.Tooltip.UserRole">
-            <mc:menu-item id="Owner" open-as="modal" page-id="Case_modifyCaseOwner" title="MenuItem.Title.Owner" tooltip="MenuItem.Tooltip.Owner"/>
-            <mc:menu-item id="Supervisor" open-as="modal" page-id="Case_createCaseSupervisor" title="MenuItem.Title.Supervisor" tooltip="MenuItem.Tooltip.Supervisor"/>
-        </mc:submenu>
-    </mc:submenu>
-    <mc:submenu id="Search" title="Submenu.Title.Search" tooltip="Submenu.Tooltip.Search">
-        <mc:menu-item id="SearchCase" page-id="Case_search1" title="MenuItem.Title.SearchCase" tooltip="MenuItem.Tooltip.SearchCase"/>
-        <mc:submenu id="Participant" title="Submenu.Title.Participant" tooltip="Submenu.Tooltip.Participant">
-            <mc:menu-item id="Person" page-id="Person_search1" title="MenuItem.Title.Person" tooltip="MenuItem.Tooltip.Person"/>
-            <mc:menu-item id="Employer" page-id="Employer_search1" title="MenuItem.Title.Employer" tooltip="MenuItem.Tooltip.Employer"/>
-            <mc:menu-item id="InformationProvider" page-id="InformationProvider_search1" title="MenuItem.Title.InformationProvider" tooltip="MenuItem.Tooltip.InformationProvider"/>
-            <mc:menu-item id="ProductProvider" page-id="ProductProvider_search1" title="MenuItem.Title.ProductProvider" tooltip="MenuItem.Tooltip.ProductProvider"/>
-            <mc:menu-item id="ServiceSupplier" page-id="ServiceSupplier_search1" title="MenuItem.Title.ServiceSupplier" tooltip="MenuItem.Tooltip.ServiceSupplpier"/>
-            <mc:menu-item id="EducationalInstitute" page-id="EducationalInstitute_search1" title="MenuItem.Title.EducationalInstitute" tooltip="MenuItem.Tooltip.EducationalInstitute"/>
-            <mc:menu-item id="ExternalParty" page-id="ExternalParty_search1" title="MenuItem.Title.ExternalParty" tooltip="MenuItem.Tooltip.ExternalParty"/>
-            <mc:menu-item id="Utility" page-id="Utility_search1" title="MenuItem.Title.Utility" tooltip="MenuItem.Tooltip.Utility"/>
-            <mc:menu-item id="AllParticipant" page-id="Participant_search" title="MenuItem.Title.AllParticipant" tooltip="MenuItem.Tooltip.AllParticipant"/>
-        </mc:submenu>
-    </mc:submenu>
-    <mc:menu-item id="Bookmark" open-as="modal" page-id="Organization_createCaseBookmark" title="Submenu.Title.Bookmark" tooltip="Submenu.Tooltip.Bookmark"/>
+	Copyright 2012 Curam Software Ltd.
+	All rights reserved.
+	
+	This software is the confidential and proprietary information of Curam
+	Software, Ltd. ("Confidential Information"). You shall not disclose
+	such Confidential Information and shall use it only in accordance with the
+	terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="RefundPersonPaymentsSearch">
 
-    <mc:menu-item id="Eligibility" open-as="modal" page-id="ProductDelivery_checkEligibility" title="Submenu.Title.CheckEligibility" tooltip="Submenu.Tooltip.CheckEligibility"/>
+	<!-- No Actions menu -->
 
-<!-- TODO: Add a dynamic menu for Close Case to display when the case is in the appropriate state -->
-    <mc:menu-item id="CloseCase" open-as="modal" page-id="IntegratedCase_close" title="Submenu.Title.CloseCase" tooltip="Submenu.Tooltip.CloseCase"/>
+	<!-- Details panel -->
+	<tc:context tab-name="Details.Name.RefundPersonPaymentsSearch" tab-title="Details.Title.RefundPersonPaymentsSearch"/>
 
-<!-- TODO: Add a dynamic menu for Manage Case options to display relevent options as per case status -->
-    <mc:submenu id="ManageCase" title="Submenu.Title.ManageCase" tooltip="Submenu.Tooltip.ManageCase">
-    </mc:submenu>
-</mc:menu-bar>
+	<!-- Navigation Panel -->
+	<tc:navigation page-id="Financial_refundPaymentSearchPerson"/>
+
+
+</tc:tab-config>

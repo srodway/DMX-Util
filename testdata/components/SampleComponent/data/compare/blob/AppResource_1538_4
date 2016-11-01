@@ -1,19 +1,48 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Number.Wizard.Pages=2
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
 
-RegisterUtility_duplicateCheckWizard.Wizard.Item.Text=Registered Utility Check
-RegisterUtility_duplicateCheckWizard.Wizard.Page.Title=Step 1:
-RegisterUtility_duplicateCheckWizard.Wizard.Page.Desc=Registered Utility Check
-Wizard.PageID.1=RegisterUtility_duplicateCheckWizard
-
-RegisterUtility_registerWizard.Wizard.Item.Text=Utility Details
-RegisterUtility_registerWizard.Wizard.Page.Title=Step 2:
-RegisterUtility_registerWizard.Wizard.Page.Desc=Utility Details
-Wizard.PageID.2=RegisterUtility_registerWizard
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
+    <identifier name="LoginFactors" />
+    <server alias="DISPLAY" method="getLoginFactors">
+        <param name="key$playerID" path="/PAGE/id" />
+    </server>    
+    <header>
+        <title id="Page.Title" />
+        <description id="Page.Description" />
+        <icon id="title_login" />
+    </header>
+    <content>
+        <container>
+            <title id="Applications.Title" />
+            <description id="Applications.Description" />
+            <help source="/DISPLAY/xmlData/help"/>
+            <login-factors name="test" source="/DISPLAY/xmlData/authentication-factor[]/factor-name">
+            	<param name="login-factor" value="/DISPLAY/xmlData/authentication-factor[]/factor-name"/>
+            	<login-factor source="/DISPLAY/xmlData/authentication-factor[]/factor-name">
+                    <param name="factor-title" source="/DISPLAY/xmlData/authentication-factor[]/factor-title"/>
+            	    <field mandatory="true" login-factor="true" width="30">                    
+                        <title source="/DISPLAY/xmlData/authentication-factor[]/factor-title" />
+                        <param name="login-factor" source="/DISPLAY/xmlData/authentication-factor[]/factor-name"/>
+                        <param name="login-factor-domain" source="/DISPLAY/xmlData/authentication-factor[]/factor-domain-name"/>
+                    </field>
+                </login-factor>
+            </login-factors>
+        </container>
+        
+        <forward source="/DISPLAY/xmlData/authentication-factor/factor-challenge1" target="/ans/factor-challenge1"/>
+        <forward source="/DISPLAY/xmlData/authentication-factor/factor-challenge2" target="/ans/factor-challenge2"/>
+        <forward source="/DISPLAY/xmlData/authentication-factor/factor-challenge3" target="/ans/factor-challenge3"/>
+        
+    </content>
+    <navigation>
+		<nav-button name="next" type="action"/> 
+        <nav-button name="exit" page="ResolveCitizenHome" page-type="resolve" />
+    </navigation>
+</page>

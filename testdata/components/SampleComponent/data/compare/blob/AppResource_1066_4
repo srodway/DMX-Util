@@ -2,11 +2,21 @@
   Licensed Materials - Property of IBM
   
   Copyright IBM Corporation 2012. All Rights Reserved.
- 
+  
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><sc:section xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-config" default-page-id="OutcomePlanApplication_home" hide-tab-container="true" id="PlannerAppHomeSection" title="PlannerAppHomeSection.title" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+--><!--
+    Copyright 2010 Curam Software Ltd.
+    All rights reserved.
     
-    <sc:tab id="OutcomePlanAppHome"/>
-    
-</sc:section>
+    This software is the confidential and proprietary information of Curam
+    Software, Ltd. ("Confidential Information"). You shall not disclose
+    such Confidential Information and shall use it only in accordance with the
+    terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="TaxonomyTermSearch">
+
+    <tc:context tab-name="Details.Name.TaxonomyTermSearch" tab-title="Details.Name.TaxonomyTermSearch"/>
+
+    <tc:navigation id="TaxonomyTermSearch"/>
+
+</tc:tab-config>

@@ -1,48 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009-2011 Curam Software Ltd.
-  All rights reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Details.Name.Screening=Screenings
+Details.Title.Screening=Screenings
 
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ProviderGroupViewMenu">
-
-<!-- BEGIN, CR00282026, SSK  -->
- <mc:loader-registry>
-    <mc:loader class="curam.provider.impl.ProviderGroupViewMenuLoader"/>
-  </mc:loader-registry>
-<!-- END, CR00282026 -->
-
-  <mc:menu-item id="Edit" open-as="modal" page-id="ProviderManagement_modifyProviderGroup" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
-  
-  
-  
-  <mc:menu-separator id="sep1"/>
-  
-   <mc:menu-item id="NewFlatRateContract" open-as="modal" page-id="ProviderManagement_createFlatRateContractForProviderGroup" title="MenuItem.Title.NewFlatRateContract" tooltip="MenuItem.Tooltip.NewFlatRateContract"/>
-      
-   <mc:menu-item id="NewUtilizationContract" open-as="modal" page-id="ProviderManagement_createUtilizationContractForProviderGroup" title="MenuItem.Title.NewUtilizationContract" tooltip="MenuItem.Tooltip.NewUtilizationContract"/>
-  
-  <!-- BEGIN, CR00282026, SSK -->
-  <mc:menu-item dynamic="true" id="NewManagedTraining" open-as="modal" page-id="ProviderManagement_createTrainingProgramForProviderGroup" title="MenuItem.Title.NewManagedTraining" tooltip="MenuItem.Tooltip.NewManagedTraining"/>
-  
-  <mc:menu-item dynamic="true" id="NonManagedTraining" open-as="modal" page-id="ProviderManagement_recordCompletedTrainingForProviderGroup" title="MenuItem.Title.NonManagedTraining" tooltip="MenuItem.Tooltip.NonManagedTraining"/>
-  <!-- END, CR00282026 -->
-  
-  <mc:menu-separator id="sep3"/>
-  
-  <mc:menu-item id="AddProvider" open-as="modal" page-id="ProviderManagement_addProviderToPG" title="MenuItem.Title.AddProvider" tooltip="MenuItem.Tooltip.AddProvider"/>
-  
-  <mc:menu-item id="ProviderGroupMember" open-as="modal" page-id="ProviderManagement_createProviderGroupMember" title="MenuItem.Title.ProviderGroupMember" tooltip="MenuItem.Tooltip.ProviderGroupMember"/>
-  
-  <mc:menu-item id="ProviderGroupParticipant" open-as="modal" page-id="ProviderManagement_createParticipantForProviderGroup" title="MenuItem.Title.ProviderGroupParticipant" tooltip="MenuItem.Tooltip.ProviderGroupParticipant"/>
-  
-</mc:menu-bar>
+leaf.title.Screening=Screenings

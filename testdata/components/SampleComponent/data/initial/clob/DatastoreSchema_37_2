@@ -1,80 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:D="http://www.curamsoftware.com/BaseDomains"
-	elementFormDefault="qualified">
+-->
+<!--
+    Copyright 2009 Curam Software Ltd.
+    All rights reserved.
 
-	<xsd:import namespace="http://www.curamsoftware.com/BaseDomains" />
-    <xsd:include schemaLocation="IEGDomains"/>  
-
-	<xsd:element name="Application">
-		<xsd:complexType>
-			<xsd:sequence minOccurs="0">
-				<xsd:element ref="Person" minOccurs="0"
-					maxOccurs="unbounded" />
-				<xsd:element ref="Insurance" minOccurs="0"
-					maxOccurs="unbounded" />
-			</xsd:sequence>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="Person">
-		<xsd:complexType>
-			<xsd:sequence minOccurs="0">
-				<xsd:element ref="Relationship" minOccurs="0"
-					maxOccurs="unbounded" />
-				<xsd:element ref="Income" minOccurs="0"
-					maxOccurs="unbounded" />
-			</xsd:sequence>
-			<xsd:attribute name="personID" type="D:SVR_KEY" />
-			<xsd:attribute name="isPrimary" type="IEG_BOOLEAN" default="false"/>
-			<xsd:attribute name="firstName" type="IEG_STRING" />
-			<xsd:attribute name="middleName" type="IEG_STRING" default=""/>
-			<xsd:attribute name="lastName" type="IEG_STRING" />
-			<xsd:attribute name="gender" type="IEG_GENDER" />
-			<xsd:attribute name="dateOfBirth" type="IEG_DATE"/>
-      <xsd:attribute name="schoolName" type="IEG_STRING" />
-			<xsd:attribute name="hasIncome" type="IEG_BOOLEAN" default="false"/>
-			<xsd:attribute name="isBlind" type="IEG_BOOLEAN" default="false"/>
-			<xsd:attribute name="isPregnant" type="IEG_BOOLEAN" default="false"/>
-		</xsd:complexType>
-		<xsd:key name="PersonKey">
-			<xsd:selector xpath="./Person" />
-			<xsd:field xpath="@personID" />
-		</xsd:key>
-	</xsd:element>
-	<xsd:element name="Relationship">
-		<xsd:complexType>
-			<xsd:attribute name="relationshipType" type="IEG_STRING" />
-			<xsd:attribute name="isNonParentPrimaryCaretaker" type="IEG_BOOLEAN" default="false"/>
-			<xsd:attribute name="personID" type="D:SVR_KEY" />
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="Income">
-		<xsd:complexType>
-			<xsd:attribute name="type" type="IEG_STRING" />
-			<xsd:attribute name="amount" type="IEG_MONEY" />
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="Insurance">
-		<xsd:complexType>
-			<xsd:sequence minOccurs="0">
-				<xsd:element ref="InsuranceRelationship" minOccurs="0"
-					maxOccurs="unbounded" />
-			</xsd:sequence>
-			<xsd:attribute name="policyType" type="IEG_STRING" />
-			<xsd:attribute name="policyNumber" type="IEG_STRING" />
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="InsuranceRelationship">
-		<xsd:complexType>
-			<xsd:attribute name="personID" type="D:SVR_KEY" />
-		</xsd:complexType>
-	</xsd:element>
+    This software is the confidential and proprietary information of Curam
+    Software, Ltd. ("Confidential Information").  You shall not disclose such
+    Confidential Information and shall use it only in accordance with the
+    terms of the license agreement you entered into with Curam Software.
+-->
+ 
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains" elementFormDefault="qualified">
+    <xsd:import namespace="http://www.curamsoftware.com/BaseDomains"/>
+    <xsd:include schemaLocation="IEGDomains"/>
+    <xsd:include schemaLocation="TriageDomains"/>
+    
+    <xsd:element name="Triage">
+        <xsd:complexType>
+        <xsd:sequence minOccurs="0">
+            <xsd:element ref="FoodShelter" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="Finance" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="PhysicalHealthDisability" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="MedicalHealthSubsAbuse" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="Safety" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="Education" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+            <xsd:attribute name="triageID" type="d:SVR_INT32"/>
+        </xsd:complexType>
+    </xsd:element>	
+ 
+    <xsd:element name="Finance">
+        <xsd:complexType>
+            <xsd:attribute name="ableMakeEndsMeet" type="TRIAGE_YESNO"/>
+            <xsd:attribute name="worriedIncomeNotSufficient" type="TRIAGE_YESNO"/>
+        </xsd:complexType>
+    </xsd:element>
+  
+    <xsd:element name="FoodShelter">
+        <xsd:complexType>
+            <xsd:attribute name="housingWorries" type="TRIAGE_YESNO"/>
+            <xsd:attribute name="foodWorries" type="TRIAGE_YESNO"/>
+            <xsd:attribute name="otherWorries" type="TRIAGE_YESNO"/>
+        </xsd:complexType>
+    </xsd:element>
+  
+    <xsd:element name="PhysicalHealthDisability">
+        <xsd:complexType>
+            <xsd:attribute name="healthConcern" type="TRIAGE_YESNO"/>
+            <xsd:attribute name="healthPreventWork" type="TRIAGE_YESNO"/>
+            <xsd:attribute name="childConcern" type="TRIAGE_YESNO"/>
+        </xsd:complexType>
+    </xsd:element>
+  
+    <xsd:element name="MedicalHealthSubsAbuse">
+        <xsd:complexType>
+            <xsd:attribute name="hurtSelfOthers" type="TRIAGE_YESNO"/>
+            <xsd:attribute name="depression" type="TRIAGE_YESNO"/>
+            <xsd:attribute name="alcoholDrugs" type="TRIAGE_YESNO"/>
+        </xsd:complexType>
+    </xsd:element>
+  
+    <xsd:element name="Safety">
+        <xsd:complexType>
+            <xsd:attribute name="unsafeAfraid" type="TRIAGE_YESNO"/>
+            <xsd:attribute name="familySafe" type="TRIAGE_YESNO"/>
+            <xsd:attribute name="manageChildren" type="TRIAGE_YESNO"/>
+        </xsd:complexType>
+    </xsd:element>
+  
+    <xsd:element name="Education">
+        <xsd:complexType>
+            <xsd:attribute name="childAcademically" type="TRIAGE_YESNO"/>
+            <xsd:attribute name="childLearning" type="TRIAGE_YESNO"/>
+            <xsd:attribute name="childCare" type="TRIAGE_YESNO"/>
+        </xsd:complexType>
+    </xsd:element>
+  
+    <xsd:element name="Application">
+        <xsd:annotation>
+            <xsd:documentation>root entity</xsd:documentation>
+            <xsd:documentation>@curam.ieg.forced.creation=true</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence minOccurs="0">
+                <xsd:element ref="Triage" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
 </xsd:schema>

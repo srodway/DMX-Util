@@ -1,21 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="UtilitySearch">
-  <nc:nodes>
-    <nc:navigation-page id="UtilitySearchHome" page-id="Utility_search1" title="Leaf.Title.Home" visible="true"/>
-  </nc:nodes>
-  
-</nc:navigation>
+#
+# Licensed Materials - Property of IBM
+#
+# PID 5725-H26
+# 
+# Copyright IBM Corporation 2014. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+#Tue Nov 04 15:29:10 GMT 2014
+Second.Name.Label.ID3=Second Name
+Cluster.AlienCPR.Title=Alien
+DateOfEntryDOB.message={0} must not be earlier than the alien's date of birth
+Alien.Description=Alien
+DateOfEntry.Field.Label=Date of Entry
+Modify.Page.Description=Modify page for alien details.
+Cluster.Alien.Details.Help=Enter the details for the alien.
+EndDate.Field.Label=End Date
+Cluster.Comments.Help=Add any additional comments about the alien.
+Alien.message=Alien is of type {0}
+ClusternAlien.Details=Alien Details
+CountryOfOrigin.Field.Label=Country of Origin
+Cluster.AlienCPR.Title.Help=Select the citizen who is an alien on the case.
+AlienStatus.Field.Label=Alien Status
+Participant.Description=Participant
+AlienRegistrationNumber.Field.Label=Alien Registration Number
+Create.Page.Description=Create page for alien details.
+Cluster.Comments=Comments
+First.Name.Label.ID3=First Name
+AlienType.Field.Label=Alien Type
+View.Page.Description=View page of alien details.

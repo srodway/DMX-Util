@@ -6,36 +6,32 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009, 2010 Curam Software Ltd.
+  Copyright 2009, 2010-2011 Curam Software Ltd.
   All rights reserved.
+
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ProductDeliveryMenu">
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ServicePlanAdmin">
   
-  <mc:loader-registry>
-    <mc:loader class="curam.core.sl.tab.impl.CaseHomeMenuLoader"/>
-  </mc:loader-registry>
+  <tc:page-param name="servicePlanID"/>
   
-  <mc:menu-item dynamic="true" id="Bookmark" open-as="modal" page-id="Organization_createCaseBookmark" title="MenuItem.Title.Bookmark" tooltip="MenuItem.Tooltip.Bookmark"/>
+  <tc:menu id="ServicePlanAdminMenu"/> 
   
-  <mc:menu-item dynamic="true" id="RemoveBookmark" open-as="modal" page-id="Organization_cancelCaseBookmark" title="MenuItem.Title.RemoveBookmark" tooltip="MenuItem.Tooltip.RemoveBookmark"/>
-  
-  <mc:menu-separator id="sep1"/>
-  
-  <mc:menu-item id="Edit" open-as="modal" page-id="ProductDelivery_modifyHeader1" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/> 
-  
-  <mc:menu-separator id="sep2"/>
-  
-  <mc:menu-item id="Note" open-as="modal" page-id="Case_createNote1" title="MenuItem.Title.Note" tooltip="MenuItem.Tooltip.Note"/>
-  
-  <mc:menu-item id="Task" open-as="modal" page-id="ICProductSample_createTask" title="MenuItem.Title.Task" tooltip="MenuItem.Tooltip.Task"/>
+  <!-- Details panel -->
+  <tc:context height="85" page-id="ServicePlanAdmin_servicePlanHomeTabDetails" tab-name="Details.Name.ServicePlan"/>
 
-  <mc:menu-separator id="sep3"/>
+
+  <!-- See Home.nav for details of the tree meta-data. -->
+  <tc:navigation id="ServicePlanAdmin"/> 
   
-  <mc:menu-item id="ChangeOwner" open-as="modal" page-id="Case_modifyCaseOwner" title="MenuItem.Title.ChangeOwner" tooltip="MenuItem.Tooltip.ChangeOwner"/>
-  
-  <mc:menu-item id="CloseCase" open-as="modal" page-id="ProductDelivery_close" title="MenuItem.Title.CloseCase" tooltip="Submenu.Tooltip.CloseCase"/>
-  
-</mc:menu-bar>
+  <tc:tab-refresh>
+    <tc:onsubmit context="true" page-id="ServicePlanAdmin_servicePlanHome"/>
+    
+    <tc:onsubmit context="true" page-id="ServicePlanAdmin_modifyServicePlan"/>
+    
+    <tc:onsubmit context="true" page-id="ServicePlanAdmin_cancelServicePlan"/>
+  </tc:tab-refresh>  
+
+</tc:tab-config>

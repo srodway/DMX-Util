@@ -6,11 +6,24 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Submenu.Title.Search=Search
-Submenu.Tooltip.Search=Find a case or participant.
+Number.Wizard.Pages=4
 
-MenuItem.Title.User=User
-MenuItem.Tooltip.User=User
+ProviderManagement_storeInEditTaxonomyTerm.Wizard.Item.Text=Term Details
+ProviderManagement_storeInEditTaxonomyTerm.Wizard.Page.Title=Step 1: 
+ProviderManagement_storeInEditTaxonomyTerm.Wizard.Page.Desc=Term Details
+Wizard.PageID.1=ProviderManagement_storeInEditTaxonomyTerm
 
-MenuItem.Title.ExternalUser=External User
-MenuItem.Tooltip.ExternalUser=External User
+ProviderManagement_addUseReferencesToInEditTerm.Wizard.Item.Text=Use References
+ProviderManagement_addUseReferencesToInEditTerm.Wizard.Page.Title=Step 2: 
+ProviderManagement_addUseReferencesToInEditTerm.Wizard.Page.Desc=Use References
+Wizard.PageID.2=ProviderManagement_addUseReferencesToInEditTerm
+
+ProviderManagement_addRelatedConceptsToInEditTerm.Wizard.Item.Text=Related Concepts
+ProviderManagement_addRelatedConceptsToInEditTerm.Wizard.Page.Title=Step 3: 
+ProviderManagement_addRelatedConceptsToInEditTerm.Wizard.Page.Desc=Related Concepts
+Wizard.PageID.3=ProviderManagement_addRelatedConceptsToInEditTerm
+
+ProviderManagement_addRelatedTermsToInEditTerm.Wizard.Item.Text=See Also References
+ProviderManagement_addRelatedTermsToInEditTerm.Wizard.Page.Title=Step 4: 
+ProviderManagement_addRelatedTermsToInEditTerm.Wizard.Page.Desc=See Also References
+Wizard.PageID.4=ProviderManagement_addRelatedTermsToInEditTerm

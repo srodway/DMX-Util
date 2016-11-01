@@ -1,18 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+MenuItem.Title.AddComment=Add Comment
+MenuItem.Tooltip.AddComment=Add Comment
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--  Copyright 2010 Curam Software Ltd.                                    --><!--  All rights reserved.                                                  --><!-- This software is the confidential and proprietary information of Curam --><!--   Software, Ltd. ("Confidential Information"). You shall not disclose  --><!--   such Confidential Information and shall use it only in accordance    --><!--   with the terms of the license agreement you entered into with Curam  --><!--   Software.                                                            --><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="EmploymentWorkingHourObject">
-    <nc:loader-registry>
-        <nc:loader class="curam.evidence.service.tab.impl.EmpWorkHrBObjNavLoader"/>
-    </nc:loader-registry>
-    <nc:nodes>
-        <nc:navigation-page id="Details" page-id="Person_evidenceViewEmpWorkHrObject" title="leaf.title.Home"/>
-        <nc:navigation-page id="ChangeHistory" page-id="Person_evidenceViewEmpWorkHrObjCH" title="leaf.title.ChangeHistory"/>
-        <nc:navigation-page dynamic="true" id="EvidenceIssues" page-id="Person_evidenceListEmpWorkHrObjIssues" title="leaf.title.Issues"/>
-        <nc:navigation-page dynamic="true" id="Verifications" page-id="Person_evidenceListEmpWorkHrObjVerifications" title="leaf.title.Verifications"/>
-    </nc:nodes>
-</nc:navigation>
+MenuItem.Title.Close=Close
+MenuItem.Tooltip.Close=Close
+
+MenuItem.Title.Reserve=Add To My Tasks
+MenuItem.Tooltip.Reserve=Add To My Tasks
+
+MenuItem.Title.Un-reserve=Make Available
+MenuItem.Tooltip.Un-reserve=Make Available
+
+MenuItem.Title.Forward=Forward
+MenuItem.Tooltip.Forward=Forward
+
+MenuItem.Title.Reallocate=Reallocate
+MenuItem.Tooltip.Reallocate=Reallocate
+
+MenuItem.Title.Defer=Defer
+MenuItem.Tooltip.Defer=Defer
+
+MenuItem.Title.Restart=Restart
+MenuItem.Tooltip.Restart=Restart
+
+MenuItem.Title.UpdateTimeWorked=Update Time Worked
+MenuItem.Tooltip.UpdateTimeWorked=Update Time Worked
+
+MenuItem.Title.EditPriority=Edit Priority
+MenuItem.Tooltip.EditPriority=Edit Priority
+
+MenuItem.Title.EditDeadline=Edit Deadline
+MenuItem.Tooltip.EditDeadline=Edit Deadline

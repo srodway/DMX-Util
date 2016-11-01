@@ -1,49 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Common data rule classes for  Applications Case.
-  --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CIApplicationData" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+--><RuleSet name="ASCAlienDataRuleSet">
 
 
-  <Class name="ApplicationCase" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
-    
-    
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="ASCAlien">
+
+
+    <Annotations>
+      <SuccessionSetPopulation endDateAttribute="endDate" startDateAttribute="dateOfEntry"/>
+    </Annotations>
+
+
+    <Attribute name="alientStatusOnEntry">
+      <Annotations>
+        <Label label-id="alientStatusOnEntry" name="The alien's status on entering the country, e.g. Deportation Withheld"/>
+      </Annotations>
+      <type>
+        <codetableentry table="AlienStatusOnEntry"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="dateOfEntry">
+      <Annotations>
+        <Label label-id="dateOfEntry" name="The date the alien entered the country."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="endDate">
+      <Annotations>
+        <Label label-id="endDate" name="The end date for the alien."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="alienType">
+      <Annotations>
+        <Label label-id="alienType" name="The type of alien the household member is categorized under e.g. refugee."/>
+      </Annotations>
+      <type>
+        <codetableentry table="InAlienStatus"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="alienRegNumber">
+      <Annotations>
+        <Label label-id="alienRegNumber" name="The alien's registration number."/>
+      </Annotations>
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="countryOfOrigin">
+      <Annotations>
+        <Label label-id="countryOfOrigin" name="The alien's country of origin."/>
+      </Annotations>
+      <type>
+        <codetableentry table="Country"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
     <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <ResourceMessage key="CIApplication.description" resourceBundle="curam.commonintake.rules.CIInitialContactRuleSet"/>
+        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="successionID"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
-    
-    
-    <!-- Application Case ID-->
-    <Attribute name="applicationCaseID">
+
+
+    <Attribute name="caseParticipantRoleID">
+      <Annotations>
+        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the alien."/>
+      </Annotations>
       <type>
-        <javaclass name="Number"/>
+        <javaclass name="java.lang.Number"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    
-    
-    <!-- Application Case Status-->
-    <Attribute name="status">
+
+
+    <Attribute name="related_caseParticipantRoleID">
+      <Annotations>
+        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the alien."/>
+      </Annotations>
       <type>
-        <codetableentry table="ApplicationCaseStatus"/>
+        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
       </type>
       <derivation>
-        <specified/>
+        <reference attribute="caseParticipantRoleRecord">
+          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
+            <reference attribute="caseParticipantRoleID"/>
+          </create>
+        </reference>
       </derivation>
     </Attribute>
-    
+
+
   </Class>
+
 
 </RuleSet>

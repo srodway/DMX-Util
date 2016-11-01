@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
-  
+ 
   Copyright IBM Corporation 2012. All Rights Reserved.
-  
+
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2010 Curam Software Ltd.
+  Copyright 2009 Curam Software Ltd.
   All rights reserved.
-  
+
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="TaxonomyVersionInEditView">
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ConfigurationPublishTab">
 
-  <nc:nodes>
-    <nc:navigation-page id="BrowseInEditTerms" page-id="ProviderManagement_browseInEditTaxonomyTerm" title="Page.Title.BrowseTerms"/>
-          <nc:navigation-page id="ListInEditTerms" page-id="ProviderManagement_viewInEditTaxonomyVersion" title="Page.Title.ListInEditTerms"/>
-          <nc:navigation-page id="ListRelatedConceptElement" page-id="ProviderManagement_listInEditRelatedConcepts" title="Page.Title.ListRelatedConcept"/>
-     
-  </nc:nodes>
-</nc:navigation>
+  <!-- Reference to properties for details. -->
+  <tc:context tab-name="publish.tab.name" tab-title="publish.tab.title"/>
+  
+  <!-- See SimpleTree.nav for details of the tree meta-data. -->
+  <tc:navigation page-id="UIAdmin_publishChanges"/>
+  
+  <tc:tab-refresh>
+
+  </tc:tab-refresh>
+
+</tc:tab-config>

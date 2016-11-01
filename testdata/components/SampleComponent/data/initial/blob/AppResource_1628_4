@@ -6,8 +6,19 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-MenuItem.Title.Clients=Clients
-MenuItem.Tooltip.Clients=Click the Clients link to search for a linked client
+Number.Wizard.Pages=3
 
-MenuItem.Title.ChangePassword=Change Password
-MenuItem.Tooltip.ChangePassword=Click the change password link to modify your password
+VerificationAdmin_createVerificationGroup.Wizard.Item.Text=Verification Group Details
+VerificationAdmin_createVerificationGroup.Wizard.Page.Title=Step 1:
+VerificationAdmin_createVerificationGroup.Wizard.Page.Desc=Verification Group Details
+Wizard.PageID.1=VerificationAdmin_createVerificationGroup
+
+VerificationAdmin_createVerificationItemUtilization.Wizard.Item.Text=Define Verification Item Utilization(s)
+VerificationAdmin_createVerificationItemUtilization.Wizard.Page.Title=Step 2:
+VerificationAdmin_createVerificationItemUtilization.Wizard.Page.Desc=Define Verification Item Utilization(s)
+Wizard.PageID.2=VerificationAdmin_createVerificationItemUtilization
+
+VerificationAdmin_verificationGroupSummary.Wizard.Item.Text=Summary
+VerificationAdmin_verificationGroupSummary.Wizard.Page.Title=Step 3:
+VerificationAdmin_verificationGroupSummary.Wizard.Page.Desc=Summary
+Wizard.PageID.3=VerificationAdmin_verificationGroupSummary

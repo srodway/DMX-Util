@@ -1,86 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!-- 
-  Copyright 2008 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information
-  of Curam Software, Ltd. ("Confidential Information").  You
-  shall not disclose such Confidential Information and shall use
-  it only in accordance with the terms of the license agreement
-  you entered into with Curam Software.
---><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd" name="ScreeningInterfaceRuleSet">
-  
-  <!-- This class must be extended by all rule sets invoked by
-    the Citizen Portal screening results processing. -->
-  <Class name="AbstractScreeningResult" abstract="true">
-    
-    <Initialization>
-      <Attribute name="calculationDate">
-        <type>
-          <javaclass name="curam.util.type.Date"/>
-        </type>
-      </Attribute>
-    </Initialization>
-    
-    <!-- The programs supported by this Screening Ruleset. -->
-    <Attribute name="programs">
+<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCBirthAndDeathDataRuleSet">
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCBirthAndDeath">
+    <Annotations>
+      <SuccessionSetPopulation/>
+    </Annotations>
+    <Attribute name="dateOfBirth">
+      <Annotations/>
       <type>
-        <javaclass name="List">
-          <ruleclass name="AbstractProgram"/>
-        </javaclass>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <!-- Subclasses of AbstractScreeningResult must override
-          this attribute to create a list of the Programs
-          supported by the rule set. -->
-        <abstract/>
+        <specified/>
       </derivation>
     </Attribute>
-    
-  </Class>
-  
-  <!-- This class must be extended by all programs supported
-    in the rule set. -->
-  <Class name="AbstractProgram" abstract="true">
-    
-    <!-- Identifies the program as configured in the Citizen
-      Portal administration application. -->
-    <Attribute name="programTypeReference">
+    <Attribute name="birthLastName">
+      <Annotations/>
       <type>
-        <javaclass name="String"/>
+        <javaclass name="java.lang.String"/>
       </type>
       <derivation>
-        <abstract/>
+        <specified/>
       </derivation>
     </Attribute>
-    
-    <!-- Whether the claimant is eligible for this program. -->
-    <Attribute name="eligible">
+    <Attribute name="dateOfDeath">
+      <Annotations/>
       <type>
-        <javaclass name="Boolean"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <abstract/>
+        <specified/>
       </derivation>
     </Attribute>
-    
-    <!-- The localizable explanation as to why the claimant is
-      or is not eligible for this program.  May contain HTML
-      formatting/hyperlinks/etc. -->
-    <Attribute name="explanation">
+    <Attribute name="mothersBirthLastName">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <abstract/>
+        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="successionID"/>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+    <Attribute name="person">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="related_person">
+      <Annotations/>
+      <type>
+        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+      </type>
+      <derivation>
+        <reference attribute="caseParticipantRoleRecord">
+          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
+            <reference attribute="person"/>
+          </create>
+        </reference>
       </derivation>
     </Attribute>
   </Class>
-  
 </RuleSet>

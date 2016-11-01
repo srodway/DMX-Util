@@ -1,12 +1,17 @@
-#Tue Jun 18 16:13:21 BST 2013
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# PID 5725-H26
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Page.Title=Diagnosis
+
+CategoryRef=ibSummaryCategory
+SubscreenName=displayPractitionerCertSubscreens
+
 Field.Label.Type=Type
-Field.Label.From=From
-Field.Label.To=To
-ParticipantDetails=Participant
-Cluster.Title.IdentificationDetails=Identification Details
-ERR_IDENTIFICATION_XFV_DUPLICATE=This identification already exists for this type.
-Field.Label.PreferredInd=Preferred
-Participant.Description.ID2=Participant
-Cluster.Title.Comments=Comments
-PDCIdentification.SummaryMessage={0} {1}
-Field.Label.IDReference=ID Reference
+Field.Label.ExaminationDate=Examination Date

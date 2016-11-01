@@ -1,61 +1,22 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-MenuItem.Title.EditDetails=Edit
-MenuItem.Tooltip.EditDetails=Edit the details for the product provider
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010-2011 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="SupervisorOrgUnitsMenu">
+  
+  <mc:menu-item id="User" page-id="Supervisor_userSearchDetails" title="MenuItem.Title.User" tooltip="MenuItem.Tooltip.User"/>
 
-
-
-Submenu.Title.New=New
-Submenu.Tooltip.New=Create new items
-
-
-
-MenuItem.Title.BankAccount=Bank Account
-MenuItem.Tooltip.BankAccount=Create a new bank account for the product provider.
-
-
-
-MenuItem.Title.AlternateId=Alternate Identification
-MenuItem.Tooltip.AlternateId=Create alternate identification for the product provider.
-
-
-
-MenuItem.Title.Note=New Note
-MenuItem.Tooltip.Note=Create a new note for the product provider.
-
-MenuItem.Title.Attachment=Attachment
-MenuItem.Tooltip.Attachment=Create a new attachment for the product provider.
-
-MenuItem.Title.EmailComm=Email Communication
-MenuItem.Tooltip.EmailComm=Create a new email correspondence with the product provider.
-
-MenuItem.Title.MSWord=Microsoft Word Communication
-MenuItem.Tooltip.MSWord=Create an Microsoft Word communication with the product provider.
-
-MenuItem.Title.ProForma=Pro Forma Communication
-MenuItem.Tooltip.ProForma=Create a new Pro Forma communication with the product provider.
-
-MenuItem.Title.RecordedCommunication=Recorded Communication
-MenuItem.Tooltip.RecordedCommunication=Create a record of a communication.
-
-MenuItem.Title.CommsException=Communications Exception
-MenuItem.Tooltip.CommsException=Create a communications exception.
-
-
-
-
-MenuItem.Title.Contact=Contact
-MenuItem.Tooltip.Contact=Create a new contact for the product provider.
-
-MenuItem.Title.EmailAdd=Email Address
-MenuItem.Tooltip.EmailAdd=Create a new email address for the product provider.
-
-MenuItem.Title.WebAdd=Web Address
-MenuItem.Tooltip.WebAdd=Create a new web address for the product provider.
+  <mc:menu-item id="Task" page-id="Supervisor_searchTask" title="MenuItem.Title.Task" tooltip="MenuItem.Tooltip.Task"/>
+  
+</mc:menu-bar>

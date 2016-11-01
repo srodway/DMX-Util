@@ -1,42 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Details.Name.EligibilityWorkQueueTaskSearch=Applications Awaiting Determination Work Queue Tasks
+Details.Title.EligibilityWorkQueueTaskSearch=Applications Awaiting Determination Work Queue Tasks
+Details.Icon=Applications Awaiting Determination Work Queue Tasks
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009-2010 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="InvestigationHomeMenu">
-  
-  <mc:loader-registry>
-    <mc:loader class="curam.core.sl.tab.impl.InvestigationCaseMenuLoader"/>
-  </mc:loader-registry>  
-    
-  <mc:menu-item dynamic="true" id="Bookmark" open-as="modal" page-id="Organization_createCaseBookmark" title="MenuItem.Title.AddBookmark" tooltip="MenuItem.Tooltip.AddBookmark"/>
-  
-  <mc:menu-item dynamic="true" id="RemoveBookmark" open-as="modal" page-id="Organization_cancelCaseBookmark" title="MenuItem.Title.RemoveBookmark" tooltip="MenuItem.Tooltip.RemoveBookmark"/>
-  
-  <mc:menu-separator id="sep1"/>
-  
-  <mc:menu-item id="Edit" open-as="modal" page-id="InvestigationDelivery_modifyHeader" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
-  
-  <mc:menu-separator id="sep2"/>
-  
-  <mc:menu-item id="Note" open-as="modal" page-id="Participant_createNote1" title="MenuItem.Title.Note" tooltip="MenuItem.Tooltip.Note"/>
-  
-  <mc:menu-item id="Task" open-as="modal" page-id="Participant_createTask" title="MenuItem.Title.Task" tooltip="MenuItem.Tooltip.Task"/>
-  
-  <mc:menu-separator id="sep3"/>
-  
-  <mc:menu-item id="ChangeOwner" open-as="modal" page-id="Case_modifyCaseOwner" title="MenuItem.Title.ChangeOwner" tooltip="MenuItem.Tooltip.ChangeOwner"/>
-  
-  <mc:menu-item id="CloseCase" open-as="modal" page-id="InvestigationDelivery_close" title="MenuItem.Title.CloseCase" tooltip="MenuItem.Tooltip.CloseCase"/>
-  
-</mc:menu-bar>

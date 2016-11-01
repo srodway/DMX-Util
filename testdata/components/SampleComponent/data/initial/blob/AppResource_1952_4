@@ -1,23 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Number.Wizard.Pages=3
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009-2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="MyCalendar">
-  <nc:nodes>
-  
-    <nc:navigation-page id="CalendarView" page-id="Activity_redirectCurrentUserCalendar" title="Leaf.Title.CalendarView" visible="true"/>
-    <nc:navigation-page id="ListView" page-id="Organization_listCurrentUserEvent" title="Leaf.Title.ListView" visible="true"/> 
-  </nc:nodes>
-  
-</nc:navigation>
+DefaultIC_selectMember.Wizard.Item.Text=Select Primary Client and Case Type
+DefaultIC_selectMember.Wizard.Page.Title=Step 1:
+DefaultIC_selectMember.Wizard.Page.Desc=Select Primary Client and Case Type
+Wizard.PageID.1=DefaultIC_selectMember
+
+DefaultIC_existingCaseList.Wizard.Item.Text=View Existing Cases 
+DefaultIC_existingCaseList.Wizard.Page.Title=Step 2:
+DefaultIC_existingCaseList.Wizard.Page.Desc=View Existing Cases 
+Wizard.PageID.2=DefaultIC_existingCaseList
+
+DefaultIC_createProductDelivery.Wizard.Item.Text=Record Case Details
+DefaultIC_createProductDelivery.Wizard.Page.Title=Step 3:
+DefaultIC_createProductDelivery.Wizard.Page.Desc=Record Case Details
+Wizard.PageID.3=DefaultIC_createProductDelivery

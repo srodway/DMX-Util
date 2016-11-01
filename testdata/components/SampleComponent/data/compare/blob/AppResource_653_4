@@ -1,28 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2010 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><sc:section-shortcut-panel xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-shortcut-panel" id="MDTWorkspaceSectionShortcuts" title="MDTWorkspaceSectionShortcuts.title">
+#
+# Licensed Materials - Property of IBM 
+#
+# PID 5725-H26
+#
+# Copyright IBM Corporation 2012,2014. All rights reserved. 
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Details.Name.OutcomePlan=Outcome Plan
+Details.Icon=a
+Tab.Title.OutcomePlan=Outcome Plan
+Leaf.Title.Home=Home
 
-  <sc:nodes>
-    <sc:node id="MyQuickLinks" title="MyQuickLinks.Title" type="group">
-      <sc:node id="MyCases" page-id="MDTExternal_myCases" title="MyCases.Title" type="leaf"/> 
-      <sc:node id="MyClients" page-id="MDTExternal_listMyClients" title="MyClients.Title" type="leaf"/> 
-      <sc:node id="MyTasks" page-id="MDTExternal_listMyTasks" title="MyTasks.Title" type="leaf"/> 
-      <sc:node id="MyTeams" page-id="MDTExternal_myTeams" title="MyTeams.Title" type="leaf"/> 
-      <sc:node id="MyPersonalDetails" page-id="MDTExternal_viewPersonalDetails" title="MyPersonalDetails.Title" type="leaf"/> 
-    </sc:node>
-  </sc:nodes>
+Folder.Title.Activities=Activities
+Folder.Title.Recommendations=Recommendations
+Folder.Title.AssessmentsAndFactors=Assessments & Factors
+Folder.Title.Admin=Admin
 
-</sc:section-shortcut-panel>
+Leaf.Title.Activities=Activities
+Leaf.Title.Agreements=Agreements
+Leaf.Title.AssessmentsAndFactors=Assessments & Factors
+Leaf.Title.Assessments=Assessments
+Leaf.Title.Costs=Costs
+Leaf.Title.Factors=Factors
+Leaf.Title.OutcomePlanParticipation=Participation
+Leaf.Title.RelatedCases=Related Cases
+Leaf.Title.Clients=Clients
+Leaf.Title.Participation=Participation
+Leaf.Title.Progress=Progress
+Leaf.Title.PlanRecommendations=Plan Recommendations
+Leaf.Title.Recommendations=Recommendations
+Leaf.Title.FactorRecommendations=Factor Recommendations
+Leaf.Title.Objectives=Objectives
+Leaf.Title.Workspace=Workspace
+Leaf.Title.Reviews=Reviews
+Leaf.Title.Visits=Visits
+Leaf.Title.Goals=Goals
+Leaf.Title.Notes=Notes
+Leaf.Title.Communications=Communications
+Leaf.Title.Attachments=Attachments
+Leaf.Title.UserRoles=User Roles
+Leaf.Title.Meetings=Meetings
+Leaf.Title.MeetingMinutes=Meeting Minutes
+Leaf.Title.Contacts=Contact Log
+
+Folder.Title.Evidence=Evidence
+Page.Title.Evidence=Evidence
+Page.Title.Dashboard=Dashboard
+Page.Title.EvidenceFlow=Evidence Flow
+Page.Title.Verifications=Verifications
+Page.Title.EvidenceIssues=Issues
+Page.Title.IncomingEvidence=Incoming Evidence
+
+Folder.Title.Collaboration=Collaboration
+Leaf.Title.MultidisciplinaryTeam=Multidisciplinary Team
+Leaf.Title.Discussions=Discussions

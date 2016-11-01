@@ -6,15 +6,13 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Number.Wizard.Pages=2
+Page.Title=Getting Started
+Page.Description=Before starting screening, you may want to create a new account or log in to an account that you already have.
 
-AddExpectedOutcomeWizard_details.Wizard.Item.Text=Details
-AddExpectedOutcomeWizard_details.Wizard.Page.Title=Step 1:
-AddExpectedOutcomeWizard_details.Wizard.Page.Desc=Details
-Wizard.PageID.1=AddExpectedOutcomeWizard_details
-
-
-AddExpectedOutcomeWizard_factors.Wizard.Item.Text=Factors
-AddExpectedOutcomeWizard_factors.Wizard.Page.Title=Step 2:
-AddExpectedOutcomeWizard_factors.Wizard.Page.Desc=Factors
-Wizard.PageID.2=AddExpectedOutcomeWizard_factors
+Selection.Title=To get started, please choose one of the options below 
+Selection.Description=
+Selection.Help =Before you get started on your screening, it's a good idea to create an account. This should take just a few minutes.<br/>If you create an account, you can save the information entered during screening and come back to it later.<br/>If you already have an account, it is a good idea to log into it now.
+Selection.Legend=Screening choice
+  
+Login.Title=<strong>Log in</strong> if you already have an account.
+Start.Title=<strong>Start</strong> screening without <strong>creating an account</strong> or <strong>logging in</strong> to the system.

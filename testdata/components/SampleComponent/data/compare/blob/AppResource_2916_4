@@ -6,61 +6,19 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009-2012 Curam Software Ltd.
-  All rights reserved.
+    Copyright 2011 Curam Software Ltd.
+    All rights reserved.
+    
+    This software is the confidential and proprietary information of Curam
+    Software, Ltd. ("Confidential Information"). You shall not disclose
+    such Confidential Information and shall use it only in accordance with the
+    terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="LegalActionOrganizationHome">
 
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ProviderHomeMenu">
-  
-  <!-- BEGIN, CR00282026, SSK -->
-   <mc:loader-registry>
-    <mc:loader class="curam.provider.impl.ProviderHomeMenuLoader"/>
-  </mc:loader-registry>
-  <!-- END, CR00282026 -->
-  
-  <mc:menu-item id="RegisterAsPerson" open-as="modal" page-id="ProviderManagement_registerProviderAsPersonFrmProviderHome" title="MenuItem.Title.RegisterAsPerson" tooltip="MenuItem.Tooltip.RegisterAsPerson"/>
-  
-  <mc:menu-separator id="sep1"/>
-  
-  <mc:menu-item id="CreateService" open-as="modal" page-id="ProviderManagement_addServiceOfferingForProvider" title="MenuItem.Title.Service" tooltip="MenuItem.Tooltip.Service"/>
-  
-  <mc:menu-item id="CreateServiceCenter" open-as="modal" page-id="ProviderManagement_createServiceCenterForProvider" title="MenuItem.Title.ServiceCenter" tooltip="MenuItem.Tooltip.ServiceCenter"/>
-  
-  <mc:menu-separator id="sep2"/>
-  
-  <mc:menu-item id="NewFlatRateContract" open-as="modal" page-id="ProviderManagement_createFlatRateContractForProvider" title="MenuItem.Title.NewFlatRateContract" tooltip="MenuItem.Tooltip.NewFlatRateContract"/>
-    
-  <mc:menu-item id="NewUtilizationContract" open-as="modal" page-id="ProviderManagement_createUtilizationContractForProvider" title="MenuItem.Title.NewUtilizationContract" tooltip="MenuItem.Tooltip.NewUtilizationContract"/>
-  
-  <mc:menu-item id="CreateBackgroundCheck" open-as="modal" page-id="ProviderManagement_createBackgroundCheckForProvider" title="MenuItem.Title.BackgroundCheck" tooltip="MenuItem.Tooltip.BackgroundCheck"/>
-  
-  <!-- BEGIN, CR00282026, SSK -->
-  <mc:menu-item dynamic="true" id="NewTraining" open-as="modal" page-id="ProviderManagement_createTrainingProgramForProvider" title="MenuItem.Title.NewTraining" tooltip="MenuItem.Tooltip.NewTraining"/>
-    
-    <mc:menu-item dynamic="true" id="NonManagedTraining" open-as="modal" page-id="ProviderManagement_recordCompletedTrainingForProvider" title="MenuItem.Title.NonManagedTraining" tooltip="MenuItem.Tooltip.NonManagedTraining"/>
-    
-    <!-- END, CR00282026 -->
-
-  <mc:menu-item id="NewApprovalCheck" open-as="modal" page-id="ProviderManagement_createProviderApprovalCheck" title="MenuItem.Title.NewApprovalCheck" tooltip="MenuItem.Tooltip.NewApprovalCheck"/>    
-  
-  <mc:menu-separator id="sep3"/>
-  
-  <mc:menu-item id="CreateMember" open-as="modal" page-id="ProviderManagement_createMemberForProvider" title="MenuItem.Title.Member" tooltip="MenuItem.Tooltip.Member"/>
-  
-  <mc:menu-item id="CreateParticipant" open-as="modal" page-id="ProviderManagement_createParticipantForProvider" title="MenuItem.Title.Participant" tooltip="MenuItem.Tooltip.Participant"/>
-  
-  <mc:menu-separator id="sep4"/>
-  
-  <mc:menu-item id="CreateIncident" open-as="modal" page-id="ProviderManagement_recordIncidentForProvider" title="MenuItem.Title.Incident" tooltip="MenuItem.Tooltip.Incident"/>
-  
-  <mc:menu-item id="CreateInvestigation" open-as="modal" page-id="ProviderManagement_createInvestigation" title="MenuItem.Title.Investigation" tooltip="MenuItem.Tooltip.Investigation"/>
-  
-  <mc:menu-separator id="sep5"/>
-  
-  <!-- BEGIN, CR00303745, SSK -->
-  <mc:menu-item id="ManageFacility" page-id="ProviderManagement_browseCompartments" title="MenuItem.Title.ManageFacility" tooltip="MenuItem.Tooltip.ManageFacility"/>
-  <!-- END, CR00303745 -->
-</mc:menu-bar>
+<!-- No Details panel -->
+  <tc:context height="0" page-id="LegalAction_organizationHomeTabDetails"/>
+              
+  <!-- Navigation Panel -->
+  <tc:navigation page-id="LegalAction_organizationHome"/>
+        
+</tc:tab-config>

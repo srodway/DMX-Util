@@ -1,46 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Application.Message.Title={Application.name} Acknowledgement
+Application.Message.Body=We have received your {link:{Application.name}:applicationFormNameLink} for {intake.application.programs}. The status of this application is {Application.status}. We will contact you when the application has been processed. Please note your application reference is {intake.application.refNumber}
 
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    	xsi:noNamespaceSchemaLocation="page-schema.xsd"
-    	isModalWindow="true">
-    	
-    <identifier name="ProviderServiceModal"/>
-    
-    <server alias="DISPLAY" class="Triage" method="getProviderModalDetails">
-        <param name="key$serviceID" path="serviceID" />
-        <param name="key$hasMultipleLocations" path="hasMultipleLocations" />
-    </server>
-    
-    <content>
-
-        
-    	<container style="modal-details-map-container">
-    		
-    		<param name="serviceID" source="DISPLAY/xmlData/identifier/serviceID"/>
-    		<param name="hasMultipleLocations" source="DISPLAY/xmlData/identifier/hasMultipleLocations"/>
-    		<param name="providerName" source="/DISPLAY/xmlData/provider-name/"/>
-    		<param name="acceptReferral" source="/DISPLAY/xmlData/accept-referral/"/>
-    		
-    		<container style="modal-details">
-    			<field source="/DISPLAY/xmlData"/>
-    		</container>
-    		
-    		<container style="provider-modal-map">
-    			<field source="/DISPLAY/xmlData"/>
-    		</container>	
-    		
-    	</container>
-				
-    </content>
-    
-    
-</page>
-
+#START NON-TRANSLATABLE
+Application.Image=cw_icon_app_acknow.png
+Application.Form.Name.Link.Target=CitizenAccount_listMyApplications
+#END NON-TRANSLATABLE

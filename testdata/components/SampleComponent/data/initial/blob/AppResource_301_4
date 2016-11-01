@@ -1,56 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><ac:application xmlns:ac="http://www.curamsoftware.com/curam/util/client/application-config" id="DefaultApp" logo="DefaultApp.logo" subtitle="DefaultApp.subtitle" title="DefaultApp.title" user-message="DefaultApp.UserMessage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="page-schema.xsd">
-    <!-- this is the page that lists the service offerings and 
-        plots all services on map by service offering -->
-    <identifier name="LifeEventRecommendations"/>
-    <server class="CitizenLifeEvents" alias="DISPLAY" method="getLifeEventRecommendations">
-        <param name="arg1$lifeEventID" path="lifeEventID"/>
-    </server>
-    <header>
-        <title id="Page.Title"/>
-        <description id="Page.Description"/> 
-        <icon id="title_current_apps"/>
-    </header>
-    <content>
-        
-        <container style="triage-results-alert" conditionalSource="/DISPLAY/listData/root/alert-messages[]/alert/text" false="$empty">
-            <field source="/DISPLAY/listData/root/alert-messages[]" >
-            </field>
-        </container>                        
-        
-        <container style="triage-results-header">
-		<param name="show-min-zoom-passed-message" source="/DISPLAY/listData/root/show-min-zoom-passed-message"/>                    
-        </container>                       
-        
-        <container style="government-services">
-            <!--<field source="/DISPLAY/govServicesData$xmlData/root" type="GOVERNMENT_SERVICES_XML">
-            </field>-->
-        </container>
-        
-        
-        <!-- should all this be conditional? what to do if/when no services are output? -->
-        <container style="community-services">
-            
-		<field source="/DISPLAY/listData/root/service-offerings" type="TRIAGE_SERVICE_OFFERING_LIST">
-		    <param name="num-checked-services" source="/DISPLAY/listData/root/num-checked-services"/>
-		    <param name="list-title" source="/DISPLAY/listData/root/list-title"/>
-		</field>
+  <ac:application-menu>
+    <ac:preferences title="preferences.title"/>
+    <ac:help title="help.title"/>
+    <ac:logout title="logout.title"/>
+  </ac:application-menu>
 
-		<field source="/DISPLAY/mapData" type="TRIAGE_GOOGLE_MAPS_XML">
-			<param name="pins-min-zoom-level" source="/DISPLAY/listData/root/pins-min-zoom-level"/>
-		</field>
-            
-        </container>
-        
-    </content>
-</page>
+  <ac:application-search default-search-page="Organization_resolveApplicationSearch" initial-text="Application.Search.InitialText"/>
+
+  <ac:section-ref id="DefaultAppHomeSection"/>
+  <ac:section-ref id="DefaultAppSection"/>
+  <ac:section-ref id="DefaultAppInboxSection"/>
+  <ac:section-ref id="DefaultAppCalendarSection"/>
+  
+</ac:application>

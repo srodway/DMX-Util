@@ -16,6 +16,94 @@
   <column name="versionNo" type="number" />
   <row>
     <attribute name="productDeliveryPatternInfoID">
+      <value>2</value>
+    </attribute>
+    <attribute name="productDeliveryPatternID">
+      <value>2</value>
+    </attribute>
+    <attribute name="deliveryMethodID">
+      <value>4</value>
+    </attribute>
+    <attribute name="name">
+      <value>Daily By Invoice</value>
+    </attribute>
+    <attribute name="maximumAmount">
+      <value>100000.00</value>
+    </attribute>
+    <attribute name="deliveryFrequency">
+      <value>000100000</value>
+    </attribute>
+    <attribute name="coverPattern">
+      <value>PC1</value>
+    </attribute>
+    <attribute name="offset">
+      <value>0</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="commentsTextID">
+      <value />
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="productDeliveryPatternInfoID">
+      <value>58</value>
+    </attribute>
+    <attribute name="productDeliveryPatternID">
+      <value>58</value>
+    </attribute>
+    <attribute name="deliveryMethodID">
+      <value>2</value>
+    </attribute>
+    <attribute name="name">
+      <value>Weekly by Check in Advance on a Monday</value>
+    </attribute>
+    <attribute name="maximumAmount">
+      <value>100000.00</value>
+    </attribute>
+    <attribute name="deliveryFrequency">
+      <value>100100100</value>
+    </attribute>
+    <attribute name="coverPattern">
+      <value>PC1</value>
+    </attribute>
+    <attribute name="offset">
+      <value>0</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="commentsTextID">
+      <value />
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="productDeliveryPatternInfoID">
       <value>110</value>
     </attribute>
     <attribute name="productDeliveryPatternID">
@@ -60,16 +148,60 @@
   </row>
   <row>
     <attribute name="productDeliveryPatternInfoID">
-      <value>2</value>
+      <value>300</value>
     </attribute>
     <attribute name="productDeliveryPatternID">
-      <value>2</value>
+      <value>300</value>
     </attribute>
     <attribute name="deliveryMethodID">
       <value>4</value>
     </attribute>
     <attribute name="name">
-      <value>Daily By Invoice</value>
+      <value>Every two weeks on Monday by Invoice</value>
+    </attribute>
+    <attribute name="maximumAmount">
+      <value>100000.00</value>
+    </attribute>
+    <attribute name="deliveryFrequency">
+      <value>100200100</value>
+    </attribute>
+    <attribute name="coverPattern">
+      <value>PC1</value>
+    </attribute>
+    <attribute name="offset">
+      <value>0</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="commentsTextID">
+      <value />
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="productDeliveryPatternInfoID">
+      <value>301</value>
+    </attribute>
+    <attribute name="productDeliveryPatternID">
+      <value>301</value>
+    </attribute>
+    <attribute name="deliveryMethodID">
+      <value>4</value>
+    </attribute>
+    <attribute name="name">
+      <value>Daily by Invoice</value>
     </attribute>
     <attribute name="maximumAmount">
       <value>100000.00</value>
@@ -85,6 +217,50 @@
     </attribute>
     <attribute name="fromDate">
       <value>2001-01-01</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="comments">
+      <value>None</value>
+    </attribute>
+    <attribute name="commentsTextID">
+      <value />
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="productDeliveryPatternInfoID">
+      <value>3001</value>
+    </attribute>
+    <attribute name="productDeliveryPatternID">
+      <value>769</value>
+    </attribute>
+    <attribute name="deliveryMethodID">
+      <value>3</value>
+    </attribute>
+    <attribute name="name">
+      <value>Provider Invoice Delivery Pattern</value>
+    </attribute>
+    <attribute name="maximumAmount">
+      <value>100000.00</value>
+    </attribute>
+    <attribute name="deliveryFrequency">
+      <value>000100000</value>
+    </attribute>
+    <attribute name="coverPattern">
+      <value>PC2</value>
+    </attribute>
+    <attribute name="offset">
+      <value>0</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>2010-04-12</value>
     </attribute>
     <attribute name="recordStatus">
       <value>RST1</value>
@@ -355,182 +531,6 @@
     </attribute>
     <attribute name="comments">
       <value />
-    </attribute>
-    <attribute name="commentsTextID">
-      <value />
-    </attribute>
-    <attribute name="nameTextID">
-      <value />
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="productDeliveryPatternInfoID">
-      <value>300</value>
-    </attribute>
-    <attribute name="productDeliveryPatternID">
-      <value>300</value>
-    </attribute>
-    <attribute name="deliveryMethodID">
-      <value>4</value>
-    </attribute>
-    <attribute name="name">
-      <value>Every two weeks on Monday by Invoice</value>
-    </attribute>
-    <attribute name="maximumAmount">
-      <value>100000.00</value>
-    </attribute>
-    <attribute name="deliveryFrequency">
-      <value>100200100</value>
-    </attribute>
-    <attribute name="coverPattern">
-      <value>PC1</value>
-    </attribute>
-    <attribute name="offset">
-      <value>0</value>
-    </attribute>
-    <attribute name="fromDate">
-      <value>2001-01-01</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="comments">
-      <value>None</value>
-    </attribute>
-    <attribute name="commentsTextID">
-      <value />
-    </attribute>
-    <attribute name="nameTextID">
-      <value />
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="productDeliveryPatternInfoID">
-      <value>3001</value>
-    </attribute>
-    <attribute name="productDeliveryPatternID">
-      <value>769</value>
-    </attribute>
-    <attribute name="deliveryMethodID">
-      <value>3</value>
-    </attribute>
-    <attribute name="name">
-      <value>Provider Invoice Delivery Pattern</value>
-    </attribute>
-    <attribute name="maximumAmount">
-      <value>100000.00</value>
-    </attribute>
-    <attribute name="deliveryFrequency">
-      <value>000100000</value>
-    </attribute>
-    <attribute name="coverPattern">
-      <value>PC2</value>
-    </attribute>
-    <attribute name="offset">
-      <value>0</value>
-    </attribute>
-    <attribute name="fromDate">
-      <value>2010-04-12</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="comments">
-      <value>None</value>
-    </attribute>
-    <attribute name="commentsTextID">
-      <value />
-    </attribute>
-    <attribute name="nameTextID">
-      <value />
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="productDeliveryPatternInfoID">
-      <value>301</value>
-    </attribute>
-    <attribute name="productDeliveryPatternID">
-      <value>301</value>
-    </attribute>
-    <attribute name="deliveryMethodID">
-      <value>4</value>
-    </attribute>
-    <attribute name="name">
-      <value>Daily by Invoice</value>
-    </attribute>
-    <attribute name="maximumAmount">
-      <value>100000.00</value>
-    </attribute>
-    <attribute name="deliveryFrequency">
-      <value>000100000</value>
-    </attribute>
-    <attribute name="coverPattern">
-      <value>PC1</value>
-    </attribute>
-    <attribute name="offset">
-      <value>0</value>
-    </attribute>
-    <attribute name="fromDate">
-      <value>2001-01-01</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="comments">
-      <value>None</value>
-    </attribute>
-    <attribute name="commentsTextID">
-      <value />
-    </attribute>
-    <attribute name="nameTextID">
-      <value />
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="productDeliveryPatternInfoID">
-      <value>58</value>
-    </attribute>
-    <attribute name="productDeliveryPatternID">
-      <value>58</value>
-    </attribute>
-    <attribute name="deliveryMethodID">
-      <value>2</value>
-    </attribute>
-    <attribute name="name">
-      <value>Weekly by Check in Advance on a Monday</value>
-    </attribute>
-    <attribute name="maximumAmount">
-      <value>100000.00</value>
-    </attribute>
-    <attribute name="deliveryFrequency">
-      <value>100100100</value>
-    </attribute>
-    <attribute name="coverPattern">
-      <value>PC1</value>
-    </attribute>
-    <attribute name="offset">
-      <value>0</value>
-    </attribute>
-    <attribute name="fromDate">
-      <value>2001-01-01</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="comments">
-      <value>None</value>
     </attribute>
     <attribute name="commentsTextID">
       <value />

@@ -1,51 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
  
-  Copyright IBM Corporation 2012. All Rights Reserved.
+  Copyright IBM Corporation 2012,2015. All Rights Reserved.
 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!-- 
-  Copyright 2009-2011 Curam Software Ltd.
+  Copyright 2009-2010 Curam Software Ltd.
   All rights reserved.
-  
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information").  You shall not disclose such
   Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
 --><!--
-  Interface rule classes for propagation of database data to CREOLE rule objects.
-  
-  Customer code must not create, modify or remove instances of any of the rule
-  classes in this rule set.  Instances of these rule classes may only be
-  manipulated by the Rule Object Propagators.
-  
-  --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PropagatorRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+  This Rule Set defines the Base Rule Classes for the Processing and
+  Eligibility and Entitlement Data Rule Sets generated for all Dynamic Evidence
+  Types. Also, utility classes, for deriving the Rule Object given the primary
+  key ID, are provided for Address and Case Participant Role.
+--><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DynamicEvidenceRuleSet" xsi:noNamespaceSchemaLocation="../../../build/svr/creole.gen/schema/RuleSet.xsd">
 
 
-  <!--*********************************************************-->
-  <!-- Evidence classes-->
-  <!--*********************************************************-->
+  <!-- Base Class for all generated Processing Rule Class -->
+  <Class abstract="true" name="DynamicEvidence">
 
 
-  <!-- 
-    All instances of evidence populated by the
-    ActiveEvidenceRowRuleObjectPropagator must inherit from this rule class.
-    
-    Each row of _active_ evidence will be propagated to a corresponding rule object. 
-    Superseded or canceled evidence rows are ignored. 
-  -->
-  <Class abstract="true" name="ActiveEvidenceRow">
-
-
-    <Attribute name="description">
+    <!-- Unique identifier for the evidence record. -->
+    <Attribute name="evidenceID">
       <type>
-        <javaclass name="curam.creole.value.Message"/>
+        <javaclass name="Number"/>
       </type>
       <derivation>
-        <XmlMessage>Active evidence row for correction set with ID: <replace>
-            <reference attribute="correctionSetID"/>
-          </replace></XmlMessage>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Unique identifier for the metadata version used. -->
+    <Attribute name="metadataID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
       </derivation>
     </Attribute>
 
@@ -61,8 +57,41 @@
     </Attribute>
 
 
-    <!-- The effective date for this version of the evidence. -->
-    <Attribute name="effectiveDate">
+    <!-- The identifier of the succession set to which this evidence version belongs. -->
+    <Attribute name="successionID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+
+
+      <!-- Case ID. -->
+    </Attribute>
+    <Attribute name="caseID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Evidence Type Codetable code. -->
+    <Attribute name="type">
+      <type>
+        <codetableentry table="EvidenceType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Evidence Received Date. -->
+    <Attribute name="receivedDate">
       <type>
         <javaclass name="curam.util.type.Date"/>
       </type>
@@ -72,77 +101,8 @@
     </Attribute>
 
 
-    <!-- The identifier of the succession set to which this evidence version belongs. -->
-    <Attribute name="successionID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The identifier of the evidence descriptor header record. -->
-    <Attribute name="evidenceDescriptorID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The identifier of the case to which the evidence belongs. -->
-    <Attribute name="caseID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <!-- 
-    All instances of evidence populated by the
-    ActiveInEditEvidenceRowRuleObjectPropagator must inherit from this rule class.
-    
-    Each row of _active_/_in-edit_ evidence will be propagated to a corresponding rule object. 
-    Superseded or canceled evidence rows are ignored. 
-  -->
-  <Class abstract="true" name="ActiveInEditEvidenceRow">
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <XmlMessage>Active/In-Edit evidence row for correction set with ID: <replace>
-            <reference attribute="correctionSetID"/>
-          </replace></XmlMessage>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Unique identifier for the correction set. -->
-    <Attribute name="correctionSetID">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The effective date for this version of the evidence. -->
-    <Attribute name="effectiveDate">
+    <!-- Evidence Effective Date of Change. -->
+    <Attribute name="effectiveFrom">
       <type>
         <javaclass name="curam.util.type.Date"/>
       </type>
@@ -152,10 +112,10 @@
     </Attribute>
 
 
-    <!-- The identifier of the succession set to which this evidence version belongs. -->
-    <Attribute name="successionID">
+    <!-- Evidence Record status: In Edit, Active, Superceded, Canceled etc., -->
+    <Attribute name="status">
       <type>
-        <javaclass name="Number"/>
+        <codetableentry table="EvidenceDescriptorStatus"/>
       </type>
       <derivation>
         <specified/>
@@ -163,24 +123,33 @@
     </Attribute>
 
 
-    <!-- The identifier of the evidence descriptor header record. -->
-    <Attribute name="evidenceDescriptorID">
+    <!-- Case Header record of the case for which the Evidence is recorded. -->
+    <Attribute name="caseRecord">
       <type>
-        <javaclass name="Number"/>
+        <ruleclass name="CaseHeader" ruleset="CaseEntitiesRuleSet"/>
       </type>
       <derivation>
-        <specified/>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="CaseHeader" ruleset="CaseEntitiesRuleSet">
+            <match retrievedattribute="caseID">
+              <reference attribute="caseID"/>
+            </match>
+          </readall>
+        </singleitem>
       </derivation>
     </Attribute>
 
 
-    <!-- The identifier of the case to which the evidence belongs. -->
-    <Attribute name="caseID">
+    <!-- Description for this Rule Class. -->
+    <Attribute name="description">
       <type>
-        <javaclass name="Number"/>
+        <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <specified/>
+        <ResourceMessage key="DynamicEvidenceRow.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="type"/>
+          <reference attribute="correctionSetID"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
 
@@ -188,46 +157,45 @@
   </Class>
 
 
-  <!-- 
-    All instances of evidence populated by the
-    ActiveSuccessionSetRuleObjectPropagator must inherit from this rule class, and the attributes which 
-    govern the start and end date of the succession set must be annotated with
-    <SuccessionStart/> and <SuccessionEnd/> respectively.
-    
-    The _active_ evidence rows contributing to an evidence succession set will be combined and 
-    propagated to a single rule object.
-    
-    The propagator will populate attribute values differently depending on whether the attribute returns
-    a Timeline:
-    - Timeline attributes will be populated with a value which varies according to the data in the succession set, changing
-      on the effectiveDate of the evidence rows contributing to the succession set; outside the succesion start and end
-      dates a default value will be used (governed by the type parameter within the Timeline).
-    - non-Timeline attributes will be populated with the value common across all the evidence rows in the succession set.
-      If these values are found to vary across the succession set, then the propagator will raise errors or warnings.
-    
+  <!--
+    Base Class for all generated Data Rule Class. This Base Class is used
+    when Active Evidence Rows are used in Determination Rule Sets.
   -->
-  <Class abstract="true" name="ActiveSuccessionSet">
+  <Class abstract="true" extends="ActiveEvidenceRow" extendsRuleSet="PropagatorRuleSet" name="ActiveDynamicEvidenceRow">
 
 
+    <Attribute name="evidenceID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Description for this Rule Class. -->
     <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <XmlMessage>Active succession set data for succession set with ID: <replace>
-            <!-- use toString so that the number is not formatted with commas nor precision truncated -->
-            <property name="toString">
-              <object>
-                <reference attribute="successionID"/>
-              </object>
-            </property>
-          </replace></XmlMessage>
+        <ResourceMessage key="ActiveDynamicEvidenceRow.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="correctionSetID"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
 
 
-    <!-- The identifier of the case to which the evidence belongs. -->
-    <Attribute name="caseID">
+  </Class>
+
+
+  <!--
+    Base Class for all generated Data Rule Class. This Base Class is used
+    when Active Succession Sets are used in Determination Rule Sets.
+  -->
+  <Class abstract="true" extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="ActiveDynamicEvidenceSuccessionSet">
+    <Attribute name="evidenceID">
       <type>
         <javaclass name="Number"/>
       </type>
@@ -235,83 +203,296 @@
         <specified/>
       </derivation>
     </Attribute>
-
-
-    <!-- Unique identifier for the succession set. -->
-    <Attribute name="successionID">
+    <!-- Description for this Rule Class. -->
+    <Attribute name="description">
       <type>
-        <javaclass name="Number"/>
+        <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <specified/>
+        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="successionID"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
+  </Class>
 
 
-    <!-- The varying identifier of the evidence descriptor header record contributing to
-           effective-dated intervals in the succession set's changes over time. -->
-    <Attribute name="evidenceDescriptorID">
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
+  <!--
+    Rule Objects of Participant and Case Related Rule Classes defined in
+    Participant and Case Entities Rule Sets, are stored in the DB. The
+    following Rule Classes are created to provide In-Memory couterparts
+    for corresponding classes in Participant and Case Entities Rule Sets, as
+    Dynamic Evidence Rule Object Storage uses Rule Class names to decide if a
+    Rule Object needs to be persisted in DB. These Rule Classes are used to
+    represent CPR, Concern Role and Address information while calling Validation
+    and Calculated Attributes Rule Sets before the evidence record is created.
+  -->
+
+
+  <Class extends="ConcernRole" extendsRuleSet="ParticipantEntitiesRuleSet" name="ConcernRole"/>
+
+
+  <Class extends="Address" extendsRuleSet="ParticipantEntitiesRuleSet" name="Address"/>
+
+
+  <Class extends="CaseParticipantRole" extendsRuleSet="CaseEntitiesRuleSet" name="CaseParticipantRole"/>
+
+
+  <!-- *************************************************************** -->
+  <!-- 
+    AddressCalculator Rule Class.
+    This class is a utility class to derive a Address Record Rule Object
+    given the Address ID.
+  -->
+  <!-- *************************************************************** -->
+  <Class name="AddressCalculator">
+
+
+    <!--Initializes the addressID-->
+    <Initialization>
+      <Attribute name="addressID">
+        <type>
           <javaclass name="Number"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
+        </type>
+      </Attribute>
+    </Initialization>
 
 
-    <!-- True for periods within the lifetime of the succession set,
-      i.e. between its start and end dates (inclusive), if any.
-      
-      The ActiveSuccessionSetRuleObjectPropagator forces the evaluation of this attribute,
-      and in turn the implementation of the static method forces the population of all 
-      the business attributes on the concrete rule object. 
-       -->
-    <Attribute name="exists">
+    <!-- Retrieves the Address Record for the given Address ID -->
+    <Attribute name="addressRecord">
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Boolean"/>
-        </javaclass>
+        <ruleclass name="Address" ruleset="ParticipantEntitiesRuleSet"/>
       </type>
       <derivation>
-        <call class="curam.core.sl.infrastructure.propagator.impl.Statics" method="getSuccessionSetExistence">
-          <type>
-            <javaclass name="curam.creole.value.Timeline">
-              <javaclass name="Boolean"/>
-            </javaclass>
-          </type>
-          <arguments>
-            <this/>
-          </arguments>
-        </call>
+        <singleitem onEmpty="returnNull" onMultiple="error">
+          <readall ruleclass="Address" ruleset="ParticipantEntitiesRuleSet">
+            <match retrievedattribute="addressID">
+              <reference attribute="addressID"/>
+            </match>
+          </readall>
+        </singleitem>
       </derivation>
     </Attribute>
 
 
+    <!-- Description for this Rule Class. -->
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="AddressCalculator.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="addressID"/>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
   </Class>
 
 
+  <!-- *************************************************************** -->
   <!-- 
-      All instances of evidence populated by the
-      ActiveInEditSuccessionSetRuleObjectPropagator must inherit from this rule class, and the attributes which 
-      govern the start and end date of the succession set must be annotated with
-      <SuccessionStart/> and <SuccessionEnd/> respectively.
-      
-      The Active and InEdit evidence rows contributing to an evidence succession set will be combined and 
-      propagated to a single rule object.
-      
-      The propagator will populate attribute values differently depending on whether the attribute returns
-      a Timeline:
-      - Timeline attributes will be populated with a value which varies according to the data in the succession set, changing
-        on the effectiveDate of the evidence rows contributing to the succession set; outside the succesion start and end
-        dates a default value will be used (governed by the type parameter within the Timeline).
-      - non-Timeline attributes will be populated with the value common across all the evidence rows in the succession set.
-        If these values are found to vary across the succession set, then the propagator will raise errors or warnings.
-      
+    AddressTimelineCalculator Rule Class.
+    This class is a utility class to derive a Timeline of Address Record
+    Rule Objects given a Timeline of Address IDs.
+  -->
+  <!-- *************************************************************** -->
+  <Class name="AddressTimelineCalculator">
+
+
+    <!-- Initializes the addressIDTimeline -->
+    <Initialization>
+      <Attribute name="addressIDTimeline">
+        <type>
+          <javaclass name="curam.creole.value.Timeline">
+            <javaclass name="Number"/>
+          </javaclass>
+        </type>
+      </Attribute>
+    </Initialization>
+
+
+    <!--
+      Retrieves the Address Record Timeline for the given Address ID Timeline.
     -->
-  <Class abstract="true" name="ActiveInEditSuccessionSet">
+    <Attribute name="addressRecordTimeline">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <ruleclass name="Address" ruleset="ParticipantEntitiesRuleSet"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <reference attribute="addressRecord">
+            <create ruleclass="AddressCalculator">
+              <intervalvalue>
+                <reference attribute="addressIDTimeline"/>
+              </intervalvalue>
+            </create>
+          </reference>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Description for this Rule Class. -->
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="AddressTimelineCalculator.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="addressIDTimeline"/>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+  </Class>
+
+
+  <!-- *************************************************************** -->
+  <!-- 
+    CaseParticipantRoleCalculator Rule Class.
+    This class is a utility class to derive a Case Participant Role
+    Rule Object given a Case Participant Role ID.
+  -->
+  <!-- *************************************************************** -->
+  <Class name="CaseParticipantRoleCalculator">
+
+
+    <!-- Initialiazes the Case Participant Role ID -->
+    <Initialization>
+      <Attribute name="caseParticipantRoleID">
+        <type>
+          <javaclass name="Number"/>
+        </type>
+      </Attribute>
+    </Initialization>
+
+
+    <!--
+      Retrieves the Case Participant Role Record for the given
+      Case Participant ID.
+    -->
+    <Attribute name="caseParticipantRoleRecord">
+      <type>
+        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="CaseParticipantRole" ruleset="CaseEntitiesRuleSet">
+            <match retrievedattribute="caseParticipantRoleID">
+              <reference attribute="caseParticipantRoleID"/>
+            </match>
+          </readall>
+        </singleitem>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Description for this Rule Class. -->
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="CaseParticipantRoleCalculator.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="caseParticipantRoleID"/>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+  </Class>
+
+
+  <!-- *************************************************************** -->
+  <!-- 
+    CaseParticipantRoleTimelineCalculator Rule Class.
+    This class is a utility class to derive a Timeline of Case Participant Role
+    Rule Objects given a Timeline of Case Participant Role IDs.
+  -->
+  <!-- *************************************************************** -->
+  <Class name="CaseParticipantRoleTimelineCalculator">
+
+
+    <!-- Initializes the caseParticipantIDTimeline -->
+    <Initialization>
+      <Attribute name="caseParticipantIDTimeline">
+        <type>
+          <javaclass name="curam.creole.value.Timeline">
+            <javaclass name="Number"/>
+          </javaclass>
+        </type>
+      </Attribute>
+    </Initialization>
+
+
+    <!--
+      Retrieves the Case Participant Role Record Timeline for the given
+      Case Participant ID Timeline.
+    -->
+    <Attribute name="caseParticipantRecordTimeline">
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <timelineoperation>
+          <reference attribute="caseParticipantRoleRecord">
+            <create ruleclass="CaseParticipantRoleCalculator">
+              <intervalvalue>
+                <reference attribute="caseParticipantIDTimeline"/>
+              </intervalvalue>
+            </create>
+          </reference>
+        </timelineoperation>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Description for this Rule Class. -->
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="CaseParticipantRoleTimelineCalculator.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="caseParticipantIDTimeline"/>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+  </Class>
+
+
+  <Class name="EvidenceAttributeAvailability">
+    <Initialization>
+      <Attribute name="evidence">
+        <type>
+          <ruleclass name="DynamicEvidence"/>
+        </type>
+      </Attribute>
+      <Attribute name="attributeName">
+        <type>
+          <javaclass name="String"/>
+        </type>
+      </Attribute>
+    </Initialization>
+
+
+    <Attribute name="isAttributeAvailable">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <call class="curam.dynamicevidence.cer.impl.DynamicEvidenceStatics" method="isAttributeAvailable">
+          <type>
+            <javaclass name="Boolean"/>
+          </type>
+          <arguments>
+            <reference attribute="evidence"/>
+            <reference attribute="attributeName"/>
+          </arguments>
+        </call>
+      </derivation>
+    </Attribute>
 
 
     <Attribute name="description">
@@ -319,83 +500,63 @@
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <XmlMessage>Active or in-edit succession set data for succession set with ID: <replace>
-            <!-- use toString so that the number is not formatted with commas nor precision truncated -->
-            <property name="toString">
-              <object>
-                <reference attribute="successionID"/>
-              </object>
-            </property>
-          </replace></XmlMessage>
+        <ResourceMessage key="EvidenceAttributeAvailability.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="attributeName"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
-
-
-    <!-- The identifier of the case to which the evidence belongs. -->
-    <Attribute name="caseID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Unique identifier for the succession set. -->
-    <Attribute name="successionID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The varying identifier of the evidence descriptor header record contributing to
-             effective-dated intervals in the succession set's changes over time. -->
-    <Attribute name="evidenceDescriptorID">
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Number"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- True for periods within the lifetime of the succession set,
-        i.e. between its start and end dates (inclusive), if any.
-        
-        The ActiveInEditSuccessionSetRuleObjectPropagator forces the evaluation of this attribute,
-        and in turn the implementation of the static method forces the population of all 
-        the business attributes on the concrete rule object. 
-         -->
-    <Attribute name="exists">
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Boolean"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <call class="curam.core.sl.infrastructure.propagator.impl.Statics" method="getSuccessionSetExistence">
-          <type>
-            <javaclass name="curam.creole.value.Timeline">
-              <javaclass name="Boolean"/>
-            </javaclass>
-          </type>
-          <arguments>
-            <this/>
-          </arguments>
-        </call>
-      </derivation>
-    </Attribute>
-
-
   </Class>
 
 
+  <!-- *************************************************************** -->
+  <!-- 
+      EmploymentCalculator Rule Class.
+      This class is a utility class to derive a Employment Rule Object 
+      given a Employment ID.
+    -->
+  <!-- *************************************************************** -->
+  <Class name="EmploymentCalculator">
+
+
+    <!-- Initialiazes the Employment ID -->
+    <Initialization>
+      <Attribute name="employmentID">
+        <type>
+          <javaclass name="Number"/>
+        </type>
+      </Attribute>
+    </Initialization>
+
+
+    <!--
+        Retrieves the Employment Record for the given Employment ID.
+      -->
+    <Attribute name="employmentRecord">
+      <type>
+        <ruleclass name="Employment" ruleset="ParticipantEntitiesRuleSet"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="Employment" ruleset="ParticipantEntitiesRuleSet">
+            <match retrievedattribute="employmentID">
+              <reference attribute="employmentID"/>
+            </match>
+          </readall>
+        </singleitem>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Description for this Rule Class. -->
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="EmploymentCalculator.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="employmentID"/>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+  </Class>
 </RuleSet>

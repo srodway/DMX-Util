@@ -1,66 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Page.Title=Select Screening
+SelectApplication.Description=Please select the type of screening that you would like to complete from the list below.<br/>When you have finished, we will tell you the programs that you may be eligible to receive and how you can apply for these programs. A final eligibility decision can not be made until you apply.
 
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
-    <identifier name="ResetPassword" />
-    <server alias="DISPLAY" method="getCreateAccountEnabled" />
-    <header>
-        <title id="Page.Title" />
-        <description id="Page.Description" />
-        <icon id="title_forgotten_password" />
-    </header>
-    <content>
-        <container conditionalSource="/DISPLAY/xmlData/create-account-enabled[@account-creation-enabled='true'][]" false="$empty">
-            <cluster>
-                <title id="PasswordHint.Title" />
-                <description id="PasswordHint.Description" />
-                <field id="questionType" type="SECRET_QUESTION" mandatory="true" width="30.4">
-                    <title id="Question.Label" />
-                </field>
-                <field id="questionAnswer" type="PAGE_PLAYER_STRING_50" mandatory="true" width="30">
-                    <title id="Answer.Label" />
-                </field>
-                <layout>
-                    <num-cols>1</num-cols>
-                    <width>100</width>
-                    <label-width>15</label-width>
-                </layout>
-            </cluster>
-            <cluster>
-                <title id="NewPassword.Title" />
-                <description id="NewPassword.Description" />
-                <field id="password" type="CW_PASSWORD" mandatory="true" dynamic="true" width="30">
-                    <title id="Password.Label" />
-                </field>
-                <field id="confirmPassword" type="CW_PASSWORD" mandatory="true" dynamic="true" width="30">
-                    <title id="ConfirmPassword.Label" />
-                </field>
-                <layout>
-                    <num-cols>1</num-cols>
-                    <width>100</width>
-                    <label-width>15</label-width>
-                </layout>
-            </cluster>
-            <navigation>
-                <nav-button name="submit" type="action" page-type="page" />
-                <nav-button name="cancel" page="ResolveCitizenHome" page-type="resolve" />
-            </navigation>
-        </container>
-        <container conditionalSource="/DISPLAY/xmlData/create-account-enabled[@account-creation-enabled='false'][]" false="$empty">
-            <container>
-                <title id="Error.Title" />
-                <description id="Error.Description" />
-            </container>
-            <navigation>
-                <nav-button name="home" page="ResolveCitizenHome" page-type="resolve"/>
-            </navigation>
-        </container>            
-    </content>
-</page>
+Applications.Title=Select the Screening you wish to complete
+Applications.Description=
+Applications.Help=You should click on the radio button or the name of the screening that you would like to complete and click on the Next button. For some types of screening, on the next screen, you will be asked to select the programs that you want to be screened for. In other cases you will be taken directly to the screening questions and will not be asked to select programs.<br/>Remember, screening gives you a better idea of the programs for which you may be eligible. You will need to apply in order to find out if you are actually eligible.
+Applications.More.Info=More Info

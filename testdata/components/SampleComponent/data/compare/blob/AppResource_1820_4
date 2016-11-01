@@ -6,29 +6,13 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Number.Wizard.Pages=5
+Page.Title=Getting Started
+Page.Description=Before starting your application, you may want to create a new account or log in to an account that you already have.
 
-OutcomePlanReferralWizard_service.Wizard.Item.Text=Service
-OutcomePlanReferralWizard_service.Wizard.Page.Title=Step 1:
-OutcomePlanReferralWizard_service.Wizard.Page.Desc=Service
-Wizard.PageID.1=OutcomePlanReferralWizard_service
+IntakeLogin.Title=To get started, please choose one of the options below
+IntakeLogin.Description=
+IntakeLogin.Help=It is a good idea to create an account or log in to one that you have already created. If for some reason there is a problem with the system, the information that you have entered will still be saved. Also, you can choose to save your application at any time. You can then come back and continue the application at another time.<br/>If you do not want to create an account, you can still continue with your application without creating an account or logging in to the system.
+IntakeLogin.Legend=Login option
 
-OutcomePlanReferralWizard_details.Wizard.Item.Text=Details
-OutcomePlanReferralWizard_details.Wizard.Page.Title=Step 2:
-OutcomePlanReferralWizard_details.Wizard.Page.Desc=Details
-Wizard.PageID.2=OutcomePlanReferralWizard_details
-
-OutcomePlanReferralWizard_provider.Wizard.Item.Text=Provider
-OutcomePlanReferralWizard_provider.Wizard.Page.Title=Step 3:
-OutcomePlanReferralWizard_provider.Wizard.Page.Desc=Provider
-Wizard.PageID.3=OutcomePlanReferralWizard_provider
-
-OutcomePlanReferralWizard_notification.Wizard.Item.Text=Notification
-OutcomePlanReferralWizard_notification.Wizard.Page.Title=Step 4:
-OutcomePlanReferralWizard_notification.Wizard.Page.Desc=Notification
-Wizard.PageID.4=OutcomePlanReferralWizard_notification
-
-OutcomePlanReferralWizard_factors.Wizard.Item.Text=Factors
-OutcomePlanReferralWizard_factors.Wizard.Page.Title=Step 5:
-OutcomePlanReferralWizard_factors.Wizard.Page.Desc=Factors
-Wizard.PageID.5=OutcomePlanReferralWizard_factors
+Login.Title=<strong>Log in</strong> if you already have an account. 
+StartIntake.Title=<strong>Start</strong> your application without <strong>creating an account</strong> or <strong>logging in</strong> to the system.

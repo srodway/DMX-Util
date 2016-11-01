@@ -6,28 +6,15 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
- Copyright 2010-2011 Curam Software Ltd.
- All rights reserved.
+  Copyright 2010-2011 Curam Software Ltd.
+  All rights reserved.
 
- This software is the confidential and proprietary information of Curam
- Software, Ltd. ("Confidential Information"). You shall not disclose
- such Confidential Information and shall use it only in accordance with the
- terms of the license agreement you entered into with Curam Software.
- --><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="AssessmentDeliveryNoCOCMultiSourceACView">
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><sc:section xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-config" default-page-id="ExternalProviderCustomHome" hide-tab-container="true" id="CPMEXPROVHomeSection" title="CPMEXPROVHomeSection.title">
 
-  <tc:page-param name="caseID"/>
-  <tc:page-param name="assessmentCaseID"/>
+  <sc:tab id="CPMEXPROVHome"/>
 
-  <tc:menu id="AssessmentDeliveryNoCOCViewMenu"/>
-
-  <!-- Details panel -->
-  <tc:context height="100" page-id="DecisionAssistApplication_viewAssessmentNoCOCTabDetails"/>
-
-  <!-- Navigation Panel -->
-  <tc:navigation id="AssessmentDeliveryNoCOCMultiSourceACView"/>
-  
-  <tc:tab-refresh>
-      <tc:onload context="true" page-id="DecisionAssistApplication_viewAssessmentNoCOCMultiSourceAC"/>
-  </tc:tab-refresh>
-
-</tc:tab-config>
+</sc:section>

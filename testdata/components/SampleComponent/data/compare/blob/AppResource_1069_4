@@ -1,25 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2010 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="OutcomePlanningClientGoal">
-  <nc:nodes>
-    <nc:navigation-page id="OutcomePlanningClientGoalHome" page-id="OutcomePlanGoal_viewClientGoal" title="Leaf.Title.Home"/>
-    <nc:navigation-page id="OutcomePlanningClientGoalProgress" page-id="OutcomePlanGoal_listProgress" title="Leaf.Title.Progress"/>
-    <nc:navigation-page id="OutcomePlanningClientGoalReviews" page-id="OutcomePlan_listReviewItemsForGoal" title="Leaf.Title.Reviews"/>
-    <nc:navigation-page id="OutcomePlanningClientGoalNotes" page-id="OutcomePlan_viewGoalNotes" title="Leaf.Title.Notes"/>
-    <nc:navigation-page id="OutcomePlanningClientGoalEndDate" page-id="OutcomePlan_viewGoalEndDateHistory" title="Leaf.Title.EndDateHistory"/>
-  </nc:nodes>
-
-</nc:navigation>
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Details.Name.UserSearch=User Search
+Details.Title.UserSearch=User Search

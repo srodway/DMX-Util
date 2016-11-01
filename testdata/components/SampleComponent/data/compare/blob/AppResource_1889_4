@@ -1,12 +1,29 @@
 #
 # Licensed Materials - Property of IBM
-#
-# PID 5725-H26
 # 
-# Copyright IBM Corporation 2014. All Rights Reserved.
+# Copyright IBM Corporation 2012. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-#Fri Nov 07 16:19:36 GMT 2014
-ASCHouseholdMember.description=This entity contains details of an individual who lives in the household.
+Number.Wizard.Pages=4
+
+OutcomePlanPreselectedReferralWizard_details.Wizard.Item.Text=Details
+OutcomePlanPreselectedReferralWizard_details.Wizard.Page.Title=Step 1:
+OutcomePlanPreselectedReferralWizard_details.Wizard.Page.Desc=Details
+Wizard.PageID.1=OutcomePlanPreselectedReferralWizard_details
+
+OutcomePlanPreselectedReferralWizard_provider.Wizard.Item.Text=Provider
+OutcomePlanPreselectedReferralWizard_provider.Wizard.Page.Title=Step 2:
+OutcomePlanPreselectedReferralWizard_provider.Wizard.Page.Desc=Provider
+Wizard.PageID.2=OutcomePlanPreselectedReferralWizard_provider
+
+OutcomePlanPreselectedReferralWizard_notification.Wizard.Item.Text=Notification
+OutcomePlanPreselectedReferralWizard_notification.Wizard.Page.Title=Step 3:
+OutcomePlanPreselectedReferralWizard_notification.Wizard.Page.Desc=Notification
+Wizard.PageID.3=OutcomePlanPreselectedReferralWizard_notification
+
+OutcomePlanPreselectedReferralWizard_factors.Wizard.Item.Text=Factors
+OutcomePlanPreselectedReferralWizard_factors.Wizard.Page.Title=Step 4:
+OutcomePlanPreselectedReferralWizard_factors.Wizard.Page.Desc=Factors
+Wizard.PageID.4=OutcomePlanPreselectedReferralWizard_factors

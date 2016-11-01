@@ -13,14 +13,14 @@
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="MyAuditPlans">
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="EvidenceAdmin">
   
-  <!-- No Actions Menu -->
+  <tc:menu id="EvidenceAdminMenu"/> 
   
-  <!-- No details defined yet-->
-  <tc:context tab-name="Details.Name.MyAuditPlans" tab-title="Details.Title.MyAuditPlans"/>
+  <!-- No Details panel -->
+  <tc:context tab-name="Details.Name.EvidenceAdmin" tab-title="Details.Title.EvidenceAdmin"/>
 
-  <!-- See MyAuditPlans.nav for details of the tree meta-data. -->
-  <tc:navigation page-id="CaseAudit_listActiveAuditPlans"/>  
+  <!-- There is no page to link to yet. -->
+  <tc:navigation id="EvidenceAdmin"/> 
 
 </tc:tab-config>

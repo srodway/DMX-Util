@@ -13,12 +13,10 @@
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ServiceSupplierHomeMenu">
-  
-  <mc:menu-item id="EditDetails" open-as="modal" page-id="ServiceSupplier_modifyServiceSupplier" title="MenuItem.Title.EditDetails" tooltip="MenuItem.Tooltip.EditDetails"/>
-  
-  <mc:menu-separator id="sep1"/>
-  
-  <mc:menu-item id="Note" open-as="modal" page-id="Participant_createNote1" title="MenuItem.Title.Note" tooltip="MenuItem.Tooltip.Note"/>
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="Screening">
+  <nc:nodes>
 
-</mc:menu-bar>
+    <nc:navigation-page id="Screenings" page-id="Resource_listScreening" title="leaf.title.Screening"/>
+    
+  </nc:nodes>
+</nc:navigation>

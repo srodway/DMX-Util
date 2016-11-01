@@ -16,7 +16,7 @@
   description="Entity for storing practitioner certificate details. This represents the physical certificate received by the client from the practitioner after an assessment is carried out."
   enableSaveAndNew="false"
   modifiable="true"
-  relatedParticipant="practitioner"
+  relatedParticipant="householdMember"
   ruleSetNameForCalculatedAttributes="PractitionerCertCalculatedRuleSet"
 >
   <Model>
@@ -169,6 +169,7 @@
     <OnlineTextViewPage id="View.Page.Description"/>
     <Cluster>
       <RelCPCluster
+        enableMultiMemberUpdates="false"
         fullCreateParticipant="false"
         isOnCreatePage="true"
         isOnModifyPage="false"
@@ -185,7 +186,9 @@
     </Cluster>
     <Cluster>
       <RelCPCluster
-        fullCreateParticipant="false"
+        defaultToBlank="false"
+        enableMultiMemberUpdates="false"
+        fullCreateParticipant="true"
         isOnCreatePage="true"
         isOnModifyPage="true"
         isOnViewPage="true"
@@ -196,6 +199,8 @@
         <StandardField source="practitioner"/>
         <ClusterName id="Cluster.PractitionerCertificate.MedicalPractitioner"/>
         <DescriptionName id="PractitionerCertificate.MedicalPractitioner.Description"/>
+        <FirstName id="FirstName.Label.PractitionerFirstName"/>
+        <SecondName id="Surname.Label.PractitionerSurname"/>
       </RelCPCluster>
     </Cluster>
     <Cluster>

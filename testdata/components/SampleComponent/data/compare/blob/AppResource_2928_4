@@ -1,33 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009-2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="AppealHearingCaseHomeMenuIC">
-  <mc:loader-registry>
-    <mc:loader class="curam.appeal.sl.tab.impl.AppealHomeMenuLoader"/>
-  </mc:loader-registry>
-  
-  <mc:menu-item id="Edit" open-as="modal" page-id="Appeal_modifyHearingCase" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
-  
-  <mc:menu-separator id="sep1"/>   
-  
-  <mc:menu-item id="Statement" open-as="modal" page-id="Appeal_createStatement" title="MenuItem.Title.Statement" tooltip="MenuItem.Tooltip.Statement"/>
-  
-  <mc:menu-separator id="sep2"/>
-  
-  <mc:menu-item id="Reopen" open-as="modal" page-id="Appeal_reopenHearingCase" title="MenuItem.Title.Reopen" tooltip="MenuItem.Tooltip.Reopen"/>
-    <mc:menu-item dynamic="true" id="Bookmark" open-as="modal" page-id="Organization_createCaseBookmark" title="MenuItem.Title.Bookmark" tooltip="MenuItem.Tooltip.Bookmark"/>
-  
-  <mc:menu-item dynamic="true" id="RemoveBookmark" open-as="modal" page-id="Organization_cancelCaseBookmark" title="MenuItem.Title.RemoveBookmark" tooltip="MenuItem.Tooltip.RemoveBookmark"/>
-</mc:menu-bar>
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Page.Title.Home=Home
+Folder.Title.Approvals=Approval Checks
+Page.Title.Case=Case
+Page.Title.EvidenceApprovals=Evidence
+Page.Title.Investigation=Investigation
+Page.Title.IssueResolution=Issue Resolution
+Page.Title.MilestoneWaiver=Milestone Waiver
+Page.Title.ServicePlan=Service Plan
+Page.Title.PlanItem=Plan Item
+Page.Title.ServicePlanGroup=Service Plan Group
+Page.Title.Calendar=Calendar
+Page.Title.UserSkills=Skills
+Page.Title.WorkingPattern=Working Patterns
+Page.Title.TaskRedirectionHistory=Task Redirection History        
+
+# BEGIN, CR00274919, POH
+Page.Title.AssessmentApproval=Assessment
+Page.Title.OutcomePlanAgreementApproval=Outcome Plan Agreement
+# END, CR00274919
+
+Page.Title.ProviderApproval=Provider
+Page.Title.ProviderServiceApproval=Provider Service
+# BEGIN, CR00260853, GP
+Page.Title.ServiceApproval=Service
+# END, CR00260853
+Page.Title.MultidisciplinaryTeams=Multidisciplinary Teams
+
+# BEGIN, CR00351516, HK
+Page.Title.ScreeningApproval=Screening
+# END, CR00351516

@@ -1,56 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2014. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+# This Properties file contains resource Strings for the PDC Bank Account Validation Ruleset.
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-	Copyright 2009 Curam Software Ltd.
-	All rights reserved.
-	
-	This software is the confidential and proprietary information of Curam
-	Software, Ltd. ("Confidential Information"). You shall not disclose
-	such Confidential Information and shall use it only in accordance with the
-	terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="InformationProviderSearchMenu">
-
-	<mc:submenu id="NEW" title="Submenu.Title.New" tooltip="Submenu.Tooltip.New">
-
-		<mc:menu-item id="CreateCase" open-as="modal" page-id="ICSample_selectPersonType" title="MenuItem.Title.CreateCase" tooltip="MenuItem.Tooltip.CreateCase"/>
-
-		<mc:menu-item id="Participant" open-as="modal" page-id="Application_registration" title="MenuItem.Title.Participant" tooltip="MenuItem.Tooltip.Participant"/>
-
-	</mc:submenu>
-
-	<mc:submenu id="Search" title="Submenu.Title.Search" tooltip="Submenu.Tooltip.Search">
-
-		<mc:menu-item id="SearchCase" page-id="Case_search1" title="MenuItem.Title.SearchCase" tooltip="MenuItem.Tooltip.SearchCase"/>
-
-		<mc:submenu id="Participant" title="Submenu.Title.Participant" tooltip="Submenu.Tooltip.Participant">
-
-			<mc:menu-item id="EducationalInstitute" page-id="EducationalInstitute_search1" title="MenuItem.Title.EducationalInstitute" tooltip="MenuItem.Tooltip.EducationalInstitute"/>
-
-			<mc:menu-item id="Employer" page-id="Employer_search1" title="MenuItem.Title.Employer" tooltip="MenuItem.Tooltip.Employer"/>
-
-			<mc:menu-item id="ExternalParty" page-id="ExternalParty_search1" title="MenuItem.Title.ExternalParty" tooltip="MenuItem.Tooltip.ExternalParty"/>
-
-			<mc:menu-item id="ExternalPartyOffice" page-id="ExternalPartyOffice_search1" title="MenuItem.Title.ExternalPartyOffice" tooltip="MenuItem.Tooltip.ExternalPartyOffice"/>
-
-			<mc:menu-item id="InformationProvider" page-id="InformationProvider_search1" title="MenuItem.Title.InformationProvider" tooltip="MenuItem.Tooltip.InformationProvider"/>
-
-			<mc:menu-item id="Person" page-id="Person_search1" title="MenuItem.Title.Person" tooltip="MenuItem.Tooltip.Person"/>
-
-			<mc:menu-item id="ProductProvider" page-id="ProductProvider_search1" title="MenuItem.Title.ProductProvider" tooltip="MenuItem.Tooltip.ProductProvider"/>
-
-			<mc:menu-item id="ServiceSupplier" page-id="ServiceSupplier_search1" title="MenuItem.Title.ServiceSupplier" tooltip="MenuItem.Tooltip.ServiceSupplier"/>
-
-			<mc:menu-item id="Utility" page-id="Utility_search1" title="MenuItem.Title.Utility" tooltip="MenuItem.Tooltip.Utility"/>
-
-			<mc:menu-item id="AllParticipant" page-id="Participant_search" title="MenuItem.Title.AllParticipant" tooltip="MenuItem.Tooltip.AllParticipant"/>
-
-		</mc:submenu>
-
-	</mc:submenu>
-
-</mc:menu-bar>
+ERR_BANKACCOUNT_XRV_DUPLICATE_CLIENT_CREATE=New bank account details cannot be added for a client that is currently marked as a duplicate.
+ERR_BANKACCOUNT_XRV_DUPLICATE_CLIENT_MODIFY=Bank Account details of a client that is currently marked as a duplicate cannot be modified.
+ERR_BANKACCOUNT_XRV_BIC_NOT_EXIST=The BIC {0} does not exist.
+ERR_BANKACCOUNT_XRV_SORT_CODE_NOT_EXIST=The sort code {0} does not exist.
+ERR_BANKACCOUNT_XRV_JOINT_SHAREDNAME_NOT_MATCH=Bank account name of the shared account does not match the bank account name entered.
+ERR_BANKACCOUNT_XRV_ACCOUNTDATES_INVALID=Bank account to and from dates must be in between bank branch start and end dates.
+ERR_BANKACCOUNT_BRANCH_CANCELLED=The bank branch selected for this bank account is cancelled. Please select another bank account.
+ERR_BANKACCOUNT_DUPLICATE_BIC=Duplicate branches with the same BIC found. Please contact the system administrator.
+ERR_BANKACCOUNT_ACCOUNTEXISTS_DUPLICATE_IBAN=An account exists in this branch with this IBAN.
+ERR_BANKACCOUNT_SHAREDACCOUNT_TYPENOTMATCH=Bank account type of the shared account does not match the bank account type entered.
+INFO_BANKACCOUNT_CLOSED=The bank account has been closed or the end date set. If there are payments scheduled to this Bank Account they will not be issued.
+ERR_BANKACCOUNT_XRV_EFFECTIVE_DATE_DOB=The effective date of change must be after the date of birth.
+ERR_BANKACCOUNT_SHAREDACCOUNT_TYPEMODIFIED=You cannot change a joint account type.
+ERR_BANKACCOUNT_ACCOUNT_CLOSED=You cannot modify a bank account when the bank account status is closed.
+ERR_BANKACCOUNT_TYPEMODIFIED=Type cannot be modified.
+ERR_BANKACCOUNT_PAYMENTS_ISSUED=A payment has been issued to this bank account therefore the modification cannot be applied. A new bank account should be created.
+ERR_BANKACCOUNT_XFV_BIC_SORT_CODE_BELONG_TO_SAME_BRANCH=Entered Sort Code and BIC should belong to same bank branch.
+ERR_BANKACCOUNT_FV_IBAN_NUM_EMPTY=At least IBAN and BIC or Account Number and Sort Code must be entered.
+PDCBankAccountValidationResult.description=PDC Bank Account Validation Result For {0}
+ERR_BANKACCOUNT_MULTIPLE_PREFERRED_BANKACCOUNT=You cannot have more than one preferred bank account.

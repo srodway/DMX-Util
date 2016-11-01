@@ -1,22 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2010 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="TaxonomyTermSearch">
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Details.Name.ProviderManagementAdmin=Provider Management Admin Home
 
-    <tc:context tab-name="Details.Name.TaxonomyTermSearch" tab-title="Details.Name.TaxonomyTermSearch"/>
+Page.Title.ProviderHome=Home
+Folder.Title.Configuration=Configuration
+Page.Title.PlacementPaymentFrequency=Placement Payment Frequency
 
-    <tc:navigation id="TaxonomyTermSearch"/>
+Folder.Title.AttendanceTracking=Attendance Tracking
+Page.Title.RosterGenerationFrequency=Roster
+Page.Title.AttendancePaymentFrequency=Attendance
+Page.Title.AbsenceReason=Absence Reasons
+Page.Title.PaymentAndAttendanceConfiguration=Payment and Attendance Configuration
 
-</tc:tab-config>
+Page.Title.LicenseTrainingRequirements=License Requirements
+
+Page.Title.Certifications=Certifications
+
+Folder.Title.EvaluationCriteriaAndMeasure=Evaluation Criteria and Measures
+Page.Title.EvaluationCriteria=Evaluation Criteria
+Page.Title.PerformanceMeasure=Performance Measures
+
+Page.Title.ServiceGroups=Service Groups
+# BEGIN, CR00260853, GP
+Page.Title.ServiceOfferings=Services
+# END, CR00260853
+Page.Title.SpecialtyTypeIcons=Specialty Type Icons
+

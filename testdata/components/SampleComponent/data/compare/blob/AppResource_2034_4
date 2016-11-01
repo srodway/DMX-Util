@@ -1,14 +1,20 @@
-#Fri Sep 04 15:41:09 BST 2015
-Field.Label.Type=Type
-Field.Label.From=From
-Field.Label.To=To
-Participant=Participant
-RelatedTo.RelatedPerson.Description.ID1=related person
-Field.Label.EndReason=End Reason
-RelatedTo.LastName.Label=Last Name
-Participant.Description.ID3=Related Participant
-Participant.Description.ID2=Participant
-Cluster.Title.Comments=Comments
-RelatedTo=Related To
-Cluster.Title.ID1=Relationship Details
-RelatedTo.FirstName.Label=First Name
+#
+# Licensed Materials - Property of IBM
+#
+# PID 5725-H26
+# 
+# Copyright IBM Corporation 2014. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+DiagnosisDetails.Description=This section collects information on the practitioner's diagnoses of the client's ailments.  There may be more than one diagnosis.
+DiagnosisDetails.Title=Diagnosis Details
+DiagnosisDetailsInformation.Label=Diagnosis Details
+
+DDHelp=Collect details of ailment and the date on which the examination took place to detect this ailment.
+DiagnosisElement.Label=What ailment is the client suffering from?
+DiagnosisExaminationDate.Label=When was the examination date?
+AnyMoreDiagnosisDetails.Label=Are there more ailments diagnosed for client?
+
+RequiredField.Indicator=<span style="color: orange">* Indicates a required item</span>

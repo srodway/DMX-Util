@@ -77,24 +77,26 @@
           </fo:block>
           <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
           <fo:block xsl:use-attribute-sets="Normal_4">&nbsp;</fo:block>
-          <fo:block xsl:use-attribute-sets="Normal_6">
+	  <fo:block xsl:use-attribute-sets="Normal_6">
             Dear
             <xsl:apply-templates select="FIELD[FNAME='concernRoleName']" />
           </fo:block>
           <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
           <fo:block xsl:use-attribute-sets="Normal_6">
-            We wish to inform you that a
+            We wish to inform you that your
             <xsl:apply-templates select="FIELD[FNAME='productType']" />
-            case with Reference No.
+            case with Reference No.:
             <xsl:apply-templates select="FIELD[FNAME='caseReference']" />
             ,
-            was created on
+            has been suspended on
             <xsl:apply-templates select="FIELD[FNAME='eventDate']" />
+            for the following reason -
+            <xsl:apply-templates select="FIELD[FNAME='caseSuspendReason']" />
             .
           </fo:block>
-          <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
+          <fo:block xsl:use-attribute-sets="Normal_6">&nbsp;</fo:block>
           <fo:block xsl:use-attribute-sets="Normal_6">Sincerely,</fo:block>
-          <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
+          <fo:block xsl:use-attribute-sets="Normal_6">&nbsp;</fo:block>
           <fo:block xsl:use-attribute-sets="Normal_6">
             <xsl:apply-templates select="FIELD[FNAME='userFullName']" />
           </fo:block>

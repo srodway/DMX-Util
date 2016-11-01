@@ -1,69 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-
-  PID 5725-H26
-
-  Copyright IBM Corporation 2014. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet name="IBProductTypeDataRuleSet">
-
-
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="IBProductType">
-
-
-    <Annotations>
-      <SuccessionSetPopulation/>
-    </Annotations>
-
-
-    <Attribute name="forceIVB">
-      <Annotations>
-        <Label label-id="forceIVB" name="Flag to indicate if invalidity benefit is being forced."/>
-      </Annotations>
+<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCAddressRuleSet">
+  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="PDCAddress">
+    <Attribute name="fromDate">
+      <Annotations/>
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="java.lang.Boolean"/>
-        </javaclass>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
         <null/>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="claimType">
-      <Annotations>
-        <Label label-id="claimType" name="The type of claim being applied for, Sickness Benefit or Invalidity Benefit."/>
-      </Annotations>
+    <Attribute name="addressType">
+      <Annotations/>
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <codetableentry table="IBClaimType"/>
-        </javaclass>
+        <codetableentry table="AddressType"/>
       </type>
       <derivation>
         <null/>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="description">
+    <Attribute name="toDate">
+      <Annotations/>
       <type>
-        <javaclass name="curam.creole.value.Message"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
-          <reference attribute="successionID"/>
-        </ResourceMessage>
+        <null/>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="householdMember">
-      <Annotations>
-        <Label label-id="claimType" name="The case participant receiving the benefit."/>
-      </Annotations>
+    <Attribute name="preferredInd">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.Boolean"/>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+    <Attribute name="participant">
+      <Annotations/>
       <type>
         <javaclass name="java.lang.Number"/>
       </type>
@@ -71,23 +45,40 @@
         <specified/>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="related_householdMember">
+    <Attribute name="related_participant">
+      <Annotations/>
       <type>
         <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
       </type>
       <derivation>
         <reference attribute="caseParticipantRoleRecord">
           <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="householdMember"/>
+            <reference attribute="participant"/>
           </create>
         </reference>
       </derivation>
     </Attribute>
-
-
+    <Attribute name="address">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="related_address">
+      <Annotations/>
+      <type>
+        <ruleclass name="Address" ruleset="ParticipantEntitiesRuleSet"/>
+      </type>
+      <derivation>
+        <reference attribute="addressRecord">
+          <create ruleclass="AddressCalculator" ruleset="DynamicEvidenceRuleSet">
+            <reference attribute="address"/>
+          </create>
+        </reference>
+      </derivation>
+    </Attribute>
   </Class>
-
-
 </RuleSet>

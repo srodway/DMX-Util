@@ -6,22 +6,19 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009-2011 Curam Software Ltd.
+  Copyright 2011 Curam Software Ltd.
   All rights reserved.
-  
+
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="VerificationCategories">
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ChangeSetList">
+
+  <!-- No details panel -->
+  <tc:context tab-name="Details.Name.ChangeSets" tab-title="Details.Title.ChangeSets"/>
   
-  <!-- No Actions Menu -->
-
-  <!-- Details panel -->
-  <tc:context tab-name="Details.Name.VerificationCategories" tab-title="Details.Title.VerificationCategories"/>
-
-  <!-- Navigation Panel -->
-  <tc:navigation page-id="VerificationAdmin_listCategories"/>
-
-
+  <!-- Navigation to Change Set list page --> 
+  <tc:navigation page-id="CTM_listChangeSet"/>
+ 
 </tc:tab-config>

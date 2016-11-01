@@ -13,7 +13,7 @@
   </xsl:template>
   <xsl:template match="DATA">
     <!--Explicitly select the STRUCT to avoid processing anything else.-->
-    <xsl:apply-templates select="STRUCT[SNAME='FinancialNotificationDetails']"/>
+    <xsl:apply-templates select="STRUCT[SNAME='ProviderNotificationDetails']"/>
   </xsl:template>
   <xsl:template match="STRUCT">
     <fo:root>
@@ -37,7 +37,7 @@
                   </fo:block>
                   <fo:inline font-size="12pt" font-weight="normal">
                     Dear
-                    <xsl:apply-templates select="FIELD[FNAME='name']"/>
+                    <xsl:apply-templates select="FIELD[FNAME='providerName']"/>
                     ,
                   </fo:inline>
                   <fo:block>
@@ -47,17 +47,11 @@
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
                   <fo:inline font-size="12pt">
-                    We wish to inform you that as a result of a correction to service invoice line item
-                    <xsl:apply-templates select="FIELD[FNAME='SILIReferenceNo']"/>
-                    from service invoice
-                    <xsl:apply-templates select="FIELD[FNAME='SIReferenceNo']"/>
-                    received on
-                    <xsl:apply-templates select="FIELD[FNAME='receiptDate']"/>
-                    for the delivery of
+                    We wish to inform you that you have been denied
+                      approval to provide
                     <xsl:apply-templates select="FIELD[FNAME='serviceOfferingName']"/>
-                    , an underpayment was detected,
-                    and as a result you will be issued a payment as part of your next issued payment to account for the underpayment in the amount of
-                    <xsl:apply-templates select="FIELD[FNAME='amount']"/>
+                    to clients of this agency. The reason for rejection is as follows:
+                    <xsl:apply-templates select="FIELD[FNAME='reason']"/>
                     .
                   </fo:inline>
                   <fo:block>

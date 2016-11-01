@@ -1,40 +1,30 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Details.Name.Case=Common Case Functions
-Details.Title.Case=Common Case Functions
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-folder.title.ServicePlans=Service Plans
-folder.title.Programmes=Programmes
-folder.title.IssuesAndProceedings=Issues and Proceedings
-folder.title.Shared=Shared
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+	Copyright 2010 Curam Software Ltd.
+	All rights reserved.
+	
+	This software is the confidential and proprietary information of Curam
+	Software, Ltd. ("Confidential Information"). You shall not disclose
+	such Confidential Information and shall use it only in accordance with the
+	terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="SupervisorWorkQueueReservedTasksByMonth">
+	
+	<tc:page-param name="workQueueID"/>
+	<tc:page-param name="deadlineDate"/>
+	<tc:page-param name="taskOptionCode"/>
 
+	<tc:menu id="SupervisorWorkQueueMenu"/>
 
-leaf.title.ExpectedOutcomes=Expected Outcomes
-leaf.title.Goals=Goals
-leaf.title.GoodCauses=Good Causes
-leaf.title.PlanItems=Plan Items
-leaf.title.SubGoals=Sub Goals
-leaf.title.Templates=Templates
+	<!-- Details panel -->
+        <tc:context height="0" page-id="Supervisor_workQueueReservedTasksByMonthTabDetails"/>
 
-leaf.title.integratedcases=Integrated Cases
-leaf.title.benefits=Benefits
-leaf.title.liabilities=Liabilities
-leaf.title.corrections=Corrections
-leaf.title.assessments=Assessments
-leaf.title.IssuesAdmin=Issues
-leaf.title.InvestigationAdmin=Investigations
+        <!-- Navigation Panel -->
+	<tc:navigation page-id="Supervisor_workQueueReservedTasksDueByWeek"/>
 
-leaf.title.milestones=Milestones
-leaf.title.resolutions=Resolutions
-leaf.title.services=Services
-leaf.title.Deductions=Deductions
-leaf.title.DeliveryMethods=Delivery Methods
-leaf.title.ServicePlans=Service Plans
-
-leaf.title.Services=Services
+</tc:tab-config>

@@ -1,130 +1,159 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DefaultAllocationTargetsRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
-  <Class extends="AbstractAllocationTargets" extendsRuleSet="AbstractAllocationTargetsRuleSet" name="AllocationTargetsImpl">
-    <Annotations>
-      <Documentation documentation-id="DefaultAllocationTargetsRuleSetDocumentationID_1354547070210" text="This is the default implementation class for a workflow allocation ruleset. It extends from the abstract Allocation Targets ruleset that describes the structure of allocation rules. Any class that extends this class can be considered a primary class which is used to hold the targets for allocation."/>
-    </Annotations>
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!-- 
+  Copyright 2009-2011 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information").  You shall not disclose such
+  Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><!--
+  Interface rule classes for the interaction between the CREOLE-based Assessment
+  Engine and CREOLE rules for the display of  timelines of key data about the case.
+  
+  The rule classes for a CREOLE-based product must extend the rule classes in
+  this rule set, BUT NOTE that product rule classes should not extend these
+  rule classes directly - instead rule set developers for CREOLE-based products
+  should extend the default implementations in the
+  DefaultProductKeyDataRuleSet rule set.  These default implementations
+  provide some isolation against future changes to the
+  ProductKeyDataRuleSet rule classes in this rule set. 
+         
+  Customer code must not create, modify or remove instances of any of the rule
+  classes in this rule set.  Instances of these rule classes may only be
+  manipulated by the Curam Assessment Engine.
+  
+  --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProductKeyDataRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+  <!--
+      A view onto a case which provides a list of key data timelines.
+      
+      The configuaration of a Curam Product to use key data rules will point to
+      a product-specific concrete sub class of this rule class.
+    -->
+  <Class abstract="true" name="AbstractCase">
+
+
+    <Attribute name="productDeliveryCase">
+      <type>
+        <ruleclass name="ProductDeliveryCase" ruleset="ProductEligibilityEntitlementRuleSet"/>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- The list of key data timelines for the case. -->
+    <Attribute name="keyDataTimelines">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="AbstractKeyDataTimeline"/>
+        </javaclass>
+
+
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+
+
+  </Class>
+
+
+  <!-- A single named timeline of key data which can be selected by the user
+         for display. -->
+  <Class abstract="true" name="AbstractKeyDataTimeline">
+    <!-- Force an explicit description to be implemented on a sub rule class.
+           This localisable description will be displayed to the user.
+          -->
     <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <ResourceMessage key="AllocationTargetsImpl" resourceBundle="curam.core.rules.DefaultAllocationTargetsRuleSet">    
-        </ResourceMessage>
+        <abstract/>
       </derivation>
     </Attribute>
-    <Attribute name="targets">
-      <Annotations>
-        <Documentation documentation-id="DefaultAllocationTargetsRuleSetDocumentationID_1354547084844" text="This is a mandatory attribute for any workflow allocation ruleset. Targets is a list of allocation target classes that is required by the workflow engine to assign the task, notification, decision or reminder. Each target must contain an allocation type and an instance  of the chosen type."/>
-      </Annotations>
+
+
+    <!-- The timeline data to display. -->
+    <Attribute name="timeline">
       <type>
-        <javaclass name="List">
-          <ruleclass name="AllocationTarget" ruleset="AbstractAllocationTargetsRuleSet"/>
+        <javaclass name="curam.creole.value.Timeline">
+          <!-- The data could be of any type. -->
+          <javaclass name="Object"/>
         </javaclass>
       </type>
       <derivation>
-        <choose>
-          <type>
-            <javaclass name="List">
-              <ruleclass name="AllocationTarget" ruleset="AbstractAllocationTargetsRuleSet"/>
-            </javaclass>
-          </type>
-          <when>
-            <condition>
-              <equals>
-                <reference attribute="priority"/>
-                <String value="TP2"/>
-              </equals>
-            </condition>
-            <value>
-              <fixedlist>
-                <listof>
-                  <ruleclass name="AllocationTarget" ruleset="AbstractAllocationTargetsRuleSet"/>
-                </listof>
-                <members>
-                  <create ruleclass="AllocationTarget" ruleset="AbstractAllocationTargetsRuleSet">
-                    <specify attribute="type">
-                      <Code table="TargetItemType">
-                        <String value="RL23"/>
-                      </Code>
-                    </specify>
-                    <specify attribute="identifier">
-                      <String value="">
-                        <Annotations>
-                          <Label label-id="DefaultAllocationTargetsRuleSetlabelID_1354275303168" name="Queue Identifier"/>
-                        </Annotations>
-                      </String>
-                    </specify>
-                  </create>
-                  <create ruleclass="AllocationTarget" ruleset="AbstractAllocationTargetsRuleSet">
-                    <specify attribute="type">
-                      <Code table="TargetItemType">
-                        <String value="RL9"/>
-                      </Code>
-                    </specify>
-                    <specify attribute="identifier">
-                      <String value="">
-                        <Annotations>
-                          <Label label-id="DefaultAllocationTargetsRuleSetlabelID_1354275310837" name="User Name"/>
-                        </Annotations>
-                      </String>
-                    </specify>
-                  </create>
-                </members>
-              </fixedlist>
-            </value>
-          </when>
-          <otherwise>
-            <value>
-              <fixedlist>
-                <listof>
-                  <ruleclass name="AllocationTarget" ruleset="AbstractAllocationTargetsRuleSet"/>
-                </listof>
-                <members>
-                  <create ruleclass="AllocationTarget" ruleset="AbstractAllocationTargetsRuleSet">
-                    <specify attribute="type">
-                      <Code table="TargetItemType">
-                        <Annotations>
-                          <Label label-id="DefaultAllocationTargetsRuleSetlabelID_1354276444597" name=""/>
-                        </Annotations>
-                        <String value="RL23"/>
-                      </Code>
-                    </specify>
-                    <specify attribute="identifier">
-                      <String value="">
-                        <Annotations>
-                          <Label label-id="DefaultAllocationTargetsRuleSetlabelID_1354275303168" name="Queue Identifier"/>
-                        </Annotations>
-                      </String>
-                    </specify>
-                  </create>
-                </members>
-              </fixedlist>
-            </value>
-          </otherwise>
-        </choose>
+        <abstract/>
       </derivation>
     </Attribute>
-    <Attribute name="priority">
-      <Annotations>
-        <Documentation documentation-id="DefaultAllocationTargetsRuleSetDocumentationID_1354547098450" text="This is an attribute that can be mapped from a workflow data object attribute. This can be used to in an expression to evaluate the assignment of a task, notification, decision and reminders."/>
-      </Annotations>
+
+
+    <!-- Additional events to display.  This data will be displayed as a simple description of what happened on the date, 
+         e.g. "<event> on <date>". -->
+    <Attribute name="keyEvents">
       <type>
-        <javaclass name="String"/>
+        <javaclass name="List">
+          <ruleclass name="AbstractKeyEvent"/>
+        </javaclass>
       </type>
       <derivation>
-        <specified/>
+        <abstract/>
       </derivation>
     </Attribute>
+
+
   </Class>
-  <Class extends="WorkAllocation" extendsRuleSet="AbstractAllocationTargetsRuleSet" name="WorkAllocation">
+
+
+  <!-- An event that occurred on a date. -->
+  <Class abstract="true" name="AbstractKeyEvent">
+
+
+    <!-- Force an explicit description to be implemented on a sub rule class.
+               This localisable description will be displayed to the user.
+              -->
     <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <ResourceMessage key="WorkAllocation" resourceBundle="curam.core.rules.DefaultAllocationTargetsRuleSet">    
-        </ResourceMessage>
+        <abstract/>
       </derivation>
     </Attribute>
+
+
+    <!-- The date of the event.
+    
+         Note that an event with a null date is not displayed.  This feature can be useful in situations where a null date indicates
+         that no event has occurred, and will prevent the need for rules logic around whether to create the event.
+         
+         For example, if a person's date of death is recorded as null, then that person is still alive and thus there has been no
+         "deceased" event for that person.  It is safe to create an event nonetheless, with the date of the event recorded as null.
+      -->
+
+
+    <Attribute name="date">
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+
+
   </Class>
+
+
 </RuleSet>

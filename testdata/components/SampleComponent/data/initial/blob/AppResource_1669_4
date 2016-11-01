@@ -6,14 +6,14 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Submenu.Title.Edit=Edit
-Submenu.Tooltip.Edit=Edit Service Plan Template
+Number.Wizard.Pages=2
 
-Submenu.Title.Search=Search
-Submenu.Tooltip.Search=Find a User
+ProviderManagement_selectServiceOfferingType.Wizard.Item.Text=Service Offering Type
+ProviderManagement_selectServiceOfferingType.Wizard.Page.Title=Step 1: 
+ProviderManagement_selectServiceOfferingType.Wizard.Page.Desc=Select the service offering type
+Wizard.PageID.1=ProviderManagement_selectServiceOfferingType
 
-MenuItem.Title.User=User
-MenuItem.Tooltip.User=User
-
-MenuItem.Title.ExternalUser=External User
-MenuItem.Tooltip.ExternalUser=External User
+ProviderManagement_createNewServiceOffering.Wizard.Item.Text=Service Offering Details
+ProviderManagement_createNewServiceOffering.Wizard.Page.Title=Step 2: 
+ProviderManagement_createNewServiceOffering.Wizard.Page.Desc=Enter Service Offering Details
+Wizard.PageID.2=ProviderManagement_createNewServiceOffering

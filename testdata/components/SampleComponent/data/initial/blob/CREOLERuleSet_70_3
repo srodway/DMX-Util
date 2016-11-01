@@ -1,17 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCIdentificationDataRuleSet">
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCIdentification">
-    <Annotations>
-      <SuccessionSetPopulation endDateAttribute="toDate" startDateAttribute="fromDate"/>
-    </Annotations>
-    <Attribute name="alternateID">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
+<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCEmailAddressRuleSet">
+  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="PDCEmailAddress">
     <Attribute name="fromDate">
       <Annotations/>
       <type>
@@ -21,10 +9,19 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="altIDType">
+    <Attribute name="emailAddressType">
       <Annotations/>
       <type>
-        <codetableentry table="ConcernRoleAlternateID"/>
+        <codetableentry table="EmailType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="emailAddress">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.String"/>
       </type>
       <derivation>
         <specified/>
@@ -46,16 +43,6 @@
       </type>
       <derivation>
         <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
-          <reference attribute="successionID"/>
-        </ResourceMessage>
       </derivation>
     </Attribute>
     <Attribute name="participant">

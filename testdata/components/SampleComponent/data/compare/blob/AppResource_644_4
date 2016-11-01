@@ -1,40 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-    Copyright 2009 Curam Software Ltd.
-    All rights reserved.
+  Copyright 2009, 2010 Curam Software Ltd.
+  All rights reserved.
+
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="InformationProviderHome">
+
+  <tc:page-param name="concernRoleID"/>
+
+  <tc:menu id="InformationProviderHomeMenu"/> 
+  
+  <!-- Details panel -->
+  <tc:context height="129" page-id="InformationProvider_homeTabDetails"/>
+
+
+  <!-- Navigation Panel -->
+  <tc:navigation id="InformationProviderHome"/> 
+  
+  <tc:tab-refresh>
+    <tc:onload menu-bar="true" page-id="InformationProvider_home"/>
     
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="OutcomePlanService">
-
- <nc:loader-registry>
-  <nc:loader class="curam.outcomeplanning.tab.impl.OutcomePlanServiceNavigationLoader"/>
-</nc:loader-registry>
-
-    <nc:nodes>
-        <nc:navigation-page id="ServiceHome" page-id="OutcomePlanService_home" title="Leaf.Title.ServiceHome"/>
-        <nc:navigation-page id="Progress" page-id="OutcomePlanService_viewProgressHistory" title="Leaf.Title.Progress"/>
-        <nc:navigation-group id="Financials" title="Folder.Title.Financials">
-            <nc:navigation-page id="Payments" page-id="ProviderManagement_listServicePayments" title="Leaf.Title.Payments" visible="true"/>
-            <nc:navigation-page id="Invoices" page-id="ProviderManagement_listServiceInvoices" title="Leaf.Title.Invoices" visible="true"/>
-        </nc:navigation-group>
-        <nc:navigation-page dynamic="true" id="Providers" page-id="ProviderManagement_resolveProviderList" title="Leaf.Title.Providers" visible="true"/>
-        <nc:navigation-page dynamic="true" id="Participation" page-id="OutcomePlanService_resolveServiceParticipationCalendar" title="Leaf.Title.Participation" visible="true"/>
-        <nc:navigation-page id="Enquiries" page-id="ProviderManagement_listEnquiriesForService" title="Leaf.Title.Enquiries" visible="true"/>
-        <nc:navigation-page id="Factors" page-id="OutcomePlanService_viewFactorHistory" title="Leaf.Title.FactorsHistory" visible="true"/>
-        <nc:navigation-group id="Admin" title="Folder.Title.Admin">
-            <nc:navigation-page id="Approvals" page-id="ProviderManagement_listServiceApprovalRequests" title="Leaf.Title.Approvals" visible="true"/>
-            <nc:navigation-page id="Attachments" page-id="ProviderManagement_listServiceAttachments" title="Leaf.Title.Attachments" visible="true"/>
-        </nc:navigation-group>
-        <nc:navigation-page id="Evaluation" page-id="ProviderManagement_viewServiceEvaluation" title="Leaf.Title.ViewServiceEvaluation" visible="true"/>
-      <nc:navigation-page id="Reviews" page-id="OutcomePlanService_listReviewItemsForService" title="Leaf.Title.Reviews" visible="true"/>
-    </nc:nodes>
-</nc:navigation>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="InformationProvider_modifyInformationProvider"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAddressFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAddressFromView"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelEmailAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createEmailAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyEmailAddressFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyEmailAddressFromView"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelPhoneNumber"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createPhoneNumber"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyPhoneNumberFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyPhoneNumberFromView"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelWebAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createWebAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyWebAddressFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyWebAddressFromView"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelAlternateID"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createAlternateID"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAlternateIDFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAlternateIDFromView"/>
+    
+  </tc:tab-refresh>
+  
+  
+</tc:tab-config>

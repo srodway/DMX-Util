@@ -6,20 +6,23 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-    Copyright 2010 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="MyServicePlans">
+  Copyright 2009 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="OrganizationStructureTreeViewMenu">
 
+  <mc:menu-item id="StandardView" page-id="Organization_orgStructureHome" title="MenuItem.Title.StandardView" tooltip="MenuItem.Tooltip.StandardView"/>
+  
+  <mc:submenu id="Search" title="Submenu.Title.Search" tooltip="Submenu.Tooltip.Search">
 
-    <!-- Details panel -->
-    <tc:context tab-name="Details.Name.MyServicePlans" tab-title="Details.Title.MyServicePlans"/>
+    <mc:menu-item id="User" page-id="Organization_adminUserSearch" title="MenuItem.Title.User" tooltip="MenuItem.Tooltip.User"/>
 
-    <!-- Navigation Panel -->
-    <tc:navigation page-id="Caseworker_servicePlans"/>
+    <mc:menu-item id="ExternalUser" page-id="ExternalUsers_userSearch" title="MenuItem.Title.ExternalUser" tooltip="MenuItem.Tooltip.ExternalUser"/>
 
-</tc:tab-config>
+  </mc:submenu>
+
+</mc:menu-bar>

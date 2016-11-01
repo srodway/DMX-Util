@@ -13,7 +13,7 @@
   </xsl:template>
   <xsl:template match="DATA">
     <!--Explicitly select the STRUCT to avoid processing anything else.-->
-    <xsl:apply-templates select="STRUCT[SNAME='RosterNotificationDetails']"/>
+    <xsl:apply-templates select="STRUCT[SNAME='LicenseNotificationDetails']"/>
   </xsl:template>
   <xsl:template match="STRUCT">
     <fo:root>
@@ -47,13 +47,10 @@
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
                   <fo:inline font-size="12pt">
-                    We wish to inform you that the due date for submitting roster for the period from
-                    <xsl:apply-templates select="FIELD[FNAME='fromDate']"/>
-                    to
-                    <xsl:apply-templates select="FIELD[FNAME='toDate']"/>
-                    is
-                    <xsl:apply-templates select="FIELD[FNAME='submissionDueDate']"/>
-                    .
+                    We wish to inform you that your license is due to expire on
+                    <xsl:apply-templates select="FIELD[FNAME='expirationDate']"/>
+                    . Please send in
+                       the relevant documentation for your license to be renewed.
                   </fo:inline>
                   <fo:block>
                     <fo:leader leader-pattern="space"/>
@@ -69,7 +66,7 @@
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
                   <fo:inline font-size="12pt">
-                    <xsl:apply-templates select="FIELD[FNAME='organisationName']"/>
+                    <xsl:apply-templates select="FIELD[FNAME='organizationName']"/>
                     .
                   </fo:inline>
                 </fo:block>

@@ -6,11 +6,21 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-MenuItem.Title.Edit=Edit
-MenuItem.Tooltip.Edit=Edit
 
-MenuItem.Title.AddParameter=Add Parameter
-MenuItem.Tooltip.AddParameter=Add Parameter
+Help.PageDescription=This page allows you to view the basic case display rules category.
+Page.Title=Basic Case
 
-MenuItem.Title.Delete=Delete
-MenuItem.Tooltip.Delete=Delete
+# START NON-TRANSLATABLE
+CategoryRef=CREOLE_BASIC_CASE
+
+SubscreenName=displayObjectiveTimelineSubscreens
+# END NON-TRANSLATABLE
+
+Field.Label.Value=Value
+Field.Label.Value.Help=The value of the objective tag.
+
+Field.Label.Frequency=Frequency
+Field.Label.Frequency.Help=The frequency of the objective tag.
+
+Help.Xref.1.Topicname=CREOLECaseDecision
+

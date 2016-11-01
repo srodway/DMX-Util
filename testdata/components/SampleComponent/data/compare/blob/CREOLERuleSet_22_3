@@ -1,81 +1,735 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
- 
+  
   Copyright IBM Corporation 2012. All Rights Reserved.
-
+ 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!-- 
-  Copyright 2009-2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information").  You shall not disclose such
-  Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><!--
-  Interface rule classes for the interaction between the CREOLE-based Assessment
-  Engine and CREOLE rules for the details explaining a case's
-  eligibility and entitlement decision.
-  
-  The rule classes for a CREOLE-based product must extend the rule classes in
-  this rule set, BUT NOTE that product rule classes should not extend these
-  rule classes directly - instead rule set developers for CREOLE-based products
-  should extend the default implementations in the
-  DefaultProductDecisionDetailsRuleSet rule set.  These default implementations provide
-  some isolation against future changes to the ProductDecisionDetailsRuleSet rule
-  classes in this rule set. 
-  
-  Customer code must not create, modify or remove instances of any of the rule
-  classes in this rule set.  Instances of these rule classes may only be
-  manipulated by the Curam Assessment Engine.
-  
-  --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProductDecisionDetailsRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
-
-
-  <!--
-      A view onto a case which provides a timeline of detailed explanations for
-      eligibility/entitlement decisions.
-      
-      The configuaration of a Curam Product to use decision detail rules will point to
-      a product-specific concrete sub class of this rule class.
-    -->
-  <Class abstract="true" name="AbstractCase">
-
-
-    <Attribute name="productDeliveryCase">
+    Copyright 2011 Curam Software Ltd.
+    All rights reserved. 
+    This software is the confidential and proprietary information
+    of Curam Software, Ltd. ("Confidential Information").  You
+    shall not disclose such Confidential Information and shall use
+    it only in accordance with the terms of the license agreement
+    you entered into with Curam Software.
+--><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ReunificationRiskRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+  <!-- Include the rules interface 
+  <Include>
+    <Classpath value="curam.assessmentplanning.assessmentengine.impl.AssessmentRulesInterface.xml"/>
+  </Include> 
+  -->
+  <!-- All assessment rule sets must contain a ruleclass name FactorList 
+    that extends the AbstractFactorList ruleclass -->
+  <Class extends="AbstractFactorList" name="FactorList">
+    <Attribute name="factors">
       <type>
-        <ruleclass name="ProductDeliveryCase" ruleset="ProductEligibilityEntitlementRuleSet"/>
+        <javaclass name="List">
+          <ruleclass name="Factor"/>
+        </javaclass>
       </type>
       <derivation>
-        <abstract/>
+        <fixedlist>
+          <listof>
+            <ruleclass name="Factor"/>
+          </listof>
+          <members>
+            <reference attribute="determinedRiskFactor"/>
+            <reference attribute="finalFactor"/>
+          </members>
+        </fixedlist>
       </derivation>
     </Attribute>
-
-
+    <Attribute name="determinedRiskFactor">
+      <type>
+        <ruleclass name="DeterminedRisk"/>
+      </type>
+      <derivation>
+        <create ruleclass="DeterminedRisk"/>
+      </derivation>
+    </Attribute>
+    <Attribute name="finalFactor">
+      <type>
+        <ruleclass name="FinalRisk"/>
+      </type>
+      <derivation>
+        <create ruleclass="FinalRisk"/>
+      </derivation>
+    </Attribute>
   </Class>
-
-
-  <!--
-    Base class for decision details subscreens
-  -->
-  <Class abstract="true" name="AbstractCaseSubscreenDisplay">
-
-
-    <!--
-      Business ID for identifying a particular Rule Object at runtime. 
-    -->
-    <Attribute name="businessObjectID">
+  <Class extends="Factor" name="DeterminedRisk">
+    <Attribute name="reference">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value="RISK"/>
+      </derivation>
+    </Attribute>
+    <Attribute name="roleID">
+      <type>
+        <javaclass name="Long"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="score">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <call class="curam.assessmentplanning.assessmentengine.impl.CERTAssessmentRulesHelper" method="convertNumberToString">
+          <type>
+            <javaclass name="String"/>
+          </type>
+          <arguments>
+            <reference attribute="totalScore"/>
+          </arguments>
+        </call>
+      </derivation>
+    </Attribute>
+    <Attribute name="totalScore">
       <type>
         <javaclass name="Number"/>
       </type>
       <derivation>
+        <sum>
+          <fixedlist>
+            <listof>
+              <javaclass name="Number"/>
+            </listof>
+            <members>
+              <reference attribute="initialCPSRiskLevelScore"/>
+              <reference attribute="substantiationsScore"/>
+              <reference attribute="casePlanGoalsProgressScore"/>
+            </members>
+          </fixedlist>
+        </sum>
+      </derivation>
+    </Attribute>
+    <Attribute name="initialCPSRiskLevelScore">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Number"/>
+          </type>
+          <test>
+            <reference attribute="initialCPSRiskLevel">
+              <reference attribute="reunificationAssessment"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RUARiskLevel">
+                <String value="RRL10000"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="0"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RUARiskLevel">
+                <String value="RRL10001"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="3"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RUARiskLevel">
+                <String value="RRL10002"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="4"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RUARiskLevel">
+                <String value="RRL10003"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="5"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="substantiationsScore">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Number"/>
+          </type>
+          <test>
+            <reference attribute="substantiations">
+              <reference attribute="reunificationAssessment"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RUASubstantiationInd">
+                <String value="RASI10000"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="2"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RUASubstantiationInd">
+                <String value="RASI10001"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="0"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="casePlanGoalsProgressScore">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Number"/>
+          </type>
+          <test>
+            <reference attribute="casePlanGoalsProgress">
+              <reference attribute="reunificationAssessment"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RUACasePlanGoalProgress">
+                <String value="CPGP10000"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="-2"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RUACasePlanGoalProgress">
+                <String value="CPGP10001"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="-1"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RUACasePlanGoalProgress">
+                <String value="CPGP10002"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="0"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RUACasePlanGoalProgress">
+                <String value="CPGP10003"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="4"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="classification">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <call class="curam.assessmentplanning.assessmentengine.impl.CERTAssessmentRulesHelper" method="getClassification">
+          <type>
+            <codetableentry table="ClassDivisionType"/>
+          </type>
+          <arguments>
+            <reference attribute="assessment"/>
+            <this/>
+          </arguments>
+        </call>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class extends="Factor" name="FinalRisk">
+    <Attribute name="reference">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value="RISK"/>
+      </derivation>
+    </Attribute>
+    <Attribute name="roleID">
+      <type>
+        <javaclass name="Long"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="score">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value=""/>
+      </derivation>
+    </Attribute>
+    <Attribute name="classification">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <codetableentry table="ClassDivisionType"/>
+          </type>
+          <test>
+            <reference attribute="riskOverride">
+              <reference attribute="assessment"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RUAOverride">
+                <String value="OVER10000"/>
+              </Code>
+            </condition>
+            <value>
+              <reference attribute="classification">
+                <reference attribute="determinedRiskFactor"/>
+              </reference>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RUAOverride">
+                <String value="OVER10001"/>
+              </Code>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10214"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RUAOverride">
+                <String value="OVER10002"/>
+              </Code>
+            </condition>
+            <value>
+              <reference attribute="discretionaryClassification"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <reference attribute="classification">
+                <reference attribute="determinedRiskFactor"/>
+              </reference>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="discretionaryClassification">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <codetableentry table="ClassDivisionType"/>
+          </type>
+          <test>
+            <reference attribute="changedScoredClassificationPriority"/>
+          </test>
+          <when>
+            <condition>
+              <Number value="0"/>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10201"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Number value="1"/>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10201"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Number value="2"/>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10202"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Number value="3"/>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10203"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Number value="4"/>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10204"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Number value="5"/>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10204"/>
+              </Code>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <!-- Add 1 or substract 1 from the highest classification priority -->
+    <Attribute name="changedScoredClassificationPriority">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Number"/>
+          </type>
+          <test>
+            <reference attribute="overrideDirection">
+              <reference attribute="assessment"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RUAOverrideDirection">
+                <String value="OD10000"/>
+              </Code>
+            </condition>
+            <value>
+              <arithmetic operation="+">
+                <reference attribute="classificationPriority">
+                  <reference attribute="determinedRiskFactor"/>
+                </reference>
+                <Number value="1"/>
+              </arithmetic>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="RUAOverrideDirection">
+                <String value="OD10001"/>
+              </Code>
+            </condition>
+            <value>
+              <arithmetic operation="-">
+                <reference attribute="classificationPriority">
+                  <reference attribute="determinedRiskFactor"/>
+                </reference>
+                <Number value="1"/>
+              </arithmetic>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <Number value="0"/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="determinedRiskFactor">
+      <type>
+        <ruleclass name="DeterminedRisk"/>
+      </type>
+      <derivation>
+        <reference attribute="determinedRiskFactor">
+          <reference attribute="factorList"/>
+        </reference>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class abstract="true" extends="AbstractFactor" name="Factor">
+    <Attribute name="assessment">
+      <type>
+        <ruleclass name="Assessment"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="Assessment"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+    <Attribute name="reunificationAssessment">
+      <type>
+        <ruleclass name="Group"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="Group"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+    <Attribute name="classificationPriority">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Number"/>
+          </type>
+          <test>
+            <reference attribute="classification"/>
+          </test>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10101"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="1"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10102"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="2"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10103"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="3"/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10104"/>
+              </Code>
+            </condition>
+            <value>
+              <Number value="4"/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <null/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="factorList">
+      <type>
+        <ruleclass name="FactorList"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="FactorList"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+  </Class>
+  <!-- This class must be extended by all rule sets invoked by the Assessment 
+    and planning processing. This class is used to hold the list of factors 
+    that should be assessed during the assessment-->
+  <Class abstract="true" name="AbstractFactorList">
+    <Attribute name="factors">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="AbstractFactor"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <!-- Subclasses of AbstractFactorList must override
+          this attribute to create a list of the factors
+          supported by the rule set. -->
         <abstract/>
       </derivation>
     </Attribute>
-
-
   </Class>
-
-
+  <Class abstract="true" name="AbstractFactor">
+    <!-- The reference for the factor. -->
+    <Attribute name="reference">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+    <!-- The id of role that the factor is related to. -->
+    <Attribute name="roleID">
+      <type>
+        <javaclass name="Long"/>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+    <!-- The score of the factor. Either a score or classification must be provided, 
+      if both are provided the classification is used -->
+    <Attribute name="score">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+    <!-- The classification of the factor. Either a score or classification must be provided, 
+      if both are provided the classification is used -->
+    <Attribute name="classification">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class name="Group">
+    <Attribute name="initialCPSRiskLevel">
+      <type>
+        <codetableentry table="RUARiskLevel"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="substantiations">
+      <type>
+        <codetableentry table="RUASubstantiationInd"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="casePlanGoalsProgress">
+      <type>
+        <codetableentry table="RUACasePlanGoalProgress"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class name="Assessment">
+    <Attribute name="assessmentInstanceID">
+      <type>
+        <javaclass name="Long"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="assessmentDefinitionID">
+      <type>
+        <javaclass name="Long"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="overrideDirection">
+      <type>
+        <codetableentry table="RUAOverrideDirection"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <!-- This attribute is defaulted to 'No overrides', however this value will be populated 
+      by what is selected in the IEG script when the user reaches the override screen -->
+    <Attribute name="riskOverride">
+      <type>
+        <codetableentry table="RUAOverride"/>
+      </type>
+      <derivation>
+        <Code table="RUAOverride">
+          <String value="OVER10000"/>
+        </Code>
+      </derivation>
+    </Attribute>
+  </Class>
 </RuleSet>

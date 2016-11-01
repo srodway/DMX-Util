@@ -1,38 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2010, 2012. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2010 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="OrganizationPositionMenu">
-  <!-- BEGIN, CR00322822, AC-->
-   <mc:loader-registry>
-    <mc:loader class="curam.core.sl.tab.impl.OrganizationPositionReportsLoaderMenu"/>
-  </mc:loader-registry>
-  <!-- END, CR00322822-->
-  <mc:menu-item id="Edit" open-as="modal" page-id="Organization_modifyPositionFromView" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
-  
-  <mc:menu-separator id="sep1"/>
-  
-  <mc:menu-item id="AssignUser" open-as="modal" page-id="Organization_addUserForPosition" title="MenuItem.Title.AssignUser" tooltip="MenuItem.Tooltip.AssignUser"/>
-
-  <mc:menu-item id="CreateUser" open-as="modal" page-id="Organization_createAndAssignUserForPosition" title="MenuItem.Title.CreateUser" tooltip="MenuItem.Tooltip.CreateUser"/>
-  <!-- BEGIN, CR00322822, AC-->
-  <mc:menu-item dynamic="true" id="RemoveReportingTo" open-as="modal" page-id="Organization_removeReportsToUserFromPosition" title="MenuItem.Title.RemoveUser" tooltip="MenuItem.Tooltip.RemoveUser"/>
-  <!-- END, CR00322822-->
-  <mc:menu-separator id="sep2"/>
-  
-  <mc:menu-item id="Delete" open-as="modal" page-id="Organization_cancelPositionByWorkflow" title="MenuItem.Title.Delete" tooltip="MenuItem.Tooltip.Delete"/>
-  
-  <mc:menu-item id="AssignLocation" open-as="modal" page-id="Organization_AssignLocationToPosition" title="MenuItem.Title.AssignLocation" tooltip="MenuItem.Tooltip.AssignLocation"/>
-  
-</mc:menu-bar>
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+CPMRMAPPWorkspaceSection.title=Providers and Services

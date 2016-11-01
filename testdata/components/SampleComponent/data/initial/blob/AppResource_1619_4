@@ -1,33 +1,12 @@
 #
 # Licensed Materials - Property of IBM
 # 
-# Copyright IBM Corporation 2012. All Rights Reserved.
+# Copyright IBM Corporation 2013. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Leaf.Title.Home=Home
+# This Properties file contains resource Strings for the workflow allocation rule set
 
-folder.Title.Administration=Administration 
-Leaf.Title.RelatedCases=Related Cases
-Leaf.Title.StatusHistory=Status History
-Leaf.Title.UserRoles=User Roles
-page.title.ItemsUnderAppeal=Items Under Appeal
-folder.title.CasesUnderAppeal=Cases Under Appeal
-page.title.appealedcases=Appealed Cases
-page.title.appealedissues=Appealed Issues
-
-folder.title.Participants=Participants
-page.title.appellants=Appellants
-page.title.caseparticipants=Case Participants
-
-folder.title.Contact=Contact
-page.title.notes=Notes
-page.title.attachments=Attachments
-page.title.communications=Communications
-
-Leaf.Title.Events=Events
-Leaf.Title.ManageDecisions=Decisions
-Leaf.Title.Tasks=Tasks
-
-
+AllocationTargetsImpl=Any class that extends this class can be considered a primary class which is used to hold the targets for allocation.
+WorkAllocation=Any class that extends this class can be considered a non primary class which is used to be called in the primary class for allocation.

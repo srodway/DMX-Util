@@ -1,28 +1,38 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Number.Wizard.Pages=4
-IncidentContactLogWizard_createContact.Wizard.Item.Text=Details
-IncidentContactLogWizard_createContact.Wizard.Page.Title=Step 1:
-IncidentContactLogWizard_createContact.Wizard.Page.Desc=Details of Contact
-Wizard.PageID.1=IncidentContactLogWizard_createContact
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-IncidentContactLogWizard_addNarrative.Wizard.Item.Text=Narrative
-IncidentContactLogWizard_addNarrative.Wizard.Page.Title=Step 2:
-IncidentContactLogWizard_addNarrative.Wizard.Page.Desc=Contact Narrative
-Wizard.PageID.2=IncidentContactLogWizard_addNarrative
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009, 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="Location">
 
-IncidentContactLogWizard_addParticipants.Wizard.Item.Text=Participants
-IncidentContactLogWizard_addParticipants.Wizard.Page.Title=Step 3:
-IncidentContactLogWizard_addParticipants.Wizard.Page.Desc=Identify Contact Participants
-Wizard.PageID.3=IncidentContactLogWizard_addParticipants
-
-IncidentContactLogWizard_addAttachments.Wizard.Item.Text=Attachments
-IncidentContactLogWizard_addAttachments.Wizard.Page.Title=Step 4:
-IncidentContactLogWizard_addAttachments.Wizard.Page.Desc=Upload Attachments
-Wizard.PageID.4=IncidentContactLogWizard_addAttachments
+  <nc:nodes>
+  
+    <nc:navigation-page id="Home" page-id="Organization_locationHome" title="Page.Title.Home"/>
+    
+    <nc:navigation-page id="treeView" page-id="Organization_resolveLocationTree" title="Page.Title.treeView"/>
+    
+    <nc:navigation-page id="ChildLocations" page-id="Organization_listChildLocation" title="Page.Title.ChildLocations"/>
+    
+    <nc:navigation-page id="AdditionalLocationAccess" page-id="Organization_locationAdditionalLocationAccess" title="Page.Title.AdditionalLocationAccess"/>
+    
+    <nc:navigation-page id="Schedules" page-id="Organization_locationSchedules" title="Page.Title.Schedules"/>
+    
+    <nc:navigation-page id="WorkingPatterns" page-id="Organization_listLocationWorkingPattern" title="Page.Title.WorkingPatterns"/>
+    
+    <nc:navigation-page id="Calendar" page-id="Organization_resolveLocationHolidayCalendar" title="Page.Title.Calendar"/>
+    
+    <nc:navigation-page id="Resources" page-id="Organization_listLocationResource" title="Page.Title.Resources"/>
+     
+  </nc:nodes>
+  
+</nc:navigation>

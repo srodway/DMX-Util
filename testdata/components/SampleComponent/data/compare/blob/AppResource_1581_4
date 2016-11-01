@@ -6,13 +6,33 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Group4.Title=Family or Community resources
-Group4.Description=
-Q17.Label=Has the youth been victimized by family?
-Q17.HelpText=Has this juvenile been taken advantage of by family members. To clarify, has the youth been sent out by a family member to perform any illegal activity resulting in profit for the family
-Q18.Label=Has the youth victimized the family?
-Q18.HelpText=Has the juvenile encouraged or forced any of his/her family members to partake in illegal activities for his/her own profit?
-Q19.Label=Is the youth in custody of Social Services?
-Q19.HelpText=Is the youth under the protection of Social Services and not under the care of his own family members?
-Q20.Label=Does the youth have a history of repeated runaways?
-Q20.HelpText=In the past has the youth run away from home or from the care of social services?
+
+Help.PageDescription=This page allows you to view the basic case display rules category.
+Page.Title=Basic Case
+
+# START NON-TRANSLATABLE
+CategoryRef=CREOLE_BASIC_CASE
+# END NON-TRANSLATABLE
+
+Cluster.Title.Eligiblity=Eligiblity
+
+Field.Value.NotEligible=The claim is not eligible.
+
+Field.Value.Eligible=The claim is eligible.
+
+Cluster.Title.Entitlement=Entitlement
+
+Field.Label.ObejctiveTypeID=Objective Type ID
+Field.Label.ObejctiveTypeID.Help=The type of the objective.
+
+Field.Label.Entitled=Entitled?
+Field.Label.Entitled.Help=Shows the entitlement for this specific objective. 
+
+Field.Label.Target=Target
+Field.Label.Target.Help=Target
+
+Field.Label.RelatedReference=Related Reference
+Field.Label.RelatedReference.Help=Related Reference
+
+Help.Xref.1.Topicname=CREOLECaseDecision
+

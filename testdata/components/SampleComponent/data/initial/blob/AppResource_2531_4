@@ -1,27 +1,73 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+MenuItem.Title.DummyMenuItem=.
+MenuItem.Tooltip.DummyMenuItem=.
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2010 Curam Software Ltd.
-  All rights reserved.
+MenuItem.Title.Edit=Edit
+MenuItem.Tooltip.Edit=Edit
 
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="UserInterfaceAndReports">
-  
-  <tc:menu id="UserInterfaceAndReportsMenu"/> 
+MenuItem.Title.Delete=Delete
+MenuItem.Tooltip.Delete=Delete
 
-  <!-- No details panel -->
-  <tc:context tab-name="Details.Name.UserInterfaceAndReports" tab-title="Details.Title.UserInterfaceAndReports"/>
+MenuItem.Title.AddCategory=Add Category
+MenuItem.Tooltip.AddCategory=Add Category
 
-  <!-- See Home.nav for details of the tree meta-data. --> 
-  <tc:navigation id="UserInterfaceAndReports"/>
-  
+Submenu.Title.New=New
+Submenu.Tooltip.New=New
 
-</tc:tab-config>
+Submenu.Title.Approval=Approval
+Submenu.Tooltip.Approval=Approval
+
+MenuItem.Title.Case=Case
+MenuItem.Tooltip.Case=Create an approval case.
+
+MenuItem.Title.TemporalEvidence=Temporal Evidence
+MenuItem.Tooltip.TemporalEvidence=Create a temporal evidence.
+
+MenuItem.Title.EvidenceTree=Evidence Tree
+MenuItem.Tooltip.EvidenceTree=Create an evidence tree.
+
+Submenu.Title.Deduction=Deduction
+Submenu.Tooltip.Deduction=Deduction
+
+MenuItem.Title.NewDeduction=New
+MenuItem.Tooltip.NewDeduction=Create a new deduction.
+
+MenuItem.Title.ExistingDeduction=Existing
+MenuItem.Tooltip.ExistingDeduction=Add existing deduction.
+
+MenuItem.Title.DeliveryPattern=Delivery Pattern
+MenuItem.Tooltip.DeliveryPattern=Add a delivery pattern.
+
+MenuItem.Title.ExistingAssessment=Link an Assessment
+MenuItem.Tooltip.ExistingAssessment=Associate Assessment.
+
+MenuItem.Title.Provision=Provision
+MenuItem.Tooltip.Provision=Create a provision.
+
+MenuItem.Title.TimeConstraint=Time Constraint
+MenuItem.Tooltip.TimeConstraint=Create a time constraint.
+
+MenuItem.Title.AdhocCriteria=Ad Hoc Criteria
+MenuItem.Tooltip.AdhocCriteria=Create an Ad Hoc Criteria.
+
+MenuItem.Title.ExistingRuleset=Assign a Ruleset
+MenuItem.Tooltip.ExistingRuleset=Assign a Ruleset.
+
+Submenu.Title.Search=Search
+Submenu.Tooltip.Search=Search
+
+MenuItem.Title.User=User
+MenuItem.Tooltip.User=Find an user.
+
+MenuItem.Title.ExternalUser=External User
+MenuItem.Tooltip.ExternalUser=Find an external user.
+
+MenuItem.Title.AppealProcesses=Appeal Processes
+MenuItem.Tooltip.AppealProcesses=Appeal Processes

@@ -6,13 +6,14 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Group3.Title=Risk of self harm
-Group3.Description=
-Q9.Label=Is there a risk of suicide or self harm?
-Q9.HelpText=Is the Juvenile mentally stable.  Is there any risk that he/she may physically harm themselves resulting in injury or death
-Q10.Label=Is there a risk of victimization or prostitution?
-Q10.HelpText=If the juvenile is freed will he/she be exposed to prostitution.  Or is there a possibility that he/she will be taken advantage of?
-Q11.Label=Is there a history of running from placements?
-Q11.HelpText=When the juvenile has being put into care has there being a history of him/her leaving this care to return to the streets or non sanctioned guardians?
-Q12.Label=Is there a history of severe substance abuse?
-Q12.HelpText=Has the juvenile been convicted of possession of a controlled substance.  Or has he/she been charged with the use of such a substance?
+Number.Wizard.Pages=2
+
+Wizard_listPlanItemsForClientParticipation.Wizard.Item.Text=Select Plan Item
+Wizard_listPlanItemsForClientParticipation.Wizard.Page.Title=Step 1:
+Wizard_listPlanItemsForClientParticipation.Wizard.Page.Desc=Select Plan Item
+Wizard.PageID.1=Wizard_listPlanItemsForClientParticipation
+
+Wizard_addClientParticipationDefaultPlanItem.Wizard.Item.Text=Record Client
+Wizard_addClientParticipationDefaultPlanItem.Wizard.Page.Title=Step 2:
+Wizard_addClientParticipationDefaultPlanItem.Wizard.Page.Desc=Record Client
+Wizard.PageID.2=Wizard_addClientParticipationDefaultPlanItem

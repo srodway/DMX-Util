@@ -5,72 +5,71 @@
 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><!-- 
-  Copyright 2009-2011 Curam Software Ltd.
+--><!--
+  Copyright 2011 Curam Software Ltd.
   All rights reserved.
-  
+
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information").  You shall not disclose such
   Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
 --><!--
-  Interface rule classes for the interaction between the CREOLE-based Assessment
-  Engine and CREOLE rules for the details explaining a case's
-  eligibility and entitlement decision.
-  
-  The rule classes for a CREOLE-based product must extend the rule classes in
-  this rule set, BUT NOTE that product rule classes should not extend these
-  rule classes directly - instead rule set developers for CREOLE-based products
-  should extend the default implementations in the
-  DefaultProductDecisionDetailsRuleSet rule set.  These default implementations provide
-  some isolation against future changes to the ProductDecisionDetailsRuleSet rule
-  classes in this rule set. 
-  
-  Customer code must not create, modify or remove instances of any of the rule
-  classes in this rule set.  Instances of these rule classes may only be
-  manipulated by the Curam Assessment Engine.
-  
-  --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProductDecisionDetailsRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+  Common data rule classes for Intake Applications.
+  --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ApplicationData" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
 
 
-  <!--
-      A view onto a case which provides a timeline of detailed explanations for
-      eligibility/entitlement decisions.
-      
-      The configuaration of a Curam Product to use decision detail rules will point to
-      a product-specific concrete sub class of this rule class.
-    -->
-  <Class abstract="true" name="AbstractCase">
+  <Class name="Application" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
 
 
-    <Attribute name="productDeliveryCase">
+    <Attribute name="description">
       <type>
-        <ruleclass name="ProductDeliveryCase" ruleset="ProductEligibilityEntitlementRuleSet"/>
+        <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <abstract/>
+        <ResourceMessage key="Application.description" resourceBundle="curam.cgiss.rules.LifeEventRuleSetProperties"/>
       </derivation>
     </Attribute>
 
 
-  </Class>
-
-
-  <!--
-    Base class for decision details subscreens
-  -->
-  <Class abstract="true" name="AbstractCaseSubscreenDisplay">
-
-
-    <!--
-      Business ID for identifying a particular Rule Object at runtime. 
-    -->
-    <Attribute name="businessObjectID">
+    <!-- Application ID-->
+    <Attribute name="applicationID">
       <type>
         <javaclass name="Number"/>
       </type>
       <derivation>
-        <abstract/>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Case ID-->
+    <Attribute name="caseID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="currentApplicationStatusID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Version Number -->
+    <Attribute name="versionNumber">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
       </derivation>
     </Attribute>
 
@@ -78,4 +77,309 @@
   </Class>
 
 
+  <Class name="ApplicationStatus" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="ApplicationStatus.description" resourceBundle="curam.cgiss.rules.LifeEventRuleSetProperties"/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Application ID-->
+    <Attribute name="status">
+      <type>
+        <codetableentry table="ApplicationStatus"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="applicationStatusID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="applicationID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Version Number -->
+    <Attribute name="versionNumber">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+  </Class>
+
+
+  <Class name="IntakeApplicant" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="IntakeApplicant.description" resourceBundle="curam.cgiss.rules.LifeEventRuleSetProperties"/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="intakeApplicantID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Application ID-->
+    <Attribute name="applicationID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- BEGIN, CR00291216, PC -->
+    <!-- current intake applicant status ID-->
+    <Attribute name="currentIntakeApplicantStatusID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <!-- END, CR00291216 -->
+
+
+    <!-- Concern Role ID -->
+    <Attribute name="concernRoleID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Version Number -->
+    <Attribute name="versionNumber">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+  </Class>
+
+
+  <Class name="ProgramApplication" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="ProgramApplication.description" resourceBundle="curam.cgiss.rules.LifeEventRuleSetProperties"/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="programApplicationID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="applicationID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="programApplicationStatusID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Version Number -->
+    <Attribute name="versionNumber">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+  </Class>
+
+
+  <Class name="ProgramApplicationStatus" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="ProgramApplicationStatus.description" resourceBundle="curam.cgiss.rules.LifeEventRuleSetProperties"/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Application ID-->
+    <Attribute name="status">
+      <type>
+        <codetableentry table="ProgramStatus"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="programApplicationStatusID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="programApplicationID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Version Number -->
+    <Attribute name="versionNumber">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+  </Class>
+
+
+  <!-- BEGIN, CR00291216, PC -->
+  <Class name="IntakeApplicantStatus" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="CurrentIntakeApplicantStatus.description" resourceBundle="curam.cgiss.rules.LifeEventRuleSetProperties"/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Application ID-->
+    <Attribute name="status">
+      <type>
+        <codetableentry table="ApplicantStatus"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="intakeApplicantStatusID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="intakeApplicantID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Version Number -->
+    <Attribute name="versionNumber">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+  </Class>
+
+
+  <!-- END, CR00291216 -->
 </RuleSet>

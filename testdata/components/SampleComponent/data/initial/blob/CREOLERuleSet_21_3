@@ -1,300 +1,971 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
   
-  Copyright IBM Corporation 2012. All Rights Reserved.
+  Copyright IBM Corporation 2012-2013. All Rights Reserved.
  
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><!-- 
-    Copyright 2008 Curam Software Ltd.
+--><!--
+    Copyright 2011,2013 Curam Software Ltd.
     All rights reserved.
-    
     This software is the confidential and proprietary information
     of Curam Software, Ltd. ("Confidential Information").  You
     shall not disclose such Confidential Information and shall use
     it only in accordance with the terms of the license agreement
     you entered into with Curam Software.
---><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd" name="TriageInterfaceRuleSet">
-    
-    <!-- This class must be extended by all rule sets invoked by
-        the Citizen Portal screening results processing. -->
-    <Class name="AbstractTriageResult" abstract="true">
-        
-        <Attribute name="alertMessage">
-            <type>
-                <javaclass name="List">
-                    <ruleclass name="AbstractAlertMessage"/>
-                </javaclass>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>            
-        </Attribute>        
-        
-        <Attribute name="services">
-            <type>
-                <javaclass name="List">
-                    <ruleclass name="AbstractService"/>
-                </javaclass>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>            
-        </Attribute>        
-        
-        <Attribute name="programs">
-            <type>
-                <javaclass name="List">
-                    <ruleclass name="AbstractProgram"/>
-                </javaclass>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>            
-        </Attribute>        
-        
-        <Attribute name="screenings">
-            <type>
-                <javaclass name="List">
-                    <ruleclass name="AbstractScreening"/>
-                </javaclass>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>            
-        </Attribute>
-        
-        <Attribute name="intakeApplications">
-            <type>
-                <javaclass name="List">
-                    <ruleclass name="AbstractIntakeApplication"/>
-                </javaclass>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>            
-        </Attribute>
-        
-        <Attribute name="needs">
-            <type>
-                <javaclass name="List">
-                    <ruleclass name="AbstractNeed"/>
-                </javaclass>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>            
-        </Attribute>
-        
-    </Class>
-    
-    <!-- Abstract Need -->
-    <Class abstract="true" name="AbstractNeed">
-        <Attribute name="description">
-            <type>
-                <javaclass name="curam.creole.value.Message"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>
-        
-        <Attribute name="identifier">
-            <type>
-                <javaclass name="String"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>         
-        
-        <Attribute name="appropriate">
-            <type>
-                <javaclass name="Boolean"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>
-        
-        <Attribute name="priority">
-            <type>
-                <javaclass name="Number"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>                                                                                                                                                                                      
-    </Class>    
-    
-    <!-- Abstract Screening -->
-    <Class abstract="true" name="AbstractScreening">
-        <Attribute name="description">
-            <type>
-                <javaclass name="curam.creole.value.Message"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>
-        
-        <Attribute name="appropriate">
-            <type>
-                <javaclass name="Boolean"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>
-        
-        <Attribute name="identifier">
-            <type>
-                <javaclass name="String"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>                                                                                                                            
-    </Class>    
-    <!-- End Abstract Screening -->
-    
-    <!-- AbstractIntakeApplication -->
-    <Class abstract="true" name="AbstractIntakeApplication">
-        <Attribute name="description">
-            <type>
-                <javaclass name="curam.creole.value.Message"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>
-        
-        <Attribute name="appropriate">
-            <type>
-                <javaclass name="Boolean"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>
-        
-        <Attribute name="identifier">
-            <type>
-                <javaclass name="String"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>                                                                                                                            
-    </Class>    
-    <!-- End AbstractIntakeApplication --> 
-    
-    <Class name="AbstractAlertMessage" abstract="true">
-        <Attribute name="alertRequired">
-            <type>
-                <javaclass name="Boolean"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>                        
-        </Attribute>
-        <Attribute name="message">
-            <type>
-                <javaclass name="curam.creole.value.Message"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>            
-        </Attribute>        
-    </Class>    
-    
-    <!-- Abstract Service -->
-    <Class abstract="true" name="AbstractService">
-        <Attribute name="description">
-            <type>
-                <javaclass name="curam.creole.value.Message"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>
-        
-        <Attribute name="appropriate">
-            <type>
-                <javaclass name="Boolean"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>   
-        
-        <Attribute name="identifier">
-            <type>
-                <javaclass name="String"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>
-        
-        <Attribute name="groupInd">
-            <type>
-                <javaclass name="Boolean"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>    
-        
-        <Attribute name="needIdentifier">
-            <type>
-                <javaclass name="String"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-         </Attribute>        
-        
-    </Class>   
-    
-    <!--  Abstract program  -->
-    <Class abstract="true" name="AbstractProgram">
-        <Attribute name="description">
-            <type>
-                <javaclass name="curam.creole.value.Message"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>
-        
-        <Attribute name="appropriate">
-            <type>
-                <javaclass name="Boolean"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>
-        
-        <Attribute name="programTypeReference">
-            <type>
-                <javaclass name="String"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>       
-        
-        <Attribute name="needIdentifier">
-            <type>
-                <javaclass name="String"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>
-                                                                                                                                                                                                                                                          
-    </Class>              
-    
+--><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ReunificationPlanGoalRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+  <Class extends="AbstractFactorList" extendsRuleSet="AssessmentRulesInterface" name="FactorList">
+    <Attribute name="factors">
+      <type>
+        <javaclass name="List">
+          <ruleclass name="Factor"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <fixedlist>
+          <listof>
+            <ruleclass name="Factor"/>
+          </listof>
+          <members>
+            <reference attribute="recommendedGoalFactor"/>
+          </members>
+        </fixedlist>
+      </derivation>
+    </Attribute>
+    <Attribute name="recommendedGoalFactor">
+      <type>
+        <ruleclass name="RecommendedGoal"/>
+      </type>
+      <derivation>
+        <create ruleclass="RecommendedGoal">
+          <specify attribute="roleID">
+            <reference attribute="roleID"/>
+          </specify>
+          <specify attribute="factorList">
+            <this/>
+          </specify>
+        </create>
+      </derivation>
+    </Attribute>
+  </Class>
+
+
+  <Class extends="Factor" name="RecommendedGoal">
+
+
+    <!-- Reference of this factor -->
+    <Attribute name="reference">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value="RECOMMENDEDGOAL"/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="recommendedGoal">
+      <type>
+        <ruleclass name="RecommendedGoal"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="RecommendedGoal"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="score">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <String value=""/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="classification">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <codetableentry table="ClassDivisionType"/>
+          </type>
+          <when>
+            <condition>
+              <reference attribute="reunifyInd"/>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10136"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <reference attribute="changePermanencyGoalInd"/>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10135"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <reference attribute="outOfHomeCareInd"/>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10134"/>
+              </Code>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <reference attribute="changeGoalPlacementInd"/>
+            </condition>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10135"/>
+              </Code>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <Code table="ClassDivisionType">
+                <String value="CDT10134"/>
+              </Code>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="reunifyInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <all>
+          <fixedlist>
+            <listof>
+              <javaclass name="Boolean"/>
+            </listof>
+            <members>
+              <reference attribute="riskLevelGroupOneInd"/>
+              <reference attribute="safetyLevelGroupOneInd"/>
+              <reference attribute="evaluationGroupOneInd"/>
+            </members>
+          </fixedlist>
+        </all>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="outOfHomeCareInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <any>
+          <fixedlist>
+            <listof>
+              <javaclass name="Boolean"/>
+            </listof>
+            <members>
+              <reference attribute="outOfHomeCareGroupOneInd"/>
+              <reference attribute="outOfHomeCareGroupTwoInd"/>
+              <reference attribute="outOfHomeCareGroupThreeInd"/>
+            </members>
+          </fixedlist>
+        </any>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="changePermanencyGoalInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <any>
+          <fixedlist>
+            <listof>
+              <javaclass name="Boolean"/>
+            </listof>
+            <members>
+              <reference attribute="changeGoalGroupOneInd"/>
+              <reference attribute="changeGoalGroupTwoInd"/>
+              <reference attribute="changeGoalGroupThreeInd"/>
+            </members>
+          </fixedlist>
+        </any>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="outOfHomeCareGroupOneInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <all>
+          <fixedlist>
+            <listof>
+              <javaclass name="Boolean"/>
+            </listof>
+            <members>
+              <reference attribute="riskLevelGroupOneInd"/>
+              <reference attribute="safetyLevelGroupTwoInd"/>
+              <reference attribute="evaluationGroupOneInd"/>
+              <reference attribute="outOfHomePlacementInd"/>
+            </members>
+          </fixedlist>
+        </all>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="changeGoalGroupOneInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <all>
+          <fixedlist>
+            <listof>
+              <javaclass name="Boolean"/>
+            </listof>
+            <members>
+              <reference attribute="riskLevelGroupOneInd"/>
+              <reference attribute="safetyLevelGroupTwoInd"/>
+              <reference attribute="evaluationGroupOneInd"/>
+              <reference attribute="changeGoalPlacementInd"/>
+            </members>
+          </fixedlist>
+        </all>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="outOfHomeCareGroupTwoInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <all>
+          <fixedlist>
+            <listof>
+              <javaclass name="Boolean"/>
+            </listof>
+            <members>
+              <reference attribute="riskLevelGroupOneInd"/>
+              <reference attribute="evaluationGroupTwoInd"/>
+              <reference attribute="outOfHomePlacementInd"/>
+            </members>
+          </fixedlist>
+        </all>
+      </derivation>
+    </Attribute>
+    <Attribute name="changeGoalGroupTwoInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <all>
+          <fixedlist>
+            <listof>
+              <javaclass name="Boolean"/>
+            </listof>
+            <members>
+              <reference attribute="riskLevelGroupOneInd"/>
+              <reference attribute="evaluationGroupTwoInd"/>
+              <reference attribute="changeGoalPlacementInd"/>
+            </members>
+          </fixedlist>
+        </all>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="outOfHomeCareGroupThreeInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <all>
+          <fixedlist>
+            <listof>
+              <javaclass name="Boolean"/>
+            </listof>
+            <members>
+              <reference attribute="riskLevelGroupTwoInd"/>
+              <reference attribute="outOfHomePlacementInd"/>
+            </members>
+          </fixedlist>
+        </all>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="changeGoalGroupThreeInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <all>
+          <fixedlist>
+            <listof>
+              <javaclass name="Boolean"/>
+            </listof>
+            <members>
+              <reference attribute="riskLevelGroupTwoInd"/>
+              <reference attribute="changeGoalPlacementInd"/>
+            </members>
+          </fixedlist>
+        </all>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="riskLevelGroupOneInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Boolean"/>
+          </type>
+          <test>
+            <reference attribute="finalRiskLevel">
+              <reference attribute="assessment"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10101"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10102"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10201"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10202"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <false/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="riskLevelGroupTwoInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Boolean"/>
+          </type>
+          <test>
+            <reference attribute="finalRiskLevel">
+              <reference attribute="assessment"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10103"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10104"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10203"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10204"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10214"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <false/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="safetyLevelGroupOneInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Boolean"/>
+          </type>
+          <test>
+            <reference attribute="determinedSafetyLevel">
+              <reference attribute="assessment"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT8258"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT8259"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10137"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10138"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <false/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="safetyLevelGroupTwoInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Boolean"/>
+          </type>
+          <test>
+            <reference attribute="determinedSafetyLevel">
+              <reference attribute="assessment"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT8260"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10139"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="ClassDivisionType">
+                <String value="CDT10140"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <false/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="evaluationGroupOneInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Boolean"/>
+          </type>
+          <test>
+            <reference attribute="finalVisitLevelCode">
+              <reference attribute="relatedPerson"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="VisitationEvaluation">
+                <String value="VE10000"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="VisitationEvaluation">
+                <String value="VE10001"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="VisitationEvaluation">
+                <String value="VE20001"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <false/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="evaluationGroupTwoInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Boolean"/>
+          </type>
+          <test>
+            <reference attribute="finalVisitLevelCode">
+              <reference attribute="relatedPerson"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="VisitationEvaluation">
+                <String value="VE10002"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="VisitationEvaluation">
+                <String value="VE10003"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="VisitationEvaluation">
+                <String value="VE20002"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <when>
+            <condition>
+              <Code table="VisitationEvaluation">
+                <String value=""/>
+                <!-- No evaluation -->
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <false/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="changeGoalPlacementInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <any>
+          <fixedlist>
+            <listof>
+              <javaclass name="Boolean"/>
+            </listof>
+            <members>
+              <reference attribute="consecutivePlacementYes"/>
+              <reference attribute="accumulatedPlacementYes"/>
+            </members>
+          </fixedlist>
+        </any>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="outOfHomePlacementInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <all>
+          <fixedlist>
+            <listof>
+              <javaclass name="Boolean"/>
+            </listof>
+            <members>
+              <reference attribute="consecutivePlacementNo"/>
+              <reference attribute="accumulatedPlacementNo"/>
+            </members>
+          </fixedlist>
+        </all>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="consecutivePlacementYes">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Boolean"/>
+          </type>
+          <test>
+            <reference attribute="consecutivePlacementInd">
+              <reference attribute="relatedPerson"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RUAIndicator">
+                <String value="RAI10000"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <false/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="accumulatedPlacementYes">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Boolean"/>
+          </type>
+          <test>
+            <reference attribute="accumulatedPlacementInd">
+              <reference attribute="relatedPerson"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RUAIndicator">
+                <String value="RAI10000"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <false/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="consecutivePlacementNo">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Boolean"/>
+          </type>
+          <test>
+            <reference attribute="consecutivePlacementInd">
+              <reference attribute="relatedPerson"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RUAIndicator">
+                <String value="RAI10001"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <false/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+    <Attribute name="accumulatedPlacementNo">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <choose>
+          <type>
+            <javaclass name="Boolean"/>
+          </type>
+          <test>
+            <reference attribute="accumulatedPlacementInd">
+              <reference attribute="relatedPerson"/>
+            </reference>
+          </test>
+          <when>
+            <condition>
+              <Code table="RUAIndicator">
+                <String value="RAI10001"/>
+              </Code>
+            </condition>
+            <value>
+              <true/>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <false/>
+            </value>
+          </otherwise>
+        </choose>
+      </derivation>
+    </Attribute>
+
+
+  </Class>
+
+
+  <Class extends="AbstractAssessment" extendsRuleSet="AssessmentRulesInterface" name="Assessment">
+    <Attribute name="determinedSafetyLevel">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="finalRiskLevel">
+      <type>
+        <codetableentry table="ClassDivisionType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+  </Class>
+
+
+  <Class extends="AbstractPerson" extendsRuleSet="AssessmentRulesInterface" name="Person">
+    <Attribute name="finalVisitLevelCode">
+      <type>
+        <codetableentry table="VisitationEvaluation"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="consecutivePlacementInd">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="accumulatedPlacementInd">
+      <type>
+        <codetableentry table="RUAIndicator"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+  </Class>
+
+
+  <Class abstract="true" extends="AbstractFactor" extendsRuleSet="AssessmentRulesInterface" name="Factor">
+    <Attribute name="assessment">
+      <type>
+        <ruleclass name="Assessment"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="Assessment"/>
+        </singleitem>
+      </derivation>
+    </Attribute>
+    <Attribute name="factorList">
+      <type>
+        <ruleclass name="FactorList"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="relatedPerson">
+      <type>
+        <ruleclass name="Person"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="Person">
+            <match retrievedattribute="roleID">
+              <reference attribute="roleID"/>
+            </match>
+          </readall>
+        </singleitem>
+      </derivation>
+    </Attribute>
+  </Class>
+
+
 </RuleSet>

@@ -1,19 +1,37 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Number.Wizard.Pages=2
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
 
-RegisterProductProvider_duplicateCheckWizard.Wizard.Item.Text=Registered Product Provider Check
-RegisterProductProvider_duplicateCheckWizard.Wizard.Page.Title=Step 1:
-RegisterProductProvider_duplicateCheckWizard.Wizard.Page.Desc=Registered Product Provider Check
-Wizard.PageID.1=RegisterProductProvider_duplicateCheckWizard
-
-RegisterProductProvider_registerWizard.Wizard.Item.Text=Product Provider Details
-RegisterProductProvider_registerWizard.Wizard.Page.Title=Step 2:
-RegisterProductProvider_registerWizard.Wizard.Page.Desc=Product Provider Details
-Wizard.PageID.2=RegisterProductProvider_registerWizard
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
+    <identifier name="Select Life Event Script" />
+    <header>
+        <title id="Page.Title" />
+        <description id="Page.Description" />
+        <icon id="title_createanaccount" />
+    </header>
+    <content>
+        <cluster>
+            <title id="ScriptDetails.Title" />
+            <field id="dataStoreID" type="PAGE_PLAYER_STRING_50" mandatory="true" width="95">
+                <title id="DataStoreID.Label" />
+            </field>
+            <layout>
+                <compact-layout>yes</compact-layout>
+                <num-cols>4</num-cols>
+                <width>100</width> 
+                <label-width>100</label-width>
+                <label-alignment>RIGHT</label-alignment>
+            </layout>
+        </cluster>
+    </content>
+    <navigation>
+		<nav-button name="next" type="action"/>
+        <nav-button name="back" type="action"/>
+    </navigation>
+</page>

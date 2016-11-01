@@ -1,56 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
  
-  Copyright IBM Corporation 2009, 2012. All Rights Reserved.
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009-2011 Curam Software Ltd.
+  Copyright 2010 Curam Software Ltd.
   All rights reserved.
-
+  
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="SGIntegratedCase">
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="CorrectionProductAdmin">
 
-  <tc:page-param name="caseID"/>
+  <nc:nodes>
+    <nc:navigation-page id="Correction_Home" page-id="Product_correctionHome" title="Leaf.Title.Home" visible="true"/>
 
-  <tc:menu id="SGIntegratedCaseMenu"/> 
-  
-  <!-- Details panel -->
-  <tc:context height="157" page-id="IntegratedCase_tabDetails"/>
-  
-  <!-- See SGIntegratedCase.nav for details of the navigation links. -->
-  <tc:navigation id="SGIntegratedCase"/>
-  
-  <tc:tab-refresh>
-  
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="IntegratedCase_modifyHeader"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseOwner"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseOwnerDetails"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_createCaseSupervisor"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_createCaseMember"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseMemberFromList"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyCaseMemberFromView"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_cancelCaseMember"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_createCaseRelatedMember"/>  
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Evidence_applyChanges1"/> 
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Evidence_applyChangesForCase"/>  
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="PDSample_createSportingSponsorshipEvidence"/>  
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ICSample_createSportingActivityExpenseEvidence"/>  
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Evidence_transferEvidence1"/>  
-    
-    <!-- BEGIN, CR00349082, PB -->
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="VerificationApplication_createVerificationItemProvision"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ICSample_createSportingActivityEvidence"/>  
-    <!-- END, CR00349082 -->
-    
-    
-  </tc:tab-refresh>
+    <nc:navigation-page id="CorrectionProductAdmin_Case" page-id="Product_listBenefitCaseApproval" title="Leaf.Title.Case" visible="true"/>
 
-</tc:tab-config>
+    <nc:navigation-page id="CorrectionProductAdmin_Deductions" page-id="Product_listDeduction" title="Leaf.Title.Deductions" visible="true"/>
+
+    <nc:navigation-page id="CorrectionProductAdmin_DeliveryPatterns" page-id="Product_listDeliveryPattern" title="Leaf.Title.DeliveryPatterns" visible="true"/>
+
+    <nc:navigation-page id="CorrectionProductAdmin_ListMilestones" page-id="Product_resolveListMilestone" title="Leaf.Title.ListMilestones" visible="true"/>
+
+    <nc:navigation-page id="CorrectionProductAdmin_Provisions" page-id="Product_listBenefitProductProvision" title="Leaf.Title.Provisions" visible="true"/>
+
+    <nc:navigation-page id="CorrectionProductAdmin_TimeConstraints" page-id="Product_listBenefitTimeConstraint" title="Leaf.Title.TimeConstraints" visible="true"/>
+
+  </nc:nodes>
+
+</nc:navigation>

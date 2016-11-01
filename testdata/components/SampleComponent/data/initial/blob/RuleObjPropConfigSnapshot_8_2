@@ -1,43 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
   restricted by GSA ADP Schedule Contract with IBM Corp.
 -->
-<propagator type="ROPT2003">
+<propagator type="ROPT2004">
   <configuration>
-    <table name="ConcernRole">
-      <ruleset name="ParticipantEntitiesRuleSet"/>
-    </table>
-    <table name="Person">
-      <ruleset name="ParticipantEntitiesRuleSet"/>
-    </table>
-    <table name="Address">
-      <ruleset name="ParticipantEntitiesRuleSet"/>
-    </table>
-    <table name="ConcernRoleAddress">
-      <ruleset name="ParticipantEntitiesRuleSet"/>
-    </table>
-    <table name="ConcernRoleAlternateID">
-      <ruleset name="ParticipantEntitiesRuleSet"/>
-    </table>
-    <table name="ConcernRoleRelationship">
-      <ruleset name="ParticipantEntitiesRuleSet"/>
-    </table>
-    <table name="Employment">
-      <ruleset name="ParticipantEntitiesRuleSet"/>
-    </table>
-    <table name="EmploymentWorkingHour">
-      <ruleset name="ParticipantEntitiesRuleSet"/>
-    </table>
-    <table name="Employer">
-      <ruleset name="ParticipantEntitiesRuleSet"/>
-    </table>
-    <table name="ProspectPerson">
-      <ruleset name="ParticipantEntitiesRuleSet"/>
-    </table>
+
   </configuration>
 </propagator>

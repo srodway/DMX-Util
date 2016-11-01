@@ -1,29 +1,36 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Number.Wizard.Pages=4
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
 
-CaseAudit_PDCaseSampleSearch.Wizard.Item.Text=Criteria
-CaseAudit_PDCaseSampleSearch.Wizard.Page.Title=Step 1:
-CaseAudit_PDCaseSampleSearch.Wizard.Page.Desc=Select Criteria
-Wizard.PageID.1=CaseAudit_PDCaseSampleSearch
-
-CaseAudit_PDCaseSampleSelectAmount.Wizard.Item.Text=Specify Amount
-CaseAudit_PDCaseSampleSelectAmount.Wizard.Page.Title=Step 2:
-CaseAudit_PDCaseSampleSelectAmount.Wizard.Page.Desc=Specify Amount of Cases to Audit
-Wizard.PageID.2=CaseAudit_PDCaseSampleSelectAmount
-
-CaseAudit_PDCaseSampleConfigureAlgorithm.Wizard.Item.Text=Algorithm Parameters
-CaseAudit_PDCaseSampleConfigureAlgorithm.Wizard.Page.Title=Step 3:
-CaseAudit_PDCaseSampleConfigureAlgorithm.Wizard.Page.Desc=Configure Algorithm Parameters
-Wizard.PageID.3=CaseAudit_PDCaseSampleConfigureAlgorithm
-
-CaseAudit_confirmPDCaseSampleGeneration.Wizard.Item.Text=Confirm
-CaseAudit_confirmPDCaseSampleGeneration.Wizard.Page.Title=Step 4:
-CaseAudit_confirmPDCaseSampleGeneration.Wizard.Page.Desc=Confirm Cases to Audit
-Wizard.PageID.4=CaseAudit_confirmPDCaseSampleGeneration
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
+    <identifier name="SaveAppCreateAccountOrLogin" />
+    <header>
+        <title id="Page.Title" />
+        <description id="Page.Description" />
+        <icon id="title_save" /> 
+    </header>
+    <content>
+        <container>
+            <title id="RadioSelection.Title" />
+            <radiobutton-container id="SELECTION" legend="RadioSelection.Legend">
+                <title id="RadioSelection.Title" />
+                <radiobutton id="CREATE_ACC">
+                    <title id="SaveApplicationCreateAccount.Title" />
+                </radiobutton>
+                <radiobutton id="LOGIN">
+                    <title id="SaveApplicationLogin.Title" />
+                </radiobutton>
+            </radiobutton-container>
+        </container>
+    </content>
+    <navigation>
+		<nav-button name="next" type="action" />
+        <nav-button name="back" type="action"/>
+    </navigation>
+</page>

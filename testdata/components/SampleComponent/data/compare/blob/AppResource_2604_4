@@ -1,49 +1,60 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Submenu.Title.New=New
-Submenu.Tooltip.New=New
-        
-MenuItem.Title.Bank=Bank
-MenuItem.Tooltip.Bank=Bank
-      
-MenuItem.Title.BankAccount=Bank Account
-MenuItem.Tooltip.BankAccount=Bank Account
-      
-MenuItem.Title.CurrencyExchange=Currency Exchange
-MenuItem.Tooltip.CurrencyExchange=Currency Exchange
-      
-MenuItem.Title.InsuranceReturnPeriod=Insurance Return Period
-MenuItem.Tooltip.InsuranceReturnPeriod=Insurance Return Period      
-      
-Submenu.Title.PaymentExclDate=Payment Exclusion Date
-Submenu.Toolip.PaymentExclDate=Payment Exclusion Date
-        
-MenuItem.Title.Cash=Cash
-MenuItem.Tooltip.Cash=Cash    
-        
-MenuItem.Title.Check=Cheque
-MenuItem.Tooltip.Check=Cheque
-        
-MenuItem.Title.EFT=EFT
-MenuItem.Tooltip.EFT=EFT
-        
-MenuItem.Title.Invoice=Invoice
-MenuItem.Tooltip.Invoice=Invoice
-        
-MenuItem.Title.Voucher=Voucher
-MenuItem.Tooltip.Voucher=Voucher
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-Submenu.Title.Search=Search
-Submenu.Tooltip.Search=Search
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009-2011 Curam Software Ltd.
+  All rights reserved.
 
-MenuItem.Title.User=User
-MenuItem.Tooltip.User=User
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="AuditPlanHome">
+  
+  <tc:page-param name="auditPlanID"/>
+  
+  <tc:menu id="AuditPlanHomeMenu"/>
 
-MenuItem.Title.ExternalUser=External User
-MenuItem.Tooltip.ExternalUser=External User
+  <!-- Details panel -->
+  <tc:context height="177" page-id="CaseAudit_viewAuditPlanTabDetail"/>
+  
+  <!-- See Home.nav for details of the tree meta-data. -->
+  <tc:navigation id="AuditPlanHome"/>  
+  
+  <tc:tab-refresh>
+    <tc:onsubmit context="true" menu-bar="true" page-id="CaseAudit_maintainAuditPlanSchedule"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="CaseAudit_deleteScheduleInfo"/>    
+    <tc:onsubmit context="true" page-id="CaseAudit_confirmChangeCoord"/>
+    <tc:onsubmit context="true" page-id="CaseAudit_modifyAuditPlan"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="CaseAudit_cancelAuditPlan"/>
+    <tc:onsubmit context="true" page-id="CaseAudit_createAuditors"/>
+    <tc:onsubmit context="true" page-id="CaseAudit_createAuditorsAndAddToTeam"/>
+    <tc:onsubmit context="true" page-id="CaseAudit_confirmRemoveAuditor"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="AuditPlan_confirmCompletePlan"/>
+    <tc:onsubmit context="true" page-id="CaseAudit_modifyAuditPlanFocusAreas"/>
+    <tc:onsubmit context="true" page-id="CaseAudit_modifyUserDefinedFocusAreas"/>
+    <tc:onsubmit context="true" page-id="CaseAudit_confirmCaseAuditAssignment"/>    
+    <tc:onsubmit context="true" page-id="CaseAudit_removeAssignCaseAudits"/>
+    <tc:onsubmit context="true" page-id="CaseAudit_confirmCompleteAudit"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="CaseAudit_selectCase"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="CaseAudit_confirmICCaseSampleGeneration"/>                
+    <tc:onsubmit context="true" menu-bar="true" page-id="CaseAudit_confirmInvestigationCaseSampleGeneration"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="CaseAudit_confirmLPDCaseSampleGeneration"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="CaseAudit_confirmPDCaseSampleGeneration"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="AuditPlan_createSummaryFindings"/>                                              
+    <tc:onsubmit context="true" menu-bar="true" page-id="CaseAudit_confirmExternalServiceCaseSampleGeneration"/>                                              
+    <tc:onsubmit context="true" menu-bar="true" page-id="CaseAudit_confirmFixedQueryCaseSampleGeneration"/>                                              
+    <tc:onsubmit context="true" menu-bar="true" page-id="CaseAudit_ICCaseSampleManualSearch"/>                                              
+    <tc:onsubmit context="true" menu-bar="true" page-id="CaseAudit_InvestigationCaseSampleManualSearch"/>                                              
+    <tc:onsubmit context="true" menu-bar="true" page-id="CaseAudit_LPDCaseSampleManualSearch"/>                                              
+    <tc:onsubmit context="true" menu-bar="true" page-id="CaseAudit_PDCaseSampleManualSearch"/>                                              
+    <tc:onsubmit context="true" menu-bar="true" page-id="CaseAudit_manuallySearchAndSelectCases"/>                                              
+    <tc:onsubmit context="true" menu-bar="true" page-id="AuditPlan_confirmCompletePlanFromFindings"/>                                              
+    
+  </tc:tab-refresh>  
+  
+</tc:tab-config>

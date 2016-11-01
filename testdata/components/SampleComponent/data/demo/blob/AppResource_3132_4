@@ -1,14 +1,44 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-
-
-leaf.title.Home=Home 
-leaf.title.ChangeHistory=Change History 
-leaf.title.Verifications=Verifications 
-leaf.title.Issues=Issues 
+#Tue Nov 01 13:45:33 GMT 2016
+Cluster.PractitionerCertificate.Date=Certification Dates
+relCpCluster.Description.NonRegisteredParticipantpractitioner=If the Medical Practitioner is not registered on the system, complete the details below.
+Cluster.PractitionerCertificate.Claimant.Help=Select the citizen to whom the practitioner certificate applies.
+ActionControl.Label.Save=Save
+relCpCluster.Description.RelCpParticipantpractitioner=If the Medical Practitioner is a case participant, please select from the list of case participants below.
+PractitionerCertificate.ExaminationDetails.Help=Enter the examination details.
+RepCp.Field.Label.CaseParticipantRoleIdhouseholdMember=\ 
+RepCp.Field.Label.CaseParticipantRoleIdpractitioner=\ 
+relCpCluster.Field.Label.ParticipantID=Participant
+ExaminationDetails.certPeriodType=Certification Period Type
+ExaminationDetails.certificateType=Certificate Type
+Page.Description=The create page for the practitioner certificate.
+relCpCluster.Field.Label.ParticipantType=Type
+Field.Label.address=
+CertificationDates.certFromDateLabel10=Certification From Date
+relCpCluster.Field.Label.phoneNumber=Phone Number
+Cluster.PractitionerCertificate.Claimant=Claimant
+Page.Title=New Practitioner Certificate 
+PractitionerCertificate.ExaminationDetails=Examination Details
+ExaminationDetails.ExaminationDate=Examination Date
+Cluster.PractitionerCertificate.MedicalPractitioner=Medical Practitioner
+Cluster.PractitionerCertificate.SignatureDetails.Help=Enter the signature details for the certificate.
+relCpCluster.Field.Label.phoneAreaCode=Area Code
+ExaminationDetails.certPeriodCount=Certification Period Length
+Cluster.PractitionerCertificate.Date.Help=Enter the certification dates.
+relCpCluster.Description.RegisteredParticipantpractitioner=If the Medical Practitioner is not a case participant but is registered on the system, please select from below.
+ActionControl.Label.Cancel=Cancel
+SignatureDetails.claimFormSignedInd=Claim Form Signed
+Cluster.Comments.Help=Additional practitioner comments.
+childEvidenceType=DET24002
+SignatureDetails.signatureDate=Signature Date
+Cluster.PractitionerCertificate.MedicalPractitioner.Help=Select the practitioner who issued the certificate.
+temp.string.id=\ 
+Field.Label.ReceivedDate=Received Date
+description.id=
+Participant.householdMember=householdMember
+Surname.Label.PractitionerSurname=Surname
+effectiveDate=20140101
+Cluster.Comments=Comments
+Cluster.PractitionerCertificate.SignatureDetails=Signature Details
+Participant.practitioner=practitioner
+FirstName.Label.PractitionerFirstName=First Name
+PractitionerCertificate.CertificationDates.specifiedCertToDateLabel11=Specified Certification To Date

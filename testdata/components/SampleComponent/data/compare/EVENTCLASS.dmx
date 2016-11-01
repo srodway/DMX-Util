@@ -60,7 +60,7 @@
   </row>
   <row>
     <attribute name="eventClass">
-      <value>Allegation</value>
+      <value>AllegationRole</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -71,7 +71,7 @@
   </row>
   <row>
     <attribute name="eventClass">
-      <value>AllegationRole</value>
+      <value>Allegation</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -181,17 +181,6 @@
   </row>
   <row>
     <attribute name="eventClass">
-      <value>CASE</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-    <attribute name="lastWritten">
-      <value />
-    </attribute>
-  </row>
-  <row>
-    <attribute name="eventClass">
       <value>CaseAttachment</value>
     </attribute>
     <attribute name="versionNo">
@@ -280,6 +269,17 @@
   </row>
   <row>
     <attribute name="eventClass">
+      <value>CASE</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventClass">
       <value>ClientMerge</value>
     </attribute>
     <attribute name="versionNo">
@@ -292,17 +292,6 @@
   <row>
     <attribute name="eventClass">
       <value>COMPARTMENT</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-    <attribute name="lastWritten">
-      <value />
-    </attribute>
-  </row>
-  <row>
-    <attribute name="eventClass">
-      <value>CONCERNROLE</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -346,6 +335,17 @@
   </row>
   <row>
     <attribute name="eventClass">
+      <value>ConcernRoleCommunication</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventClass">
       <value>CONCERNROLEDUPLICATE</value>
     </attribute>
     <attribute name="versionNo">
@@ -358,6 +358,17 @@
   <row>
     <attribute name="eventClass">
       <value>ConcernRoleRelationship</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventClass">
+      <value>CONCERNROLE</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -500,7 +511,7 @@
   </row>
   <row>
     <attribute name="eventClass">
-      <value>HOMESTUDY</value>
+      <value>HOMESTUDYASSESSMENT</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -511,7 +522,7 @@
   </row>
   <row>
     <attribute name="eventClass">
-      <value>HOMESTUDYASSESSMENT</value>
+      <value>HOMESTUDY</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -654,7 +665,7 @@
   </row>
   <row>
     <attribute name="eventClass">
-      <value>MEETING</value>
+      <value>MEETINGMINUTES</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -665,7 +676,7 @@
   </row>
   <row>
     <attribute name="eventClass">
-      <value>MEETINGMINUTES</value>
+      <value>MEETING</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -742,17 +753,6 @@
   </row>
   <row>
     <attribute name="eventClass">
-      <value>PAYMENT</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-    <attribute name="lastWritten">
-      <value />
-    </attribute>
-  </row>
-  <row>
-    <attribute name="eventClass">
       <value>PaymentInstrument</value>
     </attribute>
     <attribute name="versionNo">
@@ -775,6 +775,17 @@
   </row>
   <row>
     <attribute name="eventClass">
+      <value>PAYMENT</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventClass">
       <value>Person</value>
     </attribute>
     <attribute name="versionNo">
@@ -786,7 +797,7 @@
   </row>
   <row>
     <attribute name="eventClass">
-      <value>PLACE</value>
+      <value>PLACEMENT</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -797,7 +808,7 @@
   </row>
   <row>
     <attribute name="eventClass">
-      <value>PLACEMENT</value>
+      <value>PLACE</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -864,17 +875,6 @@
   <row>
     <attribute name="eventClass">
       <value>ProspectPerson</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-    <attribute name="lastWritten">
-      <value />
-    </attribute>
-  </row>
-  <row>
-    <attribute name="eventClass">
-      <value>PROVIDER</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -995,7 +995,7 @@
   </row>
   <row>
     <attribute name="eventClass">
-      <value>ReadyForDetermination</value>
+      <value>PROVIDER</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -1006,7 +1006,7 @@
   </row>
   <row>
     <attribute name="eventClass">
-      <value>REFERRAL</value>
+      <value>ReadyForDetermination</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -1028,6 +1028,17 @@
   </row>
   <row>
     <attribute name="eventClass">
+      <value>REFERRAL</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventClass">
       <value>REQUESTDECISION</value>
     </attribute>
     <attribute name="versionNo">
@@ -1039,7 +1050,7 @@
   </row>
   <row>
     <attribute name="eventClass">
-      <value>Resolution</value>
+      <value>RESOLUTIONAPPROVAL</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -1050,7 +1061,7 @@
   </row>
   <row>
     <attribute name="eventClass">
-      <value>RESOLUTIONAPPROVAL</value>
+      <value>Resolution</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -1149,17 +1160,6 @@
   </row>
   <row>
     <attribute name="eventClass">
-      <value>ServicePlans</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-    <attribute name="lastWritten">
-      <value />
-    </attribute>
-  </row>
-  <row>
-    <attribute name="eventClass">
       <value>ServicePlanApproval</value>
     </attribute>
     <attribute name="versionNo">
@@ -1172,6 +1172,17 @@
   <row>
     <attribute name="eventClass">
       <value>ServicePlanDelivery</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="eventClass">
+      <value>ServicePlans</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>

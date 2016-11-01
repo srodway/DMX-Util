@@ -1,29 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Number.Wizard.Pages=3
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-	Copyright 2009 Curam Software Ltd.
-	All rights reserved.
-	
-	This software is the confidential and proprietary information of Curam
-	Software, Ltd. ("Confidential Information"). You shall not disclose
-	such Confidential Information and shall use it only in accordance with the
-	terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="SupervisorUserHome">
+SelectReferralServiceOffering.Wizard.Item.Text=Select Service Offering
+SelectReferralServiceOffering.Wizard.Page.Title=Step 1:
+SelectReferralServiceOffering.Wizard.Page.Desc=Select the service you wish to refer the client to.
+Wizard.PageID.1=SelectReferralServiceOffering
 
-        <tc:page-param name="userName"/>
-        <tc:page-param name="taskOptionCode"/>
+SearchForProviderOffering.Wizard.Item.Text=Provider Search
+SearchForProviderOffering.Wizard.Page.Title=Step 2:
+SearchForProviderOffering.Wizard.Page.Desc=Search for and select the provider you wish to refer the client to.
+Wizard.PageID.2=SearchForProviderOffering
 
-        <tc:menu id="SupervisorUserHomeMenu"/>
-
-        <!-- No Details panel -->
-        <tc:context height="115" page-id="Supervisor_userTabDetails"/>
-
-        <!-- Navigation Panel -->
-        <tc:navigation id="SupervisorUserHome"/>
-
-</tc:tab-config>
+CreateLiteProviderReferral.Wizard.Item.Text=Additional Details
+CreateLiteProviderReferral.Wizard.Page.Title=Step 3:
+CreateLiteProviderReferral.Wizard.Page.Desc=Complete additional details
+Wizard.PageID.3=CreateLiteProviderReferral

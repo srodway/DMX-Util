@@ -1,25 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012-2013. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+QuestionPage.SafetyInterventions.Title=SDM\u00AE Reunification Assessment
+SafetyInterventions.InstructionText=<p style="font-family:tahoma;font-size:11px;color:#4e4e4e;">Enter safety interventions regarding the children in the household.</p>
+Cluster.Title.SafetyInterventions=Safety Interventions
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2010 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="InvestigatorInvestigationSearch">
-
-  <!-- Details panel -->
-  <tc:context tab-name="Details.Name.InvestigationSearch" tab-title="Details.Title.InvestigationSearch"/>
-
-  <!-- Navigation Panel -->
-  <tc:navigation page-id="InvestigatorInvestigation_search"/>
-
-
-</tc:tab-config>
+Question.Label.DirectServices=1. Intervention or direct services by worker.
+Question.Help.DirectServices=Actions taken or planned by the investigating worker or other CPS staff that specifically address one or more safety threats. Examples include providing information about nonviolent disciplinary methods, child development needs, or parenting practices; providing emergency material aid such as food; planned return visits to the home to check on progress; information on obtaining restraining orders; providing definition of child abuse laws and informing involved parties of consequences of violating these laws. DOES NOT INCLUDE the investigation itself or services provided to respond to family needs that do not directly affect safety.
+Question.Label.SafetyResources=2. Use of family, neighbors, or other individuals in the community as safety resources.
+Question.Help.SafetyResources=Applying the family's own strengths as resources to mitigate safety concerns; using extended family members, neighbors, or other individuals to mitigate safety concerns. Examples include: family's agreement to use non-violent means of discipline; engaging a grandparent to assist with childcare; agreement by a neighbor to serve as a safety net for an older child; commitment by 12-step sponsor to meet with caregiver daily and call an older child; commitment by 12-step sponsor to meet with caregiver daily and call worker if caregiver has used or missed meeting; or  caregiver's decision that the child will spend a night or a few days with a friend or relative.
+Question.Label.CommunityAgencies=3. Use of community agencies or services as safety resources.
+Question.Help.CommunityAgencies=Involving community-based organization, faith-related organization, or other agency in activities to address safety concerns, e.g., using a local food pantry.  DOES NOT INCLUDE long term therapy or being put on a waiting list for services.
+Question.Label.ProtectVictim=4. Have the caregiver appropriately protect the victim from the alleged perpetrator.
+Question.Help.ProtectVictim=A non-offending caregiver has acknowledged the safety concerns and is able and willing to protect the child from alleged perpetrator. Examples include: agreeing that the child will not be left along with the alleged perpetrator; or preventing the alleged perpetrator from physically disciplining the child.
+Question.Label.LeaveHome=5. Have the alleged perpetrator leave the home, either voluntarily or in response to legal action.
+Question.Help.LeaveHome=Temporary or permanent removal of the alleged perpetrator. Examples include arresting alleged perpetrator, non-perpetrating caregiver 'kicking out' alleged perpetrator who has no legal right to residence, or perpetrator agreeing to leave.
+Question.Label.SafeEnvironment=6. Have the non-offending caregiver move to a safe environment with the child.
+Question.Help.SafeEnvironment=A caregiver not suspected of harming the child has taken or plans to take the child to an alternate location where the alleged perpetrator will not have access to the child.  Examples include a domestic violence shelter, the home of a friend or relative, or a hotel.
+Question.Label.PlannedLegalAction=7. Legal action planned or initiated-child remains in the home.
+Question.Help.PlannedLegalAction=A legal action has already commenced or will be commenced that will effectively mitigate identified safety threats. This includes family initiated (e.g., restraining orders,mental health commitments, change in custody/visitation/guardianship and CPS initiated (file petition and child remains in home).
+Question.Label.SpecifyOther=8. Other (specify)
+Question.Help.SpecifyOther=The family or worker identified a unique intervention for an identified safety concern that does not fit within items 1-7.
+Question.Label.VoluntaryPlacement=9. Voluntary placement continues.
+Question.Help.VoluntaryPlacement=A voluntary agreement is signed between the caregiver and the CPS agency.
+Question.Label.ProtectiveCustody=10. Protective custody continues because interventions 1-9 do not adequately ensure child's safety.
+Question.Help.ProtectiveCustody=One or more children are protectively placed and entitled to notice and hearing within 72 judicial hours.
+SafetyInterventions.validation.message=Both questions 9. and 10. can not be answered 'Yes'.
+SafetyInterventionsAllNo.validation.message=When questions '1-8' are answered 'No', question '9 or 10' must be answered 'Yes'.
+Question.Validation.SI8=When question '8. Other' is selected, a description of the other safety intervention must be entered.

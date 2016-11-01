@@ -1,30 +1,21 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012-2014. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Number.Wizard.Pages=3
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-CommonIntake_listProgramsToAppeal.Wizard.Item.Text=Select Program
-CommonIntake_listProgramsToAppeal.Wizard.Page.Title=Step 1:
-CommonIntake_listProgramsToAppeal.Wizard.Page.Desc=Select Program
-Wizard.PageID.1=CommonIntake_listProgramsToAppeal
-
-#this second page of the wizard was replaced as part of the work for introducing Online Appeals
-#Appeal_createWizard.Wizard.Item.Text=Record Appeal Details
-#Appeal_createWizard.Wizard.Page.Title=Step 2:
-#Appeal_createWizard.Wizard.Page.Desc=Record Appeal Details
-#Wizard.PageID.2=Appeal_createWizard
-
-AppealWizard_selectParticipants.Wizard.Item.Text=Select Appellant/Respondent
-AppealWizard_selectParticipants.Wizard.Page.Title=Step 2:
-AppealWizard_selectParticipants.Wizard.Page.Desc=Select Appellant/Respondent
-Wizard.PageID.2=AppealWizard_selectParticipants
-
-AppealWizard_createAppeal.Wizard.Item.Text=Record Appeal Details
-AppealWizard_createAppeal.Wizard.Page.Title=Step 3:
-AppealWizard_createAppeal.Wizard.Page.Desc=Record Appeal Details
-Wizard.PageID.3=AppealWizard_createAppeal
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+    Copyright 2010 Curam Software Ltd.
+    All rights reserved.
+    
+    This software is the confidential and proprietary information of Curam
+    Software, Ltd. ("Confidential Information"). You shall not disclose
+    such Confidential Information and shall use it only in accordance with the
+    terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="WorkQueueTaskSearch">
+    
+    <nc:nodes>
+        
+    </nc:nodes> 
+</nc:navigation>

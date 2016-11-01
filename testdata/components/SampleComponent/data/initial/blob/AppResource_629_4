@@ -1,34 +1,27 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Number.Wizard.Pages=5
-
-OutcomePlanReferralWizard_service.Wizard.Item.Text=Service
-OutcomePlanReferralWizard_service.Wizard.Page.Title=Step 1:
-OutcomePlanReferralWizard_service.Wizard.Page.Desc=Service
-Wizard.PageID.1=OutcomePlanReferralWizard_service
-
-OutcomePlanReferralWizard_details.Wizard.Item.Text=Details
-OutcomePlanReferralWizard_details.Wizard.Page.Title=Step 2:
-OutcomePlanReferralWizard_details.Wizard.Page.Desc=Details
-Wizard.PageID.2=OutcomePlanReferralWizard_details
-
-OutcomePlanReferralWizard_provider.Wizard.Item.Text=Provider
-OutcomePlanReferralWizard_provider.Wizard.Page.Title=Step 3:
-OutcomePlanReferralWizard_provider.Wizard.Page.Desc=Provider
-Wizard.PageID.3=OutcomePlanReferralWizard_provider
-
-OutcomePlanReferralWizard_notification.Wizard.Item.Text=Notification
-OutcomePlanReferralWizard_notification.Wizard.Page.Title=Step 4:
-OutcomePlanReferralWizard_notification.Wizard.Page.Desc=Notification
-Wizard.PageID.4=OutcomePlanReferralWizard_notification
-
-OutcomePlanReferralWizard_factors.Wizard.Item.Text=Factors
-OutcomePlanReferralWizard_factors.Wizard.Page.Title=Step 5:
-OutcomePlanReferralWizard_factors.Wizard.Page.Desc=Factors
-Wizard.PageID.5=OutcomePlanReferralWizard_factors
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="MDTInvestigation">
+  <nc:nodes>
+    <nc:navigation-page id="Home" page-id="MDTExternal_investigationHome" title="Leaf.Title.Home"/>
+    <nc:navigation-page id="Notes" page-id="MDTExternal_listCollaborationNote" title="Leaf.Title.Notes"/>
+    <nc:navigation-page id="Attachments" page-id="MDTExternal_listCollaborationAttachments" title="Leaf.Title.Attachments"/>
+    <nc:navigation-page id="Calendar" page-id="MDTExternal_resolveCollaborationCalendar" title="Leaf.Title.Calendar"/>
+    <nc:navigation-page id="MeetingMinutes" page-id="MDTExternal_listMeetingsForCollaboration" title="Leaf.Title.MeetingMinutes"/>
+    <nc:navigation-page id="Discussions" page-id="MDTExternal_listSEFDiscussion" title="Leaf.Title.Discussions"/>
+    <nc:navigation-page id="MultidisciplinaryTeam" page-id="MDTExternal_resolveSEFMDTType" title="Leaf.Title.MultidisciplinaryTeam"/>
+  </nc:nodes>
+  
+</nc:navigation>

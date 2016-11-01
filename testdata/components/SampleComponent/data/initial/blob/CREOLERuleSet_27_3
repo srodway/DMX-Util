@@ -1,214 +1,300 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
- 
+  
   Copyright IBM Corporation 2012. All Rights Reserved.
-
+ 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><!-- Copyright (c) 2009-2011 Curam Software Ltd.                                 --><!-- All rights reserved.                                                   --><!-- This software is the confidential and proprietary information of Curam --><!-- Software, Ltd. ("Confidential Information"). You shall not disclose    --><!-- such Confidential Information and shall use it only in accordance with --><!-- the terms of the license agreement you entered into with Curam         --><!-- Software.                                                              --><!-- Description                                                            --><!-- This is the interface ruleset Evidence Summary Information.            --><!-- The individual elements of a summary information are declared as       --><!-- abstract. If an Evidence Type Version metadata specifies that CER is to--><!-- be used for calculating summary information, the Summary Rule Class in --><!-- the corresponding CER Ruleset should extend from the                   --><!-- AbstractEvidenceSummary class specified in this rule set.              --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EvidenceValidationRuleSet" xsi:noNamespaceSchemaLocation="../../CREOLEInfrastructure/xsd/curam/creole/xsd/RuleSetLax.xsd">
-  <Class abstract="true" name="AbstractEvidenceValidationResult">
-    <Attribute name="evidence">
-      <type>
-        <ruleclass name="DynamicEvidence" ruleset="DynamicEvidenceRuleSet"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-    <Attribute name="validationMode">
-      <type>
-        <ruleclass name="ValidationMode"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="detailsValidations">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="Validation"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-    <Attribute name="preCreateValidations">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="Validation"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-    <Attribute name="preModifyValidations">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="Validation"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-    <Attribute name="postCreateValidations">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="Validation"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-    <Attribute name="postModifyValidations">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="Validation"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-    <Attribute name="standardValidations">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="Validation"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class name="Validation">
-    <Initialization>
-      <Attribute name="isFailure">
-        <type>
-          <javaclass name="Boolean"/>
-        </type>
-      </Attribute>
-      <Attribute name="failureMessage">
-        <type>
-          <javaclass name="curam.creole.value.Message"/>
-        </type>
-      </Attribute>
-    </Initialization>
-    <Attribute name="informationalType">
-      <type>
-        <javaclass name="curam.dynamicevidence.validation.impl.InformationalType"/>
-      </type>
-      <derivation>
-        <call class="curam.dynamicevidence.validation.impl.InformationalType" method="error">
-          <type>
-            <javaclass name="curam.dynamicevidence.validation.impl.InformationalType"/>
-          </type>
-        </call>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="Validation.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">             
-                </ResourceMessage>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class name="ValidationMode">
-    <Initialization>
-      <Attribute name="mode">
-        <type>
-          <javaclass name="curam.dynamicevidence.validation.impl.ValidationMode"/>
-        </type>
-      </Attribute>
-    </Initialization>
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="ValidationMode.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">             
-                    </ResourceMessage>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class abstract="true" extends="AbstractEvidenceValidationResult" name="DefaultEvidenceValidationResult">
-
-
-    <Attribute name="detailsValidations">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="Validation"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-    <Attribute name="preCreateValidations">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="Validation"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-    <Attribute name="preModifyValidations">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="Validation"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-    <Attribute name="postCreateValidations">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="Validation"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-    <Attribute name="postModifyValidations">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="Validation"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-    <Attribute name="standardValidations">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="Validation"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-  </Class>
+--><!-- 
+    Copyright 2008 Curam Software Ltd.
+    All rights reserved.
+    
+    This software is the confidential and proprietary information
+    of Curam Software, Ltd. ("Confidential Information").  You
+    shall not disclose such Confidential Information and shall use
+    it only in accordance with the terms of the license agreement
+    you entered into with Curam Software.
+--><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd" name="TriageInterfaceRuleSet">
+    
+    <!-- This class must be extended by all rule sets invoked by
+        the Citizen Portal screening results processing. -->
+    <Class name="AbstractTriageResult" abstract="true">
+        
+        <Attribute name="alertMessage">
+            <type>
+                <javaclass name="List">
+                    <ruleclass name="AbstractAlertMessage"/>
+                </javaclass>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>            
+        </Attribute>        
+        
+        <Attribute name="services">
+            <type>
+                <javaclass name="List">
+                    <ruleclass name="AbstractService"/>
+                </javaclass>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>            
+        </Attribute>        
+        
+        <Attribute name="programs">
+            <type>
+                <javaclass name="List">
+                    <ruleclass name="AbstractProgram"/>
+                </javaclass>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>            
+        </Attribute>        
+        
+        <Attribute name="screenings">
+            <type>
+                <javaclass name="List">
+                    <ruleclass name="AbstractScreening"/>
+                </javaclass>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>            
+        </Attribute>
+        
+        <Attribute name="intakeApplications">
+            <type>
+                <javaclass name="List">
+                    <ruleclass name="AbstractIntakeApplication"/>
+                </javaclass>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>            
+        </Attribute>
+        
+        <Attribute name="needs">
+            <type>
+                <javaclass name="List">
+                    <ruleclass name="AbstractNeed"/>
+                </javaclass>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>            
+        </Attribute>
+        
+    </Class>
+    
+    <!-- Abstract Need -->
+    <Class abstract="true" name="AbstractNeed">
+        <Attribute name="description">
+            <type>
+                <javaclass name="curam.creole.value.Message"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>
+        
+        <Attribute name="identifier">
+            <type>
+                <javaclass name="String"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>         
+        
+        <Attribute name="appropriate">
+            <type>
+                <javaclass name="Boolean"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>
+        
+        <Attribute name="priority">
+            <type>
+                <javaclass name="Number"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>                                                                                                                                                                                      
+    </Class>    
+    
+    <!-- Abstract Screening -->
+    <Class abstract="true" name="AbstractScreening">
+        <Attribute name="description">
+            <type>
+                <javaclass name="curam.creole.value.Message"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>
+        
+        <Attribute name="appropriate">
+            <type>
+                <javaclass name="Boolean"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>
+        
+        <Attribute name="identifier">
+            <type>
+                <javaclass name="String"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>                                                                                                                            
+    </Class>    
+    <!-- End Abstract Screening -->
+    
+    <!-- AbstractIntakeApplication -->
+    <Class abstract="true" name="AbstractIntakeApplication">
+        <Attribute name="description">
+            <type>
+                <javaclass name="curam.creole.value.Message"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>
+        
+        <Attribute name="appropriate">
+            <type>
+                <javaclass name="Boolean"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>
+        
+        <Attribute name="identifier">
+            <type>
+                <javaclass name="String"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>                                                                                                                            
+    </Class>    
+    <!-- End AbstractIntakeApplication --> 
+    
+    <Class name="AbstractAlertMessage" abstract="true">
+        <Attribute name="alertRequired">
+            <type>
+                <javaclass name="Boolean"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>                        
+        </Attribute>
+        <Attribute name="message">
+            <type>
+                <javaclass name="curam.creole.value.Message"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>            
+        </Attribute>        
+    </Class>    
+    
+    <!-- Abstract Service -->
+    <Class abstract="true" name="AbstractService">
+        <Attribute name="description">
+            <type>
+                <javaclass name="curam.creole.value.Message"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>
+        
+        <Attribute name="appropriate">
+            <type>
+                <javaclass name="Boolean"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>   
+        
+        <Attribute name="identifier">
+            <type>
+                <javaclass name="String"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>
+        
+        <Attribute name="groupInd">
+            <type>
+                <javaclass name="Boolean"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>    
+        
+        <Attribute name="needIdentifier">
+            <type>
+                <javaclass name="String"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+         </Attribute>        
+        
+    </Class>   
+    
+    <!--  Abstract program  -->
+    <Class abstract="true" name="AbstractProgram">
+        <Attribute name="description">
+            <type>
+                <javaclass name="curam.creole.value.Message"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>
+        
+        <Attribute name="appropriate">
+            <type>
+                <javaclass name="Boolean"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>
+        
+        <Attribute name="programTypeReference">
+            <type>
+                <javaclass name="String"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>       
+        
+        <Attribute name="needIdentifier">
+            <type>
+                <javaclass name="String"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>
+                                                                                                                                                                                                                                                          
+    </Class>              
+    
 </RuleSet>

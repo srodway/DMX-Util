@@ -1,26 +1,30 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-MenuItem.Title.ReserveNextTask=Get Next Task
-MenuItem.Tooltip.ReserveNextTask=Get Next Task
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-MenuItem.Title.ReserveNextTaskFromPreferredOrgUnit=Get Next Task From Preferred Org Unit
-MenuItem.Tooltip.ReserveNextTaskFromPreferredOrgUnit=Get Next Task From Preferred Org Unit
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009 Curam Software Ltd.
+  All rights reserved.
 
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="CustomHome">
 
-MenuItem.Title.ReserveNextTaskFromPreferredQueue=Get Next Task From Preferred Queue
-MenuItem.Tooltip.ReserveNextTaskFromPreferredQueue=Get Next Task From Preferred Queue
+  <!-- BEGIN, CR00221314, GD -->
+  <!-- No action menu required for this workspace -->
+  <!-- END, CR00221314 -->
+  
+  <!-- No Page Param -->
+  
+  <!-- No Details panel -->
+  <tc:context tab-name="Details.Name.MyWorkspace" tab-title="Details.Title.MyWorkspace"/>
 
-MenuItem.Title.ReserveNextTaskFromQueue=Get Next Task From Queue
-MenuItem.Tooltip.ReserveNextTaskFromQueue=Get Next Task From Queue
+  <!-- No Navigation panel -->
+  <tc:navigation page-id="CustomHome"/>
 
-MenuItem.Title.CreateTask=New Task
-MenuItem.Tooltip.CreateTask=New Task
-
-MenuItem.Title.InboxOptions=Task Preferences
-MenuItem.Tooltip.InboxOptions=Task Preferences
+</tc:tab-config>

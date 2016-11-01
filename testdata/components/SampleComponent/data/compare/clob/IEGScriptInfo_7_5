@@ -6,634 +6,259 @@
  
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
-<ieg-script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="ieg-schema.xsd"
-	finish-page="IEG2_resolveFinishScript"
-	quit-page="IEG2_resolveFinishScript">
-	<identifier id="IEGSample" scriptversionnumber="V1" type="Intake" />
-	<section>
-		<title id="AboutYouSection.Title">
-			<![CDATA[About You]]>
-		</title>
-		<icon enabled-image="sample_about_you"
-			current-image="sample_about_you" />
-		<question-page id="AboutYouPage" entity="Person"
-			criteria="isPrimary==true" progress="0" show-back-button="false">
-			<title id="PrimaryPersonPage.Title">
-				<![CDATA[About You]]>
-			</title>
-			<description id="PrimaryPersonPage.Description">
-				<![CDATA[Please enter some information about yourself]]>
-			</description>
-			<icon image="sample_title_aboutyou"/>
-			<legislation id="PrimaryPersonPage.Legislation">http://www.ibm.com/software/products/en/social-programs</legislation>
-                        <policy id="PrimaryPersonPage.Policy">http://www.ibm.com/software/products/en/social-programs</policy>
-			<set-attribute id="isPrimary" expression="true" />
-			<validation
-				expression="Person.middleName != &quot;J&quot;">
-				<message id="FIRSTNAME_NOTBLANK_ID">
-					<![CDATA[Your middle name can't be 'J']]>
-				</message>
-			</validation>
-			<cluster>
-				<layout>
-					<label-width>0</label-width>
-				</layout>
-				<display-text id="RequiredFields.Text">
-					<![CDATA[<span style="color: orange;">* indicates a required field</span>]]>
-				</display-text>
-			</cluster>
-			<cluster>
-				<title id="DetailsCluster.Title">
-					<![CDATA[Personal Details]]>
-				</title>
-				<description id="DetailsCluster.Description">
-					<![CDATA[Enter your details here]]>
-				</description>
-				<help-text id="DetailsCluster.HelpText">
-					<![CDATA[Use this screen to enter the following details about yourself]]>
-				</help-text>
-				<layout>
-					<num-cols>2</num-cols>
-				</layout>
-				<question id="firstName" mandatory="true">
-					<label id="FirstName.Label">
-						<![CDATA[First Name:]]>
-					</label>
-					<help-text id="FirstName.HelpText">
-						<![CDATA[Your first, or given name]]>
-					</help-text>
-					<legislation id="FirstName.Legislation">http://www.ibm.com/software/products/en/social-programs</legislation>
-                                        <policy id="FirstName.Policy">http://www.ibm.com/software/products/en/social-programs</policy>
-				</question>
-				<question id="middleName">
-					<label id="MiddleName.Label">
-						<![CDATA[Middle Name:]]>
-					</label>
-					<help-text id="MiddleName.HelpText">
-						<![CDATA[Your middle name or initial]]>
-					</help-text>
-					<legislation id="MiddleName.Legislation">http://www.ibm.com/software/products/en/social-programs</legislation>
-                                        <policy id="MiddleName.Policy">http://www.ibm.com/software/products/en/social-programs</policy>
-				</question>
-				<question id="lastName">
-					<label id="lastName.Label">
-						<![CDATA[Last Name:]]>
-					</label>
-					<help-text id="LastName.HelpText">
-						<![CDATA[Your last, or family name]]>
-					</help-text>
-					<legislation id="LastName.Legislation">http://www.ibm.com/software/products/en/social-programs</legislation>
-                                        <policy id="LastName.Policy">http://www.ibm.com/software/products/en/social-programs</policy>
-				</question>
-				<question id="gender" mandatory="true">
-					<label id="Gender.Label">
-						<![CDATA[Gender:]]>
-					</label>
-					<help-text id="Gender.HelpText">
-						<![CDATA[Your gender (choose from either male or female]]>
-					</help-text>
-				</question>
-				<question id="dateOfBirth" mandatory="true">
-					<label id="DateOfBirth.Label">
-						<![CDATA[Date Of Birth:]]>
-					</label>
-					<help-text id="DateOfBirth.HelpText">
-						<![CDATA[Your date of birth (Format is: mm/dd/yyyy)]]>
-					</help-text>
-				</question>
-			</cluster>
-			<cluster>
-				<question id="isStudent" control-question="true"
-					control-question-type="IEG_BOOLEAN">
-					<label id="IsStudent.Label">
-						<![CDATA[Are you a student?]]>
-					</label>
-				</question>
-			</cluster>
-			<condition expression="isStudent==true">
-				<cluster>
-					<question id="schoolName">
-						<label id="SchoolName.Label">
-							<![CDATA[School Name:]]>
-						</label>
-					</question>
-				</cluster>
-			</condition>
-		</question-page>
-		<summary-page id="AboutYouSummary" entity="Person"
-			criteria="isPrimary==true" progress="10">
-			<title id="AboutYouSummary.Title">
-				<![CDATA[Information about you]]>
-			</title>
-			<description id="AboutYouSummary.Description">
-				<![CDATA[Here's the information you've entered about yourself]]>
-			</description>
-			<icon image="sample_title_aboutyou"/>
-			<cluster>
-				<title id="DetailsCluster.Title">
-					<![CDATA[Person Details]]>
-				</title>
-				<description id="DetailsCluster.Description">
-					<![CDATA[Enter the details for this person here]]>
-				</description>
-				<edit-link start-page="AboutYouPage" />
-				<layout>
-					<num-cols>2</num-cols>
-				</layout>
-				<question id="firstName">
-					<label id="FirstName.Label">
-						<![CDATA[First Name:]]>
-					</label>
-				</question>
-				<question id="middleName">
-					<label id="MiddleName.Label">
-						<![CDATA[Middle Name:]]>
-					</label>
-				</question>
-				<question id="lastName">
-					<label id="lastName.Label">
-						<![CDATA[Last Name:]]>
-					</label>
-				</question>
-				<question id="gender">
-					<label id="Gender.Label">
-						<![CDATA[Gender:]]>
-					</label>
-				</question>
-				<question id="dateOfBirth">
-					<label id="DateOfBirth.Label">
-						<![CDATA[Date Of Birth:]]>
-					</label>
-				</question>
-			</cluster>
-			<cluster>
-				<question id="isStudent" control-question="true"
-					control-question-type="IEG_BOOLEAN">
-					<label id="IsStudent.Label">
-						<![CDATA[Are you a student?]]>
-					</label>
-				</question>
-			</cluster>
-			<condition expression="isStudent==true">
-				<cluster>
-					<question id="schoolName">
-						<label id="SchoolName.Label">
-							<![CDATA[School Name:]]>
-						</label>
-					</question>
-				</cluster>
-			</condition>
-		</summary-page>
-	</section>
-	<section>
-		<title id="Household.Title">
-			<![CDATA[Household]]>
-		</title>
-		<icon enabled-image="sample_household"
-			disabled-image="sample_household_disabled"
-			current-image="sample_household" />
-		<question-page id="HouseholdPage" progress="10">
-			<title id="LoopControlPage.Title">
-				<![CDATA[Household Details]]>
-			</title>
-			<description id="LoopControlPage.Description">
-				<![CDATA[Please tell us some information about your household]]>
-			</description>
-			<icon image="sample_title_household"/>
-			<cluster>
-				<title id="DetailsCluster.Title">
-					<![CDATA[Details]]>
-				</title>
-				<question id="numPeople" control-question="true"
-					control-question-type="IEG_INT32" mandatory="true">
-					<label id="NumPeople.Label">
-						<![CDATA[How many other people are in your household?]]>
-					</label>
-				</question>
-			</cluster>
-		</question-page>
-		<loop loop-type="for" loop-expression="numPeople"
-			entity="Person" criteria="isPrimary==false">
-			<question-page id="PersonDetailsPage"
-				show-person-tabs="true" progress="20">
-				<title id="PersonDetailsPage.Title">
-					<![CDATA[Household Member Details]]>
-				</title>
-				<description id="PersonDetailsPage.Description">
-					<![CDATA[Please enter the details for the next person in your household]]>
-				</description>
-				<icon image="sample_title_household"/>
-				<cluster>
-					<title id="DetailsCluster.Title">
-						<![CDATA[Person Details]]>
-					</title>
-					<description id="DetailsCluster.Description">
-						<![CDATA[Enter the details for this person below]]>
-					</description>
-					<question id="firstName" mandatory="true">
-						<label id="FirstName.Label">
-							<![CDATA[First Name:]]>
-						</label>
-					</question>
-					<question id="middleName">
-						<label id="MiddleName.Label">
-							<![CDATA[Middle Name:]]>
-						</label>
-					</question>
-					<question id="lastName">
-						<label id="lastName.Label">
-							<![CDATA[Last Name:]]>
-						</label>
-					</question>
-					<question id="gender" mandatory="true">
-						<label id="Gender.Label">
-							<![CDATA[Gender:]]>
-						</label>
-					</question>
-					<question id="dateOfBirth" mandatory="true">
-						<label id="DateOfBirth.Label">
-							<![CDATA[Date Of Birth:]]>
-						</label>
-					</question>
-				</cluster>
-				<cluster>
-					<question id="isStudent" control-question="true"
-						control-question-type="IEG_BOOLEAN">
-						<label id="IsStudent.Label">
-							<![CDATA[Is this person a student?]]>
-						</label>
-					</question>
-				</cluster>
-				<condition expression="isStudent==true">
-					<cluster>
-						<question id="schoolName">
-							<label id="SchoolName.Label">
-								<![CDATA[School Name:]]>
-							</label>
-						</question>
-					</cluster>
-				</condition>
-			</question-page>
-		</loop>
-		<relationship-page id="RelationshipPage" show-person-tabs="true"
-			progress="40">
-			<title id="RelationshipPage.Title">
-				<![CDATA[Household Relationships]]>
-			</title>
-			<description id="RelationshipPage.Description">
-				<![CDATA[Please enter the relationships for %1s below]]>
-				<argument id="Person.firstName" />
-			</description>
-			<icon image="sample_title_household"/>
-			<question id="caretakerInd">
-				<label id="CaretakerInd.Label">
-					<![CDATA[Is this a non-parent caretaker relationship?]]>
-				</label>
-			</question>
-		</relationship-page>
-		<summary-page id="HouseholdSummary" progress="45">
-			<title id="HouseholdSummary.Title">
-				<![CDATA[Household Summary]]>
-			</title>
-			<icon image="sample_title_household"/>
-			<list entity="Person" criteria="isPrimary==false">
-				<title id="PersonList.Title">
-					<![CDATA[People in your household]]>
-				</title>
-				<description id="PersonList.Description">
-					<![CDATA[Here are some details about all the people you have entered for your household]]>
-				</description>
-				<edit-link start-page="PersonDetailsPage" />
-				<delete-link />
-				<add-link start-page="PersonDetailsPage"
-					end-page="RelationshipPage" />
-				<column id="firstName">
-					<title id="FirstName.Title">
-						<![CDATA[First Name]]>
-					</title>
-				</column>
-				<column id="lastName">
-					<title id="LastName.Title">
-						<![CDATA[Last Name]]>
-					</title>
-				</column>
-				<column id="gender">
-					<title id="Gender.Title">
-						<![CDATA[Gender]]>
-					</title>
-				</column>
-			</list>
-			<relationship-summary-list>
-				<title id="RelationshipSummaryList.Title">
-					<![CDATA[Person Relationships Summary]]>
-				</title>
-				<description
-					id="PersonRelationshipSummaryList.Description">
-					<![CDATA[Person Relationship Summary Details]]>
-				</description>
-				<column id="caretakerInd">
-					<title id="CaretakerInd.Title">
-						<![CDATA[NPCR]]>
-					</title>
-				</column>
-				<edit-link start-page="RelationshipPage"/>
-			</relationship-summary-list>
-		</summary-page>
-	</section>
-	<section>
-		<title id="ExtraHouseholdInfo.Title">
-			<![CDATA[Extra Info]]>
-		</title>
-		<question-page id="HouseholdInfo" progress="50">
-			<title id="HouseholdInfo.Title">
-				<![CDATA[Extra Household Information]]>
-			</title>
-			<description id="HouseholdInfo.Description">
-				<![CDATA[Please answer the questions below to give us some more information on the people in your household]]>
-			</description>
-			<cluster>
-				<question id="anyoneBlind" control-question="true"
-					control-question-type="IEG_BOOLEAN">
-					<label id="AnyoneBlind.Label">
-						<![CDATA[Is anyone in your household blind?]]>
-					</label>
-				</question>
-			</cluster>
-			<condition expression="anyoneBlind==true">
-				<cluster>
-					<layout>
-						<label-width>0</label-width>
-					</layout>
-					<list-question entity="Person" id="isBlind">
-						<label id="IsBlind.Label">
-							<![CDATA[Please choose the people who are blind:]]>
-						</label>
-						<item-label>
-							<label-element attribute-id="firstName" />
-						</item-label>
-					</list-question>
-				</cluster>
-			</condition>
-			<cluster>
-				<question id="anyonePregnant" control-question="true"
-					control-question-type="IEG_BOOLEAN">
-					<label id="AnyonePregnant.Label">
-						<![CDATA[Is anyone in your household pregnant?]]>
-					</label>
-				</question>
-			</cluster>
-			<condition expression="anyonePregnant==true">
-				<cluster>
-					<layout>
-						<label-width>0</label-width>
-					</layout>
-					<list-question entity="Person" id="isPregnant"
-						criteria="(gender==&quot;SX2&quot;) and (age &gt; 14)">
-						<label id="IsPregnant.Label">
-							<![CDATA[Please choose the women who are pregnant:]]>
-						</label>
-						<item-label>
-							<label-element attribute-id="firstName" />
-						</item-label>
-					</list-question>
-				</cluster>
-			</condition>
-		</question-page>
-		<summary-page id="ExtraHHSummary" progress="55">
-			<title id="ExtraHHSummary.Title">
-				<![CDATA[Household Information]]>
-			</title>
-			<description id="ExtraHHSummary.Description">
-				<![CDATA[Here's a summary of the extra information you;ve given us about your household]]>
-			</description>
-			<cluster>
-				<question id="anyoneBlind" control-question="true"
-					control-question-type="IEG_BOOLEAN">
-					<label id="AnyoneBlind.Label">
-						<![CDATA[Is anyone in your household blind?]]>
-					</label>
-				</question>
-			</cluster>
-			<condition expression="anyoneBlind==true">
-				<cluster>
-					<layout>
-						<label-width>0</label-width>
-					</layout>
-					<list-question entity="Person" id="isBlind">
-						<label id="IsBlind.Label">
-							<![CDATA[Please choose the people who are blind:]]>
-						</label>
-						<item-label>
-							<label-element attribute-id="firstName" />
-						</item-label>
-					</list-question>
-				</cluster>
-			</condition>
-			<cluster>
-				<question id="anyonePregnant" control-question="true"
-					control-question-type="IEG_BOOLEAN">
-					<label id="AnyonePregnant.Label">
-						<![CDATA[Is anyone in your household pregnant?]]>
-					</label>
-				</question>
-			</cluster>
-			<condition expression="anyonePregnant==true">
-				<cluster>
-					<layout>
-						<label-width>0</label-width>
-					</layout>
-					<list-question entity="Person" id="isPregnant"
-						criteria="(gender==&quot;SX2&quot;) and (age &gt; 14)">
-						<label id="IsPregnant.Label">
-							<![CDATA[Please choose the women who are pregnant:]]>
-						</label>
-						<item-label>
-							<label-element attribute-id="firstName" />
-						</item-label>
-					</list-question>
-				</cluster>
-			</condition>
-		</summary-page>
-	</section>
-	<section>
-		<title id="IncomeSection.Title">
-			<![CDATA[Income]]>
-		</title>
-		<icon enabled-image="sample_job_income"
-			disabled-image="sample_job_income_disabled"
-			current-image="sample_job_income" />
-		<question-page id="AnyIncomesPage" progress="60">
-			<title id="IncomeListQuestionPage.Title">
-				<![CDATA[Who in your household has income?]]>
-			</title>
-			<icon image="sample_title_income"/>
-			<cluster>
-				<question id="anyoneHaveIncome" control-question="true"
-					control-question-type="IEG_BOOLEAN">
-					<label id="AnyoneIncome.Label">
-						<![CDATA[Does anyone have income?]]>
-					</label>
-				</question>
-			</cluster>
-			<condition expression="anyoneHaveIncome==true">
-				<cluster>
-					<layout>
-						<label-width>0</label-width>
-					</layout>
-					<list-question id="hasIncome" entity="Person">
-						<label id="HasIncome.Label">
-							<![CDATA[Which people have income?]]>
-						</label>
-						<item-label>
-							<label-element attribute-id="firstName" />
-						</item-label>
-					</list-question>
-				</cluster>
-			</condition>
-		</question-page>
-		<loop loop-type="for-each" entity="Person"
-			criteria="hasIncome==true">
-			<loop loop-type="while" loop-expression="hasMoreIncome"
-				entity="Income">
-				<question-page id="IncomePage" entity="Income"
-					show-person-tabs="true" progress="70">
-					<title id="IncomePage.Title">
-						<![CDATA[Income Details]]>
-					</title>
-					<icon image="sample_title_income"/>
-					<cluster>
-						<title id="IncomeDetails.Title">
-							<![CDATA[Income Details]]>
-						</title>
-						<question id="type">
-							<label id="Type.Label">
-								<![CDATA[Type:]]>
-							</label>
-						</question>
-						<question id="amount">
-							<label id="Amount.Label">
-								<![CDATA[Amount:]]>
-							</label>
-						</question>
-						<question id="hasMoreIncome"
-							control-question="true" control-question-type="IEG_BOOLEAN">
-							<label id="ContinueQuestion.Label">
-								<![CDATA[Does %1s have any more income?]]>
-								<argument id="Person.firstName" />
-							</label>
-						</question>
-					</cluster>
-				</question-page>
-			</loop>
-		</loop>
-		<summary-page id="IncomeSummary" progress="75">
-			<title id="IncomeSummary.Title">
-				<![CDATA[Income Summary]]>
-			</title>
-			<description id="Page1.Description">
-				<![CDATA[Here's a summary of the incomes we've captured for your household]]>
-			</description>
-			<icon image="sample_title_income"/>
-			<list entity="Person" show-icons="true"
-				criteria="hasIncome==true">
-				<title id="IncomeList.Title">
-					<![CDATA[Income]]>
-				</title>
-				<description id="IncomeList.Description">
-					<![CDATA[Here's the income details you've entered for all the people in your household]]>
-				</description>
-				<edit-link start-page="IncomePage" />
-				<delete-link />
-				<add-link start-page="IncomePage" />
-				<column id="firstName">
-					<title id="FirstName.Title">
-						<![CDATA[First Name]]>
-					</title>
-				</column>
-				<list entity="Income">
-					<column id="type">
-						<title id="IncomeType.Title">
-							<![CDATA[Income Type]]>
-						</title>
-					</column>
-					<column id="amount">
-						<title id="IncomeAmount.Title">
-							<![CDATA[Income Amount]]>
-						</title>
-					</column>
-				</list>
-			</list>
-		</summary-page>
-	</section>
-	<section>
-		<title id="InsuranceSection.Title">
-			<![CDATA[Insurance]]>
-		</title>
-		<icon enabled-image="sample_insurance"
-			current-image="sample_insurance"
-			disabled-image="sample_insurance_disabled" />
-		<question-page id="InsurancePage" entity="Insurance"
-			progress="80">
-			<title id="InsuranceDetails.Title">
-				<![CDATA[Insurance Details]]>
-			</title>
-			<description id="GeneralInsuranceDetails.Description">
-				<![CDATA[Please enter these general insurance details]]>
-			</description>
-			<icon image="sample_title_insurance"/>
-			<cluster>
-				<title id="PolicyDetails.Title">
-					<![CDATA[Policy details]]>
-				</title>
-				<question id="policyType">
-					<label id="PolicyType.Label">
-						<![CDATA[What type of insurance policy do you have?]]>
-					</label>
-				</question>
-				<question id="policyNumber">
-					<label id="PolicyNumber.Label">
-						<![CDATA[What is the number of your insurance policy?]]>
-					</label>
-				</question>
-			</cluster>
-			<cluster>
-				<layout>
-					<label-width>0</label-width>
-				</layout>
-				<list-question
-					link-entity="InsuranceRelationship.personID" entity="Person">
-					<label id="InsuranceMembers.Label">
-						<![CDATA[Select Insurance Member]]>
-					</label>
-					<item-label>
-						<label-element attribute-id="firstName" />
-					</item-label>
-				</list-question>
-			</cluster>
-		</question-page>
-		<summary-page id="InsuranceSummary" entity="Insurance"
-			progress="100">
-			<title id="InsuranceSummary.Title">
-				<![CDATA[Insurance Summary]]>
-			</title>
-			<icon image="sample_title_insurance"/>
-			<list entity="Insurance">
-				<title id="InsuranceList.Title">
-					<![CDATA[Insurance Details]]>
-				</title>
-				<column id="policyType">
-					<title id="PolicyType.Title">
-						<![CDATA[Policy Type]]>
-					</title>
-				</column>
-				<column id="policyNumber">
-					<title id="PolicyNumber.Title">
-						<![CDATA[Policy Number]]>
-					</title>
-				</column>
-			</list>
-		</summary-page>
-	</section>
+-->
+<ieg-script
+  config-properties="SDMAssessmentIEGConfig"
+  finish-page="AssessmentDelivery_executeAssessment"
+  quit-page="AssessmentScript_exit"
+  show-progress-bar="false"
+  show-sections="false"
+  validate-save-and-exit="true"
+>
+  <identifier
+    id="SDMCGSN"
+    scriptversionnumber="1"
+    type="DecisionAssist"
+  />
+  <section>
+    <title id="Section.AssessmentDetails.Title">Assessment Details Section</title>
+    <question-page
+      entity="Person"
+      id="CaregiverStrengthNeeds"
+      progress="0"
+      read-only="false"
+      set-focus="true"
+      show-back-button="false"
+      show-exit-button="true"
+      show-next-button="true"
+      show-person-tabs="false"
+      show-save-exit-button="true"
+    >
+      <title id="QuestionPage_CaregiverStrengthNeeds.Title">SDM\u00AE Caregiver Strengths and Needs Assessment</title>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>right</label-alignment>
+        </layout>
+        <display-text id="DisplayText.label">&lt;p style="font-family:tahoma;font-size:12px;color:#4e4e4e"&gt;The caregiver strengths and needs assessment (CGSNA) instrument is used to systematically identify critical family strengths and needs related to the caregiver and to help develop effective case plans. The following items should be considered for each caregiver. Worker should base selection on his/her assessment for each item, taking into account the family's perspective, child's perspective where appropriate, worker observations, collateral contacts, and available records. Refer to accompanying definitions to determine the most appropriate response.&lt;/p&gt;</display-text>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          display="horizontal"
+          entity="Person"
+          id="substanceAbuse"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="ListQuestion.SubstanceAbuse">SN1. Substance Abuse/Use</label>
+          <description id="questionDescription.substanceAbuse">Substances include alcohol, illegal drugs, inhalants, prescription/over-the-counter drugs.</description>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="help.SubstanceAbuse">&lt;b&gt;a. Teaches and demonstrates healthy understanding of alcohol and drugs. &lt;/b&gt;Caregiver may use alcohol or prescribed drugs; however, use does not negatively affect parenting skills and functioning, and caregiver teaches and demonstrates an understanding of the choices made about use or abstinence and the effects of alcohol and drugs on behavior and society. &lt;br /&gt;&lt;b&gt;b. Alcohol or prescribed drug use or no use. &lt;/b&gt;Caregiver may have a history of substance abuse or may currently use alcohol or prescribed drugs; however, it does not negatively affect parenting skills and functioning, or caregiver does not use alcohol or drugs. &lt;br/&gt;&lt;b&gt;c. Alcohol or drug abuse. &lt;/b&gt;Caregiver continues to use despite negative consequences in some areas such as family, social, health, legal, or financial. Needs help to achieve and/or maintain abstinence from alcohol or drugs. &lt;br/&gt;&lt;b&gt;d. Alcohol or drug dependency. &lt;/b&gt;Caregiver's use of alcohol or drugs results in behaviors that impede ability to meet his/her own and/or his/her child's basic needs. Experiences some degree of impairment in most areas including family, social, health, legal, and financial. Needs intensive structure and support to achieve abstinence from alcohol or drugs.</help-text>
+        </list-question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          entity="Person"
+          id="domesticViolence"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="Question.HouseholdRelationships">SN2. Household Relationships/Domestic Violence</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="help.HouseholdRelationships">&lt;b&gt;a. Supportive. &lt;/b&gt;Internal/external stressors (i.e., illness, financial problems, divorce, special needs) may be present, but household maintains positive interactions (i.e., mutual affection, respect, open communication, empathy) and shares responsibilities that are mutually agreed upon by household members. Household members mediate disputes and promote non-violence in the home. Individuals are safe from threats, intimidation, or assaults by household members.&lt;br /&gt;&lt;b&gt;b. Minor/occasional discord. &lt;/b&gt;Internal/external stressors are present, but household is coping despite some disruption of positive interactions. Conflicts may be resolved through less adaptive strategies such as avoidance; however, individuals do not control each other or threaten physical or sexual assault within the household. &lt;br /&gt;&lt;b&gt;c. Frequent discord. &lt;/b&gt;Internal/external stressors are present, and household is consistently experiencing increased disruption of positive interactions coupled with lack of cooperation and/or emotional/verbal abuse. Custody and visitation issues are characterized by frequent conflicts. Caregiver's pattern of adult relationships creates significant stress for the child. Adult relationships are characterized by occasional physical outbursts that do not result in injuries and/or controlling behavior that results in isolation or restriction of activities. Both perpetrator and victim seek help in reducing threats of violence. &lt;br /&gt;&lt;b&gt;d. Chronic discord. &lt;/b&gt;Internal/external stressors are present, and household experiences minimal or no positive interactions. Custody and visitation issues are characterized by severe conflict, such as multiple instances of malicious reports to law enforcement and/or CPS. Caregiver's pattern of adult relationships place the child at risk for maltreatment and/or contribute to severe emotional distress. One or more household members use regular and/or severe physical violence. Individuals engage in physically assaultive behaviors toward household members. Violent or controlling behavior has resulted in injury (i.e., bruises, cuts, burns, welts, broken bones, etc.).</help-text>
+        </list-question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          entity="Person"
+          id="socialSupportSystem"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="NewListQuestionLabelID_1315562362219">SN3. Social Support System</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="help.SocialSupportSystem">&lt;b&gt;a. Strong support system. &lt;/b&gt;Family regularly engages with a strong, constructive, mutual-support system. Interacts with extended family, friends, cultural, religious, and/or community support or services that provide a wide range of resources. &lt;br /&gt;&lt;b&gt;b. Adequate support system. &lt;/b&gt;As needs arise, family uses extended family, friends, cultural, religious, and community resources to provide support and/or services such as childcare, transportation, supervision, role-modeling for parents and children, parenting and emotional support, guidance, etc. &lt;br /&gt;&lt;b&gt;c. Limited support system. &lt;/b&gt;Family has limited support system, is isolated, or is reluctant to use available support. Caregiver perceives services and supports as unavailable or access as limited. Individuals may experience conflict with cultural/community identity that creates difficulties and/or cause internal conflict. &lt;br /&gt;&lt;b&gt;d. No support system. &lt;/b&gt;Family has no support system and does not utilize extended family and community resources. Connections with potential support networks are unavailable or perceived as unavailable due to lack of understanding of cultural/community and/or language differences. Household members experience conflict with cultural/community identity that is reflected in behavior. &lt;br /&gt;</help-text>
+        </list-question>
+      </cluster>
+      <cluster entity="Person">
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          entity="Person"
+          id="parentingSkills"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="Question.ParentingSkills">SN4. Parenting Skills</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="Help.ParentingSkills">&lt;b&gt;a. Strong skills. &lt;/b&gt;Caregiver displays good knowledge and understanding of age-appropriate parenting skills and integrates use on a daily basis. Caregiver expresses hope for and recognizes the child's abilities and strengths and encourages participation in family and community. Caregiver advocates for family and responds to changing needs. &lt;br /&gt;&lt;b&gt;b. Adequately parents and protects the child. &lt;/b&gt;Caregiver displays adequate, age-appropriate parenting patterns for the child in areas of expectations, discipline, communication, protection, and nurturing. Caregiver has basic knowledge and skills to parent. &lt;br /&gt; &lt;b&gt;c. Inadequately parents and protects the child. &lt;/b&gt;Improvement of basic parenting skills is needed by caregiver. Caregiver has some unrealistic expectations and gaps in parenting skills, demonstrates poor knowledge of age-appropriate disciplinary methods, and/or lacks knowledge of child development that interferes with effective parenting. &lt;br /&gt;&lt;b&gt;d. Destructive/abusive parenting. &lt;/b&gt;Caregiver displays destructive/abusive parenting patterns that result in harm to the child.</help-text>
+        </list-question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          display="horizontal"
+          entity="Person"
+          id="mentalHealthCopingSkills"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="ListQuestion.MentalHealth">SN5. Mental Health/Coping Skills</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="help.mentalHealth">&lt;b&gt;a. Strong coping skills. &lt;/b&gt; Caregiver demonstrates the ability to deal with adversity, crises, and long-term problems in a constructive manner. Demonstrates realistic, logical thinking and judgment. Displays resiliency; has a positive, hopeful attitude. &lt;br /&gt;&lt;b&gt;b. Adequate coping skills. &lt;/b&gt;Caregiver demonstrates emotional responses that are consistent with circumstances; displays no apparent inability to cope with adversity, crises, or long-term problems. &lt;br /&gt;&lt;b&gt;c. Mild to moderate symptoms. &lt;/b&gt; Caregiver displays periodic mental health symptoms including, but not limited to, depression, low self-esteem, or apathy. Caregiver has occasional difficulty dealing with situational stress, crises, or problems. &lt;br /&gt;&lt;b&gt;d. Chronic/severe symptoms. &lt;/b&gt;Caregiver displays chronic, severe mental health symptoms including, but not limited to, depression, apathy, or severe low self esteem. These symptoms impair the caregiver's ability to perform in one or more areas of parental functioning, employment, education, or provision of food and shelter. &lt;br /&gt;</help-text>
+        </list-question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          display="horizontal"
+          entity="Person"
+          id="resourceManagementBasicNeeds"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="Question.ResourceManagement">SN6. Resource Management/Basic Needs</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="help.ResourceManagement">&lt;b&gt;a. Resources sufficient to meet basic needs and are adequately managed. &lt;/b&gt; Caregiver has a history of consistently providing safe, healthy, and stable housing; nutritional food; and clothing. &lt;br /&gt;&lt;b&gt;b. Resources are limited but are adequately managed. &lt;/b&gt; Caregiver provides adequate housing, food, and clothing to meet basic needs. &lt;br /&gt;&lt;b&gt;c. Resources are insufficient or not well-managed. &lt;/b&gt; Caregiver provides housing, but it does not meet the basic needs of the child due to such things as inadequate plumbing, heating, wiring, or housekeeping. Food and/or clothing do not meet the child's basic needs. Family may be homeless; however, there is no evidence of harm or threat of harm to the child. &lt;br /&gt;&lt;b&gt;d. No resources or resources severely limited and/or mismanaged. &lt;/b&gt; Conditions exist in the household that have caused illness or injury to family members such as inadequate plumbing, heating, wiring, or housekeeping; there is no food; food is spoiled; or family members are malnourished. The child chronically presents with clothing that is unclean, inappropriate for weather conditions, or in poor repair. Family is homeless, which results in harm or threat of harm to the child.</help-text>
+        </list-question>
+      </cluster>
+      <cluster entity="Person">
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          display="horizontal"
+          entity="Person"
+          id="culturalIdentity"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="ListQuestion.CulturalIdentify">SN7. Cultural Identity</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="Help.CulturalIdendity">&lt;b&gt;a. Cultural component is sufficient and no conflict present. &lt;/b&gt; The child identifies with cultural and community heritage and beliefs and is connected with people who share similar belief systems. The child is aware of cultural/community resources, both formal and informal, and accesses them as needed. &lt;br /&gt;&lt;b&gt;b. No cultural component that supports or causes conflicts. &lt;/b&gt; The child identifies with cultural/community heritage and beliefs, practices, and traditions within the family. The child recognizes how to access resources in the greater community.  The child may experience some conflict and may struggle with cultural/community identity, yet he/she is able to cope. &lt;br /&gt;&lt;b&gt;c. Cultural component that causes some conflicts. &lt;/b&gt; The child experiences inter-generational and/or societal conflict surrounding values and norms related to cultural/community differences. The child perceives services and supports as unavailable or access as limited. Conflicts with cultural/community identity create difficulties for the child. &lt;br /&gt;&lt;b&gt;d. Cultural component that causes significant conflicts. &lt;/b&gt; The child is disconnected from cultural/community heritage and beliefs resulting in isolation, lack of support, and lack of access to resources. Connections are unavailable, or perceived as unavailable, due to lack of understanding of cultural and language differences of support networks. Conflicts with cultural/community identity result in problematic behavior.</help-text>
+        </list-question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          display="horizontal"
+          entity="Person"
+          id="physicalHealth"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="Question.PhysicalHealth">SN8. Physical Health</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="help.PhysicalHealth">&lt;b&gt;a. Preventive health care is practiced. &lt;/b&gt; Caregiver teaches and promotes good health. &lt;br /&gt;&lt;b&gt;b. Health issues do not affect family functioning. &lt;/b&gt; Caregiver has no current health concerns that affect family functioning. Caregiver accesses regular health resources for him/herself (e.g., medical/dental). &lt;br /&gt;&lt;b&gt;c. Health concerns/handicaps affect family functioning. &lt;/b&gt; Caregiver has health concerns or conditions that affect family functioning and/or family resources. &lt;br /&gt;&lt;b&gt;d. Serious health concerns/handicaps result in inability to care for the child. &lt;/b&gt; Caregiver has serious/chronic health problem(s) or condition(s) that affect his/her ability to care for and/or protect the child.</help-text>
+        </list-question>
+      </cluster>
+      <cluster>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          entity="Person"
+          id="familyIdentifiedStrengthNeed"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="Question.IdentifyStrengthNeed">SN9. Identified Caregiver Strengths/Needs (not covered in SN1-SN8)</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="help.IdentifiedStrengthNeed">If the caseworker is aware of additional strengths or needs of the family that were not addressed in the Caregiver Strengths and Needs Assessment, they should be documented in the text box below.</help-text>
+        </list-question>
+      </cluster>
+      <cluster entity="Assessment">
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question
+          control-question="false"
+          id="Comment"
+          mandatory="false"
+          multi-select="false"
+          show-field-help="false"
+        >
+          <label id="Question.Comment">Comment</label>
+          <layout>
+            <type>flow</type>
+            <num-rows>4</num-rows>
+          </layout>
+        </question>
+      </cluster>
+    </question-page>
+  </section>
 </ieg-script>

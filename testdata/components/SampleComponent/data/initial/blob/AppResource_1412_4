@@ -6,14 +6,18 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-MenuItem.Title.EditActivity=Edit Activity Details
-MenuItem.Tooltip.EditActivity=Edit Activity Details
+Page.Title=Log into your Account
+Page.Description=Login to your account.
 
-MenuItem.Title.EditSubflow=Edit Subflow Details
-MenuItem.Tooltip.EditSubflow=Edit Subflow Details
+LoginDetails.Title=Your Login Details
+LoginDetails.Description=Please enter your User Name and Password and click the Next button to continue.<span class="required">* Indicates a required field</span>
+LoginDetails.Help=Please enter the user name and password that you use to login to your account. If for some reason you cannot remember your password, click "Forgotten your password?" to set a new password. To set a new password you must know your user name and the answer to the secret question that you gave when you set up your account.
 
-MenuItem.Title.IncomingTransition=New Incoming Transition
-MenuItem.Tooltip.IncomingTransition=New Incoming Transition
+Username.Label=User Name: 
+Password.Label=Password: 
 
-MenuItem.Title.OutgoingTransition=New Outgoing Transition
-MenuItem.Tooltip.OutgoingTransition=New Outgoing Transition
+ForgottenPasswordLink.Title=Forgotten your password?
+
+ERR_MAX_INCORRECT_LOGINS_EXCEEDED=You have reached the maximum number of incorrect login attempts with this username. Please call the Customer Service Center for help at %1s
+ERR_DISABLED_ACCOUNT=Your account has been disabled. Please call the Customer Service Center for help at %1s.
+ERR_INVALID_USERNAME_OR_PASSWORD=Invalid username or password. Please try again.

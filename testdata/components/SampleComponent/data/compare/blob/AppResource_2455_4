@@ -1,58 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
+ 
+  Copyright IBM Corporation 2012, 2014. All Rights Reserved.
+
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2010, 2012 Curam Software Ltd.
+  Copyright 2010-2011 Curam Software Ltd.
   All rights reserved.
   
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="CPMRMSupervisorProviderGroupHome">
+--><sc:section xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-config" id="FINAPPSection" title="FinancialAppSection.title" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+  <sc:tab id="ReceivedPaymentsSearch"/>
+  <sc:tab id="RefundPersonPaymentsSearch"/>
+  <sc:tab id="RefundEmployerPaymentsSearch"/>
+  <sc:tab id="SuspenseAccountSearch"/>
+  <sc:tab id="IssuedPaymentsSearch"/>
+  <sc:tab id="CaseSearch"/>
+  <sc:tab id="MyItemsOfInterest"/>
+  <sc:tab id="InsuranceReturnPeriods"/>
+
+  <sc:tab id="FinLiabilitiesSearch"/>
+ 
+  <sc:tab id="FinPersonHome"/>
+  <sc:tab id="FinPersonSearch"/>
+
+  <sc:tab id="FinEmployerHome"/>
+  <sc:tab id="FinEmployerSearch"/>
   
-  <nc:nodes>
-    <nc:navigation-page id="AppHome" page-id="ProviderManagement_providerGroupHome" title="Leaf.Title.Home"/>
-    
-    <!-- BEGIN, CR00306898, SS -->
-    <nc:navigation-group id="Financial" title="Folder.Title.Financial">
-      <nc:navigation-page id="PaymentsAndLiabilities" page-id="ProviderManagement_listProviderGroupPaymentTransactions" title="Page.Title.PaymentsAndLiabilities"/>
-      <nc:navigation-page id="SearchServiceInvoice" page-id="ProviderManagement_searchServiceInvoiceForProviderGroup" title="Page.Title.SearchServiceInvoice"/>
-      <nc:navigation-page id="Contracts" page-id="ProviderManagement_listContractsForProviderGroup" title="Page.Title.Contracts"/>      
-      <nc:navigation-page id="BankAccounts" page-id="ProviderManagement_listGroupBankAccount" title="Page.Title.BankAccounts"/>      
-    </nc:navigation-group>
-    <!-- END, CR00306898 -->
-    
-    <nc:navigation-group id="Credentials" title="Folder.Title.Credentials">
-      <nc:navigation-page id="Training" page-id="ProviderManagement_listTrainingProgramForProviderGroup" title="Page.Title.Training"/>
-      <nc:navigation-page id="BackgroundChecks" page-id="ProviderManagement_listBackgroundChecksForProviderGroup" title="Page.Title.BackgroundChecks"/>
-    </nc:navigation-group>
-    
-    <nc:navigation-group id="Relationships" title="Folder.Title.Relationships">
-      <nc:navigation-page id="ProviderGroupMembers" page-id="ProviderManagement_listProviderGroupMembers" title="Page.Title.ProviderGroupMembers"/>
-      <nc:navigation-page id="ProviderGroupParticipants" page-id="ProviderManagement_listParticipantForProviderGroup" title="Page.Title.ProviderGroupParticipants"/>
-    </nc:navigation-group>
-    
-    <nc:navigation-page id="Incidents" page-id="ProviderManagement_listIncidentForProviderGroup" title="Page.Title.Incidents"/>
-    
-    <!-- BEGIN, CR00, SS -->
-    <nc:navigation-group id="Contacts" title="Folder.Title.Contact">
-      <nc:navigation-page id="Address" page-id="ProviderManagement_listGroupAddress" title="Page.Title.Address"/>
-      <nc:navigation-page id="PhoneNumber" page-id="ProviderManagement_listGroupPhoneNumber" title="Page.Title.PhoneNumber"/>
-      <nc:navigation-page id="Communications" page-id="ProviderManagement_listGroupCommunication" title="Page.Title.Communication"/>      
-      <nc:navigation-page id="Notes" page-id="ProviderManagement_listGroupNote" title="Page.Title.Note"/>       
-      <nc:navigation-page id="EmailAddress" page-id="ProviderManagement_listGroupEmailAddress" title="Page.Title.EmailAddress"/>   
-      <nc:navigation-page id="WebAddress" page-id="ProviderManagement_listGroupWebAddress" title="Page.Title.WebAddress"/>
-    </nc:navigation-group>   
-    <!-- END, CR00 -->
-    
-    <nc:navigation-page id="UserRoles" page-id="Provider_listAdminRole" title="Leaf.Title.UserRoles"/>
-    
-  </nc:nodes>
+  <sc:tab id="FinExternalPartySearch"/>
+  <sc:tab id="FinExternalParty"/>
+  <sc:tab id="ExternalUserHome"/>  
+
+  <sc:tab id="FinUtility"/> 
+  <sc:tab id="UtilitySearch"/>
+  <sc:tab id="FinOverPaymentCase"/>
+  <sc:tab id="FinUnderPaymentCase"/>
+  <sc:tab id="FinPaymentCorrectionCase"/>
   
-  
-</nc:navigation>
+  <!-- BEGIN, CR00248774, NS -->
+  <!-- Service Plans -->
+  <sc:tab id="PlanItemView"/>
+  <sc:tab id="ServicePlanHome"/>
+  <sc:tab id="ServiceUnitPlanItemView"/>
+  <sc:tab id="IntegratedServicePlan"/>
+  <sc:tab id="ServicePlanGroup"/>
+  <sc:tab id="CustomPlanItemView"/>
+  <!-- END, CR00248774 -->
+
+  <sc:shortcut-panel-ref id="FINAPPSectionShortcuts"/>
+
+<sc:tab id="DynamicEvidenceObjectPDC000025719000101"/><sc:tab id="DynamicEvidenceObjectPDC000026019000101"/><sc:tab id="DynamicEvidenceObjectPDC000025919000101"/><sc:tab id="DynamicEvidenceObjectPDC000025719000102"/><sc:tab id="DynamicEvidenceObjectPDC000026019000102"/><sc:tab id="DynamicEvidenceObjectPDC000025919000102"/><sc:tab id="DynamicEvidenceObjectPDC000025819000101"/><sc:tab id="DynamicEvidenceObjectPDC000026519000101"/><sc:tab id="DynamicEvidenceObjectPDC000026519000102"/><sc:tab id="DynamicEvidenceObjectPDC000026219000101"/><sc:tab id="DynamicEvidenceObjectPDC000026319000101"/><sc:tab id="DynamicEvidenceObjectPDC000026419000101"/><sc:tab id="DynamicEvidenceObjectPDC000025619000101"/><sc:tab id="DynamicEvidenceObjectPDC000026119000101"/><sc:tab id="DynamicEvidenceObjectPDC000025619000102"/><sc:tab id="DynamicEvidenceObjectPDC000026119000102"/><sc:tab id="DynamicEvidenceObjectPDC000025619000103"/><sc:tab id="DynamicEvidenceObjectPDC000026119000103"/><sc:tab id="ServiceInvoiceView"/><sc:tab id="ServiceInvoiceSearch"/><sc:tab id="ProviderSearch"/><sc:tab id="DynamicEvidenceObjectDET000026220160929"/><sc:tab id="DynamicEvidenceObjectDET000026020160929"/><sc:tab id="DynamicEvidenceObjectDET000025720160929"/><sc:tab id="DynamicEvidenceObjectDET000025620160929"/><sc:tab id="DynamicEvidenceObjectDET000051220160929"/><sc:tab id="DynamicEvidenceObjectDET000026420160929"/><sc:tab id="DynamicEvidenceObjectDET000025820160929"/><sc:tab id="DynamicEvidenceObjectDET000025920160929"/><sc:tab id="DynamicEvidenceObjectDET000026320160929"/><sc:tab id="DynamicEvidenceObjectDET000026120160929"/></sc:section>

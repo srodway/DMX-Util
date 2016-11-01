@@ -2,22 +2,2453 @@
 <!--
   Licensed Materials - Property of IBM
   
-  Copyright IBM Corporation 2012. All Rights Reserved.
+  Copyright IBM Corporation 2013,2014. All Rights Reserved.
  
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
-
+-->
 <ieg-script
-finish-page="cw/FinishIEGScript.jspx" 
-quit-page="cw/ExitIEGScript.jspx" 
-show-sections="true" 
-show-progress-bar="true" 
-config-properties="online-app-config" 
-validate-save-and-exit="true">
-<identifier id="UniversalAccessTemplate" 
-scriptversionnumber="V1" 
-type="Intake"/>
-<section internal-id="1330012874500">
-</section>
+  config-properties="SDMAssessmentIEGConfig"
+  finish-page="AssessmentDelivery_executeAssessment"
+  quit-page="AssessmentScript_exit"
+  show-progress-bar="false"
+  show-sections="true"
+  validate-save-and-exit="true"
+>
+  <identifier
+    id="Reunification"
+    scriptversionnumber="2"
+    type="CER"
+  />
+  <section>
+    <title id="Section.Title.RiskAssessment">Risk</title>
+    <icon
+      current-image="nav_risk_assessment"
+      disabled-image="nav_risk_assessment_grey"
+      enabled-image="nav_risk_assessment"
+    />
+    <question-page
+      entity="Group"
+      id="RiskAssessment"
+      progress="0"
+      read-only="false"
+      set-focus="true"
+      show-back-button="false"
+      show-exit-button="true"
+      show-next-button="true"
+      show-person-tabs="false"
+      show-save-exit-button="false"
+    >
+      <title id="QuestionPage.AssessmentDetails.Title">SDM\u00AE Reunification Assessment</title>
+      <icon image="title_risk_assessment"/>
+      <cluster>
+        <title id="Cluster.Title.Risk">Risk</title>
+        <description id="RiskFactors.InstructionText">&lt;p
+          style="font-family:tahoma;font-size:11px;color:#4e4e4e;"&gt;Enter risk factors
+          regarding the children in the household.&lt;/p&gt;</description>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>70</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question
+          control-question="false"
+          id="initialCPSRiskLevel"
+          mandatory="true"
+          multi-select="false"
+          show-field-help="true"
+        >
+          <label id="Question.Label.InitialCPSRiskLevel">R1. Risk level on most recent referral (not
+            the reunification risk level or risk reassessment)</label>
+          <help-text id="Question.Help.InitialCPSRiskLevel">The initial risk level for the
+            investigation is used to score this item. Select 'no initial risk level' if there is no
+            risk assessment for this family.</help-text>
+        </question>
+        <question
+          control-question="false"
+          id="substantiations"
+          mandatory="true"
+          multi-select="false"
+          show-field-help="true"
+        >
+          <label id="Question.Label.Substantiations">R2. Has there been a new substantiation since
+            the initial risk assessment or last reunification reassessment?</label>
+          <help-text id="Question.Help.Substantiations">Answer 'YES' if complaints have been
+            received since the last risk assessment or reassessment.</help-text>
+        </question>
+      </cluster>
+    </question-page>
+    <callout
+      expression="WriteRUAChildAttribute()"
+      id="WriteRUAChildAttribute"
+    />
+    <question-page
+      entity="Caregiver"
+      id="RiskForCareGiver"
+      progress="0"
+      read-only="false"
+      set-focus="true"
+      show-back-button="true"
+      show-exit-button="true"
+      show-next-button="true"
+      show-person-tabs="false"
+      show-save-exit-button="true"
+    >
+      <title id="QuestionPage.AssessmentDetails.Title">SDM\u00AE Reunification Assessment</title>
+      <icon image="title_risk_assessment"/>
+      <cluster>
+        <title id="Cluster.Title.Risk.Caregiver.Page">Risk</title>
+        <layout>
+          <type>flow</type>
+          <num-cols>1</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <list-question
+          display="horizontal"
+          entity="Caregiver"
+          id="casePlanGoalsProgress"
+          mandatory="true"
+          show-field-help="true"
+          single-select="false"
+        >
+          <label id="Question.Label.CasePlanGoalsProgress">R3. Progress toward Case Plan Goal</label>
+          <item-label>
+            <label-element attribute-id="firstName"/>
+          </item-label>
+          <help-text id="Question.Help.CasePlanGoalsProgress">Please select one of the progress
+              options:&lt;ol&gt;&lt;li
+              style="list-style-type:lower-alpha"&gt;Successfully completed all services
+              recommended or actively participating in services; pursuing objectives detailed in the
+              case plan&lt;/li&gt;&lt;li
+              style="list-style-type:lower-alpha"&gt;Minimal participation in pursuing objectives
+              in the case plan&lt;/li&gt;&lt;li
+              style="list-style-type:lower-alpha"&gt;Has participated but is not meeting
+              objectives; refuses involvement in services or failed to comply/ participate as
+              required&lt;/li&gt;&lt;li style="list-style-type:lower-alpha"&gt;Refuses
+              involvement in programs or has exhibited a minimal level of participation with case
+              plan; rarely or never demonstrates desired
+              behavior&lt;/li&gt;&lt;/ol&gt;Rate each caregiver's progress with the
+              current case plan. Does Observation demonstrate the caregiver's application of learned
+              skills in interactions between child/caregiver, caregiver to caregiver, caregiver to
+              other significant adult, self-care, home maintenance, financial management, or
+              demonstration of skills toward reaching the behavioral objectives agreed upon in the
+              case plan? Or is the caregiver minimally participating in services OR has made progress
+              but is not fully complying with the objectives in the case plan? Or does the caregiver
+              refuse services, sporadically follows the case plan, or has not demonstrated the
+              necessary skills due to a failure or inability to participate? Choose the most
+              appropriate response.</help-text>
+        </list-question>
+      </cluster>
+    </question-page>
+    <callout
+      expression="GetRUARiskAssessmentResults1()"
+      id="GetRUARiskAssessmentResults1"
+    />
+    <question-page
+      entity="Assessment"
+      id="RiskAssessmentOverrides"
+      progress="0"
+      read-only="false"
+      set-focus="true"
+      show-back-button="true"
+      show-exit-button="true"
+      show-next-button="true"
+      show-person-tabs="false"
+      show-save-exit-button="true"
+    >
+      <title id="QuestionPage.AssessmentDetails.Title">SDM\u00AE Reunification Assessment</title>
+      <validation expression="Assessment.riskOverride==&quot;OVER10000&quot; or Assessment.riskOverride==&quot;OVER10002&quot; or (Assessment.riskOverride==&quot;OVER10001&quot; and ((isNotNull(Assessment.policyOverrideSexAbuseCaseInd) and Assessment.policyOverrideSexAbuseCaseInd==true) or (isNotNull(Assessment.policyOverrideInjuryInd) and Assessment.policyOverrideInjuryInd==true) or (isNotNull(Assessment.policyOverrideSevereInjuryInd) and Assessment.policyOverrideSevereInjuryInd==true) or (isNotNull(Assessment.policyOverrideDeathInd) and Assessment.policyOverrideDeathInd==true)))">
+        <message id="OverrideMessage.id">At least one condition must be specified if a policy
+          override has been selected.</message>
+      </validation>
+      <validation expression="Assessment.riskOverride==&quot;OVER10000&quot; or Assessment.riskOverride==&quot;OVER10001&quot; or ((Assessment.riskOverride==&quot;OVER10002&quot; and isNotNull(Assessment.overrideDirection) and (Assessment.overrideDirection==&quot;OD10000&quot; or Assessment.overrideDirection==&quot;OD10001&quot;)) and (isNotNull(Assessment.discretionaryOverrideReason) and Assessment.discretionaryOverrideReason!=&quot;&quot;))">
+        <message id="DiscMessageID">Override direction and override reason must be entered if a
+          discretionary override has been specified.</message>
+      </validation>
+      <icon image="title_risk_assessment"/>
+      <cluster>
+        <title id="Cluster.Title.FinalRisk">Risk</title>
+        <layout>
+          <type>flow</type>
+          <num-cols>2</num-cols>
+          <label-width>0</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <display-text id="AssessmentResults.Display.Text.DeterminedRiskLevel">&lt;span
+          style="font-family:tahoma;font-size:11px;color:#4e4e4e;margin-left:-5px;"&gt;Risk
+          Level: &lt;b&gt;%1s &lt;/b&gt; &lt;/span&gt; <argument id="Assessment.determinedRiskLevelDesc"/>
+        </display-text>
+        <display-text id="AssessmentResults.Display.Text.RiskScore">&lt;span
+          style="font-family:tahoma;font-size:11px;color:#4e4e4e;margin-left:-5px;"&gt;Risk
+          Score: &lt;b&gt;%1s &lt;/b&gt; &lt;/span&gt; <argument id="Assessment.riskScore"/>
+        </display-text>
+      </cluster>
+      <cluster>
+        <title id="Cluster.Title.Overrides">Override</title>
+        <description id="Cluster.Desc.Overrides">&lt;p
+          style="font-family:tahoma;font-size:11px;color:#4e4e4e;"&gt;If there is no change to
+          the overall risk level, select "No Override". If Policy Override is made, mark the
+          conditions that are applicable in the current review period. If any of the condtions are
+          applicable, override final risk level to Very High. If a discretionary override is made,
+          indicate reason. Risk level may be overridden one level higher or lower.&lt;/p&gt;</description>
+        <layout>
+          <type>flow</type>
+          <num-cols>2</num-cols>
+          <label-width>35</label-width>
+          <label-alignment>left</label-alignment>
+        </layout>
+        <question
+          control-question="false"
+          id="riskOverride"
+          mandatory="true"
+          multi-select="false"
+          show-field-help="true"
+        >
+          <label id="Question.Label.AssessmentOverride">Override</label>
+          <help-text id="Question.Help.PolicyOverrideOptions">Policy override options
+            include:&lt;ul&gt;&lt;li&gt; Sexual abuse; perpetrator has access to
+            child.&lt;li&gt; Has there been non-accidental injury to a child younger than 2
+            years old?.&lt;li&gt; Serious non-accidental physical injury requiring hospital
+            or medical treatment.&lt;li&gt; Death of a sibling as a result of abuse or
+            neglect in the household.&lt;/ul&gt;</help-text>
+        </question>
+      </cluster>
+      <condition expression="(Assessment.riskOverride==&quot;OVER10001&quot;)">
+        <cluster>
+          <description id="Cluster.Desc.PolicyOverrideQuestions">&lt;span style="margin-top:
+            5px; color:#5A5A5A"&gt;Indicate if any of the following are true in the current
+            review period.&lt;/span&gt;</description>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-width>70</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="policyOverrideSexAbuseCaseInd"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.SexAbuseOverride">Sexual abuse; perpetrator has access to
+              child.</label>
+          </question>
+          <question
+            control-question="false"
+            id="policyOverrideInjuryInd"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.InjuryOverride">Has there been non-accidental injury to a
+              child younger than 2 years old?</label>
+          </question>
+          <question
+            control-question="false"
+            id="policyOverrideSevereInjuryInd"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.SevereInjuryOverride">Serious non-accidental physical injury
+              requiring hospital or medical treatment.</label>
+          </question>
+          <question
+            control-question="false"
+            id="policyOverrideDeathInd"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.DeathOverride">Death of a sibling as a result of abuse or
+              neglect in the household.</label>
+          </question>
+        </cluster>
+      </condition>
+      <condition expression="(Assessment.riskOverride==&quot;OVER10002&quot;)">
+        <cluster>
+          <description id="Cluster.Desc.DiscOverrideReason">&lt;span style="margin-top: 5px;
+            color:#5A5A5A"&gt;"Reunification risk level may be adjusted up or down one level
+            with a valid reason.&lt;/span&gt;</description>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-width>40</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="overrideDirection"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.AssessmentOverrideDirection">Override Direction</label>
+          </question>
+          <question
+            control-question="false"
+            id="discretionaryOverrideReason"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.DiscretionaryOverrideReason">Override Reason</label>
+            <layout>
+              <type>flow</type>
+              <num-rows>4</num-rows>
+            </layout>
+          </question>
+        </cluster>
+      </condition>
+    </question-page>
+    <callout
+      expression="GetRUAFinalRisk1(Group.initialCPSRiskLevel,Group.substantiations,Group.casePlanGoalsProgress,Assessment.riskOverride)"
+      id="GetRUAFinalRisk1"
+    />
+  </section>
+  <section>
+    <title id="Section.Title.Visits">Visitation</title>
+    <icon
+      current-image="nav_visit"
+      disabled-image="nav_visit_grey"
+      enabled-image="nav_visit"
+    />
+    <!--<callout
+      expression="GetRUAVisitationEvaluationEnabled(Group.initialCPSRiskLevel,Group.substantiations,Group.casePlanGoalsProgress,Assessment.riskOverride)"
+      id="GetRUAVisitationEvaluationEnabled"
+    />
+    <condition expression="(Assessment.isVisitEvaluationEnabledInd==true)">-->
+    <loop
+      criteria="isChild==true"
+      entity="Person"
+      loop-type="for-each"
+    >
+      <callout
+        expression="GetRUAVisitationDetails1(Person.participantID)"
+        id="GetRUAVisitationDetails1"
+      />
+      <question-page
+        entity="Person"
+        id="Visits"
+        progress="0"
+        read-only="false"
+        set-focus="true"
+        show-back-button="true"
+        show-exit-button="true"
+        show-next-button="true"
+        show-person-tabs="true"
+        show-save-exit-button="true"
+      >
+        <title id="QuestionPage.AssessmentDetails.Title">SDM\u00AE Reunification Assessment</title>
+        <icon image="title_visit"/>
+        <validation expression="ValidateVisitationEvaluation(Person.evaluation,Person.evaluationRationale)">
+          <message id="Question.Validation.Evaluation">An interaction must be selected if
+              Rationale is entered.</message>
+        </validation>
+        <validation expression="ValidateVisitationEvaluation(Person.evaluationRationale,Person.evaluation)">
+          <message id="Question.Validation.EvaluationRationale">Rationale must be entered if an
+              interaction is selected.</message>
+        </validation>
+        <condition expression="(Person.validPlansFoundInd==true) and (Assessment.noComplianceConfiguredInd==false)">
+          <cluster>
+            <layout>
+              <type>flow</type>
+              <num-cols>1</num-cols>
+              <label-width>0</label-width>
+              <label-alignment>left</label-alignment>
+            </layout>
+            <display-text id="Display.Text.Compliance">&lt;div
+                style="font-family:tahoma;font-size:11px;color:#4e4e4e;margin-left:-5px;"&gt;Compliance:
+                &lt;b&gt;%1s&lt;/b&gt; &lt;/div&gt; <argument id="Person.visitComplianceDesc"/>
+            </display-text>
+          </cluster>
+          <cluster>
+            <layout>
+              <type>flow</type>
+              <num-cols>1</num-cols>
+              <width>80</width>
+              <label-width>70</label-width>
+              <label-alignment>left</label-alignment>
+            </layout>
+            <question
+              control-question="false"
+              id="evaluation"
+              mandatory="false"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.Evaluation">Enter the interaction between the child and
+                  the caregivers</label>
+              <help-text id="Question.Help.Evaluation">For each child, indicate the level at which
+                  the caregiver has participated in the visitation plan. Visitation evaluation
+                  choices range from Strong to Destructive. Rate caregiver compliance with the plan
+                  for each child. &lt;br/&gt;Strong- caregiver has met all objectives
+                  outlined in the visitation plan; no missed visits. &lt;br/&gt;Adequate-
+                  caregiver has met most objectives of plan; child interaction is positive;
+                  visitation has changed from supervised to unsupervised. &lt;br/&gt;Limited
+                  - caregiver has met some objectives of plan- improvements made, but continued
+                  improvement required. &lt;br/&gt;Destructive - caregiver has met few
+                  objectives of plan or visits have been changed from unsupervised to supervised due
+                  to parental behavior.</help-text>
+              <layout>
+                <type>flow</type>
+                <num-rows>1</num-rows>
+              </layout>
+            </question>
+          </cluster>
+          <cluster>
+            <layout>
+              <type>flow</type>
+              <num-cols>1</num-cols>
+              <label-width>15</label-width>
+              <label-alignment>left</label-alignment>
+            </layout>
+            <question
+              control-question="false"
+              id="evaluationRationale"
+              mandatory="false"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.Rationale">Rationale</label>
+              <help-text id="Question.Help.Rationale">Enter the appropriate explanation of the
+                  reason for the entered evaluation</help-text>
+              <layout>
+                <type>flow</type>
+                <num-rows>5</num-rows>
+              </layout>
+            </question>
+          </cluster>
+        </condition>
+        <condition expression="Person.validPlansFoundInd==false">
+          <cluster>
+            <layout>
+              <type>flow</type>
+              <num-cols>1</num-cols>
+              <label-width>0</label-width>
+              <label-alignment>left</label-alignment>
+            </layout>
+            <display-text id="Display.Text.NoVisitationPlans">&lt;p
+                style="font-family:tahoma;font-size:11px;color:#4e4e4e;"&gt;No visitation plans
+                found for the review %1s - %2s where the selected caregiver(s) are visiting
+                %3s.&lt;/p&gt; <argument id="Assessment.reviewPeriodStartDate"/>
+              <argument id="Assessment.reviewPeriodEndDate"/>
+              <argument id="Person.firstName"/>
+            </display-text>
+          </cluster>
+        </condition>
+        <condition expression="Assessment.noComplianceConfiguredInd==true">
+          <cluster>
+            <layout>
+              <type>flow</type>
+              <num-cols>1</num-cols>
+              <label-width>0</label-width>
+              <label-alignment>left</label-alignment>
+            </layout>
+            <display-text id="Display.Text.ComplianceNotConfigured">&lt;p
+                style="font-family:tahoma;font-size:11px;color:#4e4e4e;"&gt;Compliance has not
+                been fully configured for this outcome plan.&lt;/p&gt;</display-text>
+          </cluster>
+        </condition>
+        <list
+          entity="Person"
+          show-icons="false"
+        >
+          <title id="Cluster.VisitationLogs.Title">Visitation Logs</title>
+          <list
+            criteria="Person.participantID==participantID"
+            entity="VisitationLog"
+            show-icons="false"
+          >
+            <column id="visitDate">
+              <title id="Visits.Title.Date">Date</title>
+              <layout>
+                <type>flow</type>
+                <width>25</width>
+              </layout>
+            </column>
+            <column id="quality">
+              <title id="Visits.Title.Quality">Quality</title>
+              <layout>
+                <type>flow</type>
+                <width>25</width>
+              </layout>
+            </column>
+            <column id="visitors">
+              <title id="Visits.Title.Visitors">Visitors</title>
+              <layout>
+                <type>flow</type>
+                <width>50</width>
+              </layout>
+            </column>
+          </list>
+        </list>
+      </question-page>
+    </loop>
+    <loop
+      criteria="isChild==true"
+      entity="Person"
+      loop-type="for-each"
+    >
+      <callout
+        expression="GetRUAVisitationAssessmentResults1(Person.participantID)"
+        id="GetRUAVisitationAssessmentResults1"
+      />
+      <question-page
+        entity="Person"
+        id="VisitationOverride"
+        progress="0"
+        read-only="false"
+        set-focus="true"
+        show-back-button="true"
+        show-exit-button="true"
+        show-next-button="true"
+        show-person-tabs="true"
+        show-save-exit-button="true"
+      >
+        <title id="QuestionPage.AssessmentDetails.Title">SDM\u00AE Reunification Assessment</title>
+        <icon image="title_visit"/>
+        <validation expression="Person.visitOverride==&quot;VTORD1000&quot; or Person.visitOverride==&quot;VTORD1001&quot; or ((Person.visitOverride==&quot;VTORD1002&quot;) and (isNotNull(Person.visitDiscretionaryOverrideReason) and Person.visitDiscretionaryOverrideReason!=&quot;&quot;))">
+          <message id="DiscMessageID">Override reason must be entered if a
+              discretionary override has been specified.</message>
+        </validation>
+        <cluster>
+          <title id="Cluster.Title.Visit">Visitation</title>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-width>0</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <display-text id="AssessmentResults.Display.Text.DeterminedVisitationLevel">
+              &lt;span
+              style="font-family:tahoma;font-size:11px;color:#4e4e4e;margin-left:-5px;"&gt;Visitation
+              Evaluation: &lt;b&gt;%1s &lt;/b&gt; &lt;/span&gt; <argument id="Person.finalVisitLevelDesc"/>
+          </display-text>
+        </cluster>
+        <cluster>
+          <title id="Cluster.Title.Overrides">Override</title>
+          <description id="Cluster.Desc.Overrides">&lt;p
+              style="font-family:tahoma;font-size:11px;color:#4e4e4e;"&gt;If there is no change
+              to the visitation plan evaluation, then select "No Override". A Policy Override should
+              be selected if the visitations were supervised for safety, which will modify the
+              evaluation from acceptable to unacceptable. If a discretionary override is required,
+              indicate the reason and the evaluation will be modified from acceptable to
+              unacceptable.&lt;/p&gt;</description>
+          <layout>
+            <type>flow</type>
+            <num-cols>2</num-cols>
+            <label-width>35</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="visitOverride"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.AssessmentOverride">Override</label>
+            <help-text id="Question.Help.AssessmentOverride">Policy override should be selected if the visitations were supervised for safety.</help-text>
+          </question>
+        </cluster>
+        <condition expression="(Person.visitOverride==&quot;VTORD1002&quot;)">
+          <cluster>
+            <layout>
+              <type>flow</type>
+              <num-cols>1</num-cols>
+              <label-width>40</label-width>
+              <label-alignment>left</label-alignment>
+            </layout>
+            <question
+              control-question="false"
+              id="visitDiscretionaryOverrideReason"
+              mandatory="false"
+              multi-select="false"
+              show-field-help="false"
+            >
+              <label id="Question.Label.DiscretionaryOverrideReason">Override Reason</label>
+              <layout>
+                <type>flow</type>
+                <num-rows>4</num-rows>
+              </layout>
+            </question>
+          </cluster>
+        </condition>
+      </question-page>
+    </loop>
+    <callout
+      expression="GetRUAFinalVisitationEvaluation1()"
+      id="GetRUAFinalVisitationEvaluation1"
+    />
+    <!--</condition>-->
+    <callout
+      expression="GetRUASafetyEnabled(Group.initialCPSRiskLevel,Group.substantiations,Group.casePlanGoalsProgress,Assessment.riskOverride)"
+      id="GetRUASafetyEnabled"
+    />
+  </section>
+  <section>
+    <title id="Section.Title.SafetyAssessment">Safety</title>
+    <icon
+      current-image="nav_safety_assess"
+      disabled-image="nav_safety_assess_grey"
+      enabled-image="nav_safety_assess"
+    />
+    <condition expression="(Assessment.isSafetyAssessmentEnabledInd==true)">
+      <question-page
+        entity="Group"
+        id="SafetyFactors"
+        progress="0"
+        read-only="false"
+        set-focus="true"
+        show-back-button="true"
+        show-exit-button="true"
+        show-next-button="true"
+        show-person-tabs="false"
+        show-save-exit-button="true"
+      >
+        <title id="QuestionPage.SafetyAssessment.Title">SDM\u00AE Reunification Assessment</title>
+        <validation expression="Group.physicalHarm!=&quot;RAI10000&quot; or Group.seriousInjury==true or Group.maltreatedChild==true or Group.threatOfHarm==true or Group.excessiveDiscipline==true or Group.drugExposed==true">
+          <message id="Question.Validation.ST1">When question '1.' is answered 'Yes', one or more of
+            the related check boxes must be selected.</message>
+        </validation>
+        <validation expression="Group.other!=&quot;RAI10000&quot; or Group.otherComments!=&quot;&quot;">
+          <message id="Question.Validation.ST13">When question '13. Other (specify)' is answered
+            'Yes', a description of the other safety factors must be entered.</message>
+        </validation>
+        <icon image="title_safety_assess"/>
+        <cluster>
+          <title id="Cluster.Title.ChildVulnerablility">Factors Influencing Child Vulnerablility</title>
+          <layout>
+            <type>flow</type>
+            <num-cols>2</num-cols>
+            <label-width>90</label-width>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="agerange"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.Agerange">Age 0-5</label>
+          </question>
+          <question
+            control-question="false"
+            id="diagnosedDisorder"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.DiagnosedDisorder">Significant diagnosed medical or mental
+              disorder</label>
+          </question>
+          <question
+            control-question="false"
+            id="schoolAge"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.SchoolAge">School age, but not attending school</label>
+          </question>
+          <question
+            control-question="false"
+            id="mentalCapacity"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.MentalCapacity">Diminished mental capacity (e.g.,
+              developmental delay, non-verbal)</label>
+          </question>
+          <question
+            control-question="false"
+            id="physicalCapacity"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.PhysicalCapacity">Diminished physical capacity (e.g.,
+              non-ambulatory, limited use of limbs)</label>
+          </question>
+        </cluster>
+        <cluster>
+          <title id="Cluster.Title.PhysicalHarm">Safety Threats</title>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-width>70</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="physicalHarm"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.SeriousHarm">1. Since the initial safety assessment, caregiver
+              has caused serious physical harm or made a plausible threat to cause physical harm to
+              a child as indicated by:</label>
+            <help-text id="Question.Help.SeriousHarm">The caregiver caused serious injury, defined
+              as brain damage, skull or bone fracture, subdural hemorrhage or hematoma,
+              dislocations, sprains, internal injuries, poisoning, burns, scalds, severe cuts; and
+              the child requires medical treatment; and/or Threat of action that would result in
+              serious harm; or household member plans to retaliate against the child for CPS
+              investigation; and/or Caregiver has used torture, physical force, or acted in a way
+              that bears no resemblance to reasonable discipline; or he/she punished the child
+              beyond the duration of the child's endurance; and/or E.g., drugs found in the child's
+              system; the infant is medically fragile as result of drug exposure; the infant suffers
+              adverse effects from introduction of drugs during pregnancy.</help-text>
+          </question>
+        </cluster>
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>2</num-cols>
+            <label-width>90</label-width>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="seriousInjury"
+            mandatory="false"
+            multi-select="false"
+            read-only-expression="Group.physicalHarm!=&quot;RAI10000&quot;"
+            show-field-help="true"
+          >
+            <label id="Question.Label.SeriousInjury">Serious injury or abuse to child other than
+              accidental</label>
+          </question>
+          <question
+            control-question="false"
+            id="maltreatedChild"
+            mandatory="false"
+            multi-select="false"
+            read-only-expression="Group.physicalHarm!=&quot;RAI10000&quot;"
+            show-field-help="false"
+          >
+            <label id="Question.Label.MaltreatedChild">Caregiver fears he/she will maltreat the
+              child</label>
+          </question>
+          <question
+            control-question="false"
+            id="threatOfHarm"
+            mandatory="false"
+            multi-select="false"
+            read-only-expression="Group.physicalHarm!=&quot;RAI10000&quot;"
+            show-field-help="false"
+          >
+            <label id="Question.Label.ThreatOfHarm">Threat to cause harm or retaliate against the
+              child</label>
+          </question>
+          <question
+            control-question="false"
+            id="excessiveDiscipline"
+            mandatory="false"
+            multi-select="false"
+            read-only-expression="Group.physicalHarm!=&quot;RAI10000&quot;"
+            show-field-help="false"
+          >
+            <label id="Question.Label.ExcessiveDiscipline">Excessive discipline or physical
+            force</label>
+          </question>
+          <question
+            control-question="false"
+            id="drugExposed"
+            mandatory="false"
+            multi-select="false"
+            read-only-expression="Group.physicalHarm!=&quot;RAI10000&quot;"
+            show-field-help="false"
+          >
+            <label id="Question.Label.DrugExposed">Drug-exposed infant</label>
+          </question>
+        </cluster>
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-width>70</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="previousIncidents"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.PreviousIncidents">2. The severity of previous maltreatment or
+              the caregiver's response to previous incidents AND current circumstances suggest that
+              the child's safety may be an immediate concern.</label>
+            <help-text id="Question.Help.PreviousIncidents">There must be both current immediate
+              threats to child safety AND related previous maltreatment that was severe and/or
+              represents an unresolved pattern of maltreatment. Previous maltreatment includes any
+              of the following:&lt;br/&gt; - Prior death of a child as a result of
+              maltreatment.&lt;br/&gt; - Prior serious harm to the child. Previous
+              maltreatment by caregiver that was serious enough to cause severe injury (e.g.,
+              fractures, poisoning, suffocating,shooting, burns, bruises/welts, bite marks, choke
+              marks, and/or physical findings consistent with sexual abuse based on medical
+              exam).&lt;br/&gt; - Termination of parental rights. Caregiver had parental
+              rights terminated as a result of a prior CPS investigation.&lt;br/&gt; - Prior
+              removal of the child. Removal/placement of the child by CPS or other responsible
+              agency or concerned party was necessary for the safety of the
+              child.&lt;br/&gt; - Prior CPS substantiation. Prior CPS investigation
+              substantiated for maltreatment.&lt;br/&gt; - A pattern of unsubstantiated CPS
+              investigations.&lt;br/&gt; - Prior threat of serious harm to child. Previous
+              maltreatment that could have caused severe injury, retaliation, or threatened
+              retaliation against the child for previous incidents; or prior domestic violence that
+              resulted in serious harm or threatened harm to a child.&lt;br/&gt; - Prior
+              service failure. Failure to successfully complete court-ordered or previously
+              recommended services.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="sexualAbuse"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.SexualAbuse">3. Child sexual abuse was substantiated or is
+              still suspected, and current circumstances suggest that child safety is an immediate
+              concern.</label>
+            <help-text id="Question.Help.SexualAbuse">Suspicion of sexual abuse may be based on
+              indicators such as: &lt;br/&gt; - The child discloses sexual abuse either
+              verbally or behaviorally (e.g., age inappropriate sexualized behavior toward self or
+              others.&lt;br/&gt; - Medical findings are consistent with
+              molestation.&lt;br/&gt; - Caregiver or another household member has been
+              convicted, investigated, or accused of rape or sodomy, or he/she has had other sexual
+              contact with the child.&lt;br/&gt; - Caregiver or another household member has
+              forced or encouraged the child to engage in sexual performances or activities
+              (including forcing the child to observe sexual performances or
+              activities).&lt;br/&gt; - A possible or confirmed sexual abuse perpetrator has
+              access to a child.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="threatenedHarm"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.ThreatenedHarm">4. Since the initial safety assessment,
+              caregiver has failed to protect the child from serious harm or threatened harm by
+              others, OR current circumstances suggest that the caregiver would likely be unable to
+              protect the removed child from serious harm by others if the child were returned home.</label>
+            <help-text id="Question.Help.ThreatenedHarm">Caregiver fails to protect the child from
+              serious harm or threatened harm as a result of physical abuse, neglect, or sexual
+              abuse by other family members, other household members, or others having regular
+              access to the child. Caregiver does not provide supervision necessary to protect the
+              child from serious harm by others based on child's age or developmental stage. An
+              individual with known violent criminal behavior/ history resides in the home or
+              caregiver allows access to child.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="immediateConcern"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.ImmediateConcern">5. Caregiver's explanation for the injury to
+              the child was, and remains, questionable or inconsistent with the type of injury, and
+              the nature of the injury suggests that the child's safety may be an immediate concern.</label>
+            <help-text id="Question.Help.ImmediateConcern">The injury requires medical attention.
+              Medical evaluation indicates that the injury is a result of abuse; however, caregiver
+              denies or attributes injury to accidental causes. Caregiver's explanation for the
+              observed injury is inconsistent with the type of injury. Caregiver's description of
+              the injury or cause of the injury minimizes the extent of harm to the child. Factors
+              to consider include age of the child, location of injury, exceptional needs of the
+              child, or chronicity of injuries.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="refusingAccess"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.RefusingAccess">6. The family is refusing access to another
+              child, there is reason to believe that the family is about to flee, or the whereabouts
+              of another child cannot be ascertained.</label>
+            <help-text id="Question.Help.RefusingAccess">Family currently refuses access to the
+              child or cannot or will not provide the child's location. Family has removed the child
+              from a hospital against medical advice to avoid investigation. Family has previously
+              fled in response to a CPS investigation. Family has a history of keeping the child at
+              home or away from peers, school, and other outsiders for extended periods of time for
+              the purpose of avoiding investigation. Caregiver intentionally coaches or coerces the
+              child or allows others to coach or coerce the child in and effort to hinder the
+              investigation.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="immediateNeeds"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.ImmediateNeeds">7. Since the initial safety assessment, the
+              caregiver has failed to meet the child's immediate needs for food, clothing, shelter,
+              and/or medical and/or mental health care, OR current circumstances suggest that the
+              caregiver would likely be unable to meet those needs for the removed child if the
+              child were returned home.</label>
+            <help-text id="Question.Help.ImmediateNeeds">Minimal nutritional needs of the child are
+              not met, resulting in danger to the child's health and/or safety. The child is without
+              minimally warm clothing in cold months. Caregiver does not seek treatment for the
+              child's immediate, chronic, and/or dangerous medical condition(s) or does not follow
+              prescribed treatment for such conditions. The child appears malnourished. The child
+              has exceptional needs, such as being medically fragile, which caregiver does not or
+              cannot meet. The child is suicidal and caregiver will not/cannot take protective
+              action. The child shows effects of maltreatment such as serious emotional symptoms,
+              lack of behavioral control, or serious physical symptoms. Caregiver does not attend to
+              the child to the extent that need for care goes unnoticed or unmet (e.g., caregiver is
+              present but the child can wander outdoors alone, play with dangerous objects, play on
+              unprotected window ledge, or be exposed to other serious hazards). Caregiver leaves
+              the child alone (time period varies with age and developmental stage). Caregiver is
+              unavailable (incarceration, hospitalization, abandonment, whereabouts unknown).
+              Caregiver makes inadequate and/or inappropriate babysitting or childcare arrangements
+              or demonstrates very poor planning for the child's care.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="livingConditions"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.LivingConditions">8. Physical living conditions in the
+              household are hazardous and immediately threatening, based on the child's age and
+              developmental status.</label>
+            <help-text id="Question.Help.LivingConditions">Based on the child's age and
+              developmental status, the child's physical living conditions (including but not
+              limited to the following) are hazardous and immediately threatening, including but not
+              limited to: &lt;br/&gt;- Leaking gas from stove or heating unit.
+              &lt;br/&gt;- Substance or objects accessible to the child that may endanger
+              his/her health and/or safety. &lt;br/&gt;- Lack of water or utilities (heat,
+              plumbing, electricity), and no alternate or safe provisions are made.
+              &lt;br/&gt;- Open windows or broken/missing windows. &lt;br/&gt;-
+              Exposed electrical wires. &lt;br/&gt;- Excessive garbage or rotted or spoiled
+              food that threatens health. &lt;br/&gt;- Serious illness or significant injury
+              has occurred due to living conditions, and these conditions still exist (e.g., lead
+              poisoning, rat bites). &lt;br/&gt;- Evidence of human or animal waste
+              throughout living quarters. &lt;br/&gt;- Guns and other weapons are not locked
+              up. Methamphetamine production in the home.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="affectingAbility"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.AffectingAbility">9. Caregiver's substance use is currently
+              and seriously affecting ability to supervise, protect, or care for the child.</label>
+            <help-text id="Question.Help.AffectingAbility">Caregiver has abused legal or illegal
+              substances or alcoholic beverage to the extent that control of his/her actions is
+              significantly impaired. As a result, the caregiver is unable, or will likely be
+              unable, to care for the child; has harmed the child; or is likely to harm the
+            child.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="domesticViolence"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.DomesticViolence">10. Domestic violence exist in the home and
+              poses an imminent danger of serious physical and/or emotional harm to the child.</label>
+            <help-text id="Question.Help.DomesticViolence">There is evidence of domestic violence in
+              the home, AND this creates a safety concern for the child. Examples may include:
+              &lt;br/&gt;- The child was previously injured in a domestic violence incident.
+              &lt;br/&gt;- The child exhibits severe anxiety (e.g., nightmares, insomnia)
+              related to situations associated with domestic violence. &lt;br/&gt;- The
+              child cries, cowers, cringes, trembles, or otherwise exhibits fear as a result of
+              domestic violence in the home. &lt;br/&gt;- The child is at potential risk of
+              physical injury. &lt;br/&gt;- The child's behavior increases risk of injury
+              (e.g., attempting to intervene during violent dispute, participating in the violent
+              dispute). &lt;br/&gt;- Use of guns, knives, or other instruments in a violent,
+              threatening, and/or intimidating manner. &lt;br/&gt;- Evidence of property
+              damage resulting from domestic violence.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="negativeTerms"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.NegativeTerms">11. Caregiver describes the child in
+              predominantly negative terms or acts toward the child in negative ways that result in
+              the child being a danger to self or others, acting out aggressively, or being severely
+              withdrawn and/or suicidal.</label>
+            <help-text id="Question.Help.NegativeTerms">Examples of caregiver actions include:
+              &lt;br/&gt;- Caregiver describes the child in a demeaning or degrading manner
+              (e.g., as evil, stupid, ugly). &lt;br/&gt;- Caregiver curses and/or repeatedly
+              puts the child down. &lt;br/&gt;- Caregiver scapegoats a particular child in
+              the family. &lt;br/&gt;- Caregiver blames the child for a particular incident
+              or family problems. &lt;br/&gt;- Caregiver places the child in the middle of a
+              custody battle.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="emotionalStability"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.EmotionalStability">12. Caregiver's emotional stability,
+              developmental status, or cognitive deficiency seriously impairs his/her current
+              ability to supervise, protect, or care for the child if the child were returned home.</label>
+            <help-text id="Question.Help.EmotionalStability">Caregiver appears to be mentally ill,
+              developmentally delayed, or cognitively impaired, AND as a result, one or more of the
+              following are observed: &lt;br/&gt;- The caregiver's refusal to follow
+              prescribed medications impedes his/her ability to parent the child.
+              &lt;br/&gt;- The caregiver's inability to control emotions impedes his/her
+              ability to parent the child. &lt;br/&gt;- The caregiver acts out or exhibits a
+              distorted perception that impedes his/her ability to parent the child.
+              &lt;br/&gt;- The caregiver's depression impedes his/her ability to parent the
+              child. &lt;br/&gt;- The caregiver expects the child to perform or act in a way
+              that is impossible or improbable for the child's age or developmental stage (e.g.,
+              babies and young children expected not to cry, expected to be still for extended
+              periods, be toilet trained, eat neatly, expected to care for younger siblings, or
+              expected to stay alone). Due to cognitive delay, the caregiver lacks the basic
+              knowledge related to parenting skills such as not knowing that infants need regular
+              feedings; failure to access and obtain basic/emergency medical care; proper diet; or
+              adequate supervision.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="other"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.Other">13. Other (specify):</label>
+            <help-text id="Question.Help.Other">If there is any other safety threats not addressed
+              in prior safety threats, select 'other' and document the unique threat that if
+              unresolved would lead to removal of the child from this home.</help-text>
+          </question>
+        </cluster>
+        <condition expression="(Group.other==&quot;RAI10000&quot;)">
+          <cluster>
+            <layout>
+              <type>flow</type>
+              <num-cols>1</num-cols>
+              <label-width>0</label-width>
+              <label-alignment>right</label-alignment>
+            </layout>
+            <question
+              control-question="false"
+              id="otherComments"
+              mandatory="false"
+              multi-select="false"
+              show-field-help="false"
+            >
+              <layout>
+                <type>flow</type>
+                <num-rows>4</num-rows>
+              </layout>
+            </question>
+          </cluster>
+        </condition>
+      </question-page>
+      <question-page
+        entity="Group"
+        id="SafetyThreatResolution"
+        progress="0"
+        read-only="false"
+        set-focus="true"
+        show-back-button="true"
+        show-exit-button="true"
+        show-next-button="true"
+        show-person-tabs="false"
+        show-save-exit-button="true"
+      >
+        <title id="QuestionPage.SafetyThreatResolution.Title">SDM\u00AE Reunification Assessment</title>
+        <icon image="title_safety_assess"/>
+        <cluster>
+          <title id="Cluster.Title.SafetyThreatResolution">Safety Threat Resolution</title>
+          <description id="Question.Label.SafetyThreatResolution">&lt;p
+            style="font-family:tahoma;font-size:11px;color:#4e4e4e;"&gt;Review the safety
+            assessment that led to removal. For any safety threat present at removal that is no
+            longer present, document how safety threats were resolved.&lt;/p&gt;</description>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-width>0</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="safetyThreatResolution"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <layout>
+              <type>flow</type>
+              <num-rows>20</num-rows>
+            </layout>
+          </question>
+        </cluster>
+      </question-page>
+      <condition expression="((Group.physicalHarm==&quot;RAI10000&quot;)or(Group.previousIncidents==&quot;RAI10000&quot;)or(Group.sexualAbuse==&quot;RAI10000&quot;)or(Group.threatenedHarm==&quot;RAI10000&quot;)or(Group.immediateConcern==&quot;RAI10000&quot;)or(Group.refusingAccess==&quot;RAI10000&quot;)or(Group.immediateNeeds==&quot;RAI10000&quot;)or(Group.livingConditions==&quot;RAI10000&quot;)or(Group.affectingAbility==&quot;RAI10000&quot;)or(Group.domesticViolence==&quot;RAI10000&quot;)or(Group.negativeTerms==&quot;RAI10000&quot;)or(Group.emotionalStability==&quot;RAI10000&quot;))">
+        <question-page
+          entity="Group"
+          id="SafetyInterventions"
+          progress="0"
+          read-only="false"
+          set-focus="true"
+          show-back-button="true"
+          show-exit-button="true"
+          show-next-button="true"
+          show-person-tabs="false"
+          show-save-exit-button="true"
+        >
+          <title id="QuestionPage.SafetyInterventions.Title">SDM\u00AE Reunification Assessment</title>
+          <validation expression="ValidateSafetyInterventions(Group.voluntaryPlacement,Group.protectiveCustody)">
+            <message id="SafetyInterventions.validation.message">Both questions 9. and 10. can not
+              be answered 'Yes'.</message>
+          </validation>
+          <validation expression="Group.specifyOther!=&quot;RAI10000&quot; or Group.otherDetails!=&quot;&quot;">
+            <message id="Question.Validation.SI8">When question '8. Other' is selected, a
+              description of the other safety intervention must be entered.</message>
+          </validation>
+          <validation expression="ValidateSafetyInterventionsAllNo(Group.directServices,Group.safetyResources,Group.communityAgencies,Group.protectVictim,Group.leaveHome,Group.safeEnvironment,Group.plannedLegalAction,Group.specifyOther,Group.voluntaryPlacement,Group.protectiveCustody)">
+            <message id="SafetyInterventionsAllNo.validation.message">When questions '1-8' are answered 'No', question '9 or 10' must be answered 'Yes'.</message>
+          </validation>
+          <icon image="title_safety_assess"/>
+          <cluster>
+            <layout>
+              <type>flow</type>
+              <num-cols>1</num-cols>
+              <label-width>0</label-width>
+              <label-alignment>right</label-alignment>
+            </layout>
+            <display-text id="SafetyInterventions.InstructionText">&lt;p
+              style="font-family:tahoma;font-size:11px;color:#4e4e4e;"&gt;Enter safety
+              interventions regarding the children in the household&lt;/p&gt;</display-text>
+          </cluster>
+          <cluster>
+            <title id="Cluster.Title.SafetyInterventions">Safety Interventions</title>
+            <layout>
+              <type>flow</type>
+              <num-cols>1</num-cols>
+              <label-width>70</label-width>
+              <label-alignment>left</label-alignment>
+            </layout>
+            <question
+              control-question="false"
+              id="directServices"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.DirectServices">1. Intervention or direct services by
+                worker.</label>
+              <help-text id="Question.Help.DirectServices">Actions taken or planned by the
+                  investigating worker or other CPS staff that specifically address one or more safety threats. Examples include providing information about nonviolent disciplinary
+                methods, child development needs, or parenting practices; providing emergency
+                material aid such as food; planned return visits to the home to check on progress;
+                information on obtaining restraining orders; providing definition of child abuse
+                laws and informing involved parties of consequences of violating these laws. DOES
+                NOT INCLUDE the investigation itself or services provided to respond to family needs
+                that do not directly affect safety.</help-text>
+            </question>
+            <question
+              control-question="false"
+              id="safetyResources"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.SafetyResources">2. Use of family, neighbors, or other
+                individuals in the community as safety resources.</label>
+              <help-text id="Question.Help.SafetyResources">Applying the family's own strengths as
+                resources to mitigate safety concerns; using extended family members, neighbors, or
+                other individuals to mitigate safety concerns. Examples include: family's agreement
+                to use non-violent means of discipline; engaging a grandparent to assist with
+                childcare; agreement by a neighbor to serve as a safety net for an older child;
+                commitment by 12-step sponsor to meet with caregiver daily and call an older child;
+                commitment by 12-step sponsor to meet with caregiver daily and call worker if
+                caregiver has used or missed meeting; or caregiver's decision that the child will
+                spend a night or a few days with a friend or relative.</help-text>
+            </question>
+            <question
+              control-question="false"
+              id="communityAgencies"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.CommunityAgencies">3. Use of community agencies or services
+                as safety resources.</label>
+              <help-text id="Question.Help.CommunityAgencies">Involving community-based
+                organization, faith-related organization, or other agency in activities to address
+                safety concerns, e.g., using a local food pantry. DOES NOT INCLUDE long term therapy
+                or being put on a waiting list for services.</help-text>
+            </question>
+            <question
+              control-question="false"
+              id="protectVictim"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.ProtectVictim">4. Have the caregiver appropriately protect
+                the victim from the alleged perpetrator.</label>
+              <help-text id="Question.Help.ProtectVictim">A non-offending caregiver has acknowledged
+                the safety concerns and is able and willing to protect the child from alleged
+                perpetrator. Examples include: agreeing that the child will not be left along with
+                the alleged perpetrator; or preventing the alleged perpetrator from physically
+                disciplining the child.</help-text>
+            </question>
+            <question
+              control-question="false"
+              id="leaveHome"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.LeaveHome">5. Have the alleged perpetrator leave the home,
+                either voluntarily or in response to legal action.</label>
+              <help-text id="Question.Help.LeaveHome">Temporary or permanent removal of the alleged
+                perpetrator. Examples include arresting alleged perpetrator, non-perpetrating
+                caregiver 'kicking out' alleged perpetrator who has no legal right to residence, or
+                perpetrator agreeing to leave.</help-text>
+            </question>
+            <question
+              control-question="false"
+              id="safeEnvironment"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.SafeEnvironment">6. Have the non-offending caregiver move to
+                a safe environment with the child.</label>
+              <help-text id="Question.Help.SafeEnvironment">A caregiver not suspected of harming the
+                child has taken or plans to take the child to an alternate location where the
+                alleged perpetrator will not have access to the child. Examples include a domestic
+                violence shelter, the home of a friend or relative, or a hotel.</help-text>
+            </question>
+            <question
+              control-question="false"
+              id="plannedLegalAction"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.PlannedLegalAction">7. Legal action planned or
+                initiated-child remains in the home.</label>
+              <help-text id="Question.Help.PlannedLegalAction">A legal action has already commenced
+                  or will be commenced that will effectively mitigate identified safety threats. This
+                includes family initiated (e.g., restraining orders,mental health commitments,
+                change in custody/visitation/guardianship and CPS initiated (file petition and child
+                remains in home).</help-text>
+            </question>
+            <question
+              control-question="false"
+              id="specifyOther"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.SpecifyOther">8. Other (specify)</label>
+              <help-text id="Question.Help.SpecifyOther">The family or worker identified a unique
+                intervention for an identified safety concern that does not fit within items
+              1-7.</help-text>
+            </question>
+          </cluster>
+          <condition expression="(Group.specifyOther==&quot;RAI10000&quot;)">
+            <cluster>
+              <layout>
+                <type>flow</type>
+                <num-cols>1</num-cols>
+                <label-width>0</label-width>
+                <label-alignment>right</label-alignment>
+              </layout>
+              <question
+                control-question="false"
+                id="otherDetails"
+                mandatory="false"
+                multi-select="false"
+                show-field-help="false"
+              >
+                <layout>
+                  <type>flow</type>
+                  <num-rows>4</num-rows>
+                </layout>
+              </question>
+            </cluster>
+          </condition>
+          <condition expression="(((Group.directServices==&quot;RAI10001&quot;)and(Group.safetyResources==&quot;RAI10001&quot;)and(Group.communityAgencies==&quot;RAI10001&quot;)and(Group.protectVictim==&quot;RAI10001&quot;)and(Group.leaveHome==&quot;RAI10001&quot;)and(Group.safeEnvironment==&quot;RAI10001&quot;)and(Group.plannedLegalAction==&quot;RAI10001&quot;)and(Group.specifyOther==&quot;RAI10001&quot;))or(Group.MultiChildInd==true))">
+            <cluster>
+              <layout>
+                <type>flow</type>
+                <num-cols>1</num-cols>
+                <label-width>70</label-width>
+                <label-alignment>left</label-alignment>
+              </layout>
+              <question
+                control-question="false"
+                id="voluntaryPlacement"
+                mandatory="false"
+                multi-select="false"
+                show-field-help="true"
+              >
+                <label id="Question.Label.VoluntaryPlacement">9. Voluntary placement continues.</label>
+                <help-text id="Question.Help.VoluntaryPlacement">A voluntary agreement is signed
+                  between the caregiver and the CPS agency.</help-text>
+              </question>
+              <question
+                control-question="false"
+                id="protectiveCustody"
+                mandatory="false"
+                multi-select="false"
+                show-field-help="true"
+              >
+                <label id="Question.Label.ProtectiveCustody">10. Protective custody continues
+                  because interventions 1-9 do not adequately ensure child's safety.</label>
+                <help-text id="Question.Help.ProtectiveCustody">One or more children are
+                  protectively placed and entitled to notice and hearing within 72 judicial
+                hours.</help-text>
+              </question>
+            </cluster>
+          </condition>
+        </question-page>
+      </condition>
+      <callout
+        expression="GetRUASafetyAssessmentResults()"
+        id="GetRUASafetyAssessmentResults"
+      />
+    </condition>
+    <callout
+      expression="GetRUAPlacementDetails()"
+      id="GetRUAPlacementDetails"
+    />
+  </section>
+  <section>
+    <title id="Section.Title.Placement">Placement</title>
+    <condition expression="(Assessment.displayPlacementQuestionsInd==true)">
+      <loop
+        criteria="isChild==true"
+        entity="Person"
+        loop-type="for-each"
+      >
+        <question-page
+          entity="Person"
+          id="Placement"
+          progress="0"
+          read-only="false"
+          set-focus="true"
+          show-back-button="true"
+          show-exit-button="true"
+          show-next-button="true"
+          show-person-tabs="true"
+          show-save-exit-button="true"
+        >
+          <title id="QuestionPage.AssessmentDetails.Title">SDM\u00AE Reunification Assessment</title>
+          <validation expression="Person.consecutivePlacementInd!=&quot;RAI10000&quot; or Person.accumulatedPlacementInd!=&quot;RAI10000&quot;">
+            <message id="Placement.validation.message">Both questions P1. and P2. can not be
+              answered 'Yes'.</message>
+          </validation>
+          <cluster>
+            <layout>
+              <type>flow</type>
+              <num-cols>1</num-cols>
+              <label-width>70</label-width>
+              <label-alignment>left</label-alignment>
+            </layout>
+            <question
+              control-question="false"
+              id="consecutivePlacementInd"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.PlacementConsecutiveMonths">P1. In placement for 9
+                consecutive months.</label>
+              <help-text id="Question.Help.PlacementConsecutiveMonths">If the child has been has
+                been in an out-of-home care for 9 or more consecutive months, respond
+              "Yes".</help-text>
+            </question>
+            <question
+              control-question="false"
+              id="accumulatedPlacementInd"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.PlacementOutOfLastMonths">P2. In placement for 15 out of the
+                last 22 months.</label>
+              <help-text id="Question.Help.PlacementOutOfLastMonths">If the child has been in an
+                out-of-home care for a total duration of 15 months or more within the last 22
+                months, respond "Yes". For example, if a child has been removed from home for 10
+                months, then a 3 month gap, then another removal period of more than 5 months, so
+                that the total duration is more than 15 months, respond "Yes".</help-text>
+            </question>
+          </cluster>
+        </question-page>
+      </loop>
+    </condition>
+    <callout
+      expression="GetRUARecommendedGoalResults1()"
+      id="GetRUARecommendedGoalResults1"
+    />
+    <callout
+      expression="WriteRUAVisitationEvaluations()"
+      id="WriteRUAVisitationEvaluations"
+    />
+  </section>
+  <section>
+    <title id="Section.Title.Recommendation">Recommendation</title>
+    <icon
+      current-image="nav_goal"
+      disabled-image="nav_goal_grey"
+      enabled-image="nav_goal"
+    />
+    <loop
+      criteria="isChild==true"
+      entity="Person"
+      loop-type="for-each"
+    >
+      <callout
+        expression="GetRUARecommendationResults(Person.participantID)"
+        id="GetRUARecommendationResults"
+      />
+      <question-page
+        entity="Person"
+        id="Recommendation"
+        progress="0"
+        read-only="false"
+        set-focus="true"
+        show-back-button="true"
+        show-exit-button="true"
+        show-next-button="true"
+        show-person-tabs="true"
+        show-save-exit-button="true"
+      >
+        <title id="QuestionPage.AssessmentDetails.Title">SDM\u00AE Reunification Assessment</title>
+        <validation expression="Person.recommendationOverrideCode==&quot;OVER10000&quot; or Person.recommendationOverrideCode==&quot;OVER10002&quot; or (Person.recommendationOverrideCode==&quot;OVER10001&quot; and ((isNotNull(Person.permanencyPlanRecommendationInd) and Person.permanencyPlanRecommendationInd==true) or (isNotNull(Person.continuedRUNServicesInd) and Person.continuedRUNServicesInd==true)))">
+          <message id="OverrideMessage.id">At least one condition must be specified if a policy
+            override has been selected.</message>
+        </validation>
+        <validation expression="Person.recommendationOverrideCode==&quot;OVER10000&quot; or Person.recommendationOverrideCode==&quot;OVER10001&quot; or ((Person.recommendationOverrideCode==&quot;OVER10002&quot;) and (isNotNull(Person.recommendationDiscretionaryOverrideReason) and Person.recommendationDiscretionaryOverrideReason!=&quot;&quot;))">
+          <message id="DiscMessageID">Override reason must be entered if a
+            discretionary override has been specified.</message>
+        </validation>
+        <validation expression="ValidateRecommendationOverride(Person.recommendedGoal, Person.policyRecommendationValue, Person.discretionaryRecommendationValue)">
+          <message id="Recommendation.Override.Message">The recommendation selected via an override cannot be the same as the recommendation identified via the assessment</message>
+        </validation>
+        <cluster>
+          <title id="Cluster.Title.Recommendation">Recommendation</title>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-width>0</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <display-text id="AssessmentResults.Display.Text.DeterminedVisitationLevel">
+            &lt;span style="font-family:tahoma;font-size:11px;color:#4e4e4e;margin-left:-5px;"&gt;Recommendation: &lt;b&gt;%1s &lt;/b&gt; &lt;/span&gt;
+            <argument id="Person.recommendedGoalDesc"/>
+          </display-text>
+        </cluster>
+        <cluster>
+          <title id="Cluster.Title.Overrides">Override</title>
+          <description id="Cluster.Desc.Overrides">&lt;p style="font-family:tahoma;font-size:11px;color:#4e4e4e;"&gt;Complete a permanency plan recommendation for each child receiving family reunification services. Consult with supervisor and appropriate statutes and regulations.&lt;/p&gt;</description>
+          <layout>
+            <type>flow</type>
+            <num-cols>2</num-cols>
+            <label-width>35</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="recommendationOverrideCode"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.AssessmentOverride">Override</label>
+            <help-text id="Question.Help.PolicyOverrideOptions">Override</help-text>
+          </question>
+        </cluster>
+        <condition expression="(Person.recommendationOverrideCode==&quot;OVER10001&quot;)">
+          <cluster entity="Person">
+            <description id="Cluster.Desc.PolicyOverrideQuestions">&lt;span style="margin-top:
+              5px"&gt;Indicate if any of the following are true in the current
+              review period.&lt;/span&gt;</description>
+            <layout>
+              <type>flow</type>
+              <num-cols>1</num-cols>
+              <label-width>70</label-width>
+              <label-alignment>left</label-alignment>
+            </layout>
+            <question
+              control-question="false"
+              id="permanencyPlanRecommendationInd"
+              mandatory="false"
+              multi-select="false"
+              show-field-help="false"
+            >
+              <label id="Question.Label.PermanencyPlanRecommendation">Child's recommendation will be changed to reflect the permanency plan recommendation for the sibling group.</label>
+            </question>
+            <question
+              control-question="false"
+              id="continuedRUNServicesInd"
+              mandatory="false"
+              multi-select="false"
+              show-field-help="false"
+            >
+              <label id="Question.Label.ContinuedRUNServicesInd">Reasons for placement represent allowable exceptions to requirements to provide continued reunification services.</label>
+            </question>
+            <question
+              control-question="false"
+              id="policyRecommendationValue"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="false"
+            >
+              <label id="Question.Label.PolicyOverride">Please enter the final Permanency Plan Goal</label>
+              <help-text id="Question.Label.PolicyOverride">Please enter the final Permanency Plan Goal</help-text>
+            </question>
+          </cluster>
+        </condition>
+        <condition expression="(Person.recommendationOverrideCode==&quot;OVER10002&quot;)">
+          <cluster>
+            <description id="Cluster.Desc.DiscretionaryOverrideQuestions">&lt;span style="margin-top:
+              5px"&gt;Indicate if any of the following are true in the current
+              review period.&lt;/span&gt;</description>
+            <layout>
+              <type>flow</type>
+              <num-rows>4</num-rows>
+              <label-width>40</label-width>
+              <label-alignment>left</label-alignment>
+            </layout>
+            <question
+              control-question="false"
+              id="discretionaryRecommendationValue"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="false"
+            >
+              <label id="Question.Label.DiscretionaryOverride">Please enter the final Permanency Plan Goal</label>
+              <help-text id="Question.Label.DiscretionaryOverride">Please enter the final Permanency Plan Goal</help-text>
+            </question>
+            <question
+              control-question="false"
+              id="recommendationDiscretionaryOverrideReason"
+              mandatory="false"
+              multi-select="false"
+              show-field-help="false"
+            >
+              <layout>
+                <type>flow</type>
+                <num-rows>4</num-rows>
+              </layout>
+              <label id="Question.Label.DiscretionaryOverrideReason">Override Reason</label>
+            </question>
+          </cluster>
+        </condition>
+      </question-page>
+    </loop>
+    <callout
+      expression="EnableSafetyForReunify()"
+      id="EnableSafetyForReunify"
+    />
+    <!-- Reunify Changes-->
+    <condition expression="(Assessment.OverrideReunifyInd==true)">
+      <question-page
+        entity="Group"
+        id="SafetyFactors_Reunify"
+        progress="0"
+        read-only="false"
+        set-focus="true"
+        show-back-button="true"
+        show-exit-button="true"
+        show-next-button="true"
+        show-person-tabs="false"
+        show-save-exit-button="true"
+      >
+        <title id="QuestionPage.SafetyAssessment.Title">SDM\u00AE Reunification Assessment</title>
+        <validation expression="Group.physicalHarmReunify!=&quot;RAI10000&quot; or Group.seriousInjuryReunify==true or Group.maltreatedChildReunify==true or Group.threatOfHarmReunify==true or Group.excessiveDisciplineReunify==true or Group.drugExposedReunify==true">
+          <message id="Question.Validation.ST1">When question '1.' is answered 'Yes', one or more of
+            the related check boxes must be selected.</message>
+        </validation>
+        <validation expression="Group.otherReunify!=&quot;RAI10000&quot; or Group.otherCommentsReunify!=&quot;&quot;">
+          <message id="Question.Validation.ST13">When question '13. Other (specify)' is answered
+            'Yes', a description of the other safety factors must be entered.</message>
+        </validation>
+        <icon image="title_safety_assess"/>
+        <cluster>
+          <title id="Cluster.Title.ChildVulnerablility">Factors Influencing Child Vulnerablility</title>
+          <layout>
+            <type>flow</type>
+            <num-cols>2</num-cols>
+            <label-width>90</label-width>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="agerangeReunify"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.Agerange">Age 0-5</label>
+          </question>
+          <question
+            control-question="false"
+            id="diagnosedDisorderReunify"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.DiagnosedDisorder">Significant diagnosed medical or mental
+              disorder</label>
+          </question>
+          <question
+            control-question="false"
+            id="schoolAgeReunify"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.SchoolAge">School age, but not attending school</label>
+          </question>
+          <question
+            control-question="false"
+            id="mentalCapacityReunify"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.MentalCapacity">Diminished mental capacity (e.g.,
+              developmental delay, non-verbal)</label>
+          </question>
+          <question
+            control-question="false"
+            id="physicalCapacityReunify"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="Question.Label.PhysicalCapacity">Diminished physical capacity (e.g.,
+              non-ambulatory, limited use of limbs)</label>
+          </question>
+        </cluster>
+        <cluster>
+          <title id="Cluster.Title.PhysicalHarm">Safety Threats</title>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-width>70</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="physicalHarmReunify"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.SeriousHarm">1. Since the initial safety assessment, caregiver
+              has caused serious physical harm or made a plausible threat to cause physical harm to
+              a child as indicated by:</label>
+            <help-text id="Question.Help.SeriousHarm">The caregiver caused serious injury, defined
+              as brain damage, skull or bone fracture, subdural hemorrhage or hematoma,
+              dislocations, sprains, internal injuries, poisoning, burns, scalds, severe cuts; and
+              the child requires medical treatment; and/or Threat of action that would result in
+              serious harm; or household member plans to retaliate against the child for CPS
+              investigation; and/or Caregiver has used torture, physical force, or acted in a way
+              that bears no resemblance to reasonable discipline; or he/she punished the child
+              beyond the duration of the child's endurance; and/or E.g., drugs found in the child's
+              system; the infant is medically fragile as result of drug exposure; the infant suffers
+              adverse effects from introduction of drugs during pregnancy.</help-text>
+          </question>
+        </cluster>
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>2</num-cols>
+            <label-width>90</label-width>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="seriousInjuryReunify"
+            mandatory="false"
+            multi-select="false"
+            read-only-expression="Group.physicalHarmReunify!=&quot;RAI10000&quot;"
+            show-field-help="true"
+          >
+            <label id="Question.Label.SeriousInjury">Serious injury or abuse to child other than
+              accidental</label>
+          </question>
+          <question
+            control-question="false"
+            id="maltreatedChildReunify"
+            mandatory="false"
+            multi-select="false"
+            read-only-expression="Group.physicalHarmReunify!=&quot;RAI10000&quot;"
+            show-field-help="false"
+          >
+            <label id="Question.Label.MaltreatedChild">Caregiver fears he/she will maltreat the
+              child</label>
+          </question>
+          <question
+            control-question="false"
+            id="threatOfHarmReunify"
+            mandatory="false"
+            multi-select="false"
+            read-only-expression="Group.physicalHarmReunify!=&quot;RAI10000&quot;"
+            show-field-help="false"
+          >
+            <label id="Question.Label.ThreatOfHarm">Threat to cause harm or retaliate against the
+              child</label>
+          </question>
+          <question
+            control-question="false"
+            id="excessiveDisciplineReunify"
+            mandatory="false"
+            multi-select="false"
+            read-only-expression="Group.physicalHarmReunify!=&quot;RAI10000&quot;"
+            show-field-help="false"
+          >
+            <label id="Question.Label.ExcessiveDiscipline">Excessive discipline or physical
+            force</label>
+          </question>
+          <question
+            control-question="false"
+            id="drugExposedReunify"
+            mandatory="false"
+            multi-select="false"
+            read-only-expression="Group.physicalHarmReunify!=&quot;RAI10000&quot;"
+            show-field-help="false"
+          >
+            <label id="Question.Label.DrugExposed">Drug-exposed infant</label>
+          </question>
+        </cluster>
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-width>70</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="previousIncidentsReunify"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.PreviousIncidents">2. The severity of previous maltreatment or
+              the caregiver's response to previous incidents AND current circumstances suggest that
+              the child's safety may be an immediate concern.</label>
+            <help-text id="Question.Help.PreviousIncidents">There must be both current immediate
+              threats to child safety AND related previous maltreatment that was severe and/or
+              represents an unresolved pattern of maltreatment. Previous maltreatment includes any
+              of the following:&lt;br/&gt; - Prior death of a child as a result of
+              maltreatment.&lt;br/&gt; - Prior serious harm to the child. Previous
+              maltreatment by caregiver that was serious enough to cause severe injury (e.g.,
+              fractures, poisoning, suffocating,shooting, burns, bruises/welts, bite marks, choke
+              marks, and/or physical findings consistent with sexual abuse based on medical
+              exam).&lt;br/&gt; - Termination of parental rights. Caregiver had parental
+              rights terminated as a result of a prior CPS investigation.&lt;br/&gt; - Prior
+              removal of the child. Removal/placement of the child by CPS or other responsible
+              agency or concerned party was necessary for the safety of the
+              child.&lt;br/&gt; - Prior CPS substantiation. Prior CPS investigation
+              substantiated for maltreatment.&lt;br/&gt; - A pattern of unsubstantiated CPS
+              investigations.&lt;br/&gt; - Prior threat of serious harm to child. Previous
+              maltreatment that could have caused severe injury, retaliation, or threatened
+              retaliation against the child for previous incidents; or prior domestic violence that
+              resulted in serious harm or threatened harm to a child.&lt;br/&gt; - Prior
+              service failure. Failure to successfully complete court-ordered or previously
+              recommended services.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="sexualAbuseReunify"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.SexualAbuse">3. Child sexual abuse was substantiated or is
+              still suspected, and current circumstances suggest that child safety is an immediate
+              concern.</label>
+            <help-text id="Question.Help.SexualAbuse">Suspicion of sexual abuse may be based on
+              indicators such as: &lt;br/&gt; - The child discloses sexual abuse either
+              verbally or behaviorally (e.g., age inappropriate sexualized behavior toward self or
+              others.&lt;br/&gt; - Medical findings are consistent with
+              molestation.&lt;br/&gt; - Caregiver or another household member has been
+              convicted, investigated, or accused of rape or sodomy, or he/she has had other sexual
+              contact with the child.&lt;br/&gt; - Caregiver or another household member has
+              forced or encouraged the child to engage in sexual performances or activities
+              (including forcing the child to observe sexual performances or
+              activities).&lt;br/&gt; - A possible or confirmed sexual abuse perpetrator has
+              access to a child.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="threatenedHarmReunify"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.ThreatenedHarm">4. Since the initial safety assessment,
+              caregiver has failed to protect the child from serious harm or threatened harm by
+              others, OR current circumstances suggest that the caregiver would likely be unable to
+              protect the removed child from serious harm by others if the child were returned home.</label>
+            <help-text id="Question.Help.ThreatenedHarm">Caregiver fails to protect the child from
+              serious harm or threatened harm as a result of physical abuse, neglect, or sexual
+              abuse by other family members, other household members, or others having regular
+              access to the child. Caregiver does not provide supervision necessary to protect the
+              child from serious harm by others based on child's age or developmental stage. An
+              individual with known violent criminal behavior/ history resides in the home or
+              caregiver allows access to child.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="immediateConcernReunify"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.ImmediateConcern">5. Caregiver's explanation for the injury to
+              the child was, and remains, questionable or inconsistent with the type of injury, and
+              the nature of the injury suggests that the child's safety may be an immediate concern.</label>
+            <help-text id="Question.Help.ImmediateConcern">The injury requires medical attention.
+              Medical evaluation indicates that the injury is a result of abuse; however, caregiver
+              denies or attributes injury to accidental causes. Caregiver's explanation for the
+              observed injury is inconsistent with the type of injury. Caregiver's description of
+              the injury or cause of the injury minimizes the extent of harm to the child. Factors
+              to consider include age of the child, location of injury, exceptional needs of the
+              child, or chronicity of injuries.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="refusingAccessReunify"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.RefusingAccess">6. The family is refusing access to another
+              child, there is reason to believe that the family is about to flee, or the whereabouts
+              of another child cannot be ascertained.</label>
+            <help-text id="Question.Help.RefusingAccess">Family currently refuses access to the
+              child or cannot or will not provide the child's location. Family has removed the child
+              from a hospital against medical advice to avoid investigation. Family has previously
+              fled in response to a CPS investigation. Family has a history of keeping the child at
+              home or away from peers, school, and other outsiders for extended periods of time for
+              the purpose of avoiding investigation. Caregiver intentionally coaches or coerces the
+              child or allows others to coach or coerce the child in and effort to hinder the
+              investigation.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="immediateNeedsReunify"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.ImmediateNeeds">7. Since the initial safety assessment, the
+              caregiver has failed to meet the child's immediate needs for food, clothing, shelter,
+              and/or medical and/or mental health care, OR current circumstances suggest that the
+              caregiver would likely be unable to meet those needs for the removed child if the
+              child were returned home.</label>
+            <help-text id="Question.Help.ImmediateNeeds">Minimal nutritional needs of the child are
+              not met, resulting in danger to the child's health and/or safety. The child is without
+              minimally warm clothing in cold months. Caregiver does not seek treatment for the
+              child's immediate, chronic, and/or dangerous medical condition(s) or does not follow
+              prescribed treatment for such conditions. The child appears malnourished. The child
+              has exceptional needs, such as being medically fragile, which caregiver does not or
+              cannot meet. The child is suicidal and caregiver will not/cannot take protective
+              action. The child shows effects of maltreatment such as serious emotional symptoms,
+              lack of behavioral control, or serious physical symptoms. Caregiver does not attend to
+              the child to the extent that need for care goes unnoticed or unmet (e.g., caregiver is
+              present but the child can wander outdoors alone, play with dangerous objects, play on
+              unprotected window ledge, or be exposed to other serious hazards). Caregiver leaves
+              the child alone (time period varies with age and developmental stage). Caregiver is
+              unavailable (incarceration, hospitalization, abandonment, whereabouts unknown).
+              Caregiver makes inadequate and/or inappropriate babysitting or childcare arrangements
+              or demonstrates very poor planning for the child's care.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="livingConditionsReunify"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.LivingConditions">8. Physical living conditions in the
+              household are hazardous and immediately threatening, based on the child's age and
+              developmental status.</label>
+            <help-text id="Question.Help.LivingConditions">Based on the child's age and
+              developmental status, the child's physical living conditions (including but not
+              limited to the following) are hazardous and immediately threatening, including but not
+              limited to: &lt;br/&gt;- Leaking gas from stove or heating unit.
+              &lt;br/&gt;- Substance or objects accessible to the child that may endanger
+              his/her health and/or safety. &lt;br/&gt;- Lack of water or utilities (heat,
+              plumbing, electricity), and no alternate or safe provisions are made.
+              &lt;br/&gt;- Open windows or broken/missing windows. &lt;br/&gt;-
+              Exposed electrical wires. &lt;br/&gt;- Excessive garbage or rotted or spoiled
+              food that threatens health. &lt;br/&gt;- Serious illness or significant injury
+              has occurred due to living conditions, and these conditions still exist (e.g., lead
+              poisoning, rat bites). &lt;br/&gt;- Evidence of human or animal waste
+              throughout living quarters. &lt;br/&gt;- Guns and other weapons are not locked
+              up. Methamphetamine production in the home.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="affectingAbilityReunify"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.AffectingAbility">9. Caregiver's substance use is currently
+              and seriously affecting ability to supervise, protect, or care for the child.</label>
+            <help-text id="Question.Help.AffectingAbility">Caregiver has abused legal or illegal
+              substances or alcoholic beverage to the extent that control of his/her actions is
+              significantly impaired. As a result, the caregiver is unable, or will likely be
+              unable, to care for the child; has harmed the child; or is likely to harm the
+            child.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="domesticViolenceReunify"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.DomesticViolence">10. Domestic violence exist in the home and
+              poses an imminent danger of serious physical and/or emotional harm to the child.</label>
+            <help-text id="Question.Help.DomesticViolence">There is evidence of domestic violence in
+              the home, AND this creates a safety concern for the child. Examples may include:
+              &lt;br/&gt;- The child was previously injured in a domestic violence incident.
+              &lt;br/&gt;- The child exhibits severe anxiety (e.g., nightmares, insomnia)
+              related to situations associated with domestic violence. &lt;br/&gt;- The
+              child cries, cowers, cringes, trembles, or otherwise exhibits fear as a result of
+              domestic violence in the home. &lt;br/&gt;- The child is at potential risk of
+              physical injury. &lt;br/&gt;- The child's behavior increases risk of injury
+              (e.g., attempting to intervene during violent dispute, participating in the violent
+              dispute). &lt;br/&gt;- Use of guns, knives, or other instruments in a violent,
+              threatening, and/or intimidating manner. &lt;br/&gt;- Evidence of property
+              damage resulting from domestic violence.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="negativeTermsReunify"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.NegativeTerms">11. Caregiver describes the child in
+              predominantly negative terms or acts toward the child in negative ways that result in
+              the child being a danger to self or others, acting out aggressively, or being severely
+              withdrawn and/or suicidal.</label>
+            <help-text id="Question.Help.NegativeTerms">Examples of caregiver actions include:
+              &lt;br/&gt;- Caregiver describes the child in a demeaning or degrading manner
+              (e.g., as evil, stupid, ugly). &lt;br/&gt;- Caregiver curses and/or repeatedly
+              puts the child down. &lt;br/&gt;- Caregiver scapegoats a particular child in
+              the family. &lt;br/&gt;- Caregiver blames the child for a particular incident
+              or family problems. &lt;br/&gt;- Caregiver places the child in the middle of a
+              custody battle.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="emotionalStabilityReunify"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.EmotionalStability">12. Caregiver's emotional stability,
+              developmental status, or cognitive deficiency seriously impairs his/her current
+              ability to supervise, protect, or care for the child if the child were returned home.</label>
+            <help-text id="Question.Help.EmotionalStability">Caregiver appears to be mentally ill,
+              developmentally delayed, or cognitively impaired, AND as a result, one or more of the
+              following are observed: &lt;br/&gt;- The caregiver's refusal to follow
+              prescribed medications impedes his/her ability to parent the child.
+              &lt;br/&gt;- The caregiver's inability to control emotions impedes his/her
+              ability to parent the child. &lt;br/&gt;- The caregiver acts out or exhibits a
+              distorted perception that impedes his/her ability to parent the child.
+              &lt;br/&gt;- The caregiver's depression impedes his/her ability to parent the
+              child. &lt;br/&gt;- The caregiver expects the child to perform or act in a way
+              that is impossible or improbable for the child's age or developmental stage (e.g.,
+              babies and young children expected not to cry, expected to be still for extended
+              periods, be toilet trained, eat neatly, expected to care for younger siblings, or
+              expected to stay alone). Due to cognitive delay, the caregiver lacks the basic
+              knowledge related to parenting skills such as not knowing that infants need regular
+              feedings; failure to access and obtain basic/emergency medical care; proper diet; or
+              adequate supervision.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="otherReunify"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.Label.Other">13. Other (specify):</label>
+            <help-text id="Question.Help.Other">If there is any other safety threats not addressed
+              in prior safety threats, select 'other' and document the unique threat that if
+              unresolved would lead to removal of the child from this home.</help-text>
+          </question>
+        </cluster>
+        <condition expression="(Group.otherReunify==&quot;RAI10000&quot;)">
+          <cluster>
+            <layout>
+              <type>flow</type>
+              <num-cols>1</num-cols>
+              <label-width>0</label-width>
+              <label-alignment>right</label-alignment>
+            </layout>
+            <question
+              control-question="false"
+              id="otherCommentsReunify"
+              mandatory="false"
+              multi-select="false"
+              show-field-help="false"
+            >
+              <layout>
+                <type>flow</type>
+                <num-rows>4</num-rows>
+              </layout>
+            </question>
+          </cluster>
+        </condition>
+      </question-page>
+      <question-page
+        entity="Group"
+        id="SafetyThreatResolution_Reunify"
+        progress="0"
+        read-only="false"
+        set-focus="true"
+        show-back-button="true"
+        show-exit-button="true"
+        show-next-button="true"
+        show-person-tabs="false"
+        show-save-exit-button="true"
+      >
+        <title id="QuestionPage.SafetyThreatResolution.Title">SDM\u00AE Reunification Assessment</title>
+        <icon image="title_safety_assess"/>
+        <cluster>
+          <title id="Cluster.Title.SafetyThreatResolution">Safety Threat Resolution</title>
+          <description id="Question.Label.SafetyThreatResolution">&lt;p
+            style="font-family:tahoma;font-size:11px;color:#4e4e4e;"&gt;Review the safety
+            assessment that led to removal. For any safety threat present at removal that is no
+            longer present, document how safety threats were resolved.&lt;/p&gt;</description>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-width>0</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="safetyThreatResolutionReunify"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <layout>
+              <type>flow</type>
+              <num-rows>20</num-rows>
+            </layout>
+          </question>
+        </cluster>
+      </question-page>
+      <condition expression="((Group.physicalHarmReunify==&quot;RAI10000&quot;)or(Group.previousIncidentsReunify==&quot;RAI10000&quot;)or(Group.sexualAbuseReunify==&quot;RAI10000&quot;)or(Group.threatenedHarmReunify==&quot;RAI10000&quot;)or(Group.immediateConcernReunify==&quot;RAI10000&quot;)or(Group.refusingAccessReunify==&quot;RAI10000&quot;)or(Group.immediateNeedsReunify==&quot;RAI10000&quot;)or(Group.livingConditionsReunify==&quot;RAI10000&quot;)or(Group.affectingAbilityReunify==&quot;RAI10000&quot;)or(Group.domesticViolenceReunify==&quot;RAI10000&quot;)or(Group.negativeTermsReunify==&quot;RAI10000&quot;)or(Group.emotionalStabilityReunify==&quot;RAI10000&quot;))">
+        <question-page
+          entity="Group"
+          id="SafetyInterventions_Reunify"
+          progress="0"
+          read-only="false"
+          set-focus="true"
+          show-back-button="true"
+          show-exit-button="true"
+          show-next-button="true"
+          show-person-tabs="false"
+          show-save-exit-button="true"
+        >
+          <title id="QuestionPage.SafetyInterventions.Title">SDM\u00AE Reunification Assessment</title>
+          <validation expression="ValidateSafetyInterventions(Group.voluntaryPlacementReunify,Group.protectiveCustodyReunify)">
+            <message id="SafetyInterventions.validation.message">Both questions 9. and 10. can not
+              be answered 'Yes'.</message>
+          </validation>
+          <validation expression="Group.specifyOtherReunify!=&quot;RAI10000&quot; or Group.otherDetailsReunify!=&quot;&quot;">
+            <message id="Question.Validation.SI8">When question '8. Other' is selected, a
+              description of the other safety intervention must be entered.</message>
+          </validation>
+          <validation expression="ValidateSafetyInterventionsAllNo(Group.directServicesReunify,Group.safetyResourcesReunify,Group.communityAgenciesReunify,Group.protectVictimReunify,Group.leaveHomeReunify,Group.safeEnvironmentReunify,Group.plannedLegalActionReunify,Group.specifyOtherReunify,Group.voluntaryPlacementReunify,Group.protectiveCustodyReunify)">
+            <message id="SafetyInterventionsAllNo.validation.message">When questions '1-8' are answered 'No', question '9 or 10' must be answered 'Yes'.</message>
+          </validation>
+          <icon image="title_safety_assess"/>
+          <cluster>
+            <layout>
+              <type>flow</type>
+              <num-cols>1</num-cols>
+              <label-width>0</label-width>
+              <label-alignment>right</label-alignment>
+            </layout>
+            <display-text id="SafetyInterventions.InstructionText">&lt;p
+              style="font-family:tahoma;font-size:11px;color:#4e4e4e;"&gt;Enter safety
+              interventions regarding the children in the household&lt;/p&gt;</display-text>
+          </cluster>
+          <cluster>
+            <title id="Cluster.Title.SafetyInterventions">Safety Interventions</title>
+            <layout>
+              <type>flow</type>
+              <num-cols>1</num-cols>
+              <label-width>70</label-width>
+              <label-alignment>left</label-alignment>
+            </layout>
+            <question
+              control-question="false"
+              id="directServicesReunify"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.DirectServices">1. Intervention or direct services by
+                worker.</label>
+              <help-text id="Question.Help.DirectServices">Actions taken or planned by the
+                  investigating worker or other CPS staff that specifically address one or more safety threats. Examples include providing information about nonviolent disciplinary
+                methods, child development needs, or parenting practices; providing emergency
+                material aid such as food; planned return visits to the home to check on progress;
+                information on obtaining restraining orders; providing definition of child abuse
+                laws and informing involved parties of consequences of violating these laws. DOES
+                NOT INCLUDE the investigation itself or services provided to respond to family needs
+                that do not directly affect safety.</help-text>
+            </question>
+            <question
+              control-question="false"
+              id="safetyResourcesReunify"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.SafetyResources">2. Use of family, neighbors, or other
+                individuals in the community as safety resources.</label>
+              <help-text id="Question.Help.SafetyResources">Applying the family's own strengths as
+                resources to mitigate safety concerns; using extended family members, neighbors, or
+                other individuals to mitigate safety concerns. Examples include: family's agreement
+                to use non-violent means of discipline; engaging a grandparent to assist with
+                childcare; agreement by a neighbor to serve as a safety net for an older child;
+                commitment by 12-step sponsor to meet with caregiver daily and call an older child;
+                commitment by 12-step sponsor to meet with caregiver daily and call worker if
+                caregiver has used or missed meeting; or caregiver's decision that the child will
+                spend a night or a few days with a friend or relative.</help-text>
+            </question>
+            <question
+              control-question="false"
+              id="communityAgenciesReunify"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.CommunityAgencies">3. Use of community agencies or services
+                as safety resources.</label>
+              <help-text id="Question.Help.CommunityAgencies">Involving community-based
+                organization, faith-related organization, or other agency in activities to address
+                safety concerns, e.g., using a local food pantry. DOES NOT INCLUDE long term therapy
+                or being put on a waiting list for services.</help-text>
+            </question>
+            <question
+              control-question="false"
+              id="protectVictimReunify"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.ProtectVictim">4. Have the caregiver appropriately protect
+                the victim from the alleged perpetrator.</label>
+              <help-text id="Question.Help.ProtectVictim">A non-offending caregiver has acknowledged
+                the safety concerns and is able and willing to protect the child from alleged
+                perpetrator. Examples include: agreeing that the child will not be left along with
+                the alleged perpetrator; or preventing the alleged perpetrator from physically
+                disciplining the child.</help-text>
+            </question>
+            <question
+              control-question="false"
+              id="leaveHomeReunify"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.LeaveHome">5. Have the alleged perpetrator leave the home,
+                either voluntarily or in response to legal action.</label>
+              <help-text id="Question.Help.LeaveHome">Temporary or permanent removal of the alleged
+                perpetrator. Examples include arresting alleged perpetrator, non-perpetrating
+                caregiver 'kicking out' alleged perpetrator who has no legal right to residence, or
+                perpetrator agreeing to leave.</help-text>
+            </question>
+            <question
+              control-question="false"
+              id="safeEnvironmentReunify"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.SafeEnvironment">6. Have the non-offending caregiver move to
+                a safe environment with the child.</label>
+              <help-text id="Question.Help.SafeEnvironment">A caregiver not suspected of harming the
+                child has taken or plans to take the child to an alternate location where the
+                alleged perpetrator will not have access to the child. Examples include a domestic
+                violence shelter, the home of a friend or relative, or a hotel.</help-text>
+            </question>
+            <question
+              control-question="false"
+              id="plannedLegalActionReunify"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.PlannedLegalAction">7. Legal action planned or
+                initiated-child remains in the home.</label>
+              <help-text id="Question.Help.PlannedLegalAction">A legal action has already commenced
+                  or will be commenced that will effectively mitigate identified safety threats. This
+                includes family initiated (e.g., restraining orders,mental health commitments,
+                change in custody/visitation/guardianship and CPS initiated (file petition and child
+                remains in home).</help-text>
+            </question>
+            <question
+              control-question="false"
+              id="specifyOtherReunify"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.SpecifyOther">8. Other (specify)</label>
+              <help-text id="Question.Help.SpecifyOther">The family or worker identified a unique
+                intervention for an identified safety concern that does not fit within items
+              1-7.</help-text>
+            </question>
+          </cluster>
+          <condition expression="(Group.specifyOtherReunify==&quot;RAI10000&quot;)">
+            <cluster>
+              <layout>
+                <type>flow</type>
+                <num-cols>1</num-cols>
+                <label-width>0</label-width>
+                <label-alignment>right</label-alignment>
+              </layout>
+              <question
+                control-question="false"
+                id="otherDetailsReunify"
+                mandatory="false"
+                multi-select="false"
+                show-field-help="false"
+              >
+                <layout>
+                  <type>flow</type>
+                  <num-rows>4</num-rows>
+                </layout>
+              </question>
+            </cluster>
+          </condition>
+          <condition expression="(((Group.directServicesReunify==&quot;RAI10001&quot;)and(Group.safetyResourcesReunify==&quot;RAI10001&quot;)and(Group.communityAgenciesReunify==&quot;RAI10001&quot;)and(Group.protectVictimReunify==&quot;RAI10001&quot;)and(Group.leaveHomeReunify==&quot;RAI10001&quot;)and(Group.safeEnvironmentReunify==&quot;RAI10001&quot;)and(Group.plannedLegalActionReunify==&quot;RAI10001&quot;)and(Group.specifyOtherReunify==&quot;RAI10001&quot;))or(Group.MultiChildInd==true))">
+            <cluster>
+              <layout>
+                <type>flow</type>
+                <num-cols>1</num-cols>
+                <label-width>70</label-width>
+                <label-alignment>left</label-alignment>
+              </layout>
+              <question
+                control-question="false"
+                id="voluntaryPlacementReunify"
+                mandatory="false"
+                multi-select="false"
+                show-field-help="true"
+              >
+                <label id="Question.Label.VoluntaryPlacement">9. Voluntary placement continues.</label>
+                <help-text id="Question.Help.VoluntaryPlacement">A voluntary agreement is signed
+                  between the caregiver and the CPS agency.</help-text>
+              </question>
+              <question
+                control-question="false"
+                id="protectiveCustodyReunify"
+                mandatory="false"
+                multi-select="false"
+                show-field-help="true"
+              >
+                <label id="Question.Label.ProtectiveCustody">10. Protective custody continues
+                  because interventions 1-9 do not adequately ensure child's safety.</label>
+                <help-text id="Question.Help.ProtectiveCustody">One or more children are
+                  protectively placed and entitled to notice and hearing within 72 judicial
+                hours.</help-text>
+              </question>
+            </cluster>
+          </condition>
+        </question-page>
+      </condition>
+      <callout
+        expression="SafetyRecommendationResultsForReunify()"
+        id="SafetyRecommendationResultsForReunify"
+      />
+      <loop
+        criteria="isChild==true"
+        entity="Person"
+        loop-type="for-each"
+      >
+        <callout
+          expression="GetRUARecommendationResults(Person.participantID)"
+          id="GetRUARecommendationResults"
+        />
+        <question-page
+          entity="Person"
+          id="Recommendation_Reunify"
+          progress="0"
+          read-only="false"
+          set-focus="true"
+          show-back-button="true"
+          show-exit-button="true"
+          show-next-button="true"
+          show-person-tabs="true"
+          show-save-exit-button="true"
+        >
+          <title id="QuestionPage.AssessmentDetails.Title">SDM\u00AE Reunification Assessment</title>
+          <validation expression="Person.recommendationOverrideCodeReunify==&quot;OVER10000&quot; or Person.recommendationOverrideCodeReunify==&quot;OVER10002&quot; or (Person.recommendationOverrideCodeReunify==&quot;OVER10001&quot; and ((isNotNull(Person.permanencyPlanRecommendationReunifyInd) and Person.permanencyPlanRecommendationReunifyInd==true) or (isNotNull(Person.continuedRUNServicesReunifyInd) and Person.continuedRUNServicesReunifyInd==true)))">
+            <message id="OverrideMessage.id">At least one condition must be specified if a policy
+              override has been selected.</message>
+          </validation>
+          <validation expression="Person.recommendationOverrideCodeReunify==&quot;OVER10000&quot; or Person.recommendationOverrideCodeReunify==&quot;OVER10001&quot; or ((Person.recommendationOverrideCodeReunify==&quot;OVER10002&quot;) and (isNotNull(Person.recommendationDiscretionaryOverrideReasonReunify) and Person.recommendationDiscretionaryOverrideReasonReunify!=&quot;&quot;))">
+            <message id="DiscMessageID">Override reason must be entered if a
+              discretionary override has been specified.</message>
+          </validation>
+          <validation expression="ValidateRecommendationOverride(Person.recommendedGoal, Person.policyRecommendationValueReunify, Person.discretionaryRecommendationValueReunify)">
+            <message id="Recommendation.Override.Message">The recommendation selected via an override cannot be the same as the recommendation identified via the assessment</message>
+          </validation>
+          <cluster>
+            <title id="Cluster.Title.Recommendation">Recommendation</title>
+            <layout>
+              <type>flow</type>
+              <num-cols>1</num-cols>
+              <label-width>0</label-width>
+              <label-alignment>left</label-alignment>
+            </layout>
+            <display-text id="AssessmentResults.Display.Text.DeterminedVisitationLevel">
+              &lt;span style="font-family:tahoma;font-size:11px;color:#4e4e4e;margin-left:-5px;"&gt;Initial Recommendation: &lt;b&gt;%1s &lt;/b&gt; &lt;/span&gt;
+              <argument id="Person.recommendedGoalDescInitial"/>
+            </display-text>
+            <display-text id="AssessmentResults.Display.Text.DeterminedVisitationLevel1">
+              &lt;span style="font-family:tahoma;font-size:11px;color:#4e4e4e;margin-left:-5px;"&gt;Recommendation After Reunify: &lt;b&gt;%1s &lt;/b&gt; &lt;/span&gt;
+              <argument id="Person.recommendedGoalDescFinal"/>
+            </display-text>
+
+
+          </cluster>
+          <cluster>
+            <title id="Cluster.Title.Overrides">Override</title>
+            <description id="Cluster.Desc.Overrides">&lt;p style="font-family:tahoma;font-size:11px;color:#4e4e4e;"&gt;Complete a permanency plan recommendation for each child receiving family reunification services. Consult with supervisor and appropriate statutes and regulations.&lt;/p&gt;</description>
+            <layout>
+              <type>flow</type>
+              <num-cols>2</num-cols>
+              <label-width>35</label-width>
+              <label-alignment>left</label-alignment>
+            </layout>
+            <question
+              control-question="false"
+              id="recommendationOverrideCodeReunify"
+              mandatory="true"
+              multi-select="false"
+              show-field-help="true"
+            >
+              <label id="Question.Label.AssessmentOverride">Override</label>
+              <help-text id="Question.Help.PolicyOverrideOptions">Override</help-text>
+            </question>
+          </cluster>
+          <condition expression="(Person.recommendationOverrideCodeReunify==&quot;OVER10001&quot;)">
+            <cluster entity="Person">
+              <description id="Cluster.Desc.PolicyOverrideQuestions">&lt;span style="margin-top:
+                5px"&gt;Indicate if any of the following are true in the current
+                review period.&lt;/span&gt;</description>
+              <layout>
+                <type>flow</type>
+                <num-cols>1</num-cols>
+                <label-width>70</label-width>
+                <label-alignment>left</label-alignment>
+              </layout>
+              <question
+                control-question="false"
+                id="permanencyPlanRecommendationReunifyInd"
+                mandatory="false"
+                multi-select="false"
+                show-field-help="false"
+              >
+                <label id="Question.Label.PermanencyPlanRecommendation">Child's recommendation will be changed to reflect the permanency plan recommendation for the sibling group.</label>
+              </question>
+              <question
+                control-question="false"
+                id="continuedRUNServicesReunifyInd"
+                mandatory="false"
+                multi-select="false"
+                show-field-help="false"
+              >
+                <label id="Question.Label.ContinuedRUNServicesInd">Reasons for placement represent allowable exceptions to requirements to provide continued reunification services.</label>
+              </question>
+              <question
+                control-question="false"
+                id="policyRecommendationValueReunify"
+                mandatory="true"
+                multi-select="false"
+                show-field-help="false"
+              >
+                <label id="Question.Label.PolicyOverride">Please enter the final Permanency Plan Goal</label>
+                <help-text id="Question.Label.PolicyOverride">Please enter the final Permanency Plan Goal</help-text>
+              </question>
+            </cluster>
+          </condition>
+          <condition expression="(Person.recommendationOverrideCodeReunify==&quot;OVER10002&quot;)">
+            <cluster>
+              <description id="Cluster.Desc.DiscretionaryOverrideQuestions">&lt;span style="margin-top:
+                5px"&gt;Indicate if any of the following are true in the current
+                review period.&lt;/span&gt;</description>
+              <layout>
+                <type>flow</type>
+                <num-rows>4</num-rows>
+                <label-width>40</label-width>
+                <label-alignment>left</label-alignment>
+              </layout>
+              <question
+                control-question="false"
+                id="discretionaryRecommendationValueReunify"
+                mandatory="true"
+                multi-select="false"
+                show-field-help="false"
+              >
+                <label id="Question.Label.DiscretionaryOverride">Please enter the final Permanency Plan Goal</label>
+                <help-text id="Question.Label.DiscretionaryOverride">Please enter the final Permanency Plan Goal</help-text>
+              </question>
+              <question
+                control-question="false"
+                id="recommendationDiscretionaryOverrideReasonReunify"
+                mandatory="false"
+                multi-select="false"
+                show-field-help="false"
+              >
+                <layout>
+                  <type>flow</type>
+                  <num-rows>4</num-rows>
+                </layout>
+                <label id="Question.Label.DiscretionaryOverrideReason">Override Reason</label>
+              </question>
+            </cluster>
+          </condition>
+        </question-page>
+      </loop>
+    </condition>
+    <!-- Reunify Changes-->
+    <callout
+      expression="EvaluateRUARecommendationResults()"
+      id="EvaluateRUARecommendationResults"
+    />
+  </section>
 </ieg-script>

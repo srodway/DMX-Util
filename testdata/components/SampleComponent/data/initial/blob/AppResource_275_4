@@ -1,37 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Submenu.Title.New=New
+Submenu.Title.Transition=Transition
+Submenu.Toolip.Transition=Transition
 
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
-    <identifier name="SubmitOrExit" />
-    <header>
-        <title id="Page.Title" />
-        <description id="Page.Description" />
-        <icon id="title_save" />
-    </header>
-    <content>
-        <container>
-            <title id="RadioSelection.Title" />
-            <description id="RadioSelection.Description" />
-            <help id="RadioSelection.Help" />
-            <radiobutton-container id="SELECTION" legend="RadioSelection.Legend">
-                <radiobutton id="SUBMIT">
-                    <title id="SubmitApplication.Title" />
-                </radiobutton>
-                <radiobutton id="EXIT">
-                    <title id="ExitSaveApplication.Title" />
-                </radiobutton>
-            </radiobutton-container>
-        </container>
-    </content>
-    <navigation>
-        <nav-button name="next" type="action" />
-		<nav-button name="back" type="action" />
-    </navigation>
-</page>
+Submenu.Title.Search=Search
+Submenu.Tooltip.Search=Search
+
+MenuItem.Title.Activity=New Activity
+MenuItem.Tooltip.Activity=New Activity
+
+MenuItem.Title.WDO=New Data Object
+MenuItem.Tooltip.WDO=New Data Object
+
+MenuItem.Title.Transition=New Transition
+MenuItem.Tooltip.Transition=New Transition	    
+	    
+MenuItem.Title.ValidateTransition=Validate
+MenuItem.Tooltip.ValidateTransition=Validate
+  
+MenuItem.Title.ShowGraphicalView=Graphical View
+MenuItem.Tooltip.ShowGraphicalView=Graphical View
+
+MenuItem.Title.User=User
+MenuItem.Tooltip.User=User
+
+MenuItem.Title.ExternalUser=External User
+MenuItem.Tooltip.ExternalUser=External User
+
+MenuItem.Title.Edit=Edit
+MenuItem.Tooltip.Edit=Edit this process
+
+MenuItem.Title.EditFailureAllocationStrategy=Edit Failure Allocation Strategy
+MenuItem.Tooltip.EditFailureAllocationStrategy=Edit the failure allocation strategy for this process
+
+MenuItem.Title.EditWebService=Edit Web Service
+MenuItem.Tooltip.EditWebService=Edit the web service details for this process
+
+MenuItem.Title.Export=Export
+MenuItem.Tooltip.Export=Export this process
+
+MenuItem.Title.Copy=Copy
+MenuItem.Tooltip.Copy=Create a copy of this process
+
+MenuItem.Title.Delete=Delete
+MenuItem.Tooltip.Delete=Delete this process

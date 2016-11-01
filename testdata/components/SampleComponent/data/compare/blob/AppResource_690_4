@@ -1,40 +1,25 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-IWSUPAPPWorkspaceSectionShortcuts.title=Shortcuts
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+  
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+	Copyright 2009-2010 Curam Software Ltd.
+	All rights reserved.
+	
+	This software is the confidential and proprietary information of Curam
+	Software, Ltd. ("Confidential Information"). You shall not disclose
+	such Confidential Information and shall use it only in accordance with the
+	terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ProviderGroupsList">
 
-Intake.Title=Intake
-IntakeApplicationSearch.Title=Search for an Application\u2026 
+	<!-- Details panel -->
+	<tc:context tab-name="Details.Name.ProviderGroupsList" tab-title="Details.Name.ProviderGroupsList"/>
 
-CaseSearch.Title=Search for a Case\u2026
-NewCaseQuery.Title=New Case Query
-MyItemsOfInterest.Title=My Items Of Interest\u2026
+	<!-- Navigation Panel -->
+	<tc:navigation page-id="ProviderManagement_listProviderGroups"/>
 
-Searches.Title=Searches
-PersonSearch.Title=Person\u2026
-EmployerSearch.Title=Employer\u2026
-AllParticipantSearch.Title=All Participants\u2026
 
-Application.Title=Application\u2026
-Case.Title=Case\u2026
-
-EducationInstituteSearch.Title=Educational Institute\u2026
-ExternalPartySearch.Title=External Party\u2026
-ExternalPartyOfficeSearch.Title=External Party Office\u2026
-InformationProviderSearch.Title=Information Provider\u2026
-UtilitySearch.Title=Utility\u2026
-
-ParticipantRegistration.Title=Registration
-PersonRegistration.Title=Person
-EmployerRegistration.Title=Employer
-EducationInstituteRegistration.Title=Educational Institute
-ExternalPartyRegistration.Title=External Party
-InformationProviderRegistration.Title=Information Provider
-UtilityRegistration.Title=Utility
-ProspectPersonRegistration.Title=Prospect Person
-ProspectEmployerRegistration.Title=Prospect Employer
+</tc:tab-config>

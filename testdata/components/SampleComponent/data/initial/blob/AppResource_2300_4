@@ -1,56 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+SupervisorAppSectionShortcuts.title=Shortcuts
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-	Copyright 2009 Curam Software Ltd.
-	All rights reserved.
-	
-	This software is the confidential and proprietary information of Curam
-	Software, Ltd. ("Confidential Information"). You shall not disclose
-	such Confidential Information and shall use it only in accordance with the
-	terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="MyCalendarMenu">
+Users.Title=Users
+MyUsers.Title=My Users
+UserWorkLoads.Title=User Workload\u2026
+CasesWithAppeals.Title=Cases With Appeals
+CasesWithIssues.Title=Cases With Issues
+MyWorkQueues.Title=My Work Queues
+MyOrganizationUnits.Title=My Organisation Units
 
-	<mc:submenu id="NEW" title="Submenu.Title.New" tooltip="Submenu.Tooltip.New">
+MyWorkload.Title=My Workload
+MyCases.Title=My Cases\u2026
+MyCaseQueries.Title=My Case Queries
+MyItemsOfInterest.Title=My Items of Interest
+MyRecentlyApproved.Title=My Recently Approved Cases
+MyRecentlyAssigned.Title=Cases Recently Assigned to Me
+MyRecentlyViewed.Title=Recently Viewed Cases
+RegisterPersonCreateCase.Title=Register Person and Create Case
+AddProspectCreateCase.Title=Add Prospect Person and Create Case
+MyInvestigations.Title=My Investigations\u2026
+NewInvestigation.Title=New Investigation
+NewCaseQuery.Title=New Case Query
+NewInvestigationQuery.Title=New Investigation Query
 
-		<mc:menu-item id="Activity" open-as="modal" page-id="Activity_createStandardUserActivity" title="MenuItem.Title.Activity" tooltip="MenuItem.Tooltip.Activity"/>
+Searches.Title=Searches
+UserSearch.Title=User Search\u2026
+TaskSearch.Title=Task Search\u2026
+CaseSearch.Title=Case Search\u2026
+SearchForIncident.Title=Incident Search\u2026
+SearchForAppeal.Title=Appeal Search\u2026
+PersonSearch.Title=Person Search\u2026
+EmployerSearch.Title=Employer Search\u2026
 
-		<mc:menu-item id="RecurringActivity" open-as="modal" page-id="Activity_createRecurringUserActivity" title="MenuItem.Title.RecurringActivity" tooltip="MenuItem.Tooltip.RecurringActivity"/>
+Registration.Title=Registration
+PersonRegistration.Title=Person
+ProspectPersonRegistration.Title=Prospect Person
+EmployerRegistration.Title=Employer
+ProspectEmployerRegistration.Title=Prospect Employer
 
-	</mc:submenu>
-
-	<mc:submenu id="Search" title="Submenu.Title.Search" tooltip="Submenu.Tooltip.Search">
-
-		<mc:menu-item id="SearchCase" page-id="Case_search1" title="MenuItem.Title.SearchCase" tooltip="MenuItem.Tooltip.SearchCase"/>
-
-		<mc:submenu id="Participant" title="Submenu.Title.Participant" tooltip="Submenu.Tooltip.Participant">
-
-			<mc:menu-item id="EducationalInstitute" page-id="EducationalInstitute_search1" title="MenuItem.Title.EducationalInstitute" tooltip="MenuItem.Tooltip.EducationalInstitute"/>
-
-			<mc:menu-item id="Employer" page-id="Employer_search1" title="MenuItem.Title.Employer" tooltip="MenuItem.Tooltip.Employer"/>
-
-			<mc:menu-item id="ExternalParty" page-id="ExternalParty_search1" title="MenuItem.Title.ExternalParty" tooltip="MenuItem.Tooltip.ExternalParty"/>
-
-			<mc:menu-item id="ExternalPartyOffice" page-id="ExternalPartyOffice_search1" title="MenuItem.Title.ExternalPartyOffice" tooltip="MenuItem.Tooltip.ExternalPartyOffice"/>
-
-			<mc:menu-item id="InformationProvider" page-id="InformationProvider_search1" title="MenuItem.Title.InformationProvider" tooltip="MenuItem.Tooltip.InformationProvider"/>
-
-			<mc:menu-item id="Person" page-id="Person_search1" title="MenuItem.Title.Person" tooltip="MenuItem.Tooltip.Person"/>
-
-			<mc:menu-item id="ProductProvider" page-id="ProductProvider_search1" title="MenuItem.Title.ProductProvider" tooltip="MenuItem.Tooltip.ProductProvider"/>
-
-			<mc:menu-item id="ServiceSupplier" page-id="ServiceSupplier_search1" title="MenuItem.Title.ServiceSupplier" tooltip="MenuItem.Tooltip.ServiceSupplier"/>
-
-			<mc:menu-item id="Utility" page-id="Utility_search1" title="MenuItem.Title.Utility" tooltip="MenuItem.Tooltip.Utility"/>
-
-			<mc:menu-item id="AllParticipant" page-id="Participant_search" title="MenuItem.Title.AllParticipant" tooltip="MenuItem.Tooltip.AllParticipant"/>
-
-		</mc:submenu>
-
-	</mc:submenu>
-
-</mc:menu-bar>

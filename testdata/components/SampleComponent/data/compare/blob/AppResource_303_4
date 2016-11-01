@@ -5,42 +5,27 @@
 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="PaymentCorrectionCase">
-  <nc:loader-registry>
-    <nc:loader class="curam.core.sl.tab.impl.PaymentCorrectionsNavStateLoader"/>
-  </nc:loader-registry>
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
   
-  <nc:nodes>
-    <nc:navigation-page id="Home" page-id="PaymentCorrection_home" title="page.title.paymentcorrectionhome"/>
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><ac:application xmlns:ac="http://www.curamsoftware.com/curam/util/client/application-config" id="DefaultApp" logo="DefaultApp.logo" subtitle="DefaultApp.subtitle" title="DefaultApp.title" user-message="DefaultApp.UserMessage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-    <nc:navigation-group id="FinancialFolder" title="folder.title.financial">
-      <nc:navigation-page id="Transactions" page-id="PaymentCorrection_listTransaction" title="page.title.transactions"/>
-      <nc:navigation-page id="Components" page-id="PaymentCorrection_listComponent" title="page.title.components"/>
-      <nc:navigation-page id="DeliveryPatterns" page-id="PaymentCorrection_listDeliveryPattern" title="page.title.deliverypatterns"/>
-      <nc:navigation-page id="Nominees" page-id="ICProduct_listNominee" title="page.title.nominees"/>
-      <nc:navigation-page dynamic="true" id="DeductionsApplied" page-id="BenefitSampleOverpayment_listDeductions" title="page.title.deductions"/>      
-      <nc:navigation-page dynamic="true" id="Deductions" page-id="PaymentCorrection_listDeduction" title="page.title.deductions"/>
-    </nc:navigation-group>
-    
-    <nc:navigation-page id="Participants" page-id="PaymentCorrection_listParticipant" title="page.title.participants"/>       
+  <ac:application-menu>
+    <ac:preferences title="preferences.title"/>
+    <ac:help title="help.title"/>
+    <ac:logout title="logout.title"/>
+  </ac:application-menu>
 
-    <nc:navigation-group id="ContactFolder" title="folder.title.contact">
-      <nc:navigation-page id="Attachments" page-id="PaymentCorrection_listAttachment" title="page.title.attachments"/>
-      <nc:navigation-page id="Communications" page-id="PaymentCorrection_listCommunicationAndResolveWithCorrespondent" title="page.title.communications"/>
-      <nc:navigation-page id="Notes" page-id="PaymentCorrection_listNote" title="page.title.notes"/>
-    </nc:navigation-group>
-    
-    <nc:navigation-page id="Events" page-id="PaymentCorrection_resolveCalendar" title="page.title.events"/>  
-    
-    <nc:navigation-page id="Tasks" page-id="PaymentCorrection_listTask" title="page.title.tasks"/>
+  <ac:application-search default-search-page="Organization_resolveApplicationSearch" initial-text="Application.Search.InitialText"/>
 
-    <nc:navigation-group id="AdminFolder" title="folder.title.administration">
-      <nc:navigation-page id="StatusHistory" page-id="PaymentCorrection_listStatusHistory" title="page.title.statushistory"/>
-      <nc:navigation-page id="RelatedCases" page-id="PaymentCorrection_listRelatedCase" title="page.title.relatedcases"/>
-      <nc:navigation-page id="TransactionHistory" page-id="PaymentCorrection_listTransactionHistory" title="page.title.transactionhistory"/>
-      <nc:navigation-page id="UserRoles" page-id="PaymentCorrection_listUserRole" title="page.title.userroles"/>
-    </nc:navigation-group>
-
-  </nc:nodes>
-    
-</nc:navigation>
+  <ac:section-ref id="DefaultAppHomeSection"/>
+  <ac:section-ref id="DefaultAppSection"/>
+  <ac:section-ref id="DefaultAppInboxSection"/>
+  <ac:section-ref id="DefaultAppCalendarSection"/>
+  
+</ac:application>

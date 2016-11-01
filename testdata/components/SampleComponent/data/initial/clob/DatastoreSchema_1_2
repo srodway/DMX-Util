@@ -153,7 +153,7 @@
  <xs:element name="PractitionerCertificate">
   <xs:complexType>
    <xs:sequence minOccurs="0">
-    <xs:element ref="Diagnosis" minOccurs="0" maxOccurs="unbounded"/>
+    <xs:element ref="ASCDiagnosis" minOccurs="0" maxOccurs="unbounded"/>
    </xs:sequence>
    <xs:attribute name="practitionerCertificateID" type="d:SVR_KEY"/>
    <xs:attribute name="medicalCertificateType" type="ASC_PRACT_CERT_TYPE_CODE" default=""/>
@@ -175,7 +175,7 @@
   </xs:key>
  </xs:element>
 
- <xs:element name="Diagnosis">
+ <xs:element name="ASCDiagnosis">
   <xs:complexType>
    <xs:attribute name="diagnosisID" type="d:SVR_KEY"/>
    <xs:attribute name="diagnosisType" type="ASC_INCAPACITY_DIAGNOSIS"/>

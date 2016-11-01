@@ -1,30 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2010 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="AppealHearingReviewHearingIC">
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012,2015. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Curam.logo=CDEJ/themes/v6/images/curam-logo.png
+CITWSAPP.logo=CDEJ/themes/v6/images/application-logo.png
+# START NON-TRANSLATABLE 
+CITWSAPP.title=C\u00FAram Enterprise Framework
+# END NON-TRANSLATABLE
+CITWSAPP.subtitle=Citizen Account Workspace
+CITWSAPP.UserMessage=Welcome, %user-full-name
+preferences.title=Preferences
+print.title=Print
+help.title=Help
+logout.title=Log out
 
-    <nc:nodes>
+# START NON-TRANSLATABLE
+landing.title=IBM C\u00FAram Universal Access
+landing.logo=app-banner-logo.png
+navbar.width=80
+# browser.tab.title.separator is the text used to separate the two parts of the browser tab title, e.g. "<current page title> - <landing.title>"
+# The <current page title> is dynamically generated whenever a new page is focused.
+# The landing.title property is defined in this file.
+browser.tab.title.separator=\ -\ 
+# browser.tab.title.separator governs whether the browser tab title displays the application name first or not.
+# If true, it renders the browser tab title as "<landing.title> - <current page title>", e.g. "IBM Curam Universal Access - <current page title>"
+# If false, it renders the browser tab title as "<current page title> - <landing.title>", e.g. "<current page title> - IBM Curam Universal Access"
+browser.tab.title.application.name.first=false
+# END NON-TRANSLATABLE
 
-        <nc:navigation-page id="Home" page-id="Appeal_IC_hearingReviewHearingHome" title="page.title.home"/>
-   
-        <nc:navigation-page id="Representative" page-id="Appeal_IC_listHearingReviewRepresentative" title="page.title.representative"/>
+mega.title=Find Government and Community Help
 
-        <nc:navigation-page id="Reviewers" page-id="Appeal_IC_listHearingReviewer" title="page.title.reviewers"/>
-        
-        <nc:navigation-page id="TranscriptionRequests" page-id="Appeal_listHearingReviewTranscriptionIC" title="page.title.transcriptionrequests"/>
+menu.screening.title=Check if You are Eligible for Government Benefits
+menu.screening.text=Check if you are eligible for programs
+menu.screening.icon=mega_eligible.png
 
-    </nc:nodes>
+menu.intake.title=Apply For Benefits
+menu.intake.text=Apply online for programs
+menu.intake.icon=mega_apply.png
 
-</nc:navigation>
+menu.triage.title=Find Community Help
+menu.triage.text=Answer some basic questions about your circumstances to find services and programs that may help you.
+menu.triage.icon=mega_community.png
+
+person.title=Welcome, %user-full-name
+menu.resetpassword.title=Reset password
+menu.resetpassword.text=Click here to reset or change your password.
+menu.listlifeevents.title=Update My Information
+menu.listlifeevents.text=Update My Information
+menu.logout.title=Log Out
+menu.logout.text=Click here to log out of the application.
+
+menu.help.title=
+menu.contactus.title=Contact Us
+menu.contactus.text=You can contact us by phone, email and through your local office.
+menu.contactus.icon=help_contactus.png
+menu.faq.title=Frequently Asked Questions
+menu.faq.text=View frequently asked questions to find out more about universal access.
+# START NON-TRANSLATABLE
+menu.faq.icon=help_faq.png
+# END NON-TRANSLATABLE
+logout.title=Log Out

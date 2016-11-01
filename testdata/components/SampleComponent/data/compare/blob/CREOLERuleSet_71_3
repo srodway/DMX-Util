@@ -1,80 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCNameDataRuleSet">
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCName">
+<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCEmailAddressDataRuleSet">
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCEmailAddress">
     <Annotations>
-      <SuccessionSetPopulation/>
+      <SuccessionSetPopulation endDateAttribute="toDate" startDateAttribute="fromDate"/>
     </Annotations>
-    <Attribute name="middleName">
+    <Attribute name="fromDate">
       <Annotations/>
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="java.lang.String"/>
-        </javaclass>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="lastName">
+    <Attribute name="emailAddressType">
       <Annotations/>
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="java.lang.String"/>
-        </javaclass>
+        <codetableentry table="EmailType"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="title">
+    <Attribute name="emailAddress">
       <Annotations/>
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <codetableentry table="PersonTitle"/>
-        </javaclass>
+        <javaclass name="java.lang.String"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="initials">
+    <Attribute name="toDate">
       <Annotations/>
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="java.lang.String"/>
-        </javaclass>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="firstName">
+    <Attribute name="preferredInd">
       <Annotations/>
       <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="java.lang.String"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="suffix">
-      <Annotations/>
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <codetableentry table="PersonSuffix"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="nameType">
-      <Annotations/>
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <codetableentry table="AlternateNameType"/>
-        </javaclass>
+        <javaclass name="java.lang.Boolean"/>
       </type>
       <derivation>
         <specified/>

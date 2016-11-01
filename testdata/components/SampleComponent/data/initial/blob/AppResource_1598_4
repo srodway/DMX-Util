@@ -6,46 +6,14 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-MenuItem.Title.Edit=Edit
-MenuItem.Tooltip.Edit=Edit
+Number.Wizard.Pages=2
 
-MenuItem.Title.AddSchedule=Add Schedule
-MenuItem.Tooltip.AddSchedule=Add Schedule
+ProspectPerson_duplicateCheckForPDCWizard.Wizard.Item.Text=Registered Person Check
+ProspectPerson_duplicateCheckForPDCWizard.Wizard.Page.Title=Step 1:
+ProspectPerson_duplicateCheckForPDCWizard.Wizard.Page.Desc=Registered Person Check
+Wizard.PageID.1=ProspectPerson_duplicateCheckForPDCWizard
 
-MenuItem.Title.EditSchedule=Edit Schedule
-MenuItem.Tooltip.EditSchedule=Edit Schedule
-
-MenuItem.Title.DeleteSchedule=Delete Schedule
-MenuItem.Tooltip.DeleteSchedule=Delete Schedule
-
-MenuItem.Title.Auditor=New Auditor
-MenuItem.Tooltip.Auditor=Create an auditor
-
-MenuItem.Title.AuditTeam=New Audit Team
-MenuItem.Tooltip.AuditTeam=Create an audit team
-
-MenuItem.Title.ManageFocusAreas=Manage Focus Areas
-MenuItem.Tooltip.ManageFocusAreas=Manage Focus Areas
-
-MenuItem.Title.AssignAudits=Assign Case Audits
-MenuItem.Tooltip.AssignAudits=Assign Case Audits
-
-
-MenuItem.Title.AddSummaryFindings=Add Summary Findings
-MenuItem.Tooltip.AddSummaryFindings=Add Summary Findings
-
-MenuItem.Title.EditSummaryFindings=Edit Summary Findings
-MenuItem.Tooltip.EditSummaryFindings=Edit Summary Findings
-
-MenuItem.Title.CompleteAuditPlan=Complete Audit Plan
-MenuItem.Tooltip.CompleteAuditPlan=Complete Audit Plan
-
-
-MenuItem.Title.AuditPlan=Audit Plan Search
-MenuItem.Tooltip.AuditPlan=Audit Plan Search
-
-MenuItem.Title.CaseAudit=Case Audit Search
-MenuItem.Tooltip.CaseAudit=Case Audit Search
-
-MenuItem.Title.DeleteAuditPlan=Delete Audit Plan
-MenuItem.Tooltip.DeleteAuditPlan=Delete Audit Plan
+ProspectPerson_registerAsPersonForPDCWizard.Wizard.Item.Text=Register Prospect as Person
+ProspectPerson_registerAsPersonForPDCWizard.Wizard.Page.Title=Step 2:
+ProspectPerson_registerAsPersonForPDCWizard.Wizard.Page.Desc=Register Prospect as Person
+Wizard.PageID.2=ProspectPerson_registerAsPersonForPDCWizard

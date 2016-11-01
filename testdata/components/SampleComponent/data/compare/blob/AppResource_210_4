@@ -1,30 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2010 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="InboxHomeMenu">
-
-       
-  <mc:menu-item id="ReserveNextTask" open-as="modal" page-id="Inbox_reserveNextTask" title="MenuItem.Title.ReserveNextTask" tooltip="MenuItem.Tooltip.ReserveNextTask"/>
-
-  <mc:menu-item id="ReserveNextTaskFromPreferredQueue" open-as="modal" page-id="Inbox_reserveFromPreferredWorkQueue" title="MenuItem.Title.ReserveNextTaskFromPreferredQueue" tooltip="MenuItem.Tooltip.ReserveNextTaskFromPreferredQueue"/>
-    
-  <mc:menu-item id="ReserveNextTaskFromQueue" open-as="modal" page-id="Inbox_reserveNextWorkQueueTask" title="MenuItem.Title.ReserveNextTaskFromQueue" tooltip="MenuItem.Tooltip.ReserveNextTaskFromQueue"/>
-
-  <mc:menu-item id="CreateTask" open-as="modal" page-id="TaskManagement_createTask" title="MenuItem.Title.CreateTask" tooltip="MenuItem.Tooltip.CreateTask"/>
-
-  <mc:menu-item id="InboxOptions" page-id="Inbox_viewInboxOptionsGeneralSettings" title="MenuItem.Title.InboxOptions" tooltip="MenuItem.Tooltip.InboxOptions"/>
-
-
-</mc:menu-bar>
+#Fri Oct 28 15:23:40 BST 2016
+Cluster.Title.Comments=Comments
+Field.Label.From=From
+relCpCluster.Description.RegisteredParticipantrelatedParticipant=If the related person is not a case participant but is registered on the system, please select from below.
+ActionControl.Label.Save=Save
+popup-config-DYNAMIC_EVIDENCE_PERSON_POPUP_ID.SCROLLBARS=false
+popup-config-DYNAMIC_EVIDENCE_PERSON_POPUP_ID.PAGE_ID=Person_relativeSearchPopup1
+effectiveDate=19000102
+relCpCluster.Field.Label.phoneAreaCode=Area Code
+Field.Label.address=
+childEvidenceType=PDC0000265
+relCpCluster.Description.RelCpParticipantrelatedParticipant=If the related person is a case participant, please select from the list of case participants below.
+description.id=
+RepCp.Field.Label.CaseParticipantRoleIdrelatedParticipant=\ Related Participant
+relCpCluster.Field.Label.ParticipantID=Participant
+RepCp.Field.Label.CaseParticipantRoleIdparticipant=\ Participant
+ActionControl.Label.Cancel=Cancel
+relCpCluster.Field.Label.phoneNumber=Phone Number
+Participant=Participant
+RelatedTo.FirstName.Label=First Name
+popup-config-DYNAMIC_EVIDENCE_PERSON_POPUP_ID.HEIGHT=600
+popup-config-DYNAMIC_EVIDENCE_PERSON_POPUP_ID.LABEL=
+Participant.participant=participant
+Field.Label.Type=Type
+relCpCluster.Description.NonRegisteredParticipantrelatedParticipant=If the related person is not registered on the system, complete the details below.
+Field.Label.To=To
+Participant.relatedParticipant=relatedParticipant
+popup-config-DYNAMIC_EVIDENCE_PERSON_POPUP_ID.IMAGE=../themes/v6/images/search-icon.png
+Field.Label.ReceivedDate=Received Date
+popup-config-DYNAMIC_EVIDENCE_PERSON_POPUP_ID.WIDTH=800
+Field.Label.EndReason=End Reason
+RelatedTo.LastName.Label=Last Name
+Cluster.Title.ID1=Relationship Details
+Page.Title=New Relationships 
+RelatedTo=Related To

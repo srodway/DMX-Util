@@ -1,87 +1,371 @@
-<!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2013. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains">
   <xs:import namespace="http://www.curamsoftware.com/BaseDomains"/>
-  <xs:include schemaLocation="AdultNeedsDomains"/>
-  
+  <xs:include schemaLocation="IEGDomains"/>
+  <xs:include schemaLocation="ASCApplicationDomains"/>
+  <xs:simpleType name="SCOT_PHONENOTYPE">
+    <xs:annotation>
+      <xs:appinfo>
+        <d:options>
+          <d:option name="code-table-name">PhoneType</d:option>
+        </d:options>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="IEG_CODETABLE_CODE"/>
+  </xs:simpleType>
+  <xs:simpleType name="SCOT_NATIONALITY">
+    <xs:annotation>
+      <xs:appinfo>
+        <d:options>
+          <d:option name="code-table-name">Nationality</d:option>
+        </d:options>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="IEG_CODETABLE_CODE"/>
+  </xs:simpleType>
+  <xs:simpleType name="SCOT_REASONFORBREAK">
+    <xs:annotation>
+      <xs:appinfo>
+        <d:options>
+          <d:option name="code-table-name">ReasonForBreak</d:option>
+        </d:options>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="IEG_CODETABLE_CODE"/>
+  </xs:simpleType>
+  <xs:simpleType name="SCOT_PAYMENTFREQUENCY">
+    <xs:annotation>
+      <xs:appinfo>
+        <d:options>
+          <d:option name="code-table-name">ScotPaymentFrequency</d:option>
+        </d:options>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="IEG_CODETABLE_CODE"/>
+  </xs:simpleType>
+  <xs:simpleType name="SCOT_REGION">
+    <xs:annotation>
+      <xs:appinfo>
+        <d:options>
+          <d:option name="code-table-name">ScotRegion</d:option>
+        </d:options>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="IEG_CODETABLE_CODE"/>
+  </xs:simpleType>
+  <xs:simpleType name="SCOT_COUNTRY">
+    <xs:annotation>
+      <xs:appinfo>
+        <d:options>
+          <d:option name="code-table-name">Country</d:option>
+        </d:options>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="IEG_CODETABLE_CODE"/>
+  </xs:simpleType>
+  <xs:simpleType name="SCOT_OCCUPATION">
+    <xs:annotation>
+      <xs:appinfo>
+        <d:options>
+          <d:option name="code-table-name">OccupationType</d:option>
+        </d:options>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="IEG_CODETABLE_CODE"/>
+  </xs:simpleType>
   <xs:element name="Application">
     <xs:annotation>
-      <xs:documentation>Top level application table</xs:documentation>
+      <xs:documentation>@curam.ieg.forced.creation=true</xs:documentation>
     </xs:annotation>
     <xs:complexType>
       <xs:sequence minOccurs="0">
         <xs:element ref="Person" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="CarerDetails" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Consent" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="IntakeApplication" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="IntakeApplicationType" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="IntakeProgram" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="PractitionerCertificate" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Person">
-    <xs:annotation>
-      <xs:documentation>Holds the answers for each person</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
-      <xs:attribute name="personID" type="d:SVR_KEY">
-        <xs:annotation>
-          <xs:documentation>The identifier for the person</xs:documentation>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="firstName" type="IEG_STRING">
-        <xs:annotation>
-          <xs:documentation>The persons first name</xs:documentation>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="gender" type="IEG_GENDER">
-        <xs:annotation>
-          <xs:documentation>The persons gender</xs:documentation>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="dateOfBirth" type="IEG_DATE">
-        <xs:annotation>
-          <xs:documentation>The persons date of birth</xs:documentation>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="roleID" type="IEG_INT64">
-        <xs:annotation>
-          <xs:documentation>The id of the assessment delivery role record</xs:documentation>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="participantID" type="IEG_INT64">
-        <xs:annotation>
-          <xs:documentation>Identifier of the person. Used for locating instances of person entities on the data store the relate to a single individual</xs:documentation>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="localID" type="d:SVR_INT64">
-        <xs:annotation>
-          <xs:documentation>LifeEvents Only. This is an internal identifier that is required if this schema is used in conjunction with Life Events. Generally, no further action is needed on your part in regards to this attribute.</xs:documentation>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="isPrimaryParticipant" type="d:SVR_BOOLEAN" default="true">
-        <xs:annotation>
-          <xs:documentation>LifeEvents Only. Attribute required by LifeEvents. This must be set to true for at least one person. If your LifeEvent script does not set this value or you are unsure of what to do, set the default value to: true</xs:documentation>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="questionsApplicableInd" type="IEG_BOOLEAN" default="true">
-        <xs:annotation>
-          <xs:documentation>Needed for assessments.  Ignore or remove if not applicable.</xs:documentation>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="keepingHomeClean" type="ADULTNEEDS_RESPONSES"/>
-      <xs:attribute name="shopping" type="ADULTNEEDS_RESPONSES"/>
-      <xs:attribute name="doingLaundry" type="ADULTNEEDS_RESPONSES"/>
-      <xs:attribute name="managingMoney" type="ADULTNEEDS_RESPONSES"/>
-      <xs:attribute name="makingFood" type="ADULTNEEDS_RESPONSES"/>
-      <xs:attribute name="eatingRegularly" type="ADULTNEEDS_RESPONSES"/>
-      <xs:attribute name="goingToTheToilet" type="ADULTNEEDS_RESPONSES"/>
-      <xs:attribute name="difficulty" type="ADULTNEEDS_DIFFICULTY"/>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="ResidentialAddress" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="MailingAddress" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Residency" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Illness" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Education" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="personID" type="d:SVR_KEY"/>
+      <xs:attribute name="isPrimaryParticipant" type="IEG_BOOLEAN" default="false"/>
+      <xs:attribute name="firstName" type="IEG_STRING" default=""/>
+      <xs:attribute name="middleInitial" type="IEG_STRING"/>
+      <xs:attribute name="lastName" type="IEG_STRING" default=""/>
+      <xs:attribute name="homePhoneCode" type="IEG_STRING"/>
+      <xs:attribute name="homePhoneNumber" type="IEG_STRING"/>
+      <xs:attribute name="workPhoneCode" type="IEG_STRING"/>
+      <xs:attribute name="workPhoneNumber" type="IEG_STRING"/>
+      <xs:attribute name="cellPhoneCode" type="IEG_STRING"/>
+      <xs:attribute name="cellPhoneNumber" type="IEG_STRING"/>
+      <xs:attribute name="otherPhoneCode" type="IEG_STRING"/>
+      <xs:attribute name="otherPhoneNumber" type="IEG_STRING"/>
+      <xs:attribute name="email" type="APPLICATION_EMAIL"/>
+      <xs:attribute name="isInterpreterRequired" type="CI_INTAKE_YESNO" default=""/>
+      <xs:attribute name="interpreterLanguage" type="CI_LANGUAGE"/>
+      <xs:attribute name="contactLanguage" type="CI_LANGUAGE"/>
+      <xs:attribute name="interpreterRequired" type="CI_INTAKE_YESNO" default=""/>
+      <xs:attribute name="assistanceRequired" type="CI_INTAKE_YESNO" default=""/>
+      <xs:attribute name="assistanceExplanation" type="IEG_STRING"/>
+      <xs:attribute name="ssn" type="IEG_NON_FORMATTED_NUMBER"/>
+      <xs:attribute name="veteranStatus" type="CI_VETERAN_STATUS" default=""/>
+      <xs:attribute name="ssnStatus" type="CI_SSN_STATUS" default=""/>
+      <xs:attribute name="dateOfBirth" type="IEG_DATE"/>
+      <xs:attribute name="gender" type="IEG_GENDER"/>
+      <xs:attribute name="maritalStatus" type="CI_TEMP"/>
+      <xs:attribute name="otherFirstName" type="IEG_STRING"/>
+      <xs:attribute name="otherMiddleInitial" type="IEG_STRING"/>
+      <xs:attribute name="otherLastName" type="IEG_STRING"/>
+      <xs:attribute name="isUSCitizen" type="CI_US_CITIZENSHIP" default=""/>
+      <xs:attribute name="alienCategory" type="CI_ALIEN_CATEGORY" default=""/>
+      <xs:attribute name="alienStatus" type="CI_ALIEN_STATUS" default=""/>
+      <xs:attribute name="alienRegistrationNumber" type="IEG_STRING" default=""/>
+      <xs:attribute name="alienEntryDate" type="IEG_DATE"/>
+      <xs:attribute name="originCountry" type="CI_COUNTRY_CODE" default=""/>
+      <xs:attribute name="hasAlienSponsor" type="CI_INTAKE_YESNO" default=""/>
+      <xs:attribute name="isImmigrantSponsor" type="CI_INTAKE_YESNO" default=""/>
+      <xs:attribute name="sponsorStartDate" type="IEG_DATE"/>
+      <xs:attribute name="householdMemberStartDate" type="IEG_DATE"/>
+      <xs:attribute name="blackOrAfricanAmerican" type="IEG_BOOLEAN" default="false"/>
+      <xs:attribute name="nativeAlaskanOrAmericanIndian" type="IEG_BOOLEAN" default="false"/>
+      <xs:attribute name="asian" type="IEG_BOOLEAN" default="false"/>
+      <xs:attribute name="nativeHawaiianOrPacificIslander" type="IEG_BOOLEAN" default="false"/>
+      <xs:attribute name="whiteOrCaucasian" type="IEG_BOOLEAN" default="false"/>
+      <xs:attribute name="hispanicOrLatino" type="IEG_BOOLEAN" default="false"/>
+      <xs:attribute name="isPregnant" type="IEG_BOOLEAN" default="false"/>
+      <xs:attribute name="hasMilitaryStatus" type="IEG_BOOLEAN" default="false"/>
+      <xs:attribute name="isMigrantOrSeasonalFarmWorker" type="IEG_BOOLEAN" default="false"/>
+      <xs:attribute name="personResidentInState" type="CI_INTAKE_YESNO"/>
+      <xs:attribute name="residencyStatus" type="CI_RESIDENCY_STATUS" default=""/>
+      <xs:attribute name="accommodationType" type="CI_LIVING_ARRANGEMENT_TYPE"/>
+      <xs:attribute name="accommodationStatus" type="CI_LIVING_ARRANGEMENT_STATUS"/>
+      <xs:attribute name="accommodationStartDate" type="IEG_DATE"/>
+      <xs:attribute name="residenceType" type="CI_RESIDENCE_TYPE" default=""/>
+      <xs:attribute name="title" type="IEG_PERSON_TITLE"/>
+      <xs:attribute name="phoneNoType" type="SCOT_PHONENOTYPE"/>
+      <xs:attribute name="nino" type="IEG_STRING"/>
+      <xs:attribute name="currentlyEnrolledOnCourse" type="IEG_YES_NO"/>
+      <xs:attribute name="employed" type="IEG_YES_NO"/>
     </xs:complexType>
     <xs:key name="Person_Key">
       <xs:selector xpath="./Person"/>
       <xs:field xpath="@personID"/>
+    </xs:key>
+  </xs:element>
+  <xs:element name="ResidentialAddress">
+    <xs:complexType>
+      <xs:attribute name="street1" type="IEG_STRING"/>
+      <xs:attribute name="street2" type="IEG_STRING"/>
+      <xs:attribute name="city" type="IEG_STRING"/>
+      <xs:attribute name="state" type="CI_STATE"/>
+      <xs:attribute name="zipCode" type="IEG_STRING"/>
+      <xs:attribute name="country" type="CI_COUNTRY_CODE"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MailingAddress">
+    <xs:complexType>
+      <xs:attribute name="street1" type="IEG_STRING"/>
+      <xs:attribute name="street2" type="IEG_STRING"/>
+      <xs:attribute name="city" type="IEG_STRING"/>
+      <xs:attribute name="state" type="CI_STATE"/>
+      <xs:attribute name="zipCode" type="IEG_NON_FORMATTED_NUMBER"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IntakeApplication">
+    <xs:complexType>
+      <xs:attribute name="dateOfApplication" type="IEG_DATE"/>
+      <xs:attribute name="receivedMethod" type="CI_APPLICATION_RECEIVED_METHOD_TYPE" default="IAM04"/>
+      <xs:attribute name="interpreterLanguage" type="CI_LANGUAGE"/>
+      <xs:attribute name="interpreterRequired" type="CI_INTAKE_YESNO" default=""/>
+      <xs:attribute name="assistanceExplanation" type="IEG_STRING"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IntakeApplicationType">
+    <xs:complexType>
+      <xs:attribute name="intakeApplicationTypeID" type="d:SVR_INT64"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IntakeProgram">
+    <xs:complexType>
+      <xs:attribute name="programTypeID" type="d:SVR_INT64"/>
+      <xs:attribute name="programTypeReference" type="IEG_STRING"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PractitionerCertificate">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="ASCDiagnosis" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="practitionerCertificateID" type="d:SVR_KEY"/>
+      <xs:attribute name="medicalCertificateType" type="ASC_PRACT_CERT_TYPE_CODE" default=""/>
+      <xs:attribute name="examinationDate" type="IEG_DATE" default=""/>
+      <xs:attribute name="hasACertifiedToDate" type="CI_INTAKE_YESNO" default=""/>
+      <xs:attribute name="certifiedToDate" type="IEG_DATE" default=""/>
+      <xs:attribute name="periodLength" type="IEG_INT32" default="0"/>
+      <xs:attribute name="certificationPeriodLength" type="ASC_FREQUENCY" default=""/>
+      <xs:attribute name="practitionerName" type="IEG_STRING" default=""/>
+      <xs:attribute name="practitionerSignedDate" type="IEG_DATE" default=""/>
+      <xs:attribute name="certificationStartDate" type="IEG_DATE" default=""/>
+      <xs:attribute name="isSignedByClient" type="CI_INTAKE_YESNO" default=""/>
+      <xs:attribute name="comments" type="IEG_STRING" default=""/>
+      <xs:attribute name="diagnosisDetails" type="CI_INTAKE_YESNO" default=""/>
+    </xs:complexType>
+    <xs:key name="PractitionerCertificate_Key">
+      <xs:selector xpath="./PractitionerCertificate"/>
+      <xs:field xpath="@practitionerCertificateID"/>
+    </xs:key>
+  </xs:element>
+  <xs:element name="ASCDiagnosis">
+    <xs:complexType>
+      <xs:attribute name="diagnosisID" type="d:SVR_KEY"/>
+      <xs:attribute name="diagnosisType" type="ASC_INCAPACITY_DIAGNOSIS"/>
+      <xs:attribute name="diagnosisExamDate" type="IEG_DATE"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Residency">
+    <xs:complexType>
+      <xs:attribute name="residencyID" type="d:SVR_KEY"/>
+      <xs:attribute name="nationality" type="SCOT_NATIONALITY"/>
+      <xs:attribute name="currentCountry" type="SCOT_REGION"/>
+      <xs:attribute name="regionNormallyLiveIn" type="IEG_YES_NO"/>
+      <xs:attribute name="abroadFourWeeksFourYears" type="IEG_YES_NO"/>
+      <xs:attribute name="country" type="SCOT_COUNTRY"/>
+      <xs:attribute name="countryFromDate" type="IEG_DATE"/>
+      <xs:attribute name="countryToDate" type="IEG_DATE"/>
+    </xs:complexType>
+    <xs:key name="Residency_Key">
+      <xs:selector xpath="./Residency"/>
+      <xs:field xpath="@residencyID"/>
+    </xs:key>
+  </xs:element>
+  <xs:element name="CarerDetails">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="Person" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Employment" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Earnings" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="BreaksInCare" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="CareHistory" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="carerDetailsID" type="d:SVR_KEY"/>
+      <xs:attribute name="haveCarer" type="IEG_YES_NO"/>
+      <xs:attribute name="carerNationality" type="SCOT_NATIONALITY"/>
+      <xs:attribute name="carerLivingNow" type="SCOT_REGION"/>
+      <xs:attribute name="CarerNormalRegion" type="IEG_YES_NO"/>
+      <xs:attribute name="dateStartCaring" type="IEG_DATE"/>
+      <xs:attribute name="carerBreakDateTo" type="IEG_DATE"/>
+      <xs:attribute name="currentlyEnrolledOnCourse" type="IEG_YES_NO"/>
+      <xs:attribute name="employed" type="IEG_YES_NO"/>
+      <xs:attribute name="carerLivingWithYou" type="IEG_YES_NO"/>
+    </xs:complexType>
+    <xs:key name="CarerDetails_Key">
+      <xs:selector xpath="./CarerDetails"/>
+      <xs:field xpath="@carerDetailsID"/>
+    </xs:key>
+  </xs:element>
+  <xs:element name="BreaksInCare">
+    <xs:complexType>
+      <xs:attribute name="breaksInCareID" type="d:SVR_KEY"/>
+      <xs:attribute name="breakFromDate" type="IEG_DATE"/>
+      <xs:attribute name="breakToDate" type="IEG_DATE"/>
+      <xs:attribute name="reasonForBreak" type="SCOT_REASONFORBREAK"/>
+    </xs:complexType>
+    <xs:key name="BreaksInCare_Key">
+      <xs:selector xpath="./BreaksInCare"/>
+      <xs:field xpath="@breaksInCareID"/>
+    </xs:key>
+  </xs:element>
+  <xs:element name="CareHistory">
+    <xs:complexType>
+      <xs:attribute name="careHistoryID" type="d:SVR_KEY"/>
+      <xs:attribute name="moreThan35Hours" type="IEG_YES_NO"/>
+      <xs:attribute name="liveWithYou" type="IEG_YES_NO"/>
+      <xs:attribute name="whenStartLookingAfterYou" type="IEG_DATE"/>
+      <xs:attribute name="carerAnyBreaks" type="IEG_YES_NO"/>
+    </xs:complexType>
+    <xs:key name="CareHistory_Key">
+      <xs:selector xpath="./CareHistory"/>
+      <xs:field xpath="@careHistoryID"/>
+    </xs:key>
+  </xs:element>
+  <xs:element name="Employment">
+    <xs:complexType>
+      <xs:attribute name="employmentID" type="d:SVR_KEY"/>
+      <xs:attribute name="employerName" type="IEG_STRING"/>
+      <xs:attribute name="carerEmploymentStartDate" type="IEG_DATE"/>
+      <xs:attribute name="carerEmploymentJobFinished" type="IEG_YES_NO"/>
+      <xs:attribute name="carerEmploymentJobEndDate" type="IEG_DATE"/>
+      <xs:attribute name="jobType" type="SCOT_OCCUPATION"/>
+    </xs:complexType>
+    <xs:key name="Employment_Key">
+      <xs:selector xpath="./Employment"/>
+      <xs:field xpath="@employmentID"/>
+    </xs:key>
+  </xs:element>
+  <xs:element name="Earnings">
+    <xs:complexType>
+      <xs:attribute name="earningsID" type="d:SVR_KEY"/>
+      <xs:attribute name="grossPaymentAmount" type="IEG_MONEY"/>
+      <xs:attribute name="taxPaymentAmount" type="IEG_MONEY"/>
+      <xs:attribute name="grossPaymentFrequency" type="SCOT_PAYMENTFREQUENCY"/>
+      <xs:attribute name="niPaymentAmount" type="IEG_MONEY"/>
+      <xs:attribute name="taxPaymentFrequency" type="SCOT_PAYMENTFREQUENCY"/>
+      <xs:attribute name="niPaymentFrequency" type="SCOT_PAYMENTFREQUENCY"/>
+      <xs:attribute name="expensesPaymentAmount" type="IEG_MONEY"/>
+      <xs:attribute name="expensesPaymentFrequency" type="SCOT_PAYMENTFREQUENCY"/>
+      <xs:attribute name="occupationalPensionPaymentAmount" type="IEG_MONEY"/>
+      <xs:attribute name="occupationalPensionPaymentFrequency" type="SCOT_PAYMENTFREQUENCY"/>
+      <xs:attribute name="paidExpenses" type="IEG_YES_NO"/>
+      <xs:attribute name="occupationalPension" type="IEG_YES_NO"/>
+    </xs:complexType>
+    <xs:key name="Earnings_Key">
+      <xs:selector xpath="./Earnings"/>
+      <xs:field xpath="@earningsID"/>
+    </xs:key>
+  </xs:element>
+  <xs:element name="Illness">
+    <xs:complexType>
+      <xs:attribute name="illnessID" type="d:SVR_KEY"/>
+      <xs:attribute name="illnessType" type="ASC_INCAPACITY_DIAGNOSIS"/>
+      <xs:attribute name="tiSpecialRules" type="IEG_YES_NO"/>
+      <xs:attribute name="consentContactGP" type="IEG_YES_NO"/>
+    </xs:complexType>
+    <xs:key name="Illness_Key">
+      <xs:selector xpath="./Illness"/>
+      <xs:field xpath="@illnessID"/>
+    </xs:key>
+  </xs:element>
+  <xs:element name="Education">
+    <xs:complexType>
+      <xs:attribute name="educationID" type="d:SVR_KEY"/>
+      <xs:attribute name="hoursAttendCourse" type="IEG_INT8"/>
+      <xs:attribute name="courseStartDate" type="IEG_DATE"/>
+      <xs:attribute name="courseEndDate" type="IEG_DATE"/>
+    </xs:complexType>
+    <xs:key name="Education_Key">
+      <xs:selector xpath="./Education"/>
+      <xs:field xpath="@educationID"/>
+    </xs:key>
+  </xs:element>
+  <xs:element name="Consent">
+    <xs:complexType>
+      <xs:attribute name="consentID" type="d:SVR_KEY"/>
+      <xs:attribute name="consent" type="IEG_YES_NO"/>
+      <xs:attribute name="declaration" type="IEG_YES_NO"/>
+    </xs:complexType>
+    <xs:key name="Consent_Key">
+      <xs:selector xpath="./Consent"/>
+      <xs:field xpath="@consentID"/>
     </xs:key>
   </xs:element>
 </xs:schema>

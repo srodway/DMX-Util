@@ -7,78 +7,95 @@
 <column name="upperElementValue" type="text"/>
 <row>
 <attribute name="addressElementID">
-<value>9024087753343631360</value>
+<value>7796293904931749888</value>
 </attribute>
 <attribute name="addressID">
-<value>-2197756618148405248</value>
+<value>-8556839291995545600</value>
 </attribute>
 <attribute name="elementType">
 <value>ADD1</value>
 </attribute>
 <attribute name="elementValue">
-<value/>
+<value>101</value>
 </attribute>
 <attribute name="upperElementValue">
-<value/>
+<value>101</value>
 </attribute>
 </row>
 <row>
 <attribute name="addressElementID">
-<value>-5099200678090244096</value>
+<value>-2724114824605728768</value>
 </attribute>
 <attribute name="addressID">
-<value>-2197756618148405248</value>
+<value>-8556839291995545600</value>
 </attribute>
 <attribute name="elementType">
 <value>ADD2</value>
 </attribute>
 <attribute name="elementValue">
-<value>Somewhere Street</value>
+<value>The Clinic</value>
 </attribute>
 <attribute name="upperElementValue">
-<value>SOMEWHERE STREET</value>
+<value>THE CLINIC</value>
 </attribute>
 </row>
 <row>
 <attribute name="addressElementID">
-<value>-2721300074838622208</value>
+<value>86131342873460736</value>
 </attribute>
 <attribute name="addressID">
-<value>-2197756618148405248</value>
+<value>-8556839291995545600</value>
+</attribute>
+<attribute name="elementType">
+<value>CITY</value>
+</attribute>
+<attribute name="elementValue">
+<value>Atlantic City</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>ATLANTIC CITY</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-6543167308615909376</value>
+</attribute>
+<attribute name="addressID">
+<value>-8556839291995545600</value>
 </attribute>
 <attribute name="elementType">
 <value>STATE</value>
 </attribute>
 <attribute name="elementValue">
-<value/>
+<value>NJ</value>
 </attribute>
 <attribute name="upperElementValue">
-<value/>
+<value>NJ</value>
 </attribute>
 </row>
 <row>
 <attribute name="addressElementID">
-<value>6646187150092009472</value>
+<value>5994854053983551488</value>
 </attribute>
 <attribute name="addressID">
-<value>-2197756618148405248</value>
+<value>-8556839291995545600</value>
 </attribute>
 <attribute name="elementType">
 <value>ZIP</value>
 </attribute>
 <attribute name="elementValue">
-<value/>
+<value>12345</value>
 </attribute>
 <attribute name="upperElementValue">
-<value/>
+<value>12345</value>
 </attribute>
 </row>
 <row>
 <attribute name="addressElementID">
-<value>-7477101281341865984</value>
+<value>-634444597505818624</value>
 </attribute>
 <attribute name="addressID">
-<value>-2197756618148405248</value>
+<value>-8556839291995545600</value>
 </attribute>
 <attribute name="elementType">
 <value>ADD3</value>
@@ -92,10 +109,112 @@
 </row>
 <row>
 <attribute name="addressElementID">
-<value>-3874221579445469184</value>
+<value>329325722751467520</value>
 </attribute>
 <attribute name="addressID">
-<value>2990390152582406144</value>
+<value>-7403917787388698624</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD1</value>
+</attribute>
+<attribute name="elementValue">
+<value>101</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>101</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-1255941346082947072</value>
+</attribute>
+<attribute name="addressID">
+<value>-7403917787388698624</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD2</value>
+</attribute>
+<attribute name="elementValue">
+<value>The Street</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>THE STREET</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>8327718660961468416</value>
+</attribute>
+<attribute name="addressID">
+<value>-7403917787388698624</value>
+</attribute>
+<attribute name="elementType">
+<value>CITY</value>
+</attribute>
+<attribute name="elementValue">
+<value>Atlantic City</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>ATLANTIC CITY</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-6588203304889614336</value>
+</attribute>
+<attribute name="addressID">
+<value>-7403917787388698624</value>
+</attribute>
+<attribute name="elementType">
+<value>STATE</value>
+</attribute>
+<attribute name="elementValue">
+<value>NJ</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>NJ</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>4508666176951287808</value>
+</attribute>
+<attribute name="addressID">
+<value>-7403917787388698624</value>
+</attribute>
+<attribute name="elementType">
+<value>ZIP</value>
+</attribute>
+<attribute name="elementValue">
+<value>12345</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>12345</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-3777957137410424832</value>
+</attribute>
+<attribute name="addressID">
+<value>-7403917787388698624</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD3</value>
+</attribute>
+<attribute name="elementValue">
+<value>The Town</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>THE TOWN</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-6930476876569772032</value>
+</attribute>
+<attribute name="addressID">
+<value>-3945153273568157696</value>
 </attribute>
 <attribute name="elementType">
 <value>ADD1</value>
@@ -109,27 +228,44 @@
 </row>
 <row>
 <attribute name="addressElementID">
-<value>5493265645485162496</value>
+<value>2364952754322931712</value>
 </attribute>
 <attribute name="addressID">
-<value>2990390152582406144</value>
+<value>-3945153273568157696</value>
 </attribute>
 <attribute name="elementType">
 <value>ADD2</value>
 </attribute>
 <attribute name="elementValue">
-<value>Somewhere Street</value>
+<value>Address Unavailable</value>
 </attribute>
 <attribute name="upperElementValue">
-<value>SOMEWHERE STREET</value>
+<value>ADDRESS UNAVAILABLE</value>
 </attribute>
 </row>
 <row>
 <attribute name="addressElementID">
-<value>1097752409171558400</value>
+<value>-1093811759497609216</value>
 </attribute>
 <attribute name="addressID">
-<value>2990390152582406144</value>
+<value>-3945153273568157696</value>
+</attribute>
+<attribute name="elementType">
+<value>CITY</value>
+</attribute>
+<attribute name="elementValue">
+<value/>
+</attribute>
+<attribute name="upperElementValue">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>6400178020446896128</value>
+</attribute>
+<attribute name="addressID">
+<value>-3945153273568157696</value>
 </attribute>
 <attribute name="elementType">
 <value>STATE</value>
@@ -143,10 +279,10 @@
 </row>
 <row>
 <attribute name="addressElementID">
-<value>-919860223890423808</value>
+<value>-6570188906380132352</value>
 </attribute>
 <attribute name="addressID">
-<value>2990390152582406144</value>
+<value>-3945153273568157696</value>
 </attribute>
 <attribute name="elementType">
 <value>ZIP</value>
@@ -160,10 +296,10 @@
 </row>
 <row>
 <attribute name="addressElementID">
-<value>8447627001040207872</value>
+<value>923800873564372992</value>
 </attribute>
 <attribute name="addressID">
-<value>2990390152582406144</value>
+<value>-3945153273568157696</value>
 </attribute>
 <attribute name="elementType">
 <value>ADD3</value>
@@ -177,10 +313,112 @@
 </row>
 <row>
 <attribute name="addressElementID">
-<value>8159396624888496128</value>
+<value>6652379599579643904</value>
 </attribute>
 <attribute name="addressID">
-<value>-8827055269637775360</value>
+<value>-1639310264354463744</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD1</value>
+</attribute>
+<attribute name="elementValue">
+<value>101</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>101</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-5669468980906033152</value>
+</attribute>
+<attribute name="addressID">
+<value>-1639310264354463744</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD2</value>
+</attribute>
+<attribute name="elementValue">
+<value>The Street</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>THE STREET</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>527484106355769344</value>
+</attribute>
+<attribute name="addressID">
+<value>-1639310264354463744</value>
+</attribute>
+<attribute name="elementType">
+<value>CITY</value>
+</attribute>
+<attribute name="elementValue">
+<value>Atlantic City</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>ATLANTIC CITY</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-3723913941881978880</value>
+</attribute>
+<attribute name="addressID">
+<value>-1639310264354463744</value>
+</attribute>
+<attribute name="elementType">
+<value>STATE</value>
+</attribute>
+<attribute name="elementValue">
+<value>NJ</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>NJ</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>7012667569769283584</value>
+</attribute>
+<attribute name="addressID">
+<value>-1639310264354463744</value>
+</attribute>
+<attribute name="elementType">
+<value>ZIP</value>
+</attribute>
+<attribute name="elementValue">
+<value>12345</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>12345</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-7254736049740447744</value>
+</attribute>
+<attribute name="addressID">
+<value>-1639310264354463744</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD3</value>
+</attribute>
+<attribute name="elementValue">
+<value>The Town</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>THE TOWN</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-5570389789103882240</value>
+</attribute>
+<attribute name="addressID">
+<value>-1062849512051040256</value>
 </attribute>
 <attribute name="elementType">
 <value>ADD1</value>
@@ -194,27 +432,44 @@
 </row>
 <row>
 <attribute name="addressElementID">
-<value>-5315373460204027904</value>
+<value>194217733930352640</value>
 </attribute>
 <attribute name="addressID">
-<value>-8827055269637775360</value>
+<value>-1062849512051040256</value>
 </attribute>
 <attribute name="elementType">
 <value>ADD2</value>
 </attribute>
 <attribute name="elementValue">
-<value>Somewhere Else</value>
+<value>44 asdfasdfasdfa</value>
 </attribute>
 <attribute name="upperElementValue">
-<value>SOMEWHERE ELSE</value>
+<value>44 ASDFASDFASDFA</value>
 </attribute>
 </row>
 <row>
 <attribute name="addressElementID">
-<value>-3153645639066189824</value>
+<value>-3696892344117755904</value>
 </attribute>
 <attribute name="addressID">
-<value>-8827055269637775360</value>
+<value>-1062849512051040256</value>
+</attribute>
+<attribute name="elementType">
+<value>CITY</value>
+</attribute>
+<attribute name="elementValue">
+<value/>
+</attribute>
+<attribute name="upperElementValue">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>7255861949647290368</value>
+</attribute>
+<attribute name="addressID">
+<value>-1062849512051040256</value>
 </attribute>
 <attribute name="elementType">
 <value>STATE</value>
@@ -228,10 +483,10 @@
 </row>
 <row>
 <attribute name="addressElementID">
-<value>5781496021636874240</value>
+<value>-7443887234090008576</value>
 </attribute>
 <attribute name="addressID">
-<value>-8827055269637775360</value>
+<value>-1062849512051040256</value>
 </attribute>
 <attribute name="elementType">
 <value>ZIP</value>
@@ -245,10 +500,10 @@
 </row>
 <row>
 <attribute name="addressElementID">
-<value>-7549158875379793920</value>
+<value>3508867059675037696</value>
 </attribute>
 <attribute name="addressID">
-<value>-8827055269637775360</value>
+<value>-1062849512051040256</value>
 </attribute>
 <attribute name="elementType">
 <value>ADD3</value>
@@ -262,10 +517,10 @@
 </row>
 <row>
 <attribute name="addressElementID">
-<value>-4306567143673036800</value>
+<value>7481041931015815168</value>
 </attribute>
 <attribute name="addressID">
-<value>8466767299464929280</value>
+<value>2972375754072924160</value>
 </attribute>
 <attribute name="elementType">
 <value>ADD1</value>
@@ -279,27 +534,44 @@
 </row>
 <row>
 <attribute name="addressElementID">
-<value>4628574517030027264</value>
+<value>-8083398381176619008</value>
 </attribute>
 <attribute name="addressID">
-<value>8466767299464929280</value>
+<value>2972375754072924160</value>
 </attribute>
 <attribute name="elementType">
 <value>ADD2</value>
 </attribute>
 <attribute name="elementValue">
-<value>Somewhere Else</value>
+<value>Address Unavailable</value>
 </attribute>
 <attribute name="upperElementValue">
-<value>SOMEWHERE ELSE</value>
+<value>ADDRESS UNAVAILABLE</value>
 </attribute>
 </row>
 <row>
 <attribute name="addressElementID">
-<value>233061280716423168</value>
+<value>4598738169498697728</value>
 </attribute>
 <attribute name="addressID">
-<value>8466767299464929280</value>
+<value>2972375754072924160</value>
+</attribute>
+<attribute name="elementType">
+<value>CITY</value>
+</attribute>
+<attribute name="elementValue">
+<value/>
+</attribute>
+<attribute name="upperElementValue">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-2246733264104456192</value>
+</attribute>
+<attribute name="addressID">
+<value>2972375754072924160</value>
 </attribute>
 <attribute name="elementType">
 <value>STATE</value>
@@ -313,10 +585,10 @@
 </row>
 <row>
 <attribute name="addressElementID">
-<value>-487514659662856192</value>
+<value>5247256515840049152</value>
 </attribute>
 <attribute name="addressID">
-<value>8466767299464929280</value>
+<value>2972375754072924160</value>
 </attribute>
 <attribute name="elementType">
 <value>ZIP</value>
@@ -330,10 +602,418 @@
 </row>
 <row>
 <attribute name="addressElementID">
-<value>9096145347381559296</value>
+<value>-5129037025621573632</value>
 </attribute>
 <attribute name="addressID">
-<value>8466767299464929280</value>
+<value>2972375754072924160</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD3</value>
+</attribute>
+<attribute name="elementValue">
+<value/>
+</attribute>
+<attribute name="upperElementValue">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-3012345200757440512</value>
+</attribute>
+<attribute name="addressID">
+<value>5278218763286618112</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD1</value>
+</attribute>
+<attribute name="elementValue">
+<value>101</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>101</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>662592095176884224</value>
+</attribute>
+<attribute name="addressID">
+<value>5278218763286618112</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD2</value>
+</attribute>
+<attribute name="elementValue">
+<value>The Clinic</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>THE CLINIC</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-5966706556312485888</value>
+</attribute>
+<attribute name="addressID">
+<value>5278218763286618112</value>
+</attribute>
+<attribute name="elementType">
+<value>CITY</value>
+</attribute>
+<attribute name="elementValue">
+<value>Atlantic City</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>ATLANTIC CITY</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>6571314806286974976</value>
+</attribute>
+<attribute name="addressID">
+<value>5278218763286618112</value>
+</attribute>
+<attribute name="elementType">
+<value>STATE</value>
+</attribute>
+<attribute name="elementValue">
+<value>NJ</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>NJ</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-57983845202395136</value>
+</attribute>
+<attribute name="addressID">
+<value>5278218763286618112</value>
+</attribute>
+<attribute name="elementType">
+<value>ZIP</value>
+</attribute>
+<attribute name="elementValue">
+<value>12345</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>12345</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>2608147134200938496</value>
+</attribute>
+<attribute name="addressID">
+<value>5278218763286618112</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD3</value>
+</attribute>
+<attribute name="elementValue">
+<value/>
+</attribute>
+<attribute name="upperElementValue">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-8821988720065380352</value>
+</attribute>
+<attribute name="addressID">
+<value>6431140267893465088</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD1</value>
+</attribute>
+<attribute name="elementValue">
+<value>101</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>101</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>2274880761775521792</value>
+</attribute>
+<attribute name="addressID">
+<value>6431140267893465088</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD2</value>
+</attribute>
+<attribute name="elementValue">
+<value>The Street</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>THE STREET</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-967710969931235328</value>
+</attribute>
+<attribute name="addressID">
+<value>6431140267893465088</value>
+</attribute>
+<attribute name="elementType">
+<value>CITY</value>
+</attribute>
+<attribute name="elementValue">
+<value>Atlantic City</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>ATLANTIC CITY</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>7318912344430477312</value>
+</attribute>
+<attribute name="addressID">
+<value>6431140267893465088</value>
+</attribute>
+<attribute name="elementType">
+<value>STATE</value>
+</attribute>
+<attribute name="elementValue">
+<value>NJ</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>NJ</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-4642648265865560064</value>
+</attribute>
+<attribute name="addressID">
+<value>6431140267893465088</value>
+</attribute>
+<attribute name="elementType">
+<value>ZIP</value>
+</attribute>
+<attribute name="elementValue">
+<value>12345</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>12345</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>3067514296192729088</value>
+</attribute>
+<attribute name="addressID">
+<value>6431140267893465088</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD3</value>
+</attribute>
+<attribute name="elementValue">
+<value>The Town</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>THE TOWN</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-6173872139171528704</value>
+</attribute>
+<attribute name="addressID">
+<value>7584061772500312064</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD1</value>
+</attribute>
+<attribute name="elementValue">
+<value>101</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>101</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>1536290422886760448</value>
+</attribute>
+<attribute name="addressID">
+<value>7584061772500312064</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD2</value>
+</attribute>
+<attribute name="elementValue">
+<value>The Street</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>THE STREET</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-2354819655161348096</value>
+</attribute>
+<attribute name="addressID">
+<value>7584061772500312064</value>
+</attribute>
+<attribute name="elementType">
+<value>CITY</value>
+</attribute>
+<attribute name="elementValue">
+<value>Atlantic City</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>ATLANTIC CITY</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>8237646668414058496</value>
+</attribute>
+<attribute name="addressID">
+<value>7584061772500312064</value>
+</attribute>
+<attribute name="elementType">
+<value>STATE</value>
+</attribute>
+<attribute name="elementValue">
+<value>NJ</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>NJ</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-8840003118574862336</value>
+</attribute>
+<attribute name="addressID">
+<value>7584061772500312064</value>
+</attribute>
+<attribute name="elementType">
+<value>ZIP</value>
+</attribute>
+<attribute name="elementValue">
+<value>12345</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>12345</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>3409787867872886784</value>
+</attribute>
+<attribute name="addressID">
+<value>7584061772500312064</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD3</value>
+</attribute>
+<attribute name="elementValue">
+<value>The Town</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>THE TOWN</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>9183402590161862656</value>
+</attribute>
+<attribute name="addressID">
+<value>8160522524803735552</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD1</value>
+</attribute>
+<attribute name="elementValue">
+<value/>
+</attribute>
+<attribute name="upperElementValue">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-1697294109565255680</value>
+</attribute>
+<attribute name="addressID">
+<value>8160522524803735552</value>
+</attribute>
+<attribute name="elementType">
+<value>ADD2</value>
+</attribute>
+<attribute name="elementValue">
+<value>44 asdfasdfasdfa</value>
+</attribute>
+<attribute name="upperElementValue">
+<value>44 ASDFASDFASDFA</value>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>896779275800150016</value>
+</attribute>
+<attribute name="addressID">
+<value>8160522524803735552</value>
+</attribute>
+<attribute name="elementType">
+<value>CITY</value>
+</attribute>
+<attribute name="elementValue">
+<value/>
+</attribute>
+<attribute name="upperElementValue">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-7894247196827058176</value>
+</attribute>
+<attribute name="addressID">
+<value>8160522524803735552</value>
+</attribute>
+<attribute name="elementType">
+<value>STATE</value>
+</attribute>
+<attribute name="elementValue">
+<value/>
+</attribute>
+<attribute name="upperElementValue">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>5076119729999970304</value>
+</attribute>
+<attribute name="addressID">
+<value>8160522524803735552</value>
+</attribute>
+<attribute name="elementType">
+<value>ZIP</value>
+</attribute>
+<attribute name="elementValue">
+<value/>
+</attribute>
+<attribute name="upperElementValue">
+<value/>
+</attribute>
+</row>
+<row>
+<attribute name="addressElementID">
+<value>-2417870049944535040</value>
+</attribute>
+<attribute name="addressID">
+<value>8160522524803735552</value>
 </attribute>
 <attribute name="elementType">
 <value>ADD3</value>

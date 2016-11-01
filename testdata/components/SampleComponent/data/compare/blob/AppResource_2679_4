@@ -1,44 +1,24 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Details.Name.OrganizationPosition=Organization Position
-Details.Title.OrganizationPosition=Organization Position
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-folder.title.users=Users
-page.title.AllUsers=All Users
-page.title.SupervisorUsers=Supervisor Users
-page.title.SubordinateUsers=Subordinate Users
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009-2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="InboxMyTasks">
 
-page.title.Locations=Locations
+  <nc:nodes>
+  
+    <nc:navigation-page id="OpenTasks" page-id="Inbox_listReservedTasks" title="Details.Title.MyOpenTasks"/>
+    <nc:navigation-page id="DeferredTasks" page-id="Inbox_listDeferredTasks" title="Details.Title.MyDeferredTasks"/>
+  </nc:nodes>
 
-page.title.EvidenceApprovals=Evidence Approvals
-
-
-
-
-
-
-page.title.home=Home
-
-folder.title.ApprovalChecks=Approval Checks
-page.title.Case=Case
-
-page.title.Temporal=Temporal
-page.title.Trees=Trees
-
-page.title.Investigation=Investigation
-page.title.Issue=Issue
-page.title.MilestoneWaiver=Milestone Waiver
-
-page.title.ChildOrganisationUnits=Child Organization Units
-page.title.Jobs=Jobs
-page.title.Positions=Positions
-page.title.Users=Users
-page.title.Resources=Resources
-page.title.Evidence=Evidence
-Page.Title.treeView=Tree View
+</nc:navigation>

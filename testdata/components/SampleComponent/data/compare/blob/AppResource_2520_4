@@ -1,27 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009 Curam Software Ltd.
-  All rights reserved.
-
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="WorkAllocationRuleset">
-
-  <tc:page-param name="ruleSetID"/>
-
-  <tc:menu id="SimpleAdminMenu"/> 
-  
-  <!-- No details panel -->
-  <tc:context tab-name="Details.Name.WorkAllocationRuleset" tab-title="Details.Title.WorkAllocationRuleset"/>
-
-  <tc:navigation page-id="RulesEditor_workAllocationRuleSetTreeWindow"/> 
-
-</tc:tab-config>
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+MenuItem.Title.AddAttachment=Add Attachment
+MenuItem.Tooltip.AddAttachment=Add Attachment
+MenuItem.Title.RemoveAttachment=Remove Attachment
+MenuItem.Tooltip.RemoveAttachment=Remove Attachment
+MenuItem.Title.Close=Close
+MenuItem.Tooltip.Close=Close
+MenuItem.Title.Reopen=Reopen
+MenuItem.Tooltip.Reopen=Reopen
+MenuItem.Title.Delete=Delete
+MenuItem.Tooltip.Delete=Delete
+MenuItem.Title.Modify=Edit
+MenuItem.Tooltip.Modify=Edit
+MenuItem.Title.AddComment=Add Comment
+MenuItem.Tooltip.AddComment=Add Comment
+MenuItem.Title.Watch=Watch
+MenuItem.Tooltip.Watch=Watch
+MenuItem.Title.StopWatching=Stop Watching
+MenuItem.Tooltip.StopWatching=Stop Watching
+MenuItem.Title.ShowWatchers=Show Watchers
+MenuItem.Tooltip.ShowWatchers=Show Watchers

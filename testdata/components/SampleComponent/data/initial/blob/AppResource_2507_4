@@ -13,19 +13,32 @@
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><ac:application xmlns:ac="http://www.curamsoftware.com/curam/util/client/application-config" id="INVESTRAPP" logo="INVESTRAPP.logo" subtitle="INVESTRAPP.subtitle" title="INVESTRAPP.title" user-message="INVESTRAPP.UserMessage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+--><sc:section-shortcut-panel xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-shortcut-panel" id="DefaultAppInboxSectionShortcuts" title="DefaultAppInboxSectionShortcuts.title">
 
-  <ac:application-menu>
-    <ac:preferences title="preferences.title"/>
-    <ac:help title="help.title"/>
-    <ac:logout title="logout.title"/>
-  </ac:application-menu>
+  <sc:nodes>
+    <sc:node id="DefaultAppInboxMainGroup" title="Inbox.Group" type="group">
+      <sc:node id="DefaultAppInboxMyTasksShortcut" page-id="Inbox_listReservedTasks" title="MyTasksShortcut.title" type="leaf"/>
+      <sc:node id="DefaultAppInboxAvailableTasksShortcut" page-id="Inbox_availableTaskSearch" title="AvailableTasksShortcut.title" type="leaf"/>
 
-  <ac:application-search default-search-page="Organization_applicationSearch" initial-text="Application.Search.InitialText"/>
+      <sc:node id="DefaultAppInboxQueryShortcut" page-id="TaskQuery_listQuery" title="InboxTaskQueryShortcut.title" type="leaf"/>
+      <sc:node id="DefaultAppInboxNewTaskQueryShortcut" open-as="modal" page-id="TaskQuery_createQuery" title="InboxNewTaskQueryShortcut.title" type="leaf"/>
+      <sc:node id="DefaultAppInboxNewTaskShortcut" open-as="modal" page-id="TaskManagement_createTask" title="InboxNewTaskShortcut.title" type="leaf"/>
+      <sc:node id="DefaultAppInboxSearchShortcut" page-id="Inbox_searchTask" title="InboxSearchShortcut.title" type="leaf"/>
+      <sc:node id="DefaultAppInboxGetNextTask" open-as="modal" page-id="Inbox_reserveNextTask" title="GetNextTask.title" type="leaf"/>   
+      
+      <sc:node id="DefaultAppInboxOptionsShortcut" page-id="Inbox_viewInboxOptionsGeneralSettings" title="InboxOptionsShortcut.title" type="leaf"/>
+    </sc:node>
+    <sc:node id="DefaultAppInboxWQGroup" title="WorkQ.Group" type="group">
+    	<sc:node id="DefaultAppInboxWorkQueuesShortcut" page-id="Inbox_viewWorkQueueList" title="WorkQueuesShortcut.title" type="leaf"/>
+	<sc:node id="DefaultAppInboxReserveNextTaskFromPreferredQueueShortcut" open-as="modal" page-id="Inbox_reserveFromPreferredWorkQueue" title="ReserveNextTaskFromPreferredQueueShortcut.title" type="leaf"/>
+        <sc:node id="DefaultAppInboxReserveNextTaskFromQueueShortcut" open-as="modal" page-id="Inbox_reserveNextWorkQueueTask" title="ReserveNextTaskFromQueueShortcut.title" type="leaf"/>   
+        <sc:node id="DefaultAppInboxSubscribeToQueueShortcut" open-as="modal" page-id="Inbox_subscribeUserToWorkQueue" title="SubscribeToQueueShortcut.title" type="leaf"/>   
+        <!--<sc:node type="leaf" id="DefaultAppInboxUnsubscribeToQueueShortcut" page-id="Inbox_unsubscribeUserFromWorkQueue" title="UnsubscribeToQueueShortcut.title" open-as="modal"/>   -->
+        
+    </sc:node>
 
-  <ac:section-ref id="INVESTRAPPHomeSection"/>
-  <ac:section-ref id="INVESTRAPPSection"/>
-  <ac:section-ref id="DefaultAppInboxSection"/>
-  <ac:section-ref id="DefaultAppCalendarSection"/>
-  
-</ac:application>
+    <sc:node id="DefaultAppInboxNotifyGroup" title="Notifications.Group" type="group">
+      <sc:node id="DefaultAppInboxNotificationsShortcut" page-id="Inbox_listAlerts" title="NotificationsShortcut.title" type="leaf"/>
+    </sc:node>
+   </sc:nodes> 
+</sc:section-shortcut-panel>

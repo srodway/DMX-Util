@@ -9,7 +9,7 @@
 -->
 <DECISION_MATRIX
   CONTRADICTION_COLUMN="Yes"
-  ID="3972174871340777472"
+  ID="-3954160472831295488"
   PRIORITY_COLUMN="No"
   SCORING_COLUMN="No"
 >
@@ -33,17 +33,17 @@
     <QUESTION QUESTION_ID="16">
       <ANSWER
         ANSWER_ID="1"
-        MAX="400"
-        MIN="250"
+        MAX="600"
+        MIN="450"
       />
       <ANSWER
         ANSWER_ID="2"
-        MAX="249"
-        MIN="130"
+        MAX="449"
+        MIN="250"
       />
       <ANSWER
         ANSWER_ID="3"
-        MAX="129"
+        MAX="249"
         MIN="0"
       />
     </QUESTION>
@@ -63,7 +63,7 @@
     </QUESTION>
   </QUESTIONS>
   <CONTRADICTIONS>
-    <COMBINATION COMBINATION_ID="900719925474099200">
+    <COMBINATION COMBINATION_ID="4071254063142928384">
       <SELECTION
         ANSWER_ID="3"
         QUESTION_ID="848"
@@ -81,7 +81,7 @@
         QUESTION_ID="16"
       />
     </COMBINATION>
-    <COMBINATION COMBINATION_ID="-2990390152574009344">
+    <COMBINATION COMBINATION_ID="-1549238271815450624">
       <SELECTION
         ANSWER_ID="1"
         QUESTION_ID="848"
@@ -91,7 +91,7 @@
         QUESTION_ID="16"
       />
     </COMBINATION>
-    <COMBINATION COMBINATION_ID="7313845794849685504">
+    <COMBINATION COMBINATION_ID="5296233161787703296">
       <SELECTION
         ANSWER_ID="3"
         QUESTION_ID="792"
@@ -104,19 +104,19 @@
   </CONTRADICTIONS>
   <OUTCOMES>
     <OUTCOME OUTCOME_ID="456">
-      <COMBINATION COMBINATION_ID="11203489344023">
+      <COMBINATION COMBINATION_ID="11203495440078">
         <SELECTION
           ANSWER_ID="3"
           QUESTION_ID="848"
         />
       </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203489351148">
+      <COMBINATION COMBINATION_ID="11203495462464">
         <SELECTION
           ANSWER_ID="3"
           QUESTION_ID="16"
         />
       </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203489352758">
+      <COMBINATION COMBINATION_ID="11203495478554">
         <SELECTION
           ANSWER_ID="3"
           QUESTION_ID="792"
@@ -128,9 +128,41 @@
       </COMBINATION>
     </OUTCOME>
     <OUTCOME OUTCOME_ID="1504">
-      <COMBINATION COMBINATION_ID="11203489344070">
+      <COMBINATION COMBINATION_ID="11203495900306">
         <SELECTION
           ANSWER_ID="1"
+          QUESTION_ID="848"
+        />
+        <SELECTION
+          ANSWER_ID="1"
+          QUESTION_ID="792"
+        />
+        <SELECTION
+          ANSWER_ID="2"
+          QUESTION_ID="16"
+        />
+      </COMBINATION>
+      <COMBINATION COMBINATION_ID="11203496120414">
+        <SELECTION
+          ANSWER_ID="2"
+          QUESTION_ID="792"
+        />
+        <SELECTION
+          ANSWER_ID="1"
+          QUESTION_ID="848"
+        />
+        <SELECTION
+          ANSWER_ID="2"
+          QUESTION_ID="848"
+        />
+        <SELECTION
+          ANSWER_ID="1"
+          QUESTION_ID="16"
+        />
+      </COMBINATION>
+      <COMBINATION COMBINATION_ID="11203496151985">
+        <SELECTION
+          ANSWER_ID="2"
           QUESTION_ID="848"
         />
         <SELECTION
@@ -142,25 +174,21 @@
           QUESTION_ID="792"
         />
         <SELECTION
-          ANSWER_ID="1"
-          QUESTION_ID="792"
-        />
-        <SELECTION
           ANSWER_ID="2"
           QUESTION_ID="16"
         />
       </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203493609756">
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="792"
-        />
+      <COMBINATION COMBINATION_ID="11203496181932">
         <SELECTION
           ANSWER_ID="2"
           QUESTION_ID="848"
         />
+        <SELECTION
+          ANSWER_ID="2"
+          QUESTION_ID="792"
+        />
       </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203493248740">
+      <COMBINATION COMBINATION_ID="11203495928737">
         <SELECTION
           ANSWER_ID="2"
           QUESTION_ID="848"
@@ -178,7 +206,7 @@
           QUESTION_ID="16"
         />
       </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203493275928">
+      <COMBINATION COMBINATION_ID="11203495978554">
         <SELECTION
           ANSWER_ID="2"
           QUESTION_ID="792"
@@ -192,7 +220,7 @@
           QUESTION_ID="16"
         />
       </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203493446365">
+      <COMBINATION COMBINATION_ID="11203496010438">
         <SELECTION
           ANSWER_ID="2"
           QUESTION_ID="848"
@@ -206,7 +234,7 @@
           QUESTION_ID="16"
         />
       </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203493483787">
+      <COMBINATION COMBINATION_ID="11203496042400">
         <SELECTION
           ANSWER_ID="1"
           QUESTION_ID="848"
@@ -216,7 +244,7 @@
           QUESTION_ID="792"
         />
       </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203493514834">
+      <COMBINATION COMBINATION_ID="11203496065348">
         <SELECTION
           ANSWER_ID="2"
           QUESTION_ID="848"
@@ -230,7 +258,7 @@
           QUESTION_ID="16"
         />
       </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203493537631">
+      <COMBINATION COMBINATION_ID="11203496088968">
         <SELECTION
           ANSWER_ID="1"
           QUESTION_ID="848"
@@ -238,46 +266,14 @@
         <SELECTION
           ANSWER_ID="2"
           QUESTION_ID="792"
-        />
-      </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203493576334">
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="848"
-        />
-        <SELECTION
-          ANSWER_ID="1"
-          QUESTION_ID="848"
-        />
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="792"
-        />
-        <SELECTION
-          ANSWER_ID="1"
-          QUESTION_ID="16"
         />
       </COMBINATION>
     </OUTCOME>
     <OUTCOME OUTCOME_ID="320">
-      <COMBINATION COMBINATION_ID="11203489344117">
+      <COMBINATION COMBINATION_ID="11203496230109">
         <SELECTION
           ANSWER_ID="1"
           QUESTION_ID="16"
-        />
-        <SELECTION
-          ANSWER_ID="1"
-          QUESTION_ID="792"
-        />
-      </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203489919413">
-        <SELECTION
-          ANSWER_ID="1"
-          QUESTION_ID="16"
-        />
-        <SELECTION
-          ANSWER_ID="1"
-          QUESTION_ID="848"
         />
         <SELECTION
           ANSWER_ID="1"

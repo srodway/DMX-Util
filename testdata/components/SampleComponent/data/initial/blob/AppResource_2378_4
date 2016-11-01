@@ -1,26 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009 Curam Software Ltd.
-  All rights reserved.
-
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="CitizenSelfServiceTab">
-  
-  <!--<tc:menu id="CitizenSelfServiceMenu"/>-->
-  
-  <!-- No details panel -->
-  <tc:context tab-name="Details.Name.CitizenSelfService" tab-title="Details.Title.CitizenSelfService"/>
-
-  <!-- There is no page to link to yet. -->
-  <tc:navigation id="CitizenSelfServiceNav"/> 
-
-</tc:tab-config>
+#Mon Oct 31 15:11:24 GMT 2016
+Cluster.Title.Comments=Comments
+Container.Label.UpdatedBy=Updated By
+View.ActionControl.Label.Verifications=Verifications
+Field.Label.DateOfBirth=Date of Birth
+Field.Label.UpdatedOn=Updated On
+View.ActionControl.Label.History.Help=Choose this to view the correction history of this record.
+ActionControl.Label.ViewHistory=
+childEvidenceType=PDC0000264
+labelName.empty=
+Field.Label.DateOfDeath=Date of Death
+Field.Label.ApprovalRequestedInd=Approval Requested
+Field.Label.BirthLastName=Birth Last Name
+View.ActionControl.Label.Details=Details
+ActionControl.Label.Close=Close
+Field.Label.UpdatedBy=Updated By
+Field.Label.ChangeReason=Change Reason
+Participant=Participant
+Participant.person=person
+Field.Prompt.EffectiveDate=leave blank if making a correction
+Field.Label.ApprovalStatus=Approval Status
+View.ActionControl.Label.History=Corrections
+Cluster.Title.Birth=Birth
+View.ActionControl.Label.Details.Help=Shows details of the current record.
+Field.Label.EffectiveDate=Effective Date of Change
+Field.Label.ReceivedDate=Received Date
+Field.Label.MothersBirthLastName=Mothers Birth Last Name
+Field.Label.StatusCode=Status
+Title.Childe.Details=Change Details
+View.ActionControl.Label.Issues=Issues
+Page.Title=View Birth and Death Details 
+Cluster.Title.Death=Death
+ActionControl.Label.ViewHistoryCloseBracket=

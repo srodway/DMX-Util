@@ -6,14 +6,9 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Number.Wizard.Pages=2
+Page.Title=Confirm exit script
+Page.Description=You have quit your script before it is completed. Are you sure you want to quit?
 
-Wizard.PageID.1=VisitationPlanCreateWizard_selectRoles
-VisitationPlanCreateWizard_selectRoles.Wizard.Item.Text=Participants
-VisitationPlanCreateWizard_selectRoles.Wizard.Page.Title=Step 1:
-VisitationPlanCreateWizard_selectRoles.Wizard.Page.Desc=Select Clients To Visit and Visitors
-
-Wizard.PageID.2=VisitationPlanCreateWizard_details
-VisitationPlanCreateWizard_details.Wizard.Item.Text=Details
-VisitationPlanCreateWizard_details.Wizard.Page.Title=Step 2:
-VisitationPlanCreateWizard_details.Wizard.Page.Desc=Enter Visitation Plan Details
+Options.Title=Choose an Option
+Options.Description=You have quit your script before it is completed. Click 'Back' to return to your script or click 'Home' to return to the homepage. 
+Options.Help=You have quit your script before it is completed. If this was a mistake or you wish to return to your script click the 'Back' button. If you wih to discard the script click the 'Home' button. You will be returned to the homepage.

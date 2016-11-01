@@ -1,18 +1,176 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   xmlns:D="http://www.curamsoftware.com/BaseDomains" elementFormDefault="qualified">
-   <xsd:import namespace="http://www.curamsoftware.com/BaseDomains"/>
-   <xsd:element name="TargetEvidenceData">
-      <xsd:complexType>
-		 <xsd:attribute name="targetEvidenceList" type="D:SVR_STRING"/>
-      </xsd:complexType>
-   </xsd:element>
-</xsd:schema>
+    Licensed Materials - Property of IBM
+    
+    Copyright IBM Corporation 2012-2013. All Rights Reserved.
+    
+    US Government Users Restricted Rights - Use, duplication or disclosure 
+    restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains">
+    <xs:import namespace="http://www.curamsoftware.com/BaseDomains" />
+    <xs:include schemaLocation="ReunificationDomains" />
+    <xs:element name="Application">
+        <xs:annotation>
+            <xs:documentation>Top level application table</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence minOccurs="0">
+                <xs:element ref="Group" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="Assessment" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="Person" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Group">
+        <xs:annotation>
+            <xs:documentation>Holds the answers to the assessment questions for the group</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="groupID" type="d:SVR_KEY">
+                <xs:annotation>
+                    <xs:documentation>The identifier for the group</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="groupName" type="IEG_STRING">
+                <xs:annotation>
+                    <xs:documentation>The groups name</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="initialCPSRiskLevel" type="RUA_RISK_LEVEL" />
+            <xs:attribute name="substantiations" type="RUAS_INDICATOR" />
+            <xs:attribute name="casePlanGoalsProgress" type="RUA_CASE_PLAN_GOAL_PROGRESS" />
+            <xs:attribute name="physicalHarm" type="RUA_INDICATOR" />
+            <xs:attribute name="seriousInjury" type="IEG_BOOLEAN" />
+            <xs:attribute name="maltreatedChild" type="IEG_BOOLEAN" />
+            <xs:attribute name="threatOfHarm" type="IEG_BOOLEAN" />
+            <xs:attribute name="excessiveDiscipline" type="IEG_BOOLEAN" />
+            <xs:attribute name="drugExposed" type="IEG_BOOLEAN" />
+            <xs:attribute name="agerange" type="IEG_BOOLEAN" />
+            <xs:attribute name="diagnosedDisorder" type="IEG_BOOLEAN" />
+            <xs:attribute name="schoolAge" type="IEG_BOOLEAN" />
+            <xs:attribute name="mentalCapacity" type="IEG_BOOLEAN" />
+            <xs:attribute name="physicalCapacity" type="IEG_BOOLEAN" />
+            <xs:attribute name="previousIncidents" type="RUA_INDICATOR" />
+            <xs:attribute name="sexualAbuse" type="RUA_INDICATOR" />
+            <xs:attribute name="threatenedHarm" type="RUA_INDICATOR" />
+            <xs:attribute name="immediateConcern" type="RUA_INDICATOR" />
+            <xs:attribute name="refusingAccess" type="RUA_INDICATOR" />
+            <xs:attribute name="immediateNeeds" type="RUA_INDICATOR" />
+            <xs:attribute name="livingConditions" type="RUA_INDICATOR" />
+            <xs:attribute name="affectingAbility" type="RUA_INDICATOR" />
+            <xs:attribute name="domesticViolence" type="RUA_INDICATOR" />
+            <xs:attribute name="negativeTerms" type="RUA_INDICATOR" />
+            <xs:attribute name="emotionalStability" type="RUA_INDICATOR" />
+            <xs:attribute name="other" type="RUA_INDICATOR" default="No"/>
+            <xs:attribute name="otherComments" type="IEG_STRING" default=""/>
+            <xs:attribute name="safetyThreatResolution" type="IEG_STRING" />
+            <xs:attribute name="directServices" type="RUA_INDICATOR" />
+            <xs:attribute name="safetyResources" type="RUA_INDICATOR" />
+            <xs:attribute name="communityAgencies" type="RUA_INDICATOR" />
+            <xs:attribute name="protectVictim" type="RUA_INDICATOR" />
+            <xs:attribute name="leaveHome" type="RUA_INDICATOR" />
+            <xs:attribute name="safeEnvironment" type="RUA_INDICATOR" />
+            <xs:attribute name="plannedLegalAction" type="RUA_INDICATOR" />
+            <xs:attribute name="specifyOther" type="RUA_INDICATOR" />
+            <xs:attribute name="otherDetails" type="IEG_STRING" default=""/>
+            <xs:attribute name="voluntaryPlacement" type="RUA_INDICATOR"/>
+            <xs:attribute name="protectiveCustody" type="RUA_INDICATOR"/>
+        </xs:complexType>
+        <xs:key name="Group_Key">
+            <xs:selector xpath="./Group" />
+            <xs:field xpath="@groupID" />
+        </xs:key>
+    </xs:element>
+    <xs:element name="Assessment">
+        <xs:complexType>
+            <xs:attribute name="initialAssessmentInd" type="IEG_BOOLEAN" />
+            <xs:attribute name="assessmentDefinitionID" type="IEG_INT64" />
+            <xs:attribute name="assessmentInstanceID" type="IEG_INT64" />
+            <xs:attribute name="riskOverride" type="RUA_OVERRIDE" />
+            <xs:attribute name="riskScore" type="IEG_INT64" />
+            <xs:attribute name="determinedRiskLevel" type="RUA_CLASSIFICATION_DIVISION_TYPE" />
+            <xs:attribute name="determinedRiskLevelDesc" type="IEG_STRING" />
+            <xs:attribute name="finalRiskLevel" type="RUA_CLASSIFICATION_DIVISION_TYPE" />
+            <xs:attribute name="finalRiskLevelDesc" type="IEG_STRING" />
+            <xs:attribute name="policyOverrideSexAbuseCaseInd" type="IEG_BOOLEAN" />
+            <xs:attribute name="policyOverrideInjuryInd" type="IEG_BOOLEAN" />
+            <xs:attribute name="policyOverrideSevereInjuryInd" type="IEG_BOOLEAN" />
+            <xs:attribute name="policyOverrideDeathInd" type="IEG_BOOLEAN" />
+            <xs:attribute name="discretionaryOverrideReason" type="IEG_STRING" />
+            <xs:attribute name="overrideDirection" type="RUA_OVERRIDE_DIRECTION" />
+            <xs:attribute name="isVisitEvaluationEnabledInd" type="IEG_BOOLEAN" />
+            <xs:attribute name="isSafetyAssessmentEnabledInd" type="IEG_BOOLEAN" />
+            <xs:attribute name="determinedSafetyLevel" type="RUA_CLASSIFICATION_DIVISION_TYPE" />
+            <xs:attribute name="determinedSafetyLevelDesc" type="IEG_STRING" />
+            <xs:attribute name="displayPlacementQuestionsInd" type="IEG_BOOLEAN" />
+            <xs:attribute name="consecutivePlacementDuration" type="IEG_INT64" />
+            <xs:attribute name="accumulatedPlacementDuration" type="IEG_INT64" />
+            <xs:attribute name="accumulatedPlacementDurationPeriod" type="IEG_INT64" />
+            <xs:attribute name="reviewPeriodStartDate" type="IEG_DATE" />
+            <xs:attribute name="reviewPeriodEndDate" type="IEG_DATE" />
+            <xs:attribute name="noComplianceConfiguredInd" type="IEG_BOOLEAN" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Person">
+        <xs:complexType>
+            <xs:sequence minOccurs="0">
+                <xs:element ref="VisitationLog" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="PlanGoal" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="evaluation" type="RUA_VISIT_EVALUATION" />
+            <xs:attribute name="evaluationRationale" type="IEG_STRING" />
+            <xs:attribute name="visitCompliance" type="RUA_VISIT_COMPLIANCE" />
+            <xs:attribute name="visitComplianceDesc" type="IEG_STRING" />
+            <xs:attribute name="validPlansFoundInd" type="IEG_BOOLEAN" />
+            <xs:attribute name="personID" type="d:SVR_KEY" />
+            <xs:attribute name="permanencyPlanGoal" type="IEG_STRING" />
+            <xs:attribute name="recommendedGoal" type="RUA_CLASSIFICATION_DIVISION_TYPE" />
+            <xs:attribute name="recommendedGoalDesc" type="IEG_STRING" />
+            <xs:attribute name="placement" type="IEG_STRING" />
+            <xs:attribute name="firstName" type="IEG_STRING" />
+            <xs:attribute name="lastName" type="IEG_STRING" />
+            <xs:attribute name="fullName" type="IEG_STRING" />
+            <xs:attribute name="gender" type="IEG_GENDER" />
+            <xs:attribute name="dateOfBirth" type="IEG_DATE" />
+            <xs:attribute name="roleID" type="IEG_INT64" />
+            <xs:attribute name="participantID" type="IEG_INT64" />
+            <xs:attribute name="questionsApplicableInd" type="IEG_BOOLEAN" />
+            <xs:attribute name="evaluationDescription" type="IEG_STRING" />
+            <xs:attribute name="consecutivePlacementInd" type="RUA_INDICATOR" />
+            <xs:attribute name="accumulatedPlacementInd" type="RUA_INDICATOR" />
+            <xs:attribute name="visitOverride" type="RUA_VISIT_OVERRIDE" />
+            <xs:attribute name="visitOverrideDirection" type="RUA_OVERRIDE_DIRECTION" />
+            <xs:attribute name="visitDiscretionaryOverrideReason" type="IEG_STRING" />
+            <xs:attribute name="finalVisitLevelDesc" type="IEG_STRING" />
+            <xs:attribute name="finalVisitLevelCode" type="RUA_VISITATION_EVALUATION" />
+            <xs:attribute name="recommendationDiscretionaryOverrideReason" type="IEG_STRING" />
+            <xs:attribute name="recommendationOverrideCode" type="RUA_OVERRIDE" />
+            <xs:attribute name="permanencyPlanRecommendationInd" type="IEG_BOOLEAN" />
+            <xs:attribute name="continuedRUNServicesInd" type="IEG_BOOLEAN" />
+            <xs:attribute name="policyRecommendationValue" type="RUA_RECC_OVERRIDE" />
+            <xs:attribute name="discretionaryRecommendationValue" type="RUA_RECC_OVERRIDE" />
+        </xs:complexType>
+        <xs:key name="Person_Key">
+            <xs:selector xpath="./Person" />
+            <xs:field xpath="@personID" />
+        </xs:key>
+    </xs:element>
+    <xs:element name="VisitationLog">
+        <xs:complexType>
+            <xs:attribute name="participantID" type="IEG_INT64" />
+            <xs:attribute name="visitationLogID" type="IEG_INT64" />
+            <xs:attribute name="quality" type="IEG_STRING" />
+            <xs:attribute name="visitDate" type="IEG_DATE" />
+            <xs:attribute name="visitors" type="IEG_STRING" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="PlanGoal">
+        <xs:complexType>
+            <xs:attribute name="personID" type="d:SVR_KEY"/>
+            <xs:attribute name="isGoalSelected" type="IEG_BOOLEAN"/>
+            <xs:attribute name="goalName" type="IEG_STRING"/>
+            <xs:attribute name="goalReference" type="IEG_STRING"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

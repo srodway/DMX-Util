@@ -1,20 +1,41 @@
 #
 # Licensed Materials - Property of IBM
+#
+# PID 5725-H26
 # 
-# Copyright IBM Corporation 2012. All Rights Reserved.
+# Copyright IBM Corporation 2014. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-# This Properties file contains resource Strings for the PDC Phone Number Validation Ruleset.
-
-ERR_CONCERNROLEPHONENUMBER_XRV_DUPLICATE_CLIENT_CREATE=New phone number details cannot be added for a client that is currently marked as a duplicate.
-ERR_CONCERNROLEPHONENUMBER_XRV_DUPLICATE_CLIENT_MODIFY=Phone number details of a client that is currently marked as a duplicate cannot be modified.
-ERR_CONCERNROLE_PHONENUMBER_XRV_START_DATE=The phone number from date must be after {0} Date of Birth - {1,date,M/d/yyyy}.
-ERR_CONCERNROLE_XRV_START_DATE_END_DATE=The phone number from date must be before {0} Date of Death - {1,date,M/d/yyyy}.
-ERR_CONCERNROLE_XRV_END_DATE=The phone number to date must be before {0} Date of Death - {1,date,M/d/yyyy}.
-ERR_PHONENUMBER_XRV_EFFECTIVE_DATE_DOB=The effective date of change must be after the date of birth.
-ERR_CONCERNROLE_PHONENUMBER_ALREADY_EXISTS=The phone number {0} already exists for {1}.
-ERR_PHONENUMBER_TYPEMODIFIED=Type cannot be modified.
-PDCPhoneNumberValidationResult.description=PDC Phone Number Validation Result For {0}
-ERR_PHONENUMBER_MULTIPLE_PREFERRED_PHONENUMBER=You cannot have more than one preferred phone number.
+#Fri Nov 07 17:57:47 GMT 2014
+Cluster.Comments=Comments
+Second.Name.Label=Second Name
+Field.Label.VeteranStatus=Veteran Status
+Modify.Page.Description=The modify page for a household member.
+Field.Label.NativeHawaiianOrPacificIslander=Native Hawaiian or Pacific Islander
+Field.Label.SSNStatus=SSN Status
+HouseholdMember.Description=household member
+Participant.Description=Participant
+Field.Label.CitizenStatus=Citizen Status
+HouseholdMember.Label=
+Field.Label.WhiteOrCaucasian=White or Caucasian
+EndDateStartDateComparison.message={0} cannot be earlier than {1)
+Cluster.CaseParticipant=Case Participant
+Field.Label.BlackOrAfricanAmerican=Black or African American
+Field.Label.StartDate=Start Date
+Create.Page.Description=The create page for a household member.
+Field.Label.ResidencyStatus=Residency Status
+First.Name.Label=First Name
+Field.Label.HispanicOrLatino=Hispanic or Latino
+Field.Label.EndDate=End Date
+Cluster.HouseholdMember.Details=Household Member Details
+HouseholdMember.Summary.message=Was registered on {0}, has a citizen status of {1} and is a {2} resident of the state
+Field.Label.NativeAlaskanOrAmericanIndian=Native Alaskan or American Indian
+View.Page.Description=The view page for a household member.
+Field.Label.Asian=Asian
+Field.Label.MigrantOrSeasonalFarmWorker=Migrant or Seasonal Farm Worker
+StartDate.message=The {0} cannot be later than today.
+Cluster.CaseParticipant.Help=Select the household member from the drop down.
+Cluster.HouseholdMember.Details.Help=Please enter the appropriate details for the household member.
+Cluster.Comments.Help=Enter any additional comments about the household member.

@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
- 
+  
   Copyright IBM Corporation 2012. All Rights Reserved.
-
+ 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2010, 2012 Curam Software Ltd.
+  Copyright 2012 Curam Software Ltd.
   All rights reserved.
   
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="SupervisorCasesWithAppeals">
-
-  <tc:menu id="SupervisorCasesMenu"/>
-
-  <!-- Details panel -->
-  <tc:context tab-name="Details.Name.SupervisorCasesWithAppeals" tab-title="Details.Title.SupervisorCasesWithAppeals"/>
-
-  <!-- Navigation Panel -->
-  <!-- BEGIN, CR00311377, AKr -->
-  <tc:navigation page-id="SupervisorAppeals_casesWithAppealsHeatMap"/>
-  <!-- END, CR00311377 -->
-
-
-</tc:tab-config>
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="VisitationPlanMenu">
+    <mc:loader-registry>
+        <mc:loader class="curam.visitation.tab.impl.VisitationPlanMenuLoader"/>
+    </mc:loader-registry>
+    <mc:menu-item id="Edit" open-as="modal" page-id="VisitationPlan_edit" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
+    <mc:menu-separator id="sep1"/>
+    <mc:menu-item id="AddVisiting" open-as="modal" page-id="VisitationPlan_addVisitings" title="MenuItem.Title.AddVisiting" tooltip="MenuItem.Tooltip.AddVisiting"/>
+    <mc:menu-item id="AddVisitors" open-as="modal" page-id="VisitationPlan_addVisitors" title="MenuItem.Title.AddVisitors" tooltip="MenuItem.Tooltip.AddVisitors"/>
+    <mc:menu-item id="AddRegisteredVisitor" open-as="modal" page-id="VisitationPlan_addRegisteredVisitor" title="MenuItem.Title.AddRegisteredVisitor" tooltip="MenuItem.Tooltip.AddRegisteredVisitor"/>
+    <mc:menu-item id="AddUnregisteredVisitor" open-as="modal" page-id="VisitationPlan_addUnregisteredVisitor" title="MenuItem.Title.AddUnregisteredVisitor" tooltip="MenuItem.Tooltip.AddUnregisteredVisitor"/>    
+    <mc:menu-item id="NewVisitationLog" open-as="modal" page-id="VisitationPlan_addLog" title="MenuItem.Title.NewVisitationLog" tooltip="MenuItem.Tooltip.NewVisitationLog"/>
+    <mc:menu-separator id="sep2"/>
+    <mc:menu-item id="RemoveVisiting" open-as="modal" page-id="VisitationPlan_removeVisitings" title="MenuItem.Title.RemoveVisiting" tooltip="MenuItem.Tooltip.RemoveVisiting"/>
+    <mc:menu-item id="RemoveVisitors" open-as="modal" page-id="VisitationPlan_removeVisitors" title="MenuItem.Title.RemoveVisitors" tooltip="MenuItem.Tooltip.RemoveVisitors"/>
+    <mc:menu-separator id="sep3"/>
+    <mc:menu-item append-ellipsis="false" dynamic="true" id="ViewPrintableDocument" page-id="ViewVisitationPrintableDocument" title="MenuItem.Title.ViewPrintableDocument" tooltip="MenuItem.Tooltip.ViewPrintableDocument" type="FILE_DOWNLOAD"/>
+    <mc:menu-separator id="sep4"/>
+    <mc:menu-item id="Close" open-as="modal" page-id="VisitationPlan_close" title="MenuItem.Title.Close" tooltip="MenuItem.Tooltip.Close"/>
+    <mc:menu-item id="Cancel" open-as="modal" page-id="VisitationPlan_cancel" title="MenuItem.Title.Cancel" tooltip="MenuItem.Tooltip.Cancel"/>
+</mc:menu-bar>

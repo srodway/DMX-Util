@@ -1,170 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
-
+  
+  Copyright IBM Corporation 2012, 2014. All Rights Reserved.
+  
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><!-- 
-  Copyright 2009-2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information").  You shall not disclose such
-  Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><!--
-  
-  Default implementations of the rule classes in ProductKeyDataRuleSet.
-  
-  Rule set developers for CREOLE-based products should extend these default
-  implementations rather than extending the ProductDisplay rule classes
-  directly.
-  
-  These default implementations provide some isolation against future changes
-  to the rule classes in the ProductDisplay rule set. --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DefaultProductKeyDataRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+--><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PDCPhoneNumberSummaryRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+  <Class extends="DefaultEvidenceSummary" extendsRuleSet="EvidenceSummaryRuleSet" name="PDCPhoneNumberSummary">
+    <Attribute name="evidence">
+      <type>
+        <ruleclass name="PDCPhoneNumber" ruleset="PDCPhoneNumberRuleSet"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
 
 
-  <!-- Default implementation of AbstractCase. -->
-  <Class abstract="true" extends="AbstractCase" extendsRuleSet="ProductKeyDataRuleSet" name="DefaultCase">
-
-
-    <!-- Simple English-only description. -->
-    <Attribute name="description">
+    <Attribute name="summary">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <XmlMessage>Milestone data rules for case: <replace>
-            <!-- use toString so that the number is not formatted with commas nor precision truncated -->
-            <property name="toString">
-              <object>
-                <reference attribute="caseID">
-                  <reference attribute="productDeliveryCase"/>
+        <choose>
+          <type>
+            <javaclass name="curam.creole.value.Message"/>
+          </type>
+          <when>
+            <condition>
+              <reference attribute="hasNoExtension"/>
+            </condition>
+            <value>
+              <ResourceMessage key="summaryMessage1" resourceBundle="curam.pdc.rules.DynEvd_PDCPhoneNumber_Summary">
+                <reference attribute="phoneType">
+                  <reference attribute="evidence"/>
                 </reference>
-              </object>
-            </property>
-          </replace></XmlMessage>
+                <reference attribute="phoneCountryCode">
+                  <reference attribute="evidence"/>
+                </reference>
+                <reference attribute="phoneAreaCode">
+                  <reference attribute="evidence"/>
+                </reference>
+                <reference attribute="phoneNumber">
+                  <reference attribute="evidence"/>
+                </reference>
+              </ResourceMessage>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <ResourceMessage key="summaryMessage2" resourceBundle="curam.pdc.rules.DynEvd_PDCPhoneNumber_Summary">
+                <reference attribute="phoneType">
+                  <reference attribute="evidence"/>
+                </reference>
+                <reference attribute="phoneCountryCode">
+                  <reference attribute="evidence"/>
+                </reference>
+                <reference attribute="phoneAreaCode">
+                  <reference attribute="evidence"/>
+                </reference>
+                <reference attribute="phoneNumber">
+                  <reference attribute="evidence"/>
+                </reference>
+                <reference attribute="phoneExtension">
+                  <reference attribute="evidence"/>
+                </reference>
+              </ResourceMessage>
+            </value>
+          </otherwise>
+        </choose>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="productDeliveryCase">
+    <Attribute name="hasExtension">
       <type>
-        <ruleclass name="ProductDeliveryCase" ruleset="ProductEligibilityEntitlementRuleSet"/>
+        <javaclass name="Boolean"/>
       </type>
       <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- No key data - i.e. an empty list -->
-    <Attribute name="keyDataTimelines">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="AbstractKeyDataTimeline" ruleset="ProductKeyDataRuleSet"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <fixedlist>
-          <listof>
-            <ruleclass name="AbstractKeyDataTimeline" ruleset="ProductKeyDataRuleSet"/>
-          </listof>
-          <members/>
-        </fixedlist>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <!-- Default implementation of AbstractKeyDataTimeline. -->
-  <Class abstract="true" extends="AbstractKeyDataTimeline" extendsRuleSet="ProductKeyDataRuleSet" name="DefaultKeyDataTimeline">
-
-
-    <!-- Blank description. -->
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <XmlMessage/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Null forever. -->
-    <Attribute name="timeline">
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Object"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <Timeline>
-          <intervaltype>
-            <javaclass name="Object"/>
-          </intervaltype>
-          <initialvalue>
+        <not>
+          <equals>
+            <reference attribute="phoneExtension">
+              <reference attribute="evidence"/>
+            </reference>
             <null/>
-          </initialvalue>
-        </Timeline>
+          </equals>
+        </not>
       </derivation>
     </Attribute>
 
 
-    <!-- No key events - i.e. an empty list -->
-    <Attribute name="keyEvents">
+    <!-- BEGIN, CR00441204, KRK -->
+    <Attribute name="hasNoExtension">
       <type>
-        <javaclass name="List">
-          <ruleclass name="AbstractKeyEvent" ruleset="ProductKeyDataRuleSet"/>
-        </javaclass>
+        <javaclass name="Boolean"/>
       </type>
       <derivation>
-
-
-        <fixedlist>
-          <listof>
-            <ruleclass name="AbstractKeyEvent" ruleset="ProductKeyDataRuleSet"/>
-          </listof>
-          <members/>
-        </fixedlist>
+        <any>
+          <fixedlist>
+            <listof>
+              <javaclass name="Boolean"/>
+            </listof>
+            <members>
+              <equals>
+                <property name="length">
+                  <object>
+                    <reference attribute="phoneExtension">
+                      <reference attribute="evidence"/>
+                    </reference>
+                  </object>
+                </property>
+                <Number value="0"/>
+              </equals>
+              <equals>
+                <reference attribute="phoneExtension">
+                  <reference attribute="evidence"/>
+                </reference>
+                <null/>
+              </equals>
+            </members>
+          </fixedlist>
+        </any>
       </derivation>
     </Attribute>
-
-
+    <!-- END, CR00441204 -->
   </Class>
-
-
-  <!-- Default implementation of AbstractKeyEvent. -->
-  <Class abstract="true" extends="AbstractKeyEvent" extendsRuleSet="ProductKeyDataRuleSet" name="DefaultKeyEvent">
-
-
-    <!-- Blank description. -->
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <XmlMessage/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Require that the value is specified externally. -->
-    <Attribute name="date">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
 </RuleSet>

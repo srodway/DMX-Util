@@ -1,75 +1,71 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-
-  PID 5725-H26
-
-  Copyright IBM Corporation 2014. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet name="DiagnosisDataRuleSet">
-
-
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="Diagnosis">
-
-
-    <Annotations>
-      <SuccessionSetPopulation/>
-    </Annotations>
-
-
-    <Attribute name="examinationDate">
-      <Annotations>
-        <Label label-id="examinationDate" name="The date on which the examination by the practitioner took place."/>
-      </Annotations>
+<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCIdentificationRuleSet">
+  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="PDCIdentification">
+    <Attribute name="alternateID">
+      <Annotations/>
       <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="diagnosis">
-      <Annotations>
-        <Label label-id="diagnosis" name="The diagnosis as determined by a practitioner."/>
-      </Annotations>
-      <type>
-        <codetableentry table="IncapacityDiagnosis"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
-          <reference attribute="successionID"/>
-        </ResourceMessage>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="cert">
-      <Annotations>
-        <relatedSuccessionSet relationship="parent"/>
-      </Annotations>
-      <type>
-        <ruleclass name="PractitionerCertificate" ruleset="PractitionerCertificateDataRuleSet"/>
+        <javaclass name="java.lang.String"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-
-
+    <Attribute name="fromDate">
+      <Annotations/>
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="altIDType">
+      <Annotations/>
+      <type>
+        <codetableentry table="ConcernRoleAlternateID"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="toDate">
+      <Annotations/>
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="preferredInd">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.Boolean"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="participant">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="related_participant">
+      <Annotations/>
+      <type>
+        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+      </type>
+      <derivation>
+        <reference attribute="caseParticipantRoleRecord">
+          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
+            <reference attribute="participant"/>
+          </create>
+        </reference>
+      </derivation>
+    </Attribute>
   </Class>
-
-
 </RuleSet>

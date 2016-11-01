@@ -46,9 +46,21 @@
                   <fo:block>
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
-                  <fo:inline font-size="12pt">Please find enclosed your contract with our agency to deliver services to
-                    our clients.
-                    Please read and sign the contract and return it to us using the prepaid envelope enclosed.</fo:inline>
+                  <fo:inline font-size="12pt">
+                    We wish to inform you that you are now under contract with our agency to deliver
+                    the services listed below to clients of this agency from
+                    <xsl:apply-templates select="FIELD[FNAME='startDate']"/>
+                    to
+                    <xsl:apply-templates select="FIELD[FNAME='endDate']"/>
+                    .
+                  </fo:inline>
+                  <fo:block>
+                    <fo:leader leader-pattern="space"/>
+                  </fo:block>
+                  <fo:inline font-size="12pt" font-weight="bold">SERVICES:</fo:inline>
+                  <xsl:if test="count(FIELD[FNAME='serviceOfferingNotificationListAgg']/STRUCT_LIST/STRUCT) &gt; 0">
+                    <xsl:call-template name="ServiceOfferings"/>
+                  </xsl:if>
                   <fo:block>
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
@@ -73,6 +85,14 @@
         </fo:flow>
       </fo:page-sequence>
     </fo:root>
+  </xsl:template>
+  <xsl:template name="ServiceOfferings">
+    <fo:block margin-left="0.0pt" space-after="0.0pt" space-before="0.0pt" text-align="start" text-indent="0.0pt">
+      <xsl:for-each select="FIELD[FNAME='serviceOfferingNotificationListAgg']/STRUCT_LIST/STRUCT['ServiceOfferingNotificationList']/FIELD[FNAME='serviceOfferingName']">
+        <xsl:value-of select="VALUE"/>
+        <fo:block linefeed-treatment="preserve"/>
+      </xsl:for-each>
+    </fo:block>
   </xsl:template>
   <xsl:template match="FIELD">
     <xsl:value-of select="VALUE"/>

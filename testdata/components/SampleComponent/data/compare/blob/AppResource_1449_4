@@ -1,47 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
-
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
-    <identifier name="Select Screening Application" />
-    <server alias="DISPLAY" method="listApplicationsForScreening" />
-    <header>
-        <title id="Page.Title" />
-        <description id="SelectApplication.Description" />
-        <icon id="title_selectprogram" />
-    </header>
-    <content>
-        <container>
-            <title id="Applications.Title" />
-            <description id="Applications.Description" />
-            <help id="Applications.Help" />
-            <list>
-                <list source="/DISPLAY/xmlData/applications[]">
-                    <title source="/DISPLAY/xmlData/applications[]/title" />
-                    <description source="/DISPLAY/xmlData/applications[]/description" />
-                    <param name="title-link-url" source="/DISPLAY/xmlData/applications[]/url" />
-                    <param name="title-link-label" id="Applications.More.Info" />
-                    <param name="title-link-title" id="Applications.More.Info"/>
-                    <param name="title-link-title-param" source="/DISPLAY/xmlData/applications[]/title"/>
-                    <field source="/DISPLAY/xmlData/applications[]/application[]/id" target="/ans/applicationID" type="CW_APPLICATION_SELECT" width="3">
-                        <title source="/DISPLAY/xmlData/applications[]/application[]/title" />
-                        <description source="/DISPLAY/xmlData/applications[]/application[]/description" />
-                        <help source="/DISPLAY/xmlData/applications[]/application[]/url" />
-                        <param name="help-label" id="Applications.More.Info" />
-                        <param name="labelClass" value="label-highlight" />
-                    </field>
-                </list>
-            </list>
-        </container>
-    </content>
-    <navigation>
-        <nav-button name="next" type="action" />
-        <nav-button name="exit" page="ResolveCitizenHome" page-type="resolve" />
-    </navigation>
-</page>
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Page.Title=Withdraw your Submitted Application
+Page.Description=You have chosen to withdraw a submitted application.  Please complete the withdrawal details below.
+Application.Details=Withdrawal Request Details
+Programs.Label=I wish to withdraw my application for:
+Reason.Label=My reason for withdrawing my application is:
+Reason.Other.Label=If other, please explain:
+Signature.Title=Electronic Signature
+Signature.Description=I understand that I may reapply at any time.  I also understand that by withdrawing my application, I will not be able to file for a hearing. An electronic signature has the same legal effect and can be enforced in the same way as a written signature.
+Signature.Check.Label=By checking this box and typing my name below I am electronically signing my application.
+Signature.First.Name.Label=First Name:
+Signature.Middle.Name.Label=Middle Name:
+Signature.Last.Name.Label=Last Name:

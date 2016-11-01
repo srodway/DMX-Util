@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
- 
+  
   Copyright IBM Corporation 2012. All Rights Reserved.
-
+ 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2010-2011 Curam Software Ltd.
+  Copyright 2009 Curam Software Ltd.
   All rights reserved.
   
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="ServiceUnitPlanItemView">
-  <nc:nodes>
-    <nc:navigation-page id="ServicePlanHome" page-id="ServicePlanDelivery_viewServiceUnitPlanItem" title="Leaf.Title.Home" visible="true"/>
-      
-    <nc:navigation-page id="ApprovalRequests" page-id="ServicePlanDelivery_listPlanPlanItemApprovalRequest" title="Leaf.Title.ApprovalRequests" visible="true"/>
-      
-     <nc:navigation-group id="ClientParticipation" title="Folder.Title.ClientParticipation">          
-     <nc:navigation-page id="Participation" page-id="ServicePlanDelivery_listClientParticipationForPlanItem" title="Leaf.Title.Participation" visible="true"/>           
-     <nc:navigation-page id="WeeklyParticipation" page-id="ServicePlanDelivery_planItemClientParticipationWeeklyList" title="Leaf.Title.WeeklyParticipation" visible="true"/>                      
-     </nc:navigation-group>                
-
-    <nc:navigation-page id="Attachments" page-id="ServicePlanDelivery_listPlannedItemAttachments" title="Leaf.Title.Attachments" visible="true"/>
-
-  </nc:nodes>
-</nc:navigation>
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="OutcomePlan">
+  <tc:page-param name="caseID"/>
+  <tc:menu id="OutcomePlanMenu"/>
+  
+  <tc:context height="143" page-id="OutcomePlan_outcomePlanDetails"/>
+  <tc:navigation id="OutcomePlan"/>
+  
+  <tc:tab-refresh>
+    <tc:onsubmit context="true" page-id="OutcomePlan_update"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="OutcomePlan_createReview"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="OutcomePlan_completeReview"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="OutcomePlanGoal_addPlanGoal"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="OutcomePlan_close"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="Case_modifyCaseOwner"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="OutcomePlan_addClient"/>
+    <tc:onsubmit context="true" menu-bar="true" page-id="OutcomePlan_removeClient"/>
+    
+  </tc:tab-refresh>
+</tc:tab-config>

@@ -7,110 +7,119 @@
 
   US Government Users Restricted Rights - Use, duplication or disclosure
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet name="ASCAlienDataRuleSet">
+--><RuleSet name="PractitionerCertificateRuleSet">
 
 
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="ASCAlien">
+  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="PractitionerCertificate">
 
 
-    <Annotations>
-      <SuccessionSetPopulation endDateAttribute="endDate" startDateAttribute="dateOfEntry"/>
-    </Annotations>
-
-
-    <Attribute name="alientStatusOnEntry">
+    <Attribute name="certificateType">
       <Annotations>
-        <Label label-id="alientStatusOnEntry" name="The alien's status on entering the country, e.g. Deportation Withheld"/>
+        <Label label-id="certificateType" name="The type of practitioner certificate, e.g. Doctor, Dentist etc."/>
       </Annotations>
       <type>
-        <codetableentry table="AlienStatusOnEntry"/>
+        <codetableentry table="PractitionerCertType"/>
       </type>
       <derivation>
-        <specified/>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="dateOfEntry">
+    <Attribute name="certFromDate">
       <Annotations>
-        <Label label-id="dateOfEntry" name="The date the alien entered the country."/>
+        <Label label-id="certFromDate" name="The date from which the certificate is valid."/>
       </Annotations>
       <type>
         <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <specified/>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="endDate">
+    <Attribute name="signatureDate">
       <Annotations>
-        <Label label-id="endDate" name="The end date for the alien."/>
+        <Label label-id="signatureDate" name="The date the certificate was signed by the practitioner."/>
       </Annotations>
       <type>
         <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <specified/>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="alienType">
+    <Attribute name="certPeriodType">
       <Annotations>
-        <Label label-id="alienType" name="The type of alien the household member is categorized under e.g. refugee."/>
+        <Label label-id="certPeriodType" name="The certificate will cover this number of periods, e.g. Weeks."/>
       </Annotations>
       <type>
-        <codetableentry table="InAlienStatus"/>
+        <codetableentry table="PeriodDuration"/>
       </type>
       <derivation>
-        <specified/>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="alienRegNumber">
+    <Attribute name="claimFormSignedInd">
       <Annotations>
-        <Label label-id="alienRegNumber" name="The alien's registration number."/>
+        <Label label-id="claimFormSignedInd" name="Flag to indicate if the certificate was signed by the practitioner."/>
       </Annotations>
       <type>
-        <javaclass name="java.lang.String"/>
+        <javaclass name="java.lang.Boolean"/>
       </type>
       <derivation>
-        <specified/>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="countryOfOrigin">
+    <Attribute name="examinationDate">
       <Annotations>
-        <Label label-id="countryOfOrigin" name="The alien's country of origin."/>
+        <Label label-id="examinationDate" name="The date on which the examination took place."/>
       </Annotations>
       <type>
-        <codetableentry table="Country"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <specified/>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
-          <reference attribute="successionID"/>
-        </ResourceMessage>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="caseParticipantRoleID">
+    <Attribute name="certPeriodCount">
       <Annotations>
-        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the alien."/>
+        <Label label-id="certPeriodCount" name="The amount of periods, weeks for example, the certificate is covering."/>
+      </Annotations>
+      <type>
+        <javaclass name="java.lang.Number"/>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="specifiedCertToDate">
+      <Annotations>
+        <Label label-id="specifiedCertToDate" name="The date the certificate is valid to."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="householdMember">
+      <Annotations>
+        <Label label-id="householdMember" name="The client receiving the certificate."/>
       </Annotations>
       <type>
         <javaclass name="java.lang.Number"/>
@@ -121,19 +130,78 @@
     </Attribute>
 
 
-    <Attribute name="related_caseParticipantRoleID">
-      <Annotations>
-        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the alien."/>
-      </Annotations>
+    <Attribute name="related_householdMember">
       <type>
         <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
       </type>
       <derivation>
         <reference attribute="caseParticipantRoleRecord">
           <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="caseParticipantRoleID"/>
+            <reference attribute="householdMember"/>
           </create>
         </reference>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="practitioner">
+      <Annotations>
+        <Label label-id="practitioner" name="The practitioner who issued the certificate."/>
+      </Annotations>
+      <type>
+        <javaclass name="java.lang.Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="practitionerName">
+      <Annotations>
+        <Label label-id="practitionerName" name="The name of the practitioner who issues the certificate."/>
+      </Annotations>
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="related_practitioner">
+      <type>
+        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+      </type>
+      <derivation>
+        <reference attribute="caseParticipantRoleRecord">
+          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
+            <reference attribute="practitioner"/>
+          </create>
+        </reference>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="related_Diagnosis">
+      <type>
+        <javaclass name="java.util.List">
+          <ruleclass name="ASCDiagnosis" ruleset="ASCDiagnosisRuleSet"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <call class="curam.dynamicevidence.cer.impl.DynamicEvidenceStatics" method="getChildList">
+          <type>
+            <javaclass name="java.util.List">
+              <ruleclass name="ASCDiagnosis" ruleset="ASCDiagnosisRuleSet"/>
+            </javaclass>
+          </type>
+          <arguments>
+            <this/>
+            <String value="ASCDiagnosis"/>
+          </arguments>
+        </call>
       </derivation>
     </Attribute>
 

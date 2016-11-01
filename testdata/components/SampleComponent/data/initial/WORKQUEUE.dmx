@@ -12,6 +12,70 @@
   <column name="lastWritten" type="timestamp" />
   <row>
     <attribute name="workQueueID">
+      <value>19003</value>
+    </attribute>
+    <attribute name="name">
+      <value>Application Ready For Determination Work Queue</value>
+    </attribute>
+    <attribute name="allowUserSubscriptionInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="sensitivity">
+      <value>1</value>
+    </attribute>
+    <attribute name="administratorUserName">
+      <value>admin</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Application Ready For Determination Work Queue</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="upperAdministratorUserName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="workQueueID">
+      <value>2004</value>
+    </attribute>
+    <attribute name="name">
+      <value>CLIENT MULTI-MATCH NOTIFICATION</value>
+    </attribute>
+    <attribute name="allowUserSubscriptionInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="sensitivity">
+      <value>1</value>
+    </attribute>
+    <attribute name="administratorUserName">
+      <value>unauthenticated</value>
+    </attribute>
+    <attribute name="comments">
+      <value>If there are multiple matches for client information received from external system, then the task notification containing the client details will be available in this queue.</value>
+    </attribute>
+    <attribute name="upperName">
+      <value>CLIENT MULTI-MATCH NOTIFICATION</value>
+    </attribute>
+    <attribute name="upperAdministratorUserName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2001-01-01-00.00.00</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="workQueueID">
       <value>1</value>
     </attribute>
     <attribute name="name">
@@ -44,10 +108,10 @@
   </row>
   <row>
     <attribute name="workQueueID">
-      <value>2</value>
+      <value>10</value>
     </attribute>
     <attribute name="name">
-      <value>SUPERVISORWORKQUEUE</value>
+      <value>Enquiry Work Queue</value>
     </attribute>
     <attribute name="allowUserSubscriptionInd">
       <value>1</value>
@@ -56,13 +120,13 @@
       <value>1</value>
     </attribute>
     <attribute name="administratorUserName">
-      <value>unauthenticated</value>
+      <value>admin</value>
     </attribute>
     <attribute name="comments">
-      <value />
+      <value>Enquiry Work Queue</value>
     </attribute>
     <attribute name="upperName">
-      <value>SUPERVISORWORKQUEUE</value>
+      <value />
     </attribute>
     <attribute name="upperAdministratorUserName">
       <value />
@@ -71,7 +135,7 @@
       <value>1</value>
     </attribute>
     <attribute name="lastWritten">
-      <value>2001-01-01-00.00.00</value>
+      <value />
     </attribute>
   </row>
   <row>
@@ -92,38 +156,6 @@
     </attribute>
     <attribute name="comments">
       <value>New Request Work Queue</value>
-    </attribute>
-    <attribute name="upperName">
-      <value />
-    </attribute>
-    <attribute name="upperAdministratorUserName">
-      <value />
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-    <attribute name="lastWritten">
-      <value />
-    </attribute>
-  </row>
-  <row>
-    <attribute name="workQueueID">
-      <value>4</value>
-    </attribute>
-    <attribute name="name">
-      <value>Service Invoice Exception Processing Work Queue</value>
-    </attribute>
-    <attribute name="allowUserSubscriptionInd">
-      <value>1</value>
-    </attribute>
-    <attribute name="sensitivity">
-      <value>1</value>
-    </attribute>
-    <attribute name="administratorUserName">
-      <value>admin</value>
-    </attribute>
-    <attribute name="comments">
-      <value>Service Invoice Line item Exception Processing Work Queue</value>
     </attribute>
     <attribute name="upperName">
       <value />
@@ -168,198 +200,6 @@
     </attribute>
     <attribute name="lastWritten">
       <value />
-    </attribute>
-  </row>
-  <row>
-    <attribute name="workQueueID">
-      <value>6</value>
-    </attribute>
-    <attribute name="name">
-      <value>Roster Exception Processing Work Queue</value>
-    </attribute>
-    <attribute name="allowUserSubscriptionInd">
-      <value>1</value>
-    </attribute>
-    <attribute name="sensitivity">
-      <value>1</value>
-    </attribute>
-    <attribute name="administratorUserName">
-      <value>admin</value>
-    </attribute>
-    <attribute name="comments">
-      <value>Roster Exception Processing Work Queue</value>
-    </attribute>
-    <attribute name="upperName">
-      <value />
-    </attribute>
-    <attribute name="upperAdministratorUserName">
-      <value />
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-    <attribute name="lastWritten">
-      <value />
-    </attribute>
-  </row>
-  <row>
-    <attribute name="workQueueID">
-      <value>7</value>
-    </attribute>
-    <attribute name="name">
-      <value>Roster Line Item Approval Work Queue</value>
-    </attribute>
-    <attribute name="allowUserSubscriptionInd">
-      <value>1</value>
-    </attribute>
-    <attribute name="sensitivity">
-      <value>1</value>
-    </attribute>
-    <attribute name="administratorUserName">
-      <value>admin</value>
-    </attribute>
-    <attribute name="comments">
-      <value>Roster Line Item Approval Work Queue</value>
-    </attribute>
-    <attribute name="upperName">
-      <value />
-    </attribute>
-    <attribute name="upperAdministratorUserName">
-      <value />
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-    <attribute name="lastWritten">
-      <value />
-    </attribute>
-  </row>
-  <row>
-    <attribute name="workQueueID">
-      <value>10</value>
-    </attribute>
-    <attribute name="name">
-      <value>Enquiry Work Queue</value>
-    </attribute>
-    <attribute name="allowUserSubscriptionInd">
-      <value>1</value>
-    </attribute>
-    <attribute name="sensitivity">
-      <value>1</value>
-    </attribute>
-    <attribute name="administratorUserName">
-      <value>admin</value>
-    </attribute>
-    <attribute name="comments">
-      <value>Enquiry Work Queue</value>
-    </attribute>
-    <attribute name="upperName">
-      <value />
-    </attribute>
-    <attribute name="upperAdministratorUserName">
-      <value />
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-    <attribute name="lastWritten">
-      <value />
-    </attribute>
-  </row>
-  <row>
-    <attribute name="workQueueID">
-      <value>2001</value>
-    </attribute>
-    <attribute name="name">
-      <value>TEMPORARY OWNER ASSIGNMENT</value>
-    </attribute>
-    <attribute name="allowUserSubscriptionInd">
-      <value>0</value>
-    </attribute>
-    <attribute name="sensitivity">
-      <value>1</value>
-    </attribute>
-    <attribute name="administratorUserName">
-      <value>unauthenticated</value>
-    </attribute>
-    <attribute name="comments">
-      <value>This work queue is used only as a transitional assignment for case ownership workflow processing. The User Subscription indicator should be set to 'No'.</value>
-    </attribute>
-    <attribute name="upperName">
-      <value>TEMPORARY OWNER ASSIGNMENT</value>
-    </attribute>
-    <attribute name="upperAdministratorUserName">
-      <value />
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-    <attribute name="lastWritten">
-      <value>2001-01-01-00.00.00</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="workQueueID">
-      <value>2003</value>
-    </attribute>
-    <attribute name="name">
-      <value>PENDING OWNER ASSIGNMENT</value>
-    </attribute>
-    <attribute name="allowUserSubscriptionInd">
-      <value>1</value>
-    </attribute>
-    <attribute name="sensitivity">
-      <value>1</value>
-    </attribute>
-    <attribute name="administratorUserName">
-      <value>unauthenticated</value>
-    </attribute>
-    <attribute name="comments">
-      <value>This work queue is used as the allocation target of the SampleAssignCaseOwnership workflow process when a case owner cannot be determined.</value>
-    </attribute>
-    <attribute name="upperName">
-      <value>PENDING OWNER ASSIGNMENT</value>
-    </attribute>
-    <attribute name="upperAdministratorUserName">
-      <value />
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-    <attribute name="lastWritten">
-      <value>2001-01-01-00.00.00</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="workQueueID">
-      <value>2004</value>
-    </attribute>
-    <attribute name="name">
-      <value>CLIENT MULTI-MATCH NOTIFICATION</value>
-    </attribute>
-    <attribute name="allowUserSubscriptionInd">
-      <value>1</value>
-    </attribute>
-    <attribute name="sensitivity">
-      <value>1</value>
-    </attribute>
-    <attribute name="administratorUserName">
-      <value>unauthenticated</value>
-    </attribute>
-    <attribute name="comments">
-      <value>If there are multiple matches for client information received from external system, then the task notification containing the client details will be available in this queue.</value>
-    </attribute>
-    <attribute name="upperName">
-      <value>CLIENT MULTI-MATCH NOTIFICATION</value>
-    </attribute>
-    <attribute name="upperAdministratorUserName">
-      <value />
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-    <attribute name="lastWritten">
-      <value>2001-01-01-00.00.00</value>
     </attribute>
   </row>
   <row>
@@ -428,10 +268,42 @@
   </row>
   <row>
     <attribute name="workQueueID">
-      <value>19002</value>
+      <value>2003</value>
     </attribute>
     <attribute name="name">
-      <value>Withdrawal Request Created Work Queue</value>
+      <value>PENDING OWNER ASSIGNMENT</value>
+    </attribute>
+    <attribute name="allowUserSubscriptionInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="sensitivity">
+      <value>1</value>
+    </attribute>
+    <attribute name="administratorUserName">
+      <value>unauthenticated</value>
+    </attribute>
+    <attribute name="comments">
+      <value>This work queue is used as the allocation target of the SampleAssignCaseOwnership workflow process when a case owner cannot be determined.</value>
+    </attribute>
+    <attribute name="upperName">
+      <value>PENDING OWNER ASSIGNMENT</value>
+    </attribute>
+    <attribute name="upperAdministratorUserName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2001-01-01-00.00.00</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="workQueueID">
+      <value>6</value>
+    </attribute>
+    <attribute name="name">
+      <value>Roster Exception Processing Work Queue</value>
     </attribute>
     <attribute name="allowUserSubscriptionInd">
       <value>1</value>
@@ -443,7 +315,7 @@
       <value>admin</value>
     </attribute>
     <attribute name="comments">
-      <value>Withdrawal Request Created Work Queue</value>
+      <value>Roster Exception Processing Work Queue</value>
     </attribute>
     <attribute name="upperName">
       <value />
@@ -460,10 +332,10 @@
   </row>
   <row>
     <attribute name="workQueueID">
-      <value>19003</value>
+      <value>7</value>
     </attribute>
     <attribute name="name">
-      <value>Application Ready For Determination Work Queue</value>
+      <value>Roster Line Item Approval Work Queue</value>
     </attribute>
     <attribute name="allowUserSubscriptionInd">
       <value>1</value>
@@ -475,7 +347,135 @@
       <value>admin</value>
     </attribute>
     <attribute name="comments">
-      <value>Application Ready For Determination Work Queue</value>
+      <value>Roster Line Item Approval Work Queue</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="upperAdministratorUserName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="workQueueID">
+      <value>2</value>
+    </attribute>
+    <attribute name="name">
+      <value>SUPERVISORWORKQUEUE</value>
+    </attribute>
+    <attribute name="allowUserSubscriptionInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="sensitivity">
+      <value>1</value>
+    </attribute>
+    <attribute name="administratorUserName">
+      <value>unauthenticated</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="upperName">
+      <value>SUPERVISORWORKQUEUE</value>
+    </attribute>
+    <attribute name="upperAdministratorUserName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2001-01-01-00.00.00</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="workQueueID">
+      <value>4</value>
+    </attribute>
+    <attribute name="name">
+      <value>Service Invoice Exception Processing Work Queue</value>
+    </attribute>
+    <attribute name="allowUserSubscriptionInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="sensitivity">
+      <value>1</value>
+    </attribute>
+    <attribute name="administratorUserName">
+      <value>admin</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Service Invoice Line item Exception Processing Work Queue</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="upperAdministratorUserName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="workQueueID">
+      <value>2001</value>
+    </attribute>
+    <attribute name="name">
+      <value>TEMPORARY OWNER ASSIGNMENT</value>
+    </attribute>
+    <attribute name="allowUserSubscriptionInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="sensitivity">
+      <value>1</value>
+    </attribute>
+    <attribute name="administratorUserName">
+      <value>unauthenticated</value>
+    </attribute>
+    <attribute name="comments">
+      <value>This work queue is used only as a transitional assignment for case ownership workflow processing. The User Subscription indicator should be set to 'No'.</value>
+    </attribute>
+    <attribute name="upperName">
+      <value>TEMPORARY OWNER ASSIGNMENT</value>
+    </attribute>
+    <attribute name="upperAdministratorUserName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value>2001-01-01-00.00.00</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="workQueueID">
+      <value>19002</value>
+    </attribute>
+    <attribute name="name">
+      <value>Withdrawal Request Created Work Queue</value>
+    </attribute>
+    <attribute name="allowUserSubscriptionInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="sensitivity">
+      <value>1</value>
+    </attribute>
+    <attribute name="administratorUserName">
+      <value>admin</value>
+    </attribute>
+    <attribute name="comments">
+      <value>Withdrawal Request Created Work Queue</value>
     </attribute>
     <attribute name="upperName">
       <value />

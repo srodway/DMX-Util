@@ -1,24 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009-2010 Curam Software Ltd.
-  All rights reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Number.Wizard.Pages=4
 
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="OMAdminGoals">
+CreateActionWizard_details.Wizard.Item.Text=Details
+CreateActionWizard_details.Wizard.Page.Title=Step 1:
+CreateActionWizard_details.Wizard.Page.Desc=Details
+Wizard.PageID.1=CreateActionWizard_details
 
-  <!-- No details panel -->
-  <tc:context tab-name="Details.Name.Goals" tab-title="Tab.Title.Goals"/>
+CreateActionWizard_schedule.Wizard.Item.Text=Schedule
+CreateActionWizard_schedule.Wizard.Page.Title=Step 2:
+CreateActionWizard_schedule.Wizard.Page.Desc=Schedule
+Wizard.PageID.2=CreateActionWizard_schedule
 
+CreateActionWizard_factors.Wizard.Item.Text=Factors
+CreateActionWizard_factors.Wizard.Page.Title=Step 3:
+CreateActionWizard_factors.Wizard.Page.Desc=Factors
+Wizard.PageID.3=CreateActionWizard_factors
 
-  <tc:navigation page-id="OutcomePlanAdmin_listOutcomePlanGoals"/>
-
-</tc:tab-config>
+CreateActionWizard_owner.Wizard.Item.Text=Owner
+CreateActionWizard_owner.Wizard.Page.Title=Step 4:
+CreateActionWizard_owner.Wizard.Page.Desc=Owner
+Wizard.PageID.4=CreateActionWizard_owner

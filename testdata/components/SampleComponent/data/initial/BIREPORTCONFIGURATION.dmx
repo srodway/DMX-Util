@@ -14,215 +14,25 @@
   <column name="versionNo" type="number" />
   <row>
     <attribute name="biReportConfigurationID">
-      <value>2001</value>
+      <value>2016</value>
     </attribute>
     <attribute name="reportName">
-      <value>SampleWithScriptedDataSet</value>
+      <value>AllComponentsGraphicalBenefitStatement</value>
     </attribute>
     <attribute name="reportFileName">
-      <value>tests/styling/SampleWithScriptedDataSet.rptdesign</value>
+      <value>components/core/birt/CaseFinancial/AllComponentsGraphicalBenefitStatement.rptdesign</value>
     </attribute>
     <attribute name="reportServlet">
       <value />
     </attribute>
     <attribute name="description">
-      <value>Sample demo report</value>
+      <value>Full Reassessment Results BIRT report</value>
     </attribute>
     <attribute name="width">
       <value>100%</value>
     </attribute>
     <attribute name="height">
-      <value>400</value>
-    </attribute>
-    <attribute name="scrolling">
-      <value>RS2002</value>
-    </attribute>
-    <attribute name="reportFrameborder">
-      <value>0</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="reportCategory">
-      <value>RC2004</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="biReportConfigurationID">
-      <value>2002</value>
-    </attribute>
-    <attribute name="reportName">
-      <value>AuditPlanSummaryBarChart</value>
-    </attribute>
-    <attribute name="reportFileName">
-      <value>components/core/birt/CaseAudit/AuditPlanSummaryBarChart.rptdesign</value>
-    </attribute>
-    <attribute name="reportServlet">
-      <value />
-    </attribute>
-    <attribute name="description">
-      <value>Audit Plan Summary</value>
-    </attribute>
-    <attribute name="width">
       <value>100%</value>
-    </attribute>
-    <attribute name="height">
-      <value>280</value>
-    </attribute>
-    <attribute name="scrolling">
-      <value>RS2003</value>
-    </attribute>
-    <attribute name="reportFrameborder">
-      <value>0</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="reportCategory">
-      <value>RC2001</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="biReportConfigurationID">
-      <value>2003</value>
-    </attribute>
-    <attribute name="reportName">
-      <value>CaseAuditSummaryBarChart</value>
-    </attribute>
-    <attribute name="reportFileName">
-      <value>components/core/birt/CaseAudit/CaseAuditSummaryBarChart.rptdesign</value>
-    </attribute>
-    <attribute name="reportServlet">
-      <value />
-    </attribute>
-    <attribute name="description">
-      <value>Case Audit Summary</value>
-    </attribute>
-    <attribute name="width">
-      <value>100%</value>
-    </attribute>
-    <attribute name="height">
-      <value>280</value>
-    </attribute>
-    <attribute name="scrolling">
-      <value>RS2003</value>
-    </attribute>
-    <attribute name="reportFrameborder">
-      <value>0</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="reportCategory">
-      <value>RC2001</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="biReportConfigurationID">
-      <value>2004</value>
-    </attribute>
-    <attribute name="reportName">
-      <value>AuditPlanSummaryPieChart</value>
-    </attribute>
-    <attribute name="reportFileName">
-      <value>components/core/birt/CaseAudit/AuditPlanSummaryPieChart.rptdesign</value>
-    </attribute>
-    <attribute name="reportServlet">
-      <value />
-    </attribute>
-    <attribute name="description">
-      <value>Audit Plan Summary</value>
-    </attribute>
-    <attribute name="width">
-      <value>100%</value>
-    </attribute>
-    <attribute name="height">
-      <value>280</value>
-    </attribute>
-    <attribute name="scrolling">
-      <value>RS2003</value>
-    </attribute>
-    <attribute name="reportFrameborder">
-      <value>0</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="reportCategory">
-      <value>RC2001</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="biReportConfigurationID">
-      <value>2005</value>
-    </attribute>
-    <attribute name="reportName">
-      <value>CaseAuditSummaryPieChart</value>
-    </attribute>
-    <attribute name="reportFileName">
-      <value>components/core/birt/CaseAudit/CaseAuditSummaryPieChart.rptdesign</value>
-    </attribute>
-    <attribute name="reportServlet">
-      <value />
-    </attribute>
-    <attribute name="description">
-      <value>Case Audit Summary</value>
-    </attribute>
-    <attribute name="width">
-      <value>100%</value>
-    </attribute>
-    <attribute name="height">
-      <value>280</value>
-    </attribute>
-    <attribute name="scrolling">
-      <value>RS2003</value>
-    </attribute>
-    <attribute name="reportFrameborder">
-      <value>0</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="reportCategory">
-      <value>RC2001</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="biReportConfigurationID">
-      <value>2006</value>
-    </attribute>
-    <attribute name="reportName">
-      <value>InvestigationsSummary</value>
-    </attribute>
-    <attribute name="reportFileName">
-      <value>components/core/birt/InvestigationSummary/InvestigationsSummary.rptdesign</value>
-    </attribute>
-    <attribute name="reportServlet">
-      <value />
-    </attribute>
-    <attribute name="description">
-      <value>Investigation Summary BIRT report</value>
-    </attribute>
-    <attribute name="width">
-      <value>100%</value>
-    </attribute>
-    <attribute name="height">
-      <value>160</value>
     </attribute>
     <attribute name="scrolling">
       <value>RS2002</value>
@@ -235,6 +45,120 @@
     </attribute>
     <attribute name="reportCategory">
       <value>RC2001</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="biReportConfigurationID">
+      <value>19004</value>
+    </attribute>
+    <attribute name="reportName">
+      <value>ApplicationAwaitingDeterminationReport</value>
+    </attribute>
+    <attribute name="reportFileName">
+      <value>components/Intake/birt/ApplicationAwaitingDeterminationReport.rptdesign</value>
+    </attribute>
+    <attribute name="reportServlet">
+      <value />
+    </attribute>
+    <attribute name="description">
+      <value>Application Awaiting Determination Report.</value>
+    </attribute>
+    <attribute name="width">
+      <value>100%</value>
+    </attribute>
+    <attribute name="height">
+      <value>220</value>
+    </attribute>
+    <attribute name="scrolling">
+      <value>RS2002</value>
+    </attribute>
+    <attribute name="reportFrameborder">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="reportCategory">
+      <value>RC8250</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="biReportConfigurationID">
+      <value>19003</value>
+    </attribute>
+    <attribute name="reportName">
+      <value>ApplicationAwaitingDispositionReport</value>
+    </attribute>
+    <attribute name="reportFileName">
+      <value>components/Intake/birt/ApplicationAwaitingDispositionReport.rptdesign</value>
+    </attribute>
+    <attribute name="reportServlet">
+      <value />
+    </attribute>
+    <attribute name="description">
+      <value>Application Awaiting Disposition Report.</value>
+    </attribute>
+    <attribute name="width">
+      <value>100%</value>
+    </attribute>
+    <attribute name="height">
+      <value>210</value>
+    </attribute>
+    <attribute name="scrolling">
+      <value>RS2002</value>
+    </attribute>
+    <attribute name="reportFrameborder">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="reportCategory">
+      <value>RC8250</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="biReportConfigurationID">
+      <value>19001</value>
+    </attribute>
+    <attribute name="reportName">
+      <value>AssignedApplicationReport</value>
+    </attribute>
+    <attribute name="reportFileName">
+      <value>components/Intake/birt/AssignedApplicationReport.rptdesign</value>
+    </attribute>
+    <attribute name="reportServlet">
+      <value />
+    </attribute>
+    <attribute name="description">
+      <value>Assigned Application Report.</value>
+    </attribute>
+    <attribute name="width">
+      <value>100%</value>
+    </attribute>
+    <attribute name="height">
+      <value>210</value>
+    </attribute>
+    <attribute name="scrolling">
+      <value>RS2002</value>
+    </attribute>
+    <attribute name="reportFrameborder">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="reportCategory">
+      <value>RC8250</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -318,6 +242,82 @@
   </row>
   <row>
     <attribute name="biReportConfigurationID">
+      <value>2002</value>
+    </attribute>
+    <attribute name="reportName">
+      <value>AuditPlanSummaryBarChart</value>
+    </attribute>
+    <attribute name="reportFileName">
+      <value>components/core/birt/CaseAudit/AuditPlanSummaryBarChart.rptdesign</value>
+    </attribute>
+    <attribute name="reportServlet">
+      <value />
+    </attribute>
+    <attribute name="description">
+      <value>Audit Plan Summary</value>
+    </attribute>
+    <attribute name="width">
+      <value>100%</value>
+    </attribute>
+    <attribute name="height">
+      <value>280</value>
+    </attribute>
+    <attribute name="scrolling">
+      <value>RS2003</value>
+    </attribute>
+    <attribute name="reportFrameborder">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="reportCategory">
+      <value>RC2001</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="biReportConfigurationID">
+      <value>2004</value>
+    </attribute>
+    <attribute name="reportName">
+      <value>AuditPlanSummaryPieChart</value>
+    </attribute>
+    <attribute name="reportFileName">
+      <value>components/core/birt/CaseAudit/AuditPlanSummaryPieChart.rptdesign</value>
+    </attribute>
+    <attribute name="reportServlet">
+      <value />
+    </attribute>
+    <attribute name="description">
+      <value>Audit Plan Summary</value>
+    </attribute>
+    <attribute name="width">
+      <value>100%</value>
+    </attribute>
+    <attribute name="height">
+      <value>280</value>
+    </attribute>
+    <attribute name="scrolling">
+      <value>RS2003</value>
+    </attribute>
+    <attribute name="reportFrameborder">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="reportCategory">
+      <value>RC2001</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="biReportConfigurationID">
       <value>2009</value>
     </attribute>
     <attribute name="reportName">
@@ -356,28 +356,28 @@
   </row>
   <row>
     <attribute name="biReportConfigurationID">
-      <value>2011</value>
+      <value>2003</value>
     </attribute>
     <attribute name="reportName">
-      <value>OverpaymentCaseFinancialReport</value>
+      <value>CaseAuditSummaryBarChart</value>
     </attribute>
     <attribute name="reportFileName">
-      <value>components/core/birt/CaseFinancial/OverpaymentCaseFinancialReport.rptdesign</value>
+      <value>components/core/birt/CaseAudit/CaseAuditSummaryBarChart.rptdesign</value>
     </attribute>
     <attribute name="reportServlet">
       <value />
     </attribute>
     <attribute name="description">
-      <value>Overpayment Case Financial BIRT report</value>
+      <value>Case Audit Summary</value>
     </attribute>
     <attribute name="width">
       <value>100%</value>
     </attribute>
     <attribute name="height">
-      <value>100%</value>
+      <value>280</value>
     </attribute>
     <attribute name="scrolling">
-      <value>RS2002</value>
+      <value>RS2003</value>
     </attribute>
     <attribute name="reportFrameborder">
       <value>0</value>
@@ -394,66 +394,28 @@
   </row>
   <row>
     <attribute name="biReportConfigurationID">
-      <value>2012</value>
+      <value>2005</value>
     </attribute>
     <attribute name="reportName">
-      <value>EmployerWorkforceReport</value>
+      <value>CaseAuditSummaryPieChart</value>
     </attribute>
     <attribute name="reportFileName">
-      <value>components/core/birt/Participant/EmployerWorkforceReport.rptdesign</value>
+      <value>components/core/birt/CaseAudit/CaseAuditSummaryPieChart.rptdesign</value>
     </attribute>
     <attribute name="reportServlet">
       <value />
     </attribute>
     <attribute name="description">
-      <value>Employer workforce BIRT report</value>
+      <value>Case Audit Summary</value>
     </attribute>
     <attribute name="width">
       <value>100%</value>
     </attribute>
     <attribute name="height">
-      <value>100%</value>
+      <value>280</value>
     </attribute>
     <attribute name="scrolling">
-      <value>RS2002</value>
-    </attribute>
-    <attribute name="reportFrameborder">
-      <value>0</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="reportCategory">
-      <value>RC2003</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="biReportConfigurationID">
-      <value>2015</value>
-    </attribute>
-    <attribute name="reportName">
-      <value>SingleComponentGraphicalBenefitStatement</value>
-    </attribute>
-    <attribute name="reportFileName">
-      <value>components/core/birt/CaseFinancial/SingleComponentGraphicalBenefitStatement.rptdesign</value>
-    </attribute>
-    <attribute name="reportServlet">
-      <value />
-    </attribute>
-    <attribute name="description">
-      <value>Single Component Reassessment Results BIRT report</value>
-    </attribute>
-    <attribute name="width">
-      <value>100%</value>
-    </attribute>
-    <attribute name="height">
-      <value>100%</value>
-    </attribute>
-    <attribute name="scrolling">
-      <value>RS2002</value>
+      <value>RS2003</value>
     </attribute>
     <attribute name="reportFrameborder">
       <value>0</value>
@@ -463,158 +425,6 @@
     </attribute>
     <attribute name="reportCategory">
       <value>RC2001</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="biReportConfigurationID">
-      <value>2016</value>
-    </attribute>
-    <attribute name="reportName">
-      <value>AllComponentsGraphicalBenefitStatement</value>
-    </attribute>
-    <attribute name="reportFileName">
-      <value>components/core/birt/CaseFinancial/AllComponentsGraphicalBenefitStatement.rptdesign</value>
-    </attribute>
-    <attribute name="reportServlet">
-      <value />
-    </attribute>
-    <attribute name="description">
-      <value>Full Reassessment Results BIRT report</value>
-    </attribute>
-    <attribute name="width">
-      <value>100%</value>
-    </attribute>
-    <attribute name="height">
-      <value>100%</value>
-    </attribute>
-    <attribute name="scrolling">
-      <value>RS2002</value>
-    </attribute>
-    <attribute name="reportFrameborder">
-      <value>0</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="reportCategory">
-      <value>RC2001</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="biReportConfigurationID">
-      <value>2017</value>
-    </attribute>
-    <attribute name="reportName">
-      <value>PaymentCorrectionOverpaymentFinancialReport</value>
-    </attribute>
-    <attribute name="reportFileName">
-      <value>components/core/birt/CaseFinancial/PaymentCorrectionOverpaymentFinancialReport.rptdesign</value>
-    </attribute>
-    <attribute name="reportServlet">
-      <value />
-    </attribute>
-    <attribute name="description">
-      <value>Payment Correction Overpayment BIRT report</value>
-    </attribute>
-    <attribute name="width">
-      <value>100%</value>
-    </attribute>
-    <attribute name="height">
-      <value>100%</value>
-    </attribute>
-    <attribute name="scrolling">
-      <value>RS2002</value>
-    </attribute>
-    <attribute name="reportFrameborder">
-      <value>0</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="reportCategory">
-      <value>RC2001</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="biReportConfigurationID">
-      <value>2018</value>
-    </attribute>
-    <attribute name="reportName">
-      <value>MyTasksBarChart</value>
-    </attribute>
-    <attribute name="reportFileName">
-      <value>components\core\birt\Inbox\MyTasksBarChart.rptdesign</value>
-    </attribute>
-    <attribute name="reportServlet">
-      <value />
-    </attribute>
-    <attribute name="description">
-      <value>My Tasks Chart</value>
-    </attribute>
-    <attribute name="width">
-      <value>100%</value>
-    </attribute>
-    <attribute name="height">
-      <value>300</value>
-    </attribute>
-    <attribute name="scrolling">
-      <value>RS2002</value>
-    </attribute>
-    <attribute name="reportFrameborder">
-      <value>0</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="reportCategory">
-      <value>RC2002</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="biReportConfigurationID">
-      <value>2019</value>
-    </attribute>
-    <attribute name="reportName">
-      <value>ProspectEmployerWorkforceReport</value>
-    </attribute>
-    <attribute name="reportFileName">
-      <value>components/core/birt/Participant/ProspectEmployerWorkforceReport.rptdesign</value>
-    </attribute>
-    <attribute name="reportServlet">
-      <value />
-    </attribute>
-    <attribute name="description">
-      <value>Prospect Employer workforce BIRT report</value>
-    </attribute>
-    <attribute name="width">
-      <value>100%</value>
-    </attribute>
-    <attribute name="height">
-      <value>100%</value>
-    </attribute>
-    <attribute name="scrolling">
-      <value>RS2002</value>
-    </attribute>
-    <attribute name="reportFrameborder">
-      <value>0</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="reportCategory">
-      <value>RC2003</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -698,19 +508,19 @@
   </row>
   <row>
     <attribute name="biReportConfigurationID">
-      <value>2022</value>
+      <value>2012</value>
     </attribute>
     <attribute name="reportName">
-      <value>WorkFlowProcessInstanceErrorsBar</value>
+      <value>EmployerWorkforceReport</value>
     </attribute>
     <attribute name="reportFileName">
-      <value>components/hcr/operator/WorkFlowProcessInstanceErrorsBar.rptdesign</value>
+      <value>components/core/birt/Participant/EmployerWorkforceReport.rptdesign</value>
     </attribute>
     <attribute name="reportServlet">
       <value />
     </attribute>
     <attribute name="description">
-      <value>Work Flow Process Instance Errors Bar</value>
+      <value>Employer workforce BIRT report</value>
     </attribute>
     <attribute name="width">
       <value>100%</value>
@@ -728,45 +538,7 @@
       <value>RST1</value>
     </attribute>
     <attribute name="reportCategory">
-      <value>RC2001</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="biReportConfigurationID">
-      <value>2023</value>
-    </attribute>
-    <attribute name="reportName">
-      <value>HCRIncomingApplications</value>
-    </attribute>
-    <attribute name="reportFileName">
-      <value>components/hcr/executive/HCRIncomingApplications.rptdesign</value>
-    </attribute>
-    <attribute name="reportServlet">
-      <value />
-    </attribute>
-    <attribute name="description">
-      <value>HCR Incoming Applications</value>
-    </attribute>
-    <attribute name="width">
-      <value>100%</value>
-    </attribute>
-    <attribute name="height">
-      <value>300</value>
-    </attribute>
-    <attribute name="scrolling">
-      <value>RS2002</value>
-    </attribute>
-    <attribute name="reportFrameborder">
-      <value>0</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="reportCategory">
-      <value>RC2001</value>
+      <value>RC2003</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -850,25 +622,25 @@
   </row>
   <row>
     <attribute name="biReportConfigurationID">
-      <value>19001</value>
+      <value>2023</value>
     </attribute>
     <attribute name="reportName">
-      <value>AssignedApplicationReport</value>
+      <value>HCRIncomingApplications</value>
     </attribute>
     <attribute name="reportFileName">
-      <value>components/Intake/birt/AssignedApplicationReport.rptdesign</value>
+      <value>components/hcr/executive/HCRIncomingApplications.rptdesign</value>
     </attribute>
     <attribute name="reportServlet">
       <value />
     </attribute>
     <attribute name="description">
-      <value>Assigned Application Report.</value>
+      <value>HCR Incoming Applications</value>
     </attribute>
     <attribute name="width">
       <value>100%</value>
     </attribute>
     <attribute name="height">
-      <value>210</value>
+      <value>300</value>
     </attribute>
     <attribute name="scrolling">
       <value>RS2002</value>
@@ -880,7 +652,83 @@
       <value>RST1</value>
     </attribute>
     <attribute name="reportCategory">
-      <value>RC8250</value>
+      <value>RC2001</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="biReportConfigurationID">
+      <value>2006</value>
+    </attribute>
+    <attribute name="reportName">
+      <value>InvestigationsSummary</value>
+    </attribute>
+    <attribute name="reportFileName">
+      <value>components/core/birt/InvestigationSummary/InvestigationsSummary.rptdesign</value>
+    </attribute>
+    <attribute name="reportServlet">
+      <value />
+    </attribute>
+    <attribute name="description">
+      <value>Investigation Summary BIRT report</value>
+    </attribute>
+    <attribute name="width">
+      <value>100%</value>
+    </attribute>
+    <attribute name="height">
+      <value>160</value>
+    </attribute>
+    <attribute name="scrolling">
+      <value>RS2002</value>
+    </attribute>
+    <attribute name="reportFrameborder">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="reportCategory">
+      <value>RC2001</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="biReportConfigurationID">
+      <value>2018</value>
+    </attribute>
+    <attribute name="reportName">
+      <value>MyTasksBarChart</value>
+    </attribute>
+    <attribute name="reportFileName">
+      <value>components\core\birt\Inbox\MyTasksBarChart.rptdesign</value>
+    </attribute>
+    <attribute name="reportServlet">
+      <value />
+    </attribute>
+    <attribute name="description">
+      <value>My Tasks Chart</value>
+    </attribute>
+    <attribute name="width">
+      <value>100%</value>
+    </attribute>
+    <attribute name="height">
+      <value>300</value>
+    </attribute>
+    <attribute name="scrolling">
+      <value>RS2002</value>
+    </attribute>
+    <attribute name="reportFrameborder">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="reportCategory">
+      <value>RC2002</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -926,25 +774,25 @@
   </row>
   <row>
     <attribute name="biReportConfigurationID">
-      <value>19003</value>
+      <value>2011</value>
     </attribute>
     <attribute name="reportName">
-      <value>ApplicationAwaitingDispositionReport</value>
+      <value>OverpaymentCaseFinancialReport</value>
     </attribute>
     <attribute name="reportFileName">
-      <value>components/Intake/birt/ApplicationAwaitingDispositionReport.rptdesign</value>
+      <value>components/core/birt/CaseFinancial/OverpaymentCaseFinancialReport.rptdesign</value>
     </attribute>
     <attribute name="reportServlet">
       <value />
     </attribute>
     <attribute name="description">
-      <value>Application Awaiting Disposition Report.</value>
+      <value>Overpayment Case Financial BIRT report</value>
     </attribute>
     <attribute name="width">
       <value>100%</value>
     </attribute>
     <attribute name="height">
-      <value>210</value>
+      <value>100%</value>
     </attribute>
     <attribute name="scrolling">
       <value>RS2002</value>
@@ -956,45 +804,7 @@
       <value>RST1</value>
     </attribute>
     <attribute name="reportCategory">
-      <value>RC8250</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="biReportConfigurationID">
-      <value>19004</value>
-    </attribute>
-    <attribute name="reportName">
-      <value>ApplicationAwaitingDeterminationReport</value>
-    </attribute>
-    <attribute name="reportFileName">
-      <value>components/Intake/birt/ApplicationAwaitingDeterminationReport.rptdesign</value>
-    </attribute>
-    <attribute name="reportServlet">
-      <value />
-    </attribute>
-    <attribute name="description">
-      <value>Application Awaiting Determination Report.</value>
-    </attribute>
-    <attribute name="width">
-      <value>100%</value>
-    </attribute>
-    <attribute name="height">
-      <value>220</value>
-    </attribute>
-    <attribute name="scrolling">
-      <value>RS2002</value>
-    </attribute>
-    <attribute name="reportFrameborder">
-      <value>0</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="reportCategory">
-      <value>RC8250</value>
+      <value>RC2001</value>
     </attribute>
     <attribute name="versionNo">
       <value>1</value>
@@ -1021,6 +831,196 @@
     </attribute>
     <attribute name="height">
       <value>220</value>
+    </attribute>
+    <attribute name="scrolling">
+      <value>RS2002</value>
+    </attribute>
+    <attribute name="reportFrameborder">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="reportCategory">
+      <value>RC2001</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="biReportConfigurationID">
+      <value>2017</value>
+    </attribute>
+    <attribute name="reportName">
+      <value>PaymentCorrectionOverpaymentFinancialReport</value>
+    </attribute>
+    <attribute name="reportFileName">
+      <value>components/core/birt/CaseFinancial/PaymentCorrectionOverpaymentFinancialReport.rptdesign</value>
+    </attribute>
+    <attribute name="reportServlet">
+      <value />
+    </attribute>
+    <attribute name="description">
+      <value>Payment Correction Overpayment BIRT report</value>
+    </attribute>
+    <attribute name="width">
+      <value>100%</value>
+    </attribute>
+    <attribute name="height">
+      <value>100%</value>
+    </attribute>
+    <attribute name="scrolling">
+      <value>RS2002</value>
+    </attribute>
+    <attribute name="reportFrameborder">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="reportCategory">
+      <value>RC2001</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="biReportConfigurationID">
+      <value>2019</value>
+    </attribute>
+    <attribute name="reportName">
+      <value>ProspectEmployerWorkforceReport</value>
+    </attribute>
+    <attribute name="reportFileName">
+      <value>components/core/birt/Participant/ProspectEmployerWorkforceReport.rptdesign</value>
+    </attribute>
+    <attribute name="reportServlet">
+      <value />
+    </attribute>
+    <attribute name="description">
+      <value>Prospect Employer workforce BIRT report</value>
+    </attribute>
+    <attribute name="width">
+      <value>100%</value>
+    </attribute>
+    <attribute name="height">
+      <value>100%</value>
+    </attribute>
+    <attribute name="scrolling">
+      <value>RS2002</value>
+    </attribute>
+    <attribute name="reportFrameborder">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="reportCategory">
+      <value>RC2003</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="biReportConfigurationID">
+      <value>2001</value>
+    </attribute>
+    <attribute name="reportName">
+      <value>SampleWithScriptedDataSet</value>
+    </attribute>
+    <attribute name="reportFileName">
+      <value>sample/styling/SampleWithScriptedDataSet.rptdesign</value>
+    </attribute>
+    <attribute name="reportServlet">
+      <value />
+    </attribute>
+    <attribute name="description">
+      <value>Sample demo report</value>
+    </attribute>
+    <attribute name="width">
+      <value>100%</value>
+    </attribute>
+    <attribute name="height">
+      <value>400</value>
+    </attribute>
+    <attribute name="scrolling">
+      <value>RS2002</value>
+    </attribute>
+    <attribute name="reportFrameborder">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="reportCategory">
+      <value>RC2004</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="biReportConfigurationID">
+      <value>2015</value>
+    </attribute>
+    <attribute name="reportName">
+      <value>SingleComponentGraphicalBenefitStatement</value>
+    </attribute>
+    <attribute name="reportFileName">
+      <value>components/core/birt/CaseFinancial/SingleComponentGraphicalBenefitStatement.rptdesign</value>
+    </attribute>
+    <attribute name="reportServlet">
+      <value />
+    </attribute>
+    <attribute name="description">
+      <value>Single Component Reassessment Results BIRT report</value>
+    </attribute>
+    <attribute name="width">
+      <value>100%</value>
+    </attribute>
+    <attribute name="height">
+      <value>100%</value>
+    </attribute>
+    <attribute name="scrolling">
+      <value>RS2002</value>
+    </attribute>
+    <attribute name="reportFrameborder">
+      <value>0</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="reportCategory">
+      <value>RC2001</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="biReportConfigurationID">
+      <value>2022</value>
+    </attribute>
+    <attribute name="reportName">
+      <value>WorkFlowProcessInstanceErrorsBar</value>
+    </attribute>
+    <attribute name="reportFileName">
+      <value>components/hcr/operator/WorkFlowProcessInstanceErrorsBar.rptdesign</value>
+    </attribute>
+    <attribute name="reportServlet">
+      <value />
+    </attribute>
+    <attribute name="description">
+      <value>Work Flow Process Instance Errors Bar</value>
+    </attribute>
+    <attribute name="width">
+      <value>100%</value>
+    </attribute>
+    <attribute name="height">
+      <value>100%</value>
     </attribute>
     <attribute name="scrolling">
       <value>RS2002</value>

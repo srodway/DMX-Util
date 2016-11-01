@@ -1,125 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
-    Licensed Materials - Property of IBM
-    
-    Copyright IBM Corporation 2012. All Rights Reserved.
-    
-    US Government Users Restricted Rights - Use, duplication or disclosure 
-    restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd" name="ApplicationCaseCheckEligibilityRulesInterface">
-    
-    <!-- This class is used to retrieve the list of results for the check eligbility process.
-    The class must not be extended or  changed. -->
-    <Class name="ApplicationCaseCheckEligibility" abstract="false">
-        
-        <!--Initializes the caseParticipantRoleID and concernRoleID-->
-        <Initialization>
-            <Attribute name="caseID">
-                <type>
-                    <javaclass name="Long"/>
-                </type>
-            </Attribute>
-            <Attribute name="programDetailsList">
-                <type>
-                    <javaclass name="List">
-                        <javaclass name="curam.commonintake.facade.struct.ApplicationCaseEligibiltyRulesProgramIDAndReference"/>
-                    </javaclass>
-                </type>
-            </Attribute>
-        </Initialization>
-        <Attribute name="programResults">
-            <type>
-                <javaclass name="List">
-                    <ruleclass name="AbstractApplicationCaseProgram"/>
-                </javaclass>
-            </type>
-            <derivation>
-                <call class="curam.commonintake.impl.Statics" method="determineEligibilityResult">
-                    <type>
-                        <javaclass name="List">
-                            <ruleclass name="AbstractApplicationCaseProgram"/>
-                        </javaclass>
-                    </type>
-                    <arguments>
-                        <this/>
-                    </arguments>
-                </call>
-            </derivation>
-        </Attribute>
-        
-        <!-- The class description.  -->
-        <Attribute name="description">
-            <type>
-                <javaclass name="curam.creole.value.Message"/>
-            </type>
-            <derivation>
-                <ResourceMessage key="ApplicationCase.description" resourceBundle="curam.commonintake.rules.ApplicationCaseCheckEligibilityRulesInterface">
-                    <reference attribute="caseID"/>
-                </ResourceMessage>
-            </derivation>
-        </Attribute>
-    </Class>
-    
+  Licensed Materials - Property of IBM
 
-    <!-- This class must be extended by all rule classes invoked by the Check Eligibility Process on the Application Case
-    The client must implement a rules class for each program and the class name must be the same as the program reference -->
-    <Class name="AbstractApplicationCaseProgram" abstract="true">     
-        <Initialization>
-          <Attribute name="caseID">
-              <type>
-                <javaclass name="Long"/>
-            </type>
-        </Attribute>
-        <Attribute name="programID">
-            <type>
-                <javaclass name="Long"/>
-            </type>
-        </Attribute>
-        </Initialization>
-        
-        <Attribute name="displayResult">     
-            <type>
-                <javaclass name="String"/>
-            </type>
-            <derivation>
-                <call class="curam.commonintake.impl.Statics" method="getDisplayXml">
-                    <type>
-                        <javaclass name="String"/>
-                    </type>
-                    <arguments>
-                        <this/>
-                    </arguments>
-                </call>
-            </derivation>
-        </Attribute>
-        
-        
-        <Attribute name="entitlement">
-            <type>
-                <javaclass name="String"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>
-        <Attribute name="decision">
-            <type>
-                <codetableentry table="AppCaseEligibilityResult"/>
-            </type>
-            <derivation>
-                <abstract/>
-            </derivation>
-        </Attribute>
-        
-        <!-- The class description.  -->
-        <Attribute name="description">
-            <type>
-                <javaclass name="curam.creole.value.Message"/>
-            </type>
-            <derivation>
-                <ResourceMessage key="Program.description" resourceBundle="curam.commonintake.rules.ApplicationCaseCheckEligibilityRulesInterface">
-                    <reference attribute="programID"/>
-                </ResourceMessage>
-            </derivation>
-        </Attribute> 
-    </Class>    
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><RuleSet name="ASCLivingArrangementRuleSet">
+
+
+  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="ASCLivingArrangement">
+
+
+    <Attribute name="startDate">
+      <Annotations>
+        <Label label-id="startDate" name="The start date of the living arrangement."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="livingArrangeStatus">
+      <Annotations>
+        <Label label-id="livingArrangeStatus" name="The status of the living arrangement, e.g. Permanent."/>
+      </Annotations>
+      <type>
+        <codetableentry table="LivingArrangementStatus"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="endDate">
+      <Annotations>
+        <Label label-id="endDate" name="The end date of the living arrangement."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="livingArrangeType">
+      <Annotations>
+        <Label label-id="livingArrangeType" name="The living arrangement type of the client, e.g. Adult Case Home, Foster Care etc."/>
+      </Annotations>
+      <type>
+        <codetableentry table="LivingArrangementType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="caseParticipantRoleID">
+      <Annotations>
+        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the client."/>
+      </Annotations>
+      <type>
+        <javaclass name="java.lang.Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="related_caseParticipantRoleID">
+      <Annotations/>
+      <type>
+        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+      </type>
+      <derivation>
+        <reference attribute="caseParticipantRoleRecord">
+          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
+            <reference attribute="caseParticipantRoleID"/>
+          </create>
+        </reference>
+      </derivation>
+    </Attribute>
+
+
+  </Class>
+
+
 </RuleSet>

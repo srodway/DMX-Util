@@ -1,79 +1,67 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet name="SampleSummaryCategoryRuleSet">
+<?xml version="1.0" encoding="UTF-8"?><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PDCBirthAndDeathSummaryRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+  <Class extends="DefaultEvidenceSummary" extendsRuleSet="EvidenceSummaryRuleSet" name="PDCBirthAndDeathSummary">
+    <Attribute name="evidence">
+      <type>
+        <ruleclass name="PDCBirthAndDeath" ruleset="PDCBirthAndDeathRuleSet"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
 
 
-  <Class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" extends="DefaultCase" extendsRuleSet="DefaultProductDecisionDetailsRuleSet" name="SampleSummaryCategory" xsi:noNamespaceSchemaLocation="file:/C:/Documents%20and%20Settings/Rajesh.Shanker/Desktop/RuleSet.xsd">
-
-
-    <Attribute name="description">
+    <Attribute name="summary">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <ResourceMessage key="abstractBasicCase" resourceBundle="curam.core.rules.ProductDecisionDetailsRuleSet">
-          <String value="This is a Sample Summary Display Rules"/>
-        </ResourceMessage>
+        <choose>
+          <type>
+            <javaclass name="curam.creole.value.Message"/>
+          </type>
+          <when>
+            <condition>
+              <reference attribute="isDead"/>
+            </condition>
+            <value>
+              <ResourceMessage key="summaryMessage2" resourceBundle="curam.pdc.rules.DynEvd_PDCBirthAndDeath_Summary">
+                <reference attribute="dateOfBirth">
+                  <reference attribute="evidence"/>
+                </reference>
+                <reference attribute="dateOfDeath">
+                  <reference attribute="evidence"/>
+                </reference>
+              </ResourceMessage>
+            </value>
+          </when>
+          <otherwise>
+            <value>
+              <ResourceMessage key="summaryMessage1" resourceBundle="curam.pdc.rules.DynEvd_PDCBirthAndDeath_Summary">
+                <reference attribute="dateOfBirth">
+                  <reference attribute="evidence"/>
+                </reference>
+              </ResourceMessage>
+            </value>
+          </otherwise>
+        </choose>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="displayName">
+    <Attribute name="isDead">
       <type>
-        <javaclass name="curam.creole.value.Message"/>
+        <javaclass name="Boolean"/>
       </type>
       <derivation>
-        <ResourceMessage key="abstractBasicCase" resourceBundle="curam.core.rules.ProductDecisionDetailsRuleSet">
-          <String value="Sample Summary Display Rules"/>
-        </ResourceMessage>
+        <not>
+          <equals>
+            <reference attribute="dateOfDeath">
+              <reference attribute="evidence"/>
+            </reference>
+            <null/>
+          </equals>
+        </not>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="stringMessage">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="String Message"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="timelineMessage">
-      <Annotations>
-        <Display/>
-      </Annotations>
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="String"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <timelineoperation>
-          <String value="Timlined String Message"/>
-        </timelineoperation>
-      </derivation>
-    </Attribute>
-    <Attribute name="emptyMessage">
-      <Annotations>
-        <Display/>
-      </Annotations>
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="abstractBasicCase" resourceBundle="curam.core.rules.ProductDecisionDetailsRuleSet">
-          <String value="empty"/>
-        </ResourceMessage>
-      </derivation>
-    </Attribute>
-
-
   </Class>
 </RuleSet>

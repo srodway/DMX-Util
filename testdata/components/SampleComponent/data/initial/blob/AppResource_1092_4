@@ -1,67 +1,32 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2013. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Folder.Title.Summary = Home
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+	Copyright 2010 Curam Software Ltd.
+	All rights reserved.
+	
+	This software is the confidential and proprietary information of Curam
+	Software, Ltd. ("Confidential Information"). You shall not disclose
+	such Confidential Information and shall use it only in accordance with the
+	terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="SupervisorOrgUnitReservedTasksByWeek">
+	
+	<tc:page-param name="orgUnitID"/>
+	<tc:page-param name="orgStructureID"/>
+	<tc:page-param name="deadlineDate"/>
+	<tc:page-param name="taskOptionCode"/>
+
+	<tc:menu id="SupervisorOrgUnitMenu"/>
+
+	<!-- Details panel -->
+        <tc:context height="0" page-id="Supervisor_orgUnitReservedTasksByWeekTabDetails"/>
+
+	<!-- No Navigation Panel required -->
+	<tc:navigation page-id="Supervisor_orgUnitReservedTasksDueOnDate"/>
 
 
-Leaf.Title.Home=Home
-Leaf.Description.Home=Home
-
-Leaf.Title.Attachments=Attachments
-Leaf.Description.Attachments=Attachments
-Leaf.Title.SmartPanel=Smart Panel
-
-Folder.Title.Clients=Clients
-Page.Title.CurrentClients=Current Clients
-Page.Title.PreviouseClients=Previous Clients
-
-Leaf.Title.Programs=Programs
-Leaf.Description.Programs=Programs
-
-Folder.Title.Authorization=Authorisation
-Leaf.Title.Authorization=Authorisation
-Leaf.Description.Authorization=Authorisation
-Leaf.Title.Denials=Denials
-Leaf.Description.Denials=Denials
-Leaf.Title.Withdrawals=Withdrawals
-Leaf.Description.Withdrawals=Withdrawals
-Leaf.Title.Reopenings=Reopen Details
-Leaf.Description.Reopenings=Reopen Details
-
-Leaf.Title.Timers=Timers
-Leaf.Description.Timers=Timers
-
-Folder.Title.Evidence=Evidence
-Page.Title.Dashboard=Dashboard
-Page.Title.EvidenceFlow=EvidenceFlow
-Page.Title.Evidence=Evidence
-Page.Title.Verifications=Verifications
-Page.Title.EvidenceIssues=Issues
-Page.Title.IncomingEvidence=Incoming Evidence
-
-Leaf.Title.EligibilityChecks=Eligibility Checks
-Leaf.Description.EligibilityChecks=Eligibility Checks
-
-Leaf.Title.RelatedCases=Related Cases
-Leaf.Description.RelatedCases=Related Cases
-
-Leaf.Title.PCR=PCR
-Leaf.Description.PCR=PCR
-
-Folder.Title.Administration=Administration
-Page.Title.UserRoles=Users
-Page.Title.Notes=Notes
-Page.Title.Attachments=Attachments
-Page.Title.Communications=Communications
-Leaf.Title.Meetings=Meetings
-Leaf.Title.MeetingMinutes=Meeting Minutes
-Page.Title.TransactionHistory=Transaction History
-
-
-
-
+</tc:tab-config>

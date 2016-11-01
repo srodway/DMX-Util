@@ -6,29 +6,17 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009, 2010 Curam Software Ltd.
+  Copyright 2009 Curam Software Ltd.
   All rights reserved.
   
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="BenefitCaseAdmin">
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="IntegratedCasesAdministrationMenu">
   
-  <tc:page-param name="productID"/>
-  
-  <tc:menu id="BenefitCaseAdminMenu"/>
 
-  <!-- Details panel -->
-  <tc:context height="110" page-id="Product_benefitHomeTabDetails" tab-name="Details.Name.BenefitCaseAdmin"/>
+    <mc:menu-item id="IntegratedCase" open-as="modal" page-id="Resource_createIntegratedCaseType1" title="MenuItem.Title.IntegratedCase" tooltip="MenuItem.Tooltip.IntegratedCase"/>
+   
 
-  <!-- Navigation Panel -->
-  <tc:navigation id="BenefitCaseAdmin"/>
-  
-    <tc:tab-refresh>
-      <tc:onsubmit context="true" page-id="Product_benefitHome1"/>
-      
-      <tc:onsubmit context="true" page-id="Product_modifyBenefitFromView1"/>
-    </tc:tab-refresh>  
-
-</tc:tab-config>
+</mc:menu-bar>

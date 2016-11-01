@@ -1,15 +1,21 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Page.Title=Select Screening
-SelectApplication.Description=Please select the type of screening that you would like to complete from the list below.<br/>When you have finished, we will tell you the programs that you may be eligible to receive and how you can apply for these programs. A final eligibility decision can not be made until you apply.
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-Applications.Title=Select the Screening you wish to complete
-Applications.Description=
-Applications.Help=You should click on the radio button or the name of the screening that you would like to complete and click on the Next button. For some types of screening, on the next screen, you will be asked to select the programs that you want to be screened for. In other cases you will be taken directly to the screening questions and will not be asked to select programs.<br/>Remember, screening gives you a better idea of the programs for which you may be eligible. You will need to apply in order to find out if you are actually eligible.
-Applications.More.Info=More Info
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><sc:section xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-config" default-page-id="CaseworkerCustomHome" hide-tab-container="true" id="DefaultAppHomeSection" title="DefaultAppHomeSection.title">
+  
+  <sc:tab id="DefaultAppHome"/>
+    
+
+</sc:section>

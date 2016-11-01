@@ -1,27 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+IWSUPAPP.logo=CDEJ/themes/v6/images/application-logo.png
+IWSUPAPP.title=IBM C\u00FAram Social Program Management
+IWSUPAPP.subtitle=Intake Worker Supervisor
+IWSUPAPP.UserMessage=Welcome %user-full-name
+preferences.title=Preferences
+help.title=Help
+logout.title=Log out
 
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="page-schema.xsd">
-  <identifier name="NoPrograms"/>
-    <header>
-        <title id="Page.Title" />
-        <icon id="title_getting_started" />
-    </header>
-  <content>
-    <container style="rich-text">
-      <description id="NoPrograms.Description"/>
-    </container>
-  </content>
-  <navigation>
-    <nav-button name="review" page="IntakeApplications"/>
-    <nav-button name="home" page="ResolveCitizenHome" page-type="resolve"/>
-  </navigation>
-</page>
+Application.Search.InitialText=Enter Reference Number

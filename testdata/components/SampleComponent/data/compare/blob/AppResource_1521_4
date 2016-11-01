@@ -1,26 +1,36 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
 
-Help.PageDescription=This page allows you to view the basic case display rules category.
-Page.Title=Basic Case
-
-# START NON-TRANSLATABLE
-CategoryRef=CREOLE_BASIC_CASE
-
-SubscreenName=displayObjectiveTimelineSubscreens
-# END NON-TRANSLATABLE
-
-Field.Label.Value=Value
-Field.Label.Value.Help=The value of the objective tag.
-
-Field.Label.Frequency=Frequency
-Field.Label.Frequency.Help=The frequency of the objective tag.
-
-Help.Xref.1.Topicname=CREOLECaseDecision
-
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
+    <identifier name="SaveScreeningCreateAccountOrLogin" />
+    <header>
+        <title id="Page.Title" />
+        <description id="Page.Description" />
+        <icon id="title_save" /> 
+    </header>
+    <content>
+        <container>
+            <title id="RadioSelection.Title" />
+            <radiobutton-container id="SELECTION" legend="RadioSelection.Legend">
+                <title id="RadioSelection.Title" />
+                <radiobutton id="CREATE_ACC">
+                    <title id="SaveApplicationCreateAccount.Title" />
+                </radiobutton>
+                <radiobutton id="LOGIN">
+                    <title id="SaveApplicationLogin.Title" />
+                </radiobutton>
+            </radiobutton-container>
+        </container>
+    </content>
+    <navigation>
+		<nav-button name="next" type="action" />
+        <nav-button name="back" page="AskSaveScreening"/>
+    </navigation>
+</page>

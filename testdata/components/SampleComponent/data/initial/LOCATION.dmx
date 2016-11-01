@@ -92,6 +92,74 @@
   </row>
   <row>
     <attribute name="locationID">
+      <value>3501</value>
+    </attribute>
+    <attribute name="name">
+      <value>Midway Head Office</value>
+    </attribute>
+    <attribute name="addressID">
+      <value>3</value>
+    </attribute>
+    <attribute name="description">
+      <value>Midway Head Office</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="locationStatus">
+      <value>LS1</value>
+    </attribute>
+    <attribute name="creationDate">
+      <value />
+    </attribute>
+    <attribute name="locationType">
+      <value>LT3</value>
+    </attribute>
+    <attribute name="parentLocationID">
+      <value>1</value>
+    </attribute>
+    <attribute name="organisationID">
+      <value>1</value>
+    </attribute>
+    <attribute name="addressComments">
+      <value />
+    </attribute>
+    <attribute name="createLocationSID">
+      <value />
+    </attribute>
+    <attribute name="maintainSID">
+      <value />
+    </attribute>
+    <attribute name="readSID">
+      <value />
+    </attribute>
+    <attribute name="locationStructureID">
+      <value>1</value>
+    </attribute>
+    <attribute name="publicOfficeIndicator">
+      <value>1</value>
+    </attribute>
+    <attribute name="phoneNumberID">
+      <value />
+    </attribute>
+    <attribute name="faxNumberID">
+      <value />
+    </attribute>
+    <attribute name="emailAddressID">
+      <value />
+    </attribute>
+    <attribute name="rootLocationIndicator">
+      <value>0</value>
+    </attribute>
+    <attribute name="upperName">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="locationID">
       <value>2</value>
     </attribute>
     <attribute name="name">
@@ -318,74 +386,6 @@
     </attribute>
     <attribute name="locationType">
       <value>LT3</value>
-    </attribute>
-    <attribute name="parentLocationID">
-      <value>1</value>
-    </attribute>
-    <attribute name="organisationID">
-      <value>1</value>
-    </attribute>
-    <attribute name="addressComments">
-      <value />
-    </attribute>
-    <attribute name="createLocationSID">
-      <value />
-    </attribute>
-    <attribute name="maintainSID">
-      <value />
-    </attribute>
-    <attribute name="readSID">
-      <value />
-    </attribute>
-    <attribute name="locationStructureID">
-      <value>1</value>
-    </attribute>
-    <attribute name="publicOfficeIndicator">
-      <value>0</value>
-    </attribute>
-    <attribute name="phoneNumberID">
-      <value />
-    </attribute>
-    <attribute name="faxNumberID">
-      <value />
-    </attribute>
-    <attribute name="emailAddressID">
-      <value />
-    </attribute>
-    <attribute name="rootLocationIndicator">
-      <value>0</value>
-    </attribute>
-    <attribute name="upperName">
-      <value />
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="locationID">
-      <value>2001</value>
-    </attribute>
-    <attribute name="name">
-      <value>Springfield</value>
-    </attribute>
-    <attribute name="addressID">
-      <value>739</value>
-    </attribute>
-    <attribute name="description">
-      <value>Springfield Head Office</value>
-    </attribute>
-    <attribute name="statusCode">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="locationStatus">
-      <value>LS1</value>
-    </attribute>
-    <attribute name="creationDate">
-      <value />
-    </attribute>
-    <attribute name="locationType">
-      <value>LT1</value>
     </attribute>
     <attribute name="parentLocationID">
       <value>1</value>
@@ -636,16 +636,16 @@
   </row>
   <row>
     <attribute name="locationID">
-      <value>3501</value>
+      <value>2001</value>
     </attribute>
     <attribute name="name">
-      <value>Midway Head Office</value>
+      <value>Springfield</value>
     </attribute>
     <attribute name="addressID">
-      <value>3</value>
+      <value>739</value>
     </attribute>
     <attribute name="description">
-      <value>Midway Head Office</value>
+      <value>Springfield Head Office</value>
     </attribute>
     <attribute name="statusCode">
       <value>RST1</value>
@@ -657,7 +657,7 @@
       <value />
     </attribute>
     <attribute name="locationType">
-      <value>LT3</value>
+      <value>LT1</value>
     </attribute>
     <attribute name="parentLocationID">
       <value>1</value>
@@ -681,7 +681,7 @@
       <value>1</value>
     </attribute>
     <attribute name="publicOfficeIndicator">
-      <value>1</value>
+      <value>0</value>
     </attribute>
     <attribute name="phoneNumberID">
       <value />

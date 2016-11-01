@@ -1,9 +1,20 @@
-# START NON-TRANSLATABLE
-triage.styles.css=triage-styles.css
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-player.page.margin=25px
-help.external.link.image.open=help_nor_external
-help.external.link.image.roll=help_roll_external
-help.external.link.image.click=help_click_external
-
-# END NON-TRANSLATABLE
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2012 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="RefundPersonPaymentsSearch">
+  <nc:nodes>
+    <nc:navigation-page id="RefundPersonPaymentsSearchHome" page-id="Financial_refundPaymentSearchPerson" title="Leaf.Title.Home" visible="true"/>
+  </nc:nodes>
+</nc:navigation>

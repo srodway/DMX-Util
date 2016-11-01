@@ -19,13 +19,13 @@
   <column name="versionNo" type="number" />
   <row>
     <attribute name="decisionMatrixVersionID">
-      <value>472</value>
+      <value>13006</value>
     </attribute>
     <attribute name="name">
-      <value>Asthma Female</value>
+      <value>CGSN Decision Matrix</value>
     </attribute>
     <attribute name="type">
-      <value>MED</value>
+      <value>NEED</value>
     </attribute>
     <attribute name="decisionMatrixVersionNumber">
       <value>1</value>
@@ -34,22 +34,22 @@
       <value>ST2</value>
     </attribute>
     <attribute name="fromDate">
-      <value>2008-02-21-12.03.12</value>
+      <value>2009-01-01-11.22.32</value>
     </attribute>
     <attribute name="toDate">
       <value />
     </attribute>
     <attribute name="dateCreated">
-      <value>2007-03-24-13.50.45</value>
+      <value>2009-01-01-11.16.40</value>
     </attribute>
     <attribute name="createdBy">
-      <value>unauthenticated</value>
+      <value>admin</value>
     </attribute>
     <attribute name="comments">
-      <value />
+      <value>The decision matrix for the Caregiver Strengths and Needs assessment</value>
     </attribute>
     <attribute name="decisionMatrixID">
-      <value>200</value>
+      <value>13005</value>
     </attribute>
     <attribute name="recordStatus">
       <value>RST1</value>
@@ -58,16 +58,69 @@
       <value>0</value>
     </attribute>
     <attribute name="multipleOutcomes">
-      <value>0</value>
+      <value>1</value>
     </attribute>
     <attribute name="scoringByOutcomes">
-      <value>0</value>
+      <value>1</value>
     </attribute>
     <attribute name="matrixData">
       <value>./clob/DecisionMatrixVersion_1_16</value>
     </attribute>
     <attribute name="versionNo">
-      <value>19</value>
+      <value>5</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="decisionMatrixVersionID">
+      <value>54391</value>
+    </attribute>
+    <attribute name="name">
+      <value>CSN Decision Matrix</value>
+    </attribute>
+    <attribute name="type">
+      <value>NEED</value>
+    </attribute>
+    <attribute name="decisionMatrixVersionNumber">
+      <value>1</value>
+    </attribute>
+    <attribute name="versionStatus">
+      <value>ST2</value>
+    </attribute>
+    <attribute name="fromDate">
+      <value>2001-01-01-00.01.01</value>
+    </attribute>
+    <attribute name="toDate">
+      <value />
+    </attribute>
+    <attribute name="dateCreated">
+      <value>2001-01-01-00.01.01</value>
+    </attribute>
+    <attribute name="createdBy">
+      <value>admin</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="decisionMatrixID">
+      <value>54392</value>
+    </attribute>
+    <attribute name="recordStatus">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="cumulativeScore">
+      <value>0</value>
+    </attribute>
+    <attribute name="multipleOutcomes">
+      <value>1</value>
+    </attribute>
+    <attribute name="scoringByOutcomes">
+      <value>1</value>
+    </attribute>
+    <attribute name="matrixData">
+      <value>./clob/DecisionMatrixVersion_2_16</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
     </attribute>
   </row>
   <row>
@@ -117,7 +170,7 @@
       <value>0</value>
     </attribute>
     <attribute name="matrixData">
-      <value>./clob/DecisionMatrixVersion_2_16</value>
+      <value>./clob/DecisionMatrixVersion_3_16</value>
     </attribute>
     <attribute name="versionNo">
       <value>19</value>
@@ -170,59 +223,6 @@
       <value>0</value>
     </attribute>
     <attribute name="matrixData">
-      <value>./clob/DecisionMatrixVersion_3_16</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>9</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="decisionMatrixVersionID">
-      <value>24000</value>
-    </attribute>
-    <attribute name="name">
-      <value>Needs Assessment Matrix</value>
-    </attribute>
-    <attribute name="type">
-      <value>NEED</value>
-    </attribute>
-    <attribute name="decisionMatrixVersionNumber">
-      <value>1</value>
-    </attribute>
-    <attribute name="versionStatus">
-      <value>ST2</value>
-    </attribute>
-    <attribute name="fromDate">
-      <value>2008-02-20-16.01.30</value>
-    </attribute>
-    <attribute name="toDate">
-      <value />
-    </attribute>
-    <attribute name="dateCreated">
-      <value>2007-03-01-11.15.41</value>
-    </attribute>
-    <attribute name="createdBy">
-      <value>unauthenticated</value>
-    </attribute>
-    <attribute name="comments">
-      <value />
-    </attribute>
-    <attribute name="decisionMatrixID">
-      <value>24000</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="cumulativeScore">
-      <value>1</value>
-    </attribute>
-    <attribute name="multipleOutcomes">
-      <value>1</value>
-    </attribute>
-    <attribute name="scoringByOutcomes">
-      <value>1</value>
-    </attribute>
-    <attribute name="matrixData">
       <value>./clob/DecisionMatrixVersion_4_16</value>
     </attribute>
     <attribute name="versionNo">
@@ -231,13 +231,13 @@
   </row>
   <row>
     <attribute name="decisionMatrixVersionID">
-      <value>34416</value>
+      <value>472</value>
     </attribute>
     <attribute name="name">
-      <value>Adult Needs Matrix</value>
+      <value>Asthma Female</value>
     </attribute>
     <attribute name="type">
-      <value>NEED</value>
+      <value>MED</value>
     </attribute>
     <attribute name="decisionMatrixVersionNumber">
       <value>1</value>
@@ -246,22 +246,22 @@
       <value>ST2</value>
     </attribute>
     <attribute name="fromDate">
-      <value>2013-03-20-09.07.53</value>
+      <value>2008-02-21-12.03.12</value>
     </attribute>
     <attribute name="toDate">
       <value />
     </attribute>
     <attribute name="dateCreated">
-      <value>2013-03-20-09.04.22</value>
+      <value>2007-03-24-13.50.45</value>
     </attribute>
     <attribute name="createdBy">
-      <value>admin</value>
+      <value>unauthenticated</value>
     </attribute>
     <attribute name="comments">
       <value />
     </attribute>
     <attribute name="decisionMatrixID">
-      <value>34415</value>
+      <value>200</value>
     </attribute>
     <attribute name="recordStatus">
       <value>RST1</value>
@@ -270,69 +270,16 @@
       <value>0</value>
     </attribute>
     <attribute name="multipleOutcomes">
-      <value>1</value>
+      <value>0</value>
     </attribute>
     <attribute name="scoringByOutcomes">
-      <value>1</value>
+      <value>0</value>
     </attribute>
     <attribute name="matrixData">
       <value>./clob/DecisionMatrixVersion_5_16</value>
     </attribute>
     <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="decisionMatrixVersionID">
-      <value>2269814212194729984</value>
-    </attribute>
-    <attribute name="name">
-      <value>Community Care Matrix</value>
-    </attribute>
-    <attribute name="type">
-      <value>NEED</value>
-    </attribute>
-    <attribute name="decisionMatrixVersionNumber">
-      <value>1</value>
-    </attribute>
-    <attribute name="versionStatus">
-      <value>ST2</value>
-    </attribute>
-    <attribute name="fromDate">
-      <value>2015-08-12-14.04.11</value>
-    </attribute>
-    <attribute name="toDate">
-      <value />
-    </attribute>
-    <attribute name="dateCreated">
-      <value>2015-08-12-13.21.31</value>
-    </attribute>
-    <attribute name="createdBy">
-      <value>admin</value>
-    </attribute>
-    <attribute name="comments">
-      <value />
-    </attribute>
-    <attribute name="decisionMatrixID">
-      <value>2269814212194729984</value>
-    </attribute>
-    <attribute name="recordStatus">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="cumulativeScore">
-      <value>0</value>
-    </attribute>
-    <attribute name="multipleOutcomes">
-      <value>1</value>
-    </attribute>
-    <attribute name="scoringByOutcomes">
-      <value>1</value>
-    </attribute>
-    <attribute name="matrixData">
-      <value>./clob/DecisionMatrixVersion_6_16</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>2</value>
+      <value>19</value>
     </attribute>
   </row>
 </table>

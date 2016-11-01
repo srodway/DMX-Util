@@ -1,31 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
+--><!--
+  Copyright 2011 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ServiceUnitPlanItemViewMenu">
+  
+    <mc:loader-registry>
+      <mc:loader class="curam.serviceplans.sl.impl.PlanItemViewMenuLoader"/>
+  </mc:loader-registry>
 
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    	xsi:noNamespaceSchemaLocation="page-schema.xsd">
-    	<identifier name="ServiceProvidersText"/>
-    	<server class="Triage" alias="DISPLAY" method="getTriageResults">
-    	    <param name="key$playerID" path="id"/>
-    	</server>
-	<content>    
-		<container>
-		  <field source="/DISPLAY/listData/root/triage-text-only-link[]"/>
-			<field source="/DISPLAY/listData/root" type="TRIAGE_SERVICE_OFFERING_TEXT_ONLY"/>
-		</container>
+         
+  <mc:menu-item id="EditPlanItem" open-as="modal" page-id="ServicePlanDelivery_resolveModifyPlanItemPage" title="MenuItem.Title.EditPlanItem" tooltip="MenuItem.Tooltip.EditPlanItem"/>        
+      
+  <mc:menu-separator id="sep1"/>
+  
     
-    	<!--
-		<navigation align="right">
-			<nav-button name="close" page="ServiceProviders"/>
-		</navigation>
-		-->
-			    
-	</content>
+  <mc:menu-item dynamic="true" id="SubmitForApproval" open-as="modal" page-id="ServicePlanDelivery_submitServicePlanPlanItem" title="MenuItem.Title.SubmitForApproval" tooltip="MenuItem.Tooltip.SubmitForApproval"/>                     
     
-</page>
+  <mc:menu-item dynamic="true" id="Approve" open-as="modal" page-id="ServicePlanDelivery_approveServicePlanPlanItem" title="MenuItem.Title.Approve" tooltip="MenuItem.Tooltip.Approve"/>
+    
+  <mc:menu-item dynamic="true" id="Reject" open-as="modal" page-id="ServicePlanDelivery_rejectServicePlanPlanItem" title="MenuItem.Title.Reject" tooltip="MenuItem.Tooltip.Reject"/>
+    
+  <mc:menu-separator id="sep2"/>
+  
+   <mc:menu-item id="RecordClientParticipation" open-as="modal" page-id="ServicePlanDelivery_addClientParticipationDefaultPlanItem" title="MenuItem.Title.RecordClientParticipation" tooltip="MenuItem.Tooltip.RecordClientParticipation"/>  
+    
+  <mc:menu-separator id="sep3"/> 
+  
+  <mc:menu-item id="RecordServiceUnit" open-as="modal" page-id="ServicePlanDelivery_recordServiceUnitDelivery" title="MenuItem.Title.RecordServiceUnit" tooltip="MenuItem.Tooltip.RecordServiceUnit"/>
+  
+  <mc:menu-item id="EditAuthorizedUnits" open-as="modal" page-id="ServicePlanDelivery_modifyAuthorizedUnits" title="MenuItem.Title.EditAuthorizedUnits" tooltip="MenuItem.Tooltip.EditAuthorizedUnits"/>
+
+</mc:menu-bar>

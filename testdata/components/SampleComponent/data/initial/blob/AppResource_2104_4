@@ -1,45 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+# This Properties file contains resource Strings for the PDC Alternate ID Validation Ruleset.
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2010-2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ServiceUnitPlanItemView">
+ERR_NAME_XRV_DUPLICATE_CLIENT_CREATE=New name details cannot be added for a client that is currently marked as a duplicate.
+ERR_NAME_XRV_DUPLICATE_CLIENT_MODIFY=Name details of a client that is currently marked as a duplicate cannot be modified.
+ERR_NAME_XRV_EFFECTIVE_DATE_DOB=The effective date of change must be after {0} Date Of Birth - {1,date,M/d/yyyy}.
+ERR_NAME_RV_PERSON_LAST_NAME_NOT_ENTERED=Last Name must be entered.
+ERR_NAME_RV_PERSON_MULTIPLE_REG_PREF_NAME=A person cannot have more than one "{0}" name.
+ERR_NAME_RV_PROSPECT_PERSON_MULTIPLE_REG_PREF_NAME=A prospect person cannot have more than one "{0}" name.
+ERR_NAME_RV_PERSON_INTIAL_NAME_NOT_REG_PREF=The first name recorded for a person must be of type "Registered" or "Preferred".
+ERR_NAME_RV_PROSPECT_PERSON_INTIAL_NAME_NOT_REG_PREF=The first name recorded for a prospect must be of type "Registered" or "Preferred".
+ERR_NAME_FV_TYPE_CANNOT_BE_MODIFIED=Type cannot be modified.
 
-  <tc:page-param name="plannedItemID"/>
-  <tc:page-param name="description"/>
-
-  <tc:menu id="ServiceUnitPlanItemViewMenu"/>
-
-  <!-- Details panel -->
-  <tc:context page-id="ServicePlanDelivery_planItemTabDetails" tab-name="Details.Name.PlanItemView"/>
-
-  <!-- Navigation Panel -->
-  <tc:navigation id="ServiceUnitPlanItemView"/>
-  
-  <tc:tab-refresh>
-    <tc:onsubmit context="true" page-id="ServicePlanDelivery_viewServiceUnitPlanItem"/>
-    
-    <tc:onsubmit context="true" menu-bar="true" page-id="ServicePlanDelivery_submitServicePlanPlanItem"/>
-    <tc:onsubmit context="true" menu-bar="true" page-id="ServicePlanDelivery_approveServicePlanPlanItem"/>
-    <tc:onsubmit context="true" menu-bar="true" page-id="ServicePlanDelivery_rejectServicePlanPlanItem"/>
-    
-    <tc:onsubmit context="true" page-id="ServicePlanDelivery_modifyServiceUnitPlanItem"/>
-    
-    <tc:onsubmit context="true" page-id="ServicePlanDelivery_recordServiceUnitDelivery"/>
-    
-    <tc:onsubmit context="true" page-id="ServicePlanDelivery_modifyAuthorizedUnits"/>
-    
-    
-  </tc:tab-refresh>  
-
-</tc:tab-config>
+PDCNameValidationResult.description=PDC Name Validation Result For {0}

@@ -6,18 +6,16 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2010 Curam Software Ltd.
+  Copyright 2009 Curam Software Ltd.
   All rights reserved.
   
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="TaskHome">
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="NicknameView">
   <nc:nodes>
-    <nc:navigation-page id="TaskView" page-id="TaskManagement_taskHome" title="Leaf.Title.TaskView"/>
-    <nc:navigation-page id="HistoryAndComments" page-id="TaskManagement_viewHistoryText" title="Leaf.Title.HistoryAndComments"/>
-    <nc:navigation-page id="Assignment" page-id="TaskManagement_viewAssignmentList" title="Leaf.Title.Assignment"/>
-    <nc:navigation-page id="GraphicalView" page-id="TaskManagement_visualiseProcessInstance" title="Leaf.Title.GraphicalView"/>
+    <nc:navigation-page id="NicknameViewHome" page-id="System_viewNickname" title="Leaf.Title.Home" visible="true"/>
   </nc:nodes>
+  
 </nc:navigation>

@@ -1,38 +1,46 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
 
-Help.PageDescription=This page allows you to view the basic case display rules category.
-Page.Title=Basic Case
-
-# START NON-TRANSLATABLE
-CategoryRef=CREOLE_BASIC_CASE
-# END NON-TRANSLATABLE
-
-Cluster.Title.Eligiblity=Eligiblity
-
-Field.Value.NotEligible=The claim is not eligible.
-
-Field.Value.Eligible=The claim is eligible.
-
-Cluster.Title.Entitlement=Entitlement
-
-Field.Label.ObejctiveTypeID=Objective Type ID
-Field.Label.ObejctiveTypeID.Help=The type of the objective.
-
-Field.Label.Entitled=Entitled?
-Field.Label.Entitled.Help=Shows the entitlement for this specific objective. 
-
-Field.Label.Target=Target
-Field.Label.Target.Help=Target
-
-Field.Label.RelatedReference=Related Reference
-Field.Label.RelatedReference.Help=Related Reference
-
-Help.Xref.1.Topicname=CREOLECaseDecision
-
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
+    <identifier name="PrintAndExit" /> 
+    <server alias="DISPLAY" method="getPDFFormId">
+        <param name="key$playerID" path="/PAGE/id" />
+    </server>
+    <header>
+        <title id="Page.Title" />
+        <description id="Page.Description" /> 
+        <icon id="title_save" /> 
+    </header>
+    <content>
+        <container>            
+            <title id="Print.Title" />
+            <container style="cw-render-children">  
+                <param name="use-new-lines" value="true"/> 
+                <param name="css-class" value="printIntakeApplication"/>   
+                <field  source="/PAGE/id" type="CW_HYPERLINKS">
+                    <title id="OpenForm.Link.Label" />
+                    <param name="uri-prefix" value="../servlet/FileDownload?pageID=OpenApplicationForm%26id="/>
+                </field>     
+                
+                <field source="/DISPLAY/pdfFormID" type="CW_HYPERLINKS">
+                    <title id="SendForm.Link.Label"/>
+                    <param name="is-popup" value="true" />
+                    <param name="popup-height" value="350" />
+                    <param name="popup-width" value="550" />
+                    <param name="uri-prefix" value="SearchPDFOffice.jspx?pdfFormID=" />
+                </field>                           
+            </container>                 
+        </container>
+    </content>
+    <navigation>
+		<nav-button name="next" page="ResolveCitizenHome" page-type="resolve" />
+        <nav-button name="back" type="action"/>
+    </navigation>
+</page>

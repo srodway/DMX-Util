@@ -1,108 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
 
-  Copyright IBM Corporation 2012,2013. All Rights Reserved.
+  PID 5725-H26
+
+  Copyright IBM Corporation 2014. All Rights Reserved.
 
   US Government Users Restricted Rights - Use, duplication or disclosure
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SampleClientSelectionInterfaceRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+--><RuleSet name="ASCHouseholdMemberDataRuleSet">
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="ASCHouseholdMember">
+    <Annotations>
+      <SuccessionSetPopulation endDateAttribute="endDate" startDateAttribute="startDate"/>
+    </Annotations>
 
-  <!-- This interface should return a list of product delivery clients whom will 
-       be added to the product delivery created as part of the authorisation of 
-       the specified IntakeProgramApplication. The following can be specified:
 
-     * primaryClient - The primary client for the product delivery if the
-       creation of one is configured. If the creation of a product delivery
-       is configured this attribute is treated as mandatory by the system.
-
-     * additionalClients - A list of additional clients whom will be added
-       to the product delivery in the form of case groups. This attribute is
-       treated as optional by the system.
-
-     * comments - Comments on the authorisation of the IntakeProgramApplication.
-       The attribute is treated as optional by the system.
-  -->
- 
-  <Class abstract="false" name="AbstractClients">    
-  
-  
-    <!-- 
-      The application case on which the intake program and the clients
-      reside. 
-    -->    
-    <Attribute name="applicationCaseID">
+    <Attribute name="startDate">
+      <Annotations>
+        <Label label-id="startDate" name="The date the client became a household member."/>
+      </Annotations>
       <type>
-        <javaclass name="Number"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
-    </Attribute>   
-	
-	    
-    <!-- Participant Record to which the case participant belong -->
-   <Attribute name="primaryClient">
+    </Attribute>
+
+
+    <Attribute name="blackOrAfricanAmerican">
+      <Annotations>
+        <Label label-id="blackOrAfricanAmerican" name="Indicates if the client is black or African American."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="java.lang.Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="ssnStatus">
+      <Annotations>
+        <Label label-id="ssnStatus" name="The client's ssn status. This indicates if the client has a social security number."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <codetableentry table="SSNApplicationStatus"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="endDate">
+      <Annotations>
+        <Label label-id="endDate" name="The date the client ceased being a household member."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="nativeHawiianOrPacificIslander">
+      <Annotations>
+        <Label label-id="nativeHawiianOrPacificIslander" name="Indicates if the client is Hawaiian or a Pacific Islander."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="java.lang.Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="citizenStatus">
+      <Annotations>
+        <Label label-id="citizenStatus" name="The citizenship status of a household member. This is populated from the alien status code table."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <codetableentry table="AlienStatus"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="asian">
+      <Annotations>
+        <Label label-id="asian" name="Indicates if the cleint is Asian."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="java.lang.Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="veteranStatus">
+      <Annotations>
+        <Label label-id="veteranStatus" name="An individual's veteran status e.g. Active Duty, Disabled Veteran, Spouse of Active Duty etc."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <codetableentry table="VeteranStatus"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="nativeAlaskanOrAmericanIndian">
+      <Annotations>
+        <Label label-id="nativeAlaskanOrAmericanIndian" name="c"/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="java.lang.Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="hispanicOrLatino">
+      <Annotations>
+        <Label label-id="hispanicOrLatino" name="Indicates if the client is Hispanic or Latino."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="java.lang.Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="whiteOrCaucasian">
+      <Annotations>
+        <Label label-id="whiteOrCaucasian" name="Indicates if the client is white or caucasian."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="java.lang.Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="migrantOrSeasonalFarmWorker">
+      <Annotations>
+        <Label label-id="migrantOrSeasonalFarmWorker" name="Indicates if the client is a migrant or seasonal farm worker."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <javaclass name="java.lang.Boolean"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="residencyStatus">
+      <Annotations>
+        <Label label-id="residencyStatus" name="The residency status for a household member. For example, indicates if a member is permanently or temporarily resident in the household."/>
+      </Annotations>
+      <type>
+        <javaclass name="curam.creole.value.Timeline">
+          <codetableentry table="ResidencyStatus"/>
+        </javaclass>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="successionID"/>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="caseParticipantRoleID">
+      <Annotations>
+        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the household member."/>
+      </Annotations>
+      <type>
+        <javaclass name="java.lang.Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="related_caseParticipantRoleID">
+      <Annotations>
+        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the household member."/>
+      </Annotations>
       <type>
         <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
       </type>
       <derivation>
-        <singleitem onEmpty="error" onMultiple="error">
-          <filter>
-            <list>
-              <readall ruleclass="CaseParticipantRole" ruleset="CaseEntitiesRuleSet">
-                <match retrievedattribute="caseID">
-                  <reference attribute="applicationCaseID"/>
-                </match>
-              </readall>
-            </list>
-            <listitemexpression>
-              <equals>
-                <reference attribute="typeCode">
-                  <current/>
-                </reference>            
-                <Code table="CaseParticipantRoleType">
-                  <String value="PRI"/>
-                </Code>
-              </equals>
-            </listitemexpression>
-          </filter>   
-        </singleitem>
+        <reference attribute="caseParticipantRoleRecord">
+          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
+            <reference attribute="caseParticipantRoleID"/>
+          </create>
+        </reference>
       </derivation>
     </Attribute>
-    
-         
- <!-- 
-      The additional clients to be added to the product delivery. 
-      This list can be empty. 
-    -->
-    <Attribute name="additionalClients">
-      <type>
-        <javaclass name="List">
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/> 
-        </javaclass>
-      </type>
-      <derivation>
-        <filter>
-          <list>
-            <readall ruleclass="CaseParticipantRole" ruleset="CaseEntitiesRuleSet">
-              <match retrievedattribute="caseID">
-                <reference attribute="applicationCaseID"/>
-              </match>
-            </readall>
-          </list>
-          <listitemexpression>
-            <equals>
-              <reference attribute="typeCode">
-                <current/>
-              </reference>            
-              <Code table="CaseParticipantRoleType">
-                <String value="MEM"/>
-              </Code>
-            </equals>
-          </listitemexpression>
-        </filter> 
-      </derivation>
-    </Attribute>	
- 	
-</Class>
- </RuleSet>
+
+
+  </Class>
+
+
+</RuleSet>

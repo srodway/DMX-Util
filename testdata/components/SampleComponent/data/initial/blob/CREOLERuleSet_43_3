@@ -1,143 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-  PID 5725-H26
-
-  Copyright IBM Corporation 2014. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure
+  US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet name="PractitionerCertificateDataRuleSet">
+--><!--
+    Copyright 2010-2011 Curam Software Ltd.
+    All rights reserved.
+
+    This software is the confidential and proprietary information of Curam
+    Software, Ltd. (&quot;Confidential Information&quot;).  You shall not disclose such
+    Confidential Information and shall use it only in accordance with the
+    terms of the license agreement you entered into with Curam Software.
+--><!--
+  
+  Default implementations of the rules classes in ProgramRecommendationDisplayRuleSet.
+  
+  Rule Set developers should extend these classes rather than directly extending the classes
+  defined in ProgramRecommendationRuleSet. These default implementations provide
+  some isolation against future changes.
+--><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DefaultProgramRecommendationDisplayRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
 
 
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PractitionerCertificate">
-    <Annotations>
-      <SuccessionSetPopulation endDateAttribute="specifiedCertToDate" startDateAttribute="certFromDate"/>
-    </Annotations>
+  <!--
+    Default implementation of ProgramRecommendationDisplayCase.
+    -->
+  <Class abstract="true" extends="ProgramRecommendationDisplayCase" extendsRuleSet="ProgramRecommendationDisplayRuleSet" name="DefaultProgramRecommendationDisplayCase">
 
 
-    <Attribute name="certificateType">
-      <Annotations>
-        <Label label-id="certificateType" name="The type of practitioner certificate, e.g. Doctor, Dentist etc."/>
-      </Annotations>
+    <Attribute name="displayCategoryID">
       <type>
-        <codetableentry table="PractitionerCertType"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="certFromDate">
-      <Annotations>
-        <Label label-id="certFromDate" name="The date from which the certificate is valid."/>
-      </Annotations>
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="signatureDate">
-      <Annotations>
-        <Label label-id="signatureDate" name="The date the certificate was signed by the practitioner."/>
-      </Annotations>
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="certPeriodType">
-      <Annotations>
-        <Label label-id="certPeriodType" name="The certificate will cover this number of periods, e.g. Weeks."/>
-      </Annotations>
-      <type>
-        <codetableentry table="PeriodDuration"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="claimFormSignedInd">
-      <Annotations>
-        <Label label-id="claimFormSignedInd" name="Flag to indicate if the certificate was signed by the practitioner."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="examinationDate">
-      <Annotations>
-        <Label label-id="examinationDate" name="The date on which the examination took place."/>
-      </Annotations>
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="certPeriodCount">
-      <Annotations>
-        <Label label-id="certPeriodCount" name="The amount of periods, weeks for example, the certificate is covering."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="specifiedCertToDate">
-      <Annotations>
-        <Label label-id="specifiedCertToDate" name="The date the certificate is valid to."/>
-      </Annotations>
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
-          <reference attribute="successionID"/>
-        </ResourceMessage>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="householdMember">
-      <Annotations>
-        <Label label-id="householdMember" name="The client receiving the certificate."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Number"/>
+        <javaclass name="Number"/>
       </type>
       <derivation>
         <specified/>
@@ -145,68 +39,19 @@
     </Attribute>
 
 
-    <Attribute name="related_householdMember">
+  </Class>
+
+
+  <!-- 
+    Default implementation of DefaultProgramRecommendationSubscreenDisplay. 
+  -->
+  <Class abstract="true" extends="ProgramRecommendationSubscreenDisplay" extendsRuleSet="ProgramRecommendationDisplayRuleSet" name="DefaultProgramRecommendationSubscreenDisplay">
+
+
+    <!-- Require that the value is specified externally. -->
+    <Attribute name="businessObjectID">
       <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="householdMember"/>
-          </create>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="practitioner">
-      <Annotations>
-        <Label label-id="practitioner" name="The practitioner who issued the certificate."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="practitionerName">
-      <Annotations>
-        <Label label-id="practitionerName" name="The name of the practitioner who issues the certificate."/>
-      </Annotations>
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="related_practitioner">
-      <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="practitioner"/>
-          </create>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="related_Diagnosis">
-      <Annotations>
-        <relatedSuccessionSet relationship="child"/>
-      </Annotations>
-      <type>
-        <javaclass name="java.util.List">
-          <ruleclass name="Diagnosis" ruleset="DiagnosisDataRuleSet"/>
-        </javaclass>
+        <javaclass name="Number"/>
       </type>
       <derivation>
         <specified/>

@@ -13,22 +13,13 @@
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="OrganizationUnitMenu">
-    
-  <mc:menu-item id="Edit" open-as="modal" page-id="Organization_modifyOrgUnitFromView" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="EducationalInstituteHomeMenu">
+  
+  <mc:menu-item id="EditDetails" open-as="modal" page-id="EducationalInstitute_modify" title="MenuItem.Title.EditDetails" tooltip="MenuItem.Tooltip.EditDetails"/>
   
   <mc:menu-separator id="sep1"/>
-
-  <mc:menu-item id="ChildUnit" open-as="modal" page-id="Organization_createChildOrgUnit" title="MenuItem.Title.ChildUnit" tooltip="MenuItem.Tooltip.ChildUnit"/>
   
-  <mc:menu-separator id="sep3"/>
-  
-  <mc:menu-item id="AssignDefaultLocation" open-as="modal" page-id="Organization_AssignDefaultLocation" title="MenuItem.Title.AssignDefaultLocation" tooltip="MenuItem.Tooltip.AssignDefaultLocation"/>
+  <mc:menu-item id="Note" open-as="modal" page-id="Participant_createNote1" title="MenuItem.Title.Note" tooltip="MenuItem.Tooltip.Note"/>
     
-  <mc:menu-item id="RemoveDefaultLocation" open-as="modal" page-id="Organization_RemoveDefaultLocation" title="MenuItem.Title.RemoveDefaultLocation" tooltip="MenuItem.Tooltip.RemoveDefaultLocation"/>
   
-  <mc:menu-separator id="sep4"/>
-  
-  <mc:menu-item id="Delete" open-as="modal" page-id="Organization_cancelOrgUnit" title="MenuItem.Title.Delete" tooltip="MenuItem.Tooltip.Delete"/>
-
 </mc:menu-bar>

@@ -17,13 +17,60 @@
   <column name="lastWritten" type="timestamp" />
   <row>
     <attribute name="productProvisionID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value>2099-12-31</value>
+    </attribute>
+    <attribute name="creationDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="estimatedCost">
+      <value>0.00</value>
+    </attribute>
+    <attribute name="productID">
+      <value>24000</value>
+    </attribute>
+    <attribute name="providerConcernRoleID">
+      <value>123</value>
+    </attribute>
+    <attribute name="nextPaymentDate">
+      <value />
+    </attribute>
+    <attribute name="paymentFrequency">
+      <value />
+    </attribute>
+    <attribute name="methodOfPmtCode">
+      <value />
+    </attribute>
+    <attribute name="currencyType">
+      <value />
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+    <attribute name="lastWritten">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="productProvisionID">
       <value>2602</value>
     </attribute>
     <attribute name="startDate">
       <value>2001-01-01</value>
     </attribute>
     <attribute name="endDate">
-      <value>2015-12-31</value>
+      <value>2030-12-31</value>
     </attribute>
     <attribute name="creationDate">
       <value>2001-01-01</value>
@@ -70,7 +117,7 @@
       <value>2001-01-01</value>
     </attribute>
     <attribute name="endDate">
-      <value>2015-12-31</value>
+      <value>2030-12-31</value>
     </attribute>
     <attribute name="creationDate">
       <value>2001-01-01</value>
@@ -117,7 +164,7 @@
       <value>2001-01-01</value>
     </attribute>
     <attribute name="endDate">
-      <value>2015-12-31</value>
+      <value>2030-12-31</value>
     </attribute>
     <attribute name="creationDate">
       <value>2001-01-01</value>
@@ -164,7 +211,7 @@
       <value>2001-01-01</value>
     </attribute>
     <attribute name="endDate">
-      <value>2015-12-31</value>
+      <value>2030-12-31</value>
     </attribute>
     <attribute name="creationDate">
       <value>2001-01-01</value>
@@ -248,53 +295,6 @@
     </attribute>
     <attribute name="lastWritten">
       <value>2001-01-01-00.00.00</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="productProvisionID">
-      <value>24000</value>
-    </attribute>
-    <attribute name="startDate">
-      <value>2001-01-01</value>
-    </attribute>
-    <attribute name="endDate">
-      <value>2099-12-31</value>
-    </attribute>
-    <attribute name="creationDate">
-      <value>2001-01-01</value>
-    </attribute>
-    <attribute name="comments">
-      <value />
-    </attribute>
-    <attribute name="statusCode">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="estimatedCost">
-      <value>0.00</value>
-    </attribute>
-    <attribute name="productID">
-      <value>24000</value>
-    </attribute>
-    <attribute name="providerConcernRoleID">
-      <value>123</value>
-    </attribute>
-    <attribute name="nextPaymentDate">
-      <value />
-    </attribute>
-    <attribute name="paymentFrequency">
-      <value />
-    </attribute>
-    <attribute name="methodOfPmtCode">
-      <value />
-    </attribute>
-    <attribute name="currencyType">
-      <value />
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-    <attribute name="lastWritten">
-      <value />
     </attribute>
   </row>
 </table>

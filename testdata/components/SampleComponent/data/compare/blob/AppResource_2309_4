@@ -1,53 +1,25 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-MenuItem.Title.Edit=Edit
-MenuItem.Tooltip.Edit=Edit
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="RecentlyApprovedInvestigations">
+  
+  <!-- Details panel -->
+  <tc:context tab-name="Details.Name.RecentApprovedInvestigations" tab-title="Details.Title.RecentApprovedInvestigations"/>
 
-MenuItem.Title.Delete=Delete
-MenuItem.Tooltip.Delete=Delete
+  <!-- Navigation Panel -->
+  <tc:navigation page-id="Organization_listRecentApprovedInvestigationForUser"/>
 
-MenuItem.Title.AddCategory= Add Category
-MenuItem.Tooltip.AddCategory=Add Category
 
-Submenu.Title.New=New
-Submenu.Tooltip.New=New
-
-Submenu.Title.Approval=Approval
-Submenu.Tooltip.Approval=Approval
-
-MenuItem.Title.Case=New Case Approval
-MenuItem.Tooltip.Case=Create an approval case.
-
-MenuItem.Title.TemporalEvidence=Temporal Evidence
-MenuItem.Tooltip.TemporalEvidence=Create a temporal evidence.
-
-MenuItem.Title.EvidenceTree=Evidence Tree
-MenuItem.Tooltip.EvidenceTree=Create an evidence tree.
-
-MenuItem.Title.BillingPattern=Billing Pattern
-MenuItem.Tooltip.BillingPattern=Add a billing pattern.
-
-MenuItem.Title.Provision=Provision
-MenuItem.Tooltip.Provision=Create a provision.
-
-MenuItem.Title.TimeConstraint=Time Constraint
-MenuItem.Tooltip.TimeConstraint=Create a time constraint.
-
-MenuItem.Title.ExistingRuleset=Assign a Ruleset
-MenuItem.Tooltip.ExistingRuleset=Assign a Ruleset.
-
-Submenu.Title.Search=Search
-Submenu.Tooltip.Search=Search
-
-MenuItem.Title.User=User
-MenuItem.Tooltip.User=Find an user.
-
-MenuItem.Title.ExternalUser=External User
-MenuItem.Tooltip.ExternalUser=Find an external user.
+</tc:tab-config>

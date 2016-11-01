@@ -1,84 +1,91 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCIdentificationDataRuleSet">
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCIdentification">
-    <Annotations>
-      <SuccessionSetPopulation endDateAttribute="toDate" startDateAttribute="fromDate"/>
-    </Annotations>
-    <Attribute name="alternateID">
-      <Annotations/>
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. (&quot;Confidential Information&quot;).  You shall not disclose such
+  Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PCRRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+  <Class abstract="true" name="AbstractPCR">
+
+
+    <Attribute name="caseID">
       <type>
-        <javaclass name="java.lang.String"/>
+        <javaclass name="Number"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="fromDate">
-      <Annotations/>
+
+
+    <Attribute name="priorityRate">
       <type>
-        <javaclass name="curam.util.type.Date"/>
+        <javaclass name="Number"/>
       </type>
       <derivation>
-        <specified/>
+        <abstract/>
       </derivation>
     </Attribute>
-    <Attribute name="altIDType">
-      <Annotations/>
-      <type>
-        <codetableentry table="ConcernRoleAlternateID"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="toDate">
-      <Annotations/>
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="preferredInd">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="description">
+
+
+    <Attribute name="priorityReason">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
-          <reference attribute="successionID"/>
-        </ResourceMessage>
+        <abstract/>
       </derivation>
     </Attribute>
-    <Attribute name="participant">
-      <Annotations/>
+
+
+    <Attribute name="complexityRate">
       <type>
-        <javaclass name="java.lang.Number"/>
+        <javaclass name="Number"/>
       </type>
       <derivation>
-        <specified/>
+        <abstract/>
       </derivation>
     </Attribute>
-    <Attribute name="related_participant">
-      <Annotations/>
+
+
+    <Attribute name="complexityReason">
       <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+        <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="participant"/>
-          </create>
-        </reference>
+        <abstract/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="riskRate">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="riskReason">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <abstract/>
       </derivation>
     </Attribute>
   </Class>
+
+
 </RuleSet>

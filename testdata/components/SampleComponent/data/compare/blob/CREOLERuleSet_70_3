@@ -1,66 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCNameRuleSet">
-  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="PDCName">
-    <Attribute name="middleName">
+<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCEmailAddressRuleSet">
+  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="PDCEmailAddress">
+    <Attribute name="fromDate">
+      <Annotations/>
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="emailAddressType">
+      <Annotations/>
+      <type>
+        <codetableentry table="EmailType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="emailAddress">
       <Annotations/>
       <type>
         <javaclass name="java.lang.String"/>
       </type>
       <derivation>
-        <null/>
+        <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="lastName">
+    <Attribute name="toDate">
       <Annotations/>
       <type>
-        <javaclass name="java.lang.String"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <null/>
+        <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="title">
+    <Attribute name="preferredInd">
       <Annotations/>
       <type>
-        <codetableentry table="PersonTitle"/>
+        <javaclass name="java.lang.Boolean"/>
       </type>
       <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-    <Attribute name="initials">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-    <Attribute name="firstName">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.String"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-    <Attribute name="suffix">
-      <Annotations/>
-      <type>
-        <codetableentry table="PersonSuffix"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-    <Attribute name="nameType">
-      <Annotations/>
-      <type>
-        <codetableentry table="AlternateNameType"/>
-      </type>
-      <derivation>
-        <null/>
+        <specified/>
       </derivation>
     </Attribute>
     <Attribute name="participant">

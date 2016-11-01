@@ -6,11 +6,12 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Verification.Message.Title=Verification Documentation Required
-Verification.Message.Body=We need to verify information we have received from you. In order to verify this information, you will need to provide us with a {Documents.to.be.submitted}.
-Verification.Image.AltText=Verification Message
-Verification.message.documents.separator=or
+Page.Title=Save Application?
+Page.Description=Would you like to save your application.
 
-#START NON-TRANSLATABLE
-Verification.Image=icon_documentation.png
-#END NON-TRANSLATABLE
+RadioSelection.Title=Choose an Option
+RadioSelection.Description=
+RadioSelection.Legend=Application options
+
+SaveApplication.Title=<strong>Save your application</strong> and come back to work on it later.
+ExitSaveApplication.Title=<strong>Delete your application.</strong><br/>Your application will be deleted. You will not be able to come back to your application.

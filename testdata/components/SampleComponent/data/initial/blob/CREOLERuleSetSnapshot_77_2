@@ -1,178 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!-- 
-  Copyright 2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information
-  of Curam Software, Ltd. ("Confidential Information").  You
-  shall not disclose such Confidential Information and shall use
-  it only in accordance with the terms of the license agreement
-  you entered into with Curam Software.
---><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd" name="AssessmentRulesInterface">
-  
-  <!-- This class must be extended by all rule sets invoked by the Assessment 
-    and planning processing. This class is used to hold the list of factors 
-    that should be assessed during the assessment. 
-    The sub class must be named 'FactorList'. -->
-  <Class name="AbstractFactorList" abstract="true">
-    <!-- The id of Assessment Delivery Role that the list of factors is related to. 
-         This will be null for Group Based assessments -->
-    <Initialization>
-      <Attribute name="roleID">
-        <type>
-          <javaclass name="Long"/>
-        </type>
-      </Attribute>
-    </Initialization>
-    <Attribute name="factors">
+<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCIdentificationDataRuleSet">
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCIdentification">
+    <Annotations>
+      <SuccessionSetPopulation endDateAttribute="toDate" startDateAttribute="fromDate"/>
+    </Annotations>
+    <Attribute name="alternateID">
+      <Annotations/>
       <type>
-        <javaclass name="List">
-          <ruleclass name="AbstractFactor"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <!-- Subclasses of AbstractFactorList must override
-          this attribute to create a list of the factors
-          supported by the rule set. -->
-        <abstract/>
-      </derivation>
-    </Attribute>
-  </Class>
- 
-  <Class name="AbstractFactor" abstract="true">
-    <!-- The reference for the factor. -->
-    <Attribute name="reference">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-    <!-- The id of Assessment Delivery Role that the factor is related to. 
-         This will be null for Group Based assessments -->
-    <Attribute name="roleID">
-      <type>
-        <javaclass name="Long"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-    <!-- The score of the factor. Either a score or classification must be provided, 
-      if both are provided the classification is used -->
-    <Attribute name="score">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-    <!-- The classification of the factor. Either a score or classification must be provided, 
-      if both are provided the classification is used -->
-    <Attribute name="classification">
-      <type>
-        <codetableentry table="ClassDivisionType"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-  </Class>    
-
-  <!-- This class must be extended by all Group Based CERT rule sets invoked by
-    Assessment And Planning processing. This class is used to hold all the 
-    assessment answers for the group captured during the assessment script. 
-    The sub class must be named 'Group' in order for the values to be automatically populated 
-    from the IEG script. -->
-  <Class name="AbstractGroup" abstract="true">
-    <Attribute name="groupName">
-      <type>
-        <javaclass name="String"/>
+        <javaclass name="java.lang.String"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-  </Class>
-
-  <!-- This class must be extended by all CERT rule sets invoked by
-    Assessment And Planning processing. The sub class must be name 'Assessment' 
-    in order for the values to be automatically populated from the IEG script.
-    This class is used to hold details about the assessment being executed. -->
-  <Class name="AbstractAssessment" abstract="true">
-    <Attribute name="assessmentInstanceID">
-      <type>
-        <javaclass name="Long"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="assessmentDefinitionID">
-      <type>
-        <javaclass name="Long"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-  </Class>
-
-  <!-- This class must be extended by all Role Based CERT rule sets invoked by
-    Assessment And Planning processing. This class is used to hold the 
-    assessment answers for each person during the assessment script. 
-    The sub class must be named 'Person' in order for the values to be automatically 
-    populated from the IEG script. -->
-  <Class name="AbstractPerson" abstract="true">
-    <Attribute name="personID">
-      <type>
-        <javaclass name="Long"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="firstName">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="surname">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="fullname">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="gender">
-      <type>
-        <codetableentry table="Gender"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="dateOfBirth">
+    <Attribute name="fromDate">
+      <Annotations/>
       <type>
         <javaclass name="curam.util.type.Date"/>
       </type>
@@ -180,38 +21,64 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="roleID">
+    <Attribute name="altIDType">
+      <Annotations/>
       <type>
-        <javaclass name="Long"/>
+        <codetableentry table="ConcernRoleAlternateID"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="roleName">
+    <Attribute name="toDate">
+      <Annotations/>
       <type>
-        <javaclass name="String"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="participantID">
+    <Attribute name="preferredInd">
+      <Annotations/>
       <type>
-        <javaclass name="Long"/>
+        <javaclass name="java.lang.Boolean"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="questionsApplicableInd">
+    <Attribute name="description">
       <type>
-        <javaclass name="Boolean"/>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="DynamicEvidenceSuccessionSet.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">
+          <reference attribute="successionID"/>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+    <Attribute name="participant">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.Number"/>
       </type>
       <derivation>
         <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="related_participant">
+      <Annotations/>
+      <type>
+        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+      </type>
+      <derivation>
+        <reference attribute="caseParticipantRoleRecord">
+          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
+            <reference attribute="participant"/>
+          </create>
+        </reference>
       </derivation>
     </Attribute>
   </Class>
-
 </RuleSet>

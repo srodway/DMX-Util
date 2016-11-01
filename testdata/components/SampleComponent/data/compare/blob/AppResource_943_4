@@ -6,15 +6,22 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009-2010 Curam Software Ltd.
+  Copyright 2011 Curam Software Ltd.
   All rights reserved.
-  
+
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="AuditPlanSearchMenu">
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="CuramExpressRuleSetEditor">
   
-  <mc:menu-item id="NewAuditPlan" page-id="CaseAudit_createAuditPlan" title="MenuItem.Title.NewAuditPlan" tooltip="MenuItem.Tooltip.NewAuditPlan"/>
+  <tc:page-param name="snapShotID"/>
+  <tc:page-param name="editActionID"/>
+  <tc:page-param name="name"/>
+  <tc:page-param name="ruleSetDescription"/>
   
-</mc:menu-bar>
+  <tc:context height="0" page-id="CreoleAdmin_editorRuleSetDetails"/>
+
+  <tc:navigation page-id="Creole_editRuleSet"/>
+  
+</tc:tab-config>

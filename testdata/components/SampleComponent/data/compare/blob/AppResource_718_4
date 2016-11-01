@@ -6,11 +6,27 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Details.Name.IntegratedServicePlanHome=Integrated Service Plan
-Details.Icon=a
-Folder.Title.Home=Home
-Leaf.Title.InProgress=In Progress
-Leaf.Title.All=All
-Leaf.Title.Cost=Cost
-Leaf.Title.Milestones=Milestones
-Leaf.Title.TrackingGantt=Tracking Gantt
+# BEGIN, CR00343255, SS
+MenuItem.Title.AddParticipant=Add Participant
+MenuItem.Tooltip.AddParticipant=Add Participant
+MenuItem.Title.Edit=Edit
+MenuItem.Tooltip.Edit=Modifies the provider incident. 
+# END, CR00343255
+
+MenuItem.Title.NewAttachment=New Attachment
+MenuItem.Tooltip.NewAttachment=New Attachment
+
+MenuItem.Title.NewContact=New Contact
+MenuItem.Tooltip.NewContact=New Contact
+
+# BEGIN, CR00246460, CS
+MenuItem.Title.NewInjury=New Injury
+MenuItem.Tooltip.NewInjury=Create a new injury for the incident
+
+MenuItem.Title.NewRestraint=New Restraint
+MenuItem.Tooltip.NewRestraint=Create a new restraint for the incident
+
+MenuItem.Title.NewStaffAction=New Staff Action
+MenuItem.Tooltip.NewStaffAction=Create a new staff action for the incident
+# END, CR00246460 
+

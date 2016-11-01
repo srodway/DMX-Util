@@ -1,39 +1,25 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Details.Name.OrganizationUnit=Organization Unit
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-page.title.home=Home
-Page.Title.Tree=Tree View
-page.title.ChildOrganisationUnits=Child Organization Units
-page.title.Jobs=Jobs
-page.title.Positions=Positions
-page.title.Users=Users
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
 
-folder.title.ApprovalChecks=Approval Checks
-page.title.Case=Case
-page.title.Temporal=Evidence
-page.title.Issue=Issue Case Resolution 
-page.title.Investigation=Investigation
-page.title.MilestoneWaiver=Milestone Waiver
-
-Page.Title.ProviderApproval=Provider
-Page.Title.ProviderServiceApproval=Provider Service
-# BEGIN, CR00260853, GP
-Page.Title.ServiceApproval=Service
-# END, CR00260853
-
-page.title.Resources=Resources
-
-page.title.Trees=Trees
-page.title.Evidence=Evidence
-
-# BEGIN, CR00274919, POH
-Page.Title.Assessments=Assessment
-Page.Title.OutcomePlanAgreement=Outcome Plan Agreement
-# END, CR00274919
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="EvidenceApprovals">
+  
+  <!-- No Actions Menu -->
+  
+  <!-- No Context Panel -->
+  <tc:context tab-name="Details.Name.EvidenceApprovals" tab-title="Details.Title.EvidenceApprovals"/>
+  
+  <tc:navigation page-id="Resource_listTemporalEvidenceApprovalCheck"/>
+ 
+</tc:tab-config>

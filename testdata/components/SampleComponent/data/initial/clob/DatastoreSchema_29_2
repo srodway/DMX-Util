@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!--
   Licensed Materials - Property of IBM
   
@@ -7,8 +7,126 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 -->  
-
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains">
-<xsd:import namespace="http://www.curamsoftware.com/BaseDomains" />
-<xsd:include schemaLocation="IEGDomains"/>
-</xsd:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains">
+  <xs:import namespace="http://www.curamsoftware.com/BaseDomains"/>
+  <xs:include schemaLocation="SDMCGSNDomains"/>
+  <xs:element name="Application">
+    <xs:annotation>
+      <xs:documentation>Top level application table</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="Person" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Assessment" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Person">
+    <xs:annotation>
+      <xs:documentation>Holds the answers for each person</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="personID" type="d:SVR_KEY">
+        <xs:annotation>
+          <xs:documentation>The identifier for the person</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="firstName" type="IEG_STRING">
+        <xs:annotation>
+          <xs:documentation>The persons first name</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="gender" type="IEG_GENDER">
+        <xs:annotation>
+          <xs:documentation>The persons gender</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="dateOfBirth" type="IEG_DATE">
+        <xs:annotation>
+          <xs:documentation>The persons date of birth</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="roleID" type="IEG_INT64">
+        <xs:annotation>
+          <xs:documentation>The id of the assessment delivery role record</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="participantID" type="IEG_INT64">
+        <xs:annotation>
+          <xs:documentation>Identifier of the person.  Used for locating instances of person entities on the data store the relate to a single individual</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="questionsApplicableInd" type="IEG_BOOLEAN">
+        <xs:annotation>
+          <xs:documentation>Indicates if the assessment questions should be asked of this role.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="substanceAbuse" type="CGSN_SUBSTANCEABUSE">
+        <xs:annotation>
+          <xs:documentation>Answer to the substance abuse assessment question</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="domesticViolence" type="CGSN_DOMESTICVIOLENCE">
+        <xs:annotation>
+          <xs:documentation>Answer to the domestic violence assessmnet question</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="socialSupportSystem" type="CGSN_SOCIALSUPPORTSYSTEM">
+        <xs:annotation>
+          <xs:documentation>Answer to the social support system assessment question</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="parentingSkills" type="CGSN_PARENTINGSKILLS">
+        <xs:annotation>
+          <xs:documentation>Answer to the parenting skills assessment question</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="mentalHealthCopingSkills" type="CGSN_MENTALHEALTHCOPINGSKILLS">
+        <xs:annotation>
+          <xs:documentation>Answer to the mental health coping skills assessment question</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="resourceManagementBasicNeeds" type="CGSN_RESOURCEMANAGEMENTBASICNEEDS">
+        <xs:annotation>
+          <xs:documentation>Answer to the resource management basic needs assessment question</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="culturalIdentity" type="CGSN_CULTURALIDENTITY">
+        <xs:annotation>
+          <xs:documentation>Answer to the cultural identity assessment question</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="physicalHealth" type="CGSN_PHYSICALHEALTH">
+        <xs:annotation>
+          <xs:documentation>Answer to the pyhsical health assessment question</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="familyIdentifiedStrengthNeed" type="CGSN_FAMILYIDENTIFIEDSTRENGTHNEED">
+        <xs:annotation>
+          <xs:documentation>Answer to the family identified strength need assessment question</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+    <xs:key name="Person_Key">
+      <xs:selector xpath="./Person"/>
+      <xs:field xpath="@personID"/>
+    </xs:key>
+  </xs:element>
+  <xs:element name="Assessment">
+    <xs:annotation>
+      <xs:documentation>Indicates which factors should be assessed as part of the assessment</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="initialAssessmentInd" type="IEG_BOOLEAN">
+        <xs:annotation>
+          <xs:documentation>Indicates if this is the first time this assessment is being executed</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="Comment" type="IEG_STRING">
+        <xs:annotation>
+          <xs:documentation>Identified strength need comment</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

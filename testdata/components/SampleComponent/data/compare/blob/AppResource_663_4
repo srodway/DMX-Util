@@ -6,19 +6,21 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009, 2010 Curam Software Ltd.
+  Copyright 2009 Curam Software Ltd.
   All rights reserved.
 
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ProdProvHomeMenu">
-  
-  <mc:menu-item id="EditDetails" open-as="modal" page-id="ProductProvider_modifyProductProvider" title="MenuItem.Title.EditDetails" tooltip="MenuItem.Tooltip.EditDetails"/>
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ServicePlans">
     
-  <mc:menu-separator id="sep1"/>
+    <tc:menu id="ServicePlansMenu"/>
     
-  <mc:menu-item id="Note" open-as="modal" page-id="Participant_createNote1" title="MenuItem.Title.Note" tooltip="MenuItem.Tooltip.Note"/>
-  
-</mc:menu-bar>
+     <!-- No details panel -->
+    <tc:context tab-name="Details.Name.ServicePlans" tab-title="Details.Title.ServicePlans"/>
+    
+    <!-- No Content Panel for now -->
+ <tc:navigation id="ServicePlans"/>
+    
+</tc:tab-config>

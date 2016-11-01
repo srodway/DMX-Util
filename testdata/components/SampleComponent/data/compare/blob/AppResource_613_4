@@ -1,27 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Folder.Title.Summary = Summary
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2011 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="DefaultCaseIPHome">
+Leaf.Title.Summary = Summary
+Leaf.Description.Summary = Summary
 
-  <tc:page-param name="caseParticipantRoleID"/>
-  <tc:page-param name="caseID"/>
+Leaf.Title.Attachments=Attachments
+Leaf.Description.Attachments=Attachments
 
-  <tc:menu id="DefaultCaseIPHomeMenu"/>
-  <!-- Details panel -->
-      <tc:context height="200" page-id="DefaultICInformationProvider_homeTabDetails"/>
-  <!-- Navigation Panel -->
-  <tc:navigation id="DefaultICInformationProvider_home"/>
+Leaf.Title.Clients=Clients
+Leaf.Description.Clients=Clients
 
-</tc:tab-config>
+Leaf.Title.Programs=Programs
+Leaf.Description.Programs=Programs
+
+Leaf.Title.Timers=Timers
+Leaf.Description.Timers=Timers
+
+Leaf.Title.Interviews=Interviews
+Leaf.Description.Interviews=Interviews
+
+Leaf.Title.EvidenceandVerifications=Evidence & Verifications
+Leaf.Description.EvidenceandVerifications=Evidence & Verifications
+
+Leaf.Title.RelatedCases=Related Cases
+Leaf.Description.RelatedCases=Related Cases
+
+Leaf.Title.EligibiltyChecks=Eligibilty Checks
+Leaf.Description.EligibiltyChecks=Eligibilty Checks
+
+Leaf.Title.QuickNotes=Notes
+Leaf.Description.QuickNotes=Notes
+
+Details.Name.Application=Application
+Details.Title.Application=Application
+Details.Icon=Application
+
+#BEGIN, CR00283954, JD
+Leaf.Title.Communications=Communications
+Leaf.Description.Communications=Communications
+
+Folder.Title.Contact=Contact
+Folder.Description.Contact=Contact
+#END, CR00283954, JD

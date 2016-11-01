@@ -13,7 +13,7 @@
   </xsl:template>
   <xsl:template match="DATA">
     <!--Explicitly select the STRUCT to avoid processing anything else.-->
-    <xsl:apply-templates select="STRUCT[SNAME='FinancialNotificationDetails']"/>
+    <xsl:apply-templates select="STRUCT[SNAME='ContractNotificationDetails']"/>
   </xsl:template>
   <xsl:template match="STRUCT">
     <fo:root>
@@ -37,7 +37,7 @@
                   </fo:block>
                   <fo:inline font-size="12pt" font-weight="normal">
                     Dear
-                    <xsl:apply-templates select="FIELD[FNAME='name']"/>
+                    <xsl:apply-templates select="FIELD[FNAME='providerGroupName']"/>
                     ,
                   </fo:inline>
                   <fo:block>
@@ -46,20 +46,9 @@
                   <fo:block>
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
-                  <fo:inline font-size="12pt">
-                    We wish to inform you that as a result of a correction to service invoice line item
-                    <xsl:apply-templates select="FIELD[FNAME='SILIReferenceNo']"/>
-                    from service invoice
-                    <xsl:apply-templates select="FIELD[FNAME='SIReferenceNo']"/>
-                    received on
-                    <xsl:apply-templates select="FIELD[FNAME='receiptDate']"/>
-                    for the delivery of
-                    <xsl:apply-templates select="FIELD[FNAME='serviceOfferingName']"/>
-                    , an overpayment was detected,
-                    and as a result you now have an outstanding liability with the agency in the amount of
-                    <xsl:apply-templates select="FIELD[FNAME='amount']"/>
-                    .
-                  </fo:inline>
+                  <fo:inline font-size="12pt">Please find enclosed your contract with our agency to deliver services to
+                    our clients.
+                    Please read and sign the contract and return it to us using the prepaid envelope enclosed.</fo:inline>
                   <fo:block>
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
@@ -74,7 +63,7 @@
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
                   <fo:inline font-size="12pt">
-                    <xsl:apply-templates select="FIELD[FNAME='organisationName']"/>
+                    <xsl:apply-templates select="FIELD[FNAME='organizationName']"/>
                     .
                   </fo:inline>
                 </fo:block>

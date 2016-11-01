@@ -6,19 +6,19 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009 Curam Software Ltd.
+  Copyright 2011 Curam Software Ltd.
   All rights reserved.
-
+  
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="EventClasses">
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="CuramExpressRuleDataConfigMenu">
   
-  <!-- No details panel -->
-  <tc:context tab-name="Details.Name.Events" tab-title="Details.Name.Events"/>
+  <mc:menu-item id="New" open-as="modal" page-id="CREOLEPropConfig_createSandbox" title="MenuItem.Title.New" tooltip="MenuItem.Tooltip.New"/> 
+    
+  <mc:menu-separator id="sep1"/>
 
-  <!-- See Workflow.nav for details of the tree meta-data. --> 
-  <tc:navigation page-id="WorkflowEvents_listEventClasses"/>
-  
-</tc:tab-config>
+  <mc:menu-item id="Publish" open-as="modal" page-id="CREOLEPropConfig_selectForPublish" title="MenuItem.Title.Publish" tooltip="MenuItem.Tooltip.Publish"/>
+
+</mc:menu-bar>

@@ -1,41 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
-
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="page-schema.xsd">
-    <!-- this is the page that lists the service offerings and 
-        plots all services on map by service offering -->
-    <identifier name="ServiceProviders"/>
-    <server class="Triage" alias="DISPLAY" method="getTriageResults">
-        <param name="key$playerID" path="id"/>
-    </server>
-   <header>
-        <title id="Page.Title"/>
-        <description id="Page.Description"/> 
-        <icon id="title_current_apps"/>
-    </header>
-    <content>
-    			
-        <container style="triage-results-alert" conditionalSource="/DISPLAY/listData/root/alert-messages[]/alert/text" false="$empty">
-            	<field source="/DISPLAY/listData/root/alert-messages[]" />
-        </container>                        
-        
-        
-        <!--<container style="triage-results-header"/>-->
-        
-        <container style="triage-results-container">
-          <field source="/DISPLAY/listData/root/triage-text-only-link[]"/>
-          <field source="/DISPLAY/mapData/map" type="TRIAGE_GOOGLE_MAPS_XML"/>
-			    <field source="/DISPLAY/listData/root" type="TRIAGE_SERVICE_OFFERING_LIST"/>
-			    <field source="/DISPLAY/govServicesData$xmlData/gov-root" type="GOVERNMENT_SERVICES_XML"/>
-        </container>
-   
-    </content>
-</page>
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="TaskHome">
+  <nc:nodes>
+    <nc:navigation-page id="TaskView" page-id="TaskManagement_taskHome" title="Leaf.Title.TaskView"/>
+    <nc:navigation-page id="HistoryAndComments" page-id="TaskManagement_viewHistoryText" title="Leaf.Title.HistoryAndComments"/>
+    <nc:navigation-page id="Assignment" page-id="TaskManagement_viewAssignmentList" title="Leaf.Title.Assignment"/>
+    <nc:navigation-page id="GraphicalView" page-id="TaskManagement_visualiseProcessInstance" title="Leaf.Title.GraphicalView"/>
+  </nc:nodes>
+</nc:navigation>

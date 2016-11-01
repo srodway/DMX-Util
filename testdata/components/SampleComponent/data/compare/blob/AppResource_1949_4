@@ -1,10 +1,21 @@
-#Wed Oct 24 10:44:28 BST 2012
-Field.Label.DateOfDeath=Date of Death
-Cluster.Title.Birth=Birth
-Field.Label.MothersBirthLastName=Mothers Birth Last Name
-Participant=Participant
-Participant.Description.ID3=Participant
-Cluster.Title.Death=Death
-Field.Label.DateOfBirth=Date of Birth
-Field.Label.BirthLastName=Birth Last Name
-Cluster.Title.Comments=Comments
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2013. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+QuestionPage.AssessmentDetails.Title=SDM\u00AE Reunification Assessment
+Cluster.Title.Visit=Visitation
+RiskOverrides.InstructionText=<p style="font-family:tahoma;font-size:11px;color:#4e4e4e;">Please enter final risk finding</p>
+AssessmentResults.Display.Text.DeterminedVisitationLevel=<p style="font-family:tahoma;font-size:11px;color:#4e4e4e;margin-left:-5px;"> Visitation Evaluation: <b>%1s</b> </p>
+AssessmentResults.Display.Text.RiskScore=<p style="font-family:tahoma;font-size:12px;color:#4e4e4e;margin-left:-5px;">Visitation Evaluation: <b>%1s</b> </p>
+Cluster.Title.Overrides=Override
+Cluster.Desc.Overrides=<p style="font-family:tahoma;font-size:11px;color:#4e4e4e;">If there is no change to the visitation plan evaluation, then select "No Override". A Policy Override should be selected if the visitations were supervised for safety, which will modify the evaluation from acceptable to unacceptable. If a discretionary override is required, indicate the reason and the evaluation will be modified from acceptable to unacceptable.</p>
+Cluster.Desc.PolicyOverrideQuestions=<span style="margin-top: 5px; color:#5A5A5A">Indicate if any of the following are true in the current review period.</span>
+DiscMessageID=Override reason must be entered if a discretionary override has been specified.
+Question.Label.AssessmentOverride=Override
+Question.Label.DiscretionaryOverrideReason=Override Reason
+Question.Help.AssessmentOverride=Policy override should be selected if the visitations were supervised for safety.
+Display.Text.ChildName = <p style="font-family:tahoma;font-size:12px;color:#4e4e4e;margin-left:-5px;">Child : <b>%1s</b> </p>   

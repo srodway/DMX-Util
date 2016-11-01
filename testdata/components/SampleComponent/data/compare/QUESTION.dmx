@@ -9,6 +9,1351 @@
   <column name="questionText" type="text" />
   <column name="iegSequenceOrder" type="id" />
   <column name="datastoreEntity" type="text" />
+  <column name="nameTextID" type="id" />
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13015</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CGSNSubstanceAbuse</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>substanceAbuse</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>CaregiverStrengthNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN1. Substance Abuse/Use</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>10</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13017</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CGSNDomesticViolence</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>domesticViolence</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>CaregiverStrengthNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN2. Household Relationships/Domestic Violence</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>11</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13019</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CGSNSocialSupportSystem</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>socialSupportSystem</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>CaregiverStrengthNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN3. Social Support System</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>12</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13030</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CGSNParentingSkills</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>parentingSkills</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>CaregiverStrengthNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN4. Parenting Skills</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>13</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13031</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CGSNMentalHlthCopingSkill</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>mentalHealthCopingSkills</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>CaregiverStrengthNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN5. Mental Health/Coping Skills</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>14</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13032</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CGSNResourceManBasicNeeds</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>resourceManagementBasicNeeds</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>CaregiverStrengthNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN6. Resource Management/Basic Needs</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>15</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13033</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CGSNCulturalIdentity</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>culturalIdentity</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>CaregiverStrengthNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN7. Cultural Identity</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>16</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13034</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CGSNPhysicalHealth</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>physicalHealth</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>CaregiverStrengthNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN8. Physical Health</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>17</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13035</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CGSNFamilyIdStrengthNeed</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>familyIdentifiedStrengthNeed</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>CaregiverStrengthNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN9. Identified Caregiver Strength/Need (not covered in SN1-SN8)</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>18</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13085</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>substanceAbuseInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN1. Substance Abuse/Use</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>1</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13086</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>domesticViolenceInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN2. Household Relationships/Domestic Violence</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>2</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13087</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>socialSupportSystemInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN3. Social Support System</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>3</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13088</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>parentingSkillsInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN4. Parenting Skills</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>4</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13089</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>mentalHealthCopingSkillsInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN5. Mental Health/Coping Skills</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>5</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13090</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>resourceManagementBasicNeedsInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN6. Resource Management/Basic Needs</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>6</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13091</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>culturalIdentityInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN7. Cultural Identity</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>7</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13092</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>physicalHealthInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN8. Physical Health</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>8</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13093</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>familyIdentifiedStrengthNeedInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>SN9. Identified Caregiver Strength/Need</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>9</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>13022</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13094</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_STRING</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>Comment</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>CaregiverStrengthNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>Comment</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>19</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13095</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>emotionalBehavioralInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN1. Emotional/Behavioural</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>1</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13096</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>medicalPhysicalInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN2. Physical Health/Disability</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>2</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13097</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>educationInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN3. Education</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>3</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13098</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>familyRelationshipsInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN4.  Family Relationships</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>4</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13099</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>childDevelopmentInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN5. Child Development</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>5</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13100</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>substanceUseInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN6.  Substance Abuse</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>6</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13101</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>culturalIdentityInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN7. Cultural Identity</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>7</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13102</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>socialRelationshipsInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN8. Peer/Adult Social Relationships</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>8</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13103</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>delinquentBehaviorInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN9. Delinquent Behaviour</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>9</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13104</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_BOOLEAN</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>identifiedStrengthNeedInd</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>SelectFactors</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN10. Identified Child Strength/Need</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>10</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Assessment</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13105</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CSNEmotionalBehavioral</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>emotionalBehavioral</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>ChildStrengthsNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN1. Emotional/Behavioral</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>11</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13106</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CSNMedicalPhysical</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>medicalPhysical</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>ChildStrengthsNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN2. Physical Health/Disability</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>12</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13107</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CSNSpecializedEducation</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>specializedEducation</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>ChildStrengthsNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN3A. Does the child have a specialized education plan?</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>13</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13108</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_STRING</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>educationPlanDescription</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>ChildStrengthsNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>If yes, describe the education plan:</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>14</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13109</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CSNEducation</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>education</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>ChildStrengthsNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN3B. How would you describe the education of the child?</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>15</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13110</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CSNFamilyRelationships</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>familyRelationships</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>ChildStrengthsNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN4. Family Relationships</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>16</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13111</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CSNChildDevelopment</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>childDevelopment</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>ChildStrengthsNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN5. Child Development</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>17</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13112</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CSNSubstanceUse</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>substanceUse</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>ChildStrengthsNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN6. Substance Abuse</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>18</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13113</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CSNCulturalIdentity</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>culturalIdentity</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>ChildStrengthsNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN7. Cultural Identity</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>19</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13114</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CSNSocialRelationship</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>socialRelationship</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>ChildStrengthsNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN8. Peer/Adult Social Relationships</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>20</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13115</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CSNDelinquentBehavior</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>delinquentBehavior</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>ChildStrengthsNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN9. Delinquent Behavior</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>21</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13116</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>1</value>
+    </attribute>
+    <attribute name="type">
+      <value>CSNFamilyIdStrengthNeed</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>identifiedStrengthNeed</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>ChildStrengthsNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>CSN10. Identified Child Strength/Need (not covered in CSN1-CSN9)</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>22</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="questionnaireVersionID">
+      <value>54359</value>
+    </attribute>
+    <attribute name="questionID">
+      <value>13117</value>
+    </attribute>
+    <attribute name="codeTableInd">
+      <value>0</value>
+    </attribute>
+    <attribute name="type">
+      <value>IEG_STRING</value>
+    </attribute>
+    <attribute name="iegQuestionID">
+      <value>comment</value>
+    </attribute>
+    <attribute name="questionPageID">
+      <value>ChildStrengthsNeeds</value>
+    </attribute>
+    <attribute name="questionText">
+      <value>Comment</value>
+    </attribute>
+    <attribute name="iegSequenceOrder">
+      <value>23</value>
+    </attribute>
+    <attribute name="datastoreEntity">
+      <value>Person</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
+  </row>
   <row>
     <attribute name="questionnaireVersionID">
       <value>600</value>
@@ -36,6 +1381,9 @@
     </attribute>
     <attribute name="datastoreEntity">
       <value>RiskOfSelfHarm</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
     </attribute>
   </row>
   <row>
@@ -66,6 +1414,9 @@
     <attribute name="datastoreEntity">
       <value>PublicSafetyRisk</value>
     </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
   </row>
   <row>
     <attribute name="questionnaireVersionID">
@@ -94,6 +1445,9 @@
     </attribute>
     <attribute name="datastoreEntity">
       <value>MandatoryHolds</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
     </attribute>
   </row>
   <row>
@@ -124,6 +1478,9 @@
     <attribute name="datastoreEntity">
       <value>SeriousDelinquent</value>
     </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
   </row>
   <row>
     <attribute name="questionnaireVersionID">
@@ -152,6 +1509,9 @@
     </attribute>
     <attribute name="datastoreEntity">
       <value>ResponsibleAdult</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
     </attribute>
   </row>
   <row>
@@ -182,6 +1542,9 @@
     <attribute name="datastoreEntity">
       <value>AsthmaAdult</value>
     </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
   </row>
   <row>
     <attribute name="questionnaireVersionID">
@@ -210,6 +1573,9 @@
     </attribute>
     <attribute name="datastoreEntity">
       <value>FamilyORCommunityResources</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
     </attribute>
   </row>
   <row>
@@ -240,6 +1606,9 @@
     <attribute name="datastoreEntity">
       <value>FamilyORCommunityResources</value>
     </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
   </row>
   <row>
     <attribute name="questionnaireVersionID">
@@ -268,6 +1637,9 @@
     </attribute>
     <attribute name="datastoreEntity">
       <value>SeriousDelinquent</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
     </attribute>
   </row>
   <row>
@@ -298,6 +1670,9 @@
     <attribute name="datastoreEntity">
       <value>RiskOfSelfHarm</value>
     </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
   </row>
   <row>
     <attribute name="questionnaireVersionID">
@@ -326,6 +1701,9 @@
     </attribute>
     <attribute name="datastoreEntity">
       <value>SeriousDelinquent</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
     </attribute>
   </row>
   <row>
@@ -356,6 +1734,9 @@
     <attribute name="datastoreEntity">
       <value>PublicSafetyRisk</value>
     </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
   </row>
   <row>
     <attribute name="questionnaireVersionID">
@@ -384,6 +1765,9 @@
     </attribute>
     <attribute name="datastoreEntity">
       <value>SeriousDelinquent</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
     </attribute>
   </row>
   <row>
@@ -414,6 +1798,9 @@
     <attribute name="datastoreEntity">
       <value>FamilyORCommunityResources</value>
     </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
   </row>
   <row>
     <attribute name="questionnaireVersionID">
@@ -442,6 +1829,9 @@
     </attribute>
     <attribute name="datastoreEntity">
       <value>AsthmaAdult</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
     </attribute>
   </row>
   <row>
@@ -472,6 +1862,9 @@
     <attribute name="datastoreEntity">
       <value>PublicSafetyRisk</value>
     </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
   </row>
   <row>
     <attribute name="questionnaireVersionID">
@@ -500,6 +1893,9 @@
     </attribute>
     <attribute name="datastoreEntity">
       <value>MandatoryHolds</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
     </attribute>
   </row>
   <row>
@@ -530,6 +1926,9 @@
     <attribute name="datastoreEntity">
       <value>RiskOfSelfHarm</value>
     </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
   </row>
   <row>
     <attribute name="questionnaireVersionID">
@@ -558,6 +1957,9 @@
     </attribute>
     <attribute name="datastoreEntity">
       <value>FamilyORCommunityResources</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
     </attribute>
   </row>
   <row>
@@ -588,6 +1990,9 @@
     <attribute name="datastoreEntity">
       <value>SeriousDelinquent</value>
     </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
   </row>
   <row>
     <attribute name="questionnaireVersionID">
@@ -616,6 +2021,9 @@
     </attribute>
     <attribute name="datastoreEntity">
       <value>PublicSafetyRisk</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
     </attribute>
   </row>
   <row>
@@ -646,6 +2054,9 @@
     <attribute name="datastoreEntity">
       <value>AsthmaAdult</value>
     </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
   </row>
   <row>
     <attribute name="questionnaireVersionID">
@@ -674,6 +2085,9 @@
     </attribute>
     <attribute name="datastoreEntity">
       <value>RiskOfSelfHarm</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
     </attribute>
   </row>
   <row>
@@ -704,6 +2118,9 @@
     <attribute name="datastoreEntity">
       <value>FelonyCharge</value>
     </attribute>
+    <attribute name="nameTextID">
+      <value />
+    </attribute>
   </row>
   <row>
     <attribute name="questionnaireVersionID">
@@ -732,6 +2149,9 @@
     </attribute>
     <attribute name="datastoreEntity">
       <value>MandatoryHolds</value>
+    </attribute>
+    <attribute name="nameTextID">
+      <value />
     </attribute>
   </row>
 </table>

@@ -1,55 +1,27 @@
-#
-# Licensed Materials - Property of IBM
-#
-# PID 5725-H26
-# 
-# Copyright IBM Corporation 2012, 2013. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-Submenu.Title.ManageProviderEnquiry=Provider Enquiry
-Submenu.Icon.ManageProviderEnquiry=Provider Enquiry
-Submenu.Tooltip.ManageProviderEnquiry=Provider Enquiry
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="InvestigationSearch">
 
-MenuItem.Title.CloseEnquiry=Close Enquiry
-MenuItem.Tooltip.CloseEnquiry=Close Enquiry
+  <!-- No Action Menu -->
 
-MenuItem.Title.Edit=Edit
-MenuItem.Tooltip.Edit=Edit
+  <!-- Details panel -->
+  <tc:context tab-name="Details.Name.InvestigationSearch" tab-title="Details.Title.InvestigationSearch"/>
 
-MenuItem.Title.TransferToEnrolledProvider=Transfer to Provider
-MenuItem.Tooltip.TransferToEnrolledProvider=Transfer to Provider
+  <!-- Navigation Panel -->
+  <tc:navigation page-id="Investigation_search"/>
 
-Submenu.Title.Search=Search
-Submenu.Icon.Search=Search
-Submenu.Tooltip.Search=Find a place, enquiry, service invoice, external access requests, unassigned provider member or participant.
 
-MenuItem.Title.SearchAvailablePlaces=Available Place
-MenuItem.Tooltip.SearchAvailablePlaces=Find an available place.
-
-MenuItem.Title.SearchEnquiry=Enquiry
-MenuItem.Tooltip.SearchEnquiry=Find an enquiry.
-
-MenuItem.Title.SearchExternalAccessRequests=External Access Requests
-MenuItem.Tooltip.SearchExternalAccessRequests=Find external access requests.
-
-Submenu.Title.Participant=Participant
-
-# BEGIN, CR00380476, MR
-Submenu.Icon.Participant=Participant
-# END, CR00380476 
-Submenu.Tooltip.Participant=Find a participant.
-
-MenuItem.Title.SearchProvider=Provider
-MenuItem.Tooltip.SearchProvider=Find a provider.
-
-MenuItem.Title.SearchProviderGroup=Provider Group
-MenuItem.Tooltip.SearchProviderGroup=Find a provider group.
-
-MenuItem.Title.SearchServiceInvoice=Service Invoice
-MenuItem.Tooltip.SearchServiceInvoice=Find a service invoice.
-
-MenuItem.Title.SearchUnassignedProviderMember=Unassigned Provider Member
-MenuItem.Tooltip.SearchUnassignedProviderMember=Find an unassigned provider member.
+</tc:tab-config>

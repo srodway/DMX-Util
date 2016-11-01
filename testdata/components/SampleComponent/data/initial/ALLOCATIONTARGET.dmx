@@ -38,6 +38,17 @@
   </row>
   <row>
     <attribute name="allocationTargetID">
+      <value>Enquiry Work Queue</value>
+    </attribute>
+    <attribute name="name">
+      <value>Enquiry Work Queue</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+  </row>
+  <row>
+    <attribute name="allocationTargetID">
       <value>External Request Work Queue</value>
     </attribute>
     <attribute name="name">
@@ -49,13 +60,13 @@
   </row>
   <row>
     <attribute name="allocationTargetID">
-      <value>Enquiry Work Queue</value>
+      <value>HEARINGSCHEDULER</value>
     </attribute>
     <attribute name="name">
-      <value>Enquiry Work Queue</value>
+      <value>Hearing Scheduler</value>
     </attribute>
     <attribute name="comments">
-      <value />
+      <value>Demo Hearing Scheduler Target</value>
     </attribute>
   </row>
   <row>

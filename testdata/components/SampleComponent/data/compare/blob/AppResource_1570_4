@@ -6,23 +6,14 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-# This Properties file contains resource Strings for the CER Ruleset.
+Number.Wizard.Pages=2
 
-CoreAdvisorRuleSet.abstractAdviceContext=Describes the context in which the advice is being given, e.g. for a person
-CoreAdvisorRuleSet.image=An image icon that will link to the correct advice page.
-CoreAdvisorRuleSet.parameter=Parameter to the correct advice page.
-CoreAdvisorRuleSet.dateParameter=Date parameter to the correct advice page.
-CoreAdvisorRuleSet.stringParameter=String parameter to the correct advice page.
+ProductDelivery_getParticipantAndLiabilityWizard.Wizard.Item.Text=Select Client
+ProductDelivery_getParticipantAndLiabilityWizard.Wizard.Page.Title=Step 1:
+ProductDelivery_getParticipantAndLiabilityWizard.Wizard.Page.Desc=Select Client
+Wizard.PageID.1=ProductDelivery_getParticipantAndLiabilityWizard
 
-CoreAdvisorRuleSet.numberParameter=Number parameter to the correct advice page.
-CoreAdvisorRuleSet.userRole=User role of users to whom the advice is available.
-
-CoreAdvisorRuleSet.abstractLink=Link to a piece of advice.
-CoreAdvisorRuleSet.abstractAdviceItem=A piece of advice output by the advisor ruleset.
-
-AdviceContext.description={0}
-AdviceItem.description={0}
-Link.description={0}
-Parameter.description={0}
-UserRole.description={0}
-
+ProductDelivery_createAppliedFixedDeductionWizard.Wizard.Item.Text=Deduction Details
+ProductDelivery_createAppliedFixedDeductionWizard.Wizard.Page.Title=Step 2:
+ProductDelivery_createAppliedFixedDeductionWizard.Wizard.Page.Desc=Deduction Details
+Wizard.PageID.2=ProductDelivery_createAppliedFixedDeductionWizard

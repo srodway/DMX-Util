@@ -19,23 +19,17 @@
         </RelatedCPAttribute>
       </Attribute>
       <Attribute>
-        <RelatedCPAttribute
-          cpRoleType="RPR"
-          name="relatedParticipant"
-          participantType="Person"
-        >
-          <CPSearchType code="MEM"/>
-          <CPSearchType code="PRI"/>
-        </RelatedCPAttribute>
+        <AddressAttribute
+          mandatory="true"
+          name="address"
+        />
       </Attribute>
       <Attribute>
         <DataAttribute
           mandatory="true"
           name="fromDate"
         >
-          <DomainType dataType="Date">
-            <DateOptions currentDate="LessThanOrEqualTo"/>
-          </DomainType>
+          <DomainType dataType="Date"/>
         </DataAttribute>
       </Attribute>
       <Attribute>
@@ -46,22 +40,23 @@
       <Attribute>
         <DataAttribute
           mandatory="true"
-          name="relationshipType"
+          name="addressType"
         >
           <DomainType dataType="Codetable">
-            <CodetableOptions codetableName="RelationshipTypeCode"/>
-          </DomainType>
-        </DataAttribute>
-      </Attribute>
-      <Attribute>
-        <DataAttribute name="endReason">
-          <DomainType dataType="Codetable">
-            <CodetableOptions codetableName="RelationshipEndReason"/>
+            <CodetableOptions codetableName="AddressType"/>
           </DomainType>
         </DataAttribute>
       </Attribute>
       <Attribute>
         <CommentsAttribute name="comments"/>
+      </Attribute>
+      <Attribute>
+        <DataAttribute
+          defaultValue="false"
+          name="preferredInd"
+        >
+          <DomainType dataType="Boolean"/>
+        </DataAttribute>
       </Attribute>
     </Attributes>
     <Relationships/>
@@ -70,25 +65,7 @@
     <PatternValidations>
       <Validator>
         <ComparisonValidator
-          operator="NotEqualTo"
-          shallow="false"
-          source="participant"
-          target="relatedParticipant"
-          useClause="false"
-          useLiteral="false"
-        />
-      </Validator>
-      <Validator>
-        <DependentAttributeValidator
-          dependency="MustEnter"
-          source="participant"
-          target="relatedParticipant"
-          unidirectional="false"
-        />
-      </Validator>
-      <Validator>
-        <ComparisonValidator
-          operator="LessThan"
+          operator="LessThanOrEqualTo"
           shallow="false"
           source="fromDate"
           target="toDate"
@@ -96,29 +73,20 @@
           useLiteral="false"
         />
       </Validator>
-      <Validator>
-        <DependentAttributeValidator
-          dependency="MustEnter"
-          source="toDate"
-          target="endReason"
-          unidirectional="false"
-        />
-      </Validator>
     </PatternValidations>
-    <CustomRulesValidation ruleSetName="PDCRelationshipsValidationRuleSet"/>
+    <CustomRulesValidation ruleSetName="PDCAddressValidationRuleSet"/>
   </Validations>
   <SummaryInformation>
-    <SummaryRuleset ruleSetName="PDCRelationshipsSummaryRuleSet"/>
+    <SummaryRuleset ruleSetName="PDCAddressSummaryRuleSet"/>
   </SummaryInformation>
-  <UserInterface
-    createDialogWidth="700"
-    modifyDialogWidth="700"
-  >
+  <UserInterface createDialogWidth="900">
     <Cluster>
       <RelCPCluster
+        defaultToBlank="false"
+        enableMultiMemberUpdates="true"
         fullCreateParticipant="false"
         isOnCreatePage="true"
-        isOnModifyPage="false"
+        isOnModifyPage="true"
         isOnViewPage="true"
         modifyOption="no"
         showParticipantTypeFilter="true"
@@ -130,50 +98,24 @@
       </RelCPCluster>
     </Cluster>
     <Cluster>
-      <RelCPCluster
-        fullCreateParticipant="true"
-        isOnCreatePage="true"
-        isOnModifyPage="true"
-        isOnViewPage="true"
-        modifyOption="no"
-        searchOption="Person"
-        showParticipantTypeFilter="true"
-        useSingleName="false"
-      >
-        <StandardField source="relatedParticipant"/>
-        <ClusterName id="RelatedTo"/>
-        <DescriptionName id="RelatedTo.RelatedPerson.Description.ID1"/>
-        <RelCpPfx id="Participant.Description.ID3"/>
-        <SecondName id="RelatedTo.LastName.Label"/>
-      </RelCPCluster>
-    </Cluster>
-    <Cluster>
       <StandardCluster
         isOnCreatePage="true"
         isOnModifyPage="true"
         isOnViewPage="true"
         numberOfColumns="2"
       >
-        <Title id="Cluster.Title.ID1"/>
+        <Title id="Cluster.Title.AddressdDetails"/>
         <StandardClusterField>
           <StandardField
             modifiable="false"
-            source="relationshipType"
-            useBlank="true"
-            useDefault="false"
+            source="addressType"
+            useDefault="true"
           >
             <Label id="Field.Label.Type"/>
           </StandardField>
         </StandardClusterField>
         <StandardClusterField>
-          <StandardField
-            modifiable="true"
-            source="endReason"
-            useBlank="true"
-            useDefault="false"
-          >
-            <Label id="Field.Label.EndReason"/>
-          </StandardField>
+          <SkipField/>
         </StandardClusterField>
         <StandardClusterField>
           <StandardField
@@ -191,6 +133,35 @@
             useDefault="false"
           >
             <Label id="Field.Label.To"/>
+          </StandardField>
+        </StandardClusterField>
+      </StandardCluster>
+    </Cluster>
+    <Cluster>
+      <AddressCluster
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+        numberOfColumns="2"
+      >
+        <StandardField source="address"/>
+      </AddressCluster>
+    </Cluster>
+    <Cluster>
+      <StandardCluster
+        isOnCreatePage="true"
+        isOnModifyPage="true"
+        isOnViewPage="true"
+        labelWidth="40"
+        numberOfColumns="2"
+      >
+        <StandardClusterField>
+          <StandardField
+            modifiable="true"
+            source="preferredInd"
+            useDefault="true"
+          >
+            <Label id="Field.Label.PreferredInd"/>
           </StandardField>
         </StandardClusterField>
       </StandardCluster>

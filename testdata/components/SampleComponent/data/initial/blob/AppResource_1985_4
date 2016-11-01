@@ -1,26 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+#
+# PID 5725-H26
+# 
+# Copyright IBM Corporation 2014. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+# This Properties file contains resource Strings for the Adult Social Care Product Rule Set.
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009 Curam Software Ltd.
-  All rights reserved.
+CaseHeader.description = Case ID {0}
+Calculator.description=Calculator Class for {0}
+CaseParticipantRole.description={0}
+Person.description=Person {0}
+HouseholdMember.description=Household Member Record for {0}
+ConcernRole.description={0}
+Person.description=Person Record for {0}
+MemberCPRCalculator.description=Member CaseParticipantRole Calculator Class for {0}
+HouseholdMember.description=HouseholdMember Record for {0}
 
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ServicePlanTemplateMenu">
-  
-  <mc:submenu id="Edit" title="Submenu.Title.Edit" tooltip="Submenu.Tooltip.Edit">   
-  </mc:submenu>
-  
-  <mc:submenu id="Search" title="Submenu.Title.Search" tooltip="Submenu.Tooltip.Search">
-    <mc:menu-item id="User" open-as="modal" page-id="Organization_adminUserSearch" title="MenuItem.Title.User" tooltip="MenuItem.Tooltip.User"/>    
-    <mc:menu-item id="ExternalUser" open-as="modal" page-id="ExternalUsers_userSearch" title="MenuItem.Title.ExternalUser" tooltip="MenuItem.Tooltip.ExternalUser"/>
-  </mc:submenu>
-  
-</mc:menu-bar>
+AgeRangeCalculator.description=Age Range Calculator class for {0}
+DisplayHelper.description={0}
+
+Application.description=Application {0}
+
+ContributionByYear.description= Contribution By Year Class for {0}
+ContributionsByYearCalculator.description= Contribution By Year
+
+PractitionerCert.description=Practitioner Certification with start date {0}

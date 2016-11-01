@@ -1,18 +1,298 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
  
-  Copyright IBM Corporation 2012. All Rights Reserved.
+  PID 5725-H26
+ 
+  Copyright IBM Corporation 2010, 2014, 2015. All Rights Reserved.
 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="ServicePlanTemplate">
-  <nc:nodes/>
-</nc:navigation>
+    Copyright 2010-2011 Curam Software Ltd.
+    All rights reserved.
+
+    This software is the confidential and proprietary information of Curam
+    Software, Ltd. ("Confidential Information"). You shall not disclose
+    such Confidential Information and shall use it only in accordance with the
+    terms of the license agreement you entered into with Curam Software.
+--><sc:section-shortcut-panel xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-shortcut-panel" id="ADMINAPPSectionShortcuts" title="AdminAppSectionShortcuts.title">
+
+  <sc:nodes>
+    <sc:node id="Search" title="Search.Title" type="group">
+      <sc:node id="UserSearch" page-id="Organization_adminUserSearch" title="UserSearch.Title" type="leaf"> </sc:node>
+
+      <sc:node id="NewUser" open-as="modal" page-id="Organization_createUser" title="NewUser.Title" type="leaf"> </sc:node>
+
+      <sc:node id="SearchSep1" type="separator"/>
+
+      <sc:node id="ExternalSearch" page-id="ExternalUsers_userSearch" title="ExternalSearch.Title" type="leaf"> </sc:node>
+
+      <sc:node id="NewExternalUser" open-as="modal" page-id="ExternalUser_createUser" title="NewExternalUser.Title" type="leaf"> </sc:node>
+    </sc:node>
+
+    <sc:node id="Organisation" title="Organization.Title" type="group">
+      <sc:node id="NewUser1" open-as="modal" page-id="Organization_createUser" title="NewUser.Title" type="leaf"> </sc:node>
+      <sc:node id="NewAnnouncement" open-as="modal" page-id="Organization_createAnnouncement" title="NewAnnouncement.Title" type="leaf"> </sc:node>
+
+      <sc:node id="OrgSep1" type="separator"/>
+
+      <sc:node id="OrganizationHome" page-id="Organization_home" title="OrganizationHome.Title" type="leaf"> </sc:node>
+    </sc:node>
+    
+    <!-- BEGIN, CR00347251, ZV -->
+    <sc:node id="Participants" title="Participants.Title" type="group">
+      <sc:node id="Person" page-id="PDCEvidenceLink_listPerson" title="Person.Title" type="leaf"> </sc:node>
+              
+      <!-- BEGIN, CR00352148, SR -->  
+      <sc:node id="PersonMatch" page-id="PersonMatchAdmin_listSearchCriteria" title="PersonMatch.Title" type="leaf"> </sc:node>
+      <sc:node id="PersonMatchSeparator" type="separator"/>
+      <!-- END, CR00352148-->
+        	  
+	  <sc:node id="ProspectPerson" page-id="PDCEvidenceLink_listProspectPerson" title="ProspectPerson.Title" type="leaf"> </sc:node>
+    </sc:node>
+    <!-- END, CR00347251 -->
+    
+    <sc:node id="Case" title="Case.Title" type="group">
+      <sc:node id="Deductions" page-id="Resource_listDeductions" title="Deductions.Title" type="leaf"> </sc:node>
+      <sc:node id="DeliveryMethod" page-id="Resource_listDeliveryMethod" title="DeliveryMethod.Title" type="leaf"> </sc:node>
+      <sc:node id="EvidenceApprovals" page-id="Resource_listTemporalEvidenceApprovalCheck" title="EvidenceApprovals.Title" type="leaf"> </sc:node>
+      <sc:node id="Milestones" page-id="Product_listMilestoneConfiguration" title="Milestones.Title" type="leaf"> </sc:node>
+      <sc:node id="Resolutions" page-id="Product_listResolution" title="Resolutions.Title" type="leaf"> </sc:node>
+      <sc:node id="Services" page-id="Resource_listService" title="Services.Title" type="leaf"> </sc:node>
+
+      <sc:node id="CaseSep1" type="separator"/>
+
+      <sc:node id="IntegratedCase" page-id="Resource_listIntegratedCaseType1" title="IntegratedCase.Title" type="leaf"> </sc:node>
+      <sc:node id="ProductDeliveryCase" page-id="Product_listBenefit1" title="ProductDeliveryCase.Title" type="leaf"> </sc:node>
+      <sc:node id="Corrections" page-id="Product_listCorrection" title="Corrections.Title" type="leaf"> </sc:node>
+      <sc:node id="Assessments" page-id="Resource_listAssessment" title="Assessments.Title" type="leaf"> </sc:node>
+      <sc:node id="Screenings" page-id="Resource_listScreening" title="Screenings.Title" type="leaf"> </sc:node>
+
+      <sc:node id="CaseSep2" type="separator"/>
+      <sc:node id="AppealProcessAdmin" page-id="AppealProcessAdmin_listProcesses" title="Appeals.Title" type="leaf"> </sc:node>
+      <sc:node id="Investigations" page-id="Product_listInvestigationConfiguration" title="Investigations.Title" type="leaf"> </sc:node>
+      <sc:node id="Issues" page-id="Product_listIssueConfiguration" title="Issues.Title" type="leaf"> </sc:node>
+      <sc:node id="LegalActions" page-id="AdminLegalAction_listLegalAction" title="LegalActions.Title" type="leaf"> </sc:node>
+      </sc:node>
+
+    <sc:node id="RulesAndEvidence" title="RulesAndEvidence.Title" type="group">
+      <sc:node id="CuramExpressRuleSets" page-id="CreoleAdmin_listAllRuleSets" title="CuramExpressRuleSets.Title" type="leaf"> </sc:node>
+      <sc:node id="CuramExpressRuleCategories" page-id="CreoleRuleSetCategory_list" title="CuramExpressRuleCategories.Title" type="leaf"> </sc:node>
+      <sc:node id="CuramExpressRuleDataConfig" page-id="CREOLEPropConfig_listLiveAndSandbox" title="CuramExpressRuleDataConfig.Title" type="leaf"> </sc:node>
+
+      <sc:node id="RulesAndEvidenceSep1" type="separator"/>
+
+      <sc:node id="ClassicRuleSets" page-id="RulesEditor_listEligibilityRuleSet" title="ClassicRuleSets.Title" type="leaf"> </sc:node>
+
+      <sc:node id="RulesAndEvidenceSep2" type="separator"/>
+
+      <sc:node id="RateTables" page-id="Organization_listRateTable" title="RateTables.Title" type="leaf"> </sc:node>
+
+      <sc:node id="RulesAndEvidenceSep3" type="separator"/>
+
+      <sc:node id="DynamicEvidence" page-id="Product_listDynamicEvidenceMetadata1" title="DynamicEvidence.Title" type="leaf"> </sc:node>
+      <sc:node id="StaticEvidence" page-id="Product_listEvidenceMetadata" title="StaticEvidence.Title" type="leaf"> </sc:node>
+      <sc:node id="EvidenceBroker" page-id="EvidenceBroker_listIdenticalSharedEvidenceConfig" title="EvidenceBroker.Title" type="leaf"> </sc:node>
+      <!-- BEGIN, CR00427818, GK -->
+      <sc:node id="NonIdenticalEvidenceAttributeMapping" page-id="EvidenceBroker_listNonIdenticalAttributesConfig" title="NonIdenticalEvidenceAttributeMapping.Title" type="leaf"> </sc:node>
+      <!-- END, CR00427818 -->
+    </sc:node>
+
+    <sc:node id="IEG" title="IEG.Title" type="group">
+      <sc:node id="ListIEG2" page-id="IEG2_listAllIEG2Scripts" title="ListIEG2.Title" type="leaf"> </sc:node>
+      <sc:node id="ListDatastore" page-id="IEG2_listAllDatastoreSchemas" title="ListDatastore.Title" type="leaf"> </sc:node>
+      <sc:node id="ListResourceStore" page-id="IEG2_listAllResourcesByCategory" title="ListResourceStore.Title" type="leaf"> </sc:node>
+    </sc:node>
+
+    <sc:node id="DUIMAdmin" title="DynamicUIMAdmin.Title" type="group">
+      <sc:node id="ListDynamicUIMAdmin" page-id="DUIM_listDynamicPages" title="DynamicUIMAdmin.Title" type="leaf"> </sc:node>
+    </sc:node>
+
+    <sc:node id="Verifications" title="Verifications.Title" type="group">
+      <sc:node id="NewCategory" open-as="modal" page-id="VerificationAdmin_createVerificationCategory" title="NewCategory.Title" type="leaf"> </sc:node>
+      <sc:node id="NewItem" open-as="modal" page-id="VerificationAdmin_createVerificationItem" title="NewItem.Title" type="leaf"> </sc:node>
+
+      <sc:node id="VerificationsSep1" type="separator"/>
+
+      <sc:node id="Categories" page-id="VerificationAdmin_listCategories" title="VerificationCategories.Title" type="leaf"> </sc:node>
+
+      <sc:node id="Items" page-id="VerificationAdmin_listVerificationItem" title="VerificationItems.Title" type="leaf"> </sc:node>
+
+      <sc:node id="VerificationHome" page-id="VerificationAdmin_resolveCategories" title="VerificationHome.Title" type="leaf"> </sc:node>
+    </sc:node>
+
+    <sc:node id="ServicePlans" title="ServicePlans.Title" type="group">
+      <sc:node id="ViewServicePlans" page-id="ServicePlanAdmin_listServicePlans" title="ViewServicePlans.Title" type="leaf"> </sc:node>
+      <sc:node id="ServicePlanGroups" page-id="ServicePlanAdmin_listServicePlanGroups" title="ServicePlanGroups.Title" type="leaf"> </sc:node>
+      <sc:node id="Goals" page-id="ServicePlanAdmin_listGoals" title="Goals.Title" type="leaf"> </sc:node>
+      <sc:node id="SubGoals" page-id="ServicePlanAdmin_listSubGoals" title="SubGoals.Title" type="leaf"> </sc:node>
+      <sc:node id="PlanItems" page-id="ServicePlanAdmin_listPlanItems" title="PlanItems.Title" type="leaf"> </sc:node>
+      <sc:node id="ExpectedOutcomes" page-id="ServicePlanAdmin_listOutcomes1" title="ExpectedOutcomes.Title" type="leaf"> </sc:node>
+      <sc:node id="GoodCauses" page-id="ServicePlanAdmin_listGoodCauses1" title="GoodCauses.Title" type="leaf"> </sc:node>
+      <sc:node id="ApprovalCriteria" page-id="ServicePlanAdmin_listApprovalCriteria" title="ApprovalCriteria.Title" type="leaf"> </sc:node>
+      <sc:node id="TaskConfigurations" page-id="ServicePlanAdmin_listTaskConfig" title="TaskConfigurations.Title" type="leaf"> </sc:node>
+    </sc:node>
+
+    <sc:node id="CaseAudits" title="CaseAudits.Title" type="group">
+      <sc:node id="AuditConfiguration" page-id="CaseAuditConfiguration_listCaseAuditConfigurations" title="AuditConfiguration.Title" type="leaf"> </sc:node>
+      <sc:node id="NewConfiguration" open-as="modal" page-id="CaseAuditConfiguration_selectCaseTypeAndCategory" title="NewConfiguration.Title" type="leaf"> </sc:node>
+    </sc:node>
+
+
+    <sc:node id="Workflow" title="Workflow.Title" type="group">
+      <sc:node id="NewProcess" open-as="modal" page-id="ProcessDefinitionTool_createProcess" title="NewProcess.Title" type="leaf" visible="true"/>
+      <sc:node id="ImportProcess" open-as="modal" page-id="ProcessDefinitionTool_importProcess" title="ImportProcess.Title" type="leaf" visible="true"/>
+      <sc:node id="ReleasedProcesses" page-id="ProcessDefinitionTool_listLatestReleasedProcesses" title="ReleasedProcesses.Title" type="leaf" visible="true"/>
+      <sc:node id="InEditProcesses" page-id="ProcessDefinitionTool_listLatestUnreleasedProcesses" title="InEditProcesses.Title" type="leaf" visible="true"/>
+      <sc:node id="MethodRefs" page-id="ProcessDefinitionTool_listBPOMethodReferences" title="MethodRefs.Title" type="leaf" visible="true"/>
+      <sc:node id="WDOTemplates" page-id="ProcessDefinitionTool_listWDOTemplates" title="WDOTemplates.Title" type="leaf" visible="true"/>
+      <sc:node id="Events" page-id="WorkflowEvents_listEventClasses" title="Events.Title" type="leaf" visible="true"/>
+      <sc:node id="WorkQueues" page-id="WorkAllocation_listWorkQueue" title="WorkQueues.Title" type="leaf" visible="true"/>
+      <sc:node id="AllocTargets" page-id="WorkAllocation_listAllocationTarget" title="AllocTargets.Title" type="leaf" visible="true"/>
+      <sc:node id="CERRuleSets" page-id="WorkflowAllocation_listCERRuleSets" title="CERRuleSets.Title" type="leaf" visible="true"/>  
+    </sc:node>    
+
+    <!-- BEGIN, CR00413602, EC -->   
+    <sc:node id="ProcessMonitoring" title="ProcessMonitoring.Title" type="group">
+	    <sc:node id="ProcessInstanceSearch" page-id="WorkflowAdministration_processInstanceSearchByProcessDetails" title="PISearch.Title" type="leaf" visible="true"/>
+	    <sc:node id="ProcessInstanceErrors" page-id="WorkflowAdministration_processInstanceErrorsSearchByProcessDetails" title="Errors.Title" type="leaf" visible="true"/>
+    </sc:node>
+    <!-- END, CR00413602 -->   
+
+    <!-- BEGIN, CR00260108, MR -->
+    <!-- BEGIN, CR00260939, MR -->
+    <!-- BEGIN, CR00280221, SS -->
+    <sc:node id="CTM" title="CTM.Title" type="group">
+              <sc:node id="ChangeSets" page-id="CTM_listChangeSet" title="ChangeSets.Title" type="leaf">
+              </sc:node>
+    </sc:node>
+    <!-- END, CR00280221 -->
+    <!-- END, CR00260939 -->
+    <!-- END, CR00260108 -->
+
+    <sc:node id="UserInterface" title="UserInterface.Title" type="group">
+      <sc:node id="UIAdminApps" page-id="UIAdmin_listAllApps" title="UIAdminApps.Title.Apps" type="leaf" visible="true"/>
+      <sc:node id="UIAdminSections" page-id="UIAdmin_listAllSections" title="UIAdminSections.Title.Sections" type="leaf" visible="true"/>
+      <sc:node id="UIAdminTabs" page-id="UIAdmin_listAllTabs" title="UIAdminTabs.Title.Tabs" type="leaf" visible="true"/>
+      <sc:node id="UIAdminPublish" open-as="modal" page-id="UIAdmin_publishChanges" title="UIAdminPublish.Title.Publish" type="leaf" visible="true"/>
+
+      <sc:node id="UserInterfaceSep1" type="separator"/>
+
+      <sc:node id="PersonalisedPageConfig" page-id="CustomPageAdmin_listCustomPages" title="PersonalisedPageConfig.Title" type="leaf"> </sc:node>
+      <sc:node id="QuickLinks" page-id="Organization_listQuickLinks" title="QuickLinks.Title" type="leaf"> </sc:node>
+      <sc:node id="ApplicationWorkspace" page-id="Organization_listApplication" title="ApplicationWorkspace.Title" type="leaf"> </sc:node>
+
+      <sc:node id="UserInterfaceSep2" type="separator"/>
+
+      <sc:node id="Advisor" page-id="AdvisorAdmin_listAdviceContextConfiguration" title="Advisor.Title" type="leaf"> </sc:node>
+    </sc:node>
+
+    <sc:node id="Financial" title="Financial.Title" type="group">
+       <!-- BEGIN, CR00377762, AC -->
+        <sc:node id="NewBankAccount" open-as="modal" page-id="Organization_createBankAccount" title="NewBankAccount.Title" type="leaf"> </sc:node>
+        <!-- END, CR00377762 -->    
+      <sc:node id="BankAccounts" page-id="Organization_listBankAccount" title="BankAccounts.Title" type="leaf"> </sc:node>
+      <sc:node id="Banks" page-id="Organization_listBank" title="Banks.Title" type="leaf"> </sc:node>
+      <sc:node id="ExchangeRates" page-id="Organization_listCurrencyExchange" title="ExchangeRates.Title" type="leaf"> </sc:node>
+
+      <sc:node id="NewExchangeRate" open-as="modal" page-id="Organization_createCurrencyExchange" title="NewExchangeRate.Title" type="leaf"> </sc:node>
+      <sc:node id="InsuranceReturnPeriods" page-id="Organization_listInsuranceReturnPeriod" title="InsuranceReturnPeriods.Title" type="leaf"> </sc:node>        
+      
+      <!-- BEGIN, CR00279176, AKr -->
+      <!-- BEGIN, CR00293304, KRK -->
+      <sc:node id="FinancialCalendar" page-id="Organization_cashCalendarDefault" title="FinancialCalendar.Title" type="leaf"> </sc:node>
+        <!-- END, CR00293304 -->
+        <!-- END, CR00279176 -->        
+        
+    </sc:node>
+
+    <sc:node id="ProviderManagement" title="ProviderManagement.Title" type="group">
+      <sc:node id="ListServiceOffering" page-id="ProviderManagement_listServiceOffering" title="ListServiceOffering.Title" type="leaf"> </sc:node>
+        <!-- BEGIN, CR00292335, SS -->
+      <sc:node id="SearchServiceOffering" page-id="ProviderManagement_searchServiceOffering" title="SearchServiceOffering.Title" type="leaf"> </sc:node>
+      <!-- END, CR00292335 -->
+      <sc:node id="NewServiceOffering" open-as="modal" page-id="ProviderManagement_createServiceOffering" title="NewServiceOffering.Title" type="leaf"> </sc:node>
+      <sc:node id="ListTraining" page-id="ProviderManagement_listTraining" title="ListTraining.Title" type="leaf"> </sc:node>
+      <sc:node id="NewTraining" open-as="modal" page-id="ProviderManagement_createTraining" title="NewTraining.Title" type="leaf"> </sc:node>
+      <sc:node id="TaxonomyTerm" page-id="ProviderManagement_listTaxonomyVersion" title="Taxonomy.Title" type="leaf"> </sc:node>
+
+      <sc:node id="SearchTaxonomy" page-id="ProviderManagement_searchTaxonomyTermsByKeyWord" title="SearchTaxonomy.Title" type="leaf"> </sc:node>
+      <sc:node id="ListServiceGroup" page-id="ProviderManagement_browseAllServiceGroups" title="ListServiceGroup.Title" type="leaf"> </sc:node>
+      <sc:node id="ListCertification" page-id="ProviderManagement_listCertification" title="ListCertification.Title" type="leaf"> </sc:node>
+
+      <sc:node id="ProviderManagementSep1" type="separator"/>
+
+      <sc:node id="ListEvaluationCriteria" page-id="ProviderManagement_listEvaluationCriterionForAdmin" title="ListEvaluationCriteria.Title" type="leaf"> </sc:node>
+      <sc:node id="ListPerformanceMeasure" page-id="ProviderManagement_listPerformanceMeasuresForAdmin" title="ListPerformanceMeasure.Title" type="leaf"> </sc:node>
+
+      <sc:node id="ProviderManagementSep2" type="separator"/>
+
+      <sc:node id="PaymentConfig" page-id="ProviderManagement_paymentAndAttendanceConfiguration" title="PaymentConfig.Title" type="leaf"> </sc:node>
+      <sc:node id="ListAbsenceReason" page-id="ProviderManagement_listAgencyAbsenceReasonConfiguration" title="ListAbsenceReason.Title" type="leaf"> </sc:node>
+      <sc:node id="ListSpecialtyTypeIcons" page-id="ProviderManagement_listSpecialtyTypeIcon" title="ListSpecialtyTypeIcons.Title" type="leaf"> </sc:node>
+    </sc:node>
+
+    <sc:node id="CuramDecisionAssist" title="DecisionAssist.Title" type="group">
+      <sc:node id="ListAssessments" page-id="DecisionAssistAdmin_listAssessments" title="ListAssessments.Title" type="leaf"> </sc:node>
+      <sc:node id="NewAssessment" open-as="modal" page-id="DecisionAssistAdmin_createAssessment" title="NewAssessment.Title" type="leaf"> </sc:node>
+      <sc:node id="ListDeterminationConfigurations" page-id="DecisionAssistAdmin_listDeterminationConfig" title="ListDeterminationConfigurations.Title" type="leaf"> </sc:node>
+      <sc:node id="NewDeterminationConfiguration" open-as="modal" page-id="DecisionAssistAdmin_createDeterminationConfig" title="NewDeterminationConfiguration.Title" type="leaf"> </sc:node>
+      <sc:node id="ListQuestionnaire" page-id="DecisionAssistAdmin_listQuestionnaire" title="ListQuestionnaire.Title" type="leaf"> </sc:node>
+      <sc:node id="NewQuestionnaire" open-as="modal" page-id="DecisionAssistAdmin_createQuestionnaire" title="NewQuestionnaire.Title" type="leaf"> </sc:node>
+      <sc:node id="ListOutcomes" page-id="DecisionAssistAdmin_listOutcome" title="ListOutcomes.Title" type="leaf"> </sc:node>
+      <sc:node id="NewOutcome" open-as="modal" page-id="DecisionAssistAdmin_createOutcome" title="NewOutcome.Title" type="leaf"> </sc:node>
+      <sc:node id="ListConditions" page-id="DecisionAssistAdmin_listConditions" title="ListConditions.Title" type="leaf"> </sc:node>
+      <sc:node id="ListICDCodeVersions" page-id="DecisionAssistAdmin_listICDCodeVersions" title="ListICDCodeVersions.Title" type="leaf"> </sc:node>
+    </sc:node>
+
+    <sc:node id="SocialEnterpriseCollaborationGroup" title="SocialEnterpriseCollaborationGroup.Title" type="group">
+      <sc:node id="SocialEnterpriseFolders" page-id="SocialEnterpriseFolderAdministration_listSEFTypes" title="SocialEnterpriseFolders.Title" type="leaf"/>
+      <sc:node id="MultidisciplinaryTeams" page-id="MultidisciplinaryTeam_list" title="MultidisciplinaryTeams.Title" type="leaf"/>
+      <sc:node id="MultidisciplinaryTeamMembers" page-id="MultidisciplinaryTeamMember_list" title="MultidisciplinaryTeamMembers.Title" type="leaf"/>
+      <sc:node id="MDTMemberRoles" page-id="MultidisciplinaryTeamMemberRole_list" title="MDTMemberRoles.Title" type="leaf"/>
+    </sc:node>
+
+    <sc:node id="OutcomeManagementGroup" title="OutcomeManagementGroup.Title" type="group">
+      <sc:node id="OMPlans" page-id="OutcomePlanAdmin_listOutcomePlanAdmin" title="Plans.Title" type="leaf"/>
+      <sc:node id="OMGoals" page-id="OutcomePlanAdmin_listOutcomePlanGoals" title="OutcomePlanGoals.Title" type="leaf"/>
+      <sc:node id="OMObjectives" page-id="OutcomePlanAdmin_listExpectedOutcomes" title="Objectives.Title" type="leaf"/>
+      <sc:node id="OMActions" page-id="OutcomePlanActionAdmin_listOutcomePlanActionAdmin" title="Actions.Title" type="leaf"/>
+      <sc:node id="OMFactors" page-id="OutcomePlanActionAdmin_listOutcomePlanFactorAdmin" title="Factors.Title" type="leaf"/>
+      <sc:node id="OMProgress" page-id="ProgressAdmin_list" title="Progress.Title" type="leaf"/>
+      <sc:node id="OMSep1" type="separator"/>
+      <sc:node id="OMAssessmentDefinitions" page-id="AssessmentPlanningAdmin_listAssessmentDefinitions" title="AssessmentDefinitions.Title" type="leaf"/>
+      <sc:node id="OMCERAssessments" page-id="AssessmentPlanningAdmin_listCERTSpecification" title="CERAssessments.Title" type="leaf"/>
+      <sc:node id="OMCDAAssessments" page-id="DAAssessmentConfiguration_list" title="CDAAssessments.Title" type="leaf"/>
+      <sc:node id="OMSep2" type="separator"/>
+      <sc:node id="OMAdminConditions" page-id="ConditionAdmin_listConditions" title="Conditions.Title" type="leaf"/>
+      <sc:node id="OMSep3" type="separator"/>
+      <sc:node id="OMFedComps" page-id="OutcomePlanFederalAllowableComponent_list" title="FedComps.Title" type="leaf"/>
+    <sc:node id="KeywordAdmin" page-id="KeywordAdmin_resolveSearch" title="KeywordAdmin.Title" type="leaf"/></sc:node>
+
+    <sc:node id="CitizenSelfService" title="Folder.Title.CitizenSelfService" type="group">
+      <sc:node id="OnlineCategories" page-id="CitizenWorkspaceAdmin_listCategories" title="Leaf.Title.OnlineCategories" type="leaf"/>
+      <sc:node id="IntakeApplications" page-id="CitizenWorkspaceAdmin_listOnlineIntakeApplications" title="Leaf.Title.IntakeApplications" type="leaf"/>
+      <sc:node id="CSSScreenings" page-id="CitizenWorkspaceAdmin_listScreenings" title="Leaf.Title.Screenings" type="leaf"/>
+      <sc:node id="Programs" page-id="CitizenWorkspaceAdmin_listPrograms" title="Leaf.Title.Programs" type="leaf"/>
+      <sc:node id="PDFForms" page-id="CitizenWorkspaceAdmin_listPDFForms" title="Leaf.Title.PDFForms" type="leaf"/>
+      <sc:node id="ServiceAreas" page-id="WorkspaceServices_listServiceAreas" title="Leaf.Title.ServiceAreas" type="leaf"/>
+      <sc:node id="CSSSep1" type="separator"/>
+      <sc:node id="LifeEvents" page-id="CitizenWorkspaceAdmin_lifeEventTypeList" title="Leaf.Title.LifeEvents" type="leaf"/>
+      <sc:node id="SocialRecordEvidenceTypes" page-id="CitizenWorkspaceAdmin_listSocialRecordEvidenceTypes" title="Leaf.Title.SocialRecordEvidenceTypes" type="leaf"/>        
+      <sc:node id="CitizenCampaigns" page-id="CitizenWorkspaceAdmin_listAllCitizenCampaigns" title="Leaf.Title.CitizenCampaigns" type="leaf"/>
+      <sc:node id="SystemMessages" page-id="SystemMessage_listSystemMessages" title="Leaf.Title.SystemMessages" type="leaf"/>
+      <sc:node id="ParticipantMessages" page-id="ParticipantMessageConfiguration_viewParticipantMessageType" title="Leaf.Title.ParticipantMessages" type="leaf"/>
+      <sc:node id="MotivationTypes" page-id="CitizenWorkspaceAdmin_listMotivationTypes" title="Leaf.Title.MotivationTypes" type="leaf"/>
+      <sc:node id="ResultsPageActions" page-id="CitizenWorkspaceAdmin_listResultsPageActions" title="Leaf.Title.ResultsPageActions" type="leaf"/>        
+      <sc:node id="CSSSep2" type="separator"/>
+      <sc:node id="ResultsCategoriesTab" page-id="CitizenWorkspaceAdmin_listAllResultsCategory" title="Leaf.Title.ResultsCategories" type="leaf"/>      
+      <sc:node id="CSSSep3" type="separator"/>
+      <sc:node id="ExternalSystems" page-id="RemoteSystem_listRemoteSystem" title="Leaf.Title.RemoteSystems" type="leaf"/>
+      <sc:node id="AuthenticationFactors" page-id="CitizenWorkspaceAdmin_listAuthenticationFactors" title="Leaf.Title.AuthenticationFactors" type="leaf"/>
+      <sc:node id="Languages" page-id="CitizenWorkspaceLocale_listLocales" title="Leaf.Title.Languages" type="leaf"/>
+      <sc:node id="GeocodingBias" page-id="Triage_viewGeocodingBias" title="Leaf.Title.GeocodingBias" type="leaf"/>
+    <sc:node id="CommonIntakeSep1" type="separator"/><sc:node id="ListApplicationCaseAdmin" page-id="CommonIntake_listApplicationCaseAdmin" title="Application.Case.Admin.List.Title" type="leaf"/></sc:node>
+
+  <sc:node id="IntakeGroup" title="IntakeGroup.Title" type="group"><sc:node id="PublishedIntakeProcesses" page-id="IntakeAdmin_listPublishedProcesses" title="Published.Intake.Processes.Title" type="leaf"/><sc:node id="UnpublishedIntakeProcesses" page-id="IntakeAdmin_listUnpublishedProcesses" title="Unpublished.Intake.Processes.Title" type="leaf"/></sc:node></sc:nodes>
+
+</sc:section-shortcut-panel>

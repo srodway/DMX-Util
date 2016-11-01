@@ -9,17 +9,10 @@
   US Government Users Restricted Rights - Use, duplication or disclosure
   restricted by GSA ADP Schedule Contract with IBM Corp.
 -->
-<propagator type="ROPT2006">
+<propagator type="ROPT2005">
   <configuration>
-
-
-    <!-- Incapacity Benefit Table -->
-    <ratetable type="RTT24000"/>
-
-
-    <!-- Sickness Benefit Table-->
-    <ratetable type="RTT24001"/>
-
-
+    <evidence type="DET24004">
+      <ruleset name="ASCLivingArrangementDataRuleSet"/>
+    </evidence>
   </configuration>
 </propagator>

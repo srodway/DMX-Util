@@ -1,29 +1,36 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Number.Wizard.Pages=4
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
 
-CaseAudit_ICCaseSampleSearch.Wizard.Item.Text=Criteria
-CaseAudit_ICCaseSampleSearch.Wizard.Page.Title=Step 1:
-CaseAudit_ICCaseSampleSearch.Wizard.Page.Desc=Select Criteria
-Wizard.PageID.1=CaseAudit_ICCaseSampleSearch
-
-CaseAudit_ICCaseSampleSelectAmount.Wizard.Item.Text=Specify Amount
-CaseAudit_ICCaseSampleSelectAmount.Wizard.Page.Title=Step 2:
-CaseAudit_ICCaseSampleSelectAmount.Wizard.Page.Desc=Specify Amount of Cases to Audit
-Wizard.PageID.2=CaseAudit_ICCaseSampleSelectAmount
-
-CaseAudit_ICCaseSampleConfigureAlgorithm.Wizard.Item.Text=Algorithm Parameters
-CaseAudit_ICCaseSampleConfigureAlgorithm.Wizard.Page.Title=Step 3:
-CaseAudit_ICCaseSampleConfigureAlgorithm.Wizard.Page.Desc=Configure Algorithm Parameters
-Wizard.PageID.3=CaseAudit_ICCaseSampleConfigureAlgorithm
-
-CaseAudit_confirmICCaseSampleGeneration.Wizard.Item.Text=Confirm
-CaseAudit_confirmICCaseSampleGeneration.Wizard.Page.Title=Step 4:
-CaseAudit_confirmICCaseSampleGeneration.Wizard.Page.Desc=Confirm Cases to Audit
-Wizard.PageID.4=CaseAudit_confirmICCaseSampleGeneration
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
+    <identifier name="RetainOrSubmitApplication" />
+    <header>
+        <title id="Page.Title" />
+        <description id="Page.Description" />
+        <icon id="title_getting_started" />
+    </header>
+    <content>
+        <container>
+            <title id="RadioSelection.Title" />
+            <radiobutton-container id="SELECTION" legend="RadioSelection.Legend">
+                <title id="RadioSelection.Title" />
+                <radiobutton id="SUBMIT">
+                    <title id="Submit.Title" />
+                </radiobutton>
+                <radiobutton id="RETAIN">
+                    <title id="Retain.Title" />
+                </radiobutton>
+            </radiobutton-container>
+        </container>
+    </content>
+    <navigation>
+	  <nav-button name="next" type="action" />
+      <nav-button name="back" type="action" />
+    </navigation>
+</page>

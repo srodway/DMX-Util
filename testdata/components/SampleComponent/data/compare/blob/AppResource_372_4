@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2010, 2012. All Rights Reserved.
-  
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2010-2012 Curam Software Ltd.
+  Copyright 2009 Curam Software Ltd.
   All rights reserved.
-
+  
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><ac:application xmlns:ac="http://www.curamsoftware.com/curam/util/client/application-config" id="CPMEXPROV" logo="CPMEXPROV.logo" subtitle="CPMEXPROV.subtitle" title="CPMEXPROV.title" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="ScreeningAdmin">
+  <nc:nodes>
+    <nc:navigation-page id="ScreeningAdmin_Home" page-id="Resource_screeningHome" title="Leaf.Title.Home" visible="true"/>
 
-  <ac:application-menu>
-    <ac:preferences title="preferences.title"/>
-    <ac:logout title="logout.title"/>
-  </ac:application-menu>
+    <nc:navigation-page id="ScreeningAdmin_Assessment" page-id="Resource_listScreeningAssessment" title="Leaf.Title.Assessment" visible="true"/>
 
-  <ac:section-ref id="CPMEXPROVHomeSection"/>
-  <ac:section-ref id="CPMEXPROVWorkspaceSection"/>
-
-</ac:application>
+    <nc:navigation-page id="ScreeningAdmin_Milestones" page-id="Product_resolveListMilestone" title="Leaf.Title.Milestones" visible="true"/>
+  </nc:nodes>
+</nc:navigation>

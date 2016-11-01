@@ -1,43 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
-  
+ 
   Copyright IBM Corporation 2012. All Rights Reserved.
-  
+
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009-2011 Curam Software Ltd.
+  Copyright 2010 Curam Software Ltd.
   All rights reserved.
   
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><!-- The menu hierarchy file for the service group.              --><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ServiceGroupMenu">
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="FinPersonSearch">
+  <nc:nodes>
+    <nc:navigation-page id="FinPersonSearchHome" page-id="Person_search1" title="Leaf.Title.Home" visible="true"/>
+  </nc:nodes>
   
-  <mc:submenu id="GO" title="Submenu.Title.GoTo" tooltip="Submenu.Tooltip.GoTo">
-    <mc:menu-item id="ServiceOfferings" page-id="ProviderManagement_listServiceOffering" title="MenuItem.Title.ServiceOfferings" tooltip="MenuItem.Tooltip.ServiceOfferings"/>
-  </mc:submenu>
-  <mc:submenu id="NEW" title="Submenu.Title.New" tooltip="Submenu.Tooltip.New">
-    <mc:menu-item id="ServiceGroup" open-as="modal" page-id="ProviderManagement_createServiceGroup" title="MenuItem.Title.ServiceGroup" tooltip="MenuItem.Tooltip.ServiceGroup"/>
-  </mc:submenu>
-  
-
-  <mc:submenu id="Browse" title="Submenu.Title.Browse" tooltip="Submenu.Tooltip.Browse">
-    <!-- BEGIN, CR00281453, GP -->
-    <mc:menu-item id="ServiceGroups" page-id="ProviderManagement_browseAllServiceGroups" title="MenuItem.Title.ServiceGroups" tooltip="MenuItem.Tooltip.ServiceGroups"/>
-    <!-- END, CR00281453 -->
-  </mc:submenu>
-  
-  <mc:submenu id="ServiceGroupMnu" title="Submenu.Title.ServiceGroup" tooltip="Submenu.Tooltip.ServiceGroup">
-    <mc:menu-item id="Delete" page-id="ProviderManagement_cancelServiceGroupFrmList" title="MenuItem.Title.Delete" tooltip="MenuItem.Tooltip.Delete"/>
-    <mc:menu-item id="Edit" page-id="ProviderManagement_editServiceGroupFromView" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
-    <mc:menu-item id="AddExisting" page-id="ProviderManagement_addServiceGroupToAnotherServiceGroup" title="MenuItem.Title.AddExisting" tooltip="MenuItem.Tooltip.AddExisting"/>
-    <mc:menu-item id="CreateServiceGroup" page-id="ProviderManagement_createChildServiceGroup" title="MenuItem.Title.CreateServiceGroup" tooltip="MenuItem.Tooltip.CreateServiceGroup"/>
-  </mc:submenu>
-  <mc:submenu id="Search" title="Submenu.Title.Search" tooltip="Submenu.Tooltip.Search">
-    <mc:menu-item id="ServiceGroupSearch" page-id="ProviderManagement_searchServiceGroup" title="MenuItem.Title.ServiceGroupSearch" tooltip="MenuItem.Tooltip.ServiceGroupSearch"/>
-    <mc:menu-item id="ServiceOfferingSearch" page-id="ProviderManagement_searchServiceOffering" title="MenuItem.Title.ServiceOfferings" tooltip="MenuItem.Tooltip.ServiceOfferings"/>
-    <mc:menu-item id="Training" page-id="ProviderManagement_searchTrainingPopup" title="MenuItem.Title.Training" tooltip="MenuItem.Tooltip.Training"/>
-  </mc:submenu>
-</mc:menu-bar>
+</nc:navigation>

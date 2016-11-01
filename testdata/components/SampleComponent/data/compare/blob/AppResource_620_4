@@ -13,16 +13,16 @@
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="DefaultCaseProspectPersonHome">
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="DefaultCaseServiceSupplierHome">
 
   <tc:page-param name="caseParticipantRoleID"/>
   <tc:page-param name="caseID"/>
 
-  <tc:menu id="DefaultCaseProspectPersonHomeMenu"/>
+  <tc:menu id="DefaultCaseServiceSupplierHomeMenu"/>
   
   <!-- Details panel -->
-      <tc:context height="200" page-id="DefaultICProspectPerson_homeTabDetails"/>
+      <tc:context height="200" page-id="DefaultICServiceSupplier_homeTabDetails"/>
   <!-- Navigation Panel -->
-  <tc:navigation id="DefaultICProspectPerson_home"/>
+  <tc:navigation id="DefaultICServiceSupplier_home"/>
 
 </tc:tab-config>

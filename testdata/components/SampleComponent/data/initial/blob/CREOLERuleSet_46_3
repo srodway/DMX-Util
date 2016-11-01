@@ -7,10 +7,10 @@
 
   US Government Users Restricted Rights - Use, duplication or disclosure
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet name="ASCLivingArrangementDataRuleSet">
+--><RuleSet name="ASCDiagnosisDataRuleSet">
 
 
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="ASCLivingArrangement">
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="ASCDiagnosis">
 
 
     <Annotations>
@@ -18,54 +18,28 @@
     </Annotations>
 
 
-    <Attribute name="startDate">
+    <Attribute name="examinationDate">
       <Annotations>
-        <Label label-id="startDate" name="The start date of the living arrangement."/>
+        <Label label-id="examinationDate" name="The date on which the examination by the practitioner took place."/>
       </Annotations>
       <type>
         <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <specified/>
+        <null/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="livingArrangeStatus">
+    <Attribute name="diagnosis">
       <Annotations>
-        <Label label-id="livingArrangeStatus" name="The status of the living arrangement, e.g. Permanent."/>
+        <Label label-id="diagnosis" name="The diagnosis as determined by a practitioner."/>
       </Annotations>
       <type>
-        <codetableentry table="LivingArrangementStatus"/>
+        <codetableentry table="IncapacityDiagnosis"/>
       </type>
       <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="endDate">
-      <Annotations>
-        <Label label-id="endDate" name="The end date of the living arrangement."/>
-      </Annotations>
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="livingArrangeType">
-      <Annotations>
-        <Label label-id="livingArrangeType" name="The living arrangement type of the client, e.g. Adult Case Home, Foster Care etc."/>
-      </Annotations>
-      <type>
-        <codetableentry table="LivingArrangementType"/>
-      </type>
-      <derivation>
-        <specified/>
+        <null/>
       </derivation>
     </Attribute>
 
@@ -82,30 +56,15 @@
     </Attribute>
 
 
-    <Attribute name="caseParticipantRoleID">
+    <Attribute name="cert">
       <Annotations>
-        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the client."/>
+        <relatedSuccessionSet relationship="parent"/>
       </Annotations>
       <type>
-        <javaclass name="java.lang.Number"/>
+        <ruleclass name="PractitionerCertificate" ruleset="PractitionerCertificateDataRuleSet"/>
       </type>
       <derivation>
         <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="related_caseParticipantRoleID">
-      <Annotations/>
-      <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="caseParticipantRoleID"/>
-          </create>
-        </reference>
       </derivation>
     </Attribute>
 

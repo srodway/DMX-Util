@@ -1,53 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-
-  PID 5725-H26
-
-  Copyright IBM Corporation 2014. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet name="IBProductTypeDataRuleSet">
-
-
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="IBProductType">
-
-
+<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCGenderDataRuleSet">
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCGender">
     <Annotations>
       <SuccessionSetPopulation/>
     </Annotations>
-
-
-    <Attribute name="forceIVB">
-      <Annotations>
-        <Label label-id="forceIVB" name="Flag to indicate if invalidity benefit is being forced."/>
-      </Annotations>
+    <Attribute name="gender">
+      <Annotations/>
       <type>
         <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="java.lang.Boolean"/>
+          <codetableentry table="Gender"/>
         </javaclass>
       </type>
       <derivation>
-        <null/>
+        <specified/>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="claimType">
-      <Annotations>
-        <Label label-id="claimType" name="The type of claim being applied for, Sickness Benefit or Invalidity Benefit."/>
-      </Annotations>
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <codetableentry table="IBClaimType"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-
-
     <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
@@ -58,12 +24,8 @@
         </ResourceMessage>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="householdMember">
-      <Annotations>
-        <Label label-id="claimType" name="The case participant receiving the benefit."/>
-      </Annotations>
+    <Attribute name="person">
+      <Annotations/>
       <type>
         <javaclass name="java.lang.Number"/>
       </type>
@@ -71,23 +33,18 @@
         <specified/>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="related_householdMember">
+    <Attribute name="related_person">
+      <Annotations/>
       <type>
         <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
       </type>
       <derivation>
         <reference attribute="caseParticipantRoleRecord">
           <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="householdMember"/>
+            <reference attribute="person"/>
           </create>
         </reference>
       </derivation>
     </Attribute>
-
-
   </Class>
-
-
 </RuleSet>

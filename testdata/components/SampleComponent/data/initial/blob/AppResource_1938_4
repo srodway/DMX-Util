@@ -1,33 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2013. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+QuestionPage.SafetyAssessment.Title=SDM\u00AE Reunification Assessment
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009-2010 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="RouteActivity">
+Cluster.Title.ChildVulnerablility=Factors Influencing Child Vulnerablility
+Question.Label.Agerange=Age 0-5
+Question.Label.DiagnosedDisorder=Significant diagnosed medical or mental disorder
+Question.Label.SchoolAge=School age, but not attending school
+Question.Label.MentalCapacity=Diminished mental capacity (e.g., developmental delay, non-verbal)
+Question.Label.PhysicalCapacity=Diminished physical capacity (e.g., non-ambulatory, limited use of limbs)
 
-  <nc:nodes>
-  
-    <nc:navigation-page id="RouteActivity" page-id="ProcessDefinitionTool_viewRouteActivity" title="Page.Title.RouteActivity"/>
-    <nc:navigation-page id="Validations" page-id="ProcessDefinitionTool_validateActivity" title="Page.Title.Validations"/>
-    <nc:navigation-group id="Notification" title="Group.Title.Notification">
-	    <nc:navigation-page id="ActivityNotification" page-id="ProcessDefinitionTool_viewRouteActivityNotification" title="Page.Title.ActivityNotification"/>
-	    <nc:navigation-page id="ActivityNotificationSubject" page-id="ProcessDefinitionTool_viewRouteActivityNotificationSubject" title="Page.Title.ActivityNotificationSubject"/>
-	    <nc:navigation-page id="ActivityNotificationBody" page-id="ProcessDefinitionTool_viewRouteActivityNotificationBody" title="Page.Title.ActivityNotificationBody"/>
-	    <nc:navigation-page id="ActivityNotificationActions" page-id="ProcessDefinitionTool_listRouteActivityNotificationActions" title="Page.Title.ActivityNotificationActions"/>
-	    <nc:navigation-page id="ActivityNotificationAllocationStrategy" page-id="ProcessDefinitionTool_viewActivityNotificationAllocationStrategyRedirect" title="Page.Title.AllocationStrategy"/>
-	    <nc:navigation-page id="NotificationValidations" page-id="ProcessDefinitionTool_validateActivityNotification" title="Page.Title.NotificationValidations"/>
-	</nc:navigation-group>    
-
-  </nc:nodes>
-
-</nc:navigation>
+Cluster.Title.PhysicalHarm=Safety Threats 
+Question.Label.SeriousHarm=1. Since the initial safety assessment, caregiver has caused serious physical harm or made a plausible threat to cause physical harm to a child as indicated by:
+Question.Help.SeriousHarm=The caregiver caused serious injury, defined as brain damage, skull or bone fracture, subdural hemorrhage or hematoma, dislocations, sprains, internal injuries, poisoning, burns, scalds, severe cuts; and the child requires medical treatment; and/or Threat of action that would result in serious harm; or household member plans to retaliate against the child for CPS investigation; and/or Caregiver has used torture, physical force, or acted in a way that bears no resemblance to reasonable discipline; or he/she punished the child beyond the duration of the child's endurance; and/or E.g., drugs found in the child's system; the infant is medically fragile as result of drug exposure; the infant suffers adverse effects from introduction of drugs during pregnancy.
+Question.Label.SeriousInjury=Serious injury or abuse to child other than accidental
+Question.Label.MaltreatedChild=Caregiver fears he/she will maltreat the child
+Question.Label.ThreatOfHarm=Threat to cause harm or retaliate against the child
+Question.Label.ExcessiveDiscipline=Excessive discipline or physical force
+Question.Label.DrugExposed=Drug-exposed infant
+Question.Label.PreviousIncidents=2. The severity of previous maltreatment or the caregiver's response to previous incidents AND current circumstances suggest that the child's safety may be an immediate concern.
+Question.Help.PreviousIncidents=There must be both current immediate threats to child safety AND related previous maltreatment that was severe and/or represents an unresolved pattern of maltreatment. Previous maltreatment includes any of the following:<br/> - Prior death of a child as a result of maltreatment.<br/> - Prior serious harm to the child. Previous maltreatment by caregiver that was serious enough to cause severe injury (e.g., fractures, poisoning, suffocating,shooting, burns, bruises/welts, bite marks, choke marks, and/or physical findings consistent with sexual abuse based on medical exam).<br/> - Termination of parental rights. Caregiver had parental rights terminated as a result of a prior CPS investigation.<br/> - Prior removal of the child. Removal/placement of the child by CPS or other responsible agency or concerned party was necessary for the safety of the child.<br/> - Prior CPS substantiation. Prior CPS investigation substantiated for maltreatment.<br/> - A pattern of unsubstantiated CPS investigations.<br/> - Prior threat of serious harm to child. Previous maltreatment that could have caused severe injury, retaliation, or threatened retaliation against the child for previous incidents; or prior domestic violence that resulted in serious harm or threatened harm to a child.<br/> - Prior service failure. Failure to successfully complete court-ordered or previously recommended services.
+Question.Label.SexualAbuse=3. Child sexual abuse was substantiated or is still suspected, and current circumstances suggest that child safety is an immediate concern.
+Question.Help.SexualAbuse=Suspicion of sexual abuse may be based on indicators such as: <br/> - The child discloses sexual abuse either verbally or behaviorally (e.g., age inappropriate sexualized behavior toward self or others.<br/> - Medical findings are consistent with molestation.<br/> - Caregiver or another household member has been convicted, investigated, or accused of rape or sodomy, or he/she has had other sexual contact with the child.<br/> - Caregiver or another household member has forced or encouraged the child to engage in sexual performances or activities (including forcing the child to observe sexual performances or activities).<br/> - A possible or confirmed sexual abuse perpetrator has access to a child.
+Question.Label.ThreatenedHarm=4. Since the initial safety assessment, caregiver has failed to protect the child from serious harm or threatened harm by others, OR current circumstances suggest that the caregiver would likely be unable to protect the removed child from serious harm by others if the child were returned home.
+Question.Help.ThreatenedHarm=Caregiver fails to protect the child from serious harm or threatened harm as a result of physical abuse, neglect, or sexual abuse by other family members, other household members, or others having regular access to the child. Caregiver does not provide supervision necessary to protect the child from serious harm by others based on child's age or developmental stage. An individual with known violent criminal behavior/ history resides in the home or caregiver allows access to child.
+Question.Label.ImmediateConcern=5. Caregiver's explanation for the injury to the child was, and remains, questionable or inconsistent with the type of injury, and the nature of the injury suggests that the child's safety may be an immediate concern.
+Question.Help.ImmediateConcern=The injury requires medical attention. Medical evaluation indicates that the injury is a result of abuse; however, caregiver denies or attributes injury to accidental causes. Caregiver's explanation for the observed injury is inconsistent with the type of injury. Caregiver's description of the injury or cause of the injury minimizes the extent of harm to the child. Factors to consider include age of the child, location of injury, exceptional needs of the child, or chronicity of injuries.
+Question.Label.RefusingAccess=6. The family is refusing access to another child, there is reason to believe that the family is about to flee, or the whereabouts of another child cannot be ascertained.
+Question.Help.RefusingAccess=Family currently refuses access to the child or cannot or will not provide the child's location. Family has removed the child from a hospital against medical advice to avoid investigation. Family has previously fled in response to a CPS investigation. Family has a history of keeping the child at home or away from peers, school, and other outsiders for extended periods of time for the purpose of avoiding investigation. Caregiver intentionally coaches or coerces the child or allows others to coach or coerce the child in and effort to hinder the investigation.
+Question.Label.ImmediateNeeds=7. Since the initial safety assessment, the caregiver has failed to meet the child's immediate needs for food, clothing, shelter, and/or medical and/or mental health care, OR current circumstances suggest that the caregiver would likely be unable to meet those needs for the removed child if the child were returned home.
+Question.Help.ImmediateNeeds=Minimal nutritional needs of the child are not met, resulting in danger to the child's health and/or safety. The child is without minimally warm clothing in cold months. Caregiver does not seek treatment for the child's immediate, chronic, and/or dangerous medical condition(s) or does not follow prescribed treatment for such conditions. The child appears malnourished. The child has exceptional needs, such as being medically fragile, which caregiver does not or cannot meet. The child is suicidal and caregiver will not/cannot take protective action. The child shows effects of maltreatment such as serious emotional symptoms, lack of behavioral control, or serious physical symptoms. Caregiver does not attend to the child to the extent that need for care goes unnoticed or unmet (e.g., caregiver is present but the child can wander outdoors alone, play with dangerous objects, play on unprotected window ledge, or be exposed to other serious hazards). Caregiver leaves the child alone (time period varies with age and developmental stage). Caregiver is unavailable (incarceration, hospitalization, abandonment, whereabouts unknown). Caregiver makes inadequate and/or inappropriate babysitting or childcare arrangements or demonstrates very poor planning for the child's care.
+Question.Label.LivingConditions=8. Physical living conditions in the household are hazardous and immediately threatening, based on the child's age and developmental status.
+Question.Help.LivingConditions=Based on the child's age and developmental status, the child's physical living conditions (including but not limited to the following) are hazardous and immediately threatening, including but not limited to: <br/>- Leaking gas from stove or heating unit. <br/>- Substance or objects accessible to the child that may endanger his/her health and/or safety. <br/>- Lack of water or utilities (heat, plumbing, electricity), and no alternate or safe provisions are made. <br/>- Open windows or broken/missing windows. <br/>- Exposed electrical wires. <br/>- Excessive garbage or rotted or spoiled food that threatens health. <br/>- Serious illness or significant injury has occurred due to living conditions, and these conditions still exist (e.g., lead poisoning, rat bites). <br/>- Evidence of human or animal waste throughout living quarters. <br/>- Guns and other weapons are not locked up. Methamphetamine production in the home.
+Question.Label.AffectingAbility=9. Caregiver's substance use is currently and seriously affecting ability to supervise, protect, or care for the child.
+Question.Help.AffectingAbility=Caregiver has abused legal or illegal substances or alcoholic beverage to the extent that control of his/her actions is significantly impaired.  As a result, the caregiver is unable, or will likely be unable, to care for the child; has harmed the child; or is likely to harm the child.
+Question.Label.DomesticViolence=10. Domestic violence exist in the home and poses an imminent danger of serious physical and/or emotional harm to the child. 
+Question.Help.DomesticViolence=There is evidence of domestic violence in the home, AND this creates a safety concern for the child. Examples may include: <br/>- The child was previously injured in a domestic violence incident. <br/>- The child exhibits severe anxiety (e.g., nightmares, insomnia) related to situations associated with domestic violence. <br/>- The child cries, cowers, cringes, trembles, or otherwise exhibits fear as a result of domestic violence in the home. <br/>- The child is at potential risk of physical injury. <br/>- The child's behavior increases risk of injury (e.g., attempting to intervene during violent dispute, participating in the violent dispute). <br/>- Use of guns, knives, or other instruments in a violent, threatening, and/or intimidating manner. <br/>- Evidence of property damage resulting from domestic violence.
+Question.Label.NegativeTerms=11. Caregiver describes the child in predominantly negative terms or acts toward the child in negative ways that result in the child being a danger to self or others, acting out aggressively, or being severely withdrawn and/or suicidal.
+Question.Help.NegativeTerms=Examples of caregiver actions include: <br/>- Caregiver describes the child in a demeaning or degrading manner (e.g., as evil, stupid, ugly). <br/>- Caregiver curses and/or repeatedly puts the child down. <br/>- Caregiver scapegoats a particular child in the family. <br/>- Caregiver blames the child for a particular incident or family problems. <br/>- Caregiver places the child in the middle of a custody battle.
+Question.Label.EmotionalStability=12. Caregiver's emotional stability, developmental status, or cognitive deficiency seriously impairs his/her current ability to supervise, protect, or care for the child if the child were returned home.
+Question.Help.EmotionalStability=Caregiver appears to be mentally ill, developmentally delayed, or cognitively impaired, AND as a result, one or more of the following are observed: <br/>- The caregiver's refusal to follow prescribed medications impedes his/her ability to parent the child. <br/>- The caregiver's inability to control emotions impedes his/her ability to parent the child. <br/>- The caregiver acts out or exhibits a distorted perception that impedes his/her ability to parent the child. <br/>- The caregiver's depression impedes his/her ability to parent the child. <br/>- The caregiver expects the child to perform or act in a way that is impossible or improbable for the child's age or developmental stage (e.g., babies and young children expected not to cry, expected to be still for extended periods, be toilet trained, eat neatly, expected to care for younger siblings, or expected to stay alone). Due to cognitive delay, the caregiver lacks the basic knowledge related to parenting skills such as not knowing that infants need regular feedings; failure to access and obtain basic/emergency medical care; proper diet; or adequate supervision.
+Question.Label.Other=13. Other (specify):
+Question.Help.Other=If there is any other safety threats not addressed in prior safety threats, select 'other' and document the unique threat that if unresolved would lead to removal of the child from this home. 
+Question.Validation.ST1=When question '1.' is answered 'Yes', one or more of the related check boxes must be selected.
+Question.Validation.ST13=When question '13. Other (specify)' is answered 'Yes', a description of the other safety factors must be entered.
+Question.Label.ChildVulnerabilityFactorsNoneOfTheAbove = None of the above
+Question.Label.SafetyThreatsNoneOfTheAbove = None of the above

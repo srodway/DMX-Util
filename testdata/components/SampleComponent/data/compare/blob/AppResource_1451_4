@@ -1,55 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Page.Title=Print Your Application?
+Page.Description=You can print your application form now if you would like to. You can also save the data that you have just entered and return to it later.
 
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
-    <identifier name="Select Program" />
-    <server alias="DISPLAY" method="listPrograms">
-        <param name="key$applicationID" path="applicationID" />
-        <param name="key$playerID" path="id" />
-    </server>
-    <server alias="BACK_BUTTON" method="getBackButtonVisibility">
-        <param name="key$playerID" path="id" />
-        <param name="key$pageName" value="SelectProgram" />
-    </server>
-    <header>
-        <title source="DISPLAY/xmlString/application/title" />
-        <description source="DISPLAY/xmlString/application/description" />
-        <icon id="title_selectprogram" />
-    </header>
-    <content>
-        <forward source="/PAGE/applicationID" target="/ans/applicationID" name="applicationID"/>
-        <container>
-            <title id="SelectProgram.List.Title" />
-            <description id="SelectProgram.List.Description" />
-            <help id="SelectProgram.List.Help" />
-            <container style="select-all">
-                <title id="SelectProgram.List.SelectAll" />
-                <param name="target" value="in-cluster" />
-            </container>
-            <list>
-                <param name="program-validation-msg" source="/DISPLAY/xmlString/validation" />
-                <field type="CW_PROGRAM_SELECT" target="/prog[]" source="/DISPLAY/xmlString/program-list/program[]/id">
-                    <title source="/DISPLAY/xmlString/program-list/program[]/title" />
-                    <description source="/DISPLAY/xmlString/program-list/program[]/description" />
-                    <help source="/DISPLAY/xmlString/program-list/program[]/url" />
-                    <param name="enabled" source="/DISPLAY/xmlString/program-list/program[]/canApply" />
-                    <param name="help-label" id="SelectProgram.Help.Label" />
-                    <param name="labelClass" value="label-highlight" />
-                    <param name="recommended" source="/DISPLAY/xmlString/program-list/program[]/recommended" />
-                </field>
-            </list>
-        </container>
-    </content>
-    <navigation>
-		<nav-button name="next" type="action" />
-        <nav-button name="back" page="SelectApplication" conditionalSource="/BACK_BUTTON/xmlData/visible"/>
-        <nav-button name="exit" page="ResolveCitizenHome" page-type="resolve" />
-    </navigation> 
-</page>
+PrintAndSave.Title=Print & Save
+
+OpenForm.Link.Label=Open my application form.
+SendForm.Link.Label=Where should I mail my application form?
+
+RadioSelection.Title=Choose an Option 
+RadioSelection.Description=
+RadioSelection.Help=You can print your application form now if you like. Remember, you have not entered all of the information that you need to tell us yet. You can fill out the form yourself, or you can choose to <strong>save</strong> the application now and return to it later. If you want, you can do both. If you don't save your application, you will not be able to return to it later.
+RadioSelection.Legend=Application options
+
+SaveApplication.Title=<strong>Save your application</strong><br>Save your application and come back to work on it later.
+ExitSaveApplication.Title=<strong>Delete your application.</strong><br/>Your application will be deleted. You will not be able to come back to your application.

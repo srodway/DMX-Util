@@ -1,25 +1,52 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM 
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+MenuItem.Title.Edit=Edit
+MenuItem.Tooltip.Edit=Edit
 
-  PID 5725-H26
+MenuItem.Title.Delete=Delete
+MenuItem.Tooltip.Delete=Delete
 
-  Copyright IBM Corporation 2009,2012,2014. All rights reserved. 
 
-  US Government Users Restricted Rights - Use, duplication or disclosure
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="OutcomePlanAdmin">
-  <nc:nodes>
-    <nc:navigation-page id="Home" page-id="OutcomePlanAdmin_viewOutcomePlanAdmin" title="Leaf.Title.Home"/>
-    <nc:navigation-page id="Goals" page-id="OutcomePlanAdmin_listOutcomePlanGoalsForOutcomePlan" title="Leaf.Title.OutcomePlanGoals"/>
-    <nc:navigation-page id="Objectives" page-id="OutcomePlanAdmin_listExpectedOutcomesForOutcomePlan" title="Leaf.Title.ExpectedOutcomes"/>
-    <nc:navigation-page id="Factors" page-id="OutcomePlanAdmin_listOutcomePlanFactors" title="Leaf.Title.OutcomePlanFactorAdmin"/> 
-    <nc:navigation-page id="Recommendations" page-id="OutcomePlanningAdmin_listRecommendationsFromOutcomePlanAdmin" title="Leaf.Title.Recommendations"/>
-    <nc:navigation-page id="EvidenceTypes" page-id="OutcomePlanAdmin_listEvidenceTypes" title="Leaf.Title.EvidenceTypes"/>    
-     <nc:navigation-page id="Visits" page-id="VisitationAdmin_listVisitationCompliancyForOutcomePlan" title="Leaf.Title.Visits"/>
-    <nc:navigation-page id="PrintableDocumentContent" page-id="OutcomePlanAdmin_listPrintableDocumentContent" title="Leaf.Title.PrintableContent"/>    
-    <nc:navigation-page id="Cases" page-id="OutcomePlanAdmin_listCaseLinks" title="Leaf.Title.Cases"/>
+Submenu.Title.New=New
+Submenu.Icon.New=New
+Submenu.Tooltip.New=New
 
-  </nc:nodes>
+MenuItem.Title.ApprovalCheck=New Approval Check
+MenuItem.Tooltip.ApprovalCheck=New Approval Check
 
-  
-</nc:navigation>
+MenuItem.Title.IntegratedCaseAssociation=New Integrated Case Association
+MenuItem.Tooltip.IntegratedCaseAssociation=New Integrated Case Association
+
+Submenu.Title.AddGoal=Add Goal
+Submenu.Tooltip.AddGoal=Add Goal
+
+MenuItem.Title.NewGoal=New Goal
+MenuItem.Tooltip.NewGoal=New Goal
+
+MenuItem.Title.ExistingGoal=Add Existing Goal
+MenuItem.Tooltip.ExistingGoal=Add Existing Goal
+
+Submenu.Title.AddTemplate=Add Template
+Submenu.Tooltip.AddTemplate=Add Template
+
+MenuItem.Title.NewTemplate=New Template
+MenuItem.Tooltip.NewTemplate=New Template
+
+MenuItem.Title.ExistingTemplate=Add Existing Template
+MenuItem.Tooltip.ExistingTemplate=Add Existing Template
+
+Submenu.Title.Search=Search
+Submenu.Icon.Search=Search
+Submenu.Tooltip.Search=Find a User
+
+MenuItem.Title.User=User
+MenuItem.Tooltip.User=User
+
+MenuItem.Title.ExternalUser=External User
+MenuItem.Tooltip.ExternalUser=External User

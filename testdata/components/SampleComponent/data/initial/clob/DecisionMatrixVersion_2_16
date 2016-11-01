@@ -3,281 +3,436 @@
   Licensed Materials - Property of IBM
   
   Copyright IBM Corporation 2012. All Rights Reserved.
-  
+ 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 -->
 <DECISION_MATRIX
-  CONTRADICTION_COLUMN="Yes"
-  ID="-3954160472831295488"
+  CONTRADICTION_COLUMN="No"
+  ID="54391"
   PRIORITY_COLUMN="No"
-  SCORING_COLUMN="No"
+  SCORING_COLUMN="Yes"
 >
   <QUESTIONS>
-    <QUESTION QUESTION_ID="792">
+    <QUESTION QUESTION_ID="13105">
       <ANSWER
         ANSWER_ID="1"
-        MAX="2"
-        MIN="0"
+        SCORE="3"
+        VALUE="EB10001"
       />
       <ANSWER
         ANSWER_ID="2"
-        MAX="4"
-        MIN="3"
+        SCORE="0"
+        VALUE="EB10002"
       />
       <ANSWER
         ANSWER_ID="3"
-        VALUE="5"
+        SCORE="-3"
+        VALUE="EB10003"
+      />
+      <ANSWER
+        ANSWER_ID="4"
+        SCORE="-5"
+        VALUE="EB10004"
       />
     </QUESTION>
-    <QUESTION QUESTION_ID="16">
+    <QUESTION QUESTION_ID="13106">
       <ANSWER
         ANSWER_ID="1"
-        MAX="600"
-        MIN="450"
+        SCORE="3"
+        VALUE="MP10001"
       />
       <ANSWER
         ANSWER_ID="2"
-        MAX="449"
-        MIN="250"
+        SCORE="0"
+        VALUE="MP10002"
       />
       <ANSWER
         ANSWER_ID="3"
-        MAX="249"
-        MIN="0"
+        SCORE="-3"
+        VALUE="MP10003"
+      />
+      <ANSWER
+        ANSWER_ID="4"
+        SCORE="-5"
+        VALUE="MP10004"
       />
     </QUESTION>
-    <QUESTION QUESTION_ID="848">
+    <QUESTION QUESTION_ID="13109">
       <ANSWER
         ANSWER_ID="1"
-        VALUE="SS1"
+        SCORE="3"
+        VALUE="ED10001"
       />
       <ANSWER
         ANSWER_ID="2"
-        VALUE="SS2"
+        SCORE="0"
+        VALUE="ED10002"
       />
       <ANSWER
         ANSWER_ID="3"
-        VALUE="SS3"
+        SCORE="-3"
+        VALUE="ED10003"
+      />
+      <ANSWER
+        ANSWER_ID="4"
+        SCORE="-5"
+        VALUE="ED10004"
+      />
+    </QUESTION>
+    <QUESTION QUESTION_ID="13110">
+      <ANSWER
+        ANSWER_ID="1"
+        SCORE="2"
+        VALUE="FR10001"
+      />
+      <ANSWER
+        ANSWER_ID="2"
+        SCORE="0"
+        VALUE="FR10002"
+      />
+      <ANSWER
+        ANSWER_ID="3"
+        SCORE="-2"
+        VALUE="FR10003"
+      />
+      <ANSWER
+        ANSWER_ID="4"
+        SCORE="-4"
+        VALUE="FR10004"
+      />
+    </QUESTION>
+    <QUESTION QUESTION_ID="13111">
+      <ANSWER
+        ANSWER_ID="1"
+        SCORE="2"
+        VALUE="CD10001"
+      />
+      <ANSWER
+        ANSWER_ID="2"
+        SCORE="0"
+        VALUE="CD10002"
+      />
+      <ANSWER
+        ANSWER_ID="3"
+        SCORE="-2"
+        VALUE="CD10003"
+      />
+      <ANSWER
+        ANSWER_ID="4"
+        SCORE="-4"
+        VALUE="CD10004"
+      />
+    </QUESTION>
+    <QUESTION QUESTION_ID="13112">
+      <ANSWER
+        ANSWER_ID="1"
+        SCORE="2"
+        VALUE="SU10001"
+      />
+      <ANSWER
+        ANSWER_ID="2"
+        SCORE="0"
+        VALUE="SU10002"
+      />
+      <ANSWER
+        ANSWER_ID="3"
+        SCORE="-2"
+        VALUE="SU10003"
+      />
+      <ANSWER
+        ANSWER_ID="4"
+        SCORE="-4"
+        VALUE="SU10004"
+      />
+    </QUESTION>
+    <QUESTION QUESTION_ID="13113">
+      <ANSWER
+        ANSWER_ID="1"
+        SCORE="1"
+        VALUE="CI10001"
+      />
+      <ANSWER
+        ANSWER_ID="2"
+        SCORE="0"
+        VALUE="CI10002"
+      />
+      <ANSWER
+        ANSWER_ID="3"
+        SCORE="-1"
+        VALUE="CI10003"
+      />
+      <ANSWER
+        ANSWER_ID="4"
+        SCORE="-3"
+        VALUE="CI10004"
+      />
+    </QUESTION>
+    <QUESTION QUESTION_ID="13114">
+      <ANSWER
+        ANSWER_ID="1"
+        SCORE="1"
+        VALUE="SR10001"
+      />
+      <ANSWER
+        ANSWER_ID="2"
+        SCORE="0"
+        VALUE="SR10002"
+      />
+      <ANSWER
+        ANSWER_ID="3"
+        SCORE="-1"
+        VALUE="SR10003"
+      />
+      <ANSWER
+        ANSWER_ID="4"
+        SCORE="-2"
+        VALUE="SR10004"
+      />
+    </QUESTION>
+    <QUESTION QUESTION_ID="13115">
+      <ANSWER
+        ANSWER_ID="1"
+        SCORE="1"
+        VALUE="DB10001"
+      />
+      <ANSWER
+        ANSWER_ID="2"
+        SCORE="0"
+        VALUE="DB10002"
+      />
+      <ANSWER
+        ANSWER_ID="3"
+        SCORE="-1"
+        VALUE="DB10003"
+      />
+      <ANSWER
+        ANSWER_ID="4"
+        SCORE="-2"
+        VALUE="DB10004"
+      />
+    </QUESTION>
+    <QUESTION QUESTION_ID="13116">
+      <ANSWER
+        ANSWER_ID="1"
+        SCORE="1"
+        VALUE="CIN001"
+      />
+      <ANSWER
+        ANSWER_ID="2"
+        SCORE="0"
+        VALUE="CIN002"
+      />
+      <ANSWER
+        ANSWER_ID="3"
+        SCORE="-1"
+        VALUE="CIN003"
+      />
+      <ANSWER
+        ANSWER_ID="4"
+        SCORE="-2"
+        VALUE="CIN004"
       />
     </QUESTION>
   </QUESTIONS>
-  <CONTRADICTIONS>
-    <COMBINATION COMBINATION_ID="4071254063142928384">
-      <SELECTION
-        ANSWER_ID="3"
-        QUESTION_ID="848"
-      />
-      <SELECTION
-        ANSWER_ID="1"
-        QUESTION_ID="792"
-      />
-      <SELECTION
-        ANSWER_ID="2"
-        QUESTION_ID="792"
-      />
-      <SELECTION
-        ANSWER_ID="1"
-        QUESTION_ID="16"
-      />
-    </COMBINATION>
-    <COMBINATION COMBINATION_ID="-1549238271815450624">
-      <SELECTION
-        ANSWER_ID="1"
-        QUESTION_ID="848"
-      />
-      <SELECTION
-        ANSWER_ID="3"
-        QUESTION_ID="16"
-      />
-    </COMBINATION>
-    <COMBINATION COMBINATION_ID="5296233161787703296">
-      <SELECTION
-        ANSWER_ID="3"
-        QUESTION_ID="792"
-      />
-      <SELECTION
-        ANSWER_ID="1"
-        QUESTION_ID="16"
-      />
-    </COMBINATION>
-  </CONTRADICTIONS>
   <OUTCOMES>
-    <OUTCOME OUTCOME_ID="456">
-      <COMBINATION COMBINATION_ID="11203495440078">
+    <OUTCOME OUTCOME_ID="54520">
+      <COMBINATION COMBINATION_ID="54400">
         <SELECTION
           ANSWER_ID="3"
-          QUESTION_ID="848"
+          QUESTION_ID="13105"
         />
-      </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203495462464">
         <SELECTION
-          ANSWER_ID="3"
-          QUESTION_ID="16"
+          ANSWER_ID="1"
+          QUESTION_ID="13105"
         />
-      </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203495478554">
         <SELECTION
-          ANSWER_ID="3"
-          QUESTION_ID="792"
+          ANSWER_ID="4"
+          QUESTION_ID="13105"
         />
         <SELECTION
           ANSWER_ID="2"
-          QUESTION_ID="16"
+          QUESTION_ID="13105"
         />
       </COMBINATION>
     </OUTCOME>
-    <OUTCOME OUTCOME_ID="1504">
-      <COMBINATION COMBINATION_ID="11203495900306">
-        <SELECTION
-          ANSWER_ID="1"
-          QUESTION_ID="848"
-        />
-        <SELECTION
-          ANSWER_ID="1"
-          QUESTION_ID="792"
-        />
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="16"
-        />
-      </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203496120414">
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="792"
-        />
-        <SELECTION
-          ANSWER_ID="1"
-          QUESTION_ID="848"
-        />
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="848"
-        />
-        <SELECTION
-          ANSWER_ID="1"
-          QUESTION_ID="16"
-        />
-      </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203496151985">
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="848"
-        />
+    <OUTCOME OUTCOME_ID="54521">
+      <COMBINATION COMBINATION_ID="54401">
         <SELECTION
           ANSWER_ID="3"
-          QUESTION_ID="792"
-        />
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="792"
-        />
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="16"
-        />
-      </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203496181932">
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="848"
-        />
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="792"
-        />
-      </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203495928737">
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="848"
-        />
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="792"
+          QUESTION_ID="13110"
         />
         <SELECTION
           ANSWER_ID="1"
-          QUESTION_ID="792"
+          QUESTION_ID="13110"
+        />
+        <SELECTION
+          ANSWER_ID="4"
+          QUESTION_ID="13110"
         />
         <SELECTION
           ANSWER_ID="2"
-          QUESTION_ID="16"
-        />
-      </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203495978554">
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="792"
-        />
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="16"
-        />
-        <SELECTION
-          ANSWER_ID="1"
-          QUESTION_ID="16"
-        />
-      </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203496010438">
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="848"
-        />
-        <SELECTION
-          ANSWER_ID="3"
-          QUESTION_ID="792"
-        />
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="16"
-        />
-      </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203496042400">
-        <SELECTION
-          ANSWER_ID="1"
-          QUESTION_ID="848"
-        />
-        <SELECTION
-          ANSWER_ID="3"
-          QUESTION_ID="792"
-        />
-      </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203496065348">
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="848"
-        />
-        <SELECTION
-          ANSWER_ID="1"
-          QUESTION_ID="848"
-        />
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="16"
-        />
-      </COMBINATION>
-      <COMBINATION COMBINATION_ID="11203496088968">
-        <SELECTION
-          ANSWER_ID="1"
-          QUESTION_ID="848"
-        />
-        <SELECTION
-          ANSWER_ID="2"
-          QUESTION_ID="792"
+          QUESTION_ID="13110"
         />
       </COMBINATION>
     </OUTCOME>
-    <OUTCOME OUTCOME_ID="320">
-      <COMBINATION COMBINATION_ID="11203496230109">
+    <OUTCOME OUTCOME_ID="54522">
+      <COMBINATION COMBINATION_ID="54402">
         <SELECTION
-          ANSWER_ID="1"
-          QUESTION_ID="16"
+          ANSWER_ID="4"
+          QUESTION_ID="13106"
+        />
+        <SELECTION
+          ANSWER_ID="2"
+          QUESTION_ID="13106"
+        />
+        <SELECTION
+          ANSWER_ID="3"
+          QUESTION_ID="13106"
         />
         <SELECTION
           ANSWER_ID="1"
-          QUESTION_ID="792"
+          QUESTION_ID="13106"
+        />
+      </COMBINATION>
+    </OUTCOME>
+    <OUTCOME OUTCOME_ID="54523">
+      <COMBINATION COMBINATION_ID="54403">
+        <SELECTION
+          ANSWER_ID="4"
+          QUESTION_ID="13111"
+        />
+        <SELECTION
+          ANSWER_ID="2"
+          QUESTION_ID="13111"
+        />
+        <SELECTION
+          ANSWER_ID="3"
+          QUESTION_ID="13111"
+        />
+        <SELECTION
+          ANSWER_ID="1"
+          QUESTION_ID="13111"
+        />
+      </COMBINATION>
+    </OUTCOME>
+    <OUTCOME OUTCOME_ID="54524">
+      <COMBINATION COMBINATION_ID="54404">
+        <SELECTION
+          ANSWER_ID="3"
+          QUESTION_ID="13113"
+        />
+        <SELECTION
+          ANSWER_ID="1"
+          QUESTION_ID="13113"
+        />
+        <SELECTION
+          ANSWER_ID="4"
+          QUESTION_ID="13113"
+        />
+        <SELECTION
+          ANSWER_ID="2"
+          QUESTION_ID="13113"
+        />
+      </COMBINATION>
+    </OUTCOME>
+    <OUTCOME OUTCOME_ID="54525">
+      <COMBINATION COMBINATION_ID="54405">
+        <SELECTION
+          ANSWER_ID="3"
+          QUESTION_ID="13112"
+        />
+        <SELECTION
+          ANSWER_ID="1"
+          QUESTION_ID="13112"
+        />
+        <SELECTION
+          ANSWER_ID="4"
+          QUESTION_ID="13112"
+        />
+        <SELECTION
+          ANSWER_ID="2"
+          QUESTION_ID="13112"
+        />
+      </COMBINATION>
+    </OUTCOME>
+    <OUTCOME OUTCOME_ID="54526">
+      <COMBINATION COMBINATION_ID="54406">
+        <SELECTION
+          ANSWER_ID="3"
+          QUESTION_ID="13109"
+        />
+        <SELECTION
+          ANSWER_ID="1"
+          QUESTION_ID="13109"
+        />
+        <SELECTION
+          ANSWER_ID="4"
+          QUESTION_ID="13109"
+        />
+        <SELECTION
+          ANSWER_ID="2"
+          QUESTION_ID="13109"
+        />
+      </COMBINATION>
+    </OUTCOME>
+    <OUTCOME OUTCOME_ID="54527">
+      <COMBINATION COMBINATION_ID="54407">
+        <SELECTION
+          ANSWER_ID="4"
+          QUESTION_ID="13114"
+        />
+        <SELECTION
+          ANSWER_ID="2"
+          QUESTION_ID="13114"
+        />
+        <SELECTION
+          ANSWER_ID="3"
+          QUESTION_ID="13114"
+        />
+        <SELECTION
+          ANSWER_ID="1"
+          QUESTION_ID="13114"
+        />
+      </COMBINATION>
+    </OUTCOME>
+    <OUTCOME OUTCOME_ID="54528">
+      <COMBINATION COMBINATION_ID="54408">
+        <SELECTION
+          ANSWER_ID="3"
+          QUESTION_ID="13115"
+        />
+        <SELECTION
+          ANSWER_ID="1"
+          QUESTION_ID="13115"
+        />
+        <SELECTION
+          ANSWER_ID="4"
+          QUESTION_ID="13115"
+        />
+        <SELECTION
+          ANSWER_ID="2"
+          QUESTION_ID="13115"
+        />
+      </COMBINATION>
+    </OUTCOME>
+    <OUTCOME OUTCOME_ID="54529">
+      <COMBINATION COMBINATION_ID="54409">
+        <SELECTION
+          ANSWER_ID="4"
+          QUESTION_ID="13116"
+        />
+        <SELECTION
+          ANSWER_ID="2"
+          QUESTION_ID="13116"
+        />
+        <SELECTION
+          ANSWER_ID="3"
+          QUESTION_ID="13116"
+        />
+        <SELECTION
+          ANSWER_ID="1"
+          QUESTION_ID="13116"
         />
       </COMBINATION>
     </OUTCOME>

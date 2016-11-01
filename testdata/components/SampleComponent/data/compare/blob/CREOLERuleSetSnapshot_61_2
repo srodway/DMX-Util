@@ -1,99 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
 
-  PID 5725-H26
-
-  Copyright IBM Corporation 2014. All Rights Reserved.
+  Copyright IBM Corporation 2012,2013. All Rights Reserved.
 
   US Government Users Restricted Rights - Use, duplication or disclosure
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><RuleSet name="ASCLivingArrangementRuleSet">
+--><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ApplicationAuthorisationInterfaceRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
 
+  <!-- This interface should return a list of programs to be authorised. For 
+       each program the following can be specified:
 
-  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="ASCLivingArrangement">
+    * programID - The unique identifier of the IntakeProgramApplication.
+      This attribute is treated as mandatory by the system.
 
+    * primaryClient - The primary client for the product delivery if the
+      creation of one is configured. If the creation of a product delivery
+      is configured this attribute is treated as mandatory by the system.
 
-    <Attribute name="startDate">
-      <Annotations>
-        <Label label-id="startDate" name="The start date of the living arrangement."/>
-      </Annotations>
+    * additionalClients - A list of additional clients who will be added
+      to the product delivery in the form of case groups. This attribute is
+      treated as optional by the system.
+  -->
+
+  <Class abstract="true" name="AbstractApplicationCase">
+  
+    <!-- The application case id for which the authorisation has been requested. -->
+    <Attribute name="applicationCaseID">
       <type>
-        <javaclass name="curam.util.type.Date"/>
+        <javaclass name="Number"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="livingArrangeStatus">
-      <Annotations>
-        <Label label-id="livingArrangeStatus" name="The status of the living arrangement, e.g. Permanent."/>
-      </Annotations>
+    
+    <!-- 
+      A list of programs which should be authorised. Each Program instance encapsulates
+      the clients for each product delivery, if a product delivery is being created
+      on authorisation of the program.
+    -->
+    <Attribute name="programs">
       <type>
-        <codetableentry table="LivingArrangementStatus"/>
+        <javaclass name="List">
+          <ruleclass name="Program"/>
+        </javaclass>
       </type>
       <derivation>
-        <specified/>
+        <abstract/>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="endDate">
-      <Annotations>
-        <Label label-id="endDate" name="The end date of the living arrangement."/>
-      </Annotations>
+       
+     <!-- The class description. -->
+    <Attribute name="description">
       <type>
-        <javaclass name="curam.util.type.Date"/>
+        <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <specified/>
+        <ResourceMessage key="ApplicationCase.description" resourceBundle="curam.commonintake.rules.ApplicationAuthorisationInterfaceRuleSet">
+          <reference attribute="applicationCaseID"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="livingArrangeType">
-      <Annotations>
-        <Label label-id="livingArrangeType" name="The living arrangement type of the client, e.g. Adult Case Home, Foster Care etc."/>
-      </Annotations>
+    
+ </Class>
+  
+  <!-- 
+    A program which should be authorised, the program includes the 
+    IntakeProgramApplicationID, the product delivery clients, and any 
+    comments associated with the authorisation. 
+  -->
+   <Class abstract="false" name="Program">
+    <!-- The unique identifier of the program -->
+    <Attribute name="programID">
+     <type>
+       <javaclass name="Number"/>
+     </type>
+     <derivation>
+       <specified/>
+     </derivation>
+    </Attribute>
+    
+    <!-- 
+      The primary client for the product delivery. This can be null as a product
+      delivery may not be created as part of the program being authorized.
+    -->
+    <Attribute name="primaryClient">
       <type>
-        <codetableentry table="LivingArrangementType"/>
+        <ruleclass name="Client" ruleset="ClientSelectionInterfaceRuleSet"/>
       </type>
       <derivation>
-        <specified/>
+        <null/>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="caseParticipantRoleID">
-      <Annotations>
-        <Label label-id="caseParticipantRoleID" name="The case participant role identifier of the client."/>
-      </Annotations>
+     
+    <!--
+      The additional clients to be added to the product delivery. This list can be
+      empty if there are no additional clients or if there is no product delivery
+      being created on authorisation of the program.
+    -->
+    <Attribute name="additionalClients">
       <type>
-        <javaclass name="java.lang.Number"/>
+        <javaclass name="List">
+          <ruleclass name="Client" ruleset="ClientSelectionInterfaceRuleSet"/>
+        </javaclass>
       </type>
       <derivation>
-        <specified/>
+        <fixedlist>
+          <listof>
+            <ruleclass name="Client" ruleset="ClientSelectionInterfaceRuleSet"/>
+          </listof>
+          <members/>
+        </fixedlist>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="related_caseParticipantRoleID">
-      <Annotations/>
+         
+    <!-- The class description.  -->
+    <Attribute name="description">
       <type>
-        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
+        <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <reference attribute="caseParticipantRoleRecord">
-          <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="caseParticipantRoleID"/>
-          </create>
-        </reference>
+        <ResourceMessage key="Program.description" resourceBundle="curam.commonintake.rules.ApplicationAuthorisationInterfaceRuleSet">
+          <reference attribute="programID"/>
+        </ResourceMessage>
       </derivation>
-    </Attribute>
-
-
+    </Attribute>     
+    
   </Class>
-
-
+  
 </RuleSet>

@@ -1,24 +1,21 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Number.Wizard.Pages=3
-
-CaseAudit_fixedQueryFilteredCaseSampleSelectAmount.Wizard.Item.Text=Specify Amount
-CaseAudit_fixedQueryFilteredCaseSampleSelectAmount.Wizard.Page.Title=Step 1:
-CaseAudit_fixedQueryFilteredCaseSampleSelectAmount.Wizard.Page.Desc=Specify Amount of Cases to Audit
-Wizard.PageID.1=CaseAudit_fixedQueryFilteredCaseSampleSelectAmount
-
-CaseAudit_fixedQueryCaseSampleConfigureAlgorithm.Wizard.Item.Text=Algorithm Parameters
-CaseAudit_fixedQueryCaseSampleConfigureAlgorithm.Wizard.Page.Title=Step 2:
-CaseAudit_fixedQueryCaseSampleConfigureAlgorithm.Wizard.Page.Desc=Configure Algorithm Parameters
-Wizard.PageID.2=CaseAudit_fixedQueryCaseSampleConfigureAlgorithm
-
-CaseAudit_confirmFixedQueryCaseSampleGeneration.Wizard.Item.Text=Confirm
-CaseAudit_confirmFixedQueryCaseSampleGeneration.Wizard.Page.Title=Step 3:
-CaseAudit_confirmFixedQueryCaseSampleGeneration.Wizard.Page.Desc=Confirm Cases to Audit
-Wizard.PageID.3=CaseAudit_confirmFixedQueryCaseSampleGeneration
+#Mon Oct 31 13:44:21 GMT 2016
+Container.Label.UpdatedBy=Updated By
+ForeignResidencyCluster.Title.ID1=Foreign Residency
+Field.Label.UpdatedOn=Updated On
+ActionControl.Label.Save=Save
+StartDateField.Label.ID2=Start Date
+childEvidenceType=DET0000257
+CountryField.Label.ID1=Country
+Field.Label.ApprovalRequestedInd=Approval Requested
+ActionControl.Label.Cancel=Cancel
+ActionControl.Label.Close=Close
+Field.Label.ChangeReason=Change Reason
+Field.Label.UpdatedBy=Updated By
+Field.Prompt.EffectiveDate=leave blank if making a correction
+EndDateField.Label.ID3=End Date
+Field.Label.ApprovalStatus=Approval Status
+Field.Label.EffectiveDate=Effective Date of Change
+Field.Label.ReceivedDate=Received Date
+Field.Label.StatusCode=Status
+Title.Childe.Details=Change Details
+Page.Title=Edit Scot Foreign Residency 

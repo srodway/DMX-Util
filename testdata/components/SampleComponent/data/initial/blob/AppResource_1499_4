@@ -1,43 +1,40 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-page.title.AppealHearingReviewHome=Home
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
 
-Details.Icon=a
-Leaf.Title.Home=Home
-
-page.title.assistancehearingcasehome=Home
-page.title.ItemsUnderAppeal=Items Under Appeal
-folder.title.CasesUnderAppeal=Cases Under Appeal
-page.title.appealedcases=Appealed Cases
-page.title.appealedissues=Appealed Issues
-
-folder.title.Participants=Participants
-page.title.appellants=Appellants
-page.title.caseparticipants=Case Participants
-
-page.title.hearings=Hearings
-
-folder.title.Decisions=Decisions
-page.title.managedecisions=Decisions
-page.title.decisionrejections=Decision Rejections
-
-page.title.notes=Notes
-
-folder.title.Contact=Contact
-page.title.attachments=Attachments
-page.title.communications=Communications
-
-page.title.events=Events
-
-page.title.tasks=Tasks
-
-folder.title.administration=Administration 
-page.title.relatedcases=Related Cases
-page.title.statushistory=Status History
-page.title.userroles=User Roles
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
+    <identifier name="SaveSubmitOrExit" />
+    <header>
+        <title id="Page.Title" />
+        <description id="Page.Description" />
+        <icon id="title_save" />
+    </header>
+    <content>
+        <container>
+            <title id="RadioSelection.Title" />
+            <description id="RadioSelection.Description" />
+            <help id="RadioSelection.Help" />
+            <radiobutton-container id="SELECTION" legend="RadioSelection.Legend">
+                <radiobutton id="SAVE">
+                    <title id="SaveApplication.Title" />
+                </radiobutton>
+                <radiobutton id="SUBMIT">
+                    <title id="SubmitApplication.Title" />
+                </radiobutton>
+                <radiobutton id="EXIT">
+                    <title id="ExitSaveApplication.Title" />
+                </radiobutton>
+            </radiobutton-container>
+        </container>
+    </content>
+    <navigation>
+		<nav-button name="next" type="action" />
+        <nav-button name="back" type="action" />
+    </navigation>
+</page>

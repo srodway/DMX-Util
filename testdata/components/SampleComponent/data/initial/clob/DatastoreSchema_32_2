@@ -1,32 +1,138 @@
-<!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2013. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:d="http://www.curamsoftware.com/BaseDomains">
   <xs:import namespace="http://www.curamsoftware.com/BaseDomains"/>
   <xs:include schemaLocation="IEGDomains"/>
-  <xs:simpleType name="ADULTNEEDS_RESPONSES">
+  <xs:simpleType name="SCOT_ASSESSMENTTYPE">
     <xs:annotation>
       <xs:appinfo>
         <d:options>
-          <d:option name="code-table-name">AdultNeeds</d:option>
+          <d:option name="code-table-name">PIPAssessmentType</d:option>
         </d:options>
       </xs:appinfo>
     </xs:annotation>
     <xs:restriction base="IEG_CODETABLE_CODE"/>
   </xs:simpleType>
-  <xs:simpleType name="ADULTNEEDS_DIFFICULTY">
+  <xs:simpleType name="SCOT_DISEASESUBCAT">
     <xs:annotation>
       <xs:appinfo>
         <d:options>
-          <d:option name="code-table-name">AdultNeedsDifficulty</d:option>
+          <d:option name="code-table-name">Sub Group</d:option>
         </d:options>
       </xs:appinfo>
     </xs:annotation>
     <xs:restriction base="IEG_CODETABLE_CODE"/>
   </xs:simpleType>
+  <xs:simpleType name="SCOT_NUTATION">
+    <xs:annotation>
+      <xs:appinfo>
+        <d:options>
+          <d:option name="code-table-name">Nutation</d:option>
+        </d:options>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="IEG_CODETABLE_CODE"/>
+  </xs:simpleType>
+  <xs:simpleType name="SCOT_HEALTHCONDITION">
+    <xs:annotation>
+      <xs:appinfo>
+        <d:options>
+          <d:option name="code-table-name">HealthCondition</d:option>
+        </d:options>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="IEG_CODETABLE_CODE"/>
+  </xs:simpleType>
+  <xs:simpleType name="SCOT_BATHING">
+    <xs:annotation>
+      <xs:appinfo>
+        <d:options>
+          <d:option name="code-table-name">Bathing</d:option>
+        </d:options>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="IEG_CODETABLE_CODE"/>
+  </xs:simpleType>
+  <xs:simpleType name="SCOT_JOURNEY">
+    <xs:annotation>
+      <xs:appinfo>
+        <d:options>
+          <d:option name="code-table-name">Journey</d:option>
+        </d:options>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="IEG_CODETABLE_CODE"/>
+  </xs:simpleType>
+  <xs:simpleType name="SCOT_MOVING">
+    <xs:annotation>
+      <xs:appinfo>
+        <d:options>
+          <d:option name="code-table-name">Moving</d:option>
+        </d:options>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="IEG_CODETABLE_CODE"/>
+  </xs:simpleType>
+  <xs:element name="Application">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="AssessmentType" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Disability" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="DailyLiving" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Mobility" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssessmentType">
+    <xs:complexType>
+      <xs:attribute name="assessmentTypeID" type="d:SVR_KEY"/>
+      <xs:attribute name="assessmentType" type="SCOT_ASSESSMENTTYPE"/>
+      <xs:attribute name="tiProvisionsClaimed" type="IEG_STRING"/>
+      <xs:attribute name="tiProvisionsMet" type="IEG_YES_NO"/>
+    </xs:complexType>
+    <xs:key name="AssessmentType_Key">
+      <xs:selector xpath="./AssessmentType"/>
+      <xs:field xpath="@assessmentTypeID"/>
+    </xs:key>
+  </xs:element>
+  <xs:element name="Disability">
+    <xs:complexType>
+      <xs:attribute name="disabilityID" type="d:SVR_KEY"/>
+      <xs:attribute name="subCategory" type="SCOT_DISEASESUBCAT"/>
+      <xs:attribute name="additionalImpairment" type="IEG_YES_NO"/>
+    </xs:complexType>
+    <xs:key name="Disability_Key">
+      <xs:selector xpath="./Disability"/>
+      <xs:field xpath="@disabilityID"/>
+    </xs:key>
+  </xs:element>
+  <xs:element name="DailyLiving">
+    <xs:complexType>
+      <xs:attribute name="dailyLivingID" type="d:SVR_KEY"/>
+      <xs:attribute name="takingNutrition" type="SCOT_NUTATION"/>
+      <xs:attribute name="managingTherapy" type="SCOT_HEALTHCONDITION"/>
+      <xs:attribute name="bathing" type="SCOT_BATHING"/>
+      <xs:attribute name="qualPeriodSatisfied" type="IEG_YES_NO"/>
+      <xs:attribute name="qualSatisfiedDate" type="IEG_DATE"/>
+      <xs:attribute name="prospectiveTestMet" type="IEG_YES_NO"/>
+      <xs:attribute name="willQualPeriodBeSatisfied" type="IEG_YES_NO"/>
+    </xs:complexType>
+    <xs:key name="DailyLiving_Key">
+      <xs:selector xpath="./DailyLiving"/>
+      <xs:field xpath="@dailyLivingID"/>
+    </xs:key>
+  </xs:element>
+  <xs:element name="Mobility">
+    <xs:complexType>
+      <xs:attribute name="mobilityID" type="d:SVR_KEY"/>
+      <xs:attribute name="mQualPeriodSatisfied" type="IEG_YES_NO"/>
+      <xs:attribute name="qualSatisfiedDate" type="IEG_DATE"/>
+      <xs:attribute name="mProspectiveTestMet" type="IEG_YES_NO"/>
+      <xs:attribute name="planningJourney" type="SCOT_JOURNEY"/>
+      <xs:attribute name="movingAround" type="SCOT_MOVING"/>
+      <xs:attribute name="mWillQualPeriodBeSatisfied" type="IEG_YES_NO"/>
+    </xs:complexType>
+    <xs:key name="Mobility_Key">
+      <xs:selector xpath="./Mobility"/>
+      <xs:field xpath="@mobilityID"/>
+    </xs:key>
+  </xs:element>
 </xs:schema>

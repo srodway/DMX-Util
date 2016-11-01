@@ -13,7 +13,7 @@
   </xsl:template>
   <xsl:template match="DATA">
     <!--Explicitly select the STRUCT to avoid processing anything else.-->
-    <xsl:apply-templates select="STRUCT[SNAME='FinancialNotificationDetails']"/>
+    <xsl:apply-templates select="STRUCT[SNAME='LicenseNotificationDetails']"/>
   </xsl:template>
   <xsl:template match="STRUCT">
     <fo:root>
@@ -37,7 +37,7 @@
                   </fo:block>
                   <fo:inline font-size="12pt" font-weight="normal">
                     Dear
-                    <xsl:apply-templates select="FIELD[FNAME='name']"/>
+                    <xsl:apply-templates select="FIELD[FNAME='providerName']"/>
                     ,
                   </fo:inline>
                   <fo:block>
@@ -47,16 +47,9 @@
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
                   <fo:inline font-size="12pt">
-                    We wish to inform you that as a result of a correction to roster line item
-                    <xsl:apply-templates select="FIELD[FNAME='rosterLineItemReferenceNo']"/>
-                    from attendance roster
-                    <xsl:apply-templates select="FIELD[FNAME='rosterReferenceNo']"/>
-                    submitted on
-                    <xsl:apply-templates select="FIELD[FNAME='receiptDate']"/>
-                    for the delivery of
-                    <xsl:apply-templates select="FIELD[FNAME='serviceOfferingName']"/>
-                    , an underpayment was detected, and as a result you will be issued a payment as part of your next issued payment to account for the underpayment in the amount of
-                    <xsl:apply-templates select="FIELD[FNAME='amount']"/>
+                    We wish to inform you that your license has been rejected. The reason for rejection is as
+                       follows:
+                    <xsl:apply-templates select="FIELD[FNAME='rejectionReason']"/>
                     .
                   </fo:inline>
                   <fo:block>
@@ -73,7 +66,7 @@
                     <fo:leader leader-pattern="space"/>
                   </fo:block>
                   <fo:inline font-size="12pt">
-                    <xsl:apply-templates select="FIELD[FNAME='organisationName']"/>
+                    <xsl:apply-templates select="FIELD[FNAME='organizationName']"/>
                     .
                   </fo:inline>
                 </fo:block>

@@ -9,29 +9,30 @@
 -->  
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
-    <identifier name="SaveOrExitMotivation"/>
+    <identifier name="PendingDispositionAllApps" />
+    <server alias="DISPLAY" method="checkPendingApplications">
+        <param name="key$playerID" path="id" />
+    </server>
     <header>
-        <title id="Page.Title"/>
-        <description id="Page.Description"/>
-        <icon id="title_save"/>
+        <title id="Page.Title" />
+        <description id="Page.Description" />
+        <icon id="title_getting_started" />
     </header>
     <content>
- 
-    <forward target="/ans/motivationID" source="/PAGE/motivationID"/> 
         <container>
-            <title id="RadioSelection.Title"/>
-            <description id="RadioSelection.Description"/>
-            <radiobutton-container id="SELECTION" legend="RadioSelection.Legend">
-                <radiobutton id="SAVE">
-                    <title id="SaveMotivation.Title"/>
-                </radiobutton>
-                <radiobutton id="EXIT">
-                    <title id="ExitSaveMotivation.Title"/>
-                </radiobutton>
-            </radiobutton-container>
+            <title id="DisallowedPrograms.Title" />
+            <container style="rich-text">
+                <description id="DisallowedPrograms.Header" />
+            </container>
+            <container style="rich-text">
+                <description source="/DISPLAY/xmlData/disallowed" />
+            </container>
+            <container style="rich-text">
+                <description id="DisallowedPrograms.Footer" />
+            </container>
         </container>
     </content>
-    <navigation> 
-        <nav-button name="next" type="action"/>
+    <navigation>
+        <nav-button name="next" page="ResolveCitizenHome" page-type="resolve"/>
     </navigation>
 </page>

@@ -1,217 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!-- 
-  Copyright 2011 Curam Software Ltd.
+  Copyright 2010-2011 Curam Software Ltd.
   All rights reserved.
   
-  This software is the confidential and proprietary information
-  of Curam Software, Ltd. ("Confidential Information").  You
-  shall not disclose such Confidential Information and shall use
-  it only in accordance with the terms of the license agreement
-  you entered into with Curam Software.
---><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd" name="AssessmentRulesInterface">
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information").  You shall not disclose such
+  Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><!--
   
-  <!-- This class must be extended by all rule sets invoked by the Assessment 
-    and planning processing. This class is used to hold the list of factors 
-    that should be assessed during the assessment. 
-    The sub class must be named 'FactorList'. -->
-  <Class name="AbstractFactorList" abstract="true">
-    <!-- The id of Assessment Delivery Role that the list of factors is related to. 
-         This will be null for Group Based assessments -->
-    <Initialization>
-      <Attribute name="roleID">
-        <type>
-          <javaclass name="Long"/>
-        </type>
-      </Attribute>
-    </Initialization>
-    <Attribute name="factors">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="AbstractFactor"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <!-- Subclasses of AbstractFactorList must override
-          this attribute to create a list of the factors
-          supported by the rule set. -->
-        <abstract/>
-      </derivation>
-    </Attribute>
-  </Class>
- 
-  <Class name="AbstractFactor" abstract="true">
-    <!-- The reference for the factor. -->
-    <Attribute name="reference">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-    <!-- The id of Assessment Delivery Role that the factor is related to. 
-         This will be null for Group Based assessments -->
-    <Attribute name="roleID">
-      <type>
-        <javaclass name="Long"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-    <!-- The score of the factor. Either a score or classification must be provided, 
-      if both are provided the classification is used -->
-    <Attribute name="score">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-    <!-- The classification of the factor. Either a score or classification must be provided, 
-      if both are provided the classification is used -->
-    <Attribute name="classification">
-      <type>
-        <codetableentry table="ClassDivisionType"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-  </Class>    
+  Default implementations of the rule classes in ProductDecisionDetailsRuleSet.
+  
+  Rule set developers for CREOLE-based products should extend these default
+  implementations rather than extending the ProductDisplay rule classes
+  directly.
+  
+  These default implementations provide some isolation against future changes
+  to the rule classes in the ProductDisplay rule set. --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DefaultProductDecisionDetailsRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
 
-  <!-- This class must be extended by all Group Based CERT rule sets invoked by
-    Assessment And Planning processing. This class is used to hold all the 
-    assessment answers for the group captured during the assessment script. 
-    The sub class must be named 'Group' in order for the values to be automatically populated 
-    from the IEG script. -->
-  <Class name="AbstractGroup" abstract="true">
-    <Attribute name="groupName">
+
+  <!-- Default implementation of AbstractCase.
+      
+      This default implementation returns a blank explanation forever. -->
+  <Class abstract="true" extends="AbstractCase" extendsRuleSet="ProductDecisionDetailsRuleSet" name="DefaultCase">
+
+
+    <!-- Simple English-only description. -->
+    <Attribute name="description">
       <type>
-        <javaclass name="String"/>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <XmlMessage>Display rules for case: <replace>
+            <!-- use toString so that the number is not formatted with commas nor precision truncated -->
+            <property name="toString">
+              <object>
+                <reference attribute="caseID">
+                  <reference attribute="productDeliveryCase"/>
+                </reference>
+              </object>
+            </property>
+
+
+          </replace></XmlMessage>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="productDeliveryCase">
+      <type>
+        <ruleclass name="ProductDeliveryCase" ruleset="ProductEligibilityEntitlementRuleSet"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
+
+
   </Class>
 
-  <!-- This class must be extended by all CERT rule sets invoked by
-    Assessment And Planning processing. The sub class must be name 'Assessment' 
-    in order for the values to be automatically populated from the IEG script.
-    This class is used to hold details about the assessment being executed. -->
-  <Class name="AbstractAssessment" abstract="true">
-    <Attribute name="assessmentInstanceID">
+
+  <!-- Default implementation of AbstractCaseSubscreenDisplay.. -->
+  <Class abstract="true" extends="AbstractCaseSubscreenDisplay" extendsRuleSet="ProductDecisionDetailsRuleSet" name="DefaultCaseSubscreenDisplay">
+
+
+    <!-- Require that the value is specified externally. -->
+    <Attribute name="businessObjectID">
       <type>
-        <javaclass name="Long"/>
+        <javaclass name="Number"/>
       </type>
       <derivation>
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="assessmentDefinitionID">
-      <type>
-        <javaclass name="Long"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
+
+
   </Class>
 
-  <!-- This class must be extended by all Role Based CERT rule sets invoked by
-    Assessment And Planning processing. This class is used to hold the 
-    assessment answers for each person during the assessment script. 
-    The sub class must be named 'Person' in order for the values to be automatically 
-    populated from the IEG script. -->
-  <Class name="AbstractPerson" abstract="true">
-    <Attribute name="personID">
-      <type>
-        <javaclass name="Long"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="firstName">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="surname">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="fullname">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="gender">
-      <type>
-        <codetableentry table="Gender"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="dateOfBirth">
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="roleID">
-      <type>
-        <javaclass name="Long"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="roleName">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="participantID">
-      <type>
-        <javaclass name="Long"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="questionsApplicableInd">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-  </Class>
 
 </RuleSet>

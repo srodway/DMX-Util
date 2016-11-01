@@ -5,642 +5,61 @@
 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2010 Curam Software Ltd.
+--><!-- 
+    Copyright 2009-2011 Curam Software Ltd.
     All rights reserved.
-
+    
     This software is the confidential and proprietary information of Curam
     Software, Ltd. ("Confidential Information").  You shall not disclose such
     Confidential Information and shall use it only in accordance with the
     terms of the license agreement you entered into with Curam Software.
---><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="TriageRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+--><!--
+  Participant Entities Rule Set.
+  This Rule Set contains Rule Class representation of Participant Manager
+  entities that are commonly used in Determination Rule Sets.
+--><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ParticipantEntitiesRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
 
 
-  <Class name="Triage">
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="Triage.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
+  <!-- *************************************************************** -->
+  <!--
+    ConcernRole Data Rule Class.
+    ConcernRole evidence records details of the type of party with whom the 
+    organization has an interaction. Different information will be recorded for 
+    different parties. One can distinguish between these different parties using 
+    concern role types.
+  -->
+  <!-- *************************************************************** -->
+  <Class name="ConcernRole">
 
 
-    <!-- 6 attributes to determine the type of help that the citizen requires -->
-    <Attribute name="finance">
-      <type>
-        <ruleclass name="Finance"/>
-      </type>
-      <derivation>
-        <!--<create ruleclass="Finance"></create>-->
-        <singleitem onEmpty="error" onMultiple="error">
-          <readall ruleclass="Finance"/>
-        </singleitem>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="foodShelter">
-      <type>
-        <ruleclass name="FoodShelter"/>
-      </type>
-      <derivation>
-        <!--<create ruleclass="FoodShelter"></create>-->
-        <singleitem onEmpty="error" onMultiple="error">
-          <readall ruleclass="FoodShelter"/>
-        </singleitem>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="physicalHealthDisability">
-      <type>
-        <ruleclass name="PhysicalHealthDisability"/>
-      </type>
-      <derivation>
-        <!--<create ruleclass="PhysicalHealthDisability"></create>-->
-        <singleitem onEmpty="error" onMultiple="error">
-          <readall ruleclass="PhysicalHealthDisability"/>
-        </singleitem>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="medicalHealthSubsAbuse">
-      <type>
-        <ruleclass name="MedicalHealthSubsAbuse"/>
-      </type>
-      <derivation>
-        <!--<create ruleclass="MedicalHealthSubsAbuse"></create>-->
-        <singleitem onEmpty="error" onMultiple="error">
-          <readall ruleclass="MedicalHealthSubsAbuse"/>
-        </singleitem>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="safety">
-      <type>
-        <ruleclass name="Safety"/>
-      </type>
-      <derivation>
-        <!--<create ruleclass="Safety"></create>-->
-        <singleitem onEmpty="error" onMultiple="error">
-          <readall ruleclass="Safety"/>
-        </singleitem>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="education">
-      <type>
-        <ruleclass name="Education"/>
-      </type>
-      <derivation>
-        <!--<create ruleclass="Education"></create>-->
-        <singleitem onEmpty="error" onMultiple="error">
-          <readall ruleclass="Education"/>
-        </singleitem>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="allServicesGroups">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="Service"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <fixedlist>
-          <listof>
-            <ruleclass name="Service"/>
-          </listof>
-          <members>
-            <create ruleclass="EducationalPrograms">
-              <reference attribute="education"/>
-            </create>
-            <create ruleclass="ChildCareServices">
-              <reference attribute="education"/>
-            </create>
-            <create ruleclass="FinancialServices">
-              <reference attribute="finance"/>
-            </create>
-            <create ruleclass="Shelter">
-              <reference attribute="foodShelter"/>
-            </create>
-            <create ruleclass="FoodServices">
-              <reference attribute="foodShelter"/>
-            </create>
-            <create ruleclass="SubstanceAbusePrograms">
-              <reference attribute="medicalHealthSubsAbuse"/>
-            </create>
-            <create ruleclass="MentalHealthServices">
-              <reference attribute="medicalHealthSubsAbuse"/>
-            </create>
-            <create ruleclass="HealthCareServices">
-              <reference attribute="physicalHealthDisability"/>
-            </create>
-            <create ruleclass="DisabilityRelatedServices">
-              <reference attribute="physicalHealthDisability"/>
-            </create>
-            <create ruleclass="SafetyRelatedServices">
-              <reference attribute="safety"/>
-            </create>
-          </members>
-        </fixedlist>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="services">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="Service"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <filter>
-          <list>
-            <reference attribute="allServicesGroups"/>
-          </list>
-          <listitemexpression>
-            <equals>
-              <reference attribute="appropriate">
-                <current/>
-              </reference>
-              <true/>
-            </equals>
-          </listitemexpression>
-        </filter>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="allNeeds">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="AbstractNeed"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <fixedlist>
-          <listof>
-            <ruleclass name="AbstractNeed"/>
-          </listof>
-          <members>
-            <reference attribute="finance"/>
-            <reference attribute="foodShelter"/>
-            <reference attribute="physicalHealthDisability"/>
-            <reference attribute="medicalHealthSubsAbuse"/>
-            <reference attribute="safety"/>
-            <reference attribute="education"/>
-          </members>
-        </fixedlist>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needs">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="AbstractNeed"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <filter>
-          <list>
-            <reference attribute="allNeeds"/>
-          </list>
-          <listitemexpression>
-            <equals>
-              <reference attribute="appropriate">
-                <current/>
-              </reference>
-              <true/>
-            </equals>
-          </listitemexpression>
-        </filter>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="allPrograms">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="AbstractProgram"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <fixedlist>
-          <listof>
-            <ruleclass name="AbstractProgram"/>
-          </listof>
-          <members>
-            <create ruleclass="EmergencyAssistance">
-              <reference attribute="foodShelter"/>
-            </create>
-            <create ruleclass="FoodAssistance">
-              <reference attribute="foodShelter"/>
-            </create>
-            <create ruleclass="SchoolMeals">
-              <reference attribute="foodShelter"/>
-            </create>
-            <create ruleclass="SummerMeals">
-              <reference attribute="foodShelter"/>
-            </create>
-            <create ruleclass="WomenInfantsAndChildren">
-              <reference attribute="foodShelter"/>
-            </create>
-            <create ruleclass="CashAssistanceProgram">
-              <reference attribute="finance"/>
-            </create>
-            <create ruleclass="LIHEAProgram">
-              <reference attribute="finance"/>
-            </create>
-            <create ruleclass="UnemploymentInsurance">
-              <reference attribute="finance"/>
-            </create>
-            <create ruleclass="MedicalAssistance">
-              <reference attribute="physicalHealthDisability"/>
-            </create>
-            <create ruleclass="ChildCare">
-              <reference attribute="education"/>
-            </create>
-            <create ruleclass="EarlyHeadStart">
-              <reference attribute="education"/>
-            </create>
-            <create ruleclass="HeadStart">
-              <reference attribute="education"/>
-            </create>
-            <create ruleclass="PreK">
-              <reference attribute="education"/>
-            </create>
-          </members>
-        </fixedlist>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="programs">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="AbstractProgram"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <filter>
-          <list>
-            <reference attribute="allPrograms"/>
-          </list>
-          <listitemexpression>
-            <equals>
-              <reference attribute="appropriate">
-                <current/>
-              </reference>
-              <true/>
-            </equals>
-          </listitemexpression>
-        </filter>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="alllAlertMessages">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="AlertMessage"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <fixedlist>
-          <listof>
-            <ruleclass name="AlertMessage"/>
-          </listof>
-          <members>
-            <create ruleclass="EmergencyAssistanceAlert">
-              <reference attribute="foodShelter"/>
-            </create>
-            <create ruleclass="FoodAssistanceAlert">
-              <reference attribute="foodShelter"/>
-            </create>
-            <create ruleclass="Safety911Alert">
-              <reference attribute="safety"/>
-            </create>
-            <create ruleclass="SafetyChildWelfareAlert">
-              <reference attribute="safety"/>
-            </create>
-          </members>
-        </fixedlist>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="alertMessage">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="AlertMessage"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <filter>
-          <list>
-            <reference attribute="alllAlertMessages"/>
-          </list>
-          <listitemexpression>
-            <equals>
-              <reference attribute="alertRequired">
-                <current/>
-              </reference>
-              <true/>
-            </equals>
-          </listitemexpression>
-        </filter>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="screenings">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="AbstractScreening"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <fixedlist>
-          <listof>
-            <ruleclass name="AbstractScreening"/>
-          </listof>
-          <members>
-            <create ruleclass="ScreeningAllPrograms"/>
-            <create ruleclass="ScreeningSelectPrograms"/>
-          </members>
-        </fixedlist>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="intakeApplications">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="AbstractIntakeApplication"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <fixedlist>
-          <listof>
-            <ruleclass name="AbstractIntakeApplication"/>
-          </listof>
-          <members>
-            <create ruleclass="HumanServicesApplicationForm"/>
-          </members>
-        </fixedlist>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class abstract="true" name="AbstractNeed">
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="priority">
+    <!-- Concern Role ID -->
+    <Attribute name="concernRoleID">
       <type>
         <javaclass name="Number"/>
       </type>
       <derivation>
-        <abstract/>
+        <specified/>
       </derivation>
     </Attribute>
-  </Class>
 
 
-  <Class abstract="true" name="Service">
+    <!-- Description for this Rule Class. -->
     <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <abstract/>
+        <ResourceMessage key="ConcernRole.description" resourceBundle="curam.core.rules.ParticipantCERRules">
+          <reference attribute="concernRoleName"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="identifier">
+    <!-- Concern Role Name-->
+    <Attribute name="concernRoleName">
       <type>
         <javaclass name="String"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="groupInd">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class abstract="true" name="AbstractProgram">
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="programTypeReference">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class abstract="true" name="AlertMessage">
-    <Attribute name="alertRequired">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="message">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class abstract="true" name="AbstractScreening">
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class abstract="true" name="AbstractIntakeApplication">
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <!-- ***********************************************************************************-->
-
-
-  <!-- Needs -->
-  <Class extends="AbstractNeed" name="FoodShelter">
-    <Attribute name="housingWorries">
-      <type>
-        <codetableentry table="TriageYesNo"/>
       </type>
       <derivation>
         <specified/>
@@ -648,9 +67,10 @@
     </Attribute>
 
 
-    <Attribute name="foodWorries">
+    <!-- Start Date. -->
+    <Attribute name="startDate">
       <type>
-        <codetableentry table="TriageYesNo"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
         <specified/>
@@ -658,9 +78,10 @@
     </Attribute>
 
 
-    <Attribute name="otherWorries">
+    <!-- End Date. -->
+    <Attribute name="endDate">
       <type>
-        <codetableentry table="TriageYesNo"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
         <specified/>
@@ -668,1117 +89,130 @@
     </Attribute>
 
 
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="FoodShelter.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="FoodShelter"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="priority">
+    <!-- Primary Address ID. -->
+    <Attribute name="primaryAddressID">
       <type>
         <javaclass name="Number"/>
       </type>
       <derivation>
-        <Number value="1"/>
+        <specified/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="appropriate">
+    <!-- Primary Alternate ID. -->
+    <Attribute name="primaryAlternateID">
       <type>
-        <javaclass name="Boolean"/>
+        <javaclass name="String"/>
       </type>
       <derivation>
-        <any>
-          <fixedlist>
-            <listof>
-              <javaclass name="Boolean"/>
-            </listof>
-            <members>
-              <equals>
-                <reference attribute="housingWorries"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="foodWorries"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19002"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="otherWorries"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-            </members>
-          </fixedlist>
-        </any>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Concern Role Type -->
+    <Attribute name="concernRoleType">
+      <type>
+        <codetableentry table="ConcernRoleType"/>
+      </type>
+      <derivation>
+        <specified/>
       </derivation>
     </Attribute>
   </Class>
 
 
-  <Class extends="AbstractNeed" name="Finance">
-    <Attribute name="ableMakeEndsMeet">
-      <type>
-        <codetableentry table="TriageYesNo"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
+  <!-- *************************************************************** -->
+  <!-- 
+    Person Data Rule Class.
+    Person evidence records details of an individual about whom the organization 
+    wants to record information.
+  -->
+  <!-- *************************************************************** -->
+  <Class name="Person" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
 
 
-    <Attribute name="worriedIncomeNotSufficient">
-      <type>
-        <codetableentry table="TriageYesNo"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="Finance.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="Finance"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="priority">
+    <!--The concer role ID -->
+    <Attribute name="concernRoleID">
       <type>
         <javaclass name="Number"/>
       </type>
       <derivation>
-        <Number value="2"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <any>
-          <fixedlist>
-            <listof>
-              <javaclass name="Boolean"/>
-            </listof>
-            <members>
-              <equals>
-                <reference attribute="ableMakeEndsMeet"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19002"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="worriedIncomeNotSufficient"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-            </members>
-          </fixedlist>
-        </any>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class extends="AbstractNeed" name="PhysicalHealthDisability">
-
-
-    <Attribute name="healthConcern">
-      <type>
-        <codetableentry table="TriageYesNo"/>
-      </type>
-      <derivation>
         <specified/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="healthPreventWork">
-      <type>
-        <codetableentry table="TriageYesNo"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="childConcern">
-      <type>
-        <codetableentry table="TriageYesNo"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
+    <!-- Description for this Rule Class. -->
     <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <ResourceMessage key="PhysicalHealthDisability.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="PhysicalHealthDisability"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="priority">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <Number value="4"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <any>
-          <fixedlist>
-            <listof>
-              <javaclass name="Boolean"/>
-            </listof>
-            <members>
-              <equals>
-                <reference attribute="healthConcern"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="healthPreventWork"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="childConcern"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-            </members>
-          </fixedlist>
-        </any>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class extends="AbstractNeed" name="MedicalHealthSubsAbuse">
-    <Attribute name="hurtSelfOthers">
-      <type>
-        <codetableentry table="TriageYesNo"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="depression">
-      <type>
-        <codetableentry table="TriageYesNo"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="alcoholDrugs">
-      <type>
-        <codetableentry table="TriageYesNo"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="MedicalHealthSubsAbuse.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="MedicalHealthSubsAbuse"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="priority">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <Number value="5"/>
-      </derivation>
-    </Attribute>
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <any>
-          <fixedlist>
-            <listof>
-              <javaclass name="Boolean"/>
-            </listof>
-            <members>
-              <equals>
-                <reference attribute="hurtSelfOthers"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="depression"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="alcoholDrugs"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-            </members>
-          </fixedlist>
-        </any>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class extends="AbstractNeed" name="Safety">
-
-
-    <Attribute name="unsafeAfraid">
-      <type>
-        <codetableentry table="TriageYesNo"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="familySafe">
-      <type>
-        <codetableentry table="TriageYesNo"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="manageChildren">
-      <type>
-        <codetableentry table="TriageYesNo"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="Safety.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="Safety"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="priority">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <Number value="3"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <any>
-          <fixedlist>
-            <listof>
-              <javaclass name="Boolean"/>
-            </listof>
-            <members>
-              <equals>
-                <reference attribute="unsafeAfraid"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="familySafe"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="manageChildren"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-            </members>
-          </fixedlist>
-        </any>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class extends="AbstractNeed" name="Education">
-
-
-    <Attribute name="childAcademically">
-      <type>
-        <codetableentry table="TriageYesNo"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="childLearning">
-      <type>
-        <codetableentry table="TriageYesNo"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="childCare">
-      <type>
-        <codetableentry table="TriageYesNo"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="Education.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="Education"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="priority">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <Number value="6"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <any>
-          <fixedlist>
-            <listof>
-              <javaclass name="Boolean"/>
-            </listof>
-            <members>
-              <equals>
-                <reference attribute="childAcademically"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="childLearning"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="childCare"/>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-            </members>
-          </fixedlist>
-        </any>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <!-- Services Groups-->
-  <!-- Financial Services -->
-  <Class extends="Service" name="FinancialServices">
-    <Initialization>
-      <Attribute name="finance">
-        <type>
-          <ruleclass name="Finance"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="FinancialServices"/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- description -->
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="FinancialServices.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <reference attribute="appropriate">
-          <reference attribute="finance"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="groupInd">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <true/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="finance"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <!-- Food Services -->
-  <Class extends="Service" name="FoodServices">
-    <Initialization>
-      <Attribute name="foodShelter">
-        <type>
-          <ruleclass name="FoodShelter"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="FoodServices"/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- description -->
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="FoodServices.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <any>
-          <fixedlist>
-            <listof>
-              <javaclass name="Boolean"/>
-            </listof>
-            <members>
-              <equals>
-                <reference attribute="foodWorries">
-                  <reference attribute="foodShelter"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19002"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="otherWorries">
-                  <reference attribute="foodShelter"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-            </members>
-          </fixedlist>
-        </any>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="groupInd">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <true/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="foodShelter"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <!-- Shelter -->
-  <Class extends="Service" name="Shelter">
-    <Initialization>
-      <Attribute name="foodShelter">
-        <type>
-          <ruleclass name="FoodShelter"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="Shelter"/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- description -->
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="Shelter.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <any>
-          <fixedlist>
-            <listof>
-              <javaclass name="Boolean"/>
-            </listof>
-            <members>
-              <equals>
-                <reference attribute="housingWorries">
-                  <reference attribute="foodShelter"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="otherWorries">
-                  <reference attribute="foodShelter"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-            </members>
-          </fixedlist>
-        </any>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="groupInd">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <true/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="foodShelter"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <!-- Health Care Services -->
-  <Class extends="Service" name="HealthCareServices">
-    <Initialization>
-      <Attribute name="physicalHealthDisability">
-        <type>
-          <ruleclass name="PhysicalHealthDisability"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="HealthCareServices"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="HealthCareServices.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <reference attribute="appropriate">
-          <reference attribute="physicalHealthDisability"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="groupInd">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <true/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="physicalHealthDisability"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <!-- Disability Related Services -->
-  <Class extends="Service" name="DisabilityRelatedServices">
-    <Initialization>
-      <Attribute name="physicalHealthDisability">
-        <type>
-          <ruleclass name="PhysicalHealthDisability"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="DisabilityRelatedServices"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="DisabilityRelatedServices.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <any>
-          <fixedlist>
-            <listof>
-              <javaclass name="Boolean"/>
-            </listof>
-            <members>
-              <equals>
-                <reference attribute="healthPreventWork">
-                  <reference attribute="physicalHealthDisability"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="childConcern">
-                  <reference attribute="physicalHealthDisability"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-            </members>
-          </fixedlist>
-        </any>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="groupInd">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <true/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="physicalHealthDisability"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <!-- Mental Health Services -->
-  <Class extends="Service" name="MentalHealthServices">
-    <Initialization>
-      <Attribute name="medicalHealthSubsAbuse">
-        <type>
-          <ruleclass name="MedicalHealthSubsAbuse"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="MentalHealthServices"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="MentalHealthServices.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <any>
-          <fixedlist>
-            <listof>
-              <javaclass name="Boolean"/>
-            </listof>
-            <members>
-              <equals>
-                <reference attribute="hurtSelfOthers">
-                  <reference attribute="medicalHealthSubsAbuse"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="depression">
-                  <reference attribute="medicalHealthSubsAbuse"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-            </members>
-          </fixedlist>
-        </any>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="groupInd">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <true/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="medicalHealthSubsAbuse"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <!-- Substance Abuse Programs -->
-  <Class extends="Service" name="SubstanceAbusePrograms">
-    <Initialization>
-      <Attribute name="medicalHealthSubsAbuse">
-        <type>
-          <ruleclass name="MedicalHealthSubsAbuse"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="SubstanceAbusePrograms"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="SubstanceAbusePrograms.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <equals>
-          <reference attribute="alcoholDrugs">
-            <reference attribute="medicalHealthSubsAbuse"/>
+        <ResourceMessage key="Person.description" resourceBundle="curam.core.rules.ParticipantCERRules">
+          <reference attribute="concernRoleNameForConcernRoleID">
+            <create ruleclass="DisplayHelper">
+              <null/>
+              <reference attribute="concernRoleID"/>
+            </create>
           </reference>
-          <Code table="TriageYesNo">
-            <String value="TRYN19001"/>
-          </Code>
-        </equals>
+        </ResourceMessage>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="groupInd">
+    <!--The Date of Birth -->
+    <Attribute name="dateOfBirth">
       <type>
-        <javaclass name="Boolean"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <true/>
+        <specified/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="needIdentifier">
+    <!-- The Date of Death -->
+    <Attribute name="dateOfDeath">
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- The marital status -->
+    <Attribute name="maritalStatusCode">
+      <type>
+        <codetableentry table="MaritalStatus"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- The gender -->
+    <Attribute name="gender">
+      <type>
+        <codetableentry table="Gender"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- The surname of the person when they were born. -->
+    <Attribute name="personBirthName">
       <type>
         <javaclass name="String"/>
       </type>
       <derivation>
-        <reference attribute="identifier">
-          <reference attribute="medicalHealthSubsAbuse"/>
-        </reference>
+        <specified/>
       </derivation>
     </Attribute>
 
@@ -1786,1312 +220,1013 @@
   </Class>
 
 
-  <!-- Safety Related Services -->
-  <Class extends="Service" name="SafetyRelatedServices">
-    <Initialization>
-      <Attribute name="safety">
-        <type>
-          <ruleclass name="Safety"/>
-        </type>
-      </Attribute>
-    </Initialization>
+  <!-- *************************************************************** -->
+  <!-- 
+    Prospect Person Data Rule Class.
+    Prosepect Person evidence records details of a non-registered person
+    about whom the organization wants to record information.
+    -->
+  <!-- *************************************************************** -->
+  <Class name="ProspectPerson" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
 
 
-    <Attribute name="identifier">
+    <!--The concern role ID -->
+    <Attribute name="concernRoleID">
       <type>
-        <javaclass name="String"/>
+        <javaclass name="Number"/>
       </type>
       <derivation>
-        <String value="SafetyRelatedServices"/>
+        <specified/>
       </derivation>
     </Attribute>
 
 
+    <!-- Description for this Rule Class. -->
     <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <ResourceMessage key="SafetyRelatedServices.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <reference attribute="appropriate">
-          <reference attribute="safety"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="groupInd">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <true/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="safety"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <!-- Educational Programs -->
-  <Class extends="Service" name="EducationalPrograms">
-    <Initialization>
-      <Attribute name="education">
-        <type>
-          <ruleclass name="Education"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="EducationalPrograms"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="EducationalPrograms.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <any>
-          <fixedlist>
-            <listof>
-              <javaclass name="Boolean"/>
-            </listof>
-            <members>
-              <equals>
-                <reference attribute="childAcademically">
-                  <reference attribute="education"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="childLearning">
-                  <reference attribute="education"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-            </members>
-          </fixedlist>
-        </any>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="groupInd">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <true/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="education"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <!-- Child Care Services -->
-  <Class extends="Service" name="ChildCareServices">
-    <Initialization>
-      <Attribute name="education">
-        <type>
-          <ruleclass name="Education"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="ChildCareServices"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="ChildCareServices.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <equals>
-          <reference attribute="childCare">
-            <reference attribute="education"/>
+        <ResourceMessage key="ProspectPerson.description" resourceBundle="curam.core.rules.ParticipantCERRules">
+          <reference attribute="concernRoleNameForConcernRoleID">
+            <create ruleclass="DisplayHelper">
+              <null/>
+              <reference attribute="concernRoleID"/>
+            </create>
           </reference>
-          <Code table="TriageYesNo">
-            <String value="TRYN19001"/>
-          </Code>
-        </equals>
+        </ResourceMessage>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="groupInd">
+    <!--The Date of Birth -->
+    <Attribute name="dateOfBirth">
       <type>
-        <javaclass name="Boolean"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <true/>
+        <specified/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="needIdentifier">
+    <!-- The Date of Death -->
+    <Attribute name="dateOfDeath">
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- The marital status -->
+    <Attribute name="maritalStatusCode">
+      <type>
+        <codetableentry table="MaritalStatus"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- The gender -->
+    <Attribute name="gender">
+      <type>
+        <codetableentry table="Gender"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- The surname of the prospect when they were born.  -->
+    <Attribute name="personBirthName">
       <type>
         <javaclass name="String"/>
       </type>
       <derivation>
-        <reference attribute="identifier">
-          <reference attribute="education"/>
-        </reference>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- The estimated minimum age in years of the Prospect. -->
+    <Attribute name="fromAge">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- The estimated maximum age in years of the Prospect. -->
+    <Attribute name="toAge">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- The primary alternate ID -->
+    <Attribute name="primaryAlternateID">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- The participantRoleID of the Person the Prospect becomes upon
+            registration. -->
+    <Attribute name="personConcernRoleID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
       </derivation>
     </Attribute>
 
 
   </Class>
-  <!-- ***********************************************************************************-->
-  <!-- Programs -->
-  <Class extends="AbstractProgram" name="EmergencyAssistance">
-    <Initialization>
-      <Attribute name="foodShelter">
-        <type>
-          <ruleclass name="FoodShelter"/>
-        </type>
-      </Attribute>
-    </Initialization>
 
 
+  <!-- *************************************************************** -->
+  <!-- 
+    Address Data Rule Class.
+    Address evidence records holds a description of a location, as written or 
+    printed on mail as directions for delivery.Many concurrent addresses can be 
+    stored for a participant but one address is marked as the primary or default 
+    address. A type e.g. home, work, etc. can be recorded for each address.  
+  -->
+  <!-- *************************************************************** -->
+  <Class name="Address" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+    <!--Address ID. -->
+    <Attribute name="addressID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Description for this Rule Class. -->
     <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <ResourceMessage key="EmergencyAssistance.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
+        <ResourceMessage key="Address.description" resourceBundle="curam.core.rules.ParticipantCERRules">
+          <reference attribute="addressID"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="appropriate">
+    <!-- Country Code. -->
+    <Attribute name="countryCode">
       <type>
-        <javaclass name="Boolean"/>
+        <codetableentry table="AddressCountry"/>
       </type>
       <derivation>
-        <reference attribute="appropriate">
-          <reference attribute="foodShelter"/>
-        </reference>
+        <specified/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="programTypeReference">
+    <!-- Address Data. -->
+    <Attribute name="addressData">
       <type>
-        <javaclass name="String"/>
+        <javaclass name="String"> </javaclass>
       </type>
       <derivation>
-        <String value="PT19004"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="foodShelter"/>
-        </reference>
+        <specified/>
       </derivation>
     </Attribute>
   </Class>
 
 
-  <Class extends="AbstractProgram" name="FoodAssistance">
-    <Initialization>
-      <Attribute name="foodShelter">
-        <type>
-          <ruleclass name="FoodShelter"/>
-        </type>
-      </Attribute>
-    </Initialization>
+  <!-- *************************************************************** -->
+  <!-- 
+    ConcernRoleAddress Data Rule Class.
+    ConcernRoleAddress evidence records holds an address for a participant. 
+    One or more addresses can be recorded for a participant. 
+  -->
+  <!-- *************************************************************** -->
+  <Class name="ConcernRoleAddress" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
 
 
+    <!-- Primary Key. The Concern Role Address ID. -->
+    <Attribute name="concernRoleAddressID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- The Concern Role ID. -->
+    <Attribute name="concernRoleID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Description for this Rule Class. -->
     <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <ResourceMessage key="FoodAssistance.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <reference attribute="appropriate">
-          <reference attribute="foodShelter"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="programTypeReference">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="PT19001"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="foodShelter"/>
-        </reference>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class extends="AbstractProgram" name="SchoolMeals">
-    <Initialization>
-      <Attribute name="foodShelter">
-        <type>
-          <ruleclass name="FoodShelter"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="SchoolMeals.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <reference attribute="appropriate">
-          <reference attribute="foodShelter"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="programTypeReference">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="PT19014"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="foodShelter"/>
-        </reference>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class extends="AbstractProgram" name="SummerMeals">
-    <Initialization>
-      <Attribute name="foodShelter">
-        <type>
-          <ruleclass name="FoodShelter"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="SummerMeals.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <reference attribute="appropriate">
-          <reference attribute="foodShelter"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="programTypeReference">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="PT19008"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="foodShelter"/>
-        </reference>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class extends="AbstractProgram" name="WomenInfantsAndChildren">
-    <Initialization>
-      <Attribute name="foodShelter">
-        <type>
-          <ruleclass name="FoodShelter"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="WomenInfantsAndChildren.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <reference attribute="appropriate">
-          <reference attribute="foodShelter"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="programTypeReference">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="PT19010"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="foodShelter"/>
-        </reference>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class extends="AbstractProgram" name="CashAssistanceProgram">
-    <Initialization>
-      <Attribute name="finance">
-        <type>
-          <ruleclass name="Finance"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="CashAssistanceProgram.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <reference attribute="appropriate">
-          <reference attribute="finance"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="programTypeReference">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="PT19002"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="finance"/>
-        </reference>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class extends="AbstractProgram" name="LIHEAProgram">
-    <Initialization>
-      <Attribute name="finance">
-        <type>
-          <ruleclass name="Finance"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="LIHEAProgram.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <reference attribute="appropriate">
-          <reference attribute="finance"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="programTypeReference">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="PT19029"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="finance"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <Class extends="AbstractProgram" name="UnemploymentInsurance">
-    <Initialization>
-      <Attribute name="finance">
-        <type>
-          <ruleclass name="Finance"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="UnemploymentInsurance.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <reference attribute="appropriate">
-          <reference attribute="finance"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="programTypeReference">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="PT19007"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="finance"/>
-        </reference>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class extends="AbstractProgram" name="MedicalAssistance">
-    <Initialization>
-      <Attribute name="physicalHealthDisability">
-        <type>
-          <ruleclass name="PhysicalHealthDisability"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="MedicalAssistance.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <reference attribute="appropriate">
-          <reference attribute="physicalHealthDisability"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="programTypeReference">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="PT19003"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="physicalHealthDisability"/>
-        </reference>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class extends="AbstractProgram" name="ChildCare">
-    <Initialization>
-      <Attribute name="education">
-        <type>
-          <ruleclass name="Education"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="ChildCare.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <reference attribute="appropriate">
-          <reference attribute="education"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="programTypeReference">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="PT19006"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="education"/>
-        </reference>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class extends="AbstractProgram" name="EarlyHeadStart">
-    <Initialization>
-      <Attribute name="education">
-        <type>
-          <ruleclass name="Education"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="EarlyHeadStart.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <reference attribute="appropriate">
-          <reference attribute="education"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="programTypeReference">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="PT19024"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="education"/>
-        </reference>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class extends="AbstractProgram" name="HeadStart">
-    <Initialization>
-      <Attribute name="education">
-        <type>
-          <ruleclass name="Education"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="HeadStart.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <reference attribute="appropriate">
-          <reference attribute="education"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="programTypeReference">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="PT19012"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="education"/>
-        </reference>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class extends="AbstractProgram" name="PreK">
-    <Initialization>
-      <Attribute name="education">
-        <type>
-          <ruleclass name="Education"/>
-        </type>
-      </Attribute>
-    </Initialization>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="PreK.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <reference attribute="appropriate">
-          <reference attribute="education"/>
-        </reference>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="programTypeReference">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="PT19018"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="needIdentifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <reference attribute="identifier">
-          <reference attribute="education"/>
-        </reference>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <!-- Alert Messages -->
-  <Class extends="AlertMessage" name="EmergencyAssistanceAlert">
-    <Initialization>
-      <Attribute name="foodShelter">
-        <type>
-          <ruleclass name="FoodShelter"/>
-        </type>
-      </Attribute>
-    </Initialization>
-    <Attribute name="alertRequired">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <any>
-          <fixedlist>
-            <listof>
-              <javaclass name="Boolean"/>
-            </listof>
-            <members>
-              <equals>
-                <reference attribute="foodWorries">
-                  <reference attribute="foodShelter"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19002"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="otherWorries">
-                  <reference attribute="foodShelter"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="housingWorries">
-                  <reference attribute="foodShelter"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-            </members>
-          </fixedlist>
-        </any>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="message">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="EmergencyAssistanceAlert.message" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="Dummy.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class extends="AlertMessage" name="FoodAssistanceAlert">
-    <Initialization>
-      <Attribute name="foodShelter">
-        <type>
-          <ruleclass name="FoodShelter"/>
-        </type>
-      </Attribute>
-    </Initialization>
-    <Attribute name="alertRequired">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <any>
-          <fixedlist>
-            <listof>
-              <javaclass name="Boolean"/>
-            </listof>
-            <members>
-              <equals>
-                <reference attribute="foodWorries">
-                  <reference attribute="foodShelter"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19002"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="otherWorries">
-                  <reference attribute="foodShelter"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="housingWorries">
-                  <reference attribute="foodShelter"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-            </members>
-          </fixedlist>
-        </any>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="message">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="FoodAssistanceAlert.message" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="Dummy.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-  </Class>
-
-
-  <Class extends="AlertMessage" name="Safety911Alert">
-    <Initialization>
-      <Attribute name="safety">
-        <type>
-          <ruleclass name="Safety"/>
-        </type>
-      </Attribute>
-    </Initialization>
-    <Attribute name="alertRequired">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <equals>
-          <reference attribute="familySafe">
-            <reference attribute="safety"/>
+        <ResourceMessage key="ConcernRoleAddress.description" resourceBundle="curam.core.rules.ParticipantCERRules">
+          <reference attribute="typeCode"/>
+          <reference attribute="concernRoleNameForConcernRoleID">
+            <create ruleclass="DisplayHelper">
+              <null/>
+              <reference attribute="concernRoleID"/>
+            </create>
           </reference>
-          <Code table="TriageYesNo">
-            <String value="TRYN19001"/>
-          </Code>
-        </equals>
+        </ResourceMessage>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="message">
+    <!-- Start Date.-->
+    <Attribute name="startDate">
       <type>
-        <javaclass name="curam.creole.value.Message"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <ResourceMessage key="Safety_911Alert.message" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
+        <specified/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="description">
+    <!-- End Date.-->
+    <Attribute name="endDate">
       <type>
-        <javaclass name="curam.creole.value.Message"/>
+        <javaclass name="curam.util.type.Date"/>
       </type>
       <derivation>
-        <ResourceMessage key="Dummy.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Unique Address ID of the Address. -->
+    <Attribute name="addressID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Address Type. -->
+    <Attribute name="typeCode">
+      <type>
+        <codetableentry table="AddressType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Status Code. -->
+    <Attribute name="statusCode">
+      <type>
+        <codetableentry table="RecordStatus"/>
+      </type>
+      <derivation>
+        <specified/>
       </derivation>
     </Attribute>
   </Class>
 
 
-  <Class extends="AlertMessage" name="SafetyChildWelfareAlert">
+  <!-- *************************************************************** -->
+  <!-- 
+    ConcernRoleAlternateID Data Rule Class.
+    ConcernRoleAlternateID evidence record holds a unique identifier for a participant. 
+    Most organizations use a unique identifier for a participant in their dealings
+    with that participant e.g. on correspondence.A primary alternate ID is set 
+    for each participant. 
+  -->
+  <!-- *************************************************************** -->
+  <Class name="ConcernRoleAlternateID" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+    <!-- Primary Key. The Concern Role Alternate ID. -->
+    <Attribute name="concernRoleAlternateID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- ConcernRole ID. -->
+    <Attribute name="concernRoleID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Description for this Rule Class. -->
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="ConcernRoleAlternateID.description" resourceBundle="curam.core.rules.ParticipantCERRules">
+          <reference attribute="typeCode"/>
+          <reference attribute="alternateID"/>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Alternate ID. -->
+    <Attribute name="alternateID">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Type Code. -->
+    <Attribute name="typeCode">
+      <type>
+        <codetableentry table="ConcernRoleAlternateID"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Start Date. -->
+    <Attribute name="startDate">
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- End Date. -->
+    <Attribute name="endDate">
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+  </Class>
+
+
+  <!-- *************************************************************** -->
+  <!-- 
+    ConcernRoleRelationship Data Rule Class.
+    ConcernRoleRelationship evidence records details of the relationship between
+    two participants. A participant may have many concern role relationships. 
+    Concern role relationships can be created between any two participant types. 
+    Relationships are always created in pairs. When a concern role relationship 
+    is created, e.g. 'Father to Son', the reciprocal 'Son to Father' concern role 
+    relationship is automatically created.  
+  -->
+  <!-- *************************************************************** -->
+  <Class name="ConcernRoleRelationship" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+    <!-- Concern Role Id -->
+    <Attribute name="concernRoleID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Concern Role Type -->
+    <Attribute name="concernRoleType">
+      <type>
+        <codetableentry table="ConcernRoleType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Concern Role ID of the Concern related to this Concern -->
+    <Attribute name="relConcernRoleID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Type of the Related Concern -->
+    <Attribute name="relConcernRoleType">
+      <type>
+        <codetableentry table="ConcernRoleType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Start date -->
+    <Attribute name="startDate">
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- End date -->
+    <Attribute name="endDate">
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Relationship type -->
+    <Attribute name="relationshipType">
+      <type>
+        <codetableentry table="RelationshipTypeCode"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Reason for the cessation of the Relationship -->
+    <Attribute name="relEndReasonCode">
+      <type>
+        <codetableentry table="RelationshipEndReason"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Primary related person concernRoleRelationshipID -->
+    <Attribute name="concernRoleRelationshipID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Description for this Rule Class. -->
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="ConcernRoleRelationship.description" resourceBundle="curam.core.rules.ParticipantCERRules">
+          <reference attribute="concernRoleNameForConcernRoleID">
+            <create ruleclass="DisplayHelper">
+              <null/>
+              <reference attribute="concernRoleID"/>
+            </create>
+          </reference>
+          <reference attribute="concernRoleNameForConcernRoleID">
+            <create ruleclass="DisplayHelper">
+              <null/>
+              <reference attribute="relConcernRoleID"/>
+            </create>
+          </reference>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Reciprocal related person concernRoleReciprocalRelationshipID -->
+    <Attribute name="concernRoleRecipRelationID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Retrieve the Concern Role of current concern role relationship-->
+    <Attribute name="concernRoleRecord">
+      <type>
+        <ruleclass name="ConcernRole"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="ConcernRole">
+            <match retrievedattribute="concernRoleID">
+              <reference attribute="concernRoleID"/>
+            </match>
+          </readall>
+        </singleitem>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Retrieve the Concern Role of the related person -->
+    <Attribute name="relatedConcernRoleRecord">
+      <type>
+        <ruleclass name="ConcernRole"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="returnNull" onMultiple="error">
+          <readall ruleclass="ConcernRole">
+            <match retrievedattribute="concernRoleID">
+              <reference attribute="relConcernRoleID"/>
+            </match>
+          </readall>
+        </singleitem>
+      </derivation>
+    </Attribute>
+
+
+  </Class>
+
+
+  <!-- *************************************************************** -->
+  <!-- 
+    Employment Data Rule Class.
+    Employment evidence records details of work in which a person is engaged. 
+    A person may hold one or more employments. 
+  -->
+  <!-- *************************************************************** -->
+  <Class name="Employment" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+    <!-- Description for this Rule Class. -->
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="Employment.description" resourceBundle="curam.core.rules.ParticipantCERRules">
+          <reference attribute="concernRoleNameForConcernRoleID">
+            <create ruleclass="DisplayHelper">
+              <null/>
+              <reference attribute="concernRoleID"/>
+            </create>
+          </reference>
+          <reference attribute="occupationType"/>
+        </ResourceMessage>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Employment ID -->
+    <Attribute name="employmentID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Concern Role ID of the employed Person -->
+    <Attribute name="concernRoleID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Concern Role ID of the employer -->
+    <Attribute name="employerConcernRoleID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- The start date of the employment. -->
+    <Attribute name="fromDate">
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- The end date of the employment. -->
+    <Attribute name="toDate">
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Indicator that denotes if the employer is primary current employer
+            of the person -->
+    <Attribute name="primaryCurrentInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- The occupation type of the employment. -->
+    <Attribute name="occupationType">
+      <type>
+        <codetableentry table="OccupationType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Retrieve the Concern Role of the employee -->
+    <Attribute name="concernRoleRecord">
+      <type>
+        <ruleclass name="ConcernRole"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="ConcernRole">
+            <match retrievedattribute="concernRoleID">
+              <reference attribute="concernRoleID"/>
+            </match>
+          </readall>
+        </singleitem>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Retrieve the Concern Role of the employer -->
+    <Attribute name="employerConcernRoleRecord">
+      <type>
+        <ruleclass name="ConcernRole"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="ConcernRole">
+            <match retrievedattribute="concernRoleID">
+              <reference attribute="employerConcernRoleID"/>
+            </match>
+          </readall>
+        </singleitem>
+      </derivation>
+    </Attribute>
+
+
+  </Class>
+
+
+  <!-- *************************************************************** -->
+  <!-- 
+    DisplayHelper Rule Class. 
+    This class is a generic utility class which is used for setting the value for 
+    the description attribute for the rule classes.
+  -->
+  <!-- *************************************************************** -->
+  <Class name="DisplayHelper" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+    <!--Initializes the caseParticipantRoleID and concernRoleID-->
     <Initialization>
-      <Attribute name="safety">
+      <Attribute name="caseParticipantRoleID">
         <type>
-          <ruleclass name="Safety"/>
+          <javaclass name="Number"/>
+        </type>
+      </Attribute>
+      <Attribute name="concernRoleID">
+        <type>
+          <javaclass name="Number"/>
         </type>
       </Attribute>
     </Initialization>
-    <Attribute name="alertRequired">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <any>
-          <fixedlist>
-            <listof>
-              <javaclass name="Boolean"/>
-            </listof>
-            <members>
-              <equals>
-                <reference attribute="familySafe">
-                  <reference attribute="safety"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-              <equals>
-                <reference attribute="manageChildren">
-                  <reference attribute="safety"/>
-                </reference>
-                <Code table="TriageYesNo">
-                  <String value="TRYN19001"/>
-                </Code>
-              </equals>
-            </members>
-          </fixedlist>
-        </any>
-      </derivation>
-    </Attribute>
 
 
-    <Attribute name="message">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <ResourceMessage key="Safety_ChildWelfareAlert.message" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
-      </derivation>
-    </Attribute>
-
-
+    <!-- Description for this Rule Class. -->
     <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <ResourceMessage key="Dummy.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
+        <ResourceMessage key="DisplayHelper.description" resourceBundle="curam.core.rules.ParticipantCERRules">
+          <String value="A generic display helper class for rules"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
-  </Class>
 
 
-  <!-- Screening (all programs) -->
-  <Class extends="AbstractScreening" name="ScreeningAllPrograms">
-
-
-    <Attribute name="description">
+    <!--
+      Retrieves the CaseParticipantRoleRecord for the given 
+      caseParticipantRoleID
+    -->
+    <Attribute name="caseParticipantRoleRecord">
       <type>
-        <javaclass name="curam.creole.value.Message"/>
+        <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
       </type>
       <derivation>
-        <ResourceMessage key="Dummy.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="CaseParticipantRole" ruleset="CaseEntitiesRuleSet">
+            <match retrievedattribute="caseParticipantRoleID">
+              <reference attribute="caseParticipantRoleID"/>
+            </match>
+          </readall>
+        </singleitem>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <true/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="identifier">
+    <!--
+      The attribute returns the concernRoleName for the given 
+      caseParticipantRoleID from the caseParticipantRoleRecord
+    -->
+    <Attribute name="concernRoleNameForCaseParticipantID">
       <type>
         <javaclass name="String"/>
       </type>
       <derivation>
-        <String value="19002"/>
+        <reference attribute="concernRoleName">
+          <reference attribute="participantRole">
+            <reference attribute="caseParticipantRoleRecord"/>
+          </reference>
+        </reference>
+      </derivation>
+    </Attribute>
+
+
+    <!--
+      The attribute returns the concernRoleName for the given
+      concernRoleID from the concernRoleRecord
+    -->
+    <Attribute name="concernRoleNameForConcernRoleID">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <reference attribute="concernRoleName">
+          <reference attribute="concernRoleRecord"/>
+        </reference>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Retrieves the concernRoleRecord for the given concernRoleID -->
+    <Attribute name="concernRoleRecord">
+      <type>
+        <ruleclass name="ConcernRole"/>
+      </type>
+      <derivation>
+        <singleitem onEmpty="error" onMultiple="error">
+          <readall ruleclass="ConcernRole">
+            <match retrievedattribute="concernRoleID">
+              <reference attribute="concernRoleID"/>
+            </match>
+          </readall>
+        </singleitem>
       </derivation>
     </Attribute>
 
 
   </Class>
-  <!-- End Screening (all programs) -->
 
 
-  <!-- Screening (select programs) -->
-  <Class extends="AbstractScreening" name="ScreeningSelectPrograms">
+  <!-- *************************************************************** -->
+  <!-- 
+    EmploymentWorkingHour Data Rule Class.
+    EmploymentWorkingHour evidence records details of the number of hours a week a 
+    participant works in an employment. Employment working hours are recorded to 
+    ensure payments are made for a standard working week which will not include 
+    shift work, overtime or other bonus payments.
+  -->
+  <!-- *************************************************************** -->
+  <Class name="EmploymentWorkingHour" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
 
 
+    <Attribute name="employmentWorkingHourID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="employmentID">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="fromDate">
+      <type>
+        <javaclass name="curam.util.type.Date"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="noHoursWorked">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="shiftWorkInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="noDaysWorkedPerWeek">
+      <type>
+        <javaclass name="Number"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <!-- Description for this Rule Class. -->
     <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <ResourceMessage key="Dummy.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
+        <ResourceMessage key="EmploymentWorkingHours.description" resourceBundle="curam.core.rules.ParticipantCERRules">
+          <reference attribute="noHoursWorked"/>
+          <reference attribute="fromDate"/>
+          <reference attribute="employmentID"/>
+        </ResourceMessage>
       </derivation>
     </Attribute>
-
-
-    <Attribute name="appropriate">
-      <type>
-        <javaclass name="Boolean"/>
-      </type>
-      <derivation>
-        <true/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="identifier">
-      <type>
-        <javaclass name="String"/>
-      </type>
-      <derivation>
-        <String value="19003"/>
-      </derivation>
-    </Attribute>
-
-
   </Class>
-  <!-- End Screening (select programs) -->
 
 
-  <!-- HumanServicesApplicationForm -->
-  <Class extends="AbstractIntakeApplication" name="HumanServicesApplicationForm">
+  <!-- *************************************************************** -->
+  <!-- 
+    Employer Data Rule Class.
+    Employer evidence records details of Employer details and type of the 
+    employment provided. 
+  -->
+  <!-- *************************************************************** -->
+  <Class name="Employer" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+
+
+    <!-- Description for this Rule Class. -->
     <Attribute name="description">
       <type>
         <javaclass name="curam.creole.value.Message"/>
       </type>
       <derivation>
-        <ResourceMessage key="Dummy.description" resourceBundle="curam.triage.rules.TriageRuleSetProperties"/>
+        <ResourceMessage key="Employer.description" resourceBundle="curam.core.rules.ParticipantCERRules">
+          <reference attribute="concernRoleNameForConcernRoleID">
+            <create ruleclass="DisplayHelper">
+              <null/>
+              <reference attribute="concernRoleID"/>
+            </create>
+          </reference>
+        </ResourceMessage>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="appropriate">
+    <Attribute name="concernRoleID">
       <type>
-        <javaclass name="Boolean"/>
+        <javaclass name="Number"/>
       </type>
       <derivation>
-        <true/>
+        <specified/>
       </derivation>
     </Attribute>
 
 
-    <Attribute name="identifier">
+    <Attribute name="registeredName">
       <type>
         <javaclass name="String"/>
       </type>
       <derivation>
-        <String value="4001"/>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="tradingName">
+      <type>
+        <javaclass name="String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="industryType">
+      <type>
+        <codetableentry table="IndustryType"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="exemptionInd">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <specified/>
       </derivation>
     </Attribute>
   </Class>
-  <!-- End HumanServicesApplicationForm -->
+
+
 </RuleSet>

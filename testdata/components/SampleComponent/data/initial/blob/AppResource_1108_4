@@ -1,71 +1,69 @@
 #
 # Licensed Materials - Property of IBM
 # 
+# Copyright IBM Corporation 2014. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+
+MenuItem.Title.AddObjectives=Add Objectives
+MenuItem.Tooltip.AddObjectives=Add objectives to the service
+
+#
+# Licensed Materials - Property of IBM
+# 
 # Copyright IBM Corporation 2012. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
 Submenu.Title.New=New
-Submenu.Icon.New=New
 Submenu.Tooltip.New=New
-
-MenuItem.Title.CreateCase=Case
-MenuItem.Icon.CreateCase=Case
-MenuItem.Tooltip.CreateCase=Create new case.
-
-MenuItem.Title.Participant=Participant Registration
-MenuItem.Icon.Participant=Participant
-MenuItem.Tooltip.Participant=Create new participant.
-
-Submenu.Title.Search=Search
-Submenu.Icon.Search=Search
-Submenu.Tooltip.Search=Find a case or participant.
-
-MenuItem.Title.SearchCase=Case
-MenuItem.Icon.SearchCase=SearchCase
-MenuItem.Tooltip.SearchCase=Find a case.
-
-Submenu.Title.Participant=Participant
-Submenu.Icon.Participant=Partcipant
-Submenu.Tooltip.Participant=Find a participant.
-
-MenuItem.Title.Employer=Employer
-MenuItem.Icon.Employer=Employer
-MenuItem.Tooltip.Employer=Find an employer.
-
-MenuItem.Title.InformationProvider=Information Provider
-MenuItem.Icon.InformationProvider=InformationProvider
-MenuItem.Tooltip.InformationProvider=Find an information provider.
-
-MenuItem.Title.Person=Person
-MenuItem.Icon.Person=Person
-MenuItem.Tooltip.Person=Find a person or prospect person.
-
-MenuItem.Title.ProductProvider=Product Provider
-MenuItem.Icon.ProductProvider=ProductProvider
-MenuItem.Tooltip.ProductProvider=Find a product provider.
-
-MenuItem.Title.ServiceSupplier=Service Supplier
-MenuItem.Icon.ServiceSupplier=ServiceSupplier
-MenuItem.Tooltip.ServiceSupplier=Find a service supplier.
-
-MenuItem.Title.EducationalInstitute=Educational Institute
-MenuItem.Icon.EducationalInstitute=EducationalInstitute
-MenuItem.Tooltip.EducationalInstitute=Find an educational institute.
-
-MenuItem.Title.ExternalParty=External Party
-MenuItem.Icon.ExternalParty=ExternalParty
-MenuItem.Tooltip.ExternalParty=Find an external party.
-
-MenuItem.Title.ExternalPartyOffice=External Party Office
-MenuItem.Icon.ExternalPartyOffice=ExternalPartyOffice
-MenuItem.Tooltip.ExternalPartyOffice=Find an external party office.
-
-MenuItem.Title.Utility=Utility
-MenuItem.Icon.Utility=Utility
-MenuItem.Tooltip.Utility=Find a utility.
-
-MenuItem.Title.AllParticipant=All Participant
-MenuItem.Icon.AllParticipant=AllParticipant
-MenuItem.Tooltip.AllParticipant=Find a participant.
+MenuItem.Title.Comment=Comment
+MenuItem.Tooltip.Comment=Add a new comment on the service delivery
+Submenu.Title.Manage=Manage
+Submenu.Tooltip.Manage=Manage
+MenuItem.Title.Submit=Submit
+MenuItem.Tooltip.Submit=Submit
+MenuItem.Title.Complete=Complete
+MenuItem.Tooltip.Complete=Complete
+MenuItem.Title.EditCompletion=Edit Completion
+MenuItem.Tooltip.EditCompletion=Edit Completion
+MenuItem.Title.Approve=Approve
+MenuItem.Tooltip.Approve=Approves the submitted service, which updates its status to 'Not Started', if its cover period start date is not yet effective, or 'In Progress', if it is effective.
+MenuItem.Title.Reject=Reject
+MenuItem.Tooltip.Reject=Rejects the submitted service, which resets its status to the 'Open' state.
+MenuItem.Title.Review=Review
+MenuItem.Tooltip.Review=Review the Service
+MenuItem.Title.UndoProviderSelection=Undo Provider Selection
+MenuItem.Tooltip.UndoProviderSelection=Remove the selected provider as the provider of the service
+MenuItem.Title.SelectProviderType=Select Provider Type
+MenuItem.Tooltip.SelectProviderType=Specify the provider type for the service
+MenuItem.Title.UndoProviderTypeSelection=Undo Provider Type Selection
+MenuItem.Tooltip.UndoProviderTypeSelection=Remove the selected provider type as the provider type for the service
+MenuItem.Title.AddNote=New Note
+MenuItem.Tooltip.AddNote=New Note
+MenuItem.Title.AddFactors=Add Factors
+MenuItem.Tooltip.AddFactors=Adds the selected factors to the Service
+MenuItem.Title.RemoveFactors=Remove Factors
+MenuItem.Tooltip.RemoveFactors=Removes the selected factors from the Service
+MenuItem.Title.UpdateProgress=Update Progress
+MenuItem.Tooltip.UpdateProgress=Update progress for the delivery of the Service
+MenuItem.Title.Delete=Delete
+MenuItem.Tooltip.Delete=Logically deletes the service record
+MenuItem.Title.Edit=Edit
+MenuItem.Tooltip.Edit=Allows modification of the service details
+MenuItem.Title.Evaluate=Evaluate
+MenuItem.Tooltip.Evaluate=Allows evaluation of the service
+MenuItem.Title.UpdateEvaluation=Update Evaluation
+MenuItem.Tooltip.UpdateEvaluation=Allows the user to modify the evaluation of the service
+MenuItem.Title.DeleteEvaluation=Delete Evaluation
+MenuItem.Tooltip.DeleteEvaluation=Allows the user to delete the evaluation of the service
+MenuItem.Title.EditSharing=Edit Sharing
+MenuItem.Tooltip.EditSharing=Edit sharing for the service
+# BEGIN, CR00307312, POH
+MenuItem.Title.ViewPrintableDocument=View Printable Document
+MenuItem.Icon.ViewPrintableDocument=View Printable Document
+MenuItem.Tooltip.ViewPrintableDocument=View a printable document for the service
+# END, CR00307312

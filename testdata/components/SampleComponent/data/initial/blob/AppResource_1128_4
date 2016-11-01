@@ -1,40 +1,36 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-MenuItem.Title.Edit=Edit
-MenuItem.Tooltip.Edit=Edit
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM 
 
-MenuItem.Title.Delete=Delete
-MenuItem.Tooltip.Delete=Delete
+  PID 5725-H26
 
-Submenu.Title.AssociateAssessment=Associate an Assessment
-Submenu.Tooltip.AssociateAssessment=Associate Assessment.
+  Copyright IBM Corporation 2010,2012,2014. All rights reserved. 
 
-MenuItem.Title.NewAssessment=New Assessment
-MenuItem.Tooltip.NewAssessment=New Assessment.
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="OutcomePlanAdminMenu">
 
-MenuItem.Title.ExistingAssessment=Add Existing Assessment
-MenuItem.Tooltip.ExistingAssessment=Add Existing Assessment.
+  <mc:menu-item id="Edit" open-as="modal" page-id="OutcomePlanAdmin_editOutcomePlanAdminFromView" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit" window-options="width=750"/>
 
-Submenu.Title.AddEvidence=Add Evidence
-Submenu.Tooltip.AddEvidence=Add Evidence.
+  <mc:menu-separator id="OutcomePlanAdminSeparator1"/>
 
-MenuItem.Title.NewEvidence=New Evidence
-MenuItem.Tooltip.NewEvidence=New Evidence.
+  <mc:menu-item id="AddGoals" open-as="modal" page-id="OutcomePlanAdmin_addOutcomePlanGoalsToOutcomePlan" title="MenuItem.Title.AddGoals" tooltip="MenuItem.Tooltip.AddGoals"/>
+  
+   <mc:menu-item id="AddObjectives" open-as="modal" page-id="OutcomePlanAdmin_addObjectiveRecommendation" title="MenuItem.Title.AddObjectives" tooltip="MenuItem.Tooltip.AddObjectives"/>
+  
+  <mc:menu-item id="AddFactors" open-as="modal" page-id="OutcomePlanAdmin_addOutcomePlanFactorsToOutcomePlan" title="MenuItem.Title.AddFactors" tooltip="MenuItem.Tooltip.AddFactors"/>
+ 
+  <mc:menu-item id="AddEvidenceType" open-as="modal" page-id="OutcomePlanAdmin_addEvidenceType" title="MenuItem.Title.AddEvidenceType" tooltip="MenuItem.Tooltip.AddEvidenceType"/>
+  
+  <mc:menu-item id="AddCases" open-as="modal" page-id="OutcomePlanAdmin_createCaseLink" title="MenuItem.Title.AddCases" tooltip="MenuItem.Tooltip.AddCases"/>
+     
+  <mc:menu-separator id="OutcomePlanAdminSeparator2"/>
+  
+  <mc:menu-item id="RecommendAction" open-as="modal" page-id="OutcomePlanningAdmin_createRecommendActionFromOutcomePlanAdmin" title="MenuItem.Title.RecommendAction" tooltip="MenuItem.Tooltip.RecommendAction"/>
 
-MenuItem.Title.ExistingEvidence=Add Existing Evidence
-MenuItem.Tooltip.ExistingEvidence=Add Existing Evidence.
-
-Submenu.Title.Search=Search
-Submenu.Tooltip.Search=Find a case or participant.
-
-MenuItem.Title.User=User
-MenuItem.Tooltip.User=Find an user.
-
-MenuItem.Title.ExternalUser=External User
-MenuItem.Tooltip.ExternalUser=Find an external user.
+  <mc:menu-item id="RecommendService" open-as="modal" page-id="OutcomePlanningAdmin_createRecommendServiceFromOutcomePlanAdmin" title="MenuItem.Title.RecommendService" tooltip="MenuItem.Tooltip.RecommendService"/>
+  
+  <mc:menu-item id="RecommendReferral" open-as="modal" page-id="OutcomePlanningAdmin_createRecommendReferralFromOutcomePlanAdmin" title="MenuItem.Title.RecommendReferral" tooltip="MenuItem.Tooltip.RecommendReferral"/>
+  
+  <mc:menu-item id="RecommendGroup" open-as="modal" page-id="OutcomePlanningAdmin_createRecommendGroupFromOutcomePlanAdmin" title="MenuItem.Title.RecommendGroup" tooltip="MenuItem.Tooltip.RecommendGroup"/>
+  
+</mc:menu-bar>

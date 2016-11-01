@@ -1,19 +1,25 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Number.Wizard.Pages=2
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-IntakeShortCuts_duplicateCheckForRegisterProspect.Wizard.Item.Text=Registered Person Check
-IntakeShortCuts_duplicateCheckForRegisterProspect.Wizard.Page.Title=Step 1:
-IntakeShortCuts_duplicateCheckForRegisterProspect.Wizard.Page.Desc=Registered Person Check
-Wizard.PageID.1=IntakeShortCuts_duplicateCheckForRegisterProspect
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="CERProductSandbox">
 
-IntakeShortCuts_registerProspectPerson.Wizard.Item.Text=Prospect Details
-IntakeShortCuts_registerProspectPerson.Wizard.Page.Title=Step 2:
-IntakeShortCuts_registerProspectPerson.Wizard.Page.Desc=Prospect Details
-Wizard.PageID.2=IntakeShortCuts_registerProspectPerson
+  <nc:nodes>   
+  
+    <nc:navigation-page id="home" page-id="CREOLEProductAdmin_listLiveAndSandbox" title="page.title.creole.listall"/>
+    <nc:navigation-page id="removed" page-id="CREOLEProductAdmin_listRemoved" title="page.title.creole.listremoved"/>    
+      
+  </nc:nodes>
+  
+</nc:navigation>

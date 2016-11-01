@@ -1,15 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCBirthAndDeathRuleSet">
-  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="PDCBirthAndDeath">
-    <Attribute name="dateOfBirth">
-      <Annotations/>
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-    <Attribute name="birthLastName">
+<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCNameRuleSet">
+  <Class extends="DynamicEvidence" extendsRuleSet="DynamicEvidenceRuleSet" name="PDCName">
+    <Attribute name="middleName">
       <Annotations/>
       <type>
         <javaclass name="java.lang.String"/>
@@ -18,16 +9,7 @@
         <null/>
       </derivation>
     </Attribute>
-    <Attribute name="dateOfDeath">
-      <Annotations/>
-      <type>
-        <javaclass name="curam.util.type.Date"/>
-      </type>
-      <derivation>
-        <null/>
-      </derivation>
-    </Attribute>
-    <Attribute name="mothersBirthLastName">
+    <Attribute name="lastName">
       <Annotations/>
       <type>
         <javaclass name="java.lang.String"/>
@@ -36,7 +18,52 @@
         <null/>
       </derivation>
     </Attribute>
-    <Attribute name="person">
+    <Attribute name="title">
+      <Annotations/>
+      <type>
+        <codetableentry table="PersonTitle"/>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+    <Attribute name="initials">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+    <Attribute name="firstName">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+    <Attribute name="suffix">
+      <Annotations/>
+      <type>
+        <codetableentry table="PersonSuffix"/>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+    <Attribute name="nameType">
+      <Annotations/>
+      <type>
+        <codetableentry table="AlternateNameType"/>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+    <Attribute name="participant">
       <Annotations/>
       <type>
         <javaclass name="java.lang.Number"/>
@@ -45,7 +72,7 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="related_person">
+    <Attribute name="related_participant">
       <Annotations/>
       <type>
         <ruleclass name="CaseParticipantRole" ruleset="CaseEntitiesRuleSet"/>
@@ -53,7 +80,7 @@
       <derivation>
         <reference attribute="caseParticipantRoleRecord">
           <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="person"/>
+            <reference attribute="participant"/>
           </create>
         </reference>
       </derivation>

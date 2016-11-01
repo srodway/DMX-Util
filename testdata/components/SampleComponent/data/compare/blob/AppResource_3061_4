@@ -6,55 +6,25 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2010-2011 Curam Software Ltd.
+  Copyright 2010 Curam Software Ltd.
   All rights reserved.
-  
+
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="Incident">
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="CaseEvidence">
 
-  <tc:page-param name="incidentID"/>
+  <tc:page-param name="caseID"/>
 
-  <tc:menu id="IncidentMenu"/>
-
+  <tc:menu id="CaseEvidenceMenu"/> 
+  
   <!-- Details panel -->
-  <tc:context height="155" page-id="Incident_viewIncidentTabDetail"/>
+  <tc:context height="0" page-id="Evidence_viewCaseSummary"/>
 
-  <!-- Navigation Panel -->
-  <tc:navigation id="Incident"/>
+  <!-- See CaseEvidence.nav for details of the navigation links. -->
+  <tc:navigation id="CaseEvidence"/>
   
-  
-  <tc:tab-refresh>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Incident_modifyIncident1"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Incident_closeIncident1"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Incident_deleteIncident1"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="IncidentAttachments_createAttachment1"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Attachment_modify"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Attachment_cancel"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="IncidentContactLog_cancelContactLog1"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="IncidentContactLog_modifyContactLogFromList1"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="IncidentContactLog_modifyContactLogFromView1"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="IncidentContactLogWizard_createContact"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="IncidentContactLogWizard_addNarrative"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="IncidentContactLogWizard_addParticipants"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="IncidentContactLogWizard_addAttachments"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyContactLogFromList"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_modifyContactLogFromView"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_cancelContactLog"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Case_cancelContactLog1"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="IncidentParticipant_createIncidentParticipant1"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="IncidentParticipant_deleteIncidentParticipant1"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="IncidentParticipant_maintainIncidentParticipant1"/>
-    
-    <tc:onload context="false" menu-bar="false" navigation="true" page-id="IncidentStatus_listByIncident1"/>
-    
-  </tc:tab-refresh>
-  
+  <tc:smart-panel collapsed="true" page-id="Evidence_smartPanelCase" title="Smart.Panel.Title" width="200"/>
+
 </tc:tab-config>

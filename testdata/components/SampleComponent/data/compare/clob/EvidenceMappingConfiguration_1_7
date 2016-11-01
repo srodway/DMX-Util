@@ -94,10 +94,10 @@
       />
 
 
-      <map-entity source="Diagnosis">
+      <map-entity source="ASCASCDiagnosis">
         <target-entity
-          id="Diagnosis"
-          name="Diagnosis"
+          id="ASCDiagnosis"
+          name="ASCDiagnosis"
         >
           <map-attribute
             from="diagnosisType"

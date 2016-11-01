@@ -1,45 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-  PID 5725-H26
-
-  Copyright IBM Corporation 2010, 2014. All rights reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure
-  restricted by GSA ADP Schedule Contract with IBM Corp. 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
- Copyright 2010-2011 Curam Software Ltd.
- All rights reserved.
- 
- This software is the confidential and proprietary information of Curam
- Software, Ltd. ("Confidential Information"). You shall not disclose
- such Confidential Information and shall use it only in accordance with the
- terms of the license agreement you entered into with Curam Software.
---><sc:section xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-config" id="FMAPPWorkspaceSection" title="FMAPPWorkspaceSection.title" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  Copyright 2009 Curam Software Ltd.
+  All rights reserved.
 
- <sc:tab id="Fund"/>
- <sc:tab id="FundFiscalYearView"/>
- <sc:tab id="FundPMHome"/>
- <sc:tab id="ListFiscalYear"/>
- <sc:tab id="ListFundFiscalYear"/>
- <sc:tab id="ListFundRuleSet"/>
- <sc:tab id="ListFunds"/>
- <sc:tab id="WaitList"/>
- <sc:tab id="WaitListEntrySearch"/>
- <!-- BEGIN, CR00415735, SS -->
- <sc:tab id="MyItemsOfInterest"/>
- <!-- END, CR00415735 -->
- 
-  <!-- BEGIN, CR00248774, NS -->
-  <!-- Service Plans -->
-  <sc:tab id="PlanItemView"/>
-  <sc:tab id="ServicePlanHome"/>
-  <sc:tab id="ServiceUnitPlanItemView"/>
-  <sc:tab id="IntegratedServicePlan"/>
-  <sc:tab id="ServicePlanGroup"/>
-  <sc:tab id="CustomPlanItemView"/>
-  <!-- END, CR00248774 -->
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="LoopBeginActivity">
+  
+  <tc:page-param name="processID"/>
+  <tc:page-param name="processVersionNo"/>
+  <tc:page-param name="activityID"/>
+  
+  <tc:menu id="LoopBeginActivityMenu"/>
 
-  <sc:shortcut-panel-ref id="FMAPPWorkspaceSectionShortcuts"/>
-
-</sc:section>
+  <tc:context height="0" page-id="ProcessDefinitionTool_viewActivityTabDetails"/>
+  
+  <tc:navigation id="LoopBeginActivity"/>
+  
+</tc:tab-config>

@@ -1,16 +1,34 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-MenuItem.Title.NewCreoleRuleSet=New
-MenuItem.Tooltip.NewCreoleRuleSet=New
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="MDTNonCaseCollaborationCaseMeetingTab">
+  
+  <nc:loader-registry>
+    <nc:loader class="curam.sec.mdt.tab.impl.MDTNonCaseMeetingTabNavigationLoader"/>
+  </nc:loader-registry>
+  
+  
+  
+  <nc:nodes>
+    
 
-MenuItem.Title.ValidateCreoleRuleSet=Validate
-MenuItem.Tooltip.ValidateCreoleRuleSet=Validate
-
-MenuItem.Title.PublishCreoleRuleSet=Publish
-MenuItem.Tooltip.PublishCreoleRuleSet=Publish
+    
+    
+    <nc:navigation-page id="Home" page-id="Meeting_viewCollaborationCaseMeetingNotFromCaseTab" title="Leaf.Title.Home"/>
+    <nc:navigation-page dynamic="true" id="MeetingMinutes" page-id="MDTExternal_resolveViewCollaborationMeetingDetails" title="Leaf.Title.MeetingMinutes"/>
+  </nc:nodes>
+  
+  
+</nc:navigation>

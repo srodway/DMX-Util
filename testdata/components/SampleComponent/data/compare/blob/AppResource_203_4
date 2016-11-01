@@ -6,17 +6,17 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-    Copyright 2010 Curam Software Ltd.
+    Copyright 2009-2011 Curam Software Ltd.
     All rights reserved.
-    
     This software is the confidential and proprietary information of Curam
     Software, Ltd. ("Confidential Information"). You shall not disclose
     such Confidential Information and shall use it only in accordance with the
     terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ListTraining">
-
-    <tc:context tab-name="Details.Name.ListTraining" tab-title="Details.Name.ListTraining"/>
-
-    <tc:navigation id="ListTraining"/>
-
-</tc:tab-config>
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="CPMEXPROVWorkspaceMenu">
+    <mc:menu-item id="GenerateRoster" open-as="modal" page-id="PME_generateRoster" title="MenuItem.Title.GenerateRoster" tooltip="MenuItem.Tooltip.GenerateRoster"/>
+    <mc:menu-separator id="sep1"/>
+    <mc:menu-item id="CreateServiceInvoice" open-as="modal" page-id="PME_createServiceInvoiceRequest" title="MenuItem.Title.CreateServiceInvoice" tooltip="MenuItem.Tooltip.CreateServiceInvoice"/>
+    <mc:menu-separator id="sep2"/>
+    <mc:menu-item id="MemberLoginCredential" open-as="modal" page-id="PME_providerRequestMemberLoginCredentials" title="MenuItem.Title.MemberLoginCredential" tooltip="MenuItem.Tooltip.MemberLoginCredential"/>
+    <mc:menu-item id="ChangePassword" open-as="modal" page-id="PME_modifyProviderUserPassword" title="MenuItem.Title.ChangePassword" tooltip="MenuItem.Tooltip.ChangePassword"/>
+</mc:menu-bar>

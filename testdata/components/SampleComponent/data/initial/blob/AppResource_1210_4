@@ -1,31 +1,30 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-MenuItem.Title.Edit=Edit
-MenuItem.Tooltip.Edit=Edit
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-MenuItem.Title.Clone=Clone
-MenuItem.Tooltip.Clone=Clone
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010-2011 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ServicePlanGroupMenu">
 
-MenuItem.Title.Activate=Activate
-MenuItem.Tooltip.Activate=Activate
+    <mc:menu-item id="AddServicePlan" open-as="modal" page-id="ServicePlanGroupDelivery_addServicePlanDelivery" title="MenuItem.Title.AddServicePlan" tooltip="MenuItem.Tooltip.AddServicePlan"/>
 
-MenuItem.Title.CreateRoot=Create Root
-MenuItem.Tooltip.CreateRoot=Create Root
-
-MenuItem.Title.TreeView=Manage Structure in Tree View
-MenuItem.Tooltip.TreeView=Manage Structure in Tree View
-    
-Submenu.Title.Search=Search
-Submenu.Tooltip.Search=Find a case or participant.
-
-MenuItem.Title.User=User
-MenuItem.Tooltip.User=User
-
-MenuItem.Title.ExternalUser=External User
-MenuItem.Tooltip.ExternalUser=External User
+     <mc:menu-separator id="sep1"/>
+     
+     <mc:menu-item id="NewAttachment" open-as="modal" page-id="ServicePlanDelivery_createSPGDeliveryAttachment" title="MenuItem.Title.NewAttachment" tooltip="MenuItem.Tooltip.NewAttachment"/>
+      
+      <mc:menu-item id="NewNote" open-as="modal" page-id="ServicePlanDelivery_createNewSPGNote1" title="MenuItem.Title.NewNote" tooltip="MenuItem.Tooltip.NewNote"/>
+      
+     <mc:menu-separator id="sep2"/>
+     
+    <mc:menu-item id="CloseServicePlans" open-as="modal" page-id="ServicePlanGroupDelivery_close" title="MenuItem.Title.CloseServicePlans" tooltip="MenuItem.Tooltip.CloseServicePlans"/>
+      
+</mc:menu-bar>

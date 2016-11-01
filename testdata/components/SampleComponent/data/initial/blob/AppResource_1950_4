@@ -1,27 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Number.Wizard.Pages=7
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-	Copyright 2009 Curam Software Ltd.
-	All rights reserved.
-	
-	This software is the confidential and proprietary information of Curam
-	Software, Ltd. ("Confidential Information"). You shall not disclose
-	such Confidential Information and shall use it only in accordance with the
-	terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ReceivedPaymentsSearch">
+Product_benefitWizardCreate.Wizard.Item.Text=Benefit
+Product_benefitWizardCreate.Wizard.Page.Title=Step 1:
+Product_benefitWizardCreate.Wizard.Page.Desc= Benefit Details
+Wizard.PageID.1=Product_benefitWizardCreate
 
-	<!-- No Actions menu -->
+Product_addCategoryToBenefitWizard.Wizard.Item.Text= Categories
+Product_addCategoryToBenefitWizard.Wizard.Page.Title=Step 2:
+Product_addCategoryToBenefitWizard.Wizard.Page.Desc= Categories
+Wizard.PageID.2=Product_addCategoryToBenefitWizard
 
-	<!-- Details panel -->
-	<tc:context tab-name="Details.Name.ReceivedPaymentsSearch" tab-title="Details.Title.ReceivedPaymentsSearch"/>
+Product_createDeliveryPatternWizard.Wizard.Item.Text=Delivery Pattern
+Product_createDeliveryPatternWizard.Wizard.Page.Title=Step 3:
+Product_createDeliveryPatternWizard.Wizard.Page.Desc=Delivery Pattern Details
+Wizard.PageID.3=Product_createDeliveryPatternWizard
 
-	<!-- Navigation Panel -->
-	<tc:navigation page-id="Financial_paymentReceivedSearch"/>
+Product_createProductProvisionForBenefitWizard.Wizard.Item.Text= Provision
+Product_createProductProvisionForBenefitWizard.Wizard.Page.Title=Step 4:
+Product_createProductProvisionForBenefitWizard.Wizard.Page.Desc= Product Provision Details
+Wizard.PageID.4=Product_createProductProvisionForBenefitWizard
 
+Product_createProvisionLocationForBenefitWizard.Wizard.Item.Text= Location
+Product_createProvisionLocationForBenefitWizard.Wizard.Page.Title=Step 5:
+Product_createProvisionLocationForBenefitWizard.Wizard.Page.Desc= Provision Location Details
+Wizard.PageID.5=Product_createProvisionLocationForBenefitWizard
 
-</tc:tab-config>
+Product_addEligibilityDeterminationToBenefitWizard1.Wizard.Item.Text=Eligibility Determination
+Product_addEligibilityDeterminationToBenefitWizard1.Wizard.Page.Title=Step 6:
+Product_addEligibilityDeterminationToBenefitWizard1.Wizard.Page.Desc=Eligibility Determination Details
+Wizard.PageID.6=Product_addEligibilityDeterminationToBenefitWizard1
+
+Product_benefitWizardSummary1.Wizard.Item.Text= Summary
+Product_benefitWizardSummary1.Wizard.Page.Title=Step 7:
+Product_benefitWizardSummary1.Wizard.Page.Desc= Summary of Benefit Product
+Wizard.PageID.7=Product_benefitWizardSummary1

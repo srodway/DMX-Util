@@ -1,29 +1,40 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Number.Wizard.Pages=4
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-ProviderManagement_storeTaxonomyTerm.Wizard.Item.Text=Term Details
-ProviderManagement_storeTaxonomyTerm.Wizard.Page.Title=Step 1: 
-ProviderManagement_storeTaxonomyTerm.Wizard.Page.Desc=Term Details
-Wizard.PageID.1=ProviderManagement_storeTaxonomyTerm
-
-ProviderManagement_addUseReferencesToTerm.Wizard.Item.Text=Use References
-ProviderManagement_addUseReferencesToTerm.Wizard.Page.Title=Step 2: 
-ProviderManagement_addUseReferencesToTerm.Wizard.Page.Desc=Use References
-Wizard.PageID.2=ProviderManagement_addUseReferencesToTerm
-
-ProviderManagement_addRelatedConceptsToTerm.Wizard.Item.Text=Related Concepts
-ProviderManagement_addRelatedConceptsToTerm.Wizard.Page.Title=Step 3: 
-ProviderManagement_addRelatedConceptsToTerm.Wizard.Page.Desc=Related Concepts
-Wizard.PageID.3=ProviderManagement_addRelatedConceptsToTerm
-
-ProviderManagement_addRelatedTermsToTerm.Wizard.Item.Text=See Also References
-ProviderManagement_addRelatedTermsToTerm.Wizard.Page.Title=Step 4: 
-ProviderManagement_addRelatedTermsToTerm.Wizard.Page.Desc=See Also References
-Wizard.PageID.4=ProviderManagement_addRelatedTermsToTerm
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+	Copyright 2009 Curam Software Ltd.
+	All rights reserved.
+	
+	This software is the confidential and proprietary information of Curam
+	Software, Ltd. ("Confidential Information"). You shall not disclose
+	such Confidential Information and shall use it only in accordance with the
+	terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="PropertyAdminViewMenu">
+    <mc:submenu id="NEW" title="Submenu.Title.New" tooltip="Submenu.Tooltip.New">
+    		<mc:submenu id="BATCH" title="Submenu.Title.Batch" tooltip="Submenu.Tooltip.Batch">
+    			<mc:menu-item id="ErrorCode" open-as="modal" page-id="System_createBatchErrorCode" title="MenuItem.Title.ErrorCode" tooltip="MenuItem.Tooltip.ErrorCode"/>
+    			<mc:menu-item id="Process" open-as="modal" page-id="System_createBatchProcess" title="MenuItem.Title.Process" tooltip="MenuItem.Tooltip.Process"/>
+    			<mc:menu-item id="ProcessGroup" open-as="modal" page-id="System_createBatchGroup" title="MenuItem.Title.ProcessGroup" tooltip="MenuItem.Tooltip.ProcessGroup"/>
+    		</mc:submenu>
+        <mc:menu-item id="CodeTable" open-as="modal" page-id="System_createCodetable" title="MenuItem.Title.CodeTable" tooltip="MenuItem.Tooltip.CodeTable"/>
+        <mc:menu-item id="Nickname" open-as="modal" page-id="System_createNickname" title="MenuItem.Title.Nickname" tooltip="MenuItem.Tooltip.Nickname"/>
+        <mc:menu-item id="PropertySetting" open-as="modal" page-id="System_createProperty" title="MenuItem.Title.PropertySetting" tooltip="MenuItem.Tooltip.PropertySetting"/>
+        <mc:menu-item id="SecurityGroup" open-as="modal" page-id="System_createSecurityGroup" title="MenuItem.Title.SecurityGroup" tooltip="MenuItem.Tooltip.SecurityGroup"/>
+        <mc:menu-item id="SecurityRole" open-as="modal" page-id="System_createSecurityRole" title="MenuItem.Title.SecurityRole" tooltip="MenuItem.Tooltip.SecurityRole"/>
+        <mc:menu-item id="SID" open-as="modal" page-id="System_createSecurityIdentifier" title="MenuItem.Title.SID" tooltip="MenuItem.Tooltip.SID"/>
+        <mc:menu-item id="FID" open-as="modal" page-id="System_createFunctionSecurityIdentifier" title="MenuItem.Title.FID" tooltip="MenuItem.Tooltip.FID"/>
+        <mc:menu-item id="MSWordTemplate" open-as="modal" page-id="System_createDocumentTemplate1" title="MenuItem.Title.MSWordTemplate" tooltip="MenuItem.Tooltip.MSWordTemplate"/>
+        <mc:menu-item id="XSLTemplate" open-as="modal" page-id="System_createTemplate" title="MenuItem.Title.XSLTemplate" tooltip="MenuItem.Tooltip.XSLTemplate"/>
+    </mc:submenu>  
+    <mc:submenu id="Publish" title="Submenu.Title.Publish" tooltip="Submenu.Toolip.Publish">
+        <mc:menu-item id="CodeTableChanges" open-as="modal" page-id="System_publishCodetable" title="MenuItem.Title.CodeTableChanges" tooltip="MenuItem.Tooltip.CodeTableChanges"/>
+        <mc:menu-item id="PropertySettingChanges" open-as="modal" page-id="System_publishProperties" title="MenuItem.Title.PropertySettingChanges" tooltip="MenuItem.Tooltip.PropertySettingChanges"/>
+        <mc:menu-item id="SecurityGroupChanges" open-as="modal" page-id="System_publishSecurityChanges" title="MenuItem.Title.SecurityGroupChanges" tooltip="MenuItem.Tooltip.SecurityGroupChanges"/>
+        <mc:menu-item id="SecurityRoleChanges" open-as="modal" page-id="System_publishSecurityChanges" title="MenuItem.Title.SecurityRoleChanges" tooltip="MenuItem.Tooltip.SecurityRoleChanges"/>
+        <mc:menu-item id="SIDChanges" open-as="modal" page-id="System_publishSecurityChanges" title="MenuItem.Title.SIDChanges" tooltip="MenuItem.Tooltip.SIDChanges"/>
+    </mc:submenu>
+</mc:menu-bar>

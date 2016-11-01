@@ -6,19 +6,17 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009 Curam Software Ltd.
+  Copyright 2009, 2010 Curam Software Ltd.
   All rights reserved.
-
+  
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="MethodReferences">
-  
-  <!-- No details panel -->
-  <tc:context tab-name="Details.Name.MethodReferences" tab-title="Details.Name.MethodReferences"/>
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="AssessmentsAdmin">
+  <nc:nodes>
 
-  <!-- See Workflow.nav for details of the tree meta-data. --> 
-  <tc:navigation page-id="ProcessDefinitionTool_listBPOMethodReferences"/>
-  
-</tc:tab-config>
+    <nc:navigation-page id="assessments" page-id="Resource_listAssessment" title="leaf.title.assessments"/>
+    
+  </nc:nodes>
+</nc:navigation>

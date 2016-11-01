@@ -1,12 +1,30 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Group7.Title=Responsible Adult
-Group7.Description=
-Q21.Label=Is there family or a responsible adult who can supervise the youth?
-Q21.HelpText=Is there a family member or a responsible adult, who is a respected member of the community, willing to take the youth in and be responsible for his/her actions and behavior?
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009 Curam Software Ltd.
+  All rights reserved.
+
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="CustomHome">
+
+  <!-- BEGIN, CR00221314, GD -->
+  <!-- No action menu required for this workspace -->
+  <!-- END, CR00221314 -->
+  
+  <!-- No Page Param -->
+  
+  <!-- No Details panel -->
+  <tc:context tab-name="Details.Name.MyWorkspace" tab-title="Details.Title.MyWorkspace"/>
+
+  <!-- No Navigation panel -->
+  <tc:navigation page-id="CustomHome"/>
+
+</tc:tab-config>

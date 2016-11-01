@@ -1,38 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012, 2013. All Rights Reserved.
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+SupervisorAppSectionShortcuts.title=Shortcuts
 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2010 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><sc:section-shortcut-panel xmlns:sc="http://www.curamsoftware.com/curam/util/client/section-shortcut-panel" id="AUDITORAPPSectionShortcuts" title="AuditorAppSectionShortcuts.title">
+Users.Title=Users
+MyUsers.Title=My Users
+UserWorkLoads.Title=User Workload\u2026
+CasesWithAppeals.Title=Cases With Appeals
+CasesWithIssues.Title=Cases With Issues
+MyWorkQueues.Title=My Work Queues
+MyOrganizationUnits.Title=My Organization Units
 
-  <sc:nodes>
-    
-    <sc:node id="Audits" title="Audits.Title" type="group">
-      <sc:node id="MyCaseAudits" page-id="CaseAudit_resolveListForAuditorUser" title="MyCaseAudits.Title" type="leaf">
-      </sc:node>
-    </sc:node>
-    
-    <sc:node id="Searches" title="Searches.Title" type="group">
-      <sc:node id="CaseAuditSearch" page-id="CaseAudit_searchCaseAudit" title="CaseAuditSearch.Title" type="leaf">
-      </sc:node>
-      <sc:node id="CaseSearch" page-id="Case_search1" title="CaseSearch.Title" type="leaf">
-      </sc:node>
-      <sc:node id="InvestigationSearch" page-id="Investigation_search" title="InvestigationSearch.Title" type="leaf">
-      </sc:node>
-      <sc:node id="PersonSearch" page-id="Person_search1" title="PersonSearch.Title" type="leaf">
-      </sc:node>
-    </sc:node>
-    
-  </sc:nodes>
+MyWorkload.Title=My Workload
+MyCases.Title=My Cases\u2026
+MyCaseQueries.Title=My Case Queries
+MyItemsOfInterest.Title=My Items of Interest
+MyRecentlyApproved.Title=My Recently Approved Cases
+MyRecentlyAssigned.Title=Cases Recently Assigned to Me
+MyRecentlyViewed.Title=Recently Viewed Cases
+RegisterPersonCreateCase.Title=Register Person and Create Case
+AddProspectCreateCase.Title=Add Prospect Person and Create Case
+MyInvestigations.Title=My Investigations\u2026
+NewInvestigation.Title=New Investigation
+NewCaseQuery.Title=New Case Query
+NewInvestigationQuery.Title=New Investigation Query
 
-</sc:section-shortcut-panel>
+Searches.Title=Searches
+UserSearch.Title=User Search\u2026
+TaskSearch.Title=Task Search\u2026
+CaseSearch.Title=Case Search\u2026
+SearchForIncident.Title=Incident Search\u2026
+SearchForAppeal.Title=Appeal Search\u2026
+PersonSearch.Title=Person Search\u2026
+EmployerSearch.Title=Employer Search\u2026
+
+Registration.Title=Registration
+PersonRegistration.Title=Person
+ProspectPersonRegistration.Title=Prospect Person
+EmployerRegistration.Title=Employer
+ProspectEmployerRegistration.Title=Prospect Employer
+

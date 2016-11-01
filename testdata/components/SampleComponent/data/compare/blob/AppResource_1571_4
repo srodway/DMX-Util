@@ -6,19 +6,14 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Number.Wizard.Pages=3
+Number.Wizard.Pages=2
 
-VerificationAdmin_createVerificationGroup.Wizard.Item.Text=Verification Group Details
-VerificationAdmin_createVerificationGroup.Wizard.Page.Title=Step 1:
-VerificationAdmin_createVerificationGroup.Wizard.Page.Desc=Verification Group Details
-Wizard.PageID.1=VerificationAdmin_createVerificationGroup
+ProductDelivery_getParticipantAndLiabilityForVariableWizard.Wizard.Item.Text=Select Client
+ProductDelivery_getParticipantAndLiabilityForVariableWizard.Wizard.Page.Title=Step 1:
+ProductDelivery_getParticipantAndLiabilityForVariableWizard.Wizard.Page.Desc=Select Client
+Wizard.PageID.1=ProductDelivery_getParticipantAndLiabilityForVariableWizard
 
-VerificationAdmin_createVerificationItemUtilization.Wizard.Item.Text=Define Verification Item Utilization(s)
-VerificationAdmin_createVerificationItemUtilization.Wizard.Page.Title=Step 2:
-VerificationAdmin_createVerificationItemUtilization.Wizard.Page.Desc=Define Verification Item Utilization(s)
-Wizard.PageID.2=VerificationAdmin_createVerificationItemUtilization
-
-VerificationAdmin_verificationGroupSummary.Wizard.Item.Text=Summary
-VerificationAdmin_verificationGroupSummary.Wizard.Page.Title=Step 3:
-VerificationAdmin_verificationGroupSummary.Wizard.Page.Desc=Summary
-Wizard.PageID.3=VerificationAdmin_verificationGroupSummary
+ProductDelivery_createAppliedVariableDeductionWizard.Wizard.Item.Text=Deduction Details
+ProductDelivery_createAppliedVariableDeductionWizard.Wizard.Page.Title=Step 2:
+ProductDelivery_createAppliedVariableDeductionWizard.Wizard.Page.Desc=Deduction Details
+Wizard.PageID.2=ProductDelivery_createAppliedVariableDeductionWizard

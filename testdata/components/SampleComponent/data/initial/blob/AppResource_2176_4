@@ -1,59 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2010 Curam Software Ltd.
-	All rights reserved.
-	
-	This software is the confidential and proprietary information of Curam
-	Software, Ltd. ("Confidential Information"). You shall not disclose
-	such Confidential Information and shall use it only in accordance with the
-	terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="InvestigationSearchMenu">
-
-	<mc:menu-item id="CreateInvestigation" open-as="modal" page-id="InvestigationSample_selectPersonType" title="MenuItem.Title.CreateInvestigation" tooltip="MenuItem.Tooltip.CreateInvestigation"/>
-
-	<mc:menu-item id="Participant" open-as="modal" page-id="Application_registration" title="MenuItem.Title.Participant" tooltip="MenuItem.Tooltip.Participant"/>
-
-	<mc:submenu id="Search" title="Submenu.Title.Search" tooltip="Submenu.Tooltip.Search">
-
-		<mc:menu-item id="SearchCase" page-id="Case_search1" title="MenuItem.Title.SearchCase" tooltip="MenuItem.Tooltip.SearchCase"/>
-
-		<mc:menu-item id="SearchInvestigation" page-id="Investigation_search" title="MenuItem.Title.SearchInvestigation" tooltip="MenuItem.Tooltip.SearchInvestigation"/>
-
-		<mc:submenu id="Participant" title="Submenu.Title.Participant" tooltip="Submenu.Tooltip.Participant">
-
-			<mc:menu-item id="EducationalInstitute" page-id="EducationalInstitute_search1" title="MenuItem.Title.EducationalInstitute" tooltip="MenuItem.Tooltip.EducationalInstitute"/>
-
-			<mc:menu-item id="Employer" page-id="Employer_search1" title="MenuItem.Title.Employer" tooltip="MenuItem.Tooltip.Employer"/>
-
-			<mc:menu-item id="ExternalParty" page-id="ExternalParty_search1" title="MenuItem.Title.ExternalParty" tooltip="MenuItem.Tooltip.ExternalParty"/>
-
-			<mc:menu-item id="ExternalPartyOffice" page-id="ExternalPartyOffice_search1" title="MenuItem.Title.ExternalPartyOffice" tooltip="MenuItem.Tooltip.ExternalPartyOffice"/>
-
-			<mc:menu-item id="InformationProvider" page-id="InformationProvider_search1" title="MenuItem.Title.InformationProvider" tooltip="MenuItem.Tooltip.InformationProvider"/>
-
-			<mc:menu-item id="Person" page-id="Person_search1" title="MenuItem.Title.Person" tooltip="MenuItem.Tooltip.Person"/>
-
-			<mc:menu-item id="ProductProvider" page-id="ProductProvider_search1" title="MenuItem.Title.ProductProvider" tooltip="MenuItem.Tooltip.ProductProvider"/>
-
-			<mc:menu-item id="ServiceSupplier" page-id="ServiceSupplier_search1" title="MenuItem.Title.ServiceSupplier" tooltip="MenuItem.Tooltip.ServiceSupplier"/>
-
-			<mc:menu-item id="Utility" page-id="Utility_search1" title="MenuItem.Title.Utility" tooltip="MenuItem.Tooltip.Utility"/>
-
-			<mc:menu-item id="AllParticipant" page-id="Participant_search" title="MenuItem.Title.AllParticipant" tooltip="MenuItem.Tooltip.AllParticipant"/>
-
-		</mc:submenu>
-
-		<mc:menu-item id="Incidents" page-id="Incident_search" title="MenuItem.Title.Incidents" tooltip="MenuItem.Tooltip.Incidents"/>
-
-				<mc:menu-item id="Task" page-id="Inbox_searchTask" title="MenuItem.Title.Task" tooltip="MenuItem.Tooltip.Task"/>
-
-
-	</mc:submenu>
-
-</mc:menu-bar>
+.rtl .lp-welcome-langPicker {
+    margin-left: 0;
+    margin-right: 70%;
+}
+.rtl h1.lp-welcome-line1 {
+    margin-left: 0px;
+    margin-right: 360px;
+}
+.rtl h1.lp-welcome-line2 {
+    margin-left: 0px;
+    margin-right: 360px;
+}
+.rtl h1.lp-welcome-line3 {
+    margin-left: 0px;
+    margin-right: 360px;
+}
+.rtl div.lp-banner {
+    background-image: url("${resource-uri:lp.banner.image.rtl}");
+    background-position: right top;
+}
+.rtl .lp-action-links-container {
+    margin-left: 0px;
+    margin-right: 385px;
+}
+.rtl h2.lp-h2 {
+    margin-left: 0px;
+    margin-right: 4px;
+}
+.rtl div.section-container > div.rich-text {
+    padding-left: 0px;
+    padding-right: 6px;
+}
+.rtl div.login-panel-wrapper {
+    float: right;
+}
+.rtl div#loginPane {
+    margin-left: 40px;
+    margin-right: 25px;
+    float: right;
+}
+.rtl div.login-header {
+    background-position: right top;
+}
+.rtl .lp-action-links-container-no-login {
+    float: right;
+    margin-left: 0px;
+    margin-right: 25px;
+}
+.rtl .section-container-no-login {
+    float: right;
+}
+.rtl div.section-container-no-login > div.rich-text {
+    padding-left: 0px;
+    padding-right: 6px;
+}
+.rtl .text-overlay {
+    left: 1px;
+    right: 2px;
+}

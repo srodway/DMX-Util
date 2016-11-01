@@ -1,49 +1,67 @@
 #
 # Licensed Materials - Property of IBM
 # 
-# Copyright IBM Corporation 2012. All Rights Reserved.
+# Copyright IBM Corporation 2013. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-MenuItem.Title.Home=Home
-MenuItem.Tooltip.Home=Home
+Folder.Title.Summary = Home
 
-MenuItem.Title.Cases=Cases
-MenuItem.Tooltip.Cases=Cases
 
-MenuItem.Title.Users=Users
-MenuItem.Tooltip.Users=Users
+Leaf.Title.Home=Home
+Leaf.Description.Home=Home
 
-MenuItem.Title.OrganisationUnits=Organisation Units
-MenuItem.Tooltip.OrganisationUnits=Organisation Units
+Leaf.Title.Attachments=Attachments
+Leaf.Description.Attachments=Attachments
+Leaf.Title.SmartPanel=Smart Panel
 
-MenuItem.Title.WorkQueues=Work Queues
-MenuItem.Tooltip.WorkQueues=Work Queues
+Folder.Title.Clients=Clients
+Page.Title.CurrentClients=Current Clients
+Page.Title.PreviouseClients=Previous Clients
 
-MenuItem.Title.MyBookmarks=My Bookmarks
-MenuItem.Tooltip.MyBookmark=My Bookmarks
+Leaf.Title.Programs=Programs
+Leaf.Description.Programs=Programs
 
-MenuItem.Title.MyCases=My Cases
-MenuItem.Tooltip.MyCases=My Cases
+Folder.Title.Authorization=Authorisation
+Leaf.Title.Authorization=Authorisation
+Leaf.Description.Authorization=Authorisation
+Leaf.Title.Denials=Denials
+Leaf.Description.Denials=Denials
+Leaf.Title.Withdrawals=Withdrawals
+Leaf.Description.Withdrawals=Withdrawals
+Leaf.Title.Reopenings=Reopen Details
+Leaf.Description.Reopenings=Reopen Details
 
-Submenu.Title.Search=Search
-Submenu.Tooltip.Search=Find a case or participant.
+Leaf.Title.Timers=Timers
+Leaf.Description.Timers=Timers
 
-MenuItem.Title.Task=Task
-MenuItem.Tooltip.Task=Find a task.
+Folder.Title.Evidence=Evidence
+Page.Title.Dashboard=Dashboard
+Page.Title.EvidenceFlow=EvidenceFlow
+Page.Title.Evidence=Evidence
+Page.Title.Verifications=Verifications
+Page.Title.EvidenceIssues=Issues
+Page.Title.IncomingEvidence=Incoming Evidence
 
-MenuItem.Title.User=User
-MenuItem.Tooltip.User=Find a user.
+Leaf.Title.EligibilityChecks=Eligibility Checks
+Leaf.Description.EligibilityChecks=Eligibility Checks
 
-MenuItem.Title.Subscribe=Subscribe
-MenuItem.Tooltip.Subscribe=Subscribe
+Leaf.Title.RelatedCases=Related Cases
+Leaf.Description.RelatedCases=Related Cases
 
-MenuItem.Title.SubscribeUser=Subscribe User
-MenuItem.Tooltip.SubscribeUser=Subscribe User
+Leaf.Title.PCR=PCR
+Leaf.Description.PCR=PCR
 
-MenuItem.Title.SubscribeOrgObject=Subscribe Organization Object
-MenuItem.Tooltip.SubscribeOrgObject=Subscribe Organization Object
+Folder.Title.Administration=Administration
+Page.Title.UserRoles=Users
+Page.Title.Notes=Notes
+Page.Title.Attachments=Attachments
+Page.Title.Communications=Communications
+Leaf.Title.Meetings=Meetings
+Leaf.Title.MeetingMinutes=Meeting Minutes
+Page.Title.TransactionHistory=Transaction History
 
-MenuItem.Title.ReserveTasks=Reserve Tasks
-MenuItem.Tooltip.ReserveTasks=Reserve Tasks
+
+
+

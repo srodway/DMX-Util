@@ -1,69 +1,40 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-MenuItem.Title.EditDetails=Edit
-MenuItem.Tooltip.EditDetails=Edit the details for the service supplier
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
 
-
-
-Submenu.Title.New=New
-Submenu.Tooltip.New=Create new items
-
-
-
-MenuItem.Title.BankAccount=Bank Account
-MenuItem.Tooltip.BankAccount=Create a new bank account for the service supplier.
-
-
-
-MenuItem.Title.AlternateId=Alternate Identification
-MenuItem.Tooltip.AlternateId=Create alternate identification for the service supplier.
-
-
-
-MenuItem.Title.Note=New Note
-MenuItem.Tooltip.Note=Create a new note for the service supplier.
-
-MenuItem.Title.Attachment=Attachment
-MenuItem.Tooltip.Attachment=Create a new attachment for the service supplier.
-
-MenuItem.Title.EmailComm=Email Communication
-MenuItem.Tooltip.EmailComm=Create a new email correspondence with the service supplier.
-
-MenuItem.Title.MSWord=Microsoft Word Communication
-MenuItem.Tooltip.MSWord=Create an Microsoft Word communication with the service supplier.
-
-MenuItem.Title.ProForma=Pro Forma Communication
-MenuItem.Tooltip.ProForma=Create a new Pro Forma communication with the service supplier.
-
-MenuItem.Title.RecordedCommunication=Recorded Communication
-MenuItem.Tooltip.RecordedCommunication=Create a record of a communication.
-
-MenuItem.Title.CommsException=Communications Exception
-MenuItem.Tooltip.CommsException=Create a communications exception.
-
-
-MenuItem.Title.Contact=Contact
-MenuItem.Tooltip.Contact=Create a new contact for the service supplier.
-
-MenuItem.Title.EmailAdd=Email Address
-MenuItem.Tooltip.EmailAdd=Create a new email address for the service supplier.
-
-MenuItem.Title.WebAdd=Web Address
-MenuItem.Tooltip.WebAdd=Create a new web address for the service supplier.
-
-
-
-MenuItem.Title.Service=Service
-MenuItem.Tooltip.Service=Add a new service offered by the service supplier.
-
-MenuItem.Title.Contract=Contract
-MenuItem.Tooltip.Contract=Create a new contract with the service supplier.
-
-MenuItem.Title.Return=Return
-MenuItem.Tooltip.Return=Create a new return for the service supplier.
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
+    <identifier name="SubmitPrintOrExit" />
+    <header>
+        <title id="Page.Title" />
+        <description id="Page.Description" />
+        <icon id="title_save" />
+    </header>
+    <content>
+        <container>
+            <title id="RadioSelection.Title" />
+            <description id="RadioSelection.Description" />
+            <help id="RadioSelection.Help" />
+            <radiobutton-container id="SELECTION" legend="RadioSelection.Legend">
+                <radiobutton id="SUBMIT">
+                    <title id="SubmitApplication.Title" />
+                </radiobutton>
+                <radiobutton id="PRINT">
+                    <title id="PrintApplication.Title" />
+                </radiobutton>
+                <radiobutton id="EXIT">
+                    <title id="ExitSaveApplication.Title" />
+                </radiobutton>
+            </radiobutton-container>
+        </container>
+    </content>
+    <navigation>
+		<nav-button name="next" type="action" />
+        <nav-button name="back" type="action" />
+    </navigation>
+</page>

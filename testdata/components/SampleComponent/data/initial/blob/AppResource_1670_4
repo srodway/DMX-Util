@@ -1,25 +1,20 @@
 #
 # Licensed Materials - Property of IBM
 # 
-# Copyright IBM Corporation 2012. All Rights Reserved.
+# Copyright IBM Corporation 2012, 2014. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-MenuItem.Title.NewEvidence=New Evidence
-MenuItem.Tooltip.NewEvidence=Add new evidence to the case
+Number.Wizard.Pages=2
+# BEGIN, CR00440019, AC
+ProviderManagement_searchProviderNotRegistered.Wizard.Item.Text=Provider Search
+ProviderManagement_searchProviderNotRegistered.Wizard.Page.Title=Step 1:
+ProviderManagement_searchProviderNotRegistered.Wizard.Page.Desc=Confirm Provider Not Already Enrolled
+Wizard.PageID.1=ProviderManagement_searchProviderNotRegistered
 
-MenuItem.Title.OpenEvidenceTab=Open In New Tab
-MenuItem.Tooltip.OpenEvidenceTab=Opens the evidence workspace in a new tab.
-
-MenuItem.Title.ApplyChanges=Apply Changes
-MenuItem.Tooltip.ApplyChanges=Apply changes to the evidence
-
-MenuItem.Title.TransferEvidence=Transfer
-MenuItem.Tooltip.TransferEvidence=Transfers evidence to another case.
-
-MenuItem.Title.Approve=Approve
-MenuItem.Tooltip.Approve=Approve evidence changes
-
-MenuItem.Title.Reject=Reject
-MenuItem.Tooltip.Reject=Reject evidence changes
+ProviderManagement_enrollAsProvider.Wizard.Item.Text=Provider Details
+ProviderManagement_enrollAsProvider.Wizard.Page.Title=Step 2:
+ProviderManagement_enrollAsProvider.Wizard.Page.Desc=Enter Provider Details
+Wizard.PageID.2=ProviderManagement_enrollAsProvider
+#END, CR00440019

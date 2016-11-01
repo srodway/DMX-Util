@@ -1,60 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  PID 5725-H26
-  
-  Copyright IBM Corporation 2009, 2014. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-    Copyright 2009-2011 Curam Software Ltd.
-    All rights reserved.
-    
-    This software is the confidential and proprietary information of Curam
-    Software, Ltd. ("Confidential Information"). You shall not disclose
-    such Confidential Information and shall use it only in accordance with the
-    terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ServiceDelivery">
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+page.title.integratedcasehome=Home
 
- <tc:page-param name="serviceDeliveryID"/>
+folder.title.evidence=Evidence
+Page.Title.Dashboard=Dashboard
+Page.Title.Flow=EvidenceFlow
+Page.Title.Active=Active Evidence
+Page.Title.InEdit=In Edit Evidence
+Page.Title.Verifications=Verifications
+Page.Title.EvidenceIssues=Issues
+Page.Title.IncomingEvidence=Incoming Evidence
 
- <tc:menu id="ServiceDeliveryMenu"/>
+folder.title.participant=Participant
+page.title.casemembers=Case Members
+page.title.caseparticipants=Case Participants
 
- <tc:context height="157" page-id="ProviderManagement_viewServiceSummaryDetails"/>
+folder.title.contact=Contact
+page.title.notes=Notes
+page.title.attachments=Attachments
+page.title.communications=Communications
+page.title.meetingminutes=Meeting Minutes
 
- <!-- See ServiceDelivery.nav for details of the tree meta-data. -->
- <tc:navigation id="ServiceDelivery"/>
+page.title.serviceplans=Service Plans
 
- <tc:tab-refresh>
-  <!-- Should handle changing states -->
-  <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_confirmSubmitService"/>
-  <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_completeService"/>
-  <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_listEnquiriesForService"/>
-  <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_listProviders"/>
-  <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_confirmProviderSelection"/>
-  <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_confirmCancelProviderSelection"/>
-  <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_confirmCancelProviderTypeSelection"/>
-  <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_addProviderTypeSelection"/>
-  <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_confirmCancelProviderSelection"/>
-  <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_confirmCancelProviderTypeSelection"/>
-  <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_evaluateService"/>
-  <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_cancelServiceEvaluation"/>
+page.title.assessments=Assessments
 
-  <!-- BEGIN, CR00407985, SG -->
-  <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_cancelService1"/>
-  <!-- END, CR00407985 -->
-  
-  <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_confirmServiceApproval"/>
-  <tc:onsubmit context="true" menu-bar="true" page-id="ProviderManagement_rejectServiceApproval"/>
-  <!-- BEGIN, CR00293153, GYH -->
-  <tc:onload context="true" menu-bar="false" navigation="false" page-id="ProviderManagement_listServicePayments"/>
-  <!-- END, CR00387882 -->
-  <!-- BEGIN, CR00388495, GA -->
-  <!-- BEGIN, CR00407241, SG -->
-  <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProviderManagement_editService1"/>
-  <!-- END, CR00407241 -->
-  <!-- END, CR00387882 -->
- <tc:onsubmit menu-bar="true" page-id="OutcomePlan_addObjectivesToService"/></tc:tab-refresh>
+page.title.investigations=Investigations
 
-</tc:tab-config>
+page.title.issues=Issues
+
+page.title.events=Events
+
+page.title.tasks=Tasks
+
+folder.title.admin=Administration
+page.title.relatedcases=Related Cases
+page.title.transactionhistory=Transaction History
+page.title.userroles=User Roles
+page.title.contracts=Contracts

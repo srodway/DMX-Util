@@ -1,56 +1,25 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-# START NON-TRANSLATABLE 
-CashAssistanceProgram=CitizenWorkspace_banner
-# END NON-TRANSLATABLE
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+	Copyright 2009 Curam Software Ltd.
+	All rights reserved.
+	
+	This software is the confidential and proprietary information of Curam
+	Software, Ltd. ("Confidential Information"). You shall not disclose
+	such Confidential Information and shall use it only in accordance with the
+	terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="LanguagesTab">
 
-ResultMemberIcon.MRS10000.SX1.adult=cw_eligible_man.png
-ResultMemberIcon.MRS10000.SX1.child=cw_eligible_boy.png
-ResultMemberIcon.MRS10000.SX2.adult=cw_eligible_woman.png
-ResultMemberIcon.MRS10000.SX2.child=cw_eligible_girl.png
+	<!-- Details panel -->
+	<tc:context tab-name="Details.Name.Languages" tab-title="Details.Title.Languages"/>
 
-ResultMemberIcon.MRS10001.SX1.adult=cw_ineligible_man.png
-ResultMemberIcon.MRS10001.SX1.child=cw_ineligible_boy.png
-ResultMemberIcon.MRS10001.SX2.adult=cw_ineligible_woman.png
-ResultMemberIcon.MRS10001.SX2.child=cw_ineligible_girl.png
+	<!-- Navigation Panel -->
+	<tc:navigation page-id="CitizenWorkspaceLocale_listLocales"/>
 
-ResultMemberIcon.MRS10002.SX1.adult=cw_eligible_man.png
-ResultMemberIcon.MRS10002.SX1.child=cw_eligible_boy.png
-ResultMemberIcon.MRS10002.SX2.adult=cw_eligible_woman.png
-ResultMemberIcon.MRS10002.SX2.child=cw_eligible_girl.png
 
-ResultMemberIcon.MRS10003.SX1.adult=cw_eligible_man.png
-ResultMemberIcon.MRS10003.SX1.child=cw_eligible_boy.png
-ResultMemberIcon.MRS10003.SX2.adult=cw_eligible_woman.png
-ResultMemberIcon.MRS10003.SX2.child=cw_eligible_girl.png
-
-ResultMemberIcon.MRS10000.SX1.adult.high-contrast=cw_eligible_man_high_contrast.png
-ResultMemberIcon.MRS10000.SX1.child.high-contrast=cw_eligible_boy_high_contrast.png
-ResultMemberIcon.MRS10000.SX2.adult.high-contrast=cw_eligible_woman_high_contrast.png
-ResultMemberIcon.MRS10000.SX2.child.high-contrast=cw_eligible_girl_high_contrast.png
-
-ResultMemberIcon.MRS10001.SX1.adult.high-contrast=cw_ineligible_man_high_contrast.png
-ResultMemberIcon.MRS10001.SX1.child.high-contrast=cw_ineligible_boy_high_contrast.png
-ResultMemberIcon.MRS10001.SX2.adult.high-contrast=cw_ineligible_woman_high_contrast.png
-ResultMemberIcon.MRS10001.SX2.child.high-contrast=cw_ineligible_girl_high_contrast.png
-
-ResultMemberIcon.MRS10002.SX1.adult.high-contrast=cw_eligible_man_high_contrast.png
-ResultMemberIcon.MRS10002.SX1.child.high-contrast=cw_eligible_boy_high_contrast.png
-ResultMemberIcon.MRS10002.SX2.adult.high-contrast=cw_eligible_woman_high_contrast.png
-ResultMemberIcon.MRS10002.SX2.child.high-contrast=cw_eligible_girl_high_contrast.png
-
-ResultMemberIcon.MRS10003.SX1.adult.high-contrast=cw_eligible_man_high_contrast.png
-ResultMemberIcon.MRS10003.SX1.child.high-contrast=cw_eligible_boy_high_contrast.png
-ResultMemberIcon.MRS10003.SX2.adult.high-contrast=cw_eligible_woman_high_contrast.png
-ResultMemberIcon.MRS10003.SX2.child.high-contrast=cw_eligible_girl_high_contrast.png
-
-ResultMemberStatusIcon.MRS10000=blank.png
-ResultMemberStatusIcon.MRS10001=blank.png
-ResultMemberStatusIcon.MRS10002=cw_enrolled_tick.png
-ResultMemberStatusIcon.MRS10003=cw_withdrawn_tick.png
+</tc:tab-config>

@@ -6,25 +6,20 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-	Copyright 2009-2011 Curam Software Ltd.
-	All rights reserved.
-	
-	This software is the confidential and proprietary information of Curam
-	Software, Ltd. ("Confidential Information"). You shall not disclose
-	such Confidential Information and shall use it only in accordance with the
-	terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ProviderEnquiryView">
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="TaxonomyPublishedTermInEditView">
 
-	<tc:page-param name="providerEnquiryID"/>
-	
-	<tc:menu id="ProviderEnquiryViewMenu"/>
-	
-	<tc:context height="130" page-id="ProviderManagement_viewProviderEnquiryTabDetails"/>
-	
-	<tc:navigation id="ProviderEnquiryView"/>
-	
-	<tc:tab-refresh>
-		<tc:onload context="true" page-id="ProviderManagement_viewProviderEnquiry"/>
-	</tc:tab-refresh>
-
-</tc:tab-config>
+  <nc:nodes>
+    <nc:navigation-page id="ViewInEditTerm" page-id="ProviderManagement_viewPublishedTermInEdit" title="Page.Title.Term"/>
+          <nc:navigation-page id="ListInEditUseRef" page-id="ProviderManagement_listUseReferencesForInEditTaxonomyTerm" title="Page.Title.UseReferences"/>
+          <nc:navigation-page id="ListInEditRelatedConcept" page-id="ProviderManagement_listRelatedConceptsForTermInEdit" title="Page.Title.RelatedConcepts"/>
+         <nc:navigation-page id="ListInEditSeeAlsoRef" page-id="ProviderManagement_listSeeAlsoReferencesForTermInEdit" title="Page.Title.SeeAlsoReferences"/>
+        
+  </nc:nodes>
+</nc:navigation>

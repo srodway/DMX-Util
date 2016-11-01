@@ -10,110 +10,6 @@
   <column name="versionNo" type="number" />
   <row>
     <attribute name="productRulesLinkID">
-      <value>2502</value>
-    </attribute>
-    <attribute name="ruleSetID">
-      <value>PRODUCT_3</value>
-    </attribute>
-    <attribute name="productID">
-      <value>2102</value>
-    </attribute>
-    <attribute name="startDate">
-      <value>2001-01-01</value>
-    </attribute>
-    <attribute name="endDate">
-      <value>2015-12-31</value>
-    </attribute>
-    <attribute name="comments">
-      <value />
-    </attribute>
-    <attribute name="statusCode">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="productRulesLinkID">
-      <value>2507</value>
-    </attribute>
-    <attribute name="ruleSetID">
-      <value>PRODUCT_10</value>
-    </attribute>
-    <attribute name="productID">
-      <value>2112</value>
-    </attribute>
-    <attribute name="startDate">
-      <value>2001-01-01</value>
-    </attribute>
-    <attribute name="endDate">
-      <value>2015-12-31</value>
-    </attribute>
-    <attribute name="comments">
-      <value />
-    </attribute>
-    <attribute name="statusCode">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="productRulesLinkID">
-      <value>3004</value>
-    </attribute>
-    <attribute name="ruleSetID">
-      <value>PRODUCT_18</value>
-    </attribute>
-    <attribute name="productID">
-      <value>2109</value>
-    </attribute>
-    <attribute name="startDate">
-      <value>2001-01-01</value>
-    </attribute>
-    <attribute name="endDate">
-      <value>2015-12-31</value>
-    </attribute>
-    <attribute name="comments">
-      <value />
-    </attribute>
-    <attribute name="statusCode">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="productRulesLinkID">
-      <value>3005</value>
-    </attribute>
-    <attribute name="ruleSetID">
-      <value>PRODUCT_18</value>
-    </attribute>
-    <attribute name="productID">
-      <value>2110</value>
-    </attribute>
-    <attribute name="startDate">
-      <value>2001-01-01</value>
-    </attribute>
-    <attribute name="endDate">
-      <value>2015-12-31</value>
-    </attribute>
-    <attribute name="comments">
-      <value />
-    </attribute>
-    <attribute name="statusCode">
-      <value>RST1</value>
-    </attribute>
-    <attribute name="versionNo">
-      <value>1</value>
-    </attribute>
-  </row>
-  <row>
-    <attribute name="productRulesLinkID">
       <value>3345</value>
     </attribute>
     <attribute name="ruleSetID">
@@ -208,6 +104,110 @@
     </attribute>
     <attribute name="comments">
       <value>test</value>
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="productRulesLinkID">
+      <value>2502</value>
+    </attribute>
+    <attribute name="ruleSetID">
+      <value>PRODUCT_3</value>
+    </attribute>
+    <attribute name="productID">
+      <value>2102</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value>2030-12-31</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="productRulesLinkID">
+      <value>2507</value>
+    </attribute>
+    <attribute name="ruleSetID">
+      <value>PRODUCT_10</value>
+    </attribute>
+    <attribute name="productID">
+      <value>2112</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value>2030-12-31</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="productRulesLinkID">
+      <value>3004</value>
+    </attribute>
+    <attribute name="ruleSetID">
+      <value>PRODUCT_18</value>
+    </attribute>
+    <attribute name="productID">
+      <value>2109</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value>2030-12-31</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
+    </attribute>
+    <attribute name="statusCode">
+      <value>RST1</value>
+    </attribute>
+    <attribute name="versionNo">
+      <value>1</value>
+    </attribute>
+  </row>
+  <row>
+    <attribute name="productRulesLinkID">
+      <value>3005</value>
+    </attribute>
+    <attribute name="ruleSetID">
+      <value>PRODUCT_18</value>
+    </attribute>
+    <attribute name="productID">
+      <value>2110</value>
+    </attribute>
+    <attribute name="startDate">
+      <value>2001-01-01</value>
+    </attribute>
+    <attribute name="endDate">
+      <value>2030-12-31</value>
+    </attribute>
+    <attribute name="comments">
+      <value />
     </attribute>
     <attribute name="statusCode">
       <value>RST1</value>

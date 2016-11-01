@@ -62,7 +62,7 @@
       <fo:page-sequence master-reference="only">
 	    <!-- START NON-TRANSLATABLE -->
         <fo:flow flow-name="xsl-region-body" font-family="WT Sans">
-        <!-- END NON-TRANSLATABLE -->		
+        <!-- END NON-TRANSLATABLE -->
 <!-- BEGIN, CR00352142, PB -->
           <fo:block xsl:use-attribute-sets="Normal_1">
             <xsl:apply-templates select="FIELD[FNAME='organisationName']" />
@@ -70,29 +70,33 @@
           <fo:block xsl:use-attribute-sets="Normal_2">
             <xsl:apply-templates select="FIELD[FNAME='userAddress']" />
           </fo:block>
-          <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
           <fo:block xsl:use-attribute-sets="Normal_4">&nbsp;</fo:block>
           <fo:block xsl:use-attribute-sets="Normal_4">&nbsp;</fo:block>
           <fo:block xsl:use-attribute-sets="Normal_5">
             <xsl:apply-templates select="FIELD[FNAME='concernRoleAddress']" />
           </fo:block>
-          <fo:block xsl:use-attribute-sets="Normal_6">
+          <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
+          <fo:block xsl:use-attribute-sets="Normal_4">&nbsp;</fo:block>
+	  <fo:block xsl:use-attribute-sets="Normal_6">
             Dear
             <xsl:apply-templates select="FIELD[FNAME='concernRoleName']" />
           </fo:block>
           <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
           <fo:block xsl:use-attribute-sets="Normal_6">
-            We wish to inform you that the
+            We wish to inform you that your
             <xsl:apply-templates select="FIELD[FNAME='productType']" />
-            Case Referral with Reference No.
+            case with Reference No.:
             <xsl:apply-templates select="FIELD[FNAME='caseReference']" />
-            has been cancelled
-            <xsl:apply-templates select="FIELD[FNAME='caseClosureReason']" />
+            ,
+            has been suspended on
+            <xsl:apply-templates select="FIELD[FNAME='eventDate']" />
+            for the following reason -
+            <xsl:apply-templates select="FIELD[FNAME='caseSuspendReason']" />
             .
           </fo:block>
-          <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
+          <fo:block xsl:use-attribute-sets="Normal_6">&nbsp;</fo:block>
           <fo:block xsl:use-attribute-sets="Normal_6">Sincerely,</fo:block>
-          <fo:block xsl:use-attribute-sets="Normal_3">&nbsp;</fo:block>
+          <fo:block xsl:use-attribute-sets="Normal_6">&nbsp;</fo:block>
           <fo:block xsl:use-attribute-sets="Normal_6">
             <xsl:apply-templates select="FIELD[FNAME='userFullName']" />
           </fo:block>

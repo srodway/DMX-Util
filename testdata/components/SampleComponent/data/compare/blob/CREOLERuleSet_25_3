@@ -1,159 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
- 
+  
   Copyright IBM Corporation 2012. All Rights Reserved.
-
+ 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><!-- 
-  Copyright 2009-2011 Curam Software Ltd.
+--><!--
+  Copyright 2010-2011 Curam Software Ltd.
   All rights reserved.
-  
   This software is the confidential and proprietary information of Curam
   Software, Ltd. ("Confidential Information").  You shall not disclose such
   Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><!--
-  Interface rule classes for the interaction between the CREOLE-based Assessment
-  Engine and CREOLE rules for the display of  timelines of key data about the case.
-  
-  The rule classes for a CREOLE-based product must extend the rule classes in
-  this rule set, BUT NOTE that product rule classes should not extend these
-  rule classes directly - instead rule set developers for CREOLE-based products
-  should extend the default implementations in the
-  DefaultProductKeyDataRuleSet rule set.  These default implementations
-  provide some isolation against future changes to the
-  ProductKeyDataRuleSet rule classes in this rule set. 
-         
-  Customer code must not create, modify or remove instances of any of the rule
-  classes in this rule set.  Instances of these rule classes may only be
-  manipulated by the Curam Assessment Engine.
-  
-  --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProductKeyDataRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
-
-
-  <!--
-      A view onto a case which provides a list of key data timelines.
-      
-      The configuaration of a Curam Product to use key data rules will point to
-      a product-specific concrete sub class of this rule class.
-    -->
-  <Class abstract="true" name="AbstractCase">
-
-
-    <Attribute name="productDeliveryCase">
-      <type>
-        <ruleclass name="ProductDeliveryCase" ruleset="ProductEligibilityEntitlementRuleSet"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The list of key data timelines for the case. -->
-    <Attribute name="keyDataTimelines">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="AbstractKeyDataTimeline"/>
-        </javaclass>
-
-
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <!-- A single named timeline of key data which can be selected by the user
-         for display. -->
-  <Class abstract="true" name="AbstractKeyDataTimeline">
-    <!-- Force an explicit description to be implemented on a sub rule class.
-           This localisable description will be displayed to the user.
-          -->
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The timeline data to display. -->
-    <Attribute name="timeline">
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <!-- The data could be of any type. -->
-          <javaclass name="Object"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Additional events to display.  This data will be displayed as a simple description of what happened on the date, 
-         e.g. "<event> on <date>". -->
-    <Attribute name="keyEvents">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="AbstractKeyEvent"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <!-- An event that occurred on a date. -->
-  <Class abstract="true" name="AbstractKeyEvent">
-
-
-    <!-- Force an explicit description to be implemented on a sub rule class.
-               This localisable description will be displayed to the user.
-              -->
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The date of the event.
+--><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CoreCitizenCampaignRuleset" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
     
-         Note that an event with a null date is not displayed.  This feature can be useful in situations where a null date indicates
-         that no event has occurred, and will prevent the need for rules logic around whether to create the event.
-         
-         For example, if a person's date of death is recorded as null, then that person is still alive and thus there has been no
-         "deceased" event for that person.  It is safe to create an event nonetheless, with the date of the event recorded as null.
-      -->
+    <!-- This rule class represents an administration CitizenCampaign record. The expiryDateTime and Image references are stored here. -->
+    <Class name="CitizenCampaignAdmin">
+    
+    
+        <!-- BEGIN, CR00324421, RB -->
+        <Attribute name="citizenCampaignID">
+            <type>
+                <javaclass name="Number"/>
+            </type>
+            <derivation>
+                <specified/>
+            </derivation>
+        </Attribute>
+        <!-- END, CR00324421 -->
+    
+        
+        <Attribute name="expiryDateTime">
+            <type>
+                <javaclass name="curam.util.type.DateTime"/>
+            </type>
+            <derivation>
+                <specified/>
+            </derivation>
+        </Attribute>
+        
+        <Attribute name="name">
+            <type>
+                <javaclass name="String"/>
+            </type>
+            <derivation>
+                <specified/>
+            </derivation>
+        </Attribute>
+        
+        <Attribute name="imageID">
+            <type>
+                <javaclass name="Number"/>
+            </type>
+            <derivation>
+                <specified/>
+            </derivation>
+        </Attribute>
+    </Class>
 
+    <!-- this is the Abstract rules class that all a customer's Campagin Rules classes must inherit from -->
+    <Class name="AbstractCampaignAdviceItem" extends="AbstractAdviceItem" extendsRuleSet="CoreAdvisorRuleSet" abstract="true">
 
-    <Attribute name="date">
+        <Attribute name="showAdvice">
+            <type>
+                <javaclass name="Boolean"/>
+            </type>
+            <derivation>
+                <all>
+                    <fixedlist>
+                        <listof>
+                            <javaclass name="Boolean"/>
+                        </listof>
+                        <members>
+                            <reference attribute="campaignRuleObjectExists"/>
+                            <reference attribute="campaignShowAdvice"/>
+                        </members>
+                    </fixedlist>
+                </all>
+            </derivation>
+        </Attribute>
+
+        <!-- the name of the citizen campaign record. specified in concerete child classes. -->
+        <Attribute name="citizenCampaignName">
+            <type>
+                <javaclass name="String"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>
+
+        <!-- whether this Campaign should be displayed to this Participant. Determined in concerete child classes. -->
+        <Attribute name="campaignShowAdvice">
+            <type>
+                <javaclass name="Boolean"/>
+            </type>
+            <derivation>
+                <abstract/>
+            </derivation>
+        </Attribute>
+
+        <Attribute name="campaignRuleObjectExists">
+            <type>
+                <javaclass name="Boolean"/>
+            </type>
+            <derivation>
+                <not>
+                    <equals>
+                        <reference attribute="citizenCampaignAdminRuleObject"/>
+                        <null/>
+                    </equals>
+                </not>
+            </derivation>
+        </Attribute>
+
+        <!-- reference to the campaign rule object -->
+        <Attribute name="citizenCampaignAdminRuleObject">
+            <type>
+                <ruleclass name="CitizenCampaignAdmin"/>
+            </type>
+            <derivation>
+                <singleitem onEmpty="returnNull" onMultiple="error">
+                    <filter>
+                        <list>
+                            <readall ruleclass="CitizenCampaignAdmin"/>
+                        </list>
+                        <listitemexpression>
+                            <equals>
+                                <!-- match up the name defined in this rule set with the name of the campaign rule object -->
+                                <reference attribute="name">
+                                    <current/>
+                                </reference>
+                                <reference attribute="citizenCampaignName"/>
+                            </equals>
+                        </listitemexpression>
+                    </filter>
+                </singleitem>
+            </derivation>
+        </Attribute>
+
+        <!-- default implementation, can be overridden if certain campaigns wish to expire 
+            their advice on dates other than the campaign expiry, e.g. on some date computed 
+            from the person's circumstances -->
+        <Attribute name="expiryDateTime">
+            <type>
+                <javaclass name="curam.util.type.DateTime"/>
+            </type>
+            <derivation>
+                <choose>
+                    <type>
+                        <javaclass name="curam.util.type.DateTime"/>
+                    </type>
+                    <when>
+                        <condition>
+                            <reference attribute="campaignRuleObjectExists"/>
+                        </condition>
+                        <value>
+                            <reference attribute="expiryDateTime">
+                                <reference attribute="citizenCampaignAdminRuleObject"/>
+                            </reference>
+                        </value>
+                    </when>
+                    <otherwise>
+                        <value>
+                            <!-- If no campaign rule object, expiry date time set to null -->
+                            <null/>
+                        </value>
+                    </otherwise>
+                </choose>
+            </derivation>
+        </Attribute>
+
+        <Attribute name="campaignImage">
+           <type>
+                <ruleclass name="Image" ruleset="CoreAdvisorRuleSet"/>
+            </type>
+            <derivation>
+                <choose>
+                    <type>
+                        <ruleclass name="Image" ruleset="CoreAdvisorRuleSet"/>
+                    </type>
+                    <when>
+                        <condition>
+                            <reference attribute="campaignRuleObjectExists"/>
+                        </condition>
+                        <value>
+                            <create ruleclass="Image" ruleset="CoreAdvisorRuleSet">
+                                <specify attribute="imageID">
+                                    <reference attribute="imageID">
+                                        <reference attribute="citizenCampaignAdminRuleObject"/>
+                                    </reference>
+                                </specify>
+                            </create>
+                        </value>
+                    </when>
+                    <otherwise>
+                        <value>
+                            <null/>
+                        </value>
+                    </otherwise>
+                </choose>
+            </derivation>
+        </Attribute>
+
+        <Attribute name="category">
+            <type>
+                <codetableentry table="AdviceCategory"/>
+            </type>
+            <derivation>
+                <Code table="AdviceCategory">
+                    <String value="AC10000"/>
+                </Code>
+            </derivation>
+        </Attribute>
+
+        <Attribute name="status">
+            <type>
+                <codetableentry table="AdviceStatus"/>
+            </type>
+            <derivation>
+                <Code table="AdviceStatus">
+                    <String value="AS2002"/>
+                </Code>
+            </derivation>
+        </Attribute>
+
+        <Attribute name="priority">
+            <type>
+                <codetableentry table="AdvicePriority"/>
+            </type>
+            <derivation>
+                <Code table="AdvicePriority">
+                    <String value="AP2001"/>
+                </Code>
+            </derivation>
+        </Attribute>
+    </Class>
+    
+ <!-- <Class
+    extends="UserRole"
+    extendsRuleSet="CoreAdvisorRuleSet"
+    name="SuperUserRole"
+  >
+    <Attribute name="roleName">
       <type>
-        <javaclass name="curam.util.type.Date"/>
+        <javaclass name="String"/>
       </type>
       <derivation>
-        <abstract/>
+        <String value="SUPERROLE"/>
       </derivation>
     </Attribute>
-
-
-  </Class>
-
+  </Class>     -->
 
 </RuleSet>

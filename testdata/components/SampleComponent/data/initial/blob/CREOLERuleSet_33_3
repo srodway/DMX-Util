@@ -5,46 +5,13 @@
 
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2010-2011 Curam Software Ltd.
-  All rights reserved.
-
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. (&quot;Confidential Information&quot;).  You shall not disclose such
-  Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><!--
-
-  A set of interface classes to be used for CREOLE-based programs implementing program recommendation.
-
-  Customers of Program Recommendation must provide implementations for the classes in this rule set.
-  However, rather than directly extending the classes, rule set developers should instead extend
-  the default implementations provided by the DefaultProgramRecommendationRuleSet. These
-  classes provide some isolation against future changes.
-
---><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProgramRecommendationRuleSet" xsi:noNamespaceSchemaLocation="http://www.curamsoftware.com/CreoleRulesSchema.xsd">
+--><!-- Copyright (c) 2009 Curam Software Ltd.                                 --><!-- All rights reserved.                                                   --><!-- This software is the confidential and proprietary information of Curam --><!-- Software, Ltd. ("Confidential Information"). You shall not disclose    --><!-- such Confidential Information and shall use it only in accordance with --><!-- the terms of the license agreement you entered into with Curam         --><!-- Software.                                                              --><!-- Description                                                            --><!-- This is the interface ruleset Evidence Summary Information.            --><!-- The individual elements of a summary information are declared as       --><!-- abstract. If an Evidence Type Version metadata specifies that CER is to--><!-- be used for calculating summary information, the Summary Rule Class in --><!-- the corresponding CER Ruleset should extend from the                   --><!-- AbstractEvidenceSummary class specified in this rule set.              --><RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EvidenceSummaryRuleSet" xsi:noNamespaceSchemaLocation="../../CREOLEInfrastructure/xsd/curam/creole/xsd/RuleSetLax.xsd">
 
 
-  <!--
-    Class which provides recommendations for a program.
-  -->
-  <Class abstract="true" name="ProgramRecommender">
-
-
-    <!-- The identifier of the program -->
-    <!-- BEGIN, CR00316611, RB -->
-    <!-- BEGIN, CR00340176, MST -->
-    <Attribute name="productID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-    <!-- END, CR00340176 -->
-
-
+  <!-- The Abstract Base Rule Class for all concrete implementations for     -->
+  <!-- summary information calculation. -->
+  <Class abstract="true" name="AbstractEvidenceSummary">
+    <!-- Begin, Summary Element Attributes -->
     <Attribute name="startDate">
       <type>
         <javaclass name="curam.util.type.Date"/>
@@ -53,8 +20,6 @@
         <abstract/>
       </derivation>
     </Attribute>
-
-
     <Attribute name="endDate">
       <type>
         <javaclass name="curam.util.type.Date"/>
@@ -63,244 +28,7 @@
         <abstract/>
       </derivation>
     </Attribute>
-    <!-- END, CR00316611 -->
-
-
-    <!-- The case ID -->
-    <Attribute name="caseID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The list of simulated determinations -->
-    <Attribute name="simulatedDeterminations">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="SimulatedDetermination"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-
-
-  <!-- BEGIN, CR00316611, RB -->
-  <!-- An overall case for which program recommendations are required.  -->
-  <Class name="IntegratedCase">
-
-
-    <!-- Simple English-only text description -->
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <XmlMessage>Integrated Case: <replace>
-            <reference attribute="caseID"/>
-          </replace></XmlMessage>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The identifier of the case -->
-    <Attribute name="caseID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- The recommenders for the programs being requested.  -->
-    <Attribute name="programRecommenders">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="ProgramRecommender"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <!--
-        The overall program recommendation result for the integrated case.
-
-        Subclasses must not override this implementation. -->
-    <Attribute name="programRecommendationResult">
-      <type>
-        <javaclass name="curam.creoleprogramrecommendation.impl.ProgramRecommendationResult"/>
-      </type>
-      <derivation>
-        <call class="curam.creoleprogramrecommendation.impl.Statics" method="programRecommendationResult">
-          <type>
-            <javaclass name="curam.creoleprogramrecommendation.impl.ProgramRecommendationResult"/>
-          </type>
-          <arguments>
-            <this/>
-          </arguments>
-        </call>
-      </derivation>
-    </Attribute>
-
-
-  </Class>
-  <!-- END, CR00316611 -->
-
-
-  <!--
-    A rule class representing a potential delivery case. Contains both eligibility and display rule objects.
-  -->
-  <Class abstract="true" name="SimulatedDetermination">
-
-
-    <!-- Description of this simulated determination. -->
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Eligibility Case -->
-    <Attribute name="programRecommendationCase">
-      <type>
-        <ruleclass name="ProgramRecommendationCase"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- Display Cases -->
-    <Attribute name="programRecommendationDisplayCases">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="ProgramRecommendationDisplayCase" ruleset="ProgramRecommendationDisplayRuleSet"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- BEGIN, CR00323679, PD-->
-    <Attribute name="members">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="Member"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-    <!-- END, CR00323679 -->
-
-
-    <!-- BEGIN, CR00332324, MST -->
-    <!-- BEGIN, CR00335709, MST -->
-    <Attribute name="productID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-    <!-- END, CR00335709 -->
-    <!-- END, CR00332324 -->
-
-
-    <!-- BEGIN, CR00369873, MST -->
-    <Attribute name="productDeliveryID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-    <!-- END, CR00369873-->
-
-
-  </Class>
-
-
-  <!--
-    This abstract class ultimately inherits from the ProductEligibilityEntitlementRuleSet.AbstractCase class.
-
-    Customers of Program Recommendation must provide an implementation for this class.
-
-  -->
-  <Class abstract="true" extends="DefaultCase" extendsRuleSet="DefaultProductEligibilityEntitlementRuleSet" name="ProgramRecommendationCase">
-
-
-    <!--
-      The potential eligibility of the case according to rules for program recommendation.
-    -->
-    <Attribute name="programRecommendationEligibilityTimeline">
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Boolean"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <!--
-
-      The objective timelines for this program recommendation case.
-
-      Each objective timeline is for a particular type of objective; its
-      entitlement/value/target may vary over time.
-    -->
-    <Attribute name="programRecommendationObjectiveTimelines">
-      <type>
-        <javaclass name="List">
-          <ruleclass name="AbstractObjectiveTimeline" ruleset="ProductEligibilityEntitlementRuleSet"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-
-
-    <!-- BEGIN, CR00316611, RB -->
-    <!-- An estimate of the monthly amount payable -->
-    <Attribute name="monthlyAmountTimeline">
-      <type>
-        <javaclass name="curam.creole.value.Timeline">
-          <javaclass name="Number"/>
-        </javaclass>
-      </type>
-      <derivation>
-        <abstract/>
-      </derivation>
-    </Attribute>
-    <!-- Whether this case should be treated on an emergency basis -->
-    <Attribute name="isEmergencyCase">
+    <Attribute name="isStartDateAvailable">
       <type>
         <javaclass name="Boolean"/>
       </type>
@@ -308,51 +36,47 @@
         <abstract/>
       </derivation>
     </Attribute>
-    <!-- END, CR00316611 -->
-
-
-  </Class>
-
-
-  <!-- BEGIN, CR00323679, PD-->
-  <Class name="Member">
-
-
-    <Attribute name="description">
-      <type>
-        <javaclass name="curam.creole.value.Message"/>
-      </type>
-      <derivation>
-        <XmlMessage> Simulated Determination Member CaseParticipantRoleID: 
-          <replace>
-            <reference attribute="caseParticipantRoleID"/>
-          </replace>
-        </XmlMessage>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="caseParticipantRoleID">
-      <type>
-        <javaclass name="Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-
-
-    <Attribute name="mandatoryMemberIndicator">
+    <Attribute name="isEndDateAvailable">
       <type>
         <javaclass name="Boolean"/>
       </type>
       <derivation>
-        <specified/>
+        <abstract/>
       </derivation>
     </Attribute>
+    <Attribute name="participantDetails">
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+    <Attribute name="summary">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+    <!-- End, Summary Element Attributes -->
 
 
-    <!-- BEGIN, CR00369873, MST -->
+    <!-- This is the evidence instance for which the summary information is to 
+            be calculated. All summary infomation concrete implementations should
+            override this to specify the type to be the actual evidence Rule Class -->
+    <Attribute name="evidence">
+      <type>
+        <ruleclass name="DynamicEvidence" ruleset="DynamicEvidenceRuleSet"/>
+      </type>
+      <derivation>
+        <abstract/>
+      </derivation>
+    </Attribute>
+  </Class>
+  <Class extends="AbstractEvidenceSummary" name="DefaultEvidenceSummary">
+    <!-- Begin, Summary Element Attributes -->
     <Attribute name="startDate">
       <type>
         <javaclass name="curam.util.type.Date"/>
@@ -361,8 +85,6 @@
         <null/>
       </derivation>
     </Attribute>
-
-
     <Attribute name="endDate">
       <type>
         <javaclass name="curam.util.type.Date"/>
@@ -371,11 +93,66 @@
         <null/>
       </derivation>
     </Attribute>
-    <!-- END, CR00369873 -->
+    <Attribute name="isStartDateAvailable">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <true/>
+      </derivation>
+    </Attribute>
+    <Attribute name="isEndDateAvailable">
+      <type>
+        <javaclass name="Boolean"/>
+      </type>
+      <derivation>
+        <true/>
+      </derivation>
+    </Attribute>
+    <Attribute name="participantDetails">
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+    <Attribute name="summary">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <null/>
+      </derivation>
+    </Attribute>
+    <!-- End, Summary Element Attributes -->
+
+
+    <!--
+      This is the evidence instance for which the summary information is to 
+      be calculated. All summary infomation concrete implementations should
+      override this to specify the type to be the actual evidence Rule Class.
+    -->
+    <Attribute name="evidence">
+      <type>
+        <ruleclass name="DynamicEvidence" ruleset="DynamicEvidenceRuleSet"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+
+
+    <Attribute name="description">
+      <type>
+        <javaclass name="curam.creole.value.Message"/>
+      </type>
+      <derivation>
+        <ResourceMessage key="DefaultEvidenceSummary.description" resourceBundle="curam.dynamicevidence.cer.rules.InfrastructureRules">             
+            </ResourceMessage>
+      </derivation>
+    </Attribute>
 
 
   </Class>
-  <!-- END, CR00323679 -->
-
-
 </RuleSet>

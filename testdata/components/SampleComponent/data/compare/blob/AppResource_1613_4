@@ -1,20 +1,12 @@
 #
 # Licensed Materials - Property of IBM
 # 
-# Copyright IBM Corporation 2012, 2014. All Rights Reserved.
+# Copyright IBM Corporation 2012. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Number.Wizard.Pages=2
-# BEGIN, CR00440019, AC
-ProviderManagement_searchProviderNotRegistered.Wizard.Item.Text=Provider Search
-ProviderManagement_searchProviderNotRegistered.Wizard.Page.Title=Step 1:
-ProviderManagement_searchProviderNotRegistered.Wizard.Page.Desc=Confirm Provider Not Already Enrolled
-Wizard.PageID.1=ProviderManagement_searchProviderNotRegistered
-
-ProviderManagement_enrollAsProvider.Wizard.Item.Text=Provider Details
-ProviderManagement_enrollAsProvider.Wizard.Page.Title=Step 2:
-ProviderManagement_enrollAsProvider.Wizard.Page.Desc=Enter Provider Details
-Wizard.PageID.2=ProviderManagement_enrollAsProvider
-#END, CR00440019
+subscreen=Further display details for an objective, namely its list of tags
+objectiveTimeline=The display data for an objective timeline
+tagTimeline=The display data for an objective tag timeline
+abstractBasicCase=Basic display output for case: {0}

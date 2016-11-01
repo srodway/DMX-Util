@@ -1,45 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Licensed Materials - Property of IBM
-    
-    Copyright IBM Corporation 2013. All Rights Reserved.
-    
-    US Government Users Restricted Rights - Use, duplication or disclosure 
-    restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009 Curam Software Ltd.
+  All rights reserved.
 
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
-    <identifier name="Select Application" />
-    <server alias="DISPLAY" method="getConfirmationDetails">
-        <param name="key$applicationID" path="applicationID" />
-    </server>
-    <header>
-        <title id="Page.Title" />
-        <description id="Page.Description" />
-        <icon id="title_submittedapp" />
-    </header>
-    <content>
-        <container style="rich-text">
-            <description id="SubmissionConfirmation.Message" />
-        </container>
-        <container style="center-aligned-box">
-            <title id="Code.Description" />
-            <description source="/DISPLAY/xmlData/reference" />
-        </container>
-        <container>
-            <field type="CW_HYPERLINKS" source="/PAGE/applicationID">
-                <title id="Page.DownloadLink.Title" />
-                <param name="uri-prefix" value="../servlet/FileDownload?pageID=OpenSimpleApplicationForm%26id="/>
-            </field>
-        </container>
-        <container>
-            <title source="/DISPLAY/xmlData/title" />
-            <container style="rich-text">
-                <description source="/DISPLAY/xmlData/description" />
-            </container>
-        </container>
-    </content>
-    <navigation>
-        <nav-button name="return" page="CitizenReturnToMotivationResult" page-type="resolve" />
-    </navigation>
-</page>
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="SocialEnterpriseFolder">
+  
+  <tc:page-param name="caseID"/>
+
+
+  <tc:context height="0" page-id="SocialEnterpriseFolder_contextPanel"/>
+
+  <!-- See Home.nav for details of the tree meta-data. -->
+  <tc:navigation id="SocialEnterpriseFolder"/>  
+  
+  <tc:menu id="SocialEnterpriseFolder"/>
+
+  <tc:tab-refresh>
+    <tc:onsubmit menu-bar="true" page-id="SocialEnterpriseFolder_close"/>
+    <tc:onsubmit menu-bar="true" page-id="SocialEnterpriseFolder_reopen"/>
+  </tc:tab-refresh>
+  
+</tc:tab-config>

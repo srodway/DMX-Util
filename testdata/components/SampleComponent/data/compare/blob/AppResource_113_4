@@ -1,49 +1,97 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-MenuItem.Title.Bookmark=Add as Item of Interest
-MenuItem.Tooltip.Bookmark=Add as Item of Interest
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+  
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009-2011 Curam Software Ltd.
+  All rights reserved.
 
-MenuItem.Title.RemoveBookmark=Remove as Item of Interest
-MenuItem.Tooltip.RemoveBookmark=Remove as Item of Interest
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ProviderHome">
 
-MenuItem.Title.AddBookmark=Add to My Items of Interest
-MenuItem.Tooltip.AddBookmark=Add to My Items of Interest.
+  <tc:page-param name="concernRoleID"/>
+  <tc:page-param name="providerConcernRoleID"/>
 
-MenuItem.Title.Note=New Note
-MenuItem.Tooltip.Note=Create a new note for the service plan.
+  <tc:menu id="ProviderHomeMenu"/> 
+  
+  <tc:context height="139" page-id="ProviderManagement_viewProviderTabDetails"/>
 
-MenuItem.Title.EditGoal=Edit Goal
-MenuItem.Tooltip.EditGoal=Set a goal for the service plan.
+  <tc:navigation id="ProviderHome"/> 
 
-MenuItem.Title.EditPlanType=Edit Plan Type
-MenuItem.Tooltip.EditPlanType=Change the type of the service plan.
-
-MenuItem.Title.ChangeOwner=Change Plan Owner
-MenuItem.Tooltip.ChangeOwner=Set an owner for the service plan.
-
-MenuItem.Title.SubmitPlan=Submit Service Plan
-MenuItem.Tooltip.SubmitPlan=Submit the service plan for approval.
-
-MenuItem.Title.ApprovePlan=Approve Service Plan
-MenuItem.Tooltip.ApprovePlan=Approve the service plan.
-
-MenuItem.Title.RejectPlan=Reject Service Plan
-MenuItem.Tooltip.RejectPlan=Reject the service plan.
-
-MenuItem.Title.ClosePlan=Close Service Plan
-MenuItem.Tooltip.ClosePlan=Close the service plan.
-
-MenuItem.Title.ChangeClosure=Change Closure Details
-MenuItem.Tooltip.ChangeClosure=Change the closure details of the service plan.
-
-MenuItem.Title.EditServicePlan=Edit Service Plan
-MenuItem.Tooltip.EditServicePlan=Edit details of the service plan.
-
-MenuItem.Title.ClonePlan=Clone Service Plan
-MenuItem.Tooltip.ClonePlan=Clone the service plan.
+  <tc:tab-refresh>
+    <tc:onload context="true" page-id="ProviderManagement_providerHome"/>
+	
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAddressFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAddressFromView"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelEmailAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createEmailAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyEmailAddressFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyEmailAddressFromView"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelPhoneNumber"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createPhoneNumber"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyPhoneNumberFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyPhoneNumberFromView"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelWebAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createWebAddress"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyWebAddressFromList"/>
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyWebAddressFromView"/>
+    
+    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ProviderManagement_activateContract"/>
+    
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_generateContract"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_createUtilizationContractProviderOfferingRate"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_modifyUtilizationContractProviderOfferingRate"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_createUtilizationContractProviderOfferingPlaceLimitForProvider"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_createServiceContractPerformanceMeasure"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_deleteUtilizationContractProviderOfferingForProvider"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_modifyProviderOfferingPlaceLimit"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_cancelUtilizationContractServicePlaceLimit"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_modifyContractPerformanceMeasure"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_removeContractPerformanceMeasure"/>
+    <tc:onsubmit main-content="true" page-id="Attachment_modify"/>
+    <tc:onsubmit main-content="true" page-id="Attachment_cancel"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_modifyContractContact"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_deleteContractContact"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_cancelContractServicePlaceLimit"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_deleteContractProviderOffering"/>
+    
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_updateAttendancePRLICorrection"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_correctAttendancePRLIWithMultipleClients"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_updateAttendanceRosterLineItem"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_submitPRLICorrection"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_confirmSubmitRosterLineItem"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_submitRosterLineItem"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_approveRosterLineItem"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_approvePRLICorrectionFromView"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_denyRosterLineItem"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_addDailyAttendanceForReporting"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_maintainDailyAttendanceCorrectionForAttendanceMethod"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_relatedServiceAuthorizationLineItems"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_confirmDeletePRLICorrection"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_denyPRLICorrectionFromView"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_deleteRosterLineItem"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_updatePRLICorrection"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_correctPRLIWithMultipleClients"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_updateRosterLineItem"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_addAbsenceReason"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_createAbsencePeriodCorrection"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_addDailyAttendance"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_addDailyAttendanceCorrection"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_deleteAbsencePeriodCorrection"/>
+    <tc:onsubmit main-content="true" page-id="ProviderManagement_deleteAbsenceReasonForPRLI"/>
+        	
+  </tc:tab-refresh>
+  
+</tc:tab-config>

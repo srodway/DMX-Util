@@ -2,83 +2,309 @@
 <!--
   Licensed Materials - Property of IBM
   
-  Copyright IBM Corporation 2013. All Rights Reserved.
+  Copyright IBM Corporation 2012. All Rights Reserved.
  
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 -->
-<ieg-script finish-page="AssessmentDelivery_executeAssessment" quit-page="AssessmentScript_exit" show-sections="false" show-progress-bar="false" config-properties="AdultNeedsAssessment-ieg-config" validate-save-and-exit="true">
-    <identifier id="AdultNeeds_Questionnaire" scriptversionnumber="1" type="DecisionAssist" />
-    <section>
-        <title id="Section.Title.AdultNeeds">Adult Needs Section</title>
-        <question-page id="QuestionPage.AdultNeeds" entity="Person" show-back-button="false" show-exit-button="true" show-save-exit-button="true" show-next-button="true" set-focus="true">
-            <title id="QuestionPage.Title.AdultNeeds">Adult Needs</title>
-            <icon image="AdultNeeds_Banner_Image"/>
-            <cluster entity="Person">
-                <description id="Cluster.Desc.AdultNeeds">&lt;b&gt;Please tell us about your current situation including the things that are working well for you as well as the challenges that you face.&lt;/b&gt;</description>
-                <layout>
-                    <type>flow</type>
-                    <num-cols>1</num-cols>
-                    <width>90</width>
-                    <label-alignment>left</label-alignment>
-                </layout>
-                <question id="keepingHomeClean" mandatory="true" control-question="false" multi-select="false">
-                    <label id="QuestionLabelID.keepingHomeClean">1. Do you need help with keeping your home clean?</label>
-                    <layout>
-                        <type>radio-indent</type>
-                        <num-cols>4</num-cols>
-                        <num-rows>1</num-rows>
-                    </layout>
-                </question>
-                <question id="shopping" mandatory="true" control-question="false" multi-select="false">
-                    <label id="QuestionLabel.shopping">2. Do you need help with shopping for food and cleaning materials?</label>
-                    <layout>
-                        <type>radio-indent</type>
-                        <num-cols>4</num-cols>
-                        <num-rows>1</num-rows>
-                    </layout>
-                </question>
-                <question id="doingLaundry" mandatory="true" control-question="false" multi-select="false">
-                    <label id="QuestionLabel.doingLaundry">3. Do you need help with doing your laundry?</label>
-                    <layout>
-                        <type>radio-indent</type>
-                        <num-cols>4</num-cols>
-                        <num-rows>1</num-rows>
-                    </layout>
-                </question>
-                <question id="managingMoney" mandatory="true" control-question="false" multi-select="false">
-                    <label id="QuestionLabel.managingMoney">4. Do you need help with managing your money?</label>
-                    <layout>
-                        <type>radio-indent</type>
-                        <num-cols>4</num-cols>
-                        <num-rows>1</num-rows>
-                    </layout>
-                </question>
-                <question id="makingFood" mandatory="true" control-question="false" multi-select="false">
-                    <label id="QuestionLabel.makingFood">5. Do you need help with making food and drinks?</label>
-                    <layout>
-                        <type>radio-indent</type>
-                        <num-cols>4</num-cols>
-                        <num-rows>1</num-rows>
-                    </layout>
-                </question>
-                <question id="eatingRegularly" mandatory="true" control-question="false" multi-select="false">
-                    <label id="QuestionLabel.eatingRegularly">6. Do you need help with eating regularly?</label>
-                    <layout>
-                        <type>radio-indent</type>
-                        <num-cols>4</num-cols>
-                        <num-rows>1</num-rows>
-                    </layout>
-                </question>
-                <question id="goingToTheToilet" mandatory="true" control-question="false" multi-select="false">
-                    <label id="QuestionLabel.goingToTheToilet">7. Do you need help with going to the toilet?</label>
-                    <layout>
-                        <type>radio-indent</type>
-                        <num-cols>4</num-cols>
-                        <num-rows>1</num-rows>
-                    </layout>
-                </question>
-            </cluster>
-        </question-page>
-    </section>
+<ieg-script
+  config-properties="SDMAssessmentIEGConfig"
+  finish-page="AssessmentDelivery_executeAssessment"
+  quit-page="AssessmentScript_exit"
+  show-progress-bar="false"
+  show-sections="false"
+  validate-save-and-exit="true"
+>
+  <identifier
+    id="CSN"
+    scriptversionnumber="1"
+    type="DecisionAssist"
+  />
+  <section>
+    <title id="Section.Title.AssessmentDetails">Assessment Details Section</title>
+    <loop
+      criteria="questionsApplicableInd==true"
+      entity="Person"
+      loop-type="for-each"
+    >
+      <question-page
+        entity="Person"
+        id="ChildStrengthsNeeds"
+        progress="0"
+        read-only="false"
+        set-focus="true"
+        show-back-button="false"
+        show-exit-button="true"
+        show-next-button="true"
+        show-person-tabs="true"
+        show-save-exit-button="true"
+      >
+        <title id="QuestionPage.Title.ChildStrengthsNeeds">SDM\u00AE Child Strengths and Needs</title>
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <label-width>0</label-width>
+            <label-alignment>right</label-alignment>
+          </layout>
+          <display-text id="QuestionnaireText.Label">&lt;p style="font-family:tahoma;font-size:12px;color:#4e4e4e"&gt;The child strengths and needs assessment (CSNA) is used to evaluate the presenting strengths and needs of each child. This assessment tool is used to systematically identify critical child needs and help plan effective service interventions. This assessment should be completed as part of the reunification assessment and the caregiver strengths and needs assessment. &lt;/p&gt;&lt;br/&gt;&lt;p style=" font-family:tahoma;font-size:12px;color#000000"&gt;Please complete the assessment questionnaire for %1s.&lt;/p&gt; 
+                    <argument id="Person.firstName"/>
+          </display-text>
+        </cluster>
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <width>95</width>
+            <label-width>45</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="emotionalBehavioral"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="QuestionLabel.EmotionalBehavioral">CSN1. Emotional/Behavioral</label>
+            <help-text id="Help.EmotionalBehavioral">&lt;b&gt;a. Strong emotional adjustment. &lt;/b&gt; The child displays strong coping skills in dealing with crises and trauma, disappointment, and daily challenges. The child is able to develop and maintain trusting relationships. The child is also able to identify the need for, seek, and accept guidance. &lt;br /&gt;&lt;b&gt;b. Adequate emotional adjustment. &lt;/b&gt; The child displays developmentally appropriate emotional/coping responses that do not interfere with school, family, or community functioning. May demonstrate some situational depression, anxiety, or withdrawal symptoms. Maintains situationally appropriate emotional control. &lt;br /&gt;&lt;b&gt;c. Limited emotional adjustment. &lt;/b&gt; The child has occasional difficulty dealing with situational stress, crises, or problems, which impairs functioning. The child displays periodic mental health symptoms including, but not limited to, depression, running away, somatic complaints, hostile behavior, or apathy. &lt;br /&gt;&lt;b&gt;d. Severely limited emotional adjustment. &lt;/b&gt; The child's ability to perform in one or more areas of functioning is severely impaired due to chronic/severe mental health symptoms such as fire-setting, suicidal behavior, or violent behavior toward people and/or animals.</help-text>
+          </question>
+        </cluster>
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <width>95</width>
+            <label-width>45</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="medicalPhysical"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="QuestionLabel.MedicalPhysical">CSN2. Physical Health/Disability</label>
+            <help-text id="Help.Disability">&lt;b&gt;a. Good Health. &lt;/b&gt; The child has no known health care needs, and he/she receives routine preventive and medical/dental/vision care and immunizations. &lt;br/&gt;&lt;b&gt;b. Adequate Health. &lt;/b&gt; The child has no unmet health care needs. Special conditions may exist but are adequately addressed. &lt;br/&gt;&lt;b&gt;c. Minor health/disability needs. &lt;/b&gt;The child has medical condition(s) that may impair daily functioning. Special conditions exist that are not adequately addressed and/or routine medical/dental/vision care is needed. &lt;br/&gt;&lt;b&gt;d. Serious health/disability needs. &lt;/b&gt; The child has a serious, chronic, or acute medical condition that severely impairs functioning, and his/her needs are unmet.</help-text>
+          </question>
+        </cluster>
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <width>95</width>
+            <label-width>45</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="education"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="QuestionLabel.Education">CSN3. Education</label>
+            <help-text id="Help.Education">&lt;b&gt;a. Outstanding academic achievement. &lt;/b&gt; The child is working above grade level and/or is exceeding the expectations of his/her specific educational plan. &lt;br/&gt;&lt;b&gt;b. Satisfactory academic achievement or child not of school age. &lt;/b&gt; The child is working at grade level and/or is meeting the expectations of his/her specific educational plan. &lt;br/&gt;&lt;b&gt;c. Academic difficulty. &lt;/b&gt;The child is working below grade level in at least one, but not more than half, academic subject areas and/or he/she is struggling to meet the goals of the existing educational plan. Existing educational plan may need modification. &lt;br/&gt;&lt;b&gt;d. Severe academic difficulty. &lt;/b&gt; The child is working below grade level in more than half of academic subject areas, and/or he/she is not meeting the goals of the existing educational plan. Existing educational plan needs modification. Also score 'd' for a child who is required by law to attend school but is not.</help-text>
+          </question>
+        </cluster>
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <width>95</width>
+            <label-width>45</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="specializedEducation"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="QuestionLabel.SpecializedEducation">Does the child have a specialized education plan?</label>
+            <help-text id="Question.SpecializedEducation">Specialized educational plan includes individual education plan (IEP), study team, etc.</help-text>
+            <layout>
+              <type>flow</type>
+            </layout>
+          </question>
+        </cluster>
+        <condition expression="(Person.specializedEducation==&quot;SE10001&quot;) ">
+          <cluster>
+            <layout>
+              <type>flow</type>
+              <width>95</width>
+              <label-width>45</label-width>
+              <label-alignment>left</label-alignment>
+            </layout>
+            <question
+              control-question="false"
+              id="educationPlanDescription"
+              mandatory="false"
+              multi-select="false"
+              show-field-help="false"
+            >
+              <label id="QuestionLabel.EducationPlanDescription">Describe:</label>
+              <layout>
+                <width>87</width>
+                <type>flow</type>
+                <num-rows>4</num-rows>
+              </layout>
+            </question>
+          </cluster>
+        </condition>
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <width>95</width>
+            <label-width>45</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="familyRelationships"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="QuestionLabel.FamilyRelationships">CSN4. Family Relationships</label>
+            <help-text id="Question.FamilyRelationships">For children in voluntary or court-ordered placement, answer based on the child's family, not his/her placement family. For children in permanent placements, continue to answer based on the child's family, basing assessment on visits and other contact such as telephone contact or letters. If the child has no contact with his/her family, select 'Adequate Relationships'. &lt;br/&gt;&lt;b&gt;a. Nurturing/supportive relationships. &lt;/b&gt; The child experiences positive interactions with family members. The child has a sense of belonging within the family. Family defines roles, has clear boundaries, and supports the child's growth and development. &lt;br/&gt;&lt;b&gt;b. Adequate relationships. &lt;/b&gt;The child experiences positive interactions with family members and feels safe and secure in family, despite some unresolved family conflicts. &lt;br/&gt;&lt;b&gt;c. Strained relationships. &lt;/b&gt;Stress/discord within the family interferes with the child's sense of safety and security. Family has difficulty identifying and resolving conflict and/or obtaining support and assistance on their own. &lt;br/&gt;&lt;b&gt;d. Harmful relationships. &lt;/b&gt; Chronic family stress, conflict, or violence severely impedes the child's sense of safety and security. Family is unable to resolve stress, conflict, or violence without intervention and is not able or willing to obtain outside assistance. &lt;br/&gt;</help-text>
+          </question>
+        </cluster>
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <width>95</width>
+            <label-width>45</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="childDevelopment"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="QuestionLabel.ChildDevelopment">CSN5. Child Development</label>
+            <help-text id="Help.ChildDevelopment">&lt;b&gt;a. Advanced development. &lt;/b&gt;The child's physical and cognitive skills are above chronological age level. &lt;br/&gt;&lt;b&gt;b. Age-appropriate development. &lt;/b&gt; The child's physical and cognitive skills are consistent with chronological age level. &lt;br/&gt;&lt;b&gt;c. Limited development. &lt;/b&gt;The child does not exhibit most physical and cognitive skills expected for chronological age level. &lt;br/&gt;&lt;b&gt;d. Severely limited development.&lt;/b&gt; Most physical and cognitive skills are two or more age levels behind chronological age expectations.</help-text>
+            <layout>
+              <type>flow</type>
+            </layout>
+          </question>
+        </cluster>
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <width>95</width>
+            <label-width>45</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="substanceUse"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="QuestionLabel.SubstanceUse">CSN6. Substance Abuse</label>
+            <help-text id="Help.SubstanceAbuse">&lt;b&gt;a. Chooses a drug-free lifestyle. &lt;/b&gt;The child does not use alcohol or other drugs and is aware of consequences of use. The child avoids peer relations/social activities involving alcohol and other drugs and/or chooses not to use despite peer pressure/opportunities to use. &lt;br/&gt;&lt;b&gt;b. No use/experimentation. &lt;/b&gt;The child does not use alcohol or other drugs. The child may have experimented with alcohol or other drugs, but there is no indication of sustained use. There is no demonstrated history or current problems related to substance use. &lt;br/&gt;&lt;b&gt;c. Alcohol or other drug use. &lt;/b&gt;The child's alcohol or other drug use results in disruptive behavior and discord in relationships in school, community, family, or work. Use may have broadened to include multiple drugs. &lt;br/&gt;&lt;b&gt;d. Chronic alcohol or other drug use. &lt;/b&gt; The child's chronic alcohol or other drug use results in severe disruption of functioning, such as loss of relationships, job, school suspension/expulsion/drop-out, problems with the law, and/or physical harm to self or others. The child may require medical intervention to detoxify.</help-text>
+          </question>
+        </cluster>
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <width>95</width>
+            <label-width>45</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="culturalIdentity"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="QuestionLabel.CulturalIdentity">CSN7. Cultural Identity</label>
+            <help-text id="Question.CulturalIdentiy">&lt;b&gt;a. Cultural component is supportive and no conflict present. &lt;/b&gt; The child identifies with cultural and community heritage and beliefs and is connected with people who share similar belief systems. The child is aware of cultural/community resources, both formal and informal, and accesses them as needed. &lt;br/&gt;&lt;b&gt;b. No cultural component that supports or causes conflicts. &lt;/b&gt; The child identifies with cultural/community heritage and beliefs, practices, and traditions within the family. The child recognizes how to access resources in the greater community. The child may experience some conflict and may struggle with cultural/community identity, yet he/she is able to cope. &lt;br/&gt;&lt;b&gt;c. Cultural component that causes some conflicts. &lt;/b&gt; The child experiences inter-generational and/or societal conflict surrounding values and norms related to cultural/community differences. The child perceives services and supports as unavailable or access as limited. Conflicts with cultural/community identity create difficulties for the child. &lt;br/&gt;&lt;b&gt;d. Cultural component that causes significant conflicts. &lt;/b&gt; The child is disconnected from cultural/community heritage and beliefs resulting in isolation, lack of support, and lack of access to resources. Connections are unavailable, or perceived as unavailable, due to lack of understanding of cultural and language differences of support networks. Conflicts with cultural/community identity result in problematic behavior.</help-text>
+          </question>
+        </cluster>
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <width>95</width>
+            <label-width>45</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="socialRelationship"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="QuestionLabel.SocialRelationship">CSN8. Peer/Adult Social Relationships</label>
+            <help-text id="Help.SocialRelationships">&lt;b&gt;a. Strong social relationships. &lt;/b&gt; The child enjoys and participates in a variety of constructive, age-appropriate social activities. The child enjoys reciprocal, positive relationships with others. &lt;br/&gt;&lt;b&gt;b. Adequate social relationships. &lt;/b&gt;The child demonstrates adequate social skills. The child maintains stable relationships with others; occasional conflicts are minor and easily resolved. &lt;br/&gt;&lt;b&gt;c. Limited social relationships. &lt;/b&gt; The child demonstrates inconsistent social skills; the child has limited positive interactions with others. Conflicts are more frequent and serious, and the child may be unable to resolve them. &lt;br/&gt;&lt;b&gt;d. Poor social relationships. &lt;/b&gt;The child has poor social skills as demonstrated by frequent conflicting relationships or exclusive interactions with negative or exploitive peers, or the child is isolated and lacks a support system.</help-text>
+          </question>
+        </cluster>
+        <cluster>
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <width>95</width>
+            <label-width>45</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="delinquentBehavior"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="QuestionLabel.DelinquentBehavior">CSN9. Delinquent Behavior</label>
+            <help-text id="Help.DelinquentBehavior">&lt;b&gt;a. Preventive activities. &lt;/b&gt;The child is involved in community service and/or crime prevention programs and takes a stance against crime. The child has no arrest history and there is no other indication of criminal behavior. &lt;br/&gt;&lt;b&gt;b. No delinquent behavior. &lt;/b&gt;The child has no arrest history and there is no other indication of criminal behavior, or the child has successfully completed probation, and there has been no criminal behavior in the past two years. &lt;br/&gt;&lt;b&gt;c. Occasional delinquent behavior. &lt;/b&gt; The child is/has engaged in occasional, nonviolent delinquent behavior and may have been arrested or placed on probation within the past two years. &lt;br/&gt;&lt;b&gt;d. Significant delinquent behavior. &lt;/b&gt;The child is/has been involved in any violent or repeated non-violent delinquent behavior that has or may have resulted in consequences such as arrests, incarcerations, or probation.</help-text>
+          </question>
+        </cluster>
+        <cluster entity="Person">
+          <layout>
+            <type>flow</type>
+            <num-cols>1</num-cols>
+            <width>95</width>
+            <label-width>45</label-width>
+            <label-alignment>left</label-alignment>
+          </layout>
+          <question
+            control-question="false"
+            id="identifiedStrengthNeed"
+            mandatory="true"
+            multi-select="false"
+            show-field-help="true"
+          >
+            <label id="Question.IdentifiedStrengthNeed">CSN10. Identified Child Strength/Need (not covered in CSN1-CSN9)</label>
+            <help-text id="Help.IdentifiedStrengthNeed">If the caseworker is aware of additional strengths or needs of the child that were not addressed in the Strength and Needs Assessment, they should be documented in the text box below.</help-text>
+          </question>
+          <question
+            control-question="false"
+            id="comment"
+            mandatory="false"
+            multi-select="false"
+            show-field-help="false"
+          >
+            <label id="IdentifiedStrengthNeed.Comment">Comment</label>
+            <layout>
+              <width>87</width>
+              <type>flow</type>
+              <num-rows>4</num-rows>
+            </layout>
+          </question>
+        </cluster>
+      </question-page>
+    </loop>
+  </section>
 </ieg-script>

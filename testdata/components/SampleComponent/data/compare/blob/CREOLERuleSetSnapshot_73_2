@@ -1,8 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCAddressDataRuleSet">
-  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCAddress">
+<?xml version="1.0" encoding="UTF-8"?><RuleSet name="PDCBankAccountDataRuleSet">
+  <Class extends="ActiveSuccessionSet" extendsRuleSet="PropagatorRuleSet" name="PDCBankAccount">
     <Annotations>
       <SuccessionSetPopulation endDateAttribute="toDate" startDateAttribute="fromDate"/>
     </Annotations>
+    <Attribute name="jointAccountInd">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.Boolean"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="accountNumber">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <!-- BEGIN, CR00407584, SS -->
+    <Attribute name="iban">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <!-- END, CR00407584 -->
+    <Attribute name="accountName">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
     <Attribute name="fromDate">
       <Annotations/>
       <type>
@@ -12,10 +50,39 @@
         <specified/>
       </derivation>
     </Attribute>
-    <Attribute name="addressType">
+    <Attribute name="accountStatus">
       <Annotations/>
       <type>
-        <codetableentry table="AddressType"/>
+        <codetableentry table="BankAccountStatus"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <Attribute name="sortCode">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <!-- BEGIN, CR00407584, SS -->
+    <Attribute name="bic">
+      <Annotations/>
+      <type>
+        <javaclass name="java.lang.String"/>
+      </type>
+      <derivation>
+        <specified/>
+      </derivation>
+    </Attribute>
+    <!-- END, CR00407584 -->
+    <Attribute name="accountType">
+      <Annotations/>
+      <type>
+        <codetableentry table="BankAccountType"/>
       </type>
       <derivation>
         <specified/>
@@ -67,28 +134,6 @@
         <reference attribute="caseParticipantRoleRecord">
           <create ruleclass="CaseParticipantRoleCalculator" ruleset="DynamicEvidenceRuleSet">
             <reference attribute="participant"/>
-          </create>
-        </reference>
-      </derivation>
-    </Attribute>
-    <Attribute name="address">
-      <Annotations/>
-      <type>
-        <javaclass name="java.lang.Number"/>
-      </type>
-      <derivation>
-        <specified/>
-      </derivation>
-    </Attribute>
-    <Attribute name="related_address">
-      <Annotations/>
-      <type>
-        <ruleclass name="Address" ruleset="ParticipantEntitiesRuleSet"/>
-      </type>
-      <derivation>
-        <reference attribute="addressRecord">
-          <create ruleclass="AddressCalculator" ruleset="DynamicEvidenceRuleSet">
-            <reference attribute="address"/>
           </create>
         </reference>
       </derivation>

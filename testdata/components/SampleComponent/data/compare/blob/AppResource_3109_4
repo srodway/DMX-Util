@@ -1,30 +1,22 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-MenuItem.Title.Edit=Edit
-MenuItem.Tooltip.Edit=Edit
-MenuItem.Title.AddVisiting=Add Clients to Visit
-MenuItem.Tooltip.AddVisiting=Add Clients to Visit
-MenuItem.Title.AddVisitors=Add Visitors
-MenuItem.Tooltip.AddVisitors=Add Visitors
-MenuItem.Title.AddRegisteredVisitor=Add Registered Visitor
-MenuItem.Tooltip.AddRegisteredVisitor=Add Registered Visitor
-MenuItem.Title.AddUnregisteredVisitor=Add Unregistered Visitor
-MenuItem.Tooltip.AddUnregisteredVisitor=Add Unregistered Visitor
-MenuItem.Title.NewVisitationLog=New Visitation Log
-MenuItem.Tooltip.NewVisitationLog=New Visitation Log
-MenuItem.Title.RemoveVisiting=Remove Clients to Visit
-MenuItem.Tooltip.RemoveVisiting=Remove Clients to Visit
-MenuItem.Title.RemoveVisitors=Remove Visitors
-MenuItem.Tooltip.RemoveVisitors=Remove Visitors
-MenuItem.Title.ViewPrintableDocument=View Printable Document
-MenuItem.Tooltip.ViewPrintableDocument=View Printable Document
-MenuItem.Title.Close=Close
-MenuItem.Tooltip.Close=Close
-MenuItem.Title.Cancel=Delete
-MenuItem.Tooltip.Cancel=Delete
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+	Copyright 2009 Curam Software Ltd.
+	All rights reserved.
+	
+	This software is the confidential and proprietary information of Curam
+	Software, Ltd. ("Confidential Information"). You shall not disclose
+	such Confidential Information and shall use it only in accordance with the
+	terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="OMAdminFactors">
+  <nc:nodes>
+    <nc:navigation-page id="OutcomePlanFactors" page-id="OutcomePlanActionAdmin_listOutcomePlanFactorAdmin" title="Leaf.Title.Factors"/>
+  </nc:nodes>
+
+  
+</nc:navigation>

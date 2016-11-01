@@ -1,81 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
-  
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-	Copyright 2009-2011 Curam Software Ltd.
-	All rights reserved.
-	
-	This software is the confidential and proprietary information of Curam
-	Software, Ltd. ("Confidential Information"). You shall not disclose
-	such Confidential Information and shall use it only in accordance with the
-	terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ProviderSearchMenu">
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2012. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+Details.Name.FinancialAdministration=Financial Administration
+Details.Title.FinancialAdministration=Financial Administration
 
-	<mc:submenu id="NEW" title="Submenu.Title.New" tooltip="Submenu.Tooltip.New">
-
-		<mc:menu-item id="EnquirySearch" open-as="modal" page-id="ProviderManagement_searchOpenEnquiry" title="MenuItem.Title.Enquiry" tooltip="MenuItem.Tooltip.Enquiry"/>
-
-		<mc:menu-item id="ProviderSearch" open-as="modal" page-id="ProviderManagement_searchConfirmProviderNotRegistered" title="MenuItem.Title.Provider" tooltip="MenuItem.Tooltip.Provider"/>
-
-		<mc:menu-item id="ProviderGroupSearch" open-as="modal" page-id="ProviderManagement_searchConfirmProviderGroupNotRegistered" title="MenuItem.Title.ProviderGroup" tooltip="MenuItem.Tooltip.ProviderGroup"/>
-
-	</mc:submenu>
-
-
-	<mc:submenu id="Search" title="Submenu.Title.Search" tooltip="Submenu.Tooltip.Search">
-
-		<!-- BEGIN, CR00281453, GP -->
-		<mc:menu-item id="AvailablePlace" page-id="ProviderManagement_findAllAvailablePlaces" title="MenuItem.Title.AvailablePlace" tooltip="MenuItem.Tooltip.AvailablePlace"/>
-		<!-- END, CR00281453 -->
-		
-		<mc:menu-item id="Enquiry" page-id="ProviderManagement_searchProviderEnquiry" title="MenuItem.Title.Enquiry" tooltip="MenuItem.Tooltip.Enquiry"/>
-
-		<mc:menu-item id="ExternalAccessRequests" page-id="ProviderManagement_searchExternalAccessRequests" title="MenuItem.Title.ExternalAccessRequests" tooltip="MenuItem.Tooltip.ExternalAccessRequests"/>
-
-		<mc:menu-item id="ProviderGroup" page-id="ProviderManagement_searchProviderGroups" title="MenuItem.Title.ProviderGroup" tooltip="MenuItem.Tooltip.ProviderGroup"/>
-
-
-		<mc:menu-item id="SearchServiceInvoice" page-id="ProviderManagement_searchServiceInvoice" title="MenuItem.Title.SearchServiceInvoice" tooltip="MenuItem.Tooltip.SearchServiceInvoice"/>
-
-		<mc:menu-item id="UnassignedProviderMember" page-id="ProviderManagement_findPerson" title="MenuItem.Title.UnassignedProviderMember" tooltip="MenuItem.Tooltip.UnassignedProviderMember"/>
-		
-		<mc:submenu id="Participant" title="Submenu.Title.Participant" tooltip="Submenu.Tooltip.Participant">
-			
-			<!-- BEGIN, CR00281453, GP -->
-			<mc:menu-item id="EducationalInstitute" page-id="EducationalInstitute_search1" title="MenuItem.Title.EducationalInstitute" tooltip="MenuItem.Tooltip.EducationalInstitute"/>
-
-			<mc:menu-item id="Employer" page-id="Employer_search1" title="MenuItem.Title.Employer" tooltip="MenuItem.Tooltip.Employer"/>
-
-			<mc:menu-item id="EmployerProspectEmployer" page-id="Employer_search1.uim" title="MenuItem.Title.EmployerProspectEmployer" tooltip="MenuItem.Tooltip.EmployerProspectEmployer"/>
-
-			<mc:menu-item id="ExternalParty" page-id="ExternalParty_search1" title="MenuItem.Title.ExternalParty" tooltip="MenuItem.Tooltip.ExternalParty"/>
-						
-			<mc:menu-item id="ExternalPartyOffice" page-id="ExternalPartyOffice_search1" title="MenuItem.Title.ExternalPartyOffice" tooltip="MenuItem.Tooltip.ExternalPartyOffice"/>
-						
-			<mc:menu-item id="InformationProvider" page-id="InformationProvider_search1" title="MenuItem.Title.InformationProvider" tooltip="MenuItem.Tooltip.InformationProvider"/>
-			
-			<mc:menu-item id="Person" page-id="Person_search1" title="MenuItem.Title.Person" tooltip="MenuItem.Tooltip.Person"/>
-			
-			<mc:menu-item id="PersonProspectPerson" page-id="Person_search1" title="MenuItem.Title.PersonProspectPerson" tooltip="MenuItem.Tooltip.PersonProspectPerson"/>
-						
-			<mc:menu-item id="ProductProvider" page-id="ProductProvider_search1" title="MenuItem.Title.ProductProvider" tooltip="MenuItem.Tooltip.ProductProvider"/>
-			<!-- END, CR00281453 -->
-			
-			<mc:menu-item id="ProspectEmployer" page-id="ProspectEmployer_search" title="MenuItem.Title.ProspectEmployer" tooltip="MenuItem.Tooltip.ProspectEmployer"/>
-			
-			<mc:menu-item id="ProspectPerson" page-id="ProspectPerson_search" title="MenuItem.Title.ProspectPerson" tooltip="MenuItem.Tooltip.ProspectPerson"/>
-			
-			<!-- BEGIN, CR00281453, GP -->
-			<mc:menu-item id="ServiceSupplier" page-id="ServiceSupplier_search1" title="MenuItem.Title.ServiceSupplier" tooltip="MenuItem.Tooltip.ServiceSupplier"/>
-						
-			<mc:menu-item id="Utility" page-id="Utility_search1" title="MenuItem.Title.Utility" tooltip="MenuItem.Tooltip.Utility"/>
-			<!-- END, CR00281453 -->
-			
-		</mc:submenu>
-	</mc:submenu>
-
-</mc:menu-bar>
+Page.Title.Home=Banks
+Page.Title.FinancialCalendar=Financial Calendar
+Page.Title.CashCalendar=Cash Calendar
+Page.Title.CheckCalendar=Check Calendar
+Page.Title.EFTCalendar=EFT Calendar
+Page.Title.InvoiceCalendar=Invoice Calendar
+Page.Title.VoucherCalendar=Voucher Calendar
+Page.Title.Banks=Banks
+Page.Title.OrgBankAccs=Organization Bank Accounts
+Page.Title.CurrencyExchangeRates=Currency Exchange Rates
+Page.Title.InsuranceReturnPeriods=Insurance Return Periods    

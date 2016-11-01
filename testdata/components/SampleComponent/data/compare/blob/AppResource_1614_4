@@ -1,20 +1,42 @@
 #
 # Licensed Materials - Property of IBM
 # 
-# Copyright IBM Corporation 2012, 2014. All Rights Reserved.
+# Copyright IBM Corporation 2012. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Number.Wizard.Pages=2
-#BEGIN, CR00440019, AC
-ProviderManagement_searchProviderGroupNotRegistered.Wizard.Item.Text=Provider Group Search
-ProviderManagement_searchProviderGroupNotRegistered.Wizard.Page.Title=Step 1:
-ProviderManagement_searchProviderGroupNotRegistered.Wizard.Page.Desc=Confirm Provider Group Not Already Enrolled
-Wizard.PageID.1=ProviderManagement_searchProviderGroupNotRegistered
+# This Properties file contains resource Strings for the Participat entities CER Ruleset.
 
-ProviderManagement_enrollAsProviderGroup.Wizard.Item.Text=Provider Group Details
-ProviderManagement_enrollAsProviderGroup.Wizard.Page.Title=Step 2:
-ProviderManagement_enrollAsProviderGroup.Wizard.Page.Desc=Enter Provider Group Details
-Wizard.PageID.2=ProviderManagement_enrollAsProviderGroup
-#END, CR00440019
+#Person
+Person.description=Person: {0}
+
+#ConcernRole
+ConcernRole.description=Concern Role: {0}
+
+#ConcernRoleRelationship
+ConcernRoleRelationship.description=ConcernRoleRelationship: Relationship between {0} and {1}
+
+#Address record
+Address.description=Address: {0}
+
+#ConcernRoleAddress record
+ConcernRoleAddress.description=ConcernRoleAddress: {0} for {1}
+
+#ConcernRoleAlternateID record
+ConcernRoleAlternateID.description=Alternate ID: {0} - {1}
+
+#DisplayHelper
+DisplayHelper.description={0}
+
+#Employment Record
+Employment.description=Employment: {0} - {1}
+
+#Prospect Person Record
+ProspectPerson.description=Prospect Person:{0}
+
+#Employment Working Hours Record
+EmploymentWorkingHours.description=Worked {0} Hours from {1} for Employment ID: {2}
+
+#Employer Record
+Employer.description=Employer record for {0}

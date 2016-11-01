@@ -6,13 +6,16 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Details.Name.ServicePlanGroupHome=Service Plan Group
-Details.Icon=a
-Folder.Title.Home=Home
-Leaf.Title.InProgress=In Progress
-Leaf.Title.All=All
-Leaf.Title.Attachments=Attachments
-Leaf.Title.Cost=Cost
-Leaf.Title.Milestones=Milestones
-Leaf.Title.Notes=Notes
-Leaf.Title.TrackingGantt=Tracking Gantt
+# This Properties file contains resource Strings for the Participat entities CER Ruleset.
+
+#Case Header
+CaseHeader.description=Case: {0}
+
+#Case Participant Role
+CaseParticipantRole.description=Case Participant: {0} : {1}
+
+#Case Groups
+CaseGroups.description={0} is in the {1} group for Case ID: {2}
+
+#Product Delivery
+ProductDelivery.description={0} Product Delivery for {1}

@@ -1,21 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
   Licensed Materials - Property of IBM
- 
+  
   Copyright IBM Corporation 2012. All Rights Reserved.
-
+  
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2009 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="EmployerSearch">
-  <nc:nodes>
-    <nc:navigation-page id="EmployerSearchHome" page-id="Employer_search1" title="Leaf.Title.Home" visible="true"/>
-  </nc:nodes>
-  
-</nc:navigation>
+    Copyright 2010.2011 Curam Software Ltd.
+    All rights reserved.
+    
+    This software is the confidential and proprietary information of Curam
+    Software, Ltd. ("Confidential Information"). You shall not disclose
+    such Confidential Information and shall use it only in accordance with the
+    terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="AppealHearingReviewHearing">
+    
+    <tc:page-param name="hearingID"/>
+    
+    <tc:menu id="AppealReviewHearingICMenu"/>
+    
+    <!-- Details panel -->
+    <tc:context height="155" page-id="Appeal_hearingReviewHearingHomeTabDetails"/>
+    
+    <!-- Navigation Panel -->
+    <tc:navigation id="AppealHearingReviewHearing"/>
+
+    <tc:tab-refresh>
+      <tc:onsubmit context="true" menu-bar="true" page-id="Appeal_hearingReviewHearingHomeTabDetails"/>
+      <tc:onsubmit context="true" menu-bar="true" page-id="Appeal_hearingCaseDeskHearingHomeForIC"/>
+      <tc:onsubmit context="true" menu-bar="true" page-id="Appeal_adjournHearing"/>
+      <tc:onsubmit context="true" menu-bar="true" page-id="Appeal_completeHearing"/>
+      <tc:onsubmit context="true" menu-bar="true" page-id="Appeal_continueHearing"/>
+      <tc:onsubmit context="true" menu-bar="true" page-id="Appeal_rescheduleDeskHearing"/>
+      <tc:onsubmit context="true" menu-bar="true" page-id="Appeal_reschedulePhoneHearingIC1"/>
+      <tc:onsubmit context="true" menu-bar="true" page-id="Appeal_rescheduleExternalPartyOffice"/>
+      <tc:onsubmit context="true" menu-bar="true" page-id="Appeal_rescheduleLocationHearingIC"/>
+
+    </tc:tab-refresh>
+   
+</tc:tab-config>

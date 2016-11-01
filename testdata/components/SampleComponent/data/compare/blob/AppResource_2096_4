@@ -6,14 +6,8 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-MenuItem.Title.CancelAssessment=Cancel Assessment
-MenuItem.Tooltip.CancelAssessment=Cancel the Assessment
+# This Properties file contains resource Strings for the PDC Duplicate Client CER Ruleset.
 
-MenuItem.Title.CloneAssessment=Clone Assessment
-MenuItem.Tooltip.CloneAssessment=Clone the Assessment
+ConcernRoleDuplicate.description=ConcernRoleDuplicate record for {0}
 
-MenuItem.Title.CompleteAssessment=Complete Assessment
-MenuItem.Tooltip.CompleteAssessment=Complete the Assessment
-
-MenuItem.Title.MakeDecision=Make Decision
-MenuItem.Tooltip.MakeDecision=Make a Decision
+DuplicateClientCheck.description=Determining if Concern Role {0} is a duplicate

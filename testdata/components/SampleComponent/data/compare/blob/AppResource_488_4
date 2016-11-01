@@ -1,25 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2010 Curam Software Ltd.
-  All rights reserved.
-
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="DeliveryMethods">
-  
-  <!-- No Actions Menu -->
-  
-  <!-- No Context Panel -->
-  <tc:context tab-name="Details.Name.DeliveryMethods" tab-title="Details.Title.DeliveryMethods"/>
-  
-  <tc:navigation page-id="Resource_listDeliveryMethod"/>
- 
-</tc:tab-config>
+#Mon Oct 31 13:52:42 GMT 2016
+Cluster.Title.Comments=Comments
+Field.Label.PreferredInd=Preferred
+Container.Label.UpdatedBy=Updated By
+View.ActionControl.Label.Verifications=Verifications
+Field.Label.From=From
+Cluster.Title.AddressdDetails=Address Details
+Field.Label.UpdatedOn=Updated On
+View.ActionControl.Label.History.Help=Choose this to view the correction history of this record.
+ActionControl.Label.ViewHistory=
+childEvidenceType=PDC0000261
+labelName.empty=
+Field.Label.ApprovalRequestedInd=Approval Requested
+View.ActionControl.Label.Details=Details
+ActionControl.Label.Close=Close
+Field.Label.UpdatedBy=Updated By
+Field.Label.ChangeReason=Change Reason
+Field.Skip.Label=SKIP
+Participant=Participant
+Field.Prompt.EffectiveDate=leave blank if making a correction
+Participant.participant=participant
+Field.Label.Type=Type
+Field.Label.To=To
+Field.Label.ApprovalStatus=Approval Status
+View.ActionControl.Label.History=Corrections
+View.ActionControl.Label.Details.Help=Shows details of the current record.
+Field.Label.EffectiveDate=Effective Date of Change
+Field.Label.ReceivedDate=Received Date
+Field.Label.StatusCode=Status
+Title.Childe.Details=Change Details
+View.ActionControl.Label.Issues=Issues
+Page.Title=View Addresses 
+ActionControl.Label.ViewHistoryCloseBracket=

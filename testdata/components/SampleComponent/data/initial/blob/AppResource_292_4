@@ -1,26 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Licensed Materials - Property of IBM
-  
-  Copyright IBM Corporation 2012. All Rights Reserved.
- 
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
--->  
-
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
-    <header>
-        <title id="Page.Title" />
-        <description id="Page.Description" />
-        <icon id="fail_image" />
-    </header>
-    <identifier name="AuthenticationFailed" />
-    <content>
-        <container style="title-text">
-            <description id="AuthenticationFailed.Description" />
-        </container>
-    </content>
-    <navigation>
-        <nav-button name="home" page="ResolveCitizenHome" page-type="resolve" />
-    </navigation>
-</page>
+#Mon Oct 31 13:35:40 GMT 2016
+EmployersNameField.Label.ID1=Employer's Name
+EmploymentToDateField.Label.ID4=To Date
+EmploymentFromDateField.Label.ID3=From Date
+Field.Label.ReceivedDate=Received Date
+ActionControl.Label.Cancel=Cancel
+childEvidenceType=DET0000263
+EmploymentCluster.Title.ID1=Employment
+effectiveDate=20160929
+Page.Title=New Scot Employment 
+OccupationField.Label.ID2=Occupation
+ActionControl.Label.Save=Save

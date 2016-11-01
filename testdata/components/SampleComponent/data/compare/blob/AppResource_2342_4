@@ -1,24 +1,28 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-MenuItem.Title.Edit=Edit
-MenuItem.Tooltip.Edit=Edit
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009-2010 Curam Software Ltd.
+  All rights reserved.
 
-MenuItem.Title.Bookmark=Add as Item of Interest
-MenuItem.Tooltip.Bookmark=Add to my items of interest
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="Audits">
 
-MenuItem.Title.RemoveBookmark=Remove as Item of Interest
-MenuItem.Tooltip.RemoveBookmark=Remove from my items of interest
+  <!-- BEGIN, CR00229581, GD -->
+  <!-- No Action Menu -->
+  <!-- END, CR00229581 -->
 
-MenuItem.Title.Statement=Attach Statement
-MenuItem.Tooltip.Statement=Create a new statement.
+  <!-- No details panel -->
+  <tc:context tab-name="Details.Name.CaseAuditConfigurations" tab-title="Details.Title.CaseAuditConfigurations"/>
 
-MenuItem.Title.Reopen=Reopen
-MenuItem.Tooltip.Reopen=Reopen the Appeal case
+  <!-- See Audits.nav for details of the tree meta-data. --> 
+  <tc:navigation page-id="CaseAuditConfiguration_listCaseAuditConfigurations"/>  
   
+</tc:tab-config>

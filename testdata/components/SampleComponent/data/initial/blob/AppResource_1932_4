@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012,2014. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2011 Curam Software Ltd.
-  All rights reserved.
-
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="EvidenceTypeMenu">
-
-  <mc:loader-registry>
-    <mc:loader class="curam.core.sl.tab.impl.EvidenceTypeMenuLoader"/>
-  </mc:loader-registry>  
-
-  <mc:menu-item dynamic="true" id="EvidenceNewEvidence" open-as="modal" page-id="Evidence_resolveCreateFromMetaData" title="MenuItem.Title.NewEvidence" tooltip="MenuItem.Tooltip.NewEvidence"/>
-  
-  <mc:menu-item id="EvidenceValidate" open-as="modal" page-id="Evidence_validateChangesForType" title="MenuItem.Title.ValidateChanges" tooltip="MenuItem.Tooltip.ValidateChanges"/>
-  
-</mc:menu-bar>
+#
+# Licensed Materials - Property of IBM
+# 
+# Copyright IBM Corporation 2013. All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or disclosure 
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+QuestionPage.AssessmentDetails.Title=SDM\u00AE Reunification Assessment
+Cluster.Title.Recommendation=Recommendation
+RiskOverrides.InstructionText=<p style="font-family:tahoma;font-size:11px;color:#4e4e4e;">Please enter final risk finding</p>
+AssessmentResults.Display.Text.DeterminedVisitationLevel=<p style="font-family:tahoma;font-size:11px;color:#4e4e4e;margin-left:-5px;"> Recommendation : <b>%1s</b> </p>
+Cluster.Title.Overrides=Override
+Cluster.Desc.Overrides=<p style="font-family:tahoma;font-size:11px">Complete a permanency plan recommendation for each child receiving family reunification services. Consult with supervisor and appropriate statutes and regulations.</p>
+Cluster.Desc.PolicyOverrideQuestions=<span style="margin-top: 5px; color:#5A5A5A">Indicate if any of the following are true in the current review period.</span>
+Cluster.Desc.DiscOverrideReason=<span style="margin-top: 5px; color:#5A5A5A">Reunification risk level may be adjusted up or down one level with a valid reason.</span>
+OverrideMessage.id=At least one condition must be specified if a policy override has been selected.
+DiscMessageID=Override reason must be entered if a discretionary override has been specified.
+Question.Label.AssessmentOverride=Override
+Question.Label.PermanencyPlanRecommendation = Child's recommendation will be changed to reflect the permanency plan recommendation for the sibling group.
+Question.Label.ContinuedRUNServicesInd= Reasons for placement represent allowable exceptions to requirements to provide continued reunification services.
+Question.Label.DiscretionaryOverrideReason = Override Reason
+Question.Label.PermanencyPlanGoal = Change Recommendation to
+Cluster.Desc.DiscretionaryOverrideQuestions=A discretionary override is applied by the worker to increase or decrease the risk level in any case where the worker believes the determined risk level is not accurate.
+Question.Help.PolicyOverrideOptions = A policy override should consider if: <ul><li>  Child has been in placment 15 of the last 22 months <li> Probability of reunification within 6 months, even though recommendation is to Change Permanency Goal. <li> Conditions exist to change goal from Maintain in OHC to Change Permanency Goal.</ul>
+Recommendation.Override.Message = The recommendation selected via an override cannot be the same as the recommendation identified via the assessment

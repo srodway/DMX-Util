@@ -1,25 +1,26 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-# This Properties file contains resource Strings for the Product Eligibility/Entitlement Rule Set
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
 
-blankDate=...
-nonBlankDate={0,date,M/d/yyyy}
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="InboxOptions">
+  <nc:loader-registry>
+    <nc:loader class="curam.core.sl.tab.impl.TaskRedirectionAndBlockingNavStateLoader"/>
+  </nc:loader-registry>
 
-problemCalculatingDecisionDetails=Error calculating decision details for case {0} during period {1} - {2} for display category {3}.  Blank decision details will be used for this period/category instead.
-problemCalculatingEligibilityEntitlement=Error calculating eligibility/entitlement for case {0} during period {1} - {2}.  The case will be indeterminable for this period.
-problemCalculatingKeyData=Error calculating key data for case {0} during period {1} - {2}.  Blank key data will be used for this period instead.
-noProductPeriodAvailable=No product period available to calculate the period {1} - {2} for case {0}.
-
-ProductDeliveryCase.description=Overall product delivery case rule object for case {0}
-ProductPeriod.description=Product Period, id {0}
-ProductPeriodDisplayCategory.description=Product Period Display Category, id {0}
-RuleClassLink.description=Rule Class Link, id {0}
-
-#Product Delivery Case Header
-ProductDeliveryCaseHeader.description=Product Delivery Case Header: {0}
+  <nc:nodes>
+    <nc:navigation-page id="InboxOptionsGeneralSettings" page-id="Inbox_viewInboxOptionsGeneralSettings" title="Leaf.Title.GeneralSettings"/>
+    <nc:navigation-page dynamic="true" id="TaskRedirection" page-id="User_taskRedirection" title="Leaf.Title.TaskRedirection"/>
+    <nc:navigation-page dynamic="true" id="TaskAllocationBlocking" page-id="User_taskAllocationBlocking" title="Leaf.Title.TaskAllocationBlocking"/>
+  </nc:nodes>
+</nc:navigation>

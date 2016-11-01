@@ -1,52 +1,41 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-Details.Name.Employer=Employer
-Details.Icon=a
-Leaf.Title.Home=Home
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
 
-Folder.Title.Background=Background
-# BEGIN, CR00333624, SSK
-Leaf.Title.AlternativeIDs=Alternative Identifier(s)
-# END, CR00333624
-Leaf.Title.RelatedCompanies=Related Companies
-Leaf.Title.TradingStatus=Trading Status
-Leaf.Title.History=History
-
-Folder.Title.Contacts=Contact
-Leaf.Title.Addresses=Addresses
-Leaf.Title.PhoneNumbers=Phone Numbers
-Leaf.Title.Communications=Communications
-Leaf.Title.Notes=Notes
-Leaf.Title.Contacts=Contacts
-Leaf.Title.Interactions=Interactions
-Leaf.Title.CommunicationExceptions=Communication Exceptions
-Leaf.Title.EmailAddresses=Email Addresses
-Leaf.Title.WebAddresses=Web Addresses
-
-Folder.Title.Cases=Cases
-Leaf.Title.Cases=Cases
-Leaf.Title.Issues=Issues
-Leaf.Title.ServicePlans=Service Plans
-
-Folder.Title.Financial=Financial
-Leaf.Title.Financial=Transactions
-Leaf.Title.BankAccounts=Bank Accounts
-
-Folder.Title.Verifications=Verifications
-Leaf.Title.Verifications=Verifications
-Leaf.Title.VerificationsOutstanding=Verifications Outstanding
-
-Leaf.Title.Tasks=Tasks
-
-Folder.Title.Administration=Administration
-Leaf.Title.Administrators=Administrators
-Leaf.Title.Roles=Roles
-
-
-Leaf.Title.Attachments=Attachments
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="page-schema.xsd">
+    <!-- this is the page that lists the service offerings and 
+        plots all services on map by service offering -->
+    <identifier name="ServiceProviders"/>
+    <server class="Triage" alias="DISPLAY" method="getTriageResults">
+        <param name="key$playerID" path="id"/>
+    </server>
+   <header>
+        <title id="Page.Title"/>
+        <description id="Page.Description"/> 
+        <icon id="title_current_apps"/>
+    </header>
+    <content>
+    			
+        <container style="triage-results-alert" conditionalSource="/DISPLAY/listData/root/alert-messages[]/alert/text" false="$empty">
+            	<field source="/DISPLAY/listData/root/alert-messages[]" />
+        </container>                        
+        
+        
+        <!--<container style="triage-results-header"/>-->
+        
+        <container style="triage-results-container">
+          <field source="/DISPLAY/listData/root/triage-text-only-link[]"/>
+          <field source="/DISPLAY/mapData/map" type="TRIAGE_GOOGLE_MAPS_XML"/>
+			    <field source="/DISPLAY/listData/root" type="TRIAGE_SERVICE_OFFERING_LIST"/>
+			    <field source="/DISPLAY/govServicesData$xmlData/gov-root" type="GOVERNMENT_SERVICES_XML"/>
+        </container>
+   
+    </content>
+</page>

@@ -1,32 +1,34 @@
 #
 # Licensed Materials - Property of IBM
-#
-# PID 5725-H26
 # 
-# Copyright IBM Corporation 2014. All Rights Reserved.
+# Copyright IBM Corporation 2012. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-#Tue Nov 04 15:29:10 GMT 2014
-Second.Name.Label.ID3=Second Name
-Cluster.AlienCPR.Title=Alien
-DateOfEntryDOB.message={0} must not be earlier than the alien's date of birth
-Alien.Description=Alien
-DateOfEntry.Field.Label=Date of Entry
-Modify.Page.Description=Modify page for alien details.
-Cluster.Alien.Details.Help=Enter the details for the alien.
-EndDate.Field.Label=End Date
-Cluster.Comments.Help=Add any additional comments about the alien.
-Alien.message=Alien is of type {0}
-ClusternAlien.Details=Alien Details
-CountryOfOrigin.Field.Label=Country of Origin
-Cluster.AlienCPR.Title.Help=Select the citizen who is an alien on the case.
-AlienStatus.Field.Label=Alien Status
-Participant.Description=Participant
-AlienRegistrationNumber.Field.Label=Alien Registration Number
-Create.Page.Description=Create page for alien details.
-Cluster.Comments=Comments
-First.Name.Label.ID3=First Name
-AlienType.Field.Label=Alien Type
-View.Page.Description=View page of alien details.
+Number.Wizard.Pages=5
+
+OutcomePlanReferralWizard_service.Wizard.Item.Text=Service
+OutcomePlanReferralWizard_service.Wizard.Page.Title=Step 1:
+OutcomePlanReferralWizard_service.Wizard.Page.Desc=Service
+Wizard.PageID.1=OutcomePlanReferralWizard_service
+
+OutcomePlanReferralWizard_details.Wizard.Item.Text=Details
+OutcomePlanReferralWizard_details.Wizard.Page.Title=Step 2:
+OutcomePlanReferralWizard_details.Wizard.Page.Desc=Details
+Wizard.PageID.2=OutcomePlanReferralWizard_details
+
+OutcomePlanReferralWizard_provider.Wizard.Item.Text=Provider
+OutcomePlanReferralWizard_provider.Wizard.Page.Title=Step 3:
+OutcomePlanReferralWizard_provider.Wizard.Page.Desc=Provider
+Wizard.PageID.3=OutcomePlanReferralWizard_provider
+
+OutcomePlanReferralWizard_notification.Wizard.Item.Text=Notification
+OutcomePlanReferralWizard_notification.Wizard.Page.Title=Step 4:
+OutcomePlanReferralWizard_notification.Wizard.Page.Desc=Notification
+Wizard.PageID.4=OutcomePlanReferralWizard_notification
+
+OutcomePlanReferralWizard_factors.Wizard.Item.Text=Factors
+OutcomePlanReferralWizard_factors.Wizard.Page.Title=Step 5:
+OutcomePlanReferralWizard_factors.Wizard.Page.Desc=Factors
+Wizard.PageID.5=OutcomePlanReferralWizard_factors

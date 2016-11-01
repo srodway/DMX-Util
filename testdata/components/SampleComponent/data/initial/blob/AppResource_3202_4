@@ -1,10 +1,26 @@
-managingaroundhome.Title=Managing around your home
-managingathomecluster.Title=Do you have any difficulties managing around your home?
-lookingafterhome.label=Looking after your home / housework
-shopping.label=Shopping
-laundry.label=Laundry
-managingmoney.label=Managing your money
-safeathome.label=Being safe in your home
-NewQuestionLabelID_1427967513560=If you answer yes to any of the above or have any other issues with managing around yourhome please give examples below.
-homeanyonehelp.label=If you do, does anyone help you?
-homeneedanymorehelp.label=Do you think you need any more help with any of these things?
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2009 Curam Software Ltd.
+  All rights reserved.
+
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="MyAuditPlans">
+  
+  <!-- No Actions Menu -->
+  
+  <!-- No details defined yet-->
+  <tc:context tab-name="Details.Name.MyAuditPlans" tab-title="Details.Title.MyAuditPlans"/>
+
+  <!-- See MyAuditPlans.nav for details of the tree meta-data. -->
+  <tc:navigation page-id="CaseAudit_listActiveAuditPlans"/>  
+
+</tc:tab-config>

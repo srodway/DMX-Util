@@ -13,8 +13,20 @@
   Software, Ltd. ("Confidential Information"). You shall not disclose
   such Confidential Information and shall use it only in accordance with the
   terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="SupervisorCases">
-  <nc:nodes>
-    <nc:navigation-page id="Home" page-id="Supervisor_casesHome" title="Leaf.Title.Home" visible="true"/>
-  </nc:nodes>
-</nc:navigation>
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="ProgramTypeAdmin">
+  
+  <mc:menu-item id="Edit" open-as="modal" page-id="CitizenWorkspaceAdmin_modifyProgram" title="MenuItem.Title.Edit" tooltip="MenuItem.Tooltip.Edit"/>
+  
+  <mc:menu-separator id="sep1"/>
+  
+  <mc:menu-item id="ConfigureOnlineDetails" open-as="modal" page-id="CitizenWorkspaceAdmin_configureOnlineDetails" title="MenuItem.Title.Configure" tooltip="MenuItem.Tooltip.Configure"/>
+  
+  <mc:menu-item id="LocalOffices" open-as="modal" page-id="CitizenWorkspaceAdmin_addLocalOffice" title="MenuItem.Title.LocalOffices" tooltip="MenuItem.Tooltip.LocalOffices"/>
+  
+  <mc:menu-item id="Mapping" open-as="modal" page-id="CitizenWorkspaceAdmin_createProgramMapping" title="MenuItem.Title.Mapping" tooltip="MenuItem.Tooltip.Mapping"/>
+  
+  <mc:menu-separator id="sep2"/>
+  
+  <mc:menu-item id="Delete" open-as="modal" page-id="CitizenWorkspaceAdmin_deleteProgram" title="MenuItem.Title.Delete" tooltip="MenuItem.Tooltip.Delete"/>
+  
+</mc:menu-bar>

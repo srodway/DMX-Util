@@ -1,95 +1,44 @@
 #
 # Licensed Materials - Property of IBM
-#
-# PID 5725-H26
 # 
-# Copyright IBM Corporation 2012, 2013. All Rights Reserved.
+# Copyright IBM Corporation 2012. All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-Submenu.Title.GoTo=Go To
-Submenu.Icon.GoTo=GoTo
-Submenu.Tooltip.GoTo=Go To
+Message.Title=Next {Case.Name} payment.
+Message.OverPayment.Title={Case.Name} over payment.
+Message.UnderPayment.Title= {Case.Name} under payment.
 
-MenuItem.Title.Home=Home
-MenuItem.Icon.Home=Home
-MenuItem.Tooltip.Home=Home
+Message.First.Payment=Your next payment is due on {Payment.Due.Date}.
+Message.Payment.Latest=Your latest payment of {Payment.Amount} was due on {Payment.Due.Date}. Click {link:here:paymentDetails} to view the payment details. Your next payment is due on {Payment.Next.Date}. Click {link:My Payments:paymentHistory} to view your payment history.
+Message.Last.Payment=Your latest payment of {Payment.Amount} was due on {Payment.Due.Date}. Click {link:here:paymentDetails} to view the payment details.
+Message.Cancelled.Payment=Your payment of {Payment.Amount}, due on {Payment.Due.Date}, has been cancelled. Click {link:here:paymentDetails} to view the details. Click {link:Contact Information:contactInfo} to contact your case worker if you need more information. Your next payment is due on {Payment.Next.Date}. Click {link:My Payments:paymentHistory} to view your payment history.
+Message.Reissue.Payment=Your latest payment of {Payment.Amount} was due on {Payment.Due.Date}. Click {link:here:paymentDetails} to view the payment details. This payment was originally cancelled on {Payment.Cancellation.Date}. Click {link:here:paymentCancelDetails} to view the cancellation details. Your next payment is due on {Payment.Next.Date}. Click {link:My Payments:paymentHistory} to view your payment history.
+Message.Expired.Payment=Your payment of {Payment.Amount}, due on {Payment.Due.Date}, has expired. Click {link:here:paymentDetails} to view the details. Click {link:Contact Information:contactInfo} to contact your case worker if you need more information. Click {link:My Payments:paymentHistory} to view your payment history.
+Message.Stopped.Payment=Your {Case.Name} payments have been stopped from {Payment.Stopped.Date}. Click {link:Contact Information:contactInfo} to contact your case worker if you need more information.
+Message.Unsuspended.Payment=Your {Case.Name} payment suspension has been lifted from {Payment.Unsuspension.Date}. Your next payment is due on {Payment.Next.Date}.
+Message.Overpaid.Payment = We have overpaid your {Case.Name} payments by {Payment.Amount}. Click {link:here:liabilityDetails} to view the details.Click {link:Contact Information:contactInfo} to contact your case worker if you need more information.
+Message.UnderPaid.Payment = We have identified that we have underpaid your {Case.Name} payments by {Payment.Amount}. Click  {link:here:underPaymentDetails} to view the details.Click {link:Contact Information:contactInfo} to contact your case worker if you need more information.Click {link:My Payments:paymentHistory} to view your payment history.
 
-Submenu.Title.MyInbox=My Inbox
-Submenu.Icon.MyInbox=Inbox
-Submenu.Tooltip.MyInbox=Inbox
+#START NON-TRANSLATABLE
+Payment.Details.Link=paymentDetails
+UnderPayment.Details.Link=underPaymentDetails
+UnderPayment.Details.Target=CitizenAccount_viewUnderPaymentInstructionDetails
+Payment.History.Link=paymentHistory
+Payment.History.Target=CitizenAccount_listPayments
+Payment.Cancel.Link=paymentCancelDetails
+Payment.Cancel.Target=CitizenAccount_viewPaymentInstructionDetails
+Contact.Information.Link=contactInfo
+Contact.Information.Target=CitizenAccount_listContactInformation
+Liability.Details.Link=liabilityDetails
+Liability.Details.Target=CitizenAccount_viewLiabilityInstructionDetails
 
-MenuItem.Title.AssignedTasks=Assigned Tasks
-MenuItem.Icon.AssignedTasks=AssignedTasks
-MenuItem.Tooltip.AssignedTasks=Assigned Tasks
-
-MenuItem.Title.DeferredTasks=Deferred Tasks
-MenuItem.Icon.DeferredTasks=DeferredTasks
-MenuItem.Tooltip.DeferredTasks=Deferred Tasks
-
-MenuItem.Title.Notifications=Notifications
-MenuItem.Icon.Notifications=Notifications
-MenuItem.Tooltip.Notifications=Notifications
-
-MenuItem.Title.ReservedTasks=Reserved Tasks
-MenuItem.Icon.ReservedTasks=ReservedTasks
-MenuItem.Tooltip.ReservedTasks=Reserved Tasks
-
-MenuItem.Title.WorkQueues=Work Queues
-MenuItem.Icon.WorkQueues=WorkQueues
-MenuItem.Tooltip.WorkQueues=Work Queues
-
-MenuItem.Title.MyCalendar=My Calendar
-MenuItem.Icon.MyCalendar=Calendar
-MenuItem.Tooltip.MyCalendar=My Calendar
-
-Submenu.Title.New=New
-Submenu.Icon.New=New
-Submenu.Tooltip.New=New
-
-MenuItem.Title.CreateEnquiry=Enquiry
-MenuItem.Tooltip.CreateEnquiry=Enquiry
-
-MenuItem.Title.EnrollProvider=Provider
-MenuItem.Tooltip.EnrollProvider=Provider
-
-MenuItem.Title.EnrollProviderGroup=Provider Group
-MenuItem.Tooltip.EnrollProviderGroup=Provider Group
-
-MenuItem.Title.CreateUnassignedProviderMember=Unassigned Provider Member
-MenuItem.Tooltip.CreateUnassignedProviderMember=Unassigned Provider Member
-
-Submenu.Title.Search=Search
-Submenu.Icon.Search=Search
-Submenu.Tooltip.Search=Find a case or participant.
-
-
-MenuItem.Title.SearchAvailablePlaces=Available Place
-MenuItem.Tooltip.SearchAvailablePlaces=Find a available place.
-
-MenuItem.Title.SearchEnquiry=Enquiry
-MenuItem.Tooltip.SearchEnquiry=Find a enquiry.
-
-MenuItem.Title.SearchExternalAccessRequests=External Access Requests
-MenuItem.Tooltip.SearchExternalAccessRequests=Find the external access requests.
-
-Submenu.Title.Participant=Participant
-
-# BEGIN, CR00380476, MR
-Submenu.Icon.Participant=Participant
-# END, CR00380476
-Submenu.Tooltip.Participant=Find a participant.
-
-MenuItem.Title.SearchProvider=Provider
-MenuItem.Tooltip.SearchProvider=Find a provider.
-
-MenuItem.Title.SearchProviderGroup=Provider Group
-MenuItem.Tooltip.SearchProviderGroup=Find a provider group.
-
-MenuItem.Title.SearchUnassignedProviderMember=Unassigned Provider Member
-MenuItem.Tooltip.SearchUnassignedProviderMember=Find a unassigned provider member.
-
-
-MenuItem.Title.MyInbox=My Inbox
-MenuItem.Tooltip.MyInbox=Go to my inbox.
+Image.Payment=cw_icon_payments.png
+Image.Payment.Suspended=icon_stopped.png
+Image.Payment.Unsuspended=icons_unsuspended.png
+Image.Payment.Cancelled=icon_cancellation.png
+Image.Payment.OverPaid=icon_overpayment.png
+Image.Payment.UnderPaid=icon_underpayment.png
+Payment.Details.Target=CitizenAccount_viewPaymentInstructionDetails
+#END NON-TRANSLATABLE

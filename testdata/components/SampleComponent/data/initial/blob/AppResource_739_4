@@ -1,116 +1,29 @@
-#
-# Licensed Materials - Property of IBM
-#
-# PID 5725-H26
-# 
-# Copyright IBM Corporation 2014. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
-ApplicantInfo.Description=Please enter the claimant's details.
-ApplicantInfo.Title=Claimant Details
-GeneralDetails.Title=Personal Details
-ADHelp=Here we ask some basic information about the claimant, the claimant's living arrangements, and the claimant's education.  At a minimum the claimant must enter the required items date of birth and gender. This will allow us to further process the claimant's application.
-HasSSN.Label=Does the claimant have an SSN?
-SSN.Label=Social Security Number (SSN):
-SSNHelp=Please enter the claimant's Social Security Number (SSN) if the claimant has one.
-SSNStatus.Label=If the claimant has no SSN, has the claimant applied for one?
-NoSSNValidationMessage=Please enter the claimant's Social Security Sumber (SSN)
-SSNSHelp=Please select yes if the claimant has no Social Security Number (SSN) and has applied for one.
-SSNValidation.Message='Social Security Number (SSN):' must be entered.
-SSNStatusValidation.Message='If the claimant has no SSN, has the claimant applied for one?' must be entered.
-DateOfBirth.Label=Date of birth:
-DOBHelp=Please tell us the claimant's date of birth.  Enter the date in the format of MM/DD/YYYY, e.g., 12/31/2008.
-Gender.Label=Gender:
-GenderHelp=Please select whether the claimant is male or female. This is a required item and the claimant must select a value from the list in order to continue.
-MaritalStatus.Label=Marital status:
-MSHelp=Please select the claimant's marital status from the list provided.
-ContactLanguage.Label=What language does the claimant wish to be contacted in?
-CLHelp=Please tell us the language the claimant would like us to use when contacting the claimant by phone or in writing
-PrimaryClientHasMaidenName.Label=Does the claimant have a nickname, alias or other name?
-OtherName.Description=Please enter the claimant's nickname, alias or other name below:
-OtherNameHelp=Please tell us if the claimant have a nickname, alias or other name.  If the claimant have a nickname, alias or another name, enter it in the boxes provided.
-OtherFirstName.Label=First name:
-OtherMiddleInitial.Label=Middle initial:
-OtherLastName.Label=Last name:
-USCitizenHelp=If the claimant are a U.S. citizen, select yes, otherwise select no and answer the alien details questions.
-IsUSCitizen.Label=Is the claimant a US Citizen or US Non Citizen National?
-UsCitizenInd.Description=Please enter the claimant's alien details:
-AlienCategory.Label=Alien Category
-AlienStatus.Label=Current Alien Status
-NoAlienStatus='Current Alien Status' must be entered.
-AlienRegistrationNumber.Label=Alien registration number
-NoAlienRegistrationNumber='Alien Registration Number' must be entered.
-hasAlienSponsor.Label=Does the claimant have a sponsor?
-NoAlienSponsor='Does the claimaint have a sponsor?' must be entered.
-DateOfEntry.Label=Date of Entry
-NoAlienEntryDate=Please enter Alien Entry Date.
-CountryOfOrigin.Label=Country of Origin 
-NoCountryOfOrigin='Country of Origin' must be entered.
-isImmigrantSponsor.Label=Is the claimant the sponsor of an immigrant?
-ClaimantStartDate.Label=When did the claimant become a member of the household?
-ClaimantStartDateValidation.Message='When did the claimant become a member of the household?' must be entered.	
-SponsorStartDate.Label=Sponsor Start Date:
-SponserStartDateValidaton.Message='Sponsor Start Date' must be entered. 
-AlienValidation.Message=Please enter all alien details like Alien Status, Alien Registration Number, Date of Entry, Country of Origin and 
-AccommodationDetails.Title=Where The Person Lives
-PersonResidentInState.Label=Is the claimant a resident of this state?
-PRHelp=Please tell us whether the claimant currently lives in this state.
-PSHelp=Please tell us if the claimant plans to stay in this state.
-AccommodationType.Label=What is the claimant's living arrangement?
-AccommodationStatus.Label=What is the status of this living arrangement?
-AccommodationStatusValidation.Message='What is the status of this living arrangement?' must be entered.
-AccommodationStartDate.Label=When did this living arrangement begin?
-ATHelp=Please select where the claimant lives from the list provided.
-PaysForRoom.Label=Does the claimant pay someone for a room?
-PFRHelp=Please tell us if the claimant pay someone for a room.
-ResidenceType.Label=Residence Type
-PaymentFrequency.Label=Payment Frequency
-AmountPaid.Label=Amount Paid
-PaymentStartDate.Label=Start Date
-PaysForMeals.Label=Does the claimant pay someone for meals?
-PMHelp=Please tell us if the claimant pay someone for meals.
-NumberOfMeals.Label=Number of meals per day
-EthnicityRaceDescription=Please check the boxes to tell us about the claimant's race and/or ethnicity. These questions are for statistical purposes only. The claimant's responses will not affect the claimant's application.
-EthnicityRace.Title=Race and Ethnicity
-ERHelp=Please check the boxes to tell us about the claimant's race and/or ethnic origin. These questions are for statistical purposes only.
-EthnicityRaceValidation=Please check the boxes to tell us about the claimant's Race and Ethnicity.
-BlackOrAfricanAmerican.Label=Black or African American
-NativeAlaskanOrAmericanIndian.Label=American Indian or Alaskan Native
-Asian.Label=Asian
-NativeHawaiianOrPacificIslander.Label=Hawaiian or Pacific Islander
-WhiteOrCaucasian.Label=White or Caucasian
-HispanicOrLatino.Label=Hispanic or Latino
-Education.Title=Education
-EDUHelp=<p class="helpFieldHeading">What is the highest grade completed in school by the claimant?</p><p { text-indent: inherit }>Please select the highest grade the claimant completed in school.</p><p class="helpFieldHeading">Does the claimant currently attend high school, college, vocational or technical school?</p><p { text-indent: inherit }>Please tell us if the claimant currently attends high school, college, vocational or technical school.</p><p class="helpFieldHeading">What is the name of the school?</p><p { text-indent: inherit }>If the claimant does attend high school, college, vocational or technical school, please tell us the name of the school the claimant attends.</p><p class="helpFieldHeading">Does the claimant attend full time or part time?</p><p { text-indent: inherit }>Please tell us if the claimant attends full time or part time. By part time we mean a student who does not take the full amount of coursework for each semester.</p>
-HighestGrade.Label=What is the highest grade completed in school by the claimant?
-CurrentlyInSchoolInd.Label=Does the claimant currently attend high school, college, vocational or technical school?
-SchoolDetails.Description=Please enter the claimant's school details below:
-SchoolName.Label=School Name
-SchoolType.Label=School Type
-SchoolStatus.Label=Status
-SchoolStartDate.Label=Start Date
-SchoolNameHelp=If the claimant do attend high school, college, vocational or technical school, please tell us the name of the school the claimant attend.
-AttendanceFrequency.Label=Does the claimant attend full or part time?
-SchoolFrequencyHelp=Please tell us if the claimant attends full time or part time. By part time we mean a student who does not take the full amount of coursework for each semester.
-RequiredField=<span style="color: orange">* Indicates a required field</span>
-PrepareFoodWithHouseholdInd.Label=Do other members of the household purchase and prepare food with the claimant?
-PPFWHHelp=Please tell us is other members of the household purchase and prepare food with the claimant.
-ResidenceType.Label=Residence Type
-ResidencyStatus.Label=Residency Status
-ResidencyStatusValidaton.Message=Claimant must be resident in this state to receive benefits in this state
-SchoolAddress.Title=School Address
-Street1.Label=Street 1
-Street2.Label=Street 2
-City.Label=City
-State.Label=State
-ZipCode.Label=Zip
-AmountPaidForRoomValidation.Message='Amount Paid' must be entered.
-PaymentStartDateValidation.Message='Start Date' must be entered.
-ResidenceTypeValidation.Message='Residence Type' must be entered.
-RoomPaymentFrequencyValidation.Message='Payment Frequency' must be entered
-PaidRoomValidation=Please enter all the additional details for 'Do you pay someone for a room?'.
-IsInterpreterRequired.Label=Does the claimant require an interpreter? 
-InterpreterLanguage.Label=Interpreter Language 
-RequiredField.Indicator=<span style="color: orange">* Indicates a required item</span>
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Licensed Materials - Property of IBM
+ 
+  Copyright IBM Corporation 2012. All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+--><!--
+  Copyright 2010 Curam Software Ltd.
+  All rights reserved.
+  
+  This software is the confidential and proprietary information of Curam
+  Software, Ltd. ("Confidential Information"). You shall not disclose
+  such Confidential Information and shall use it only in accordance with the
+  terms of the license agreement you entered into with Curam Software.
+--><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="MSWordTemplates">
+  
+  <tc:page-param name="templateID"/>
+  <tc:page-param name="localeIdentifier"/>
+
+  <!-- No Actions Menu -->
+    
+  <!-- No Context Panel -->
+  <tc:context tab-name="Details.Name.MSWordTemplates" tab-title="Details.Title.MSWordTemplates"/>
+
+  <!-- No Navigation Panel -->
+  <tc:navigation page-id="System_listDocumentTemplate1"/>
+
+</tc:tab-config>

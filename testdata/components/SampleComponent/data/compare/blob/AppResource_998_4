@@ -6,15 +6,97 @@
   US Government Users Restricted Rights - Use, duplication or disclosure 
   restricted by GSA ADP Schedule Contract with IBM Corp.
 --><!--
-  Copyright 2010 Curam Software Ltd.
-  All rights reserved.
-  
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><nc:navigation xmlns:nc="http://www.curamsoftware.com/curam/util/client/navigation-config" id="SupervisorCasesWithIssues">
-  <nc:nodes>
-    <nc:navigation-page id="Home" page-id="Supervisor_casesWithIssuesHeatMap" title="Leaf.Title.Home" visible="true"/>
-  </nc:nodes>
-</nc:navigation>
+    Copyright 2011 Curam Software Ltd.
+    All rights reserved.
+    
+    This software is the confidential and proprietary information of Curam
+    Software, Ltd. ("Confidential Information"). You shall not disclose
+    such Confidential Information and shall use it only in accordance with the
+    terms of the license agreement you entered into with Curam Software.
+--><mc:menu-bar xmlns:mc="http://www.curamsoftware.com/curam/util/client/menubar-config" id="CombinedUserWorkerHomeMenu">
+    
+    <mc:submenu id="GO" title="Submenu.Title.GO">
+        
+        <mc:menu-item id="Home" page-id="CombinedUserWorkerHome" title="MenuItem.Title.MyHome" tooltip="MenuItem.Tooltip.MyHome"/>
+        
+        <mc:menu-item id="MyApplications" page-id="Application_home" title="MenuItem.Title.MyApplications" tooltip="MenuItem.Tooltip.MyApplications"/>        
+        
+    </mc:submenu>
+    
+    <mc:submenu id="NEW" title="Submenu.Title.New" tooltip="Submenu.Tooltip.New">
+        
+        <mc:menu-item id="Activity" open-as="modal" page-id="Activity_createStandardUserActivity" title="MenuItem.Title.Activity" tooltip="MenuItem.Tooltip.Activity"/>  
+        
+        <mc:menu-item id="RecurringActivity" open-as="modal" page-id="Activity_createRecurringUserActivity" title="MenuItem.Title.RecurringActivity" tooltip="MenuItem.Tooltip.RecurringActivity"/>   
+        
+        <mc:menu-item id="Task" open-as="modal" page-id="Task_createTask" title="MenuItem.Title.Task" tooltip="MenuItem.Tooltip.AlternateId"/>
+        
+    </mc:submenu>
+    
+    <mc:submenu id="Register" title="Submenu.Title.Register" tooltip="Submenu.Tooltip.Register">    
+        
+        <mc:menu-item id="RegEducationalInsititute" page-id="EducationalInstitute_previousRegistrationCheck" title="MenuItem.Title.RegEducationalInstitute" tooltip="MenuItem.Tooltip.RegEducationalInstitute"/>
+        <!--BEGIN,CR00286691,ZT-->
+        <mc:menu-item id="RegEmployer" page-id="RegisterEmployerWizard_duplicateCheck" title="MenuItem.Title.RegEmployer" tooltip="MenuItem.Tooltip.RegEmployer"/>
+        
+        <mc:menu-item id="RegExternalParty" page-id="RegisterExternalPartyWizard_duplicateCheck" title="MenuItem.Title.ExternalParty" tooltip="MenuItem.Tooltip.RegExternalParty"/>
+        
+        <mc:menu-item id="RegInformationProvider" page-id="RegisterInformationProviderWizard_duplicateCheck" title="MenuItem.Title.RegInformationProvider" tooltip="MenuItem.Tooltip.RegInformationProvider"/>          
+        <!--END,CR00286691-->
+        <mc:menu-item id="RegPerson" page-id="IntakeShortCuts_duplicateCheckForRegisterPerson" title="MenuItem.Title.RegPerson" tooltip="MenuItem.Tooltip.RegPerson"/>
+        <!--BEGIN,CR00286691,ZT-->
+        <mc:menu-item id="RegProductProvider" page-id="RegisterProductProviderWizard_duplicateCheck" title="MenuItem.Title.RegProductProvider" tooltip="MenuItem.Tooltip.RegProductProvider"/>           
+        
+        <mc:menu-item id="RegProspectEmployer" page-id="AddProspectEmployerWizard_duplicateCheck" title="MenuItem.Title.RegProspectEmployer" tooltip="MenuItem.Tooltip.RegProspectEmployer"/>
+        <!--END,CR00286691-->
+        <mc:menu-item id="RegProspectPerson" page-id="IntakeShortCuts_duplicateCheckForRegisterProspect" title="MenuItem.Title.RegProspectPerson" tooltip="MenuItem.Tooltip.RegProspectPerson"/>          
+        <!--BEGIN,CR00286691,ZT-->
+        <mc:menu-item id="RegServiceSupplier" page-id="RegisterServiceSupplierWizard_duplicateCheck" title="MenuItem.Title.RegServiceSupplier" tooltip="MenuItem.Tooltip.RegServiceSupplpier"/>          
+        
+        <mc:menu-item id="RegUtility" page-id="RegisterUtilityWizard_duplicateCheck" title="MenuItem.Title.RegUtility" tooltip="MenuItem.Tooltip.RegUtility"/>
+        <!--END,CR00286691-->
+    </mc:submenu>
+    
+    
+    <mc:submenu id="Search" title="Submenu.Title.Search" tooltip="Submenu.Tooltip.Search">
+        <mc:menu-item id="Application" page-id="Organization_applicationSearch" title="MenuItem.Title.Application" tooltip="MenuItem.Tooltip.Application"/>
+        
+        <mc:menu-item id="SearchCase" page-id="Case_search1" title="MenuItem.Title.SearchCase" tooltip="MenuItem.Tooltip.SearchCase"/>
+        
+        <mc:submenu id="Participant" title="Submenu.Title.Participant" tooltip="Submenu.Tooltip.Participant">
+            <!--BEGIN,CR00286691,ZT-->
+            <mc:menu-item id="EducationalInstitute" page-id="EducationalInstitute_search1" title="MenuItem.Title.EducationalInstitute" tooltip="MenuItem.Tooltip.EducationalInstitute"/>
+            
+            <mc:menu-item id="Employer" page-id="Employer_search1" title="MenuItem.Title.Employer" tooltip="MenuItem.Tooltip.Employer"/>
+            
+            <mc:menu-item id="EmployerProspectEmployer" page-id="Employer_search1" title="MenuItem.Title.EmployerProspectEmployer" tooltip="MenuItem.Tooltip.EmployerProspectEmployer"/>
+            
+            <mc:menu-item id="ExternalParty" page-id="ExternalParty_search1" title="MenuItem.Title.ExternalParty" tooltip="MenuItem.Tooltip.ExternalParty"/>
+            
+            <mc:menu-item id="ExternalPartyOffice" page-id="ExternalPartyOffice_search1" title="MenuItem.Title.ExternalPartyOffice" tooltip="MenuItem.Tooltip.ExternalPartyOffice"/>
+            
+            <mc:menu-item id="InformationProvider" page-id="InformationProvider_search1" title="MenuItem.Title.InformationProvider" tooltip="MenuItem.Tooltip.InformationProvider"/>
+            <!--END,CR00286691-->
+            <mc:menu-item id="Person" page-id="IntakeShortCuts_personSearch" title="MenuItem.Title.Person" tooltip="MenuItem.Tooltip.Person"/>
+            <!--BEGIN,CR00286691,ZT-->
+            <mc:menu-item id="PersonProspectPerson" page-id="Person_search1" title="MenuItem.Title.PersonProspectPerson" tooltip="MenuItem.Tooltip.PersonProspectPerson"/>
+            
+            <mc:menu-item id="ProductProvider" page-id="ProductProvider_search1" title="MenuItem.Title.ProductProvider" tooltip="MenuItem.Tooltip.ProductProvider"/>
+            <!--END,CR00286691-->
+            <mc:menu-item id="ProspectEmployer" page-id="ProspectEmployer_search" title="MenuItem.Title.ProspectEmployer" tooltip="MenuItem.Tooltip.ProspectEmployer"/>
+            
+            <mc:menu-item id="ProspectPerson" page-id="ProspectPerson_search" title="MenuItem.Title.ProspectPerson" tooltip="MenuItem.Tooltip.ProspectPerson"/>
+            <!--BEGIN,CR00286691,ZT-->
+            <mc:menu-item id="ServiceSupplier" page-id="ServiceSupplier_search1" title="MenuItem.Title.ServiceSupplier" tooltip="MenuItem.Tooltip.ServiceSupplpier"/>
+            
+            <mc:menu-item id="Utility" page-id="Utility_search1" title="MenuItem.Title.Utility" tooltip="MenuItem.Tooltip.Utility"/>
+            <!--END,CR00286691-->
+        </mc:submenu>
+        <!--BEGIN,CR00286691,ZT-->
+        <mc:menu-item id="Tasks" page-id="Inbox_searchTask" title="MenuItem.Title.Task" tooltip="MenuItem.Tooltip.Task"/>
+        <!--END,CR00286691-->
+    </mc:submenu>
+    
+    <mc:menu-item id="ChangePassword" page-id="Organization_modifyUserPassword" title="MenuItem.Title.ChangePassword" tooltip="MenuItem.Tooltip.ChangePassword"/>
+    
+</mc:menu-bar>

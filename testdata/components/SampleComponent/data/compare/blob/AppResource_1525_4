@@ -1,38 +1,43 @@
-#
-# Licensed Materials - Property of IBM
-# 
-# Copyright IBM Corporation 2012. All Rights Reserved.
-#
-# US Government Users Restricted Rights - Use, duplication or disclosure 
-# restricted by GSA ADP Schedule Contract with IBM Corp.
-#
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  
+  Copyright IBM Corporation 2012. All Rights Reserved.
+ 
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->  
 
-Help.PageDescription=This page allows you to view the basic case display rules category.
-Page.Title=Basic Case
-
-# START NON-TRANSLATABLE
-CategoryRef=CREOLE_BASIC_CASE
-# END NON-TRANSLATABLE
-
-Cluster.Title.Eligiblity=Eligibility
-
-Field.Value.NotEligible=The claim is not eligible.
-
-Field.Value.Eligible=The claim is eligible.
-
-Cluster.Title.Entitlement=Entitlement
-
-Field.Label.ObejctiveTypeID=Objective Type ID
-Field.Label.ObejctiveTypeID.Help=The type of the objective.
-
-Field.Label.Entitled=Entitled?
-Field.Label.Entitled.Help=Shows the entitlement for this specific objective. 
-
-Field.Label.Target=Target
-Field.Label.Target.Help=Target
-
-Field.Label.RelatedReference=Related Reference
-Field.Label.RelatedReference.Help=Related Reference
-
-Help.Xref.1.Topicname=CREOLECaseDecision
-
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="page-schema.xsd">
+    <identifier name="SaveSubmitPrintOrExit" />
+    <header>
+        <title id="Page.Title" />
+        <description id="Page.Description" />
+        <icon id="title_save" />
+    </header>
+    <content>
+        <container>
+            <title id="RadioSelection.Title" />
+            <description id="RadioSelection.Description" />
+            <help id="RadioSelection.Help" />
+            <radiobutton-container id="SELECTION" legend="RadioSelection.Legend">
+                <radiobutton id="SAVE">
+                    <title id="SaveApplication.Title" />
+                </radiobutton>
+                <radiobutton id="SUBMIT">
+                    <title id="SubmitApplication.Title" />
+                </radiobutton>
+                <radiobutton id="PRINT">
+                    <title id="PrintApplication.Title" />
+                </radiobutton>
+                <radiobutton id="EXIT">
+                    <title id="ExitSaveApplication.Title" />
+                </radiobutton>
+            </radiobutton-container>
+        </container>
+    </content>
+    <navigation>
+		<nav-button name="next" type="action" />
+        <nav-button name="back" type="action" />
+    </navigation>
+</page>

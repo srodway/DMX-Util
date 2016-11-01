@@ -1,62 +1,94 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Licensed Materials - Property of IBM
- 
-  Copyright IBM Corporation 2012. All Rights Reserved.
-
-  US Government Users Restricted Rights - Use, duplication or disclosure 
-  restricted by GSA ADP Schedule Contract with IBM Corp.
---><!--
-  Copyright 2009, 2010 Curam Software Ltd.
-  All rights reserved.
-
-  This software is the confidential and proprietary information of Curam
-  Software, Ltd. ("Confidential Information"). You shall not disclose
-  such Confidential Information and shall use it only in accordance with the
-  terms of the license agreement you entered into with Curam Software.
---><tc:tab-config xmlns:tc="http://www.curamsoftware.com/curam/util/client/tab-config" id="ServiceSupplierHome">
-
-  <tc:page-param name="concernRoleID"/>
-
-  <tc:menu id="ServiceSupplierHomeMenu"/> 
-  
-  <!-- Details panel -->
-  <tc:context height="113" page-id="ServiceSupplier_homeTabDetails"/>
-
-
-  <!-- Navigation Panel -->
-  <tc:navigation id="ServiceSupplierHome"/> 
-  
-  <tc:tab-refresh>
-    <tc:onload menu-bar="true" page-id="ServiceSupplier_homePage"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="ServiceSupplier_modifyServiceSupplier"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelAddress"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createAddress"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAddress"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAddressFromList"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAddressFromView"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelEmailAddress"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createEmailAddress"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyEmailAddressFromList"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyEmailAddressFromView"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelPhoneNumber"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createPhoneNumber"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyPhoneNumberFromList"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyPhoneNumberFromView"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelWebAddress"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createWebAddress"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyWebAddressFromList"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyWebAddressFromView"/>
-    
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_cancelAlternateID"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_createAlternateID"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAlternateIDFromList"/>
-    <tc:onsubmit context="true" menu-bar="false" navigation="false" page-id="Participant_modifyAlternateIDFromView"/>
-    
-  </tc:tab-refresh>  
-  
-</tc:tab-config>
+CareDetailsPage.Title=Care Details
+CarerCluster.Desc=Carer information
+CarerCluster.Title=Carer
+HaveCarer.LabelID=Do you have a carer?
+HaveCarer.HelpID=Select Yes or No from the list
+CarerLivingWithYou.LabelID=Do they live with you?
+CarerLivingWithYou.HelpID=Select Yes or No from the list
+CarerDetailsCluster.Title=Carer Details
+CarerTitle.LabelID=Title
+CarerTitle.HelpID=Select title from list
+CarerFirstName.LabelID=First Name
+CarerFirstName.HelpID=Enter the carer's first name
+CarerLastName.LabelID=Last Name
+CarerLastName.HelpID=Enter the carer's family name
+CarerDateOfBirth.LabelID=Date of Birth
+CarerDateOfBirth.HelpID=Enter the Date of Birth, or click calendar icon and select date
+CarerGender.LabelID=Gender
+CarerGender.HelpID=Select the carer's gender from the list
+CarerNINumber.LabelID=National Insurance Number
+CarerNINumber.HelpID=Enter the Carer's National Insurance number if known
+CarerWorkingAbroadCluster.Title=Working and Living Abroad
+CarerNationality.LabelID=What is your carer's nationality
+CarerNationality.HelpID=Select the carer's nationality from the list
+CarerLivingNow.LabelID=Where are they living now?
+CarerLivingNow.HelpID=Select the region from the list
+CarerNormalRegion.LabelID=Is this the region that they normally live in?
+CarerNormalRegion.HelpID=Select Yes or No from the list
+CarerNormalRegion.LabelID=Is this the region that they normally live in?
+CarerNormalRegion.HelpID=Select Yes or No from the list
+TheCareTheyprovideCluster.Title=The Care They Provide
+MoreThan35Hours.LabelID=Do they spend 35 hours or more each week caring for you?
+MoreThan35Hours.HelpID=Select Yes or No from the list
+WhenStartCaring.LabelID=When did they start to look after you?
+WhenStartCaring.HelpID=Enter the date, or click on calendar icon and select date
+CarerAnyBreaks.LabelID=Has your carer had any breaks in looking after you since the date you want to claim for?
+CarerAnyBreaks.HelpID=Select Yes or No from the list
+BreaksInCareCluster.Title=Breaks in Care
+BreakFromDate.LabelID=From Date:
+BreakFromDate.HelpID=Enter the date, or click the calendar icon and select the date
+BreakToDate.LabelID=To Date:
+BreakToDate.HelpID=Enter date, or click calendar icon and select date
+ReasonForBreak.LabelID=Reason for the Break:
+ReasonForBreak.HelpID=Select the reason from the list
+EducationCluster.Title=Education
+Enrolled.LabelID=Are you currently enrolled on an education course?
+Enrolled.HelpID=Select Yes or No from list
+CourseCluster.Title=Course
+HoursAttend.LabelID=How many hours per week do you attend your course?
+HoursAttend.HelpID=Enter the number of hours you attend per week
+CourseStartDate.LabelID=Course start date:
+CourseStartDate.HelpID=Enter the start date, or click the calendar icon and select the date
+CourseEndDate.LabelID=Course end date:
+CourseEndDate.HelpID=Enter the end date, or click the calendar icon and select the date
+EmploymentCluster.Title=Employment
+CarerEmplyed.LabelID=Have your carer been employed at any time since six months before the date you want to claim from?
+CarerEmployed.HelpID=Select Yes or No from the list
+JobCluster.Title=Job
+EmploymentStartDate.LabelID=When did you start this job?
+EmploymentStartDate.HelpID=Enter startdate, or click calendar icon and select date
+JobFinished.LabelID=Has the job finished?
+JobFinished.HelpID=Select Yes or No from the list
+EndDate.LabelID=When did you last work?
+EndDate.HelpID=Enter the date, or click the calendar icon and select the date
+JobType.LabelID=Type of job?
+JobType.HelpID=Select the job type from the list
+EmployersName.LabelID=Employer's Name:
+EmployersName.HelpID=Enter the employer's name
+EarningsCluster.Title=Earnings
+GrossPayAmount.LabelID=What was your gross pay?
+GrossPayAmount.HelpID=Enter the gross pay
+GrossPayFreq.LabelID=How often were you paid?
+GrossPayFreq.HelpID=Select the frequency from the list
+TaxPayAmount.LabelID=How much did you pay in tax?
+TaxPayAmount.HelpID=Enter the amount you paid in taxes
+TaxPayFreq.LabelID=How often did you pay
+TaxPayFreq.HelpID=Select the frequency from the list
+NIPayAmount.LabelID=How much did you pay in National Insurance Contributions?
+NIPayAmount.HelpID=Enter the amount you paid in national insurance
+NIPayFreq.LabelID=How often did you pay
+NIPayFreq.HelpID=Select the frequency from the list
+PaidExpenses.LabelID=Where you paid expenses?
+PaidExpenses.HelpID=Select Yes or No from the list
+pension.LabelID=Do you have an occupational pension
+pension.HelpID=Select Yes or No from the list
+ExpensesCluster.Title=Expenses
+ExpensesPayAmount.LabelID=How much were you paid for expenses?
+ExpensesPayAmount.HelpID=Enter the amount you were paid for expenses
+ExpensesPayFreq.LabelID=how often were you paid
+ExpensesPayFreq.HelpID=Select the frequency form the list
+PensionCluster.Title=Pension
+PensionPayAmount.LabelID=How much are your occupational pension contributions?
+PensionPayAmount.HelpID=Enter the amount of contributions to your pension
+PensionPayFreq.LabelID=How often do you pay
+PensionPayFreq.HelpID=Select the frequency from the list

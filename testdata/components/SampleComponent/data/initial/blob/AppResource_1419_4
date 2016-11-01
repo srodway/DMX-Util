@@ -6,11 +6,18 @@
 # US Government Users Restricted Rights - Use, duplication or disclosure 
 # restricted by GSA ADP Schedule Contract with IBM Corp.
 #
-CPMFMAPP.logo=CDEJ/themes/v6/images/application-logo.png
-CPMFMAPP.title=IBM C\u00FAram
-CPMFMAPP.subtitle=Facility Manager
-CPMFMAPP.UserMessage=Welcome %user-full-name
-preferences.title=Preferences
-help.title=Help
-logout.title=Log out
-Application.Search.InitialText=Enter Referernce Number
+SavedScreenings.Title=Your Saved Screenings
+SavedScreenings.Description=The list below contains the screenings that you have previously carried out and saved. You can choose to continue with one of these screenings. Otherwise, you can also start a new screening by clicking the link below.
+SavedScreenings.Select.Title=Below are a list of your saved screening applications
+SavedScreenings.Select.Description=Click on the Continue with Screening link below to continue a screening you have previously saved
+SavedScreenings.Label.Name=Screening Name
+SavedScreenings.Label.StartDate=Start Date
+SavedScreenings.Label.LastUpdated=Last Updated
+SavedScreenings.Label.Action=Action
+SavedScreenings.Continue=Continue with Screening
+CompletedScreenings.Rescreen=Rescreen
+CompletedScreenings.ScreeningResults=View Results
+Start.New.Text=Click the following link to start a new screening:
+Start.New.Label=Start New Screening
+List.Title=Previously Saved Screenings
+List.Description=Click on the Continue with Screening link below to continue a screening you have previously saved.
