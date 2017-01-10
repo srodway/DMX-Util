@@ -95,8 +95,21 @@ public class DMX2CTXConvertor extends Task {
 
 		// Trace.kToolsLogger.info("=== Start DMX 2 CTX Conversion ===");
 
-		validateParams();
+		boolean ctxProcessAllowed=true;
+		
+		try {
+			validateParams();
+		} catch (BuildException be) {
+			System.out.println(be.getMessage());
+			
+			//TODO: Probably because their are no CTX differences.  Need to handle this possibility
+			ctxProcessAllowed=false;
+		}
 
+		if (!ctxProcessAllowed) {
+			return;
+		}
+		
 		final File ctHeaderDMXFile = new File(getDmxDir() + File.separator + CODETABLEHEADER_DMX);
 		final File ctItemDMXFile = new File(getDmxDir() + File.separator + CODETABLEITEM_DMX);
 		final File ctDisplayNameDMXFile = new File(getDmxDir() + File.separator + CTDISPLAYNAME_DMX);
@@ -300,22 +313,22 @@ public class DMX2CTXConvertor extends Task {
 	/**
 	 * Validate that all parameters have been specified correctly.
 	 */
-	private void validateParams() {
+	private void validateParams() throws BuildException {
 		final File dmxDir = new File(getDmxDir());
 		if (!dmxDir.exists()) {
-			throw new BuildException("The dmx directory '" + dmxDir + "' deosn't exist.");
+			throw new BuildException("The dmx directory '" + dmxDir + "' doesn't exist.");
 		}
 
 		final File ctHeaderDMX = new File(getDmxDir() + File.separator + CODETABLEHEADER_DMX);
 		if (!ctHeaderDMX.exists()) {
 			throw new BuildException(
-					"The code table header dmx file '" + ctHeaderDMX.getAbsolutePath() + "' deosn't exist.");
+		   			"The code table header dmx file '" + ctHeaderDMX.getAbsolutePath() + "' doesn't exist.");
 		}
 
 		final File ctItemDMX = new File(getDmxDir() + File.separator + CODETABLEITEM_DMX);
 		if (!ctItemDMX.exists()) {
 			throw new BuildException(
-					"The code table item dmx file '" + ctItemDMX.getAbsolutePath() + "' deosn't exist.");
+					"The code table item dmx file '" + ctItemDMX.getAbsolutePath() + "' doesn't exist.");
 		}
 	}
 

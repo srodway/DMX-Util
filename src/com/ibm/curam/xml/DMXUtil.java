@@ -193,7 +193,9 @@ public class DMXUtil {
 				
 			final StringBuffer buf = new StringBuffer(DMXDifference.getStringFromNode(node));
 			try {
-				createFile(buf, demoDataDir + FileUtil.PATH_MARKER + f.getName());
+				if (buf.indexOf("<row>")>0) {
+					createFile(buf, demoDataDir + FileUtil.PATH_MARKER + f.getName());
+				}
 			} catch (IOException e) {
 				System.out.println("Unable to save data file " + f.getName());
 				e.printStackTrace();
