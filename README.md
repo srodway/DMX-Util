@@ -21,6 +21,10 @@ DMXUtil has a number of parameters that are required for the successful processi
 	path to modified EJBServer directory (this can be a data extract from a modified build containing updated/changed data)
 	Component Name (the name of the component that is to be processed)
 
+Internally when generating codetable content, the tool assumes that a codetable directory within the Cúram data folder exists.
+
+	$SERVER_DIR/component/ComponentName/data/codetable
+
 EXECUTION:
 
 This tool in it's current form should be run either on the command line or through you IDE with the defined parameters. The parameters to be passed are as defined above, with an example as follows: -
