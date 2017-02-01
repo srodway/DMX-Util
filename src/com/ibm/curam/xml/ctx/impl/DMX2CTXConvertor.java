@@ -32,6 +32,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
+import com.ibm.curam.cli.ProgressIndicator;
+
 import curam.util.tools.datadictionary.DomUtils;
 //import curam.util.resources.Trace;
 
@@ -96,9 +98,7 @@ public class DMX2CTXConvertor extends Task {
 	 */
 	@Override
 	public void execute() {
-
-		// Trace.kToolsLogger.info("=== Start DMX 2 CTX Conversion ===");
-
+		
 		boolean ctxProcessAllowed=true;
 		
 		try {
@@ -122,12 +122,19 @@ public class DMX2CTXConvertor extends Task {
 		final Document ctHeaderDMXDoc = parseDMXFile(ctHeaderDMXFile);
 		final Document ctItemDMXDoc = parseDMXFile(ctItemDMXFile);
 		final Document ctDisplayNameDMXDoc = parseDMXFile(ctDisplayNameDMXFile);
-
+		
 		// Clear the ctx directory, if it exists
 		final File ctxDir = new File(getOutputDir());
 		ctxDir.mkdirs();
+		
+		List<Element> rows = getRows(ctHeaderDMXDoc);
 
-		for (final Element headerRowElement : getRows(ctHeaderDMXDoc)) {
+		System.out.println("Starting codetable generation from DMX files");
+		int processedFiles = 0;
+		
+		final ProgressIndicator progressReport = new ProgressIndicator(rows.size());
+
+		for (final Element headerRowElement : rows) {
 			final String tableName = getAttributeValue(headerRowElement, "tableName");
 			String codetablePath = ctxDir.getAbsoluteFile() + File.separator + CODETABLE_FILE_PREFIX + tableName + CODETABLE_FILE_SUFFIX;
 			// Trace.kToolsLogger.info("Creating ctx file [" + codetablePath +
@@ -152,6 +159,8 @@ public class DMX2CTXConvertor extends Task {
 			// Write the CTX file to disk
 			final File ctxfile = new File(codetablePath);
 			writeXMLFile(ctxfile, ctxDocument);
+			
+			progressReport.updateProgress(processedFiles++);
 		}
 
 		// Trace.kToolsLogger.info("=== End DMX 2 CTX Conversion ===");
