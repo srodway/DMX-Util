@@ -147,7 +147,7 @@ public class DMXUtil {
 	
 	
 	public static final void outputCommandLineHelp() {
-		 final String header = "Perform Cúram DMX data comparision process, outputing DMX files with <row>'s different from the master data source\n\n";
+		 final String header = "Perform Cúram DMX data comparison process, outputting DMX files with <row>'s different from the master data source\n\n";
 		 final String footer = "\nPlease report issues to Cúram UKI Team at IBM";
 		 
 		 final HelpFormatter formatter = new HelpFormatter();

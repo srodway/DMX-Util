@@ -22,7 +22,7 @@ DMXUtil has a number of parameters that are required for the successful processi
        [-curamdatapath] [-ignorelastwritten] -master <Master DMX
        Directory> -output <DMX Output Directory> [-override]
        
-	Perform Cúram DMX data comparision process, outputing DMX files with <row>'s different from the master data source
+	Perform Cúram DMX data comparison process, outputting DMX files with <row>'s different from the master data source
 
  	-master <Master DMX Directory>        Master set of DMX files, forming the baseline data to be compared against
  	-compare <Compare DMX Directory>      Set of DMX files that are to be compared against the master set
