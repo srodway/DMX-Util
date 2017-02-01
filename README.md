@@ -11,7 +11,7 @@ Current implementation assumes the tool will be used in conjunction with an impl
 
 	/CuramBaseDirectory/EJBServerPath/component/ComponentName/data
 	
-The initial extract is assumed to be taken from the implementation of the Cúram deployment and will form the starting point, or baseline for the data comparision.  The second extract is assume to have been take from the same implementation as the baseline, but containing any modification or additions.  The tool will then compare the baseline with the second extract and generate a 'demo' set of DMX and CTX files that contain only the additional details found in the second extract.
+The initial extract is assumed to be taken from the implementation of the Cúram deployment and will form the starting point, or baseline for the data comparison.  The second extract is assume to have been take from the same implementation as the baseline, but containing any modification or additions.  The tool will then compare the baseline with the second extract and generate a 'demo' set of DMX and CTX files that contain only the additional details found in the second extract.
  
 USAGE:
  
