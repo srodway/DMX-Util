@@ -17,13 +17,20 @@ USAGE:
  
 DMXUtil has a number of parameters that are required for the successful processing of DMX data.
  
-	path to baseline EJBServer directory (this can be an initial data extract from a baseline build)
-	path to modified EJBServer directory (this can be a data extract from a modified build containing updated/changed data)
-	Component Name (the name of the component that is to be processed)
+	usage: DMXUtil [-codetable] -compare <Compare DMX Directory> -component
+       <Component Name> [-ctdir <Codetable Output Directory>]
+       [-curamdatapath] [-ignorelastwritten] -master <Master DMX
+       Directory> -output <DMX Output Directory> [-override]
+       
+	Perform Cúram DMX data comparision process, outputing DMX files with <row>'s different from the master data source
 
-Internally when generating codetable content, the tool assumes that a codetable directory within the Cúram data folder exists.
+ 	-master <Master DMX Directory>        Master set of DMX files, forming the baseline data to be compared against
+ 	-compare <Compare DMX Directory>      Set of DMX files that are to be compared against the master set
+ 	-output <DMX Output Directory>        Location where the resulting DMX files are written
 
-	$SERVER_DIR/component/ComponentName/data/codetable
+ 	-codetable                            Generated Cúram codetable files from related DMX files
+ 	-ctdir <Codetable Output Directory>   Location where the resulting CTX files are written, if option codetable is defined.
+ 	-ignorelastwritten                    Ignore changed to 'last written' date & time when comparing rows.
 
 EXECUTION:
 
@@ -35,18 +42,20 @@ This tool in it's current form should be run either on the command line or throu
  
 Common Libraries (JAR)
 
+	commons-cli-1.3.1.jar
 	commons-io-2.4.jar
 	jdom-2.0.6.jar
 	xml.jar
-  
+
+EXAMPLE: 
+
+From the DMXUtil/bin folder: -
+
+	java -cp ../lib/ant.jar:../lib/commons-cli-1.3.1.jar:../lib/commons-io-2.4.jar:../lib/CuramAnalysisDocumentation.jar:../lib/jdom-2.0.6.jar:../lib/xml.jar:. com.ibm.curam.xml.DMXUtil -codetable -ignorelastwritten -master /Development/IBM/Curam/DMX-Util/testdata/components/SampleComponent/data/initial -compare /Development/IBM/Curam/DMX-Util/testdata/components/SampleComponent/data/compare -output /Development/IBM/Curam/DMX-Util/testdata/components/SampleComponent/data/demo  -ctdir /Development/IBM/Curam/DMX-Util/testdata/components/SampleComponent/data/codetable
+	
 TODO:
 
-* Update tool to report progress through
 * Add UI module to allow additional options beyond command line execution
-* Provide [option] switches to address: 
-	1. Direction of comparision, baseline with second extract, second extract with baseline, both directions
-	2. Exclusion of attributes within DMX, e.g. exclude comparision of last modified timestamps
-	3. Definition of directories, to support options beyond assumed Cúram data directory structure
 * Extend comparision process to CLOB's and BLOB's
 * Copy of CLOB and BLOB files to be reduced to cover only those identified as part of an included new row
 * Add unit tests

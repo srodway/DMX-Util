@@ -63,14 +63,10 @@ public class DMXUtil {
 	private static final String CMD_OPTION_CODETABLE = "codetable";
 	private static final String CMD_OPTION_CODETABLEDIR = "ctdir";
 	private static final String CMD_OPTION_OVERRIDE = "override";
-	private static final String CMD_OPTION_COMPONENT = "component";
 	private static final String CMD_OPTION_COMPARE = "compare";
 	private static final String CMD_OPTION_MASTER = "master";
 	private static final String CMD_OPTION_OUTPUT = "output";
-	private static final String CMD_OPTION_USECURAMDATAPATH = "curamdatapath";
 	private static final String CMD_OPTION_IGNORELASTWRITTEN = "ignorelastwritten";
-	
-	private static final String COMPONENTS = "/components/";
 
 	private static final String ROW = "<row>";
 	
@@ -82,7 +78,6 @@ public class DMXUtil {
 	private String[] ignoreFiles;
 	private String[] clobExceptionFiles;
 	
-	private boolean useCuramDataPaths = false;
 	private boolean processCodetables = false;
 	private boolean processOverride = false;
 	private boolean ignoreLastWritten = false;
@@ -99,11 +94,7 @@ public class DMXUtil {
 		if (cmd.hasOption(CMD_OPTION_OVERRIDE)) {
 			processOverride=true;
 		}
-		
-		if (cmd.hasOption(CMD_OPTION_USECURAMDATAPATH)) {
-			useCuramDataPaths=true;
-		}
-		
+				
 		if (cmd.hasOption(CMD_OPTION_IGNORELASTWRITTEN)) {
 			ignoreLastWritten=true;
 		}
@@ -119,17 +110,9 @@ public class DMXUtil {
 		this.serverDir = cmd.getOptionValue(CMD_OPTION_MASTER);
 		this.compareDir = cmd.getOptionValue(CMD_OPTION_COMPARE);
 		
-		final String component = cmd.getOptionValue(CMD_OPTION_COMPONENT);
-
-		if (useCuramDataPaths) {
-			this.initialDataDir = this.serverDir + COMPONENTS + component + "/data/initial";  
-			this.demoDataDir = this.serverDir + COMPONENTS + component + "/data/demo";
-			this.codetableDir = this.serverDir + COMPONENTS + component + "/data/codetable";			
-		} else {
-			this.initialDataDir = this.serverDir;
-			this.demoDataDir = cmd.getOptionValue(CMD_OPTION_OUTPUT);
-			this.codetableDir = cmd.getOptionValue(CMD_OPTION_CODETABLEDIR);
-		}
+		this.initialDataDir = this.serverDir;
+		this.demoDataDir = cmd.getOptionValue(CMD_OPTION_OUTPUT);
+		this.codetableDir = cmd.getOptionValue(CMD_OPTION_CODETABLEDIR);
 	}
 	
 	
@@ -202,23 +185,14 @@ public class DMXUtil {
 						           .hasArg()
 						           .desc("Location where the resulting CTX files are written, if option "+CMD_OPTION_CODETABLE+" is defined.")
 						           .build();
-
-		final Option component = Option.builder(CMD_OPTION_COMPONENT)
-				                       .argName("Component Name")
-				                       .hasArg()
-				                       .required()
-				                       .desc("The Cúram component name that the comparison is being performed for")
-				                       .build();
 		
 		dmxUtilOptions.addOption(master);
 		dmxUtilOptions.addOption(compare);
 		dmxUtilOptions.addOption(output);
 		dmxUtilOptions.addOption(ctdir);
-		dmxUtilOptions.addOption(component);
 		
-		dmxUtilOptions.addOption(CMD_OPTION_OVERRIDE, "Set DMX 'override' table attribute to true");
+		//dmxUtilOptions.addOption(CMD_OPTION_OVERRIDE, "Set DMX 'override' table attribute to true");
 		dmxUtilOptions.addOption(CMD_OPTION_CODETABLE, "Generated Cúram codetable files from related DMX files");
-		dmxUtilOptions.addOption(CMD_OPTION_USECURAMDATAPATH, "Use Cúram paths for "+CMD_OPTION_MASTER+" and " +CMD_OPTION_COMPARE+".  This appends Cúram component name/data path structure.");
 		dmxUtilOptions.addOption(CMD_OPTION_IGNORELASTWRITTEN, "Ignore changed to 'last written' date & time when comparing rows.");
 
 		return dmxUtilOptions;
