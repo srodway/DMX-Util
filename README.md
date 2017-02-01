@@ -49,3 +49,4 @@ TODO:
 	3. Definition of directories, to support options beyond assumed Cúram data directory structure
 * Extend comparision process to CLOB's and BLOB's
 * Copy of CLOB and BLOB files to be reduced to cover only those identified as part of an included new row
+* Add unit tests

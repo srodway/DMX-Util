@@ -42,6 +42,10 @@ import curam.util.tools.datadictionary.DomUtils;
  */
 public class DMX2CTXConvertor extends Task {
 
+	private static final String CODETABLE_FILE_SUFFIX = ".ctx";
+
+	private static final String CODETABLE_FILE_PREFIX = "CT_";
+
 	/**
 	 * The name of the CTDISPLAYNAME dmx file.
 	 */
@@ -125,7 +129,7 @@ public class DMX2CTXConvertor extends Task {
 
 		for (final Element headerRowElement : getRows(ctHeaderDMXDoc)) {
 			final String tableName = getAttributeValue(headerRowElement, "tableName");
-			String codetablePath = ctxDir.getAbsoluteFile() + File.separator + "CT_" + tableName + ".ctx";
+			String codetablePath = ctxDir.getAbsoluteFile() + File.separator + CODETABLE_FILE_PREFIX + tableName + CODETABLE_FILE_SUFFIX;
 			// Trace.kToolsLogger.info("Creating ctx file [" + codetablePath +
 			// "]");
 

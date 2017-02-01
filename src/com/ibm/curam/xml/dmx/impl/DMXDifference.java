@@ -16,16 +16,16 @@ import oracle.xml.diff.Options;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.w3c.dom.Document;
+import org.w3c.dom.Text;
 import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
 
 import java.io.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
-
-import javax.xml.transform.*;
-import javax.xml.transform.dom.*;
-import javax.xml.transform.stream.*;
 
 /**
  * This purpose of this class is to read two DMX files, a baseline or master DMX
@@ -43,15 +43,20 @@ import javax.xml.transform.stream.*;
  */
 public class DMXDifference {
 
+	private static final String DEFAULT_OVERRIDE_STATE = "false";
 	private static final String TABLE_OVERRIDE = "override";
 	private static final String DATA_ROW = "row";
+	private static final String LAST_WRITTEN = "lastWritten";
 	private static final String TABLE_DEF = "table";
 
 	final XmlUtils xmlUtils = new XmlUtils();
 	final Options opts = new Options();
-	
+
 	private String masterFile;
 	private String modifiedFile;
+	private boolean ignoreLastWritten = false;
+	private boolean tableOverride = false;
+	
 
 	public DMXDifference(final String masterFile, final String modifiedFile) {
 		super();
@@ -81,7 +86,7 @@ public class DMXDifference {
 		try {
 			DMXDifference diff = new DMXDifference(baselineDir + "/" + masterFileName,
 					updateDir + "/" + masterFileName);
-			System.out.println(getStringFromNode(diff.getModifiedData()));
+			System.out.println(DMXFile.getNodeAsText(diff.getModifiedData()));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -118,34 +123,102 @@ public class DMXDifference {
 		return diffNode;
 	}
 
+	
+	
+	public void setIgnoreLastWritten(boolean ignore) {
+		this.ignoreLastWritten = ignore;
+	}
+	
+	
+	
 	/**
-	 * The method is responsible for processing the Nodes and returning a new updated Node that
-	 * contains the delta of the two Nodes passed in.
+	 * The method is responsible for processing the Nodes and returning a new
+	 * updated Node that contains the delta of the two Nodes passed in.
 	 * 
-	 * @param Node master - the baseline Node containing the details that will be seeded on initial install
-	 * @param Node modified - updated Node containing baseline details plus any additional information added
-	 * @return Node delta - Node containing the baseline table details, plus any additional rows not present in the baseline.
+	 * @param Node
+	 *            master - the baseline Node containing the details that will be
+	 *            seeded on initial install
+	 * @param Node
+	 *            modified - updated Node containing baseline details plus any
+	 *            additional information added
+	 * @return Node delta - Node containing the baseline table details, plus any
+	 *         additional rows not present in the baseline.
 	 */
 	private Node dmxDataDiff(final Node master, final Node modified) {
 		final Node updated = master.cloneNode(true);
 
-		try {
+		final List<Node> masterRows = new ArrayList<Node>();
+		getRows(master, masterRows);
 
-			final Document diffAsDom = xmlUtils.diffToDoc(master, modified, opts);
-
-			final List<Node> masterRows = new ArrayList<Node>();
-			getRows(master, masterRows);
-
-			removeAll(updated, Node.ELEMENT_NODE, DATA_ROW);
-			appendAll(masterRows, updated.getLastChild(), diffAsDom, Node.ELEMENT_NODE, DATA_ROW);
-			setTableOverride(updated);
-		} catch (Exception e) {
-			e.printStackTrace();
+		removeAll(updated, Node.ELEMENT_NODE, DATA_ROW);
+		
+		if (this.ignoreLastWritten) {
+			final DateFormat df = new SimpleDateFormat("yyyy-MM-dd.HH.mm.ss");
+			final Calendar calobj = Calendar.getInstance();
+			final String defaultValue = df.format(calobj.getTime());
+			
+			setDefaultLastWritten(masterRows, defaultValue);
+			setDefaultLastWritten(modified, defaultValue);
 		}
+		
+		appendAll(masterRows, updated.getLastChild(), modified, Node.ELEMENT_NODE, DATA_ROW);
+		setTableOverride(updated);
 
 		return updated;
 	}
 
+	
+	
+	private void setDefaultLastWritten(final List<Node> rows, final String defaultValue) {
+		for (Node n : rows) {
+			setDefaultLastWritten(n, defaultValue);
+		}
+	}
+	
+	
+	/**
+	 * The method replaces all the occurrences of 'lastWritten' with a default value.
+	 * 
+	 * @param node
+	 * @param defaultValue
+	 */
+	private void setDefaultLastWritten(final Node node, final String defaultValue) {
+		final String nodeName = node.getNodeName();
+		
+		if ("attribute".equals(nodeName)) {
+			if (node.hasAttributes()) {
+				NamedNodeMap attrib = node.getAttributes();
+				Node lastWritten = attrib.getNamedItem("name");
+				
+				if (lastWritten != null && LAST_WRITTEN.equals(lastWritten.getNodeValue())) {
+					if (node.hasChildNodes()) {
+						NodeList nodes = node.getChildNodes();
+						
+						for (int i = 0; i < nodes.getLength(); i++) {
+							Node valueNode = nodes.item(i);
+
+							if ("value".equals(valueNode.getNodeName())) {
+								
+								Element newValueNode = node.getOwnerDocument().createElement("value");
+						        Text nametextNode = node.getOwnerDocument().createTextNode(defaultValue);
+						        newValueNode.appendChild(nametextNode);
+								
+								valueNode.getParentNode().replaceChild(newValueNode, valueNode);
+							}
+						}
+					}
+				}
+			}
+		} else {
+			NodeList list = node.getChildNodes();
+			for (int i = 0; i < list.getLength(); i++) {
+				setDefaultLastWritten(list.item(i), defaultValue);
+			}
+		}
+	}
+	
+	
+	
 	/**
 	 * Remove all the childName data elements from the source document, when
 	 * contained within a parentName element
@@ -155,7 +228,7 @@ public class DMXDifference {
 	 * @param name
 	 */
 	private void removeAll(final Node node, final short nodeType, final String name) {
-		if (node.getNodeType() == nodeType && (name == null || node.getNodeName().equals(name))) {
+		if (name == null || node.getNodeName().equals(name)) {
 			node.getParentNode().removeChild(node);
 		} else {
 			NodeList list = node.getChildNodes();
@@ -166,34 +239,46 @@ public class DMXDifference {
 	}
 
 	/**
-	 * Method that builds the delta details, by checking the node rows against the rows in the supplied List.
-	 * Only when the row doesn't exist in the List is it added to the master.
+	 * Method that builds the delta details, by checking the node rows against
+	 * the rows in the supplied List. Only when the row doesn't exist in the
+	 * List is it added to the master.
 	 * 
-	 * @param rows : list of rows that where present in the baseline
-	 * @param master : new delta node that will contain rows when they're not present in the List rows.
-	 * @param node : node that contains data to compare with List.  This is typically a node that only contains information different
-	 * to the original baseline.  
-	 * @param nodeType : the node type that is being compared
-	 * @param name : name of the node that will be compared, e.g. <row>
+	 * @param rows
+	 *            : list of rows that where present in the baseline
+	 * @param master
+	 *            : new delta node that will contain rows when they're not
+	 *            present in the List rows.
+	 * @param node
+	 *            : node that contains data to compare with List. This is
+	 *            typically a node that only contains information different to
+	 *            the original baseline.
+	 * @param nodeType
+	 *            : the node type that is being compared
+	 * @param name
+	 *            : name of the node that will be compared, e.g. <row>
 	 */
 	private void appendAll(List<Node> rows, Node master, Node node, short nodeType, String name) {
-		if (node.getNodeType() == nodeType && (name == null || node.getNodeName().equals(name))) {
+		int type = node.getNodeType();
+		final String nodeName = node.getNodeName();
+
+		if (type == nodeType && (name == null || name.equals(nodeName))) {
 			final Node newNode = node.cloneNode(true);
 
 			final XmlUtils xmlUtils = new XmlUtils();
-			boolean exists=false;
-			
+			boolean exists = false;
+
 			for (Node n : rows) {
 				try {
 					if (xmlUtils.equal(n, newNode, opts)) {
-						exists=true;
+						exists = true;
 					}
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-				if (exists) break;
+				if (exists)
+					break;
 			}
-			
+
 			if (!exists) {
 				master.getOwnerDocument().adoptNode(newNode);
 				master.appendChild(newNode);
@@ -212,7 +297,10 @@ public class DMXDifference {
 	 * @return ArrayList of Nodes
 	 */
 	private List<Node> getRows(final Node master, final List<Node> rows) {
-		if (master.getNodeType() == Node.ELEMENT_NODE && (master == null || master.getNodeName().equals(DATA_ROW))) {
+		int type = master.getNodeType();
+		String name = master.getNodeName();
+
+		if (master.getNodeName().equals(DATA_ROW)) {
 			rows.add(master.cloneNode(true));
 		} else {
 			NodeList list = master.getChildNodes();
@@ -223,8 +311,6 @@ public class DMXDifference {
 
 		return rows;
 	}
-
-
 
 	private void cleanNode(final Node node) {
 
@@ -250,39 +336,19 @@ public class DMXDifference {
 		}
 	}
 
-	
-	
-	/**
-	 * Method to convert Node to String, which can be used to validation or
-	 * output purposes.
-	 * 
-	 * @param node
-	 * @return String contains the representation on the source Document
-	 */
-	public static String getStringFromNode(Node node) {
-
-		try {
-			final StringWriter writer = new StringWriter();
-			final Transformer transformer = TransformerFactory.newInstance().newTransformer();
-			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-			transformer.transform(new DOMSource(node), new StreamResult(writer));
-			return writer.toString();
-		} catch (TransformerException ex) {
-			ex.printStackTrace();
-			return null;
-		}
-	}
 
 	/**
 	 * set Override attribute for table element in the node. This is because the
 	 * processor doesn't currently handle table/column changes so we need to
 	 * just work with standard data row details and ignore table details.
 	 * 
-	 * @param node : node that will be searched for the presence on a table override setting. When found this will be reset to TRUE.
+	 * @param node
+	 *            : node that will be searched for the presence on a table
+	 *            override setting. When found this will be reset to TRUE.
 	 */
 	private void setTableOverride(Node node) {
 		if (node.getNodeType() == Node.ELEMENT_NODE && node.getNodeName().equals(TABLE_DEF)) {
-			((Element) node).setAttribute(TABLE_OVERRIDE, "true");
+			((Element) node).setAttribute(TABLE_OVERRIDE, DEFAULT_OVERRIDE_STATE);
 		} else {
 			NodeList list = node.getChildNodes();
 			for (int i = 0; i < list.getLength(); i++) {
@@ -290,4 +356,5 @@ public class DMXDifference {
 			}
 		}
 	}
+
 }

@@ -13,9 +13,17 @@ package com.ibm.curam.xml.dmx.impl;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.StringWriter;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Node;
 
@@ -46,8 +54,43 @@ public class DMXFile {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		String xmlString = getNodeAsText(doc);
+		
 		return doc;
 
+	}
+	
+	
+	/**
+	 * Test method use to provide a string representation of the Node.
+	 * 
+	 * @param doc
+	 * @return
+	 */
+	public static final String getNodeAsText(Node doc) {
+		final StringWriter sw = new StringWriter();
+		
+		try {
+			final TransformerFactory transfac = TransformerFactory.newInstance();
+			
+			final Transformer trans = transfac.newTransformer();
+		
+			trans.setOutputProperty(OutputKeys.METHOD, "xml");
+			trans.setOutputProperty(OutputKeys.INDENT, "yes");
+			trans.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", Integer.toString(2));
+	
+			final StreamResult result = new StreamResult(sw);
+			final DOMSource source = new DOMSource(doc);
+			
+			trans.transform(source, result);
+		} catch (TransformerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String xmlString = sw.toString();
+		
+		return xmlString;
 	}
 
 }

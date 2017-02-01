@@ -18,13 +18,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.DefaultParser;
+import org.apache.commons.cli.HelpFormatter;
+import org.apache.commons.cli.Option;
+import org.apache.commons.cli.Options;
+import org.apache.commons.cli.ParseException;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import com.ibm.curam.cli.ProgressIndicator;
 import com.ibm.curam.utils.FileUtil;
 import com.ibm.curam.xml.ctx.impl.DMX2CTXConvertor;
 import com.ibm.curam.xml.dmx.impl.DMXClobImport;
 import com.ibm.curam.xml.dmx.impl.DMXDifference;
+import com.ibm.curam.xml.dmx.impl.DMXFile;
 
 /**
  * <p>This class will generate a new DMX file containing only the differences taken from two separate DMX files.</p>
@@ -51,6 +60,20 @@ import com.ibm.curam.xml.dmx.impl.DMXDifference;
  */
 public class DMXUtil {
 	
+	private static final String CMD_OPTION_CODETABLE = "codetable";
+	private static final String CMD_OPTION_CODETABLEDIR = "ctdir";
+	private static final String CMD_OPTION_OVERRIDE = "override";
+	private static final String CMD_OPTION_COMPONENT = "component";
+	private static final String CMD_OPTION_COMPARE = "compare";
+	private static final String CMD_OPTION_MASTER = "master";
+	private static final String CMD_OPTION_OUTPUT = "output";
+	private static final String CMD_OPTION_USECURAMDATAPATH = "curamdatapath";
+	private static final String CMD_OPTION_IGNORELASTWRITTEN = "ignorelastwritten";
+	
+	private static final String COMPONENTS = "/components/";
+
+	private static final String ROW = "<row>";
+	
 	private String serverDir;
 	private String compareDir;
 	private String initialDataDir;
@@ -59,38 +82,61 @@ public class DMXUtil {
 	private String[] ignoreFiles;
 	private String[] clobExceptionFiles;
 	
+	private boolean useCuramDataPaths = false;
+	private boolean processCodetables = false;
+	private boolean processOverride = false;
+	private boolean ignoreLastWritten = false;
+	
 	private static final String CLOB_TEXT = "/clob/";
 	private static final String BLOB_TEXT = "/blob/";
 	private static final String VALUE = "value";
-
 	
-	public DMXUtil(final String serverDir, final String compareDir, final String component, final String[] ignoreFiles, final String[] clobExceptionFiles, final boolean overrideTable) {
-		super();
-		this.serverDir = serverDir;
-		this.compareDir = compareDir;
-		this.initialDataDir = this.serverDir + "/components/" + component + "/data/initial";  
-		this.demoDataDir = this.serverDir + "/components/" + component + "/data/demo";
-		this.codetableDir = this.serverDir + "/components/" + component + "/data/codetable";
+	private DMXUtil(final CommandLine cmd, final String[] ignoreFiles, String[] clobException) {
+		if(cmd.hasOption(CMD_OPTION_CODETABLE)) {
+			processCodetables=true;
+		}
+		
+		if (cmd.hasOption(CMD_OPTION_OVERRIDE)) {
+			processOverride=true;
+		}
+		
+		if (cmd.hasOption(CMD_OPTION_USECURAMDATAPATH)) {
+			useCuramDataPaths=true;
+		}
+		
+		if (cmd.hasOption(CMD_OPTION_IGNORELASTWRITTEN)) {
+			ignoreLastWritten=true;
+		}
+		
 		this.ignoreFiles = ignoreFiles;
-		this.clobExceptionFiles = clobExceptionFiles;
+		this.clobExceptionFiles = clobException;
+		
+		initialise(cmd);
 	}
 	
 	
-	public DMXUtil(final String serverDir, final String compareDir, final String component, final String[] ignoreFiles, final String[] clobException) {
-		this(serverDir, compareDir, component, ignoreFiles, clobException, true);
+	private void initialise(final CommandLine cmd) {
+		this.serverDir = cmd.getOptionValue(CMD_OPTION_MASTER);
+		this.compareDir = cmd.getOptionValue(CMD_OPTION_COMPARE);
+		
+		final String component = cmd.getOptionValue(CMD_OPTION_COMPONENT);
+
+		if (useCuramDataPaths) {
+			this.initialDataDir = this.serverDir + COMPONENTS + component + "/data/initial";  
+			this.demoDataDir = this.serverDir + COMPONENTS + component + "/data/demo";
+			this.codetableDir = this.serverDir + COMPONENTS + component + "/data/codetable";			
+		} else {
+			this.initialDataDir = this.serverDir;
+			this.demoDataDir = cmd.getOptionValue(CMD_OPTION_OUTPUT);
+			this.codetableDir = cmd.getOptionValue(CMD_OPTION_CODETABLEDIR);
+		}
 	}
+	
 	
 	public static void main(String[] args) {
-
-		if (args.length < 3) {
-						
-			System.out.println("\n\nInvalid parameters passed.");
-			System.out.println("\t usage: DMXUtil \"path to baseline EJBServer\" \"path to modified EJBServer\" \"Component Name\".\n\n");
-			System.exit(1);
-		}
 	
 		try {
-			String[] ignore = {
+			final String[] ignore = {
 				"AUDITTRAIL", "BATCHPARAMDEF", "BATCHPARAMDESC", "BATCHPARAMDESCTRANSLATION", 
 				"BATCHPROCDEF", "BATCHPROCDESC", "BATCHPROCDESCTRANSLATION", 
 				//"CODETABLEDATA", "CODETABLEHEADER","CODETABLEHIERARCHY", "CODETABLEITEM", 
@@ -100,14 +146,13 @@ public class DMXUtil {
 				"PROCESSDEFINITION", "PROCESSDEFINITIONTRANSLATION", "RULESETINFORMATION", "SECURITYFIDSID", 
 				"SECURITYGROUPSID", "SECURITYIDENTIFIER", "WDOVALUESHISTORY"
 			};
-			
-			
+					
+			final CommandLine cmd = getCommandLine(args);
+							
 			final String[] clobException = {"USERPAGECONFIG", "TEXTTRANSLATION"};
-			final String serverDir = args[0];
-			final String compareDir = args[1];
-			final String component = args[2];
 			
-			final DMXUtil util = new DMXUtil(serverDir, compareDir, component, ignore, clobException);
+			final DMXUtil util = new DMXUtil(cmd, ignore, clobException);
+			
 			util.createUploadData();
 			util.generateCTX();		
 			
@@ -116,6 +161,84 @@ public class DMXUtil {
 		}		
 	}
 
+	
+	
+	public static final void outputCommandLineHelp() {
+		 final String header = "Perform Cúram DMX data comparision process, outputing DMX files with <row>'s different from the master data source\n\n";
+		 final String footer = "\nPlease report issues to Cúram UKI Team at IBM";
+		 
+		 final HelpFormatter formatter = new HelpFormatter();
+		 formatter.printHelp("DMXUtil", header, getCommandLineOptions(), footer, true);
+	}
+	
+	
+
+	public static final Options getCommandLineOptions() {
+		final Options dmxUtilOptions = new Options();
+		
+		final Option master = Option.builder(CMD_OPTION_MASTER)
+				                    .argName("Master DMX Directory")
+				                    .hasArg()
+				                    .required()
+				                    .desc("Master set of DMX files, forming the baseline data to be compared against")
+				                    .build();
+
+		final Option compare = Option.builder(CMD_OPTION_COMPARE)
+				                     .argName("Compare DMX Directory")
+				                     .hasArg()
+				                     .required()
+				                     .desc("Set of DMX files that are to be compared against the master set")
+				                     .build();
+
+		final Option output = Option.builder(CMD_OPTION_OUTPUT)
+						            .argName("DMX Output Directory")
+						            .hasArg()
+						            .required()
+						            .desc("Location where the resulting DMX files are written")
+						            .build();
+		
+		final Option ctdir = Option.builder(CMD_OPTION_CODETABLEDIR)
+						           .argName("Codetable Output Directory")
+						           .hasArg()
+						           .desc("Location where the resulting CTX files are written, if option "+CMD_OPTION_CODETABLE+" is defined.")
+						           .build();
+
+		final Option component = Option.builder(CMD_OPTION_COMPONENT)
+				                       .argName("Component Name")
+				                       .hasArg()
+				                       .required()
+				                       .desc("The Cúram component name that the comparison is being performed for")
+				                       .build();
+		
+		dmxUtilOptions.addOption(master);
+		dmxUtilOptions.addOption(compare);
+		dmxUtilOptions.addOption(output);
+		dmxUtilOptions.addOption(ctdir);
+		dmxUtilOptions.addOption(component);
+		
+		dmxUtilOptions.addOption(CMD_OPTION_OVERRIDE, "Set DMX 'override' table attribute to true");
+		dmxUtilOptions.addOption(CMD_OPTION_CODETABLE, "Generated Cúram codetable files from related DMX files");
+		dmxUtilOptions.addOption(CMD_OPTION_USECURAMDATAPATH, "Use Cúram paths for "+CMD_OPTION_MASTER+" and " +CMD_OPTION_COMPARE+".  This appends Cúram component name/data path structure.");
+		dmxUtilOptions.addOption(CMD_OPTION_IGNORELASTWRITTEN, "Ignore changed to 'last written' date & time when comparing rows.");
+
+		return dmxUtilOptions;
+	}
+	
+	private static final CommandLine getCommandLine(String[] args) {
+		final Options dmxUtilOptions = getCommandLineOptions();
+		final CommandLineParser parser = new DefaultParser();
+		CommandLine cmd = null;
+		try {
+			cmd = parser.parse(dmxUtilOptions, args);
+		} catch (ParseException e) {
+			outputCommandLineHelp();
+			// e.printStackTrace();
+			System.exit(1);
+		}
+		
+		return cmd;
+	}
+	
 	
 
 	public void createUploadData() throws IOException {
@@ -136,12 +259,25 @@ public class DMXUtil {
 	
 	
 	public void generateCTX() {
+		if (!isProcessCodetables()) {
+			return;
+		}
+		
 		final DMX2CTXConvertor dmx2ctxConvertor = new DMX2CTXConvertor();
 		dmx2ctxConvertor.setDmxDir(demoDataDir);
 		dmx2ctxConvertor.setOutputDir(codetableDir);
 		dmx2ctxConvertor.execute();
 	}
 	
+	
+	public boolean isProcessCodetables() {
+		return processCodetables;
+	}
+
+
+	public boolean isProcessOverride() {
+		return processOverride;
+	}
 	
 
 	/**
@@ -171,14 +307,21 @@ public class DMXUtil {
 	 */
 	protected void createDemoDataDiff(final File[] dmxFiles) {
 		if ( dmxFiles == null || dmxFiles.length < 1) {
-			System.out.println("createDemoDataDiff has no files to process");
+			System.out.println("DMXUtil has no DMX files to process");
 			return;
 		}
+		
+		System.out.println("Starting comparision of DMX files");
+		int processedFiles = 0;
+		
+		final ProgressIndicator progressReport = new ProgressIndicator(dmxFiles.length);
 		
 		final DMXClobImport fix = new DMXClobImport(compareDir);
 
 		for (File f : dmxFiles) {			
-			final DMXDifference diff = new DMXDifference(f.getAbsolutePath(),compareDir + FileUtil.PATH_MARKER +f.getName());	
+			final DMXDifference diff = new DMXDifference(f.getAbsolutePath(),compareDir + FileUtil.PATH_MARKER +f.getName());
+			
+			diff.setIgnoreLastWritten(this.ignoreLastWritten);
 			
 			final Node node = diff.getModifiedData();
 			if (isClobExceptionFile(f.getName())) {
@@ -188,18 +331,20 @@ public class DMXUtil {
 			final List <String> clobRef = getClobReferences(node);
 			final List <String> blobRef = getBlobReferences(node);
 			
-			copyReferences(clobRef, demoDataDir+"/clob/");
-			copyReferences(blobRef, demoDataDir+"/blob/");
+			copyReferences(clobRef, demoDataDir+CLOB_TEXT);
+			copyReferences(blobRef, demoDataDir+BLOB_TEXT);
 				
-			final StringBuffer buf = new StringBuffer(DMXDifference.getStringFromNode(node));
+			final StringBuffer buf = new StringBuffer(DMXFile.getNodeAsText(node));
 			try {
-				if (buf.indexOf("<row>")>0) {
+				if (buf.indexOf(ROW)>0) {
 					createFile(buf, demoDataDir + FileUtil.PATH_MARKER + f.getName());
 				}
 			} catch (IOException e) {
 				System.out.println("Unable to save data file " + f.getName());
 				e.printStackTrace();
 			}
+			
+			progressReport.updateProgress(processedFiles++);
 		}
 	}	
 	
