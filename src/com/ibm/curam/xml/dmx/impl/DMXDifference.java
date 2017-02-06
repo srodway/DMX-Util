@@ -21,11 +21,10 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 
 import java.io.*;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * This purpose of this class is to read two DMX files, a baseline or master DMX
@@ -48,13 +47,14 @@ public class DMXDifference {
 	private static final String DATA_ROW = "row";
 	private static final String LAST_WRITTEN = "lastWritten";
 	private static final String TABLE_DEF = "table";
+	private static final String TIME_ENTERED = "timeEntered";
 
 	final XmlUtils xmlUtils = new XmlUtils();
 	final Options opts = new Options();
 
 	private String masterFile;
 	private String modifiedFile;
-	private boolean ignoreLastWritten = false;
+	private List<String> ignoreAttributes;
 	private boolean tableOverride = false;
 	
 
@@ -125,10 +125,14 @@ public class DMXDifference {
 
 	
 	
-	public void setIgnoreLastWritten(boolean ignore) {
-		this.ignoreLastWritten = ignore;
+	public void setIgnoreAttributes(final List<String> attributes) {
+		if (ignoreAttributes == null) {
+			ignoreAttributes = new ArrayList<String>(attributes.size()); 
+		}
+		for (String s : attributes) {
+			ignoreAttributes.add(s.toLowerCase());
+		}
 	}
-	
 	
 	
 	/**
@@ -147,34 +151,21 @@ public class DMXDifference {
 	private Node dmxDataDiff(final Node master, final Node modified) {
 		final Node updated = master.cloneNode(true);
 
-		final List<Node> masterRows = new ArrayList<Node>();
+		final Map<Node, Node> masterRows = new HashMap<Node, Node>();
 		getRows(master, masterRows);
-
+		
+		final Map<Node, Node> altRows = new HashMap<Node, Node>();
+		getRows(modified, altRows);
+		
 		removeAll(updated, Node.ELEMENT_NODE, DATA_ROW);
 		
-		if (this.ignoreLastWritten) {
-			final DateFormat df = new SimpleDateFormat("yyyy-MM-dd.HH.mm.ss");
-			final Calendar calobj = Calendar.getInstance();
-			final String defaultValue = df.format(calobj.getTime());
-			
-			setDefaultLastWritten(masterRows, defaultValue);
-			setDefaultLastWritten(modified, defaultValue);
-		}
+		produceUpdatedRows(masterRows, altRows, updated.getLastChild());
 		
-		appendAll(masterRows, updated.getLastChild(), modified, Node.ELEMENT_NODE, DATA_ROW);
 		setTableOverride(updated);
 
 		return updated;
 	}
 
-	
-	
-	private void setDefaultLastWritten(final List<Node> rows, final String defaultValue) {
-		for (Node n : rows) {
-			setDefaultLastWritten(n, defaultValue);
-		}
-	}
-	
 	
 	/**
 	 * The method replaces all the occurrences of 'lastWritten' with a default value.
@@ -182,15 +173,30 @@ public class DMXDifference {
 	 * @param node
 	 * @param defaultValue
 	 */
-	private void setDefaultLastWritten(final Node node, final String defaultValue) {
+	private void setIgnoreAttributes(final Node node) {
+		if (ignoreAttributes == null || ignoreAttributes.size() < 1) {
+			return;
+		}
+
+		setIgnoreAttributes(node, ignoreAttributes, "IGNORE");
+	}
+	
+	/**
+	 * The method replaces all the occurrences of attributes with 'valueName' with a default value.
+	 * 
+	 * @param node
+	 * @param valueName
+	 * @param defaultValue
+	 */
+	private void setIgnoreAttributes(final Node node, final List<String> valueName, final String defaultValue) {
 		final String nodeName = node.getNodeName();
 		
 		if ("attribute".equals(nodeName)) {
 			if (node.hasAttributes()) {
-				NamedNodeMap attrib = node.getAttributes();
-				Node lastWritten = attrib.getNamedItem("name");
+				final NamedNodeMap attrib = node.getAttributes();
+				final Node attribName = attrib.getNamedItem("name");
 				
-				if (lastWritten != null && LAST_WRITTEN.equals(lastWritten.getNodeValue())) {
+				if (attribName != null && valueName.contains(attribName.getNodeValue().toLowerCase())) {
 					if (node.hasChildNodes()) {
 						NodeList nodes = node.getChildNodes();
 						
@@ -203,7 +209,7 @@ public class DMXDifference {
 						        Text nametextNode = node.getOwnerDocument().createTextNode(defaultValue);
 						        newValueNode.appendChild(nametextNode);
 								
-								valueNode.getParentNode().replaceChild(newValueNode, valueNode);
+								node.replaceChild(newValueNode, valueNode);
 							}
 						}
 					}
@@ -212,12 +218,10 @@ public class DMXDifference {
 		} else {
 			NodeList list = node.getChildNodes();
 			for (int i = 0; i < list.getLength(); i++) {
-				setDefaultLastWritten(list.item(i), defaultValue);
+				setIgnoreAttributes(list.item(i), valueName, defaultValue);
 			}
 		}
-	}
-	
-	
+	}	
 	
 	/**
 	 * Remove all the childName data elements from the source document, when
@@ -238,6 +242,8 @@ public class DMXDifference {
 		}
 	}
 
+	
+	
 	/**
 	 * Method that builds the delta details, by checking the node rows against
 	 * the rows in the supplied List. Only when the row doesn't exist in the
@@ -257,19 +263,13 @@ public class DMXDifference {
 	 * @param name
 	 *            : name of the node that will be compared, e.g. <row>
 	 */
-	private void appendAll(List<Node> rows, Node master, Node node, short nodeType, String name) {
-		int type = node.getNodeType();
-		final String nodeName = node.getNodeName();
-
-		if (type == nodeType && (name == null || name.equals(nodeName))) {
-			final Node newNode = node.cloneNode(true);
-
-			final XmlUtils xmlUtils = new XmlUtils();
+	private void produceUpdatedRows(Map<Node, Node> masterRows, Map<Node,Node>altRows, Node updated) {
+		final XmlUtils xmlUtils = new XmlUtils();
+		for (Node altKey : altRows.keySet()) {
 			boolean exists = false;
-
-			for (Node n : rows) {
+			for (Node n : masterRows.keySet()) {
 				try {
-					if (xmlUtils.equal(n, newNode, opts)) {
+					if (xmlUtils.equal(n, altKey, opts)) {
 						exists = true;
 					}
 				} catch (Exception e) {
@@ -277,31 +277,32 @@ public class DMXDifference {
 				}
 				if (exists)
 					break;
-			}
-
+			}	
+			
 			if (!exists) {
-				master.getOwnerDocument().adoptNode(newNode);
-				master.appendChild(newNode);
-			}
-		} else {
-			NodeList list = node.getChildNodes();
-			for (int i = 0; i < list.getLength(); i++) {
-				appendAll(rows, master, list.item(i), nodeType, name);
+				final Node altRecord = altRows.get(altKey);
+				updated.getOwnerDocument().adoptNode(altRecord);
+				updated.appendChild(altRecord);
 			}
 		}
 	}
+	
+	
 
 	/**
 	 * Get the list of <row> elements from the provided Node.
 	 * 
 	 * @return ArrayList of Nodes
 	 */
-	private List<Node> getRows(final Node master, final List<Node> rows) {
-		int type = master.getNodeType();
-		String name = master.getNodeName();
-
-		if (master.getNodeName().equals(DATA_ROW)) {
-			rows.add(master.cloneNode(true));
+	private Map<Node, Node> getRows(final Node master, Map<Node,Node> rows) {
+		final String name = master.getNodeName();
+		
+		if (DATA_ROW.equals(name)) {
+			final Node keyNode = master.cloneNode(true);
+			setIgnoreAttributes(keyNode);
+			setIgnoreLOBPaths(keyNode);
+			
+			rows.put(keyNode, master.cloneNode(true));
 		} else {
 			NodeList list = master.getChildNodes();
 			for (int i = 0; i < list.getLength(); i++) {
@@ -312,6 +313,28 @@ public class DMXDifference {
 		return rows;
 	}
 
+	
+	private void setIgnoreLOBPaths(Node node) {
+		// default any value references to /clob or /blob
+		// because extract data renumbers these when new records added.
+		
+		final String nodeName = node.getNodeName();
+		
+		if ("value".equals(nodeName)) {
+			Node value = node.getFirstChild();
+			
+			if (value != null && (value.getNodeValue().contains("/clob") || value.getNodeValue().contains("/blob"))) {
+				value.setNodeValue("CHANGED");
+			}
+		} else {
+			NodeList list = node.getChildNodes();
+			for (int i = 0; i < list.getLength(); i++) {
+				setIgnoreLOBPaths(list.item(i));
+			}
+		}	
+	}
+	
+	
 	private void cleanNode(final Node node) {
 
 		if (node == null)

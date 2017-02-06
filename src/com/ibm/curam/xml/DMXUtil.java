@@ -16,6 +16,7 @@ import java.io.FileOutputStream;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.apache.commons.cli.CommandLine;
@@ -66,8 +67,8 @@ public class DMXUtil {
 	private static final String CMD_OPTION_COMPARE = "compare";
 	private static final String CMD_OPTION_MASTER = "master";
 	private static final String CMD_OPTION_OUTPUT = "output";
-	private static final String CMD_OPTION_IGNORELASTWRITTEN = "ignorelastwritten";
-
+	private static final String CMD_OPTION_IGNORE = "ignore";
+	
 	private static final String ROW = "<row>";
 	
 	private String serverDir;
@@ -77,10 +78,12 @@ public class DMXUtil {
 	private String codetableDir;
 	private String[] ignoreFiles;
 	private String[] clobExceptionFiles;
+	private List<String> ignoreAttributes;
 	
 	private boolean processCodetables = false;
 	private boolean processOverride = false;
 	private boolean ignoreLastWritten = false;
+	private boolean ignoreTimeEntered = false;
 	
 	private static final String CLOB_TEXT = "/clob/";
 	private static final String BLOB_TEXT = "/blob/";
@@ -94,11 +97,10 @@ public class DMXUtil {
 		if (cmd.hasOption(CMD_OPTION_OVERRIDE)) {
 			processOverride=true;
 		}
-				
-		if (cmd.hasOption(CMD_OPTION_IGNORELASTWRITTEN)) {
-			ignoreLastWritten=true;
-		}
 		
+		if (cmd.hasOption(CMD_OPTION_IGNORE)) {
+			this.ignoreAttributes = Arrays.asList(cmd.getOptionValues(CMD_OPTION_IGNORE));
+		}		
 		this.ignoreFiles = ignoreFiles;
 		this.clobExceptionFiles = clobException;
 		
@@ -186,14 +188,21 @@ public class DMXUtil {
 						           .desc("Location where the resulting CTX files are written, if option "+CMD_OPTION_CODETABLE+" is defined.")
 						           .build();
 		
+		final Option ignore = Option.builder(CMD_OPTION_IGNORE)
+						            .argName("List of attributes to ignore")
+						            .numberOfArgs(10)
+						            .desc("List of attributes to ignore when comparing rows")
+						            .optionalArg(true)
+						            .build();
+		
 		dmxUtilOptions.addOption(master);
 		dmxUtilOptions.addOption(compare);
 		dmxUtilOptions.addOption(output);
 		dmxUtilOptions.addOption(ctdir);
+		dmxUtilOptions.addOption(ignore);
 		
 		//dmxUtilOptions.addOption(CMD_OPTION_OVERRIDE, "Set DMX 'override' table attribute to true");
 		dmxUtilOptions.addOption(CMD_OPTION_CODETABLE, "Generated Cúram codetable files from related DMX files");
-		dmxUtilOptions.addOption(CMD_OPTION_IGNORELASTWRITTEN, "Ignore changed to 'last written' date & time when comparing rows.");
 
 		return dmxUtilOptions;
 	}
@@ -295,7 +304,7 @@ public class DMXUtil {
 		for (File f : dmxFiles) {			
 			final DMXDifference diff = new DMXDifference(f.getAbsolutePath(),compareDir + FileUtil.PATH_MARKER +f.getName());
 			
-			diff.setIgnoreLastWritten(this.ignoreLastWritten);
+			diff.setIgnoreAttributes(this.ignoreAttributes);
 			
 			final Node node = diff.getModifiedData();
 			if (isClobExceptionFile(f.getName())) {

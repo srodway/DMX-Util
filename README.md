@@ -19,18 +19,18 @@ DMXUtil has a number of parameters that are required for the successful processi
  
 	usage: DMXUtil [-codetable] -compare <Compare DMX Directory> -component
        <Component Name> [-ctdir <Codetable Output Directory>]
-       [-curamdatapath] [-ignorelastwritten] -master <Master DMX
+       [-curamdatapath] [-ignore <List of attributes to ignore>] -master <Master DMX
        Directory> -output <DMX Output Directory> [-override]
        
 	Perform Cúram DMX data comparison process, outputting DMX files with <row>'s different from the master data source
 
- 	-master <Master DMX Directory>        Master set of DMX files, forming the baseline data to be compared against
- 	-compare <Compare DMX Directory>      Set of DMX files that are to be compared against the master set
- 	-output <DMX Output Directory>        Location where the resulting DMX files are written
+ 	-master <Master DMX Directory>         Master set of DMX files, forming the baseline data to be compared against
+ 	-compare <Compare DMX Directory>       Set of DMX files that are to be compared against the master set
+ 	-output <DMX Output Directory>         Location where the resulting DMX files are written
 
- 	-codetable                            Generated Cúram codetable files from related DMX files
- 	-ctdir <Codetable Output Directory>   Location where the resulting CTX files are written, if option codetable is defined.
- 	-ignorelastwritten                    Ignore changed to 'last written' date & time when comparing rows.
+ 	-codetable                             Generated Cúram codetable files from related DMX files
+ 	-ctdir <Codetable Output Directory>    Location where the resulting CTX files are written, if option codetable is defined.
+ 	-ignore <List of attributes to ignore> List of attributes to ignore when comparing rows
 
 EXECUTION:
 
@@ -51,7 +51,7 @@ EXAMPLE:
 
 From the DMXUtil/bin folder: -
 
-	java -cp ../lib/ant.jar:../lib/commons-cli-1.3.1.jar:../lib/commons-io-2.4.jar:../lib/CuramAnalysisDocumentation.jar:../lib/jdom-2.0.6.jar:../lib/xml.jar:. com.ibm.curam.xml.DMXUtil -codetable -ignorelastwritten -master /Development/IBM/Curam/DMX-Util/testdata/components/SampleComponent/data/initial -compare /Development/IBM/Curam/DMX-Util/testdata/components/SampleComponent/data/compare -output /Development/IBM/Curam/DMX-Util/testdata/components/SampleComponent/data/demo  -ctdir /Development/IBM/Curam/DMX-Util/testdata/components/SampleComponent/data/codetable
+	java -cp ../lib/ant.jar:../lib/commons-cli-1.3.1.jar:../lib/commons-io-2.4.jar:../lib/CuramAnalysisDocumentation.jar:../lib/jdom-2.0.6.jar:../lib/xml.jar:. com.ibm.curam.xml.DMXUtil -codetable -ignore lastwritten timeentered -master /Development/IBM/Curam/DMX-Util/testdata/components/SampleComponent/data/initial -compare /Development/IBM/Curam/DMX-Util/testdata/components/SampleComponent/data/compare -output /Development/IBM/Curam/DMX-Util/testdata/components/SampleComponent/data/demo  -ctdir /Development/IBM/Curam/DMX-Util/testdata/components/SampleComponent/data/codetable
 	
 TODO:
 
