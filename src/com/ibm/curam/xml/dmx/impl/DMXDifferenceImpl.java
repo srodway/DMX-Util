@@ -17,6 +17,9 @@ import oracle.xml.diff.Options;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
+
+import com.ibm.curam.xml.dmx.intf.DMXDifference;
+
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 
@@ -40,57 +43,21 @@ import java.util.Map;
  * 
  * @author Simon Rodway
  */
-public class DMXDifference {
-
-	private static final String DEFAULT_OVERRIDE_STATE = "false";
-	private static final String TABLE_OVERRIDE = "override";
-	private static final String DATA_ROW = "row";
-	private static final String LAST_WRITTEN = "lastWritten";
-	private static final String TABLE_DEF = "table";
-	private static final String TIME_ENTERED = "timeEntered";
+public class DMXDifferenceImpl implements DMXDifference {
 
 	final XmlUtils xmlUtils = new XmlUtils();
 	final Options opts = new Options();
 
 	private String masterFile;
 	private String modifiedFile;
-	private List<String> ignoreAttributes;
-	private boolean tableOverride = false;
-	
+	private List<String> ignoreAttributes;	
 
-	public DMXDifference(final String masterFile, final String modifiedFile) {
+	public DMXDifferenceImpl(final String masterFile, final String modifiedFile) {
 		super();
 		this.masterFile = masterFile;
 		this.modifiedFile = modifiedFile;
 	}
 
-	public static void main(String[] args) {
-
-		if (args.length < 3) {
-
-			System.out.println("\nThe purpose of this application is to read two DMX files, a baseline or master DMX");
-			System.out.println("file and one that may contain modified data rows. The application will then compare");
-			System.out.println("the two files and output a version of the DMX file that is syntactically");
-			System.out.println("correct, but only contains the new rows that where present in the modified");
-			System.out.println("data and not in the master.");
-
-			System.out.println("\n\nInvalid parameters passed.");
-			System.out.println("\t usage: DMXDifference DMXFileName MasterDir UpdateDir.\n\n");
-			System.exit(1);
-		}
-
-		final String masterFileName = args[0];
-		final String baselineDir = args[1];
-		final String updateDir = args[2];
-
-		try {
-			DMXDifference diff = new DMXDifference(baselineDir + "/" + masterFileName,
-					updateDir + "/" + masterFileName);
-			System.out.println(DMXFile.getNodeAsText(diff.getModifiedData()));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 
 	/**
 	 * Returns a Node that contains the rows from the DMX files that are in the
@@ -98,6 +65,7 @@ public class DMXDifference {
 	 * 
 	 * @return Node containing data rows
 	 */
+	@Override
 	public Node getModifiedData() {
 
 		Node master = null;
@@ -125,6 +93,7 @@ public class DMXDifference {
 
 	
 	
+	@Override
 	public void setIgnoreAttributes(final List<String> attributes) {
 		if (ignoreAttributes == null) {
 			ignoreAttributes = new ArrayList<String>(attributes.size()); 

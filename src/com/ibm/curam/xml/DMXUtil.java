@@ -33,8 +33,9 @@ import com.ibm.curam.cli.ProgressIndicator;
 import com.ibm.curam.utils.FileUtil;
 import com.ibm.curam.xml.ctx.impl.DMX2CTXConvertor;
 import com.ibm.curam.xml.dmx.impl.DMXClobImport;
-import com.ibm.curam.xml.dmx.impl.DMXDifference;
+import com.ibm.curam.xml.dmx.impl.DMXDifferenceImpl;
 import com.ibm.curam.xml.dmx.impl.DMXFile;
+import com.ibm.curam.xml.dmx.intf.DMXDifference;
 
 /**
  * <p>This class will generate a new DMX file containing only the differences taken from two separate DMX files.</p>
@@ -59,7 +60,7 @@ import com.ibm.curam.xml.dmx.impl.DMXFile;
  * 
  * @author Simon Rodway
  */
-public class DMXUtil {
+public class DMXUtil implements com.ibm.curam.xml.dmx.intf.DMXUtil {
 	
 	private static final String CMD_OPTION_CODETABLE = "codetable";
 	private static final String CMD_OPTION_CODETABLEDIR = "ctdir";
@@ -82,12 +83,6 @@ public class DMXUtil {
 	
 	private boolean processCodetables = false;
 	private boolean processOverride = false;
-	private boolean ignoreLastWritten = false;
-	private boolean ignoreTimeEntered = false;
-	
-	private static final String CLOB_TEXT = "/clob/";
-	private static final String BLOB_TEXT = "/blob/";
-	private static final String VALUE = "value";
 	
 	private DMXUtil(final CommandLine cmd, final String[] ignoreFiles, String[] clobException) {
 		if(cmd.hasOption(CMD_OPTION_CODETABLE)) {
@@ -136,16 +131,21 @@ public class DMXUtil {
 							
 			final String[] clobException = {"USERPAGECONFIG", "TEXTTRANSLATION"};
 			
-			final DMXUtil util = new DMXUtil(cmd, ignore, clobException);
+			final com.ibm.curam.xml.dmx.intf.DMXUtil util = new DMXUtil(cmd, ignore, clobException);
 			
-			util.createUploadData();
-			util.generateCTX();		
+			util.processDMXData();		
 			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}		
 	}
 
+	
+	public void processDMXData() throws IOException {
+		createUploadData();
+		generateCTX();
+	}
+	
 	
 	
 	public static final void outputCommandLineHelp() {
@@ -224,7 +224,7 @@ public class DMXUtil {
 	
 	
 
-	public void createUploadData() throws IOException {
+	private void createUploadData() throws IOException {
 		
 		ignoreFiles();
 		
@@ -241,7 +241,7 @@ public class DMXUtil {
 
 	
 	
-	public void generateCTX() {
+	private void generateCTX() {
 		if (!isProcessCodetables()) {
 			return;
 		}
@@ -302,7 +302,7 @@ public class DMXUtil {
 		final DMXClobImport fix = new DMXClobImport(compareDir);
 
 		for (File f : dmxFiles) {			
-			final DMXDifference diff = new DMXDifference(f.getAbsolutePath(),compareDir + FileUtil.PATH_MARKER +f.getName());
+			final DMXDifference diff = new DMXDifferenceImpl(f.getAbsolutePath(),compareDir + FileUtil.PATH_MARKER +f.getName());
 			
 			diff.setIgnoreAttributes(this.ignoreAttributes);
 			
