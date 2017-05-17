@@ -28,6 +28,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * This purpose of this class is to read two DMX files, a baseline or master DMX
@@ -236,6 +238,7 @@ public class DMXDifferenceImpl implements DMXDifference {
 		final XmlUtils xmlUtils = new XmlUtils();
 		for (Node altKey : altRows.keySet()) {
 			boolean exists = false;
+			
 			for (Node n : masterRows.keySet()) {
 				try {
 					if (xmlUtils.equal(n, altKey, opts)) {

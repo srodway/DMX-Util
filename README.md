@@ -58,4 +58,8 @@ TODO:
 * Add UI module to allow additional options beyond command line execution
 * Extend comparision process to CLOB's and BLOB's
 * Copy of CLOB and BLOB files to be reduced to cover only those identified as part of an included new row
+* Add key transformation process to replace internal keys with readable (user defined range) values
 * Add unit tests
+
+* Outstanding defect/issues to address
+	Clob/Blob file paths need changing to reflect potential output path structure @10138
